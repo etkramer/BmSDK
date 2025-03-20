@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace SDKGenerator.Utils;
+namespace BmSDK.Generator.Utils;
 
 public struct DisposableBlock(Action onClose) : IDisposable
 {

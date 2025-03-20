@@ -30,6 +30,7 @@ namespace UELib
     using Branch.UE3.SFX;
     using Branch.UE2.ShadowStrike;
     using System.Text;
+    using Spectre.Console;
 
     /// <summary>
     /// Represents the method that will handle the UELib.UnrealPackage.NotifyObjectAdded
@@ -1695,6 +1696,11 @@ namespace UELib
         /// </summary>
         public bool IsBigEndianEncoded { get; }
 
+        /// <summary>
+        /// Whether the package still needs to be initialized.
+        /// </summary>
+        public bool NeedsInit => Objects is null || Objects.Count == 0;
+
         [Obsolete] public const int VSIZEPREFIXDEPRECATED = 64;
 
         [Obsolete] public const int VINDEXDEPRECATED = 178;
@@ -2293,26 +2299,27 @@ namespace UELib
             {
                 // Load package if not done already
                 var pkg = UnrealLoader.LoadPackage(pkgName);
-                if (pkg.Objects == null || pkg.Objects.Count == 0)
+                if (pkg.NeedsInit)
                 {
                     pkg.InitializePackage(InitFlags.All);
+                }
+
+
+                // Try to find the loaded object
+                if (s_HashedObjects.TryGetValue(item.GetPath(), out var obj))
+                {
+                    item.Object = obj;
+                    return;
+                }
+                else
+                {
+                    // Intrinsic classes aren't exported and will cause this.
+                    AnsiConsole.MarkupLine($"[red]Failed to locate import {item.GetPath()}[/]");
                 }
             }
             catch
             {
-                Console.WriteLine($"Failed to load package for object {item.GetReferencePath()}");
-            }
-
-            // Try to find the loaded object
-            if (s_HashedObjects.TryGetValue(item.GetPath(), out var obj))
-            {
-                item.Object = obj;
-                return;
-            }
-            else
-            {
-                // Intrinsic classes aren't exported and will cause this.
-                Console.WriteLine($"Failed to locate object {item.GetReferencePath()}");
+                AnsiConsole.MarkupLine($"[red]Failed to load package {pkgName}[/]");
             }
 
             // Fall back to creating a dummy objet
@@ -2359,7 +2366,7 @@ namespace UELib
             s_HashedObjects[PackageName + "." + item.GetPath()] = item.Object;
         }
 
-        private void AddObject(UObject obj, UObjectTableItem table)
+        public void AddObject(UObject obj, UObjectTableItem table)
         {
             table.Object = obj;
             obj.Package = this;

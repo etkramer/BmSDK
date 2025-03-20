@@ -5,10 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch SDKGenerator",
-      "type": "dotnet",
+      "name": "Launch BmSDK.Generator",
+      "type": "coreclr",
       "request": "launch",
-      "projectPath": "${workspaceFolder}/src/SDKGenerator/SDKGenerator.csproj",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
+      "console": "internalConsole",
+      "args": [
+        "/Users/elikramer/Desktop/depots/Batman Arkham Asylum GOTY/BmGame/CookedPC/unpacked/",
+        "/Users/elikramer/Developer/BmScriptHook/build/",
+      ],
     }
   ]
 }

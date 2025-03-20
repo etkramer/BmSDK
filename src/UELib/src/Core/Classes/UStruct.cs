@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UELib.Annotations;
 using UELib.Branch;
@@ -22,6 +23,28 @@ namespace UELib.Core
         [CanBeNull] public UTextBuffer ProcessedText { get; private set; }
         [CanBeNull] public UTextBuffer CppText { get; private set; }
         public UName FriendlyName { get; protected set; }
+
+        public string CppName
+        {
+            get
+            {
+                if (this is UClass)
+                {
+                    if (this.EnumerateSuperAndSelf().Any(super => super.Name == "Actor"))
+                    {
+                        return $"A{Name}";
+                    }
+                    else
+                    {
+                        return $"U{Name}";
+                    }
+                }
+                else
+                {
+                    return $"F{Name}";
+                }
+            }
+        }
 
         public int Line;
         public int TextPos;
@@ -343,6 +366,10 @@ namespace UELib.Core
             }
         }
 
+        public IEnumerable<UStruct> EnumerateSuperAndSelf()
+        {
+            return EnumerateSuper().Prepend(this);
+        }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TokenFactory GetTokenFactory()

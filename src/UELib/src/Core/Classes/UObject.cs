@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UELib.Annotations;
 using UELib.Branch;
+using UELib.Engine;
 using UELib.Flags;
 using UELib.ObjectModel.Annotations;
 
