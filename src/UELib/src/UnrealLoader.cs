@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UELib.Decoding;
@@ -10,6 +11,8 @@ namespace UELib
     /// </summary>
     public static class UnrealLoader
     {
+        private static Dictionary<string, UnrealPackage> s_packageMap = [];
+
         public static UnrealPackage LoadPackage(string packagePath, FileAccess fileAccess = FileAccess.Read)
         {
             return LoadPackage(packagePath, UnrealPackage.GameBuild.BuildName.Unset, fileAccess);
@@ -22,8 +25,16 @@ namespace UELib
         public static UnrealPackage LoadPackage(string packagePath, UnrealPackage.GameBuild.BuildName buildTarget,
             FileAccess fileAccess = FileAccess.Read)
         {
+            var name = Path.GetFileNameWithoutExtension(packagePath);
+            if (s_packageMap.TryGetValue(name, out var pkg))
+            {
+                return pkg;
+            }
+
             var stream = new UPackageStream(packagePath, FileMode.Open, fileAccess);
             var package = new UnrealPackage(stream);
+            s_packageMap[name] = package;
+
             package.BuildTarget = buildTarget;
             package.Deserialize(stream);
             return package;

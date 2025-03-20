@@ -1797,6 +1797,8 @@ namespace UELib
 
         #region Initialized Members
 
+        private static readonly Dictionary<string, UObject> s_HashedObjects = new Dictionary<string, UObject>();
+
         /// <summary>
         /// Class types that should get added to the ObjectsList.
         /// </summary>
@@ -2285,10 +2287,41 @@ namespace UELib
         // Create pseudo objects for imports so that we have non-null references to imports.
         private void CreateObject(UImportTableItem item)
         {
+            var pkgName = item.EnumerateOuter().LastOrDefault()?.ObjectName ?? item.ObjectName;
+
+            try
+            {
+                // Load package if not done already
+                var pkg = UnrealLoader.LoadPackage(pkgName);
+                if (pkg.Objects == null || pkg.Objects.Count == 0)
+                {
+                    pkg.InitializePackage(InitFlags.All);
+                }
+            }
+            catch
+            {
+                Console.WriteLine($"Failed to load package for object {item.GetReferencePath()}");
+            }
+
+            // Try to find the loaded object
+            if (s_HashedObjects.TryGetValue(item.GetPath(), out var obj))
+            {
+                item.Object = obj;
+                return;
+            }
+            else
+            {
+                // Intrinsic classes aren't exported and will cause this.
+                Console.WriteLine($"Failed to locate object {item.GetReferencePath()}");
+            }
+
+            // Fall back to creating a dummy objet
             var classType = GetClassType(item.ClassName);
             item.Object = (UObject)Activator.CreateInstance(classType);
             AddObject(item.Object, item);
             OnNotifyPackageEvent(new PackageEventArgs(PackageEventArgs.Id.Object));
+
+            s_HashedObjects[item.GetPath()] = item.Object;
         }
 
         private void CreateObject(UExportTableItem item)
@@ -2322,6 +2355,8 @@ namespace UELib
             item.Object = (UObject)Activator.CreateInstance(classType);
             AddObject(item.Object, item);
             OnNotifyPackageEvent(new PackageEventArgs(PackageEventArgs.Id.Object));
+
+            s_HashedObjects[PackageName + "." + item.GetPath()] = item.Object;
         }
 
         private void AddObject(UObject obj, UObjectTableItem table)
