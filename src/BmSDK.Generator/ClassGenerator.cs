@@ -155,7 +155,7 @@ partial class ClassGenerator(UClass Class)
     /// <summary>
     /// Writes a UProperty declaration to the given TextWriter.
     /// </summary>
-    void WriteStructFieldDeclaration(TextWriter writer, UProperty prop, int indent)
+    static void WriteStructFieldDeclaration(TextWriter writer, UProperty prop, int indent)
     {
         // Write [FieldOffset] attribute
         writer.WriteIndent(indent);
@@ -199,7 +199,7 @@ partial class ClassGenerator(UClass Class)
     /// <summary>
     /// Writes a UBoolProperty declaration to the given TextWriter and returns its size.
     /// </summary>
-    void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
+    static void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
     {
         // Write type/size info
         writer.WriteLineIndented(

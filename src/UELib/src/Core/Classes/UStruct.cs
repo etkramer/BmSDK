@@ -313,6 +313,12 @@ namespace UELib.Core
             var fieldBit = 0;
             foreach (var prop in EnumerateFields().OfType<UProperty>())
             {
+                // Ensure prop is deserialized
+                if (prop.ElementSize == 0)
+                {
+                    prop.BeginDeserializing();
+                }
+
                 // Track number of bools in a bitfield
                 if (prop is UBoolProperty)
                 {
