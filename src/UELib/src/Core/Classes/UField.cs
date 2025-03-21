@@ -34,7 +34,7 @@ namespace UELib.Core
                 else
                 {
                     // Prepend structs with F
-                    return this is UStruct && this is not UClass ? $"F{Name}" : Name;
+                    return this is UStruct && this is not UClass && this is not UFunction ? $"F{Name}" : Name;
                 }
             }
         }

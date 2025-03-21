@@ -196,7 +196,7 @@ partial class ClassGenerator(UClass Class)
     {
         // Write type/size info
         writer.WriteLineIndented(
-            $"// {((UField)prop.Class).ManagedName} (size = {prop.ElementSize})",
+            $"// {((UField)prop.Class).ManagedName} (size = {prop.ElementSize}, offset = {prop.PropertyOffset})",
             indent
         );
 
@@ -234,7 +234,7 @@ partial class ClassGenerator(UClass Class)
     void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
     {
         // Write type/size info
-        writer.WriteLineIndented($"// {((UField)prop.Class).ManagedName} (size = 1b)", indent);
+        writer.WriteLineIndented($"// {((UField)prop.Class).ManagedName} (size = 1b, offset = {prop.PropertyOffset})", indent);
 
         // Write property signature
         writer.WriteLineIndented($"public bool {prop.ManagedName}", indent);

@@ -92,13 +92,13 @@ partial class ClassGenerator
         }
         else
         {
-            if (Class == structObj.Outer || Class.Extends(structObj.Outer.Name))
+            if (structObj.Outer is null || Class == structObj.Outer || Class.Extends(structObj.Outer.Name))
             {
                 return $"{structObj.ManagedName}";
             }
             else
             {
-                return $"{GetFullName((UClass)structObj.Outer)}.{structObj.ManagedName}";
+                return $"{GetFullName((UField)structObj.Outer)}.{structObj.ManagedName}";
             }
         }
     }
