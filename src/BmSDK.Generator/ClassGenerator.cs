@@ -14,24 +14,10 @@ partial class ClassGenerator(UClass Class)
         writer.WriteLine("using System;");
         writer.WriteLine("using System.Runtime.InteropServices;\n");
 
-        // Write assembly hardcodes in UObject.cs
-        if (Class.GetPath() == "Object")
-        {
-            writer.WriteLine(ASSEMBLY_HARDCODES);
-            writer.WriteLine();
-        }
-
         // Write namespace declaration
         writer.WriteLine($"namespace {Namespace};\n");
 
         WriteClassDeclaration(writer, Class);
-
-        // Write extra hardcodes in UObject.cs
-        if (Class.GetPath() == "Object")
-        {
-            writer.WriteLine();
-            writer.WriteLine(ARRAY_HARDCODES);
-        }
     }
 
     /// <summary>
@@ -55,7 +41,7 @@ partial class ClassGenerator(UClass Class)
         {
             writer.Write(" abstract");
         }
-        writer.Write($" class {classObj.ManagedName}");
+        writer.Write($" partial class {classObj.ManagedName}");
         if (classObj.Super is not null)
         {
             writer.Write($" : {GetFullName(classObj.Super)}");
@@ -111,13 +97,6 @@ partial class ClassGenerator(UClass Class)
                 {
                     writer.WriteLine();
                 }
-            }
-
-            // Write hardcoded members
-            if (Class.GetPath() == "Object")
-            {
-                writer.WriteLine();
-                writer.WriteLine(OBJECT_HARDCODES);
             }
         }
         writer.WriteLine("}");
@@ -223,7 +202,10 @@ partial class ClassGenerator(UClass Class)
     void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
     {
         // Write type/size info
-        writer.WriteLineIndented($"// {((UField)prop.Class).ManagedName} (size = 1b, offset = {prop.PropertyOffset})", indent);
+        writer.WriteLineIndented(
+            $"// {((UField)prop.Class).ManagedName} (size = 1b, offset = {prop.PropertyOffset})",
+            indent
+        );
 
         // Write property signature
         writer.WriteLineIndented($"public bool {prop.ManagedName}", indent);

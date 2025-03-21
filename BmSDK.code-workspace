@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"name": "BmSDK",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/bin/": true,
+			"**/obj/": true,
+		},
+		"dotnet.defaultSolution": "src/BmSDK.sln",
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "build",
+				"command": "dotnet",
+				"type": "process",
+				"args": [ "build", "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj", "--no-restore" ],
+				"problemMatcher": "$msCompile",
+				"presentation": {
+					"clear": true
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch BmSDK.Generator",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "build",
+				"program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
+				"console": "internalConsole",
+				"args": [
+					"F:\\Steam\\steamapps\\common\\Batman Arkham Asylum GOTY\\BmGame\\CookedPC (unpacked)",
+					"${workspaceFolder}\\build\\BmSDK\\Generated"
+				],
+			}
+		]
+	}
+}

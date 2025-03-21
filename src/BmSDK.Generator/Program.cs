@@ -15,13 +15,12 @@ sealed class MainCommand : Command<MainCommand.Settings>
     public override int Execute([NotNull] CommandContext context, [NotNull] Settings settings)
     {
         var pkgDir = Guard.NotNull(settings.PackageDir);
-        var outDir = Guard.NotNull(settings.OutputDir);
+        var sdkDir = Guard.NotNull(settings.OutputDir);
 
         Guard.Require(Directory.Exists(pkgDir), "Package directory does not exist.");
-        Guard.Require(Directory.Exists(outDir), "Output directory does not exist.");
+        Guard.Require(Directory.Exists(sdkDir), "Output directory does not exist.");
 
         // Create output directory if it doesn't exist
-        var sdkDir = Path.Combine(outDir, "SDK/");
         if (!Directory.Exists(sdkDir))
         {
             Directory.CreateDirectory(sdkDir);
@@ -93,10 +92,6 @@ sealed class MainCommand : Command<MainCommand.Settings>
             var generator = new ClassGenerator(classObj);
             generator.GenerateClassFile(writer);
         }
-
-        // Write a csproj file
-        using var projStream = File.Create(Path.Combine(sdkDir, "BmSDK.csproj"));
-        ClassGenerator.GenerateProjectFile(projStream);
 
         return 0;
     }

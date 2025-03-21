@@ -35,7 +35,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-build/
+build/BmSDK/Generated/*
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -390,7 +390,6 @@ FodyWeavers.xsd
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
 
 # Local History for Visual Studio Code
 .history/
