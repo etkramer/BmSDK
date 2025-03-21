@@ -95,6 +95,12 @@ public unsafe class TArray<T>
 	public T GetElement(int i) => throw new NotImplementedException();
 	public void SetElement(int i, T value) => throw new NotImplementedException();
 }
+
+public unsafe class TMap<TKey, TValue>
+{
+	public TValue GetElement(TKey key) => throw new NotImplementedException();
+	public void SetElement(TKey key, TValue value) => throw new NotImplementedException();
+}
 """;
 
     const string ASSEMBLY_HARDCODES = """

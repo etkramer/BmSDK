@@ -56,6 +56,12 @@ partial class ClassGenerator
         }
 
         // Use array inner type name if possible
+        if (prop is UMapProperty)
+        {
+            return "TMap<object, object>";
+        }
+
+        // Use array inner type name if possible
         if (prop is UArrayProperty arrayProperty)
         {
             var arrayFullName = "TArray";
@@ -74,7 +80,7 @@ partial class ClassGenerator
             // TODO: More specific type
             UDelegateProperty => "Delegate",
 
-            _ => null
+            _ => throw new NotImplementedException()
         };
     }
 

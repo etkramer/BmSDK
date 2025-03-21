@@ -200,19 +200,8 @@ partial class ClassGenerator(UClass Class)
             indent
         );
 
-        // Handle unsupported property types
-        var managedTypeName = GetManagedTypeName(prop);
-        if (managedTypeName is null)
-        {
-            writer.WriteLineIndented(
-                $"// UNSUPPORTED PROP TYPE {prop.GetType().Name.ToUpper()}",
-                indent
-            );
-
-            return;
-        }
-
         // Write property signature
+        var managedTypeName = GetManagedTypeName(prop);
         writer.WriteLineIndented($"public {managedTypeName} {prop.ManagedName}", indent);
 
         // Write property getter/setter
