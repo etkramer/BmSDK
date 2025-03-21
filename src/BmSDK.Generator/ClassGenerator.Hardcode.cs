@@ -50,7 +50,8 @@ partial class ClassGenerator
 		}
 		else if (typeof(T).IsAssignableTo(typeof(UObject)))
 		{
-			// TODO
+			// TODO: Should check if we already have a managed class associated with
+			// this object pointer, then either return it or create a new one.
 		}
 
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");
@@ -63,7 +64,7 @@ partial class ClassGenerator
 		// TODO: UStrProperty
 		// TODO: UNameProperty
 		// TODO: UArrayProperty
-		// TODO: UObjectProperty, UClassProperty, UComponentProperty
+		// TODO: UClassProperty
 
 		// Try to copy memory directly (for struct, primitive types)
 		if (typeof(T).IsValueType)
@@ -73,7 +74,9 @@ partial class ClassGenerator
 		}
 		else if (typeof(T).IsAssignableTo(typeof(UObject)))
 		{
-			// TODO
+			// We already have a pointer to this object's native instance, so just assign it.
+			MarshalToNative(((UObject)(object)value!)._nativePtr, data);
+			return;
 		}
 
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");

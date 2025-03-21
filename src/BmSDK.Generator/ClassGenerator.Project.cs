@@ -21,9 +21,10 @@ partial class ClassGenerator
             // <PropertyGroup>
             writer.WriteStartElement("PropertyGroup");
             {
+                writer.WriteElementString("Platform", "x86");
                 writer.WriteElementString("TargetFramework", "net9.0");
-                writer.WriteElementString("Nullable", "enable");
                 writer.WriteElementString("AllowUnsafeBlocks", "true");
+                writer.WriteElementString("Nullable", "enable");
             }
             writer.WriteEndElement();
         }
