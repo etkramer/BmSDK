@@ -28,6 +28,8 @@ namespace UELib.Core
 
             Enum = _Buffer.ReadObject<UEnum>();
             Record(nameof(Enum), Enum);
+
+            ElementSize = sizeof(byte);
         }
 
         public override string GetFriendlyType()

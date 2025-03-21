@@ -8,6 +8,8 @@ namespace UELib.Core
     [UnrealRegisterClass]
     public class UBoolProperty : UProperty
     {
+        public int BitfieldIdx { get; internal set; }
+
         /// <summary>
         ///	Creates a new instance of the UELib.Core.UBoolProperty class.
         /// </summary>

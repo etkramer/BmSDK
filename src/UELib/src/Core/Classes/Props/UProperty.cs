@@ -22,9 +22,11 @@ namespace UELib.Core
 
         public int ArrayDim { get; private set; }
 
-        public ushort ElementSize { get; private set; }
+        public ushort ElementSize { get; protected set; }
 
         public ulong PropertyFlags { get; private set; }
+
+        public int PropertyOffset { get; internal set; } = -1;
 
 #if XCOM2
         [CanBeNull] public UName ConfigName;

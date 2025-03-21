@@ -77,32 +77,39 @@ sealed class MainCommand : Command<MainCommand.Settings>
         foreach (var classObj in classes)
         {
             // Don't generate code for intrinsic classes
-            if (CodeGenerator.IsIntrinsicClass(classObj))
+            if (ClassGenerator.IsIntrinsicClass(classObj))
             {
                 continue;
             }
 
             // Skip most classes (for now)
             if (
-                classObj.Name is not "Actor"
+                classObj.Name is not "Object"
+                && classObj.Name is not "Actor"
                 && classObj.Name is not "Component"
                 && classObj.Name is not "ActorComponent"
-                && classObj.Name is not "Pawn"
-                && classObj.Name is not "RPawn"
+                && classObj.Name is not "RCapeStateConfig"
                 && classObj.Name is not "RCapeConfig"
+                && classObj.Name is not "RCapeCollisionConfig"
+                && classObj.Name is not "RCapeStateBoneConfig"
             )
             {
                 continue;
             }
 
             // Create file
-            var path = Path.Combine(sdkDir, $"{classObj.Name}.cs");
+            var path = Path.Combine(sdkDir, $"{classObj.ManagedName}.cs");
             using var stream = File.Create(path);
             using var writer = new StreamWriter(stream);
 
             // Perform code generation
-            CodeGenerator.GenerateClassFile(writer, classObj);
+            var generator = new ClassGenerator(classObj);
+            generator.GenerateClassFile(writer);
         }
+
+        // Write a csproj file
+        using var projStream = File.Create(Path.Combine(sdkDir, "BmSDK.csproj"));
+        ClassGenerator.GenerateProjectFile(projStream);
 
         return 0;
     }

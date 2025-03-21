@@ -3,7 +3,7 @@
 namespace BmSDK.Framework;
 
 [IntrinsicClass("Object")]
-public abstract class UObject
+public abstract class UObject_OLD
 {
     private readonly IntPtr _nativePtr;
 

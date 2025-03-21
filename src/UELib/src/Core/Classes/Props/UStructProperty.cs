@@ -1,4 +1,5 @@
-﻿using UELib.Types;
+﻿using System;
+using UELib.Types;
 
 namespace UELib.Core
 {
@@ -28,6 +29,9 @@ namespace UELib.Core
 
             Struct = _Buffer.ReadObject<UStruct>();
             Record(nameof(Struct), Struct);
+
+            Struct.ComputeLayoutInfo();
+            ElementSize = (ushort)Struct.StructSize;
         }
 
         /// <inheritdoc/>

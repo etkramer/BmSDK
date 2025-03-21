@@ -16,6 +16,12 @@ namespace UELib.Core
             Type = PropertyType.NameProperty;
         }
 
+        protected override void Deserialize()
+        {
+            base.Deserialize();
+            ElementSize = 8;
+        }
+
         /// <inheritdoc/>
         public override string GetFriendlyType()
         {

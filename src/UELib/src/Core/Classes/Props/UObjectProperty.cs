@@ -37,6 +37,8 @@ namespace UELib.Core
                 Record(nameof(vd0), vd0);
             }
 #endif
+
+            ElementSize = 4;
         }
 
         /// <inheritdoc/>

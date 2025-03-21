@@ -28,6 +28,8 @@ namespace UELib.Core
             
             InnerProperty = _Buffer.ReadObject<UProperty>();
             Record(nameof(InnerProperty), InnerProperty);
+
+            ElementSize = 12;
         }
 
         /// <inheritdoc/>

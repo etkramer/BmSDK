@@ -24,20 +24,17 @@ namespace UELib.Core
         [CanBeNull] public UTextBuffer CppText { get; private set; }
         public UName FriendlyName { get; protected set; }
 
-        public string CppName
+        public string ManagedName
         {
             get
             {
-                if (this is UClass)
+                if (GetPath() == "Object")
                 {
-                    if (this.EnumerateSuperAndSelf().Any(super => super.Name == "Actor"))
-                    {
-                        return $"A{Name}";
-                    }
-                    else
-                    {
-                        return $"U{Name}";
-                    }
+                    return "UObject";
+                }
+                else if (this is UClass)
+                {
+                    return Name;
                 }
                 else
                 {
@@ -312,6 +309,70 @@ namespace UELib.Core
             {
                 Console.WriteLine(ice.Message);
             }
+        }
+
+        public int StructSize { get; private set; } = 0;
+        public int StructStartOffset { get; private set; } = 0;
+
+        public void ComputeLayoutInfo()
+        {
+            // Only compute once
+            if (StructSize != 0 || StructStartOffset != 0)
+            {
+                return;
+            }
+
+            // Try compute super struct size
+            Super?.ComputeLayoutInfo();
+
+            // Measure/layout props
+            var fieldOffset = StructStartOffset = (Super?.StructStartOffset ?? 0) + (Super?.StructSize ?? 0);
+            var fieldBit = 0;
+            foreach (var prop in EnumerateFields().OfType<UProperty>())
+            {
+                // Track number of bools in a bitfield
+                if (prop is UBoolProperty)
+                {
+                    fieldBit++;
+                }
+                else
+                {
+                    fieldBit = 0;
+                }
+
+                // Begin new bitfield if needed
+                if (fieldBit > 32)
+                {
+                    fieldBit = 0;
+                    fieldOffset += 4;
+                }
+
+                // Compute struct layout info
+                if (prop is UStructProperty structProp && structProp.Struct is not null)
+                {
+                    structProp.Struct.ComputeLayoutInfo();
+                }
+
+                // Store prop offset
+                prop.PropertyOffset = fieldOffset;
+
+                if (prop is UBoolProperty boolProperty)
+                {
+                    // Set bitfield index
+                    boolProperty.BitfieldIdx = fieldBit;
+
+                    // Advance by sizeof(BITFIELD) if needed
+                    fieldOffset += prop.NextField is UBoolProperty ? 0 : 4;
+                }
+                else
+                {
+                    // Align offsets to 4 bytes
+                    fieldOffset += prop.ElementSize;
+                    fieldOffset = (fieldOffset + 3) & ~3;
+                }
+            }
+
+            StructSize = fieldOffset;
         }
 
         [Obsolete("Pending deprecation")]

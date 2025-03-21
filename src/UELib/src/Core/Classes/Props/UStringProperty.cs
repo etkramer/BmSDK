@@ -26,6 +26,8 @@ namespace UELib.Core
 
             Size = _Buffer.ReadInt32();
             Record(nameof(Size), Size);
+
+            ElementSize = 12;
         }
 
         /// <inheritdoc/>

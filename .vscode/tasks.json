@@ -5,7 +5,7 @@
       "label": "build",
       "command": "dotnet",
       "type": "process",
-      "args": ["build", "--no-restore"],
+      "args": ["build", "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj", "--no-restore"],
       "problemMatcher": "$msCompile",
       "presentation": {
         "clear": true

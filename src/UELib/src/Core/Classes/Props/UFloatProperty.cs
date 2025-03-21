@@ -16,6 +16,12 @@ namespace UELib.Core
             Type = PropertyType.FloatProperty;
         }
 
+        protected override void Deserialize()
+        {
+            base.Deserialize();
+            ElementSize = sizeof(int);
+        }
+
         /// <inheritdoc/>
         public override string GetFriendlyType()
         {
