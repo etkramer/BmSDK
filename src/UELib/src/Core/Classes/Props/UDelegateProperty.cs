@@ -47,6 +47,8 @@ namespace UELib.Core
                 Delegate = _Buffer.ReadObject<UFunction>();
                 Record(nameof(Delegate), Delegate);
             }
+
+            ElementSize = 4;
         }
 
         /// <inheritdoc/>

@@ -24,25 +24,6 @@ namespace UELib.Core
         [CanBeNull] public UTextBuffer CppText { get; private set; }
         public UName FriendlyName { get; protected set; }
 
-        public string ManagedName
-        {
-            get
-            {
-                if (GetPath() == "Object")
-                {
-                    return "UObject";
-                }
-                else if (this is UClass)
-                {
-                    return Name;
-                }
-                else
-                {
-                    return $"F{Name}";
-                }
-            }
-        }
-
         public int Line;
         public int TextPos;
 
@@ -288,6 +269,8 @@ namespace UELib.Core
             {
                 DeserializeProperties();
             }
+
+            ComputeLayoutInfo();
         }
 
         protected override bool CanDisposeBuffer()
@@ -345,12 +328,6 @@ namespace UELib.Core
                 {
                     fieldBit = 0;
                     fieldOffset += 4;
-                }
-
-                // Compute struct layout info
-                if (prop is UStructProperty structProp && structProp.Struct is not null)
-                {
-                    structProp.Struct.ComputeLayoutInfo();
                 }
 
                 // Store prop offset

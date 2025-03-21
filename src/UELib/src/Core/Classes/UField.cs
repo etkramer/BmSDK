@@ -16,6 +16,29 @@ namespace UELib.Core
         [CanBeNull] public UStruct Super { get; set; }
         [CanBeNull] public UField NextField { get; set; }
 
+        public string ManagedName
+        {
+            get
+            {
+                // C# disallows fields sharing the same name as their parent class.
+                if (Name == Outer?.Name)
+                {
+                    return $"_{Name}";
+                }
+
+                // Avoid name conflicts with System.Object
+                if (GetPath() == "Object")
+                {
+                    return "UObject";
+                }
+                else
+                {
+                    // Prepend structs with F
+                    return this is UStruct && this is not UClass ? $"F{Name}" : Name;
+                }
+            }
+        }
+
         #endregion
 
         /// <summary>

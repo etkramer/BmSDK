@@ -26,16 +26,6 @@ partial class ClassGenerator
                 writer.WriteElementString("AllowUnsafeBlocks", "true");
             }
             writer.WriteEndElement();
-
-            // <ItemGroup>
-            writer.WriteStartElement("ItemGroup");
-            {
-                // <ProjectReference>
-                writer.WriteStartElement("ProjectReference");
-                writer.WriteAttributeString("Include", "../../src/BmSDK.Framework/BmSDK.Framework.csproj");
-                writer.WriteEndElement();
-            }
-            writer.WriteEndElement();
         }
         writer.WriteEndElement();
         

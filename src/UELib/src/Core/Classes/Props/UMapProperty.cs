@@ -32,6 +32,9 @@ namespace UELib.Core
             
             ValueProperty = _Buffer.ReadObject<UProperty>();
             Record(nameof(ValueProperty), ValueProperty);
+
+            // TODO: Confirm this guess!
+            ElementSize = 68;
         }
 
         /// <inheritdoc/>

@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UELib\src\Eliot.UELib.csproj" />
-    <ProjectReference Include="..\BmSDK.Framework\BmSDK.Framework.csproj" />
   </ItemGroup>
 
   <ItemGroup>

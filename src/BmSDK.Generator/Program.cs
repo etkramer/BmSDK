@@ -76,29 +76,16 @@ sealed class MainCommand : Command<MainCommand.Settings>
         // Write classes to output
         foreach (var classObj in classes)
         {
-            // Don't generate code for intrinsic classes
-            if (ClassGenerator.IsIntrinsicClass(classObj))
+            // Create subdirs for non-Core packages
+            var packageName = classObj.Package.PackageName;
+            var packageDir = Path.Combine(sdkDir, packageName == "Core" ? "" : packageName);
+            if (Directory.Exists(sdkDir) && !Directory.Exists(packageDir))
             {
-                continue;
-            }
-
-            // Skip most classes (for now)
-            if (
-                classObj.Name is not "Object"
-                && classObj.Name is not "Actor"
-                && classObj.Name is not "Component"
-                && classObj.Name is not "ActorComponent"
-                && classObj.Name is not "RCapeStateConfig"
-                && classObj.Name is not "RCapeConfig"
-                && classObj.Name is not "RCapeCollisionConfig"
-                && classObj.Name is not "RCapeStateBoneConfig"
-            )
-            {
-                continue;
+                Directory.CreateDirectory(packageDir);
             }
 
             // Create file
-            var path = Path.Combine(sdkDir, $"{classObj.ManagedName}.cs");
+            var path = Path.Combine(packageDir, $"{classObj.ManagedName}.cs");
             using var stream = File.Create(path);
             using var writer = new StreamWriter(stream);
 

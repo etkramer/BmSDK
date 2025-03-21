@@ -30,7 +30,6 @@ namespace UELib.Core
             Struct = _Buffer.ReadObject<UStruct>();
             Record(nameof(Struct), Struct);
 
-            Struct.ComputeLayoutInfo();
             ElementSize = (ushort)Struct.StructSize;
         }
 

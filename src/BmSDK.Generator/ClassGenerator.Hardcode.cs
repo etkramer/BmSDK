@@ -5,24 +5,24 @@ partial class ClassGenerator
     const string OBJECT_HARDCODES = """
     private readonly IntPtr _nativePtr;
 
-    protected unsafe object GetPropertyValue(IntPtr offset, string propClassName)
+    protected unsafe T GetPropertyValue<T>(IntPtr offset)
     {
-        return MarshalToManaged((_nativePtr + offset).ToPointer(), propClassName);
+        return MarshalToManaged<T>((_nativePtr + offset).ToPointer());
     }
 
     protected bool GetBoolPropertyValue(IntPtr offset, int bit)
     {
-        return ((int)GetPropertyValue(offset, "UIntProperty") & (1 << bit)) != 0;
+        return (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
     }
 
-    protected unsafe void SetPropertyValue(IntPtr offset, string propClassName, object value)
+    protected unsafe void SetPropertyValue<T>(IntPtr offset, T value)
     {
-        MarshalToNative(value, propClassName, (_nativePtr + offset).ToPointer());
+        MarshalToNative(value, (_nativePtr + offset).ToPointer());
     }
 
     protected void SetBoolPropertyValue(IntPtr offset, int bit, bool value)
     {
-        int currentValue = (int)GetPropertyValue(offset, "UIntProperty");
+        int currentValue = GetPropertyValue<int>(offset);
         if (value)
         {
             currentValue |= 1 << bit;
@@ -31,57 +31,52 @@ partial class ClassGenerator
         {
             currentValue &= ~(1 << bit);
         }
-        SetPropertyValue(offset, "UIntProperty", currentValue);
+        SetPropertyValue(offset, currentValue);
     }
 
-    private static unsafe object MarshalToManaged(void* data, string propClassName)
+	private static unsafe T MarshalToManaged<T>(void* data)
     {
-        // Marshals unmanaged data to managed, then returns it.
-		if (propClassName == "UIntProperty")
-        {
-            return *(int*)data;
-        }
-		else if (propClassName == "UFloatProperty")
-        {
-            return *(float*)data;
-        }
-        else if (propClassName == "UByteProperty")
-        {
-            return *(byte*)data;
-        }
+		// Marshals unmanaged data to managed, then returns it.
 
 		// TODO: UStrProperty
 		// TODO: UNameProperty
 		// TODO: UArrayProperty
-		// TODO: UStructProperty
 		// TODO: UObjectProperty, UClassProperty, UComponentProperty
+		
+		// Try to copy memory directly (for struct, primitive types)
+		if (typeof(T).IsValueType)
+		{
+			return (T)Marshal.PtrToStructure((IntPtr)data, typeof(T))!;
+		}
+		else if (typeof(T).IsAssignableTo(typeof(UObject)))
+		{
+			// TODO
+		}
 
-        throw new NotImplementedException($"Marshaling not implemented for type {propClassName}");
+        throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");
     }
 
-    private static unsafe void MarshalToNative(object obj, string propClassName, void* data)
+    private static unsafe void MarshalToNative<T>(T value, void* data)
     {
-        // Marshals a managed object to native, then copies it into an existing buffer.
-		if (propClassName == "UIntProperty")
-        {
-            *(int*)data = (int)obj;
-        }
-		else if (propClassName == "UFloatProperty")
-        {
-            *(float*)data = (float)obj;
-        }
-		else if (propClassName == "UByteProperty")
-        {
-            *(byte*)data = (byte)obj;
-        }
+		// Marshals a managed object to native, then copies it into an existing buffer.
 
 		// TODO: UStrProperty
 		// TODO: UNameProperty
 		// TODO: UArrayProperty
-		// TODO: UStructProperty
 		// TODO: UObjectProperty, UClassProperty, UComponentProperty
 
-        throw new NotImplementedException($"Marshaling not implemented for type {propClassName}");
+		// Try to copy memory directly (for struct, primitive types)
+		if (typeof(T).IsValueType)
+		{
+			Marshal.StructureToPtr(value!, (IntPtr)data, false);
+			return;
+		}
+		else if (typeof(T).IsAssignableTo(typeof(UObject)))
+		{
+			// TODO
+		}
+
+        throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");
     }
 """;
 
@@ -90,12 +85,16 @@ public unsafe class TArray<T>
 {
 	private readonly IntPtr _nativePtr;
 
-	public void* DataPtr => *(void**)(_nativePtr + 4).ToPointer();
+	public void* DataPtr => *(void**)(_nativePtr + 0).ToPointer();
 	public int Num => *(int*)(_nativePtr + 4).ToPointer();
 	public int Max => *(int*)(_nativePtr + 8).ToPointer();
 
 	public T GetElement(int i) => throw new NotImplementedException();
 	public void SetElement(int i, T value) => throw new NotImplementedException();
 }
+""";
+
+    const string ASSEMBLY_HARDCODES = """
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "IDE1006:Naming rule violation")]
 """;
 }
