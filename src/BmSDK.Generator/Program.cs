@@ -28,7 +28,7 @@ sealed class MainCommand : Command<MainCommand.Settings>
 
         // Load script packages
         var pkgs = new List<UnrealPackage>();
-        foreach (var path in Directory.GetFiles(pkgDir, "*.u"))
+        foreach (var path in Directory.GetFiles(pkgDir, "*.u").Concat(Directory.GetFiles(pkgDir, "*.u")))
         {
             var name = Path.GetFileNameWithoutExtension(path);
 
@@ -83,7 +83,7 @@ sealed class MainCommand : Command<MainCommand.Settings>
                 Directory.CreateDirectory(packageDir);
             }
 
-            // Create file
+            // Create file for class
             var path = Path.Combine(packageDir, $"{classObj.ManagedName}.cs");
             using var stream = File.Create(path);
             using var writer = new StreamWriter(stream);

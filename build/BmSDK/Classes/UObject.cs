@@ -9,23 +9,14 @@ namespace BmSDK;
 
 public partial class UObject
 {
-    private readonly IntPtr _nativePtr;
+    protected readonly IntPtr Ptr = IntPtr.Zero;
 
-    protected unsafe T GetPropertyValue<T>(IntPtr offset)
-    {
-        return MarshalToManaged<T>((_nativePtr + offset).ToPointer());
-    }
+    // Generic accessors for script props
+    protected unsafe T GetPropertyValue<T>(IntPtr offset) => MarshalToManaged<T>((Ptr + offset).ToPointer());
+    protected unsafe void SetPropertyValue<T>(IntPtr offset, T value) => MarshalToNative(value, (Ptr + offset).ToPointer());
 
-    protected bool GetBoolPropertyValue(IntPtr offset, int bit)
-    {
-        return (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
-    }
-
-    protected unsafe void SetPropertyValue<T>(IntPtr offset, T value)
-    {
-        MarshalToNative(value, (_nativePtr + offset).ToPointer());
-    }
-
+    // Special handling for bool props (bitmasks)
+    protected bool GetBoolPropertyValue(IntPtr offset, int bit) => (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
     protected void SetBoolPropertyValue(IntPtr offset, int bit, bool value)
     {
         int currentValue = GetPropertyValue<int>(offset);
@@ -40,10 +31,9 @@ public partial class UObject
         SetPropertyValue(offset, currentValue);
     }
 
+    // Marshals unmanaged data to managed, then returns it.
     private static unsafe T MarshalToManaged<T>(void* data)
     {
-        // Marshals unmanaged data to managed, then returns it.
-
         // TODO: UStrProperty
         // TODO: UNameProperty
         // TODO: UArrayProperty
@@ -63,10 +53,9 @@ public partial class UObject
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");
     }
 
+    // Marshals a managed object to native, then copies it into an existing buffer.
     private static unsafe void MarshalToNative<T>(T value, void* data)
     {
-        // Marshals a managed object to native, then copies it into an existing buffer.
-
         // TODO: UStrProperty
         // TODO: UNameProperty
         // TODO: UArrayProperty
@@ -81,7 +70,7 @@ public partial class UObject
         else if (typeof(T).IsAssignableTo(typeof(UObject)))
         {
             // We already have a pointer to this object's native instance, so just assign it.
-            MarshalToNative(((UObject)(object)value!)._nativePtr, data);
+            MarshalToNative(((UObject)(object)value!).Ptr, data);
             return;
         }
 

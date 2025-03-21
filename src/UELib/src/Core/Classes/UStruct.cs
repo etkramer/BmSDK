@@ -309,7 +309,7 @@ namespace UELib.Core
             Super?.ComputeLayoutInfo();
 
             // Measure/layout props
-            var fieldOffset = StructStartOffset = (Super?.StructStartOffset ?? 0) + (Super?.StructSize ?? 0);
+            var fieldOffset = StructStartOffset = (Super?.StructSize ?? 0);
             var fieldBit = 0;
             foreach (var prop in EnumerateFields().OfType<UProperty>())
             {
