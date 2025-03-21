@@ -172,13 +172,16 @@ partial class ClassGenerator(UClass Class)
     /// </summary>
     void WritePropDeclaration(TextWriter writer, UProperty prop, int indent)
     {
-        var propOffset = prop.PropertyOffset;
         var nativeTypeName = GetNativeTypeName(prop);
         var managedTypeName = GetManagedTypeName(prop);
-        writer.WriteLineIndented(
-            $"public {managedTypeName} {prop.Name} => ({managedTypeName})GetPropertyValue({propOffset}, \"{nativeTypeName}\");",
-            indent
-        );
+        var categoryName = prop.CategoryName.IsNone() ? "" : prop.CategoryName.ToString();
+
+        writer.WriteLineIndented($"// var({categoryName}) {prop.Decompile()}", indent);
+        writer.WriteLineIndented($"public {managedTypeName} {prop.Name}", indent);
+        writer.WriteLineIndented("{", indent);
+        writer.WriteLineIndented($"get => ({managedTypeName})GetPropertyValue({prop.PropertyOffset}, \"{nativeTypeName}\");", indent + 1);
+        writer.WriteLineIndented($"set => SetPropertyValue({prop.PropertyOffset}, \"{nativeTypeName}\", value);", indent + 1);
+        writer.WriteLineIndented("}", indent);
     }
 
     /// <summary>
@@ -186,9 +189,13 @@ partial class ClassGenerator(UClass Class)
     /// </summary>
     void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
     {
-        writer.WriteLineIndented(
-            $"public bool {prop.Name} => GetBoolPropertyValue({prop.PropertyOffset}, {prop.BitfieldIdx});",
-            indent
-        );
+        var categoryName = prop.CategoryName.IsNone() ? "" : prop.CategoryName.ToString();
+
+        writer.WriteLineIndented($"// var({categoryName}) {prop.Decompile()}", indent);
+        writer.WriteLineIndented($"public bool {prop.Name}", indent);
+        writer.WriteLineIndented("{", indent);
+        writer.WriteLineIndented($"get => GetBoolPropertyValue({prop.PropertyOffset}, {prop.BitfieldIdx});", indent + 1);
+        writer.WriteLineIndented($"set => SetBoolPropertyValue({prop.PropertyOffset}, {prop.BitfieldIdx}, value);", indent + 1);
+        writer.WriteLineIndented("}", indent);
     }
 }
