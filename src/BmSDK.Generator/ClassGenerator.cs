@@ -79,7 +79,11 @@ partial class ClassGenerator(UClass Class)
                 }
 
                 // Write newline if needed
-                if (propField != propFields.Last() || enumFields.Length > 0 || structFields.Length > 0)
+                if (
+                    propField != propFields.Last()
+                    || enumFields.Length > 0
+                    || structFields.Length > 0
+                )
                 {
                     writer.WriteLine();
                 }
@@ -179,7 +183,10 @@ partial class ClassGenerator(UClass Class)
         writer.Write($"[FieldOffset({prop.PropertyOffset})] ");
 
         // Write field declaration (NOTE we're using int as a placeholder for now)
-        writer.WriteLine($"public int {prop.ManagedName};");
+        writer.Write($"public int {prop.ManagedName};");
+
+        // Write type/size info
+        writer.WriteLine($" // {((UField)prop.Class).ManagedName} (size = {prop.ElementSize})");
     }
 
     /// <summary>
@@ -187,9 +194,11 @@ partial class ClassGenerator(UClass Class)
     /// </summary>
     void WritePropDeclaration(TextWriter writer, UProperty prop, int indent)
     {
-        // Write UnrealScript declaration for reference
-        var categoryName = prop.CategoryName.IsNone() ? "" : prop.CategoryName.ToString();
-        writer.WriteLineIndented($"// var({categoryName}) {prop.Decompile()}", indent);
+        // Write type/size info
+        writer.WriteLineIndented(
+            $"// {((UField)prop.Class).ManagedName} (size = {prop.ElementSize})",
+            indent
+        );
 
         // Handle unsupported property types
         var managedTypeName = GetManagedTypeName(prop);
@@ -205,6 +214,8 @@ partial class ClassGenerator(UClass Class)
 
         // Write property signature
         writer.WriteLineIndented($"public {managedTypeName} {prop.ManagedName}", indent);
+
+        // Write property getter/setter
         writer.WriteLineIndented("{", indent);
         writer.WriteLineIndented(
             $"get => GetPropertyValue<{managedTypeName}>({prop.PropertyOffset});",
@@ -222,10 +233,13 @@ partial class ClassGenerator(UClass Class)
     /// </summary>
     void WriteBoolPropDeclaration(TextWriter writer, UBoolProperty prop, int indent)
     {
-        var categoryName = prop.CategoryName.IsNone() ? "" : prop.CategoryName.ToString();
+        // Write type/size info
+        writer.WriteLineIndented($"// {((UField)prop.Class).ManagedName} (size = 1b)", indent);
 
-        writer.WriteLineIndented($"// var({categoryName}) {prop.Decompile()}", indent);
+        // Write property signature
         writer.WriteLineIndented($"public bool {prop.ManagedName}", indent);
+
+        // Write property getter/setter
         writer.WriteLineIndented("{", indent);
         writer.WriteLineIndented(
             $"get => GetBoolPropertyValue({prop.PropertyOffset}, {prop.BitfieldIdx});",
