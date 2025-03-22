@@ -5,7 +5,7 @@ namespace BmSDK.Generator;
 
 partial class ClassGenerator
 {
-    string? GetManagedTypeName(UProperty prop)
+    string GetManagedTypeName(UProperty prop)
     {
         // Return enum name if possible
         if (prop is UByteProperty byteProperty)
@@ -52,6 +52,16 @@ partial class ClassGenerator
         // Return struct name if possible
         if (prop is UStructProperty structProperty)
         {
+            // Remap structs to .NET equivalents where possible
+            if (structProperty.Struct.ManagedName == "FVector")
+            {
+                return "Vector3";
+            }
+            else if (structProperty.Struct.ManagedName == "FQWord" && prop.ManagedName == "ObjectFlags")
+            {
+                return "EObjectFlags";
+            }
+
             return GetFullName(structProperty.Struct);
         }
 

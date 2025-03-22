@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BmSDK.Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"F:/Steam/steamapps/common/Batman Arkham Asylum GOTY/BmGame/CookedPC (unpacked)\"\r\n\"$(SolutionDir)/src/BmSDK\""
+    }
+  }
+}

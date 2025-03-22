@@ -12,6 +12,7 @@ partial class ClassGenerator(UClass Class)
     {
         // Write using statements
         writer.WriteLine("using System;");
+        writer.WriteLine("using System.Numerics;\n");
         writer.WriteLine("using System.Runtime.InteropServices;\n");
 
         // Write namespace declaration

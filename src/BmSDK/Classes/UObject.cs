@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
@@ -9,11 +10,11 @@ namespace BmSDK;
 
 public partial class UObject
 {
-    protected readonly IntPtr Ptr = IntPtr.Zero;
+    public IntPtr Ptr { get; protected init; } = IntPtr.Zero;
 
     // Generic accessors for script props
-    protected unsafe T GetPropertyValue<T>(IntPtr offset) => MarshalToManaged<T>((Ptr + offset).ToPointer());
-    protected unsafe void SetPropertyValue<T>(IntPtr offset, T value) => MarshalToNative(value, (Ptr + offset).ToPointer());
+    public unsafe T GetPropertyValue<T>(IntPtr offset) => MarshalToManaged<T>((Ptr + offset).ToPointer());
+    public unsafe void SetPropertyValue<T>(IntPtr offset, T value) => MarshalToNative(value, (Ptr + offset).ToPointer());
 
     // Special handling for bool props (bitfields)
     protected bool GetBoolPropertyValue(IntPtr offset, int bit) => (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
@@ -32,7 +33,7 @@ public partial class UObject
     }
 
     // Marshals unmanaged data to managed, then returns it.
-    private static unsafe T MarshalToManaged<T>(void* data)
+    private static unsafe TNative MarshalToManaged<TNative>(void* data)
     {
         // TODO: UStrProperty
         // TODO: UNameProperty
@@ -40,17 +41,21 @@ public partial class UObject
         // TODO: UObjectProperty, UClassProperty, UComponentProperty
 
         // Try to copy memory directly (for struct, primitive types)
-        if (typeof(T).IsValueType)
+        //if (typeof(TNative).IsValueType)
+        //{
+        //    return (TNative)Marshal.PtrToStructure((IntPtr)data, typeof(TNative))!;
+        //}
+        if (typeof(TNative).IsValueType)
         {
-            return (T)Marshal.PtrToStructure((IntPtr)data, typeof(T))!;
+            return Unsafe.As<byte, TNative>(ref ((byte*)data)[0]);
         }
-        else if (typeof(T).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TNative).IsAssignableTo(typeof(UObject)))
         {
             // TODO: Should check if we already have a managed class associated with
             // this object pointer, then either return it or create a new one.
         }
 
-        throw new NotImplementedException($"Marshaling not implemented for type {typeof(T).Name}");
+        throw new NotImplementedException($"Marshaling not implemented for type {typeof(TNative).Name}");
     }
 
     // Marshals a managed object to native, then copies it into an existing buffer.

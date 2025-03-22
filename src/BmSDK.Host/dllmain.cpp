@@ -69,8 +69,11 @@ bool LoadAssembly(wstring asmPath)
 	wstring entryTypeName = TEXT("BmSDK.Loader.Entry, BmSDK.Loader");
 	wstring entryMethodName = TEXT("DllMain");
 	wstring entryDelegateName = TEXT("BmSDK.Loader.Entry+DllMainDelegate, BmSDK.Loader");
-	assert(!hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(), entryDelegateName.c_str(), nullptr, (void**)&entryFn) && entryFn);
+	auto loadAssemblyResult = hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(), entryDelegateName.c_str(), nullptr, (void**)&entryFn);
 
+	// Call loader entry func
+	assert(loadAssemblyResult == 0);
+	assert(entryFn != nullptr);
 	return !entryFn();
 }
 

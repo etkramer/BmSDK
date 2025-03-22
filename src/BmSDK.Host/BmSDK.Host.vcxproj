@@ -82,6 +82,12 @@
       <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
       <Message>Copy to game directory</Message>
     </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
+      <Message>Deploying to game directory</Message>
+      <Inputs>$(SolutionDir)build\dinput8.dll;$(SolutionDir)build\sdk\BmSDK.dll;$(SolutionDir)build\sdk\BmSDK.Loader.dll;%(Inputs)</Inputs>
+      <Outputs>D:\Games\BatmanArkhamAsylum\Binaries\dinput8.dll;D:\Games\BatmanArkhamAsylum\Binaries\sdk\BmSDK.dll;D:\Games\BatmanArkhamAsylum\Binaries\sdk\BmSDK.Loader.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -110,6 +116,12 @@
       <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
       <Message>Copy to game directory</Message>
     </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
+      <Message>Deploying to game directory</Message>
+      <Inputs>$(SolutionDir)build\dinput8.dll;$(SolutionDir)build\sdk\BmSDK.dll;$(SolutionDir)build\sdk\BmSDK.Loader.dll;%(Inputs)</Inputs>
+      <Outputs>D:\Games\BatmanArkhamAsylum\Binaries\dinput8.dll;D:\Games\BatmanArkhamAsylum\Binaries\sdk\BmSDK.dll;D:\Games\BatmanArkhamAsylum\Binaries\sdk\BmSDK.Loader.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -119,7 +131,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Build.cmd" />
     <None Include="vcpkg.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
