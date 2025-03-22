@@ -17,12 +17,6 @@ partial class ClassGenerator
             }
         }
 
-        // Handle UClass before UObject
-        if (prop is UClassProperty)
-        {
-            return "Type";
-        }
-
         // Return object class name if possible
         if (prop is UObjectProperty objectProperty)
         {
@@ -85,7 +79,7 @@ partial class ClassGenerator
             UByteProperty => "byte",
             UBoolProperty => "bool",
             UStrProperty => "string",
-            UNameProperty => "string",
+            UNameProperty => "FName",
 
             // TODO: More specific type
             UDelegateProperty => "Delegate",

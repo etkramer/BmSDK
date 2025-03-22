@@ -1,8 +1,6 @@
-using BmSDK;
+namespace BmSDK;
 
-namespace BmSDK.Engine;
-
-public sealed class Function : UObject
+public sealed class Function : Struct
 {
     // TODO
 }

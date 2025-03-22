@@ -2,7 +2,6 @@
 using System.Runtime.InteropServices;
 using BmSDK.Framework;
 using Windows.Win32;
-using Windows.Win32.Foundation;
 
 using PInvokeDetours = Microsoft.Detours.PInvoke;
 
@@ -13,10 +12,9 @@ public static class DetourUtil
     // Keep delegates in memory to avoid GC
     static readonly List<Delegate> _detourDelegateRefs = [];
 
+    // Creates a detour and returns the original function
     public static T NewDetour<T>(IntPtr funcOffset, T detourFunc) where T : Delegate
     {
-        // Creates a detour and returns the original function
-
         Debug.WriteLine($"Detouring 0x{MemUtil.GetIntPointer(funcOffset):X} (0x{funcOffset:X})");
 
         unsafe
