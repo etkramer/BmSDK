@@ -306,7 +306,10 @@ namespace UELib.Core
             }
 
             // Try compute super struct size
-            Super?.ComputeLayoutInfo();
+            if (Super is not null && Super.StructSize == 0)
+            {
+                Super.BeginDeserializing();
+            }
 
             // Measure/layout props
             var fieldOffset = StructStartOffset = (Super?.StructSize ?? 0);

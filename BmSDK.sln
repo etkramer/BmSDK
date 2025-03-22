@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmSDK.Generator", "src\BmSDK.Generator\BmSDK.Generator.csproj", "{7A27547B-E85D-45E5-A850-6B5002F166D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{2BC92803-E28D-46D1-8418-DE498A9A387A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eliot.UELib", "src\UELib\src\Eliot.UELib.csproj", "{A7030329-7DF2-4426-847A-38D595841DCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmSDK", "src\BmSDK\BmSDK.csproj", "{ADBA9416-9E98-4748-AED0-DE3F6FB6D1E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A27547B-E85D-45E5-A850-6B5002F166D6} = {7A27547B-E85D-45E5-A850-6B5002F166D6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BmSDK.Host", "src\BmSDK.Host\BmSDK.Host.vcxproj", "{BCA40631-3E36-4227-A7D2-7CB604E26AA0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B74BEC51-69A0-4C3A-80EB-73605C7A9830} = {B74BEC51-69A0-4C3A-80EB-73605C7A9830}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmSDK.Loader", "src\BmSDK.Loader\BmSDK.Loader.csproj", "{B74BEC51-69A0-4C3A-80EB-73605C7A9830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A27547B-E85D-45E5-A850-6B5002F166D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A27547B-E85D-45E5-A850-6B5002F166D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A27547B-E85D-45E5-A850-6B5002F166D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A27547B-E85D-45E5-A850-6B5002F166D6}.Release|x86.Build.0 = Release|Any CPU
+		{A7030329-7DF2-4426-847A-38D595841DCF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7030329-7DF2-4426-847A-38D595841DCF}.Debug|x86.Build.0 = Debug|Any CPU
+		{A7030329-7DF2-4426-847A-38D595841DCF}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7030329-7DF2-4426-847A-38D595841DCF}.Release|x86.Build.0 = Release|Any CPU
+		{ADBA9416-9E98-4748-AED0-DE3F6FB6D1E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ADBA9416-9E98-4748-AED0-DE3F6FB6D1E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{ADBA9416-9E98-4748-AED0-DE3F6FB6D1E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{ADBA9416-9E98-4748-AED0-DE3F6FB6D1E9}.Release|x86.Build.0 = Release|Any CPU
+		{BCA40631-3E36-4227-A7D2-7CB604E26AA0}.Debug|x86.ActiveCfg = Debug|Win32
+		{BCA40631-3E36-4227-A7D2-7CB604E26AA0}.Debug|x86.Build.0 = Debug|Win32
+		{BCA40631-3E36-4227-A7D2-7CB604E26AA0}.Release|x86.ActiveCfg = Release|Win32
+		{BCA40631-3E36-4227-A7D2-7CB604E26AA0}.Release|x86.Build.0 = Release|Win32
+		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Debug|x86.Build.0 = Debug|Any CPU
+		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Release|x86.ActiveCfg = Release|Any CPU
+		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7030329-7DF2-4426-847A-38D595841DCF} = {2BC92803-E28D-46D1-8418-DE498A9A387A}
+	EndGlobalSection
+EndGlobal

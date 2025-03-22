@@ -15,11 +15,11 @@ public partial class UObject
     protected unsafe T GetPropertyValue<T>(IntPtr offset) => MarshalToManaged<T>((Ptr + offset).ToPointer());
     protected unsafe void SetPropertyValue<T>(IntPtr offset, T value) => MarshalToNative(value, (Ptr + offset).ToPointer());
 
-    // Special handling for bool props (bitmasks)
+    // Special handling for bool props (bitfields)
     protected bool GetBoolPropertyValue(IntPtr offset, int bit) => (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
     protected void SetBoolPropertyValue(IntPtr offset, int bit, bool value)
     {
-        int currentValue = GetPropertyValue<int>(offset);
+        var currentValue = GetPropertyValue<int>(offset);
         if (value)
         {
             currentValue |= 1 << bit;

@@ -9,21 +9,32 @@
 		"files.exclude": {
 			"**/bin/": true,
 			"**/obj/": true,
+			"**/.vs/": true,
+			"**/*proj.user": true,
 		},
 		"dotnet.defaultSolution": "src/BmSDK.sln",
+		"C_Cpp.default.compilerPath": "cl.exe"
 	},
 	"tasks": {
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "build",
-				"command": "dotnet",
+				"label": "Build BmSDK",
 				"type": "process",
+				"command": "${workspaceFolder}/src/BmSDK-Build.cmd",
+				"options": { "cwd": "${workspaceFolder}/src" },
+				"problemMatcher": "$msCompile",
+				"presentation": { "echo": false, "clear": true },
+				"group": { "kind": "build", "isDefault": true }
+			},
+			{
+				"label": "Build BmSDK.Generator",
+				"type": "process",
+				"command": "dotnet",
 				"args": [ "build", "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj", "--no-restore" ],
 				"problemMatcher": "$msCompile",
-				"presentation": {
-					"clear": true
-				}
+				"presentation": { "echo": false, "clear": true },
+				"group": { "kind": "build" }
 			}
 		]
 	},
@@ -31,15 +42,15 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "Launch BmSDK.Generator",
+				"name": "Launch Generator",
 				"type": "coreclr",
 				"request": "launch",
-				"preLaunchTask": "build",
+				"preLaunchTask": "Build BmSDK.Generator",
 				"program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
 				"console": "internalConsole",
 				"args": [
 					"F:\\Steam\\steamapps\\common\\Batman Arkham Asylum GOTY\\BmGame\\CookedPC (unpacked)",
-					"${workspaceFolder}\\build\\BmSDK\\Generated"
+					"${workspaceFolder}\\src\\BmSDK"
 				],
 			}
 		]

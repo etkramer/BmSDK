@@ -19,6 +19,10 @@
 # Mono auto generated files
 mono_crash.*
 
+# Generated SDK files
+/build/*
+src/BmSDK/Generated/*
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -34,8 +38,6 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-
-build/BmSDK/Generated/*
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

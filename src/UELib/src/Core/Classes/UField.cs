@@ -31,6 +31,11 @@ namespace UELib.Core
                 {
                     return "UObject";
                 }
+                else if (this is UClass classObj && classObj.IsClassInterface())
+                {
+                    // Prepend interfaces with I
+                    return $"I{Name}";
+                }
                 else
                 {
                     // Prepend structs with F
