@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BmSDK.Framework;
 
 public static class MarshalUtil
 {
+    static readonly Dictionary<IntPtr, UObject> _managedObjects = [];
+
     // Marshals unmanaged data to managed, then returns it.
     public static unsafe TManaged MarshalToManaged<TManaged>(void* data)
     {
         // TODO: UStrProperty, UArrayProperty
-        // TODO 2: UObjectProperty (still incomplete)
 
         // Try to copy memory directly (for struct, primitive types)
         if (typeof(TManaged).IsValueType)
@@ -17,15 +19,25 @@ public static class MarshalUtil
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
         {
-            // TODO: Should check if we already have a managed class associated with
-            // this object pointer, then either return it or create a new one.
+            var objPtr = MemUtil.Blit<IntPtr>(data);
 
-            // NOTE: Will want to check UObject.Class, not just assume TManaged is as specific as possible.
+            // Does this already have a managed wrapper?
+            if (_managedObjects.TryGetValue(objPtr, out var obj))
+            {
+                // If so, return it
+                return (TManaged)(object)obj;
+            }
+            else
+            {
+                // TODO: We want to check UObject.Class, not just assume TManaged is as specific as possible.
+                var objType = typeof(TManaged);
 
-            var obj = Guard.NotNull((UObject?)(object?)Activator.CreateInstance<TManaged>(), $"Couldn't create a managed instance of {typeof(TManaged).Name}");
-            obj.Ptr = MemUtil.Blit<IntPtr>(data);
+                // Create a new managed object
+                var newObj = _managedObjects[objPtr] = Guard.NotNull((UObject?)Activator.CreateInstance(objType), $"Couldn't create an instance of managed type {objType.Name}");
+                newObj.Ptr = MemUtil.Blit<IntPtr>(data);
 
-            return (TManaged)(object)obj;
+                return (TManaged)(object)newObj;
+            }
         }
 
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(TManaged).Name}");

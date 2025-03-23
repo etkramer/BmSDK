@@ -21,7 +21,7 @@ static class Entry
         Debug.WriteLine($"Hello from BmSDK.Loader");
 
         // Create function detours
-        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(0x1A7040, ProcessEventDetour);
+        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameDefines.FuncOffsets.ProcessEvent, ProcessEventDetour);
 
         // End with a newline
         Debug.Write("\n");
@@ -46,7 +46,7 @@ static class Entry
 
         unsafe
         {
-            var selfObj = MarshalUtil.MarshalToManaged<TestObject>(&self);
+            var selfObj = MarshalUtil.MarshalToManaged<Class>(&self);
             var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
             Debug.WriteLine($"\nProcessEvent: {funcObj.Name} on {selfObj.Name}");
         }
@@ -55,8 +55,8 @@ static class Entry
         unsafe
         {
             // Get table addresses
-            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(0x2231BB4));
-            var GObjects = new TArray<TestObject>(MemUtil.GetIntPointer(0x2231BE4));
+            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameDefines.GlobalOffsets.GNames));
+            var GObjects = new TArray<Class>(MemUtil.GetIntPointer(GameDefines.GlobalOffsets.GObjObjects));
 
             // Test memory access
             Debug.Write("\n");
@@ -75,5 +75,3 @@ static class Entry
         }
     }
 }
-
-sealed class TestObject : UObject { }
