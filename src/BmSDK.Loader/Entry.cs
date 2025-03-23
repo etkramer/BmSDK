@@ -11,11 +11,11 @@ static class Entry
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessEventDelegate(IntPtr self, IntPtr Function, IntPtr Parms, IntPtr UnusedResult);
 
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    public delegate IntPtr StaticConstructObjectDelegate(IntPtr InClass, IntPtr InOuter, FName InName, EObjectFlags InFlags, IntPtr InTemplate, IntPtr Error, IntPtr SubobjectRoot, IntPtr InInstanceGraph);
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void AddObjectDelegate(IntPtr self, int InIndex);
 
     static ProcessEventDelegate? _ProcessEventDetourBase = null;
-    static StaticConstructObjectDelegate? _StaticConstructObjectDetourBase = null;
+    static AddObjectDelegate? _AddObjectDetourBase = null;
 
     public static void DllMain()
     {
@@ -23,7 +23,7 @@ static class Entry
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameInfo.FuncOffsets.ProcessEvent, ProcessEventDetour);
-        _StaticConstructObjectDetourBase = DetourUtil.NewDetour<StaticConstructObjectDelegate>(GameInfo.FuncOffsets.StaticConstructObject, StaticConstructObjectDetour);
+        _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(GameInfo.FuncOffsets.AddObject, AddObjectDetour);
 
         // End with a newline
         Debug.Write("\n");
@@ -48,8 +48,8 @@ static class Entry
 
         unsafe
         {
-            var selfObj = MarshalUtil.MarshalToManaged<Class>(&self);
-            var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
+            var selfObj = MarshalUtil.MarshalToManaged<BaseObject>(&self);
+            var funcObj = MarshalUtil.MarshalToManaged<BaseObject>(&Function);
             Debug.WriteLine($"\nProcessEvent: {funcObj.Name} on {selfObj.Name}");
         }
 
@@ -58,7 +58,7 @@ static class Entry
         {
             // Get table addresses
             var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames));
-            var GObjects = new TArray<Class>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
+            var GObjects = new TArray<BaseObject>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
 
             // Test memory access
             Debug.Write("\n");
@@ -77,10 +77,15 @@ static class Entry
         }
     }
 
-    // Detour for UObject::StaticConstructObject()
-    public static IntPtr StaticConstructObjectDetour(IntPtr InClass, IntPtr InOuter, FName InName, EObjectFlags InFlags, IntPtr InTemplate, IntPtr Error, IntPtr SubobjectRoot, IntPtr InInstanceGraph)
+    // Detour for UObject::AddObject()
+    public static void AddObjectDetour(IntPtr self, int InIndex)
     {
         // Call base impl
-        return _StaticConstructObjectDetourBase!.Invoke(InClass, InOuter, InName, InFlags, InTemplate, Error, SubobjectRoot, InInstanceGraph);
+        _AddObjectDetourBase!.Invoke(self, InIndex);
+
+        // Wrap this object in a managed instance
+        // TODO: We want to check UObject.Class to get the actual matching type.
+        var managedType = typeof(Class);
+        MarshalUtil.CreateManagedWrapper(self, managedType);
     }
 }

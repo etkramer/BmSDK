@@ -13,7 +13,7 @@ public static class GameInfo
     public static class FuncOffsets
     {
         public const IntPtr ProcessEvent = 0x1A7040;
-        public const IntPtr StaticConstructObject = 0x1E44E0;
+        public const IntPtr AddObject = 0x1D4080;
     }
 
     public static class MemberOffsets

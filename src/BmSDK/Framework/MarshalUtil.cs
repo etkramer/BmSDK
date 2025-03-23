@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace BmSDK.Framework;
 
@@ -21,23 +22,9 @@ public static class MarshalUtil
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
-            // Does this already have a managed wrapper?
-            if (_managedObjects.TryGetValue(objPtr, out var obj))
-            {
-                // If so, return it
-                return (TManaged)(object)obj;
-            }
-            else
-            {
-                // TODO: We want to check UObject.Class, not just assume TManaged is as specific as possible.
-                var objType = typeof(TManaged);
-
-                // Create a new managed object
-                var newObj = _managedObjects[objPtr] = Guard.NotNull((BaseObject?)Activator.CreateInstance(objType), $"Couldn't create an instance of managed type {objType.Name}");
-                newObj.Ptr = MemUtil.Blit<IntPtr>(data);
-
-                return (TManaged)(object)newObj;
-            }
+            // We should already have wrappers for all objects.
+            Guard.Require(_managedObjects.TryGetValue(objPtr, out var obj), $"No managed wrapper found for object at 0x{objPtr:X}");
+            return (TManaged)(object)Guard.NotNull(obj);
         }
 
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(TManaged).Name}");
@@ -62,5 +49,19 @@ public static class MarshalUtil
         }
 
         throw new NotImplementedException($"Marshaling not implemented for type {typeof(TManaged).Name}");
+    }
+
+    public static unsafe void CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    {
+        // NOTE: Engine could reuse memory, we'll want to hook object destruction too.
+        if (_managedObjects.ContainsKey(objPtr))
+        {
+            Debug.WriteLine($"Object 0x{objPtr:X} already has a managed wrapper! Check that it was cleaned up properly.");
+            return;
+        }
+
+        // Create a new managed object
+        var newObj = _managedObjects[objPtr] = Guard.NotNull((BaseObject?)Activator.CreateInstance(managedType), $"Couldn't create an instance of managed type {managedType.Name}");
+        newObj.Ptr = objPtr;
     }
 }

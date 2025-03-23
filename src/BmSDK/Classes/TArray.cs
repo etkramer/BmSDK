@@ -16,8 +16,8 @@ public unsafe class TArray<TManaged>(IntPtr ptr) : IEnumerable<TManaged>
 
     public TManaged this[int idx]
     {
-        get => MarshalUtil.MarshalToManaged<TManaged>(((byte*)this.AllocatorInstance) + (idx * sizeof(int)));
-        set => MarshalUtil.MarshalToNative(value, ((byte*)this.AllocatorInstance) + (idx * sizeof(int)));
+        get => MarshalUtil.MarshalToManaged<TManaged>(((byte*)AllocatorInstance) + (idx * sizeof(int)));
+        set => MarshalUtil.MarshalToNative(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
     }
 
     public unsafe IEnumerator<TManaged> GetEnumerator()
