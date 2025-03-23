@@ -3,19 +3,19 @@ using UELib.Core;
 
 static class ClassTemplate
 {
-    public static FormattableString Render(UClass classObj, ClassGenerator generator)
+    public static FormattableString Render(UClass classObj, ClassHelper helper)
     {
         var enumFields = classObj.EnumerateFields().OfType<UEnum>().ToArray();
         var structFields = classObj.EnumerateFields().OfType<UScriptStruct>().ToArray();
         var propFields = classObj.EnumerateFields().OfType<UProperty>().ToArray();
 
-        var superDecl = classObj.Super is null ? "" : $" : {generator.GetFullName(classObj.Super)}";
+        var superDecl = classObj.Super is null ? "" : $" : {helper.GetFullName(classObj.Super)}";
 
         return $$"""
             // class {{classObj.Package.PackageName}}.{{classObj.GetPath()}} (size = {{classObj.StructSize}})
             public{{(classObj.HasClassFlag(UELib.Flags.ClassFlags.Abstract) ? " abstract" : "")}} partial class {{classObj.ManagedName}} {{superDecl}}
             {
-                {{propFields.Select(prop => RenderProperty(prop, generator))}}
+                {{propFields.Select(prop => RenderProperty(prop, helper))}}
 
                 {{enumFields.Select(EnumTemplate.Render)}}
 
@@ -24,9 +24,9 @@ static class ClassTemplate
             """;
     }
 
-    static FormattableString RenderProperty(UProperty prop, ClassGenerator generator)
+    static FormattableString RenderProperty(UProperty prop, ClassHelper helper)
     {
-        var managedTypeName = generator.GetManagedTypeName(prop);
+        var managedTypeName = helper.GetManagedTypeName(prop);
 
         // Special handling for bool props
         if (prop is UBoolProperty boolProp)

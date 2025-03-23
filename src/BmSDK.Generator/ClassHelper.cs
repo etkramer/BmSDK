@@ -2,10 +2,36 @@ using UELib.Core;
 
 namespace BmSDK.Generator;
 
-class ClassGenerator(UClass Class)
+class ClassHelper(UClass Class)
 {
     public string Namespace =>
         Class.Package.PackageName == "Core" ? "BmSDK" : $"BmSDK.{Class.Package.PackageName}";
+
+
+    public string GetFullName(UField structObj)
+    {
+        // Minimally qualify names
+        if (structObj is UClass)
+        {
+            return (
+                structObj.Package.PackageName == "Core"
+                || Namespace.StartsWith($"BmSDK.{structObj.Package.PackageName}")
+            )
+                ? structObj.ManagedName
+                : $"{structObj.Package.PackageName}.{structObj.ManagedName}";
+        }
+        else
+        {
+            if (structObj.Outer is null || Class == structObj.Outer || Class.Extends(structObj.Outer.Name))
+            {
+                return $"{structObj.ManagedName}";
+            }
+            else
+            {
+                return $"{GetFullName((UField)structObj.Outer)}.{structObj.ManagedName}";
+            }
+        }
+    }
 
     public string GetManagedTypeName(UProperty prop)
     {
@@ -88,30 +114,5 @@ class ClassGenerator(UClass Class)
 
             _ => throw new NotImplementedException()
         };
-    }
-
-    public string GetFullName(UField structObj)
-    {
-        // Minimally qualify names
-        if (structObj is UClass)
-        {
-            return (
-                structObj.Package.PackageName == "Core"
-                || Namespace.StartsWith($"BmSDK.{structObj.Package.PackageName}")
-            )
-                ? structObj.ManagedName
-                : $"{structObj.Package.PackageName}.{structObj.ManagedName}";
-        }
-        else
-        {
-            if (structObj.Outer is null || Class == structObj.Outer || Class.Extends(structObj.Outer.Name))
-            {
-                return $"{structObj.ManagedName}";
-            }
-            else
-            {
-                return $"{GetFullName((UField)structObj.Outer)}.{structObj.ManagedName}";
-            }
-        }
     }
 }
