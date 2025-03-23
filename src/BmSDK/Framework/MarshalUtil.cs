@@ -5,7 +5,7 @@ namespace BmSDK.Framework;
 
 public static class MarshalUtil
 {
-    static readonly Dictionary<IntPtr, UObject> _managedObjects = [];
+    static readonly Dictionary<IntPtr, BaseObject> _managedObjects = [];
 
     // Marshals unmanaged data to managed, then returns it.
     public static unsafe TManaged MarshalToManaged<TManaged>(void* data)
@@ -17,7 +17,7 @@ public static class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -33,7 +33,7 @@ public static class MarshalUtil
                 var objType = typeof(TManaged);
 
                 // Create a new managed object
-                var newObj = _managedObjects[objPtr] = Guard.NotNull((UObject?)Activator.CreateInstance(objType), $"Couldn't create an instance of managed type {objType.Name}");
+                var newObj = _managedObjects[objPtr] = Guard.NotNull((BaseObject?)Activator.CreateInstance(objType), $"Couldn't create an instance of managed type {objType.Name}");
                 newObj.Ptr = MemUtil.Blit<IntPtr>(data);
 
                 return (TManaged)(object)newObj;
@@ -54,10 +54,10 @@ public static class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
             // We already have a pointer to this object's native instance, so just assign it.
-            MarshalToNative(((UObject)(object)value!).Ptr, data);
+            MarshalToNative(((BaseObject)(object)value!).Ptr, data);
             return;
         }
 

@@ -1,8 +1,6 @@
-using BmSDK;
-
 namespace BmSDK.Engine;
 
-public sealed class PendingLevel : UObject
+public sealed class PendingLevel : BaseObject
 {
     // TODO
 }

@@ -1,8 +1,6 @@
-using BmSDK;
-
 namespace BmSDK.Engine;
 
-public sealed class Client : UObject
+public sealed class Client : BaseObject
 {
     // TODO
 }

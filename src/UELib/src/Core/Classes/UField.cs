@@ -29,7 +29,7 @@ namespace UELib.Core
                 // Avoid name conflicts with System.Object
                 if (GetPath() == "Object")
                 {
-                    return "UObject";
+                    return "BaseObject";
                 }
                 else if (this is UClass classObj && classObj.IsClassInterface())
                 {

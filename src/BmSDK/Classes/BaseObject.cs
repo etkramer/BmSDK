@@ -9,7 +9,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class UObject
+public partial class BaseObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 

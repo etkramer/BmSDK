@@ -1,8 +1,6 @@
-using BmSDK;
-
 namespace BmSDK.Engine;
 
-public class StaticMesh : UObject
+public class StaticMesh : BaseObject
 {
     // TODO
 }

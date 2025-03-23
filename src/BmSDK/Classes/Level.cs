@@ -1,8 +1,6 @@
-using BmSDK;
-
 namespace BmSDK.Engine;
 
-public sealed class Level : UObject
+public sealed class Level : BaseObject
 {
     // TODO
 }

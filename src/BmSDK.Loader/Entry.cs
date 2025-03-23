@@ -21,7 +21,7 @@ static class Entry
         Debug.WriteLine($"Hello from BmSDK.Loader");
 
         // Create function detours
-        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameDefines.FuncOffsets.ProcessEvent, ProcessEventDetour);
+        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameInfo.FuncOffsets.ProcessEvent, ProcessEventDetour);
 
         // End with a newline
         Debug.Write("\n");
@@ -55,15 +55,15 @@ static class Entry
         unsafe
         {
             // Get table addresses
-            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameDefines.GlobalOffsets.GNames));
-            var GObjects = new TArray<Class>(MemUtil.GetIntPointer(GameDefines.GlobalOffsets.GObjObjects));
+            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames));
+            var GObjects = new TArray<Class>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
 
             // Test memory access
             Debug.Write("\n");
             Debug.WriteLine($"GNames: Num {GNames.Num}, Max {GNames.Max}");
             Debug.WriteLine($"GObjects: Num {GObjects.Num}, Max {GObjects.Max}");
 
-            // Test UObject access
+            // Test object access
             foreach (var obj in GObjects.Take(10))
             {
                 Debug.Write("\n");

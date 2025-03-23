@@ -22,7 +22,7 @@ partial class ClassGenerator
         {
             if (objectProperty.Object.Name is null)
             {
-                return "UObject";
+                return "BaseObject";
             }
             else
             {
@@ -35,7 +35,7 @@ partial class ClassGenerator
         {
             if (interfaceProperty.InterfaceClass.Name is null)
             {
-                return "UObject";
+                return "BaseObject";
             }
             else
             {

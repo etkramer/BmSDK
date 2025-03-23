@@ -1,8 +1,6 @@
-using BmSDK;
-
 namespace BmSDK.Engine;
 
-public sealed class Model : UObject
+public sealed class Model : BaseObject
 {
     // TODO
 }
