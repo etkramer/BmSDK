@@ -26,6 +26,16 @@ namespace UELib.Core
                     return $"_{Name}";
                 }
 
+                // Preserve names throughout the full inheritance chain.
+                if (this.Super is not null)
+                {
+                    var hiddenField = (this.Outer as UClass)?.EnumerateSuper().SelectMany(outer => (outer as UStruct)?.EnumerateFields()).FirstOrDefault(field => field.Name == Name);
+                    if (hiddenField is not null)
+                    {
+                        return hiddenField.ManagedName;
+                    }
+                }
+
                 // Avoid name conflicts with System.Object
                 if (GetPath() == "Object")
                 {

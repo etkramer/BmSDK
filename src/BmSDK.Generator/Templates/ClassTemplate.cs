@@ -9,6 +9,13 @@ static class ClassTemplate
         var enumFields = classObj.EnumerateFields().OfType<UEnum>().ToArray();
         var structFields = classObj.EnumerateFields().OfType<UScriptStruct>().ToArray();
 
+        // Ignore private functions
+        var funcFields = classObj
+            .EnumerateFields()
+            .OfType<UFunction>()
+            .Where(func => !func.HasFunctionFlag(UELib.Flags.FunctionFlags.Private))
+            .ToArray();
+
         // Get super class decl
         var classDeclSuper = "";
         if (classObj.Super is not null)
@@ -30,6 +37,9 @@ static class ClassTemplate
                 /*  Properties ({{propFields.Length}}) */
                 {{propFields.Select(RenderProp)}}
 
+                /*  Functions ({{enumFields.Length}}) */
+                {{funcFields.Select(FuncTemplate.Render)}}
+
                 /*  Enums ({{enumFields.Length}}) */
                 {{enumFields.Select(EnumTemplate.Render)}}
 
@@ -43,10 +53,15 @@ static class ClassTemplate
     {
         var managedTypeName = TypeMapper.GetManagedTypeForProp(prop);
 
+        // Are we overriding/hiding a field of a superclass?
+        var isHidingSuper = ((UClass)prop.Outer)
+            .EnumerateSuper()
+            .Any(super => super.EnumerateFields().Any(f => f.Name == prop.Name));
+
         // Special handling for bool props
         if (prop is UBoolProperty boolProp)
         {
-            return RenderBoolProperty(boolProp);
+            return RenderBoolProp(boolProp, isHidingSuper);
         }
 
         // Precompute class comment for cleanliness
@@ -55,7 +70,7 @@ static class ClassTemplate
 
         return $$"""
             {{classComment}}
-            public {{managedTypeName}} {{prop.ManagedName}}
+            public{{(isHidingSuper ? " new" : "")}} {{managedTypeName}} {{prop.ManagedName}}
             {
                 get => GetPropertyValue<{{managedTypeName}}>({{prop.PropertyOffset}});
                 set => SetPropertyValue({{prop.PropertyOffset}}, value);
@@ -63,11 +78,11 @@ static class ClassTemplate
             """;
     }
 
-    static FormattableString RenderBoolProperty(UBoolProperty prop)
+    static FormattableString RenderBoolProp(UBoolProperty prop, bool isHidingSuper)
     {
         return $$"""
             // {{((UField)prop.Class).ManagedName}} (size = 1b, offset = {{prop.PropertyOffset}})
-            public bool {{prop.ManagedName}}
+            public{{(isHidingSuper ? " new" : "")}} bool {{prop.ManagedName}}
             {
                 get => GetBoolPropertyValue({{prop.PropertyOffset}}, {{prop.BitfieldIdx}});
                 set => SetBoolPropertyValue({{prop.PropertyOffset}}, {{prop.BitfieldIdx}}, value);

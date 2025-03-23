@@ -102,6 +102,8 @@ static class Entry
                 Debug.WriteLine($"Class: {obj.Class.Name}");
                 Debug.WriteLine($"ObjectInternalInteger: {obj.ObjectInternalInteger}");
                 Debug.WriteLine($"ObjectFlags: {obj.ObjectFlags}");
+
+                // obj.GetPackageName(out var packageName);
             }
         }
     }

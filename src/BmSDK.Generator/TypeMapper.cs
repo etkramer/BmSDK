@@ -140,14 +140,14 @@ public static class TypeMapper
         // Handle UMapProperty generic type names
         if (prop is UMapProperty)
         {
-            // TODO: USE CORRECT NAME
-            return "TMap<object, object>";
+            // TODO: USE CORRECT TYPE ARGS
+            return "BmSDK.TMap<object, object>";
         }
 
         // Handle UArrayProperty generic type names
         if (prop is UArrayProperty arrayProp)
         {
-            return $"TArray<{GetManagedTypeForProp(arrayProp.InnerProperty)}>";
+            return $"BmSDK.TArray<{GetManagedTypeForProp(arrayProp.InnerProperty)}>";
         }
 
         // Handle primitive type names
@@ -158,10 +158,10 @@ public static class TypeMapper
             UByteProperty => "byte",
             UBoolProperty => "bool",
             UStrProperty => "string",
-            UNameProperty => "FName",
+            UNameProperty => "BmSDK.FName",
 
             // TODO: More specific type
-            UDelegateProperty => "Delegate",
+            UDelegateProperty => "System.Delegate",
 
             _ => throw new NotImplementedException(),
         };
