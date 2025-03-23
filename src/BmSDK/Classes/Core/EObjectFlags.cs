@@ -61,5 +61,5 @@ public enum EObjectFlags : ulong
     RF_Native = 0x400000000000000,
     RF_Marked = 0x800000000000000,
     RF_ErrorShutdown = 0x1000000000000000,
-    RF_PendingKill = 0x2000000000000000
+    RF_PendingKill = 0x2000000000000000,
 }

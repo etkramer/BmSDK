@@ -7,15 +7,18 @@ namespace BmSDK;
 
 public unsafe class TArray<TManaged>(IntPtr ptr) : IEnumerable<TManaged>
 {
-	public readonly IntPtr Ptr = ptr;
+    public readonly IntPtr Ptr = ptr;
 
     public void* AllocatorInstance => *(void**)(Ptr + 0).ToPointer();
-	public int Num => *(int*)(Ptr + 4).ToPointer();
-	public int Max => *(int*)(Ptr + 8).ToPointer();
+    public int Num => *(int*)(Ptr + 4).ToPointer();
+    public int Max => *(int*)(Ptr + 8).ToPointer();
 
     public TManaged this[int idx]
     {
-        get => MarshalUtil.MarshalToManaged<TManaged>(((byte*)AllocatorInstance) + (idx * sizeof(int)));
+        get =>
+            MarshalUtil.MarshalToManaged<TManaged>(
+                ((byte*)AllocatorInstance) + (idx * sizeof(int))
+            );
         set => MarshalUtil.MarshalToNative(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
     }
 

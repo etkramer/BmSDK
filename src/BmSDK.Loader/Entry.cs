@@ -10,7 +10,12 @@ static class Entry
     delegate void DllMainDelegate();
 
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void ProcessEventDelegate(IntPtr self, IntPtr Function, IntPtr Parms, IntPtr UnusedResult);
+    public delegate void ProcessEventDelegate(
+        IntPtr self,
+        IntPtr Function,
+        IntPtr Parms,
+        IntPtr UnusedResult
+    );
 
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void AddObjectDelegate(IntPtr self, int InIndex);
@@ -29,9 +34,18 @@ static class Entry
         Debug.WriteLine($"Hello from BmSDK.Loader");
 
         // Create function detours
-        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameInfo.FuncOffsets.ProcessEvent, ProcessEventDetour);
-        _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(GameInfo.FuncOffsets.AddObject, AddObjectDetour);
-        _ObjectDtorDetourBase = DetourUtil.NewDetour<ObjectDtorDelegate>(GameInfo.FuncOffsets.ObjectDtor, ObjectDtorDetour);
+        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(
+            GameInfo.FuncOffsets.ProcessEvent,
+            ProcessEventDetour
+        );
+        _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(
+            GameInfo.FuncOffsets.AddObject,
+            AddObjectDetour
+        );
+        _ObjectDtorDetourBase = DetourUtil.NewDetour<ObjectDtorDelegate>(
+            GameInfo.FuncOffsets.ObjectDtor,
+            ObjectDtorDetour
+        );
 
         // End with a newline
         Debug.Write("\n");
@@ -40,7 +54,12 @@ static class Entry
     static bool IsFirstTick = true;
 
     // Detour for UObject::ProcessEvent()
-    public static void ProcessEventDetour(IntPtr self, IntPtr Function, IntPtr Parms, IntPtr UnusedResult)
+    public static void ProcessEventDetour(
+        IntPtr self,
+        IntPtr Function,
+        IntPtr Parms,
+        IntPtr UnusedResult
+    )
     {
         // Call base impl
         _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
@@ -66,7 +85,9 @@ static class Entry
         {
             // Get table addresses
             var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames));
-            var GObjects = new TArray<BaseObject>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
+            var GObjects = new TArray<BaseObject>(
+                MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
+            );
 
             // Test memory access
             Debug.Write("\n");

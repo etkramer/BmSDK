@@ -9,11 +9,23 @@ static class ClassTemplate
         var enumFields = classObj.EnumerateFields().OfType<UEnum>().ToArray();
         var structFields = classObj.EnumerateFields().OfType<UScriptStruct>().ToArray();
 
-        var superDecl = classObj.Super is null ? "" : $" : {TypeMapper.GetManagedPathForType(classObj.Super)}";
+        // Get super class decl
+        var classDeclSuper = "";
+        if (classObj.Super is not null)
+        {
+            classDeclSuper = $" : {TypeMapper.GetManagedPathForType(classObj.Super)}";
+        }
+
+        // Add keywords for class attributes
+        var classDeclKeywords = "";
+        if (classObj.HasClassFlag(UELib.Flags.ClassFlags.Abstract))
+        {
+            classDeclKeywords = " abstract";
+        }
 
         return $$"""
             // class {{classObj.Package.PackageName}}.{{classObj.GetPath()}} (size = {{classObj.StructSize}})
-            public{{(classObj.HasClassFlag(UELib.Flags.ClassFlags.Abstract) ? " abstract" : "")}} partial class {{classObj.ManagedName}} {{superDecl}}
+            public{{classDeclKeywords}} partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
                 /*  Properties ({{propFields.Length}}) */
                 {{propFields.Select(RenderProp)}}
@@ -37,8 +49,12 @@ static class ClassTemplate
             return RenderBoolProperty(boolProp);
         }
 
+        // Precompute class comment for cleanliness
+        var classComment =
+            $"// {((UField)prop.Class).ManagedName} (size = {prop.ElementSize}, offset = {prop.PropertyOffset}";
+
         return $$"""
-            // {{((UField)prop.Class).ManagedName}} (size = {{prop.ElementSize}}, offset = {{prop.PropertyOffset}})
+            {{classComment}}
             public {{managedTypeName}} {{prop.ManagedName}}
             {
                 get => GetPropertyValue<{{managedTypeName}}>({{prop.PropertyOffset}});

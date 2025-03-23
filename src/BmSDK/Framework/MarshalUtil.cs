@@ -22,11 +22,16 @@ public static class MarshalUtil
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
             // We should already have wrappers for all objects.
-            Guard.Require(_managedObjects.TryGetValue(objPtr, out var obj), $"No managed wrapper found for object at 0x{objPtr:X}");
+            Guard.Require(
+                _managedObjects.TryGetValue(objPtr, out var obj),
+                $"No managed wrapper found for object at 0x{objPtr:X}"
+            );
             return (TManaged)(object)Guard.NotNull(obj);
         }
 
-        throw new NotImplementedException($"Marshaling not implemented for type {typeof(TManaged).Name}");
+        throw new NotImplementedException(
+            $"Marshaling not implemented for type {typeof(TManaged).Name}"
+        );
     }
 
     // Marshals a managed object to native, then copies it into an existing buffer.
@@ -47,20 +52,31 @@ public static class MarshalUtil
             return;
         }
 
-        throw new NotImplementedException($"Marshaling not implemented for type {typeof(TManaged).Name}");
+        throw new NotImplementedException(
+            $"Marshaling not implemented for type {typeof(TManaged).Name}"
+        );
     }
 
     public static unsafe void CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
-        Guard.Require(!_managedObjects.ContainsKey(objPtr), $"Object 0x{objPtr:X} already has a managed wrapper!");
+        Guard.Require(
+            !_managedObjects.ContainsKey(objPtr),
+            $"Object 0x{objPtr:X} already has a managed wrapper!"
+        );
 
         // Create a new managed object
-        var newObj = _managedObjects[objPtr] = Guard.NotNull((BaseObject?)Activator.CreateInstance(managedType), $"Couldn't create an instance of managed type {managedType.Name}");
+        var newObj = _managedObjects[objPtr] = Guard.NotNull(
+            (BaseObject?)Activator.CreateInstance(managedType),
+            $"Couldn't create an instance of managed type {managedType.Name}"
+        );
         newObj.Ptr = objPtr;
     }
 
     public static unsafe void DestroyManagedWrapper(IntPtr objPtr)
     {
-        Guard.Require(_managedObjects.Remove(objPtr), $"Object 0x{objPtr:X} does not have a managed wrapper!");
+        Guard.Require(
+            _managedObjects.Remove(objPtr),
+            $"Object 0x{objPtr:X} does not have a managed wrapper!"
+        );
     }
 }

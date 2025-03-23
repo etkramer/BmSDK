@@ -2,7 +2,6 @@
 using System.Runtime.InteropServices;
 using BmSDK.Framework;
 using Windows.Win32;
-
 using PInvokeDetours = Microsoft.Detours.PInvoke;
 
 namespace BmSDK.Loader;
@@ -13,7 +12,8 @@ public static class DetourUtil
     static readonly List<Delegate> _detourDelegateRefs = [];
 
     // Creates a detour and returns the original function
-    public static T NewDetour<T>(IntPtr funcOffset, T detourFunc) where T : Delegate
+    public static T NewDetour<T>(IntPtr funcOffset, T detourFunc)
+        where T : Delegate
     {
         Debug.WriteLine($"Detouring 0x{MemUtil.GetIntPointer(funcOffset):X} (0x{funcOffset:X})");
 
@@ -23,7 +23,9 @@ public static class DetourUtil
 
             // Get a pointer to the managed detour method
             _detourDelegateRefs.Add(detourFunc);
-            void* managedDetourFuncPtr = Marshal.GetFunctionPointerForDelegate(detourFunc).ToPointer();
+            void* managedDetourFuncPtr = Marshal
+                .GetFunctionPointerForDelegate(detourFunc)
+                .ToPointer();
 
             PInvokeDetours.DetourRestoreAfterWith();
 

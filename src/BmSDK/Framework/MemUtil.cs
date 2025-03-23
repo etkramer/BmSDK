@@ -21,14 +21,18 @@ public static class MemUtil
     }
 
     public static unsafe IntPtr GetIntPointer(IntPtr offset) => (IntPtr)GetPointer(offset);
+
     public static unsafe void* GetPointer(IntPtr offset) => GetPointer<byte>(offset);
-    public static unsafe T* GetPointer<T>(IntPtr offset) where T : unmanaged
+
+    public static unsafe T* GetPointer<T>(IntPtr offset)
+        where T : unmanaged
     {
         // Converts an offset to a pointer
         return (T*)(GetBaseAddress() + offset).ToPointer();
     }
 
     public static unsafe void Blit<TSrc>(TSrc src, void* destPtr) => Blit<TSrc>(&src);
+
     public static unsafe TDest Blit<TDest>(void* srcPtr)
     {
         var dest = default(TDest)!;
@@ -39,7 +43,10 @@ public static class MemUtil
 
     public static unsafe void Blit<TSrc, TDest>(TSrc src, ref TDest dest)
     {
-        Guard.Require(typeof(TSrc).IsValueType && typeof(TDest).IsValueType, "Can't blit managed reference types!");
+        Guard.Require(
+            typeof(TSrc).IsValueType && typeof(TDest).IsValueType,
+            "Can't blit managed reference types!"
+        );
         Guard.Require(sizeof(TSrc) == sizeof(TDest), "Can't blit types with mismatched sizes!");
 
         fixed (TDest* destPtr = &dest)

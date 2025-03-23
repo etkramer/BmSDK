@@ -33,7 +33,8 @@ public static class Guard
     }
 
     [DebuggerHidden]
-    public static T NotNull<T>([NotNull] T? obj, string? message = null) where T : struct
+    public static T NotNull<T>([NotNull] T? obj, string? message = null)
+        where T : struct
     {
         if (!obj.HasValue)
         {
