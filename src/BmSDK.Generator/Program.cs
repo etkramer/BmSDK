@@ -2,6 +2,8 @@
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Generator;
 using BmSDK.Generator.Utils;
+using CodegenCS;
+using CodegenCS.IO;
 using Spectre.Console;
 using Spectre.Console.Cli;
 using UELib;
@@ -35,7 +37,9 @@ sealed class MainCommand : Command<MainCommand.Settings>
 
         // Load script packages
         var pkgs = new List<UnrealPackage>();
-        foreach (var path in Directory.GetFiles(pkgDir, "*.u").Concat(Directory.GetFiles(pkgDir, "*.u")))
+        foreach (
+            var path in Directory.GetFiles(pkgDir, "*.u").Concat(Directory.GetFiles(pkgDir, "*.u"))
+        )
         {
             var name = Path.GetFileNameWithoutExtension(path);
 
@@ -68,6 +72,7 @@ sealed class MainCommand : Command<MainCommand.Settings>
         var classes = pkgs.SelectMany(pkg =>
                 pkg.Exports.Where(obj => obj.Object is UClass).Select(exp => (UClass)exp.Object)
             )
+            .Distinct()
             .ToList();
 
         // Deserialize classes
@@ -75,30 +80,21 @@ sealed class MainCommand : Command<MainCommand.Settings>
             $"\nFound [green]{classes.Count}[/] classes in [green]{pkgs.Count}[/] packages\n"
         );
 
-        // Try decompiling a class
-        var classPkg = pkgs.First(pkg => pkg.PackageName == "BmGame");
-        var classObject = classPkg.FindObject<UClass>("RCapeConfig");
-
-        // Write classes to output
+        // Perform code generation
+        var ctx = new CodegenContext();
         foreach (var classObj in classes)
         {
-            // Create subdirs for non-Core packages
+            // Get output file writer
             var packageName = classObj.Package.PackageName;
-            var packageDir = Path.Combine(sdkDir, packageName == "Core" ? "" : packageName);
-            if (Directory.Exists(sdkDir) && !Directory.Exists(packageDir))
-            {
-                Directory.CreateDirectory(packageDir);
-            }
-
-            // Create file for class
-            var path = Path.Combine(packageDir, $"{classObj.ManagedName}.cs");
-            using var stream = File.Create(path);
-            using var writer = new StreamWriter(stream);
+            var fileName = $"{classObj.ManagedName}.cs";
+            var file = ctx[Path.Combine(packageName == "Core" ? "" : packageName, fileName)];
 
             // Perform code generation
-            var generator = new ClassGenerator(classObj);
-            generator.GenerateClassFile(writer);
+            file.WriteLine(FileTemplate.Render(classObj));
         }
+
+        // Write generated files to disk
+        ctx.SaveToFolder(sdkDir);
 
         return 0;
     }
