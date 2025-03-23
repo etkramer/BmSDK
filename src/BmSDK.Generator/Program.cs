@@ -77,7 +77,7 @@ sealed class MainCommand : Command<MainCommand.Settings>
 
         // Deserialize classes
         AnsiConsole.MarkupLine(
-            $"\nFound [green]{classes.Count}[/] classes in [green]{pkgs.Count}[/] packages\n"
+            $"\nFound [green]{classes.Count}[/] classes in [green]{pkgs.Count}[/] packages"
         );
 
         // Perform code generation
@@ -94,7 +94,11 @@ sealed class MainCommand : Command<MainCommand.Settings>
         }
 
         // Write generated files to disk
-        ctx.SaveToFolder(sdkDir);
+        var saveResult = ctx.SaveToFolder(sdkDir);
+
+        AnsiConsole.MarkupLine(
+            $"Saved [green]{saveResult.SavedFiles.Count}[/] files to disk\n"
+        );
 
         return 0;
     }

@@ -2311,7 +2311,7 @@ namespace UELib
                     item.Object = obj;
                     return;
                 }
-                else
+                else if (item.ClassName != "Package")
                 {
                     // Intrinsic classes aren't exported and will cause this.
                     AnsiConsole.MarkupLine($"[red]Failed to locate import {item.GetPath()}[/]");
