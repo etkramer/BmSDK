@@ -53,15 +53,15 @@ public static class MarshalUtil
 
     public static unsafe void CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
-        // NOTE: Engine could reuse memory, we'll want to hook object destruction too.
-        if (_managedObjects.ContainsKey(objPtr))
-        {
-            Debug.WriteLine($"Object 0x{objPtr:X} already has a managed wrapper! Check that it was cleaned up properly.");
-            return;
-        }
+        Guard.Require(!_managedObjects.ContainsKey(objPtr), $"Object 0x{objPtr:X} already has a managed wrapper!");
 
         // Create a new managed object
         var newObj = _managedObjects[objPtr] = Guard.NotNull((BaseObject?)Activator.CreateInstance(managedType), $"Couldn't create an instance of managed type {managedType.Name}");
         newObj.Ptr = objPtr;
+    }
+
+    public static unsafe void DestroyManagedWrapper(IntPtr objPtr)
+    {
+        Guard.Require(_managedObjects.Remove(objPtr), $"Object 0x{objPtr:X} does not have a managed wrapper!");
     }
 }

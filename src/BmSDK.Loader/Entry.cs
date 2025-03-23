@@ -14,8 +14,12 @@ static class Entry
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void AddObjectDelegate(IntPtr self, int InIndex);
 
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void ObjectDtorDelegate(IntPtr self);
+
     static ProcessEventDelegate? _ProcessEventDetourBase = null;
     static AddObjectDelegate? _AddObjectDetourBase = null;
+    static ObjectDtorDelegate? _ObjectDtorDetourBase = null;
 
     public static void DllMain()
     {
@@ -24,6 +28,7 @@ static class Entry
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameInfo.FuncOffsets.ProcessEvent, ProcessEventDetour);
         _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(GameInfo.FuncOffsets.AddObject, AddObjectDetour);
+        _ObjectDtorDetourBase = DetourUtil.NewDetour<ObjectDtorDelegate>(GameInfo.FuncOffsets.ObjectDtor, ObjectDtorDetour);
 
         // End with a newline
         Debug.Write("\n");
@@ -87,5 +92,16 @@ static class Entry
         // TODO: We want to check UObject.Class to get the actual matching type.
         var managedType = typeof(Class);
         MarshalUtil.CreateManagedWrapper(self, managedType);
+    }
+
+    // Detour for UObject::~UObject()
+    public static void ObjectDtorDetour(IntPtr self)
+    {
+        // Call base impl
+        _ObjectDtorDetourBase!.Invoke(self);
+
+        // Wrap this object in a managed instance
+        // TODO: We want to check UObject.Class to get the actual matching type.
+        MarshalUtil.DestroyManagedWrapper(self);
     }
 }

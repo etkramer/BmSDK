@@ -14,6 +14,7 @@ public static class GameInfo
     {
         public const IntPtr ProcessEvent = 0x1A7040;
         public const IntPtr AddObject = 0x1D4080;
+        public const IntPtr ObjectDtor = 0x1D30B0;
     }
 
     public static class MemberOffsets
