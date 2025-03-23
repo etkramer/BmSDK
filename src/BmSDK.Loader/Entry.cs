@@ -1,8 +1,5 @@
 ﻿using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using BmSDK;
-using BmSDK.Engine;
 using BmSDK.Framework;
 
 namespace BmSDK.Loader;
@@ -14,7 +11,11 @@ static class Entry
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessEventDelegate(IntPtr self, IntPtr Function, IntPtr Parms, IntPtr UnusedResult);
 
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    public delegate IntPtr StaticConstructObjectDelegate(IntPtr InClass, IntPtr InOuter, FName InName, EObjectFlags InFlags, IntPtr InTemplate, IntPtr Error, IntPtr SubobjectRoot, IntPtr InInstanceGraph);
+
     static ProcessEventDelegate? _ProcessEventDetourBase = null;
+    static StaticConstructObjectDelegate? _StaticConstructObjectDetourBase = null;
 
     public static void DllMain()
     {
@@ -22,6 +23,7 @@ static class Entry
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(GameInfo.FuncOffsets.ProcessEvent, ProcessEventDetour);
+        _StaticConstructObjectDetourBase = DetourUtil.NewDetour<StaticConstructObjectDelegate>(GameInfo.FuncOffsets.StaticConstructObject, StaticConstructObjectDetour);
 
         // End with a newline
         Debug.Write("\n");
@@ -73,5 +75,12 @@ static class Entry
                 Debug.WriteLine($"ObjectFlags: {obj.ObjectFlags}");
             }
         }
+    }
+
+    // Detour for UObject::StaticConstructObject()
+    public static IntPtr StaticConstructObjectDetour(IntPtr InClass, IntPtr InOuter, FName InName, EObjectFlags InFlags, IntPtr InTemplate, IntPtr Error, IntPtr SubobjectRoot, IntPtr InInstanceGraph)
+    {
+        // Call base impl
+        return _StaticConstructObjectDetourBase!.Invoke(InClass, InOuter, InName, InFlags, InTemplate, Error, SubobjectRoot, InInstanceGraph);
     }
 }
