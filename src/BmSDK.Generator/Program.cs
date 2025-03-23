@@ -22,19 +22,6 @@ sealed class MainCommand : Command<MainCommand.Settings>
         Guard.Require(Directory.Exists(pkgDir), "Package directory does not exist.");
         Guard.Require(Directory.Exists(outDir), "Output directory does not exist.");
 
-        // Create output directory if it doesn't exist
-        var sdkDir = Path.Combine(outDir, "Generated");
-        if (!Directory.Exists(sdkDir))
-        {
-            Directory.CreateDirectory(sdkDir);
-        }
-        else
-        {
-            // Delete existing generated files
-            Directory.Delete(sdkDir, true);
-            Directory.CreateDirectory(sdkDir);
-        }
-
         // Load script packages
         var pkgs = new List<UnrealPackage>();
         foreach (
@@ -68,37 +55,42 @@ sealed class MainCommand : Command<MainCommand.Settings>
             }
         }
 
-        // Find all classes
-        var classes = pkgs.SelectMany(pkg =>
-                pkg.Exports.Where(obj => obj.Object is UClass).Select(exp => (UClass)exp.Object)
-            )
-            .Distinct()
-            .ToList();
-
-        // Deserialize classes
-        AnsiConsole.MarkupLine(
-            $"\nFound [green]{classes.Count}[/] classes in [green]{pkgs.Count}[/] packages"
-        );
+        // Perform type mapping
+        TypeMapper.InitAll(pkgs);
 
         // Perform code generation
         var ctx = new CodegenContext();
-        foreach (var classObj in classes)
+        foreach (var classObj in TypeMapper.Classes)
         {
-            // Get output file writer
-            var packageName = classObj.Package.PackageName;
-            var fileName = $"{classObj.ManagedName}.cs";
-            var file = ctx[Path.Combine(packageName == "Core" ? "" : packageName, fileName)];
+            // NOTE: Special handling for Core package, which we want to use the 'BmSDK' namespace but be placed in 'BmSDK/Core'.
+            var managedPath =
+                classObj.Package.PackageName == "Core"
+                    ? TypeMapper.GetManagedPathForType(classObj).Replace("BmSDK", "BmSDK.Core")
+                    : TypeMapper.GetManagedPathForType(classObj);
 
             // Perform code generation
+            var file = ctx[managedPath.Replace("BmSDK.", "").Replace(".", "/") + ".cs"];
             file.WriteLine(FileTemplate.Render(classObj));
+        }
+
+        // Create/clear output directory
+        var sdkDir = Path.Combine(outDir, "Generated");
+        if (!Directory.Exists(sdkDir))
+        {
+            Directory.CreateDirectory(sdkDir);
+        }
+        else
+        {
+            // Delete existing generated files
+            Directory.Delete(sdkDir, true);
+            Directory.CreateDirectory(sdkDir);
         }
 
         // Write generated files to disk
         var saveResult = ctx.SaveToFolder(sdkDir);
 
-        AnsiConsole.MarkupLine(
-            $"Saved [green]{saveResult.SavedFiles.Count}[/] files to disk\n"
-        );
+        // Report results to console
+        AnsiConsole.MarkupLine($"Saved [green]{saveResult.SavedFiles.Count}[/] files to disk\n");
 
         return 0;
     }

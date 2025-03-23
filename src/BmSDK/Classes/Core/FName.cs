@@ -1,5 +1,5 @@
-using System.Runtime.InteropServices;
 using System;
+using System.Runtime.InteropServices;
 using BmSDK.Framework;
 
 namespace BmSDK;
@@ -18,7 +18,7 @@ public struct FName
         throw new NotImplementedException();
     }
 
-    public override unsafe readonly string ToString()
+    public override readonly unsafe string ToString()
     {
         var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
         var GNamesData = *GNames;

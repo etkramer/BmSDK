@@ -3,30 +3,33 @@ using UELib.Core;
 
 static class ClassTemplate
 {
-    public static FormattableString Render(UClass classObj, ClassHelper helper)
+    public static FormattableString Render(UClass classObj)
     {
+        var propFields = classObj.EnumerateFields().OfType<UProperty>().ToArray();
         var enumFields = classObj.EnumerateFields().OfType<UEnum>().ToArray();
         var structFields = classObj.EnumerateFields().OfType<UScriptStruct>().ToArray();
-        var propFields = classObj.EnumerateFields().OfType<UProperty>().ToArray();
 
-        var superDecl = classObj.Super is null ? "" : $" : {helper.GetFullName(classObj.Super)}";
+        var superDecl = classObj.Super is null ? "" : $" : {TypeMapper.GetManagedPathForType(classObj.Super)}";
 
         return $$"""
             // class {{classObj.Package.PackageName}}.{{classObj.GetPath()}} (size = {{classObj.StructSize}})
             public{{(classObj.HasClassFlag(UELib.Flags.ClassFlags.Abstract) ? " abstract" : "")}} partial class {{classObj.ManagedName}} {{superDecl}}
             {
-                {{propFields.Select(prop => RenderProperty(prop, helper))}}
+                /*  Properties ({{propFields.Length}}) */
+                {{propFields.Select(RenderProp)}}
 
+                /*  Enums ({{enumFields.Length}}) */
                 {{enumFields.Select(EnumTemplate.Render)}}
 
+                /*  Structs ({{structFields.Length}}) */
                 {{structFields.Select(StructTemplate.Render)}}
             }
             """;
     }
 
-    static FormattableString RenderProperty(UProperty prop, ClassHelper helper)
+    static FormattableString RenderProp(UProperty prop)
     {
-        var managedTypeName = helper.GetManagedTypeName(prop);
+        var managedTypeName = TypeMapper.GetManagedTypeForProp(prop);
 
         // Special handling for bool props
         if (prop is UBoolProperty boolProp)

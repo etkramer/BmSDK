@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using BmSDK.Framework;
 
@@ -20,6 +21,8 @@ static class Entry
     static ProcessEventDelegate? _ProcessEventDetourBase = null;
     static AddObjectDelegate? _AddObjectDetourBase = null;
     static ObjectDtorDelegate? _ObjectDtorDetourBase = null;
+
+    static readonly List<(Assembly, IManagedPlugin)> _plugins = new();
 
     public static void DllMain()
     {

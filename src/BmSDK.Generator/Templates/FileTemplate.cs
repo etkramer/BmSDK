@@ -3,19 +3,13 @@ using UELib.Core;
 
 static class FileTemplate
 {
-    public static FormattableString Render(UClass classObj)
-    {
-        // TODO: Refactor. We're just using this for some helper methods.
-        var helper = new ClassHelper(classObj);
-
-        return $$"""
+    public static FormattableString Render(UClass classObj) =>
+        $$"""
             using System;
-            using System.Numerics;
             using System.Runtime.InteropServices;
 
-            namespace {{helper.Namespace}};
+            namespace {{TypeMapper.GetManagedNamespace(classObj)}};
 
-            {{ClassTemplate.Render(classObj, helper)}}
+            {{ClassTemplate.Render(classObj)}}
             """;
-    }
 }

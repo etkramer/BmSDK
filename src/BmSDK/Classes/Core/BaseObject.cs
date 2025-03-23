@@ -1,7 +1,5 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.InteropServices;
 using BmSDK.Framework;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]

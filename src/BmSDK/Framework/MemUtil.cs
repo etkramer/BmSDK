@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 #pragma warning disable CS8500
 
