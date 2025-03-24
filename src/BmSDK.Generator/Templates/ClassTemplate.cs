@@ -26,18 +26,18 @@ static class ClassTemplate
             classDeclSuper = $" : {TypeMapper.GetManagedPathForType(classObj.Super, classObj)}";
         }
 
-        // Add keywords for class attributes
-        var classKeywordText = "";
-        if (classObj.HasClassFlag(ClassFlags.Abstract))
-        {
-            classKeywordText = " abstract";
-        }
-
         // Add 'new' keyword for hiding StaticClass() impls
         var staticClassKeywordText = "";
         if (classObj.GetPath() != "Object")
         {
             staticClassKeywordText = "new ";
+        }
+
+        // Make protected ctor for classes marked abstract
+        var ctorText = "";
+        if (classObj.HasClassFlag(ClassFlags.Abstract))
+        {
+            ctorText = $"\nprotected {classObj.ManagedName}() {{ }}\n";
         }
 
         // Format flags
@@ -52,11 +52,11 @@ static class ClassTemplate
             /// Class: {{classObj.GetPath()}} {{flagsText}}<br/>
             /// {{layoutInfoText}}
             /// </summary>
-            public{{classKeywordText}} partial class {{classObj.ManagedName}}{{classDeclSuper}}
+            public partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
                 {{staticClassKeywordText}}public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
                 static Class? _staticClass = null;
-
+                {{ctorText}}
                 {{propFields.Select(PropTemplate.Render)}}
 
                 {{funcFields.Select(FuncTemplate.Render)}}

@@ -68,7 +68,7 @@ public static class MarshalUtil
 
         // Create a new managed object
         var newObj = _managedObjects[objPtr] = Guard.NotNull(
-            (BaseObject?)Activator.CreateInstance(managedType),
+            (BaseObject?)Activator.CreateInstance(managedType, true),
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
