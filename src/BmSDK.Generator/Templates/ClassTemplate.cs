@@ -42,7 +42,7 @@ static class ClassTemplate
 
         return $$"""
             /// <summary>
-            /// Class: {{classObj.Package.PackageName}}.{{classObj.GetPath()}} {{flagsText}}<br/>
+            /// Class: {{classObj.GetPath()}} {{flagsText}}<br/>
             /// {{layoutInfoText}}
             /// </summary>
             public{{classKeywordText}} partial class {{classObj.ManagedName}}{{classDeclSuper}}

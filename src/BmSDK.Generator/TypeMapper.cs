@@ -181,8 +181,11 @@ public static class TypeMapper
     /// </summary>
     public static string MakeRelative(string path, UField ctx)
     {
+        // Break path into parts
         var parts = path.Split('.');
         var ctxParts = GetManagedPathForType(ctx).Split('.');
+
+        // See if there's a common prefix, else return
         var numParts = Math.Min(parts.Length, ctxParts.Length);
         for (var i = 0; i < numParts; i++)
         {
