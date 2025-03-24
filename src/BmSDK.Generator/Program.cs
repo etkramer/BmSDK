@@ -8,7 +8,6 @@ using CodegenCS.IO;
 using Spectre.Console;
 using Spectre.Console.Cli;
 using UELib;
-using UELib.Core;
 
 var app = new CommandApp<MainCommand>();
 return app.Run(args);
@@ -73,6 +72,10 @@ sealed class MainCommand : Command<MainCommand.Settings>
             var file = ctx[managedPath.Replace("BmSDK.", "").Replace(".", "/") + ".cs"];
             file.WriteLine(FileTemplate.Render(classObj));
         }
+
+        // Write static init file
+        ctx["StaticInit.cs"]
+            .WriteLine(StaticInitTemplate.Render(TypeMapper.Classes, TypeMapper.IntrinsicClasses));
 
         // Create/clear output directory
         var sdkDir = Path.Combine(outDir, "Generated");

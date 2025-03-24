@@ -15,6 +15,12 @@ public static class TypeMapper
     static List<UEnum> _enums = [];
 
     /// <summary>
+    /// Collection of all all manually registered intrinsic class paths.
+    /// </summary>
+    public static IEnumerable<string> IntrinsicClasses => _intrinsicClasses;
+    static List<string> _intrinsicClasses = [];
+
+    /// <summary>
     /// Collection of all UClass/UStruct objects found in loaded packages.
     /// </summary>
     public static IEnumerable<UField> StructsAndClassesAndEnums =>
@@ -27,10 +33,10 @@ public static class TypeMapper
 
     /// <inheritdoc cref="GetManagedPathForType(string)" />
     public static string GetManagedPathForType(UField obj, UField ctx) =>
-        MakeRelative(GetManagedPathForType(obj.GetPath()), ctx);
+        MakeRelative(GetManagedPathForType(obj.ShortPath), ctx);
 
     /// <inheritdoc cref="GetManagedPathForType(string)" />
-    public static string GetManagedPathForType(UField obj) => GetManagedPathForType(obj.GetPath());
+    public static string GetManagedPathForType(UField obj) => GetManagedPathForType(obj.ShortPath);
 
     /// <summary>
     /// Gets the managed type name (namespace-qualified) for a given class/struct/enum
@@ -40,6 +46,19 @@ public static class TypeMapper
         return _structNameMap.TryGetValue(nativePath, out var managedPath)
             ? managedPath
             : throw new KeyNotFoundException($"No managed name found for {nativePath}");
+    }
+
+    /// <summary>
+    /// Registers a class/managed type mapping manually
+    /// </summary>
+    public static void RegisterIntrinsicClass(string classPath, string managedTypePath)
+    {
+        if (!_structNameMap.ContainsKey(classPath))
+        {
+            _intrinsicClasses.Add(classPath);
+        }
+
+        _structNameMap[classPath] = managedTypePath;
     }
 
     /// <summary>
@@ -82,15 +101,15 @@ public static class TypeMapper
         }
 
         // Compute class/struct names
-        foreach (var classObj in StructsAndClassesAndEnums)
+        foreach (var field in StructsAndClassesAndEnums)
         {
-            var path = classObj.GetPath();
-            _structNameMap[path] = GetFullManagedName(classObj);
+            _structNameMap[field.ShortPath] = GetFullManagedName(field);
         }
 
-        // Record hardcoded name mappings
-        _structNameMap["Core.Object"] = "BmSDK.BaseObject";
-        _structNameMap["Core.Class"] = "BmSDK.Class";
+        // Record hardcoded intrinsic classes
+        RegisterIntrinsicClass("Core.Object", "BmSDK.BaseObject");
+        RegisterIntrinsicClass("Core.Class", "BmSDK.Class");
+        RegisterIntrinsicClass("Core.Function", "BmSDK.Function");
 
         // Report results to console
         AnsiConsole.MarkupLine(

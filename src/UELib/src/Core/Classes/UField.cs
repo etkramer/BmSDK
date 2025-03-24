@@ -58,6 +58,8 @@ namespace UELib.Core
             }
         }
 
+        public string ShortPath => this is UClass ? $"{Package.PackageName}.{Name}" : GetPath();
+
         #endregion
 
         /// <summary>

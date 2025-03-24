@@ -34,6 +34,9 @@ static class Entry
     {
         Debug.WriteLine($"Hello from BmSDK.Loader");
 
+        // Perform static init (before engine load)
+        StaticInit.StaticInitClasses();
+
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(
             GameInfo.FuncOffsets.ProcessEvent,
@@ -100,15 +103,13 @@ static class Entry
             Debug.WriteLine($"GObjects: Num {GObjects.Num}, Max {GObjects.Max}");
 
             // Test object access
-            foreach (var obj in GObjects.Take(10))
+            foreach (var obj in GObjects.OfType<Actor>().Take(10))
             {
                 Debug.Write("\n");
                 Debug.WriteLine($"Name: {obj.Name}");
-                Debug.WriteLine($"Class: {obj.Class.Name}");
+                Debug.WriteLine($"Class: {obj.Class.Name} ({obj.GetType().Name})");
                 Debug.WriteLine($"ObjectInternalInteger: {obj.ObjectInternalInteger}");
                 Debug.WriteLine($"ObjectFlags: {obj.ObjectFlags}");
-
-                // obj.GetPackageName(out var packageName);
             }
         }
     }
@@ -134,19 +135,9 @@ static class Entry
 
             // Match native classes to managed types
             var classPath = GetClassPath(self);
-            var managedType = classPath switch
-            {
-                // "Core.Object" => typeof(BaseObject),
-                "Core.Function" => typeof(Function),
-                "Core.Class" => typeof(Class),
-                "Core.Package" => typeof(Package),
-                "Engine.Actor" => typeof(Actor),
-
-                // TODO: AutoInitializeRegistrants()
-                _ => typeof(BaseObject),
-            };
 
             // Wrap this object in a managed instance
+            var managedType = StaticInit.GetManagedTypeForClass(classPath);
             MarshalUtil.CreateManagedWrapper(self, managedType);
         }
     }
@@ -157,19 +148,12 @@ static class Entry
         var classPtr = *(IntPtr*)(obj + GameInfo.MemberOffsets.Object__Class).ToPointer();
         var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
-        // Try to add class outer/package name to path.
+        // Fetch outer name.
         var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
-        if (classOuterPtr == 0)
-        {
-            return className.ToString();
-        }
-        else
-        {
-            var classOuterName = *(FName*)
-                (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+        var classOuterName = *(FName*)
+            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
-            return $"{classOuterName}.{className}";
-        }
+        return $"{classOuterName}.{className}";
     }
 
     // Detour for UObject::~UObject()
