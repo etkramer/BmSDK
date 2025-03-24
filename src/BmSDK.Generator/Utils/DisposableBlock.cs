@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace BmSDK.Generator.Utils;
 
 public struct DisposableBlock(Action onClose) : IDisposable

@@ -25,11 +25,16 @@ public static class TypeMapper
     /// </summary>
     static readonly Dictionary<string, string> _structNameMap = [];
 
+    /// <inheritdoc cref="GetManagedPathForType(string)" />
+    public static string GetManagedPathForType(UField obj, UField ctx) =>
+        MakeRelative(GetManagedPathForType(obj.GetPath()), ctx);
+
+    /// <inheritdoc cref="GetManagedPathForType(string)" />
+    public static string GetManagedPathForType(UField obj) => GetManagedPathForType(obj.GetPath());
+
     /// <summary>
     /// Gets the managed type name (namespace-qualified) for a given class/struct/enum
     /// </summary>
-    public static string GetManagedPathForType(UField obj) => GetManagedPathForType(obj.GetPath());
-
     public static string GetManagedPathForType(string nativePath)
     {
         return _structNameMap.TryGetValue(nativePath, out var managedPath)
@@ -92,6 +97,10 @@ public static class TypeMapper
         );
     }
 
+    /// <inheritdoc cref="GetManagedTypeForProp(UProperty)" />
+    public static string GetManagedTypeForProp(UProperty prop, UField ctx) =>
+        MakeRelative(GetManagedTypeForProp(prop), ctx);
+
     /// <summary>
     /// Gets the managed type name for a given property.
     /// </summary>
@@ -107,7 +116,7 @@ public static class TypeMapper
         if (prop is UStructProperty structProp)
         {
             // Manual struct type overrides
-            if (structProp.Struct.ManagedName == "FVector")
+            if (structProp.Struct.GetPath() == "Object.Vector")
             {
                 return "System.Numerics.Vector3";
             }
@@ -165,6 +174,27 @@ public static class TypeMapper
 
             _ => throw new NotImplementedException(),
         };
+    }
+
+    /// <summary>
+    /// Strips unneeded namespace prefixes from a managed type path, valid within the given context.
+    /// </summary>
+    public static string MakeRelative(string path, UField ctx)
+    {
+        var parts = path.Split('.');
+        var ctxParts = GetManagedPathForType(ctx).Split('.');
+        var numParts = Math.Min(parts.Length, ctxParts.Length);
+        for (var i = 0; i < numParts; i++)
+        {
+            if (parts[i] != ctxParts[i])
+            {
+                return string.Join(".", parts[i..]);
+            }
+        }
+
+        return (parts.Length == numParts && ctxParts.Length == numParts)
+            ? parts.Last()
+            : string.Join(".", parts[numParts..]);
     }
 
     /// <summary>

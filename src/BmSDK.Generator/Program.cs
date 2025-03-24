@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Generator;
+using BmSDK.Generator.Templates;
 using BmSDK.Generator.Utils;
 using CodegenCS;
 using CodegenCS.IO;

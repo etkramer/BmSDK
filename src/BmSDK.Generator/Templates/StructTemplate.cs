@@ -1,4 +1,8 @@
+using BmSDK.Generator.Utils;
 using UELib.Core;
+using UELib.Flags;
+
+namespace BmSDK.Generator.Templates;
 
 static class StructTemplate
 {
@@ -7,7 +11,17 @@ static class StructTemplate
         var propFields = structObj.EnumerateFields().OfType<UProperty>().ToArray();
         var superDecl = structObj.Super is null ? "" : $" /* : {structObj.Super.ManagedName} */";
 
+        // Format flags
+        var flagsText =
+            structObj.StructFlags == 0
+                ? ""
+                : $" ({FlagUtils.DropUnknownBits((StructFlags)structObj.StructFlags)})";
+
         return $$"""
+            /// <summary>
+            /// Struct: {{structObj.GetPath()}}{{flagsText}}<br/>
+            /// (size = 0x{{structObj.StructSize}})
+            /// </summary>
             [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Explicit, Size={{structObj.StructSize}})]
             public struct {{structObj.ManagedName}} {{superDecl}}
             {

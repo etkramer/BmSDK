@@ -22,7 +22,7 @@ namespace UELib.Core
         /// 32bit in UE2
         /// 64bit in UE3
         /// </value>
-        private ulong FunctionFlags { get; set; }
+        public ulong FunctionFlags { get; set; }
 
         public ushort RepOffset { get; private set; }
 

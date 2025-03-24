@@ -1,5 +1,6 @@
-using BmSDK.Generator;
 using UELib.Core;
+
+namespace BmSDK.Generator.Templates;
 
 static class FileTemplate
 {

@@ -49,7 +49,7 @@ namespace UELib.Core
 
         #region Serialized Members
 
-        private ulong ClassFlags { get; set; }
+        public ulong ClassFlags { get; set; }
 
         public UGuid ClassGuid;
         public UClass Within { get; private set; }

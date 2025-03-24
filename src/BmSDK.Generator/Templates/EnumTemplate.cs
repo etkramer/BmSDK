@@ -1,5 +1,7 @@
 using UELib.Core;
 
+namespace BmSDK.Generator.Templates;
+
 static class EnumTemplate
 {
     public static FormattableString Render(UEnum enumObj) =>

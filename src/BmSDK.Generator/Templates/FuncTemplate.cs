@@ -1,26 +1,33 @@
-using BmSDK.Generator;
+using BmSDK.Generator.Utils;
 using UELib.Core;
+using UELib.Flags;
+
+namespace BmSDK.Generator.Templates;
 
 static class FuncTemplate
 {
     public static FormattableString Render(UFunction func)
     {
+        var outerClass = (UClass)func.Outer;
+
         // Compute return type name ahead of time
         var returnProp = func.ReturnProperty;
-        var returnType = returnProp is null ? "void" : TypeMapper.GetManagedTypeForProp(returnProp);
+        var returnType = returnProp is null
+            ? "void"
+            : TypeMapper.GetManagedTypeForProp(returnProp, outerClass);
 
         // Compute param type names ahead of time
         var paramTypes = func.Params is null
             ? []
             : func
                 .Params.Where(param => param != returnProp)
-                .Select(param => $"{TypeMapper.GetManagedTypeForProp(param)} {param.Name}")
+                .Select(param =>
+                    $"{TypeMapper.GetManagedTypeForProp(param, outerClass)} {param.Name}"
+                )
                 .ToArray();
 
         // Compute access modifier ahead of time
-        var accessModifier = func.HasFunctionFlag(UELib.Flags.FunctionFlags.Protected)
-            ? "protected"
-            : "public";
+        var accessModifier = func.HasFunctionFlag(FunctionFlags.Protected) ? "protected" : "public";
 
         // Are we hiding a field of a superclass?
         var isHidingSuper = ((UClass)func.Outer)
@@ -31,26 +38,32 @@ static class FuncTemplate
         List<string> funcDeclKeywords = isHidingSuper ? ["new"] : [];
 
         // Replace virtual keywords with static where needed
-        if (func.HasFunctionFlag(UELib.Flags.FunctionFlags.Static))
+        if (func.HasFunctionFlag(FunctionFlags.Static))
         {
             funcDeclKeywords.Insert(0, "static");
         }
 
         // Convert keywords to string
-        var funcDeclKeywordsStr = string.Join(" ", funcDeclKeywords);
-        if (funcDeclKeywordsStr.Length > 0)
+        var keywordsText = string.Join(" ", funcDeclKeywords);
+        if (keywordsText.Length > 0)
         {
-            funcDeclKeywordsStr = $" {funcDeclKeywordsStr}";
+            keywordsText = $" {keywordsText}";
         }
 
+        // Format flags
+        var flagsText =
+            func.FunctionFlags == 0
+                ? ""
+                : $" ({FlagUtils.DropUnknownBits((FunctionFlags)func.FunctionFlags)})";
+
         return $$"""
-            {{accessModifier}}{{funcDeclKeywordsStr}} {{returnType}} {{func.ManagedName}}({{string.Join(
+            /// <summary>
+            /// Function: {{func.Name}}{{flagsText}}
+            /// </summary>
+            {{accessModifier}}{{keywordsText}} {{returnType}} {{func.ManagedName}}({{string.Join(
                 ", ",
                 paramTypes
-            )}})
-            {
-                throw new System.NotImplementedException();
-            }
+            )}}) => throw new System.NotImplementedException();
             """;
     }
 }

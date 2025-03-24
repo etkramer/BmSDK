@@ -27,7 +27,7 @@ namespace UELib.Core
         public int Line;
         public int TextPos;
 
-        protected uint StructFlags { get; set; }
+        public uint StructFlags { get; set; }
         [CanBeNull] protected UField Children { get; private set; }
         protected int DataScriptSize { get; private set; }
         private int ByteScriptSize { get; set; }
