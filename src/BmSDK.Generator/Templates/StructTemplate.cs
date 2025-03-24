@@ -22,19 +22,29 @@ static class StructTemplate
             /// Struct: {{structObj.GetPath()}}{{flagsText}}<br/>
             /// (size = 0x{{structObj.StructSize}})
             /// </summary>
-            [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Explicit, Size={{structObj.StructSize}})]
+            [StructLayout(LayoutKind.Explicit, Size={{structObj.StructSize}})]
             public struct {{structObj.ManagedName}} {{superDecl}}
             {
-                {{propFields.Select(RenderStructField)}}
+                {{propFields.Select(PropTemplate.Render)}}
             }
             """;
     }
 
-    static FormattableString RenderStructField(UProperty prop) =>
-        $$"""
-            [System.Runtime.InteropServices.FieldOffset({{prop.PropertyOffset}})]
-            public int {{prop.ManagedName}}; // {{(
-                (UField)prop.Class
-            ).ManagedName}} (size = {{prop.ElementSize}})
-            """;
+    // static FormattableString RenderStructField(UProperty prop)
+    // {
+    //     // return $$"""
+    //     //     [FieldOffset({{prop.PropertyOffset}})]
+    //     //     public int {{prop.ManagedName}}; // {{(
+    //     //         (UField)prop.Class
+    //     //     ).ManagedName}} (size = {{prop.ElementSize}})
+    //     //     """;
+    // }
+
+    // static FormattableString RenderStructField(UProperty prop) =>
+    //     $$"""
+    //         [FieldOffset({{prop.PropertyOffset}})]
+    //         public int {{prop.ManagedName}}; // {{(
+    //             (UField)prop.Class
+    //         ).ManagedName}} (size = {{prop.ElementSize}})
+    //         """;
 }

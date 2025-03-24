@@ -313,7 +313,7 @@ namespace UELib.Core
 
             // Measure/layout props
             var fieldOffset = StructStartOffset = (Super?.StructSize ?? 0);
-            var fieldBit = 0;
+            var fieldBit = -1;
             foreach (var prop in EnumerateFields().OfType<UProperty>())
             {
                 // Ensure prop is deserialized
@@ -333,7 +333,7 @@ namespace UELib.Core
                 }
 
                 // Begin new bitfield if needed
-                if (fieldBit > 32)
+                if (fieldBit >= 32)
                 {
                     fieldBit = 0;
                     fieldOffset += 4;

@@ -1,4 +1,5 @@
-using System;
+global using System;
+global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Framework;
 
@@ -11,29 +12,46 @@ public partial class BaseObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
-    // Generic accessors for script props
-    public unsafe T GetPropertyValue<T>(IntPtr offset) =>
-        MarshalUtil.MarshalToManaged<T>((Ptr + offset).ToPointer());
+    /// <summary>
+    /// Gets a property value from a <see cref="BaseObject"/> instance
+    /// </summary>
+    public static unsafe TValue GetPropertyValue<TValue>(BaseObject obj, IntPtr offset) =>
+        MarshalUtil.MarshalToManaged<TValue>((obj.Ptr + offset).ToPointer());
 
-    public unsafe void SetPropertyValue<T>(IntPtr offset, T value) =>
-        MarshalUtil.MarshalToNative(value, (Ptr + offset).ToPointer());
-
-    // Special handling for bool props (bitfields)
-    protected bool GetBoolPropertyValue(IntPtr offset, int bit) =>
-        (GetPropertyValue<int>(offset) & (1 << bit)) != 0;
-
-    protected void SetBoolPropertyValue(IntPtr offset, int bit, bool value)
+    /// <summary>
+    /// Gets a property value from a struct instance
+    /// </summary>
+    public static unsafe TValue GetPropertyValue<TValue, TStruct>(ref TStruct obj, IntPtr offset)
+        where TStruct : unmanaged
     {
-        var currentValue = GetPropertyValue<int>(offset);
-        if (value)
+        fixed (TStruct* ptr = &obj)
         {
-            currentValue |= 1 << bit;
+            return MarshalUtil.MarshalToManaged<TValue>(((IntPtr)ptr + offset).ToPointer());
         }
-        else
-        {
-            currentValue &= ~(1 << bit);
-        }
+    }
 
-        SetPropertyValue(offset, currentValue);
+    /// <summary>
+    /// Sets a property value for a <see cref="BaseObject"/> instance
+    /// </summary>
+    public static unsafe void SetPropertyValue<TValue>(
+        BaseObject obj,
+        IntPtr offset,
+        TValue value
+    ) => MarshalUtil.MarshalToNative(value, (obj.Ptr + offset).ToPointer());
+
+    /// <summary>
+    /// Sets a property value for a struct instance
+    /// </summary>
+    public static unsafe void SetPropertyValue<TValue, TStruct>(
+        ref TStruct obj,
+        IntPtr offset,
+        TValue value
+    )
+        where TStruct : unmanaged
+    {
+        fixed (TStruct* ptr = &obj)
+        {
+            MarshalUtil.MarshalToNative(value, ((IntPtr)ptr + offset).ToPointer());
+        }
     }
 }

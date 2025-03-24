@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BmSDK;
+﻿namespace BmSDK;
 
 public static class GameInfo
 {

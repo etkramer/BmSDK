@@ -76,9 +76,9 @@ public static class TypeMapper
         ];
 
         // Compute class/struct layout info (prepass)
-        foreach (var classObj in StructsAndClassesAndEnums.OfType<UStruct>())
+        foreach (var structObj in StructsAndClassesAndEnums.OfType<UStruct>())
         {
-            classObj.ComputeLayoutInfo();
+            structObj.ComputeLayoutInfo();
         }
 
         // Compute class/struct names
@@ -90,6 +90,7 @@ public static class TypeMapper
 
         // Record hardcoded name mappings
         _structNameMap["Core.Object"] = "BmSDK.BaseObject";
+        _structNameMap["Core.Class"] = "BmSDK.Class";
 
         // Report results to console
         AnsiConsole.MarkupLine(
@@ -107,7 +108,7 @@ public static class TypeMapper
     public static string GetManagedTypeForProp(UProperty prop)
     {
         // Manual field type overrides
-        if (prop.GetPath() == "UObject.ObjectFlags")
+        if (prop.GetPath() == "Object.ObjectFlags")
         {
             return "EObjectFlags";
         }
@@ -127,6 +128,11 @@ public static class TypeMapper
         // Handle UObjectProperty type names
         if (prop is UObjectProperty objectProp)
         {
+            if (prop is UClassProperty)
+            {
+                return GetManagedPathForType("Core.Class");
+            }
+
             return objectProp.Object.Class is null
                 ? GetManagedPathForType("Core.Object")
                 : GetManagedPathForType((UField)objectProp.Object.Class);
@@ -229,7 +235,7 @@ public static class TypeMapper
         {
             if (field.Outer is null)
             {
-                return $"{field.ManagedName}";
+                return field.ManagedName;
             }
             else
             {

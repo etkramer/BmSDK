@@ -1,39 +1,46 @@
+using Spectre.Console;
 using UELib.Core;
 
 namespace BmSDK.Generator.Templates;
 
 static class EnumTemplate
 {
-    public static FormattableString Render(UEnum enumObj) =>
-        $$"""
+    public static FormattableString Render(UEnum enumObj)
+    {
+        var maxName = enumObj.Names.Last().ToString();
+        var enumPrefix = maxName[..^4];
+
+        return $$"""
             /// <summary>
             /// Enum: {{enumObj.Name}}
             /// </summary>
             public enum {{enumObj.ManagedName}}
             {
-                {{enumObj.Names.Select((name, i) => $"{GetItemManagedName(name)} = {i},")}}
+                {{enumObj.Names.SkipLast(1).Select(
+                (name, i) => $"{GetItemManagedName(name, enumPrefix)} = {i},"
+            )}}
             }
             """;
+    }
 
-    static string GetItemManagedName(string name)
+    static string GetItemManagedName(string name, string prefix)
     {
-        // Break up name
-        var nameParts = name.Split("_");
-        if (nameParts.Length == 1)
+        // Not all enums use the prefix convention
+        if (!name.StartsWith(prefix))
         {
             return name;
         }
 
-        // Skip the first part of the name
-        var managedNameParts = nameParts.Skip(1);
-        var managedName = string.Join("_", managedNameParts);
+        // Skip the prefix part of the name
+        var managedName = name[(prefix.Length + 1)..];
 
         // If removing this first part would cause it to start with a number, prepend an underscore
-        if (!char.IsLetter(managedNameParts.First()[0]))
+        if (!char.IsLetter(managedName[0]))
         {
             managedName = $"_{managedName}";
         }
 
+        // Remove the prefix from the item name
         return managedName;
     }
 }

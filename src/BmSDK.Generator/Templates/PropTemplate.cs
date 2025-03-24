@@ -8,11 +8,11 @@ static class PropTemplate
 {
     public static FormattableString Render(UProperty prop)
     {
-        var outerClass = (UClass)prop.Outer;
-        var managedTypeName = TypeMapper.GetManagedTypeForProp(prop, outerClass);
+        var outer = (UStruct)prop.Outer;
+        var managedTypeName = TypeMapper.GetManagedTypeForProp(prop, outer);
 
         // Are we overriding/hiding a field of a superclass?
-        var isHidingSuper = outerClass
+        var isHidingSuper = outer
             .EnumerateSuper()
             .Any(super => super.EnumerateFields().Any(f => f.Name == prop.Name));
 
@@ -23,17 +23,45 @@ static class PropTemplate
                 : $" ({FlagUtils.DropUnknownBits((PropertyFlagsLO)prop.PropertyFlags)})";
 
         // Format layout info
-        var layoutInfoText = $"(offset = 0x{prop.PropertyOffset - outerClass.StructStartOffset:X})";
+        var layoutInfoText = $"(offset = 0x{prop.PropertyOffset - outer.StructStartOffset:X})";
 
         // Format getter/setter definitions
-        var getterText = $"get => GetPropertyValue<{managedTypeName}>({prop.PropertyOffset});";
-        var setterText = $"set => SetPropertyValue({prop.PropertyOffset}, value);";
-        if (prop is UBoolProperty boolProp)
+        var getterText = "";
+        var setterText = "";
+        if (prop is not UBoolProperty boolProp)
         {
-            getterText =
-                $"get => GetBoolPropertyValue({boolProp.PropertyOffset}, {boolProp.BitfieldIdx});";
-            setterText =
-                $"set => SetBoolPropertyValue({boolProp.PropertyOffset}, {boolProp.BitfieldIdx}, value);";
+            if (prop.Outer is UClass)
+            {
+                getterText =
+                    $"get => GetPropertyValue<{managedTypeName}>(this, {prop.PropertyOffset});";
+                setterText = $"set => SetPropertyValue(this, {prop.PropertyOffset}, value);";
+            }
+            else
+            {
+                getterText =
+                    $"get => BaseObject.GetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset});";
+                setterText =
+                    $"set => BaseObject.SetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset}, value);";
+            }
+        }
+        else
+        {
+            if (prop.Outer is UClass)
+            {
+                getterText =
+                    $"get => (GetPropertyValue<int>(this, {prop.PropertyOffset}) & (1 << {boolProp.BitfieldIdx})) != 0;";
+
+                // TODO: Setter
+                setterText = "set => throw new NotImplementedException();";
+            }
+            else
+            {
+                getterText =
+                    $"get => (BaseObject.GetPropertyValue<int, {outer.ManagedName}>(ref this, {prop.PropertyOffset}) & (1 << {boolProp.BitfieldIdx})) != 0;";
+
+                // TODO: Setter
+                setterText = "set => throw new NotImplementedException();";
+            }
         }
 
         return $$"""
