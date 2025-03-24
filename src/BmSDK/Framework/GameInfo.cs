@@ -13,10 +13,15 @@ public static class GameInfo
         public const IntPtr ProcessEvent = 0x1A7040;
         public const IntPtr AddObject = 0x1D4080;
         public const IntPtr ObjectDtor = 0x1D30B0;
+
+        public const IntPtr StaticFindObject = 0x1D88C0;
+        public const IntPtr GetDefaultObject = 0x172B3B;
     }
 
     public static class MemberOffsets
     {
+        public const IntPtr Object__ObjectInternalInteger = 0x4;
+        public const IntPtr Object__Outer = 0x1C;
         public const IntPtr Object__Name = 0x20;
         public const IntPtr Object__Class = 0x28;
     }

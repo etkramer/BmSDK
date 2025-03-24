@@ -33,6 +33,13 @@ static class ClassTemplate
             classKeywordText = " abstract";
         }
 
+        // Add 'new' keyword for hiding StaticClass() impls
+        var staticClassKeywordText = "";
+        if (classObj.GetPath() != "Object")
+        {
+            staticClassKeywordText = "new ";
+        }
+
         // Format flags
         var flagsText = $"({FlagUtils.DropUnknownBits((ClassFlags)classObj.ClassFlags)})";
 
@@ -47,6 +54,9 @@ static class ClassTemplate
             /// </summary>
             public{{classKeywordText}} partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
+                {{staticClassKeywordText}}public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
+                static Class? _staticClass = null;
+
                 {{propFields.Select(PropTemplate.Render)}}
 
                 {{funcFields.Select(FuncTemplate.Render)}}

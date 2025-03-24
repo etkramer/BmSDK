@@ -19,6 +19,10 @@ public static class MarshalUtil
         else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
+            if (objPtr == IntPtr.Zero)
+            {
+                return (TManaged)(object)null!;
+            }
 
             // We should already have wrappers for all objects.
             Guard.Require(
@@ -50,7 +54,6 @@ public static class MarshalUtil
             MarshalToNative(((BaseObject)(object)value!).Ptr, data);
             return;
         }
-
         throw new NotImplementedException(
             $"Marshaling not implemented for type {typeof(TManaged).Name}"
         );

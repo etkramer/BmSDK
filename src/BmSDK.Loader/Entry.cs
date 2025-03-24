@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using BmSDK.Engine;
 using BmSDK.Framework;
 
 namespace BmSDK.Loader;
@@ -80,6 +81,10 @@ static class Entry
             Debug.WriteLine($"\nProcessEvent: {funcObj.Name} on {selfObj.Name}");
         }
 
+        // Test StaticClass(), StaticFindObject()
+        Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
+        Debug.WriteLine($"Actor::StaticClass(): {Actor.StaticClass()}");
+
         // Basic memory access tests
         unsafe
         {
@@ -114,10 +119,58 @@ static class Entry
         // Call base impl
         _AddObjectDetourBase!.Invoke(self, InIndex);
 
-        // Wrap this object in a managed instance
-        // TODO: We want to check UObject.Class to get the actual matching type.
-        var managedType = typeof(Class);
-        MarshalUtil.CreateManagedWrapper(self, managedType);
+        unsafe
+        {
+            var classPtr = *(IntPtr*)(self + GameInfo.MemberOffsets.Object__Class).ToPointer();
+            var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
+
+            // Not clear yet why this happens, but maybe we don't need to worry about it.
+            var classIndex = *(int*)classIndexPtr.ToPointer();
+            if (classIndex < 1)
+            {
+                MarshalUtil.CreateManagedWrapper(self, typeof(Class));
+                return;
+            }
+
+            // Match native classes to managed types
+            var classPath = GetClassPath(self);
+            var managedType = classPath switch
+            {
+                // "Core.Object" => typeof(BaseObject),
+                "Core.Function" => typeof(Function),
+                "Core.Class" => typeof(Class),
+                "Core.Package" => typeof(Package),
+
+                // TODO: AutoInitializeRegistrants()
+                // TODO: CDOs exist, so we need to be able to create instances of abstract classes like Object and Actor.
+
+                _ => typeof(Class),
+            };
+
+            // Wrap this object in a managed instance
+            MarshalUtil.CreateManagedWrapper(self, managedType);
+        }
+    }
+
+    static unsafe string GetClassPath(IntPtr obj)
+    {
+        // Fetch class name.
+        var classPtr = *(IntPtr*)(obj + GameInfo.MemberOffsets.Object__Class).ToPointer();
+        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        // Try to add class outer/package name to path.
+        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
+        if (classOuterPtr == 0)
+        {
+            return className.ToString();
+        }
+        else
+        {
+            var classOuterName = *(FName*)
+                (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+            return $"{classOuterName}.{className}";
+        }
     }
 
     // Detour for UObject::~UObject()
