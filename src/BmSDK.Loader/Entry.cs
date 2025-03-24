@@ -132,8 +132,6 @@ static class Entry
                 return;
             }
 
-            // var actor = new Actor();
-
             // Match native classes to managed types
             var classPath = GetClassPath(self);
             var managedType = classPath switch
@@ -145,8 +143,6 @@ static class Entry
                 "Engine.Actor" => typeof(Actor),
 
                 // TODO: AutoInitializeRegistrants()
-                // TODO: CDOs exist, so we need to be able to create instances of abstract classes like Object and Actor.
-
                 _ => typeof(BaseObject),
             };
 

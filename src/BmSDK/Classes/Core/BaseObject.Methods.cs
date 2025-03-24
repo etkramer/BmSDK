@@ -4,8 +4,6 @@ namespace BmSDK;
 
 public partial class BaseObject
 {
-    public const IntPtr ANY_PACKAGE = -1;
-
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     delegate IntPtr StaticFindObjectDelegate(
         IntPtr Class,
@@ -44,7 +42,7 @@ public partial class BaseObject
             // Call native func
             var result = _StaticFindObject(
                 Class?.Ptr ?? 0,
-                InOuter?.Ptr ?? ANY_PACKAGE,
+                InOuter?.Ptr ?? -1,
                 (IntPtr)namePtr,
                 ExactClass ? 1 : 0
             );
