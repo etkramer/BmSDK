@@ -96,9 +96,11 @@ static class Entry
         unsafe
         {
             // Get table addresses
-            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameOffsets.GlobalFields.GNames));
+            var GNames = new TArray<IntPtr>(
+                MemUtil.GetIntPointer(GameOffsets.GlobalOffsets.GNames)
+            );
             var GObjects = new TArray<BaseObject>(
-                MemUtil.GetIntPointer(GameOffsets.GlobalFields.GObjObjects)
+                MemUtil.GetIntPointer(GameOffsets.GlobalOffsets.GObjObjects)
             );
 
             // Test memory access
@@ -126,8 +128,8 @@ static class Entry
 
         unsafe
         {
-            var classPtr = *(IntPtr*)(self + GameOffsets.ObjectMembers.Object__Class).ToPointer();
-            var classIndexPtr = classPtr + GameOffsets.ObjectMembers.Object__ObjectInternalInteger;
+            var classPtr = *(IntPtr*)(self + GameOffsets.MemberOffsets.Object__Class).ToPointer();
+            var classIndexPtr = classPtr + GameOffsets.MemberOffsets.Object__ObjectInternalInteger;
 
             // Not clear yet why this happens, but maybe we don't need to worry about it.
             var classIndex = *(int*)classIndexPtr.ToPointer();
@@ -149,14 +151,14 @@ static class Entry
     static unsafe string GetClassPath(IntPtr obj)
     {
         // Fetch class name.
-        var classPtr = *(IntPtr*)(obj + GameOffsets.ObjectMembers.Object__Class).ToPointer();
-        var className = *(FName*)(classPtr + GameOffsets.ObjectMembers.Object__Name).ToPointer();
+        var classPtr = *(IntPtr*)(obj + GameOffsets.MemberOffsets.Object__Class).ToPointer();
+        var className = *(FName*)(classPtr + GameOffsets.MemberOffsets.Object__Name).ToPointer();
 
         // Fetch outer name.
         var classOuterPtr = *(IntPtr*)
-            (classPtr + GameOffsets.ObjectMembers.Object__Outer).ToPointer();
+            (classPtr + GameOffsets.MemberOffsets.Object__Outer).ToPointer();
         var classOuterName = *(FName*)
-            (classOuterPtr + GameOffsets.ObjectMembers.Object__Name).ToPointer();
+            (classOuterPtr + GameOffsets.MemberOffsets.Object__Name).ToPointer();
 
         return $"{classOuterName}.{className}";
     }

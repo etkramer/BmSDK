@@ -2,7 +2,7 @@
 
 public static class GameOffsets
 {
-    public static class GlobalFields
+    public static class GlobalOffsets
     {
         public const IntPtr GNames = 0x2231BB4;
         public const IntPtr GObjObjects = 0x2231BE4;
@@ -22,7 +22,7 @@ public static class GameOffsets
         public const IntPtr NameInit = 0x1D24F0;
     }
 
-    public static class ObjectMembers
+    public static class MemberOffsets
     {
         public const IntPtr Object__ObjectInternalInteger = 0x4;
         public const IntPtr Object__Outer = 0x1C;

@@ -105,7 +105,7 @@ public partial class BaseObject
             Name is null ? FName.None : new FName(Name),
             SetFlags,
             Template?.Ptr ?? 0,
-            MemUtil.GetIntPointer(GameOffsets.GlobalFields.GError),
+            MemUtil.GetIntPointer(GameOffsets.GlobalOffsets.GError),
             0,
             0
         );
