@@ -24,7 +24,7 @@ static class StaticInitTemplate
                     {{instrinsicClasses.Select(RenderClassInit)}}
                 }
 
-                public static Type GetManagedTypeForClass(string classPath)
+                public static Type GetManagedTypeForClassPath(string classPath)
                 {
                     if (_classPathToManagedTypeMap.TryGetValue(classPath, out var res))
                     {

@@ -110,6 +110,7 @@ public static class TypeMapper
         RegisterIntrinsicClass("Core.Object", "BmSDK.BaseObject");
         RegisterIntrinsicClass("Core.Class", "BmSDK.Class");
         RegisterIntrinsicClass("Core.Function", "BmSDK.Function");
+        RegisterIntrinsicClass("Core.Package", "BmSDK.Package");
 
         // Report results to console
         AnsiConsole.MarkupLine(

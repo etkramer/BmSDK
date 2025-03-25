@@ -7,5 +7,10 @@ public class Package : BaseObject
 
     static Class? _staticClass = null;
 
+    public static Package GetTransientPackage() =>
+        _transientPackage ??= StaticFindObjectChecked<Package>(null, null, "Transient", false);
+
+    static Package? _transientPackage = null;
+
     // TODO
 }

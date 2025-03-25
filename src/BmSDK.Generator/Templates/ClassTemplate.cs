@@ -20,11 +20,9 @@ static class ClassTemplate
             .ToArray();
 
         // Get super class decl
-        var classDeclSuper = "";
-        if (classObj.Super is not null)
-        {
-            classDeclSuper = $" : {TypeMapper.GetManagedPathForType(classObj.Super, classObj)}";
-        }
+        var classDeclSuper = classObj.Super is null
+            ? ""
+            : $" : {TypeMapper.GetManagedPathForType(classObj.Super, classObj)}, IStaticObject";
 
         // Add 'new' keyword for hiding StaticClass() impls
         var staticClassKeywordText = "";
@@ -33,12 +31,10 @@ static class ClassTemplate
             staticClassKeywordText = "new ";
         }
 
-        // Make protected ctor for classes marked abstract
-        var ctorText = "";
-        if (classObj.HasClassFlag(ClassFlags.Abstract))
-        {
-            ctorText = $"\nprotected {classObj.ManagedName}() {{ }}\n";
-        }
+        // Make ctor for constructing from an object pointer
+        var ctorText = $"protected {classObj.ManagedName}(IntPtr ptr)";
+        ctorText += classObj.GetPath() == "Object" ? " { Ptr = ptr; }" : " : base(ptr) { }";
+        ctorText += $"protected {classObj.ManagedName}() {{ }}";
 
         // Format flags
         var flagsText = $"({FlagUtils.DropUnknownBits((ClassFlags)classObj.ClassFlags)})";
@@ -56,7 +52,9 @@ static class ClassTemplate
             {
                 {{staticClassKeywordText}}public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
                 static Class? _staticClass = null;
+                
                 {{ctorText}}
+
                 {{propFields.Select(PropTemplate.Render)}}
 
                 {{funcFields.Select(FuncTemplate.Render)}}

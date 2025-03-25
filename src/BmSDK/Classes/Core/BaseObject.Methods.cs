@@ -1,9 +1,22 @@
+using System.Diagnostics;
 using BmSDK.Framework;
 
 namespace BmSDK;
 
 public partial class BaseObject
 {
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    delegate IntPtr StaticConstructObjectDelegate(
+        IntPtr InClass,
+        IntPtr InOuter,
+        FName InName,
+        EObjectFlags InFlags,
+        IntPtr InTemplate,
+        IntPtr Error,
+        IntPtr SubobjectRoot,
+        IntPtr InInstanceGraph
+    );
+
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     delegate IntPtr StaticFindObjectDelegate(
         IntPtr Class,
@@ -12,7 +25,61 @@ public partial class BaseObject
         int ExactClass
     );
 
+    static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
+
+    /// <summary>
+    /// Construct an object of a particular class.
+    /// </summary>
+    /// <param name="Class">The class of object to construct</param>
+    /// <param name="Outer">The outer for the new object.  If not specified, object will be created in the transient package.</param>
+    /// <param name="Name">The name for the new object.  If not specified, the object will be given a transient name via MakeUniqueObjectName</param>
+    /// <param name="SetFlags">The object flags to apply to the new object</param>
+    /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
+    /// <returns>A reference to a new object of the specified class</returns>
+    public static unsafe BaseObject ConstructObject(
+        Class Class,
+        BaseObject? Outer = null,
+        string? Name = null,
+        EObjectFlags SetFlags = 0,
+        BaseObject? Template = null
+    )
+    {
+        // Create delegate on first use
+        _StaticConstructObject ??=
+            Marshal.GetDelegateForFunctionPointer<StaticConstructObjectDelegate>(
+                MemUtil.GetIntPointer(GameInfo.FuncOffsets.StaticConstructObject)
+            );
+
+        // Default to transient package
+        Outer ??= Package.GetTransientPackage();
+
+        // Call native func
+        var result = _StaticConstructObject(
+            Class.Ptr,
+            Outer.Ptr,
+            Name is null ? FName.None : new FName(Name),
+            SetFlags,
+            Template?.Ptr ?? 0,
+            MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GError),
+            0,
+            0
+        );
+
+        // Throw if result is null
+        Guard.Require(result != 0, "StaticConstructObject() returned null");
+        return MarshalUtil.MarshalToManaged<BaseObject>(&result);
+    }
+
+    /// <inheritdoc cref="ConstructObject"/>
+    public static unsafe T ConstructObject<T>(
+        BaseObject? Outer = null,
+        string? Name = null,
+        EObjectFlags SetFlags = 0,
+        BaseObject? Template = null
+    )
+        where T : BaseObject, IStaticObject =>
+        (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>

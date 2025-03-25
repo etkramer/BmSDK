@@ -6,6 +6,7 @@ public static class GameInfo
     {
         public const IntPtr GNames = 0x2231BB4;
         public const IntPtr GObjObjects = 0x2231BE4;
+        public const IntPtr GError = 0x021F66E8;
     }
 
     public static class FuncOffsets
@@ -15,7 +16,10 @@ public static class GameInfo
         public const IntPtr ObjectDtor = 0x1D30B0;
 
         public const IntPtr StaticFindObject = 0x1D88C0;
+        public const IntPtr StaticConstructObject = 0x1E44E0;
         public const IntPtr GetDefaultObject = 0x172B3B;
+
+        public const IntPtr NameInit = 0x1D24F0;
     }
 
     public static class MemberOffsets

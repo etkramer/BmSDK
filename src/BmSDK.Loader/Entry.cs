@@ -88,6 +88,10 @@ static class Entry
         Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
         Debug.WriteLine($"Actor::StaticClass(): {Actor.StaticClass()}");
 
+        // Test ConstructObject()
+        var newObj = BaseObject.ConstructObject<MacroReachSpec>(null, "SomeMacroReachSpec");
+        Debug.WriteLine($"New object: {newObj}");
+
         // Basic memory access tests
         unsafe
         {
@@ -137,7 +141,7 @@ static class Entry
             var classPath = GetClassPath(self);
 
             // Wrap this object in a managed instance
-            var managedType = StaticInit.GetManagedTypeForClass(classPath);
+            var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
             MarshalUtil.CreateManagedWrapper(self, managedType);
         }
     }

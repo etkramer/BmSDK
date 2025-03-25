@@ -8,7 +8,12 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class BaseObject
+public interface IStaticObject
+{
+    public static abstract Class StaticClass();
+}
+
+public partial class BaseObject : IStaticObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
