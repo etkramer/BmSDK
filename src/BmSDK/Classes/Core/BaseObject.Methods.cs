@@ -166,5 +166,5 @@ public partial class BaseObject
     }
 
     /// <inheritdoc/>
-    public override string ToString() => $"{GetFullName()} ({GetType().Name})";
+    public override string ToString() => $"{GetPathName()} ({GetType().Name})";
 }

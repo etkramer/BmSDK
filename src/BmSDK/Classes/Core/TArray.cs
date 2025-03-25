@@ -4,15 +4,13 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public unsafe class TArray<TManaged>(IntPtr ptr) : IEnumerable<TManaged>
+public unsafe struct TArray<TManaged> : IEnumerable<TManaged>
 {
-    public readonly IntPtr Ptr = ptr;
+    public void* AllocatorInstance;
+    public int Num;
+    public int Max;
 
-    public void* AllocatorInstance => *(void**)(Ptr + 0).ToPointer();
-    public int Num => *(int*)(Ptr + 4).ToPointer();
-    public int Max => *(int*)(Ptr + 8).ToPointer();
-
-    public TManaged this[int idx]
+    public readonly TManaged this[int idx]
     {
         get =>
             MarshalUtil.MarshalToManaged<TManaged>(
@@ -21,7 +19,7 @@ public unsafe class TArray<TManaged>(IntPtr ptr) : IEnumerable<TManaged>
         set => MarshalUtil.MarshalToNative(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
     }
 
-    public unsafe IEnumerator<TManaged> GetEnumerator()
+    public readonly unsafe IEnumerator<TManaged> GetEnumerator()
     {
         for (var i = 0; i < Num; i++)
         {
@@ -31,6 +29,6 @@ public unsafe class TArray<TManaged>(IntPtr ptr) : IEnumerable<TManaged>
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        return this.GetEnumerator();
+        return GetEnumerator();
     }
 }

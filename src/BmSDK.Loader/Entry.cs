@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 
@@ -84,7 +85,7 @@ static class Entry
             Debug.WriteLine($"\nProcessEvent: {funcObj.Name} on {selfObj.Name}");
         }
 
-        // Test StaticClass(), StaticFindObject()
+        // Test StaticClass()
         Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
         Debug.WriteLine($"Actor::StaticClass(): {Actor.StaticClass()}");
 
@@ -92,12 +93,41 @@ static class Entry
         var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
         Debug.WriteLine($"New object: {newObj}");
 
+        // Test StaticFindObject()
+        var bodyMesh = BaseObject.StaticFindObjectChecked<SkeletalMesh>(
+            null,
+            null,
+            "Joker.Mesh.Combat_joker",
+            false
+        );
+        Debug.WriteLine($"Found mesh: {bodyMesh}");
+
+        unsafe
+        {
+            var GObjects = *(TArray<BaseObject>*)(
+                MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
+            );
+
+            var meshActor = GObjects.OfType<RCinematicBatmanBase>().First() as SkeletalMeshActor;
+            var meshComponent = (SkeletalMeshComponent)
+                meshActor.Components.First(comp =>
+                    comp.Name.ToString() == "SkeletalMeshComponent0"
+                );
+
+            Debug.WriteLine($"Found actor {meshActor}");
+            Debug.WriteLine($"Found component {meshComponent}");
+
+            // meshComponent.SetSkeletalMesh(bodyMesh);
+            Debug.WriteLine(bodyMesh.GetPackageName());
+            Debug.WriteLine(bodyMesh.GetMappedRangeValue(new(0, 1), new(0, 10), 0.25f));
+        }
+
         // Basic memory access tests
         unsafe
         {
             // Get table addresses
-            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames));
-            var GObjects = new TArray<BaseObject>(
+            var GNames = *(TArray<IntPtr>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames);
+            var GObjects = *(TArray<BaseObject>*)(
                 MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
             );
 

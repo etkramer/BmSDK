@@ -32,7 +32,7 @@ public struct FName
         }
     }
 
-    public override readonly unsafe string ToString()
+    public override unsafe string ToString()
     {
         var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
         var GNamesData = *GNames;

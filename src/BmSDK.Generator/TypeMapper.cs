@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Spectre.Console;
 using UELib;
 using UELib.Core;
@@ -47,6 +48,14 @@ public static class TypeMapper
             ? managedPath
             : throw new KeyNotFoundException($"No managed name found for {nativePath}");
     }
+
+    /// <summary>
+    /// Gets the managed type name (namespace-qualified) for a given class/struct/enum
+    /// </summary>
+    public static bool TryGetManagedPathForType(
+        string nativePath,
+        [MaybeNullWhen(false)] out string managedPath
+    ) => _structNameMap.TryGetValue(nativePath, out managedPath);
 
     /// <summary>
     /// Registers a class/managed type mapping manually
@@ -106,11 +115,14 @@ public static class TypeMapper
             _structNameMap[field.ShortPath] = GetFullManagedName(field);
         }
 
-        // Record hardcoded intrinsic classes
+        // Record hardcoded intrinsic classes (Core)
         RegisterIntrinsicClass("Core.Object", "BmSDK.BaseObject");
         RegisterIntrinsicClass("Core.Class", "BmSDK.Class");
         RegisterIntrinsicClass("Core.Function", "BmSDK.Function");
         RegisterIntrinsicClass("Core.Package", "BmSDK.Package");
+
+        // Record hardcoded intrinsic classes (Engine)
+        RegisterIntrinsicClass("Engine.StaticMesh", "BmSDK.Engine.StaticMesh");
 
         // Report results to console
         AnsiConsole.MarkupLine(
@@ -141,6 +153,10 @@ public static class TypeMapper
             {
                 return "System.Numerics.Vector3";
             }
+            else if (structProp.Struct.GetPath() == "Object.Vector2D")
+            {
+                return "System.Numerics.Vector2";
+            }
 
             return GetManagedPathForType(structProp.Struct);
         }
@@ -153,9 +169,12 @@ public static class TypeMapper
                 return GetManagedPathForType("Core.Class");
             }
 
-            return objectProp.Object.Class is null
-                ? GetManagedPathForType("Core.Object")
-                : GetManagedPathForType((UField)objectProp.Object.Class);
+            var objectClass = (UClass)objectProp.Object;
+
+            // Fall back to Core.Object in the case of a missing (probably intrinsic) class
+            return TryGetManagedPathForType(objectClass.ShortPath, out var managedPath)
+                ? managedPath
+                : GetManagedPathForType("Core.Object");
         }
 
         // Handle UInterfaceProperty type names
@@ -182,7 +201,7 @@ public static class TypeMapper
         // Handle UArrayProperty generic type names
         if (prop is UArrayProperty arrayProp)
         {
-            return $"BmSDK.TArray<{GetManagedTypeForProp(arrayProp.InnerProperty)}>";
+            return $"BmSDK.TArray<{GetManagedTypeForProp(arrayProp.InnerProperty, (UField)arrayProp.Outer)}>";
         }
 
         // Handle primitive type names
@@ -221,9 +240,7 @@ public static class TypeMapper
             }
         }
 
-        return (parts.Length == numParts && ctxParts.Length == numParts)
-            ? parts.Last()
-            : string.Join(".", parts[numParts..]);
+        return parts.Last();
     }
 
     /// <summary>
