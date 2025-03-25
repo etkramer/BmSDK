@@ -4,61 +4,57 @@ namespace BmSDK;
 
 public partial class BaseObject
 {
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    delegate IntPtr StaticConstructObjectDelegate(
-        IntPtr InClass,
-        IntPtr InOuter,
-        FName InName,
-        EObjectFlags InFlags,
-        IntPtr InTemplate,
-        IntPtr Error,
-        IntPtr SubobjectRoot,
-        IntPtr InInstanceGraph
-    );
-
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    delegate IntPtr StaticFindObjectDelegate(
-        IntPtr Class,
-        IntPtr InOuter,
-        IntPtr OrigInName,
-        int ExactClass
-    );
-
-    static StaticConstructObjectDelegate? _StaticConstructObject = null;
-    static StaticFindObjectDelegate? _StaticFindObject = null;
-
-    internal static unsafe IntPtr ConstructObjectInternal(
-        Class Class,
-        BaseObject? Outer,
-        string? Name,
-        EObjectFlags SetFlags,
-        BaseObject? Template
+    /// <summary>
+    /// Find or load an object by string name with optional outer and filename specifications.<br/>
+    /// These are optional because the InName can contain all of the necessary information.
+    /// </summary>
+    /// <param name="Class">The to be found object's class</param>
+    /// <param name="InOuter">The to be found object's outer</param>
+    /// <param name="Name">The to be found object's class</param>
+    /// <param name="ExactClass">Whether to require an exact match with the passed in class</param>
+    /// <returns>Returns the found object or null if none could be found</returns>
+    public static unsafe T? StaticFindObject<T>(
+        Class? Class,
+        BaseObject? InOuter,
+        string Name,
+        bool ExactClass
     )
+        where T : BaseObject
     {
-        // Create delegate on first use
-        _StaticConstructObject ??=
-            Marshal.GetDelegateForFunctionPointer<StaticConstructObjectDelegate>(
-                MemUtil.GetIntPointer(GameInfo.FuncOffsets.StaticConstructObject)
+        // Get TCHAR* from string
+        fixed (char* namePtr = Name)
+        {
+            // Call native func
+            var result = GameFunctions.StaticFindObject(
+                Class?.Ptr ?? 0,
+                InOuter?.Ptr ?? -1,
+                (IntPtr)namePtr,
+                ExactClass ? 1 : 0
             );
 
-        // Default to transient package
-        Outer ??= Package.GetTransientPackage();
+            // Return null if needed
+            if (result == IntPtr.Zero)
+            {
+                return null;
+            }
 
-        // Call native func
-        var result = _StaticConstructObject(
-            Class.Ptr,
-            Outer.Ptr,
-            Name is null ? FName.None : new FName(Name),
-            SetFlags,
-            Template?.Ptr ?? 0,
-            MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GError),
-            0,
-            0
-        );
-
-        Guard.Require(result != 0, "StaticConstructObject() returned null");
-        return result;
+            return (T?)(object?)MarshalUtil.MarshalToManaged<BaseObject>(&result);
+        }
     }
+
+    /// <returns>Returns the found object or throws if none could be found</returns>
+    /// <inheritdoc cref="StaticFindObject"/>
+    public static unsafe T StaticFindObjectChecked<T>(
+        Class? Class,
+        BaseObject? InOuter,
+        string Name,
+        bool ExactClass
+    )
+        where T : BaseObject =>
+        Guard.NotNull(
+            StaticFindObject<T>(Class, InOuter, Name, ExactClass),
+            $"Failed to find object: {Name}"
+        );
 
     /// <summary>
     /// Construct an object of a particular class.
@@ -91,62 +87,32 @@ public partial class BaseObject
         where T : BaseObject, IStaticObject =>
         (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
-    /// <summary>
-    /// Find or load an object by string name with optional outer and filename specifications.<br/>
-    /// These are optional because the InName can contain all of the necessary information.
-    /// </summary>
-    /// <param name="Class">The to be found object's class</param>
-    /// <param name="InOuter">The to be found object's outer</param>
-    /// <param name="Name">The to be found object's class</param>
-    /// <param name="ExactClass">Whether to require an exact match with the passed in class</param>
-    /// <returns>Returns the found object or null if none could be found</returns>
-    public static unsafe T? StaticFindObject<T>(
-        Class? Class,
-        BaseObject? InOuter,
-        string Name,
-        bool ExactClass
+    internal static unsafe IntPtr ConstructObjectInternal(
+        Class Class,
+        BaseObject? Outer,
+        string? Name,
+        EObjectFlags SetFlags,
+        BaseObject? Template
     )
-        where T : BaseObject
     {
-        // Create delegate on first use
-        _StaticFindObject ??= Marshal.GetDelegateForFunctionPointer<StaticFindObjectDelegate>(
-            MemUtil.GetIntPointer(GameInfo.FuncOffsets.StaticFindObject)
+        // Default to transient package
+        Outer ??= Package.GetTransientPackage();
+
+        // Call native func
+        var result = GameFunctions.StaticConstructObject(
+            Class.Ptr,
+            Outer.Ptr,
+            Name is null ? FName.None : new FName(Name),
+            SetFlags,
+            Template?.Ptr ?? 0,
+            MemUtil.GetIntPointer(GameOffsets.GlobalFields.GError),
+            0,
+            0
         );
 
-        // Get TCHAR* from string
-        fixed (char* namePtr = Name)
-        {
-            // Call native func
-            var result = _StaticFindObject(
-                Class?.Ptr ?? 0,
-                InOuter?.Ptr ?? -1,
-                (IntPtr)namePtr,
-                ExactClass ? 1 : 0
-            );
-
-            // Return null if needed
-            if (result == IntPtr.Zero)
-            {
-                return null;
-            }
-
-            return (T?)(object?)MarshalUtil.MarshalToManaged<BaseObject>(&result);
-        }
+        Guard.Require(result != 0, "StaticConstructObject() returned null");
+        return result;
     }
-
-    /// <returns>Returns the found object or throws if none could be found</returns>
-    /// <inheritdoc cref="StaticFindObject"/>
-    public static unsafe T StaticFindObjectChecked<T>(
-        Class? Class,
-        BaseObject? InOuter,
-        string Name,
-        bool ExactClass
-    )
-        where T : BaseObject =>
-        Guard.NotNull(
-            StaticFindObject<T>(Class, InOuter, Name, ExactClass),
-            $"Failed to find object: {Name}"
-        );
 
     /// <summary>
     /// Returns the fully qualified pathname for this object as well as the name of the class.

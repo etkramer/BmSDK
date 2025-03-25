@@ -6,17 +6,6 @@ public struct FName
 {
     public static readonly FName None = new(0);
 
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    delegate void InitDelegate(
-        IntPtr self,
-        IntPtr InName,
-        int InNumber,
-        int FindType,
-        int bSplitName
-    );
-
-    static InitDelegate? _Init = null;
-
     public int Index;
     public int Number;
 
@@ -34,23 +23,18 @@ public struct FName
     /// </summary>
     public unsafe FName(string Name)
     {
-        // Create delegate on first use
-        _Init ??= Marshal.GetDelegateForFunctionPointer<InitDelegate>(
-            MemUtil.GetIntPointer(GameInfo.FuncOffsets.NameInit)
-        );
-
         // Get TCHAR* from string
         fixed (char* namePtr = Name)
         fixed (FName* thisPtr = &this)
         {
             // Call native func
-            _Init((IntPtr)thisPtr, (IntPtr)namePtr, 0, 1, 0);
+            GameFunctions.NameInit((IntPtr)thisPtr, (IntPtr)namePtr, 0, 1, 0);
         }
     }
 
     public override readonly unsafe string ToString()
     {
-        var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
+        var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameOffsets.GlobalFields.GNames);
         var GNamesData = *GNames;
         return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->AnsiName));
     }

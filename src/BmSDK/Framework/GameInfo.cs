@@ -1,8 +1,8 @@
 ﻿namespace BmSDK;
 
-public static class GameInfo
+public static class GameOffsets
 {
-    public static class GlobalOffsets
+    public static class GlobalFields
     {
         public const IntPtr GNames = 0x2231BB4;
         public const IntPtr GObjObjects = 0x2231BE4;
@@ -22,7 +22,7 @@ public static class GameInfo
         public const IntPtr NameInit = 0x1D24F0;
     }
 
-    public static class MemberOffsets
+    public static class ObjectMembers
     {
         public const IntPtr Object__ObjectInternalInteger = 0x4;
         public const IntPtr Object__Outer = 0x1C;
