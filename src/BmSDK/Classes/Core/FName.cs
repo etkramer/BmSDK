@@ -34,7 +34,7 @@ public struct FName
 
     public override readonly unsafe string ToString()
     {
-        var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameOffsets.GlobalOffsets.GNames);
+        var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
         var GNamesData = *GNames;
         return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->AnsiName));
     }

@@ -39,15 +39,15 @@ static class Entry
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(
-            GameOffsets.FuncOffsets.ProcessEvent,
+            GameInfo.FuncOffsets.ProcessEvent,
             ProcessEventDetour
         );
         _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(
-            GameOffsets.FuncOffsets.AddObject,
+            GameInfo.FuncOffsets.AddObject,
             AddObjectDetour
         );
         _ObjectDtorDetourBase = DetourUtil.NewDetour<ObjectDtorDelegate>(
-            GameOffsets.FuncOffsets.ObjectDtor,
+            GameInfo.FuncOffsets.ObjectDtor,
             ObjectDtorDetour
         );
 
@@ -96,11 +96,9 @@ static class Entry
         unsafe
         {
             // Get table addresses
-            var GNames = new TArray<IntPtr>(
-                MemUtil.GetIntPointer(GameOffsets.GlobalOffsets.GNames)
-            );
+            var GNames = new TArray<IntPtr>(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames));
             var GObjects = new TArray<BaseObject>(
-                MemUtil.GetIntPointer(GameOffsets.GlobalOffsets.GObjObjects)
+                MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
             );
 
             // Test memory access
@@ -128,8 +126,8 @@ static class Entry
 
         unsafe
         {
-            var classPtr = *(IntPtr*)(self + GameOffsets.MemberOffsets.Object__Class).ToPointer();
-            var classIndexPtr = classPtr + GameOffsets.MemberOffsets.Object__ObjectInternalInteger;
+            var classPtr = *(IntPtr*)(self + GameInfo.MemberOffsets.Object__Class).ToPointer();
+            var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
 
             // Not clear yet why this happens, but maybe we don't need to worry about it.
             var classIndex = *(int*)classIndexPtr.ToPointer();
@@ -151,14 +149,13 @@ static class Entry
     static unsafe string GetClassPath(IntPtr obj)
     {
         // Fetch class name.
-        var classPtr = *(IntPtr*)(obj + GameOffsets.MemberOffsets.Object__Class).ToPointer();
-        var className = *(FName*)(classPtr + GameOffsets.MemberOffsets.Object__Name).ToPointer();
+        var classPtr = *(IntPtr*)(obj + GameInfo.MemberOffsets.Object__Class).ToPointer();
+        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
         // Fetch outer name.
-        var classOuterPtr = *(IntPtr*)
-            (classPtr + GameOffsets.MemberOffsets.Object__Outer).ToPointer();
+        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
         var classOuterName = *(FName*)
-            (classOuterPtr + GameOffsets.MemberOffsets.Object__Name).ToPointer();
+            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
         return $"{classOuterName}.{className}";
     }

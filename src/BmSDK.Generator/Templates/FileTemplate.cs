@@ -9,6 +9,9 @@ static class FileTemplate
         return $$"""
             namespace {{TypeMapper.GetManagedNamespace(classObj)}};
 
+            // Disable CS0108
+            #pragma warning disable CS0108
+
             {{ClassTemplate.Render(classObj)}}
             """;
     }

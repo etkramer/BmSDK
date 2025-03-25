@@ -43,6 +43,10 @@ public static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ObjectDtorDelegate(IntPtr self);
 
+    // UObject::FindFunction()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate IntPtr FindFunctionDelegate(IntPtr self, FName InName, int Global);
+
     // FName::Init()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void NameInitDelegate(
@@ -59,35 +63,41 @@ public static class GameFunctions
     static AddObjectDelegate? _AddObject = null;
     static ObjectDtorDelegate? _ObjectDtor = null;
     static NameInitDelegate? _NameInit = null;
+    static FindFunctionDelegate? _FindFunction = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
         _StaticConstructObject ??=
             Marshal.GetDelegateForFunctionPointer<StaticConstructObjectDelegate>(
-                MemUtil.GetIntPointer(GameOffsets.FuncOffsets.StaticConstructObject)
+                MemUtil.GetIntPointer(GameInfo.FuncOffsets.StaticConstructObject)
             );
 
     public static StaticFindObjectDelegate StaticFindObject =>
         _StaticFindObject ??= Marshal.GetDelegateForFunctionPointer<StaticFindObjectDelegate>(
-            MemUtil.GetIntPointer(GameOffsets.FuncOffsets.StaticFindObject)
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.StaticFindObject)
         );
 
     public static ProcessEventDelegate ProcessEvent =>
         _ProcessEvent ??= Marshal.GetDelegateForFunctionPointer<ProcessEventDelegate>(
-            MemUtil.GetIntPointer(GameOffsets.FuncOffsets.ProcessEvent)
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.ProcessEvent)
         );
 
     public static AddObjectDelegate AddObject =>
         _AddObject ??= Marshal.GetDelegateForFunctionPointer<AddObjectDelegate>(
-            MemUtil.GetIntPointer(GameOffsets.FuncOffsets.AddObject)
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.AddObject)
         );
 
     public static ObjectDtorDelegate ObjectDtor =>
         _ObjectDtor ??= Marshal.GetDelegateForFunctionPointer<ObjectDtorDelegate>(
-            MemUtil.GetIntPointer(GameOffsets.FuncOffsets.ObjectDtor)
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.ObjectDtor)
         );
 
     public static NameInitDelegate NameInit =>
         _NameInit ??= Marshal.GetDelegateForFunctionPointer<NameInitDelegate>(
-            MemUtil.GetIntPointer(GameOffsets.FuncOffsets.NameInit)
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.NameInit)
+        );
+
+    public static FindFunctionDelegate FindFunction =>
+        _FindFunction ??= Marshal.GetDelegateForFunctionPointer<FindFunctionDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.FindFunction)
         );
 }

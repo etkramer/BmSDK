@@ -1,6 +1,6 @@
 ﻿namespace BmSDK;
 
-public static class GameOffsets
+public static class GameInfo
 {
     public static class GlobalOffsets
     {
@@ -11,14 +11,17 @@ public static class GameOffsets
 
     public static class FuncOffsets
     {
+        // UObject (static)
+        public const IntPtr StaticFindObject = 0x1D88C0;
+        public const IntPtr StaticConstructObject = 0x1E44E0;
+
+        // UObject (local)
         public const IntPtr ProcessEvent = 0x1A7040;
         public const IntPtr AddObject = 0x1D4080;
         public const IntPtr ObjectDtor = 0x1D30B0;
+        public const IntPtr FindFunction = 0x1D7C50;
 
-        public const IntPtr StaticFindObject = 0x1D88C0;
-        public const IntPtr StaticConstructObject = 0x1E44E0;
-        public const IntPtr GetDefaultObject = 0x172B3B;
-
+        // FName (local)
         public const IntPtr NameInit = 0x1D24F0;
     }
 

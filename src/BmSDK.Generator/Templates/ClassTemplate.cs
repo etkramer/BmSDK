@@ -24,13 +24,6 @@ static class ClassTemplate
             ? ""
             : $" : {TypeMapper.GetManagedPathForType(classObj.Super, classObj)}, IStaticObject";
 
-        // Add 'new' keyword for hiding StaticClass() impls
-        var staticClassKeywordText = "";
-        if (classObj.GetPath() != "Object")
-        {
-            staticClassKeywordText = "new ";
-        }
-
         // Make ctor for constructing from an object pointer
         var ctorText = $"protected {classObj.ManagedName}(IntPtr ptr)";
         ctorText += classObj.GetPath() == "Object" ? " { Ptr = ptr; }" : " : base(ptr) { }";
@@ -49,7 +42,7 @@ static class ClassTemplate
             /// </summary>
             public partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
-                {{staticClassKeywordText}}public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
+                public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
                 static Class? _staticClass = null;
 
                 internal {{classObj.ManagedName}}() { }

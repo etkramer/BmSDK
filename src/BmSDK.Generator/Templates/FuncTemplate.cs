@@ -29,27 +29,6 @@ static class FuncTemplate
         // Compute access modifier ahead of time
         var accessModifier = func.HasFunctionFlag(FunctionFlags.Protected) ? "protected" : "public";
 
-        // Are we hiding a field of a superclass?
-        var isHidingSuper = ((UClass)func.Outer)
-            .EnumerateSuper()
-            .Any(super => super.EnumerateFields().Any(f => f.Name == func.Name));
-
-        // Add virtual/override keywords where needed
-        List<string> funcDeclKeywords = isHidingSuper ? ["new"] : [];
-
-        // Replace virtual keywords with static where needed
-        if (func.HasFunctionFlag(FunctionFlags.Static))
-        {
-            funcDeclKeywords.Insert(0, "static");
-        }
-
-        // Convert keywords to string
-        var keywordsText = string.Join(" ", funcDeclKeywords);
-        if (keywordsText.Length > 0)
-        {
-            keywordsText = $" {keywordsText}";
-        }
-
         // Format flags
         var flagsText =
             func.FunctionFlags == 0
@@ -60,7 +39,7 @@ static class FuncTemplate
             /// <summary>
             /// Function: {{func.Name}}{{flagsText}}
             /// </summary>
-            {{accessModifier}}{{keywordsText}} {{returnType}} {{func.ManagedName}}({{string.Join(
+            {{accessModifier}} {{returnType}} {{func.ManagedName}}({{string.Join(
                 ", ",
                 paramTypes
             )}}) => throw new System.NotImplementedException();

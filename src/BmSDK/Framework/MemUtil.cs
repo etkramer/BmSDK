@@ -30,7 +30,8 @@ public static class MemUtil
         return (T*)(GetBaseAddress() + offset).ToPointer();
     }
 
-    public static unsafe void Blit<TSrc>(TSrc src, void* destPtr) => Blit<TSrc>(&src);
+    public static unsafe void Blit<TSrc>(TSrc src, void* destPtr) =>
+        *(TSrc*)destPtr = Blit<TSrc>(&src);
 
     public static unsafe TDest Blit<TDest>(void* srcPtr)
     {
