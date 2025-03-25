@@ -55,6 +55,7 @@ public struct FName
         return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->AnsiName));
     }
 
+#pragma warning disable CS0649
     unsafe struct FNameEntry
     {
         public EObjectFlags Flags;
@@ -62,4 +63,5 @@ public struct FName
         public FNameEntry* HashNext;
         public fixed byte AnsiName[128];
     }
+#pragma warning restore CS0649
 }
