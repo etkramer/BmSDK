@@ -34,7 +34,6 @@ static class ClassTemplate
         // Make ctor for constructing from an object pointer
         var ctorText = $"protected {classObj.ManagedName}(IntPtr ptr)";
         ctorText += classObj.GetPath() == "Object" ? " { Ptr = ptr; }" : " : base(ptr) { }";
-        ctorText += $"protected {classObj.ManagedName}() {{ }}";
 
         // Format flags
         var flagsText = $"({FlagUtils.DropUnknownBits((ClassFlags)classObj.ClassFlags)})";
@@ -52,7 +51,13 @@ static class ClassTemplate
             {
                 {{staticClassKeywordText}}public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
                 static Class? _staticClass = null;
-                
+
+                internal {{classObj.ManagedName}}() { }
+
+                {{RenderMainConstructor(classObj)}}
+                /// <summary>
+                /// Constructs a new wrapper instance from the given object pointer.
+                /// </summary>
                 {{ctorText}}
 
                 {{propFields.Select(PropTemplate.Render)}}
@@ -63,6 +68,29 @@ static class ClassTemplate
 
                 {{structFields.Select(StructTemplate.Render)}}
             }
+            """;
+    }
+
+    static FormattableString RenderMainConstructor(UClass classObj)
+    {
+        // No main/public constructor for abstract classes
+        if (classObj.HasClassFlag(ClassFlags.Abstract))
+        {
+            return $"";
+        }
+
+        return $$"""
+            /// <summary>
+            /// Constructs a new {{classObj.ManagedName}}.
+            /// </summary>
+            public {{classObj.ManagedName}}(
+                BaseObject? Outer = null,
+                string? Name = null,
+                EObjectFlags SetFlags = 0,
+                {{classObj.ManagedName}}? Template = null
+            )
+                : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+            
             """;
     }
 }

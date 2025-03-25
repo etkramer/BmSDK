@@ -28,21 +28,12 @@ public partial class BaseObject
     static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
 
-    /// <summary>
-    /// Construct an object of a particular class.
-    /// </summary>
-    /// <param name="Class">The class of object to construct</param>
-    /// <param name="Outer">The outer for the new object.  If not specified, object will be created in the transient package.</param>
-    /// <param name="Name">The name for the new object.  If not specified, the object will be given a transient name via MakeUniqueObjectName</param>
-    /// <param name="SetFlags">The object flags to apply to the new object</param>
-    /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
-    /// <returns>A reference to a new object of the specified class</returns>
-    public static unsafe BaseObject ConstructObject(
+    internal static unsafe IntPtr ConstructObjectInternal(
         Class Class,
-        BaseObject? Outer = null,
-        string? Name = null,
-        EObjectFlags SetFlags = 0,
-        BaseObject? Template = null
+        BaseObject? Outer,
+        string? Name,
+        EObjectFlags SetFlags,
+        BaseObject? Template
     )
     {
         // Create delegate on first use
@@ -66,8 +57,28 @@ public partial class BaseObject
             0
         );
 
-        // Throw if result is null
         Guard.Require(result != 0, "StaticConstructObject() returned null");
+        return result;
+    }
+
+    /// <summary>
+    /// Construct an object of a particular class.
+    /// </summary>
+    /// <param name="Class">The class of object to construct</param>
+    /// <param name="Outer">The outer for the new object.  If not specified, object will be created in the transient package.</param>
+    /// <param name="Name">The name for the new object.  If not specified, the object will be given a transient name via MakeUniqueObjectName</param>
+    /// <param name="SetFlags">The object flags to apply to the new object</param>
+    /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
+    /// <returns>A reference to a new object of the specified class</returns>
+    public static unsafe BaseObject ConstructObject(
+        Class Class,
+        BaseObject? Outer = null,
+        string? Name = null,
+        EObjectFlags SetFlags = 0,
+        BaseObject? Template = null
+    )
+    {
+        var result = ConstructObjectInternal(Class, Outer, Name, SetFlags, Template);
         return MarshalUtil.MarshalToManaged<BaseObject>(&result);
     }
 

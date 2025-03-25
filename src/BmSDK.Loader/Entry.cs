@@ -89,7 +89,7 @@ static class Entry
         Debug.WriteLine($"Actor::StaticClass(): {Actor.StaticClass()}");
 
         // Test ConstructObject()
-        var newObj = BaseObject.ConstructObject<MacroReachSpec>(null, "SomeMacroReachSpec");
+        var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
         Debug.WriteLine($"New object: {newObj}");
 
         // Basic memory access tests
