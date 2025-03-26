@@ -50,6 +50,19 @@ public static class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
+        else if (typeof(TManaged) == typeof(string))
+        {
+            var managedStr = (string)(object)value!;
+
+            // Get TCHAR* from string
+            fixed (char* stringDataPtr = managedStr)
+            {
+                // Call native func
+                GameFunctions.StringCtor((IntPtr)data, (IntPtr)stringDataPtr);
+            }
+
+            return;
+        }
         else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
             // Handle null object references.

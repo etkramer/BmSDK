@@ -1,6 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.InteropServices;
 using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
@@ -11,25 +9,9 @@ static class Entry
 {
     delegate void DllMainDelegate();
 
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void ProcessEventDelegate(
-        IntPtr self,
-        IntPtr Function,
-        IntPtr Parms,
-        IntPtr UnusedResult
-    );
-
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void AddObjectDelegate(IntPtr self, int InIndex);
-
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void ObjectDtorDelegate(IntPtr self);
-
-    static ProcessEventDelegate? _ProcessEventDetourBase = null;
-    static AddObjectDelegate? _AddObjectDetourBase = null;
-    static ObjectDtorDelegate? _ObjectDtorDetourBase = null;
-
-    static readonly List<(Assembly, IManagedPlugin)> _plugins = new();
+    static GameFunctions.ProcessEventDelegate? _ProcessEventDetourBase = null;
+    static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
+    static GameFunctions.ObjectDtorDelegate? _ObjectDtorDetourBase = null;
 
     public static void DllMain()
     {
@@ -39,15 +21,15 @@ static class Entry
         StaticInit.StaticInitClasses();
 
         // Create function detours
-        _ProcessEventDetourBase = DetourUtil.NewDetour<ProcessEventDelegate>(
+        _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
             GameInfo.FuncOffsets.ProcessEvent,
             ProcessEventDetour
         );
-        _AddObjectDetourBase = DetourUtil.NewDetour<AddObjectDelegate>(
+        _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
             AddObjectDetour
         );
-        _ObjectDtorDetourBase = DetourUtil.NewDetour<ObjectDtorDelegate>(
+        _ObjectDtorDetourBase = DetourUtil.NewDetour<GameFunctions.ObjectDtorDelegate>(
             GameInfo.FuncOffsets.ObjectDtor,
             ObjectDtorDetour
         );
@@ -56,7 +38,7 @@ static class Entry
         Debug.Write("\n");
     }
 
-    static void OnBeginPlay()
+    static void OnGameStart()
     {
         // Test script functions
         Debug.WriteLine($"1 + 2 = {BaseObject.Add_IntInt(1, 2)}");
@@ -69,52 +51,28 @@ static class Entry
         var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
         Debug.WriteLine($"New object: {newObj}");
 
-        unsafe
-        {
-            var GObjects = *(TArray<BaseObject>*)(
-                MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
-            );
+        // Test FindObjects(), actor properties
+        var meshActor = BaseObject.FindObjects<RCinematicBatmanBase>().Last();
+        var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
+        Debug.WriteLine($"Found actor {meshActor}");
+        Debug.WriteLine($"Found component {meshComponent}");
 
-            var meshActor = GObjects.OfType<RCinematicBatmanBase>().Last();
-            var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
-            Debug.WriteLine($"Found actor {meshActor}");
-            Debug.WriteLine($"Found component {meshComponent}");
+        // Test object methods
+        meshComponent.SetHidden(true);
 
-            // TODO: Prop offsets are wrong
-            // Debug.WriteLine($"MeshComponent should have size {MeshComponent.StaticClass().PropertiesSize}");
-            // Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
+        // Test dynamic object loading
+        var jokerMesh = BaseObject.DynamicLoadObject(
+            "Joker.Mesh.Combat_joker",
+            SkeletalMesh.StaticClass()
+        );
+        Debug.WriteLine($"Loaded mesh {jokerMesh}");
 
-            meshComponent.SetHidden(true);
-            // meshComponent.SetSkeletalMesh(bodyMesh);
-        }
-
-        // Basic memory access tests
-        unsafe
-        {
-            // Get table addresses
-            var GNames = *(TArray<IntPtr>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GNames);
-            var GObjects = *(TArray<BaseObject>*)(
-                MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
-            );
-
-            // Test memory access
-            Debug.Write("\n");
-            Debug.WriteLine($"GNames: Num {GNames.Num}, Max {GNames.Max}");
-            Debug.WriteLine($"GObjects: Num {GObjects.Num}, Max {GObjects.Max}");
-
-            // Test object access
-            foreach (var obj in GObjects.OfType<Actor>().Take(10))
-            {
-                Debug.Write("\n");
-                Debug.WriteLine($"Name: {obj.Name}");
-                Debug.WriteLine($"Class: {obj.Class.Name} ({obj.GetType().Name})");
-                Debug.WriteLine($"ObjectInternalInteger: {obj.ObjectInternalInteger}");
-                Debug.WriteLine($"ObjectFlags: {obj.ObjectFlags}");
-            }
-        }
+        // TODO: Prop offsets are wrong
+        // Debug.WriteLine($"MeshComponent should have size {MeshComponent.StaticClass().PropertiesSize}");
+        // Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
     }
 
-    static bool HasBegunPlay = false;
+    static bool HasGameStarted = false;
 
     // Detour for UObject::ProcessEvent()
     public static void ProcessEventDetour(
@@ -130,14 +88,13 @@ static class Entry
         unsafe
         {
             var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
+            var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
 
-            if (
-                !HasBegunPlay
-                && funcObj.GetPathName() == "BmGame.RGameInfo:GameInProgress:BeginState"
-            )
+            // Perform game start logic
+            if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
-                OnBeginPlay();
-                HasBegunPlay = true;
+                OnGameStart();
+                HasGameStarted = true;
             }
         }
     }

@@ -1,9 +1,48 @@
+using System.Collections.Generic;
+using System.Linq;
 using BmSDK.Framework;
 
 namespace BmSDK;
 
 public partial class BaseObject
 {
+    public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
+
+    public static unsafe Package? LoadPackage(Package? InOuter, string Filename, int LoadFlags = 0)
+    {
+        // Get TCHAR* from string
+        fixed (char* filenamePtr = Filename)
+        {
+            // Call native func
+            var result = GameFunctions.LoadPackage(
+                InOuter?.Ptr ?? 0,
+                (IntPtr)filenamePtr,
+                LoadFlags
+            );
+
+            // Return null if needed
+            if (result == IntPtr.Zero)
+            {
+                return null;
+            }
+
+            return MarshalUtil.MarshalToManaged<Package>(&result);
+        }
+    }
+
+    /// <summary>
+    /// Returns an enumerable containing all objects of the given type.
+    /// </summary>
+    public static unsafe IEnumerable<T> FindObjects<T>()
+        where T : BaseObject
+    {
+        var GObjects = *(TArray<BaseObject>*)(
+            MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
+        );
+
+        return GObjects.OfType<T>();
+    }
+
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
     /// These are optional because the InName can contain all of the necessary information.
@@ -13,7 +52,7 @@ public partial class BaseObject
     /// <param name="Name">The to be found object's class</param>
     /// <param name="ExactClass">Whether to require an exact match with the passed in class</param>
     /// <returns>Returns the found object or null if none could be found</returns>
-    public static unsafe T? StaticFindObject<T>(
+    public static unsafe T StaticFindObjectChecked<T>(
         Class? Class,
         BaseObject? InOuter,
         string Name,
@@ -32,29 +71,12 @@ public partial class BaseObject
                 ExactClass ? 1 : 0
             );
 
-            // Return null if needed
-            if (result == IntPtr.Zero)
-            {
-                return null;
-            }
-
-            return (T?)(object?)MarshalUtil.MarshalToManaged<BaseObject>(&result);
+            return Guard.NotNull(
+                (T?)(object?)MarshalUtil.MarshalToManaged<BaseObject>(&result),
+                $"Failed to find object: {Name}"
+            );
         }
     }
-
-    /// <returns>Returns the found object or throws if none could be found</returns>
-    /// <inheritdoc cref="StaticFindObject"/>
-    public static unsafe T StaticFindObjectChecked<T>(
-        Class? Class,
-        BaseObject? InOuter,
-        string Name,
-        bool ExactClass
-    )
-        where T : BaseObject =>
-        Guard.NotNull(
-            StaticFindObject<T>(Class, InOuter, Name, ExactClass),
-            $"Failed to find object: {Name}"
-        );
 
     /// <summary>
     /// Construct an object of a particular class.
