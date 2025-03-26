@@ -1,6 +1,6 @@
 ﻿namespace BmSDK;
 
-public class Field : BaseObject
+public class Field : GameObject
 {
     // TODO
 }

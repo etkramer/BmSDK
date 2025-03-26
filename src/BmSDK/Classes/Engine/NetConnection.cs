@@ -1,6 +1,6 @@
 namespace BmSDK.Engine;
 
-public sealed class NetConnection : BaseObject
+public sealed class NetConnection : GameObject
 {
     // TODO
 }

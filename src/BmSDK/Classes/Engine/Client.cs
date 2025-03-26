@@ -1,6 +1,6 @@
 namespace BmSDK.Engine;
 
-public sealed class Client : BaseObject
+public sealed class Client : GameObject
 {
     // TODO
 }

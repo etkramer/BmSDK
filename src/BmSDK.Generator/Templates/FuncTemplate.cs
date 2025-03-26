@@ -126,7 +126,8 @@ static class FuncTemplate
             var paramIsReference =
                 paramProp is UObjectProperty
                 || paramProp is UStringProperty
-                || paramProp is UStrProperty;
+                || paramProp is UStrProperty
+                || paramProp is UDelegateProperty;
 
             // Compute param type name
             if (paramIsReference && paramIsOptional)

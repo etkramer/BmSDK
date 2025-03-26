@@ -13,14 +13,14 @@ public interface IStaticObject
     public static abstract Class StaticClass();
 }
 
-public partial class BaseObject : IStaticObject
+public partial class GameObject : IStaticObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
     /// <summary>
-    /// Gets a property value from a <see cref="BaseObject"/> instance
+    /// Gets a property value from a <see cref="GameObject"/> instance
     /// </summary>
-    public static unsafe TValue GetPropertyValue<TValue>(BaseObject obj, IntPtr offset) =>
+    public static unsafe TValue GetPropertyValue<TValue>(GameObject obj, IntPtr offset) =>
         MarshalUtil.MarshalToManaged<TValue>((obj.Ptr + offset).ToPointer());
 
     /// <summary>
@@ -36,10 +36,10 @@ public partial class BaseObject : IStaticObject
     }
 
     /// <summary>
-    /// Sets a property value for a <see cref="BaseObject"/> instance
+    /// Sets a property value for a <see cref="GameObject"/> instance
     /// </summary>
     public static unsafe void SetPropertyValue<TValue>(
-        BaseObject obj,
+        GameObject obj,
         IntPtr offset,
         TValue value
     ) => MarshalUtil.MarshalToNative(value, (obj.Ptr + offset).ToPointer());

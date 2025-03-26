@@ -1,6 +1,6 @@
 ﻿namespace BmSDK;
 
-public class Package : BaseObject
+public class Package : GameObject
 {
     public static new Class StaticClass() =>
         _staticClass ??= StaticFindObjectChecked<Class>(null, null, "Core.Package", false);

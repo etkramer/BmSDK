@@ -1,6 +1,6 @@
 namespace BmSDK.Engine;
 
-public class StaticMesh : BaseObject
+public class StaticMesh : GameObject
 {
     // TODO
 }

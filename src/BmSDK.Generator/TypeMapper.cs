@@ -116,7 +116,7 @@ public static class TypeMapper
         }
 
         // Record hardcoded intrinsic classes (Core)
-        RegisterIntrinsicClass("Core.Object", "BmSDK.BaseObject");
+        RegisterIntrinsicClass("Core.Object", "BmSDK.GameObject");
         RegisterIntrinsicClass("Core.Class", "BmSDK.Class");
         RegisterIntrinsicClass("Core.Function", "BmSDK.Function");
         RegisterIntrinsicClass("Core.Package", "BmSDK.Package");

@@ -4,7 +4,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class BaseObject
+public partial class GameObject
 {
     public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
 
@@ -20,12 +20,6 @@ public partial class BaseObject
                 LoadFlags
             );
 
-            // Return null if needed
-            if (result == IntPtr.Zero)
-            {
-                return null;
-            }
-
             return MarshalUtil.MarshalToManaged<Package>(&result);
         }
     }
@@ -34,9 +28,9 @@ public partial class BaseObject
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjects<T>()
-        where T : BaseObject
+        where T : GameObject
     {
-        var GObjects = *(TArray<BaseObject>*)(
+        var GObjects = *(TArray<GameObject>*)(
             MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
         );
 
@@ -54,11 +48,11 @@ public partial class BaseObject
     /// <returns>Returns the found object or null if none could be found</returns>
     public static unsafe T StaticFindObjectChecked<T>(
         Class? Class,
-        BaseObject? InOuter,
+        GameObject? InOuter,
         string Name,
         bool ExactClass
     )
-        where T : BaseObject
+        where T : GameObject
     {
         // Get TCHAR* from string
         fixed (char* namePtr = Name)
@@ -72,7 +66,7 @@ public partial class BaseObject
             );
 
             return Guard.NotNull(
-                (T?)(object?)MarshalUtil.MarshalToManaged<BaseObject>(&result),
+                (T?)(object?)MarshalUtil.MarshalToManaged<GameObject>(&result),
                 $"Failed to find object: {Name}"
             );
         }
@@ -87,34 +81,34 @@ public partial class BaseObject
     /// <param name="SetFlags">The object flags to apply to the new object</param>
     /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
     /// <returns>A reference to a new object of the specified class</returns>
-    public static unsafe BaseObject ConstructObject(
+    public static unsafe GameObject ConstructObject(
         Class Class,
-        BaseObject? Outer = null,
+        GameObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        BaseObject? Template = null
+        GameObject? Template = null
     )
     {
         var result = ConstructObjectInternal(Class, Outer, Name, SetFlags, Template);
-        return MarshalUtil.MarshalToManaged<BaseObject>(&result);
+        return MarshalUtil.MarshalToManaged<GameObject>(&result);
     }
 
     /// <inheritdoc cref="ConstructObject"/>
     public static unsafe T ConstructObject<T>(
-        BaseObject? Outer = null,
+        GameObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        BaseObject? Template = null
+        GameObject? Template = null
     )
-        where T : BaseObject, IStaticObject =>
+        where T : GameObject, IStaticObject =>
         (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
     internal static unsafe IntPtr ConstructObjectInternal(
         Class Class,
-        BaseObject? Outer,
+        GameObject? Outer,
         string? Name,
         EObjectFlags SetFlags,
-        BaseObject? Template
+        GameObject? Template
     )
     {
         // Default to transient package
@@ -139,7 +133,7 @@ public partial class BaseObject
     /// <summary>
     /// Returns the fully qualified pathname for this object as well as the name of the class.
     /// </summary>
-    public string GetFullName(BaseObject? StopOuter = null)
+    public string GetFullName(GameObject? StopOuter = null)
     {
         var result = Class.Name.ToString();
         result += " ";
@@ -151,7 +145,7 @@ public partial class BaseObject
     /// <summary>
     /// Returns the fully qualified pathname for this object.
     /// </summary>
-    public string GetPathName(BaseObject? StopOuter = null)
+    public string GetPathName(GameObject? StopOuter = null)
     {
         var res = "";
         GetPathName(StopOuter, ref res);
@@ -161,7 +155,7 @@ public partial class BaseObject
     /// <summary>
     /// Internal version of GetPathName() that eliminates unnecessary copies.
     /// </summary>
-    void GetPathName(BaseObject? StopOuter, ref string ResultString)
+    void GetPathName(GameObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {

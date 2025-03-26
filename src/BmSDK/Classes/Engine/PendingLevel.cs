@@ -1,6 +1,6 @@
 namespace BmSDK.Engine;
 
-public sealed class PendingLevel : BaseObject
+public sealed class PendingLevel : GameObject
 {
     // TODO
 }

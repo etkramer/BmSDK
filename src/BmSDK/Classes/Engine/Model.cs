@@ -1,6 +1,6 @@
 namespace BmSDK.Engine;
 
-public sealed class Model : BaseObject
+public sealed class Model : GameObject
 {
     // TODO
 }

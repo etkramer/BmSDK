@@ -39,9 +39,9 @@ static class PropTemplate
             else
             {
                 getterText =
-                    $"get => BaseObject.GetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset});";
+                    $"get => GameObject.GetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset});";
                 setterText =
-                    $"set => BaseObject.SetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset}, value);";
+                    $"set => GameObject.SetPropertyValue<{managedTypeName}, {outer.ManagedName}>(ref this, {prop.PropertyOffset}, value);";
             }
         }
         else
@@ -57,7 +57,7 @@ static class PropTemplate
             else
             {
                 getterText =
-                    $"get => (BaseObject.GetPropertyValue<int, {outer.ManagedName}>(ref this, {prop.PropertyOffset}) & (1 << {boolProp.BitfieldIdx})) != 0;";
+                    $"get => (GameObject.GetPropertyValue<int, {outer.ManagedName}>(ref this, {prop.PropertyOffset}) & (1 << {boolProp.BitfieldIdx})) != 0;";
 
                 // TODO: Setter
                 setterText = "set => throw new NotImplementedException();";

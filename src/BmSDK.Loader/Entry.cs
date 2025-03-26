@@ -41,7 +41,7 @@ static class Entry
     static void OnGameStart()
     {
         // Test script functions
-        Debug.WriteLine($"1 + 2 = {BaseObject.Add_IntInt(1, 2)}");
+        Debug.WriteLine($"1 + 2 = {GameObject.Add_IntInt(1, 2)}");
 
         // Test StaticClass()
         Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
@@ -52,7 +52,7 @@ static class Entry
         Debug.WriteLine($"New object: {newObj}");
 
         // Test FindObjects(), actor properties
-        var meshActor = BaseObject.FindObjects<RCinematicBatmanBase>().Last();
+        var meshActor = GameObject.FindObjects<RCinematicBatmanBase>().Last();
         var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
         Debug.WriteLine($"Found actor {meshActor}");
         Debug.WriteLine($"Found component {meshComponent}");
@@ -61,7 +61,7 @@ static class Entry
         meshComponent.SetHidden(true);
 
         // Test dynamic object loading
-        var jokerMesh = BaseObject.DynamicLoadObject(
+        var jokerMesh = GameObject.DynamicLoadObject(
             "Joker.Mesh.Combat_joker",
             SkeletalMesh.StaticClass()
         );

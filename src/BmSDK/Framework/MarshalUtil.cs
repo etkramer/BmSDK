@@ -4,7 +4,7 @@ namespace BmSDK.Framework;
 
 public static class MarshalUtil
 {
-    static readonly Dictionary<IntPtr, BaseObject> _managedObjects = [];
+    static readonly Dictionary<IntPtr, GameObject> _managedObjects = [];
 
     // Marshals unmanaged data to managed, then returns it.
     public static unsafe TManaged MarshalToManaged<TManaged>(void* data)
@@ -16,7 +16,7 @@ public static class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -63,7 +63,7 @@ public static class MarshalUtil
 
             return;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
             if (value is null)
@@ -73,7 +73,7 @@ public static class MarshalUtil
             }
 
             // We already have a pointer to this object's native instance, so just assign it.
-            MarshalToNative(((BaseObject)(object)value!).Ptr, data);
+            MarshalToNative(((GameObject)(object)value!).Ptr, data);
             return;
         }
         throw new NotImplementedException(
@@ -90,7 +90,7 @@ public static class MarshalUtil
 
         // Create a new managed object
         var newObj = _managedObjects[objPtr] = Guard.NotNull(
-            (BaseObject?)Activator.CreateInstance(managedType, true),
+            (GameObject?)Activator.CreateInstance(managedType, true),
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;

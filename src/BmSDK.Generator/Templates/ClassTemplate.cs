@@ -77,7 +77,7 @@ static class ClassTemplate
             /// Constructs a new {{classObj.ManagedName}}.
             /// </summary>
             public {{classObj.ManagedName}}(
-                BaseObject? Outer = null,
+                GameObject? Outer = null,
                 string? Name = null,
                 EObjectFlags SetFlags = 0,
                 {{classObj.ManagedName}}? Template = null
