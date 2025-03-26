@@ -42,7 +42,7 @@ static class ClassTemplate
             /// </summary>
             public partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
-                public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.Package.PackageName}}.{{classObj.Name}}", false);
+                public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.ShortPath}}", false);
                 static Class? _staticClass = null;
 
                 internal {{classObj.ManagedName}}() { }

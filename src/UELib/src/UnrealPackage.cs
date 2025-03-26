@@ -2295,6 +2295,9 @@ namespace UELib
         {
             var pkgName = item.EnumerateOuter().LastOrDefault()?.ObjectName ?? item.ObjectName;
 
+            // TODO: SeekFree 'Package' objects don't necessarily match their file names.
+            // Frontend.RCinematicBatman should actually be BmScript.RCinematicBatman - from its outer 'Package' object, not its file name.
+
             try
             {
                 // Load package if not done already
@@ -2303,7 +2306,6 @@ namespace UELib
                 {
                     pkg.InitializePackage(InitFlags.All);
                 }
-
 
                 // Try to find the loaded object
                 if (s_HashedObjects.TryGetValue(item.GetPath(), out var obj))

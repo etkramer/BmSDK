@@ -16,6 +16,8 @@ namespace UELib.Core
         [CanBeNull] public UStruct Super { get; set; }
         [CanBeNull] public UField NextField { get; set; }
 
+        public string OriginalPackageName => EnumerateOuter().OfType<UPackage>().FirstOrDefault()?.Name ?? Package.PackageName;
+
         public string ManagedName
         {
             get
@@ -58,7 +60,7 @@ namespace UELib.Core
             }
         }
 
-        public string ShortPath => this is UClass ? $"{Package.PackageName}.{Name}" : GetPath();
+        public string ShortPath => this is UClass ? $"{OriginalPackageName}.{Name}" : GetPath();
 
         #endregion
 

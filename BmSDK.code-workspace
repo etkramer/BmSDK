@@ -61,7 +61,7 @@
 				"preLaunchTask": "Build BmSDK.Generator",
 				"program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
 				"args": [
-					"F:\\Steam\\steamapps\\common\\Batman Arkham Asylum GOTY\\BmGame\\CookedPC (unpacked)",
+					"D:\\Games\\BatmanArkhamAsylum\\BmGame\\CookedPC (unpacked)",
 					"${workspaceFolder}\\src\\BmSDK"
 				],
 			}

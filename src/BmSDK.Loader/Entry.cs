@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using BmSDK.BmGame;
+using BmSDK.BmScript;
 using BmSDK.Engine;
 using BmSDK.Framework;
 
@@ -52,7 +52,7 @@ static class Entry
         Debug.WriteLine($"New object: {newObj}");
 
         // Test FindObjects(), actor properties
-        var meshActor = GameObject.FindObjects<RCinematicBatmanBase>().Last();
+        var meshActor = GameObject.FindObjects<RCinematicBatman>().Last();
         var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
         Debug.WriteLine($"Found actor {meshActor}");
         Debug.WriteLine($"Found component {meshComponent}");

@@ -25,7 +25,9 @@ sealed class MainCommand : Command<MainCommand.Settings>
         // Load script packages
         var pkgs = new List<UnrealPackage>();
         foreach (
-            var path in Directory.GetFiles(pkgDir, "*.u").Concat(Directory.GetFiles(pkgDir, "*.u"))
+            var path in Directory
+                .GetFiles(pkgDir, "*.u")
+                .Concat(Directory.GetFiles(pkgDir, "*.umap", SearchOption.AllDirectories))
         )
         {
             var name = Path.GetFileNameWithoutExtension(path);

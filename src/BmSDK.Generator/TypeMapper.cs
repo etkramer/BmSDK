@@ -81,7 +81,7 @@ public static class TypeMapper
             .. pkgs.SelectMany(pkg =>
                     pkg.Exports.Where(obj => obj.Object is UClass).Select(exp => (UClass)exp.Object)
                 )
-                .Distinct(),
+                .DistinctBy(obj => obj.ShortPath),
         ];
 
         // Find all structs
@@ -91,7 +91,7 @@ public static class TypeMapper
                     pkg.Exports.Where(obj => obj.Object is UStruct)
                         .Select(exp => (UStruct)exp.Object)
                 )
-                .Distinct(),
+                .DistinctBy(obj => obj.ShortPath),
         ];
 
         // Find all enums
@@ -100,7 +100,7 @@ public static class TypeMapper
             .. pkgs.SelectMany(pkg =>
                     pkg.Exports.Where(obj => obj.Object is UEnum).Select(exp => (UEnum)exp.Object)
                 )
-                .Distinct(),
+                .DistinctBy(obj => obj.ShortPath),
         ];
 
         // Compute class/struct layout info (prepass)
@@ -123,9 +123,6 @@ public static class TypeMapper
 
         // Record hardcoded intrinsic classes (Engine)
         RegisterIntrinsicClass("Engine.StaticMesh", "BmSDK.Engine.StaticMesh");
-
-        // Record hardcoded intrinsic classes (BmScript)
-        RegisterIntrinsicClass("BmScript.RCinematicBatman", "BmSDK.BmGame.RCinematicBatmanBase");
 
         // Report results to console
         AnsiConsole.MarkupLine(
@@ -251,7 +248,10 @@ public static class TypeMapper
     /// </summary>
     public static string GetManagedNamespace(UField field)
     {
-        var packageName = field.Package.PackageName;
+        // SeekFree cooking can result in mismatched package/file names
+        var packageName = field.OriginalPackageName;
+
+        // Special handling for Core package
         if (packageName == "Core")
         {
             return $"BmSDK";

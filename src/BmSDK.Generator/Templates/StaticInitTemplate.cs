@@ -38,7 +38,7 @@ static class StaticInitTemplate
     }
 
     static FormattableString RenderClassInit(UClass classObj) =>
-        RenderClassInit($"{classObj.Package.PackageName}.{classObj.Name}");
+        RenderClassInit($"{classObj.ShortPath}");
 
     static FormattableString RenderClassInit(string classPath)
     {
