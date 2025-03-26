@@ -78,7 +78,7 @@ static class Entry
             $"SkeletalMeshComponent: {SkeletalMeshComponent.StaticClass().PropertiesSize}"
         );
 
-        Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
+        // Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
     }
 
     static bool HasGameStarted = false;
