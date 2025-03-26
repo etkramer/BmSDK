@@ -106,7 +106,7 @@ public static class TypeMapper
         // Compute class/struct layout info (prepass)
         foreach (var structObj in StructsAndClassesAndEnums.OfType<UStruct>())
         {
-            structObj.ComputeLayoutInfo();
+            structObj.ComputeLayoutInfo(true);
         }
 
         // Compute class/struct names

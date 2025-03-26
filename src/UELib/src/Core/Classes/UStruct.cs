@@ -297,18 +297,18 @@ namespace UELib.Core
         public int StructSize { get; private set; } = 0;
         public int StructStartOffset { get; private set; } = 0;
 
-        public void ComputeLayoutInfo()
+        public void ComputeLayoutInfo(bool bForce = false)
         {
             var isFunction = this is UFunction;
 
             // Only compute once
-            if (StructSize != 0 || StructStartOffset != 0)
+            if ((StructSize != 0 || StructStartOffset != 0) && !bForce)
             {
                 return;
             }
 
             // Try compute super struct size
-            if (Super is not null && Super.StructSize == 0)
+            if (Super is not null && Super.StructStartOffset == 0)
             {
                 Super.BeginDeserializing();
             }
