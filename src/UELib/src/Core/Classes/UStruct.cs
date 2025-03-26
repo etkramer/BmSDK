@@ -299,6 +299,8 @@ namespace UELib.Core
 
         public void ComputeLayoutInfo()
         {
+            var isFunction = this is UFunction;
+
             // Only compute once
             if (StructSize != 0 || StructStartOffset != 0)
             {
@@ -323,7 +325,7 @@ namespace UELib.Core
                 }
 
                 // Track number of bools in a bitfield
-                if (prop is UBoolProperty)
+                if (prop is UBoolProperty && !isFunction)
                 {
                     fieldBit++;
                 }
@@ -332,7 +334,7 @@ namespace UELib.Core
                     fieldBit = 0;
                 }
 
-                // Begin new bitfield if needed
+                // Begin new bitfield if needed. Function params are always full size
                 if (fieldBit >= 32)
                 {
                     fieldBit = 0;
@@ -342,13 +344,14 @@ namespace UELib.Core
                 // Store prop offset
                 prop.PropertyOffset = fieldOffset;
 
+                // Function params are always full size
                 if (prop is UBoolProperty boolProperty)
                 {
                     // Set bitfield index
                     boolProperty.BitfieldIdx = fieldBit;
 
                     // Advance by sizeof(BITFIELD) if needed
-                    fieldOffset += prop.NextField is UBoolProperty ? 0 : 4;
+                    fieldOffset += (prop.NextField is UBoolProperty && !isFunction) ? 0 : 4;
                 }
                 else
                 {

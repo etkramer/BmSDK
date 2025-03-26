@@ -19,6 +19,8 @@ public static class MarshalUtil
         else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
+
+            // Handle null object pointers.
             if (objPtr == IntPtr.Zero)
             {
                 return (TManaged)(object)null!;
@@ -50,6 +52,13 @@ public static class MarshalUtil
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(BaseObject)))
         {
+            // Handle null object references.
+            if (value is null)
+            {
+                MarshalToNative(IntPtr.Zero, data);
+                return;
+            }
+
             // We already have a pointer to this object's native instance, so just assign it.
             MarshalToNative(((BaseObject)(object)value!).Ptr, data);
             return;

@@ -124,6 +124,9 @@ public static class TypeMapper
         // Record hardcoded intrinsic classes (Engine)
         RegisterIntrinsicClass("Engine.StaticMesh", "BmSDK.Engine.StaticMesh");
 
+        // Record hardcoded intrinsic classes (BmScript)
+        RegisterIntrinsicClass("BmScript.RCinematicBatman", "BmSDK.BmGame.RCinematicBatmanBase");
+
         // Report results to console
         AnsiConsole.MarkupLine(
             $"\nFound [green]{_classes.Count}[/] classes in [green]{pkgs.Count}[/] packages"

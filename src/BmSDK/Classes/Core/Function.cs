@@ -2,14 +2,21 @@ namespace BmSDK;
 
 public sealed class Function : Struct
 {
-    // TODO
-
     /// <summary>
     /// Property: FunctionFlags
     /// </summary>
-    public int FunctionFlags
+    public EFunctionFlags FunctionFlags
     {
-        get => GetPropertyValue<int>(this, 136);
+        get => GetPropertyValue<EFunctionFlags>(this, 132);
+        set => SetPropertyValue(this, 132, value);
+    }
+
+    /// <summary>
+    /// Property: iNative
+    /// </summary>
+    public ushort iNative
+    {
+        get => GetPropertyValue<ushort>(this, 136);
         set => SetPropertyValue(this, 136, value);
     }
 }

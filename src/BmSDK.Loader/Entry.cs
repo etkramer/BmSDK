@@ -56,34 +56,10 @@ static class Entry
         Debug.Write("\n");
     }
 
-    static bool IsFirstTick = true;
-
-    // Detour for UObject::ProcessEvent()
-    public static void ProcessEventDetour(
-        IntPtr self,
-        IntPtr Function,
-        IntPtr Parms,
-        IntPtr UnusedResult
-    )
+    static void OnBeginPlay()
     {
-        // Call base impl
-        _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
-
-        if (!IsFirstTick)
-        {
-            return;
-        }
-        else
-        {
-            IsFirstTick = false;
-        }
-
-        unsafe
-        {
-            var selfObj = MarshalUtil.MarshalToManaged<BaseObject>(&self);
-            var funcObj = MarshalUtil.MarshalToManaged<BaseObject>(&Function);
-            Debug.WriteLine($"\nProcessEvent: {funcObj.Name} on {selfObj.Name}");
-        }
+        // Test script functions
+        Debug.WriteLine($"1 + 2 = {BaseObject.Add_IntInt(1, 2)}");
 
         // Test StaticClass()
         Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
@@ -93,33 +69,23 @@ static class Entry
         var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
         Debug.WriteLine($"New object: {newObj}");
 
-        // Test StaticFindObject()
-        var bodyMesh = BaseObject.StaticFindObjectChecked<SkeletalMesh>(
-            null,
-            null,
-            "Joker.Mesh.Combat_joker",
-            false
-        );
-        Debug.WriteLine($"Found mesh: {bodyMesh}");
-
         unsafe
         {
             var GObjects = *(TArray<BaseObject>*)(
                 MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
             );
 
-            var meshActor = GObjects.OfType<RCinematicBatmanBase>().First() as SkeletalMeshActor;
-            var meshComponent = (SkeletalMeshComponent)
-                meshActor.Components.First(comp =>
-                    comp.Name.ToString() == "SkeletalMeshComponent0"
-                );
-
+            var meshActor = GObjects.OfType<RCinematicBatmanBase>().Last();
+            var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
             Debug.WriteLine($"Found actor {meshActor}");
             Debug.WriteLine($"Found component {meshComponent}");
 
+            // TODO: Prop offsets are wrong
+            // Debug.WriteLine($"MeshComponent should have size {MeshComponent.StaticClass().PropertiesSize}");
+            // Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
+
+            meshComponent.SetHidden(true);
             // meshComponent.SetSkeletalMesh(bodyMesh);
-            Debug.WriteLine(bodyMesh.GetPackageName());
-            Debug.WriteLine(bodyMesh.GetMappedRangeValue(new(0, 1), new(0, 10), 0.25f));
         }
 
         // Basic memory access tests
@@ -144,6 +110,34 @@ static class Entry
                 Debug.WriteLine($"Class: {obj.Class.Name} ({obj.GetType().Name})");
                 Debug.WriteLine($"ObjectInternalInteger: {obj.ObjectInternalInteger}");
                 Debug.WriteLine($"ObjectFlags: {obj.ObjectFlags}");
+            }
+        }
+    }
+
+    static bool HasBegunPlay = false;
+
+    // Detour for UObject::ProcessEvent()
+    public static void ProcessEventDetour(
+        IntPtr self,
+        IntPtr Function,
+        IntPtr Parms,
+        IntPtr UnusedResult
+    )
+    {
+        // Call base impl
+        _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
+
+        unsafe
+        {
+            var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
+
+            if (
+                !HasBegunPlay
+                && funcObj.GetPathName() == "BmGame.RGameInfo:GameInProgress:BeginState"
+            )
+            {
+                OnBeginPlay();
+                HasBegunPlay = true;
             }
         }
     }

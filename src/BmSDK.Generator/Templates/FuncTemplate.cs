@@ -16,6 +16,13 @@ static class FuncTemplate
             ? "void"
             : TypeMapper.GetManagedTypeForProp(returnProp, outerClass);
 
+        // Add static keyword
+        var keywordsText = "unsafe";
+        if (func.HasFunctionFlag(FunctionFlags.Static))
+        {
+            keywordsText += " static";
+        }
+
         // Compute param type names ahead of time
         var paramTypes = func.Params is null
             ? []
@@ -39,7 +46,7 @@ static class FuncTemplate
             /// <summary>
             /// Function: {{func.Name}}{{flagsText}}
             /// </summary>
-            {{accessModifier}} unsafe {{returnType}} {{func.ManagedName}}({{RenderParams(
+            {{accessModifier}} {{keywordsText}} {{returnType}} {{func.ManagedName}}({{RenderParams(
                 func
             )}})
             {
@@ -51,25 +58,31 @@ static class FuncTemplate
     static FormattableString RenderBody(UFunction func)
     {
         var outerClass = (UClass)func.Outer;
+        var funcIsStatic = func.HasFunctionFlag(FunctionFlags.Static);
+        var funcIsNative = func.HasFunctionFlag(FunctionFlags.Native);
 
-        // Compute param layout
+        // TODO: Fix layout computation
         func.ComputeLayoutInfo();
 
         // Fetch all params
         var paramProps = func.Params?.Where(param => param != func.ReturnProperty) ?? [];
-        var paramStructSize =
-            paramProps.Sum(param => param.ElementSize) + (func.ReturnProperty?.ElementSize ?? 0);
 
-        // TODO: Handle static functions
-        if (func.HasFunctionFlag(FunctionFlags.Static))
-        {
-            return $"throw new System.NotImplementedException();";
-        }
+        var preText = "";
+        var postText = "";
 
         // TODO: Handle native functions
-        if (func.HasFunctionFlag(FunctionFlags.Native))
+        if (funcIsNative)
         {
-            return $"throw new System.NotImplementedException();";
+            // Set function props before call.
+            preText += "\nvar oldFlags = funcManaged.FunctionFlags;\n";
+            preText += "var oldNative = funcManaged.iNative;\n";
+            preText += "funcManaged.FunctionFlags &= ~EFunctionFlags.Native;\n";
+            preText += "funcManaged.FunctionFlags |= EFunctionFlags.Defined;\n";
+            preText += "funcManaged.iNative = 0;";
+
+            // Unset function props after call.
+            postText += "funcManaged.iNative = oldNative;\n";
+            postText += "funcManaged.FunctionFlags = oldFlags;\n";
         }
 
         var returnText = "return;";
@@ -80,16 +93,19 @@ static class FuncTemplate
                 $"return BmSDK.Framework.MarshalUtil.MarshalToManaged<{returnType}>(paramsPtr + {func.ReturnProperty.PropertyOffset});";
         }
 
+        var ptrText = funcIsStatic ? "StaticClass().Ptr" : "Ptr";
+
         return $$"""
-            var funcPtr = BmSDK.GameFunctions.FindFunction(Ptr, new FName("{{func.Name}}"),  0);
+            var funcPtr = BmSDK.GameFunctions.FindFunction({{ptrText}}, new FName("{{func.Name}}"),  0);
             var funcManaged = BmSDK.Framework.MarshalUtil.MarshalToManaged<Function>(&funcPtr);
 
-            byte* paramsPtr = stackalloc byte[{{paramStructSize}}];
+            byte* paramsPtr = stackalloc byte[{{func.StructSize}}];
             {{
                 paramProps.Select(prop => $"BmSDK.Framework.MarshalUtil.MarshalToNative({prop.Name}, paramsPtr + {prop.PropertyOffset});")
             }}
-
-            BmSDK.GameFunctions.ProcessEvent(Ptr, funcPtr, (IntPtr)paramsPtr, 0);
+            {{preText}}
+            BmSDK.GameFunctions.ProcessEvent({{ptrText}}, funcPtr, (IntPtr)paramsPtr, 0);
+            {{postText}}
             {{returnText}}
             """;
     }
@@ -107,7 +123,10 @@ static class FuncTemplate
         {
             var paramType = TypeMapper.GetManagedTypeForProp(paramProp, outerClass);
             var paramIsOptional = paramProp.HasPropertyFlag(PropertyFlagsLO.OptionalParm);
-            var paramIsReference = paramProp is UObjectProperty || paramProp is UStringProperty;
+            var paramIsReference =
+                paramProp is UObjectProperty
+                || paramProp is UStringProperty
+                || paramProp is UStrProperty;
 
             // Compute param type name
             if (paramIsReference && paramIsOptional)
