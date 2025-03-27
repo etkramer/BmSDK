@@ -71,12 +71,12 @@ sealed class MainCommand : Command<MainCommand.Settings>
                     : TypeMapper.GetManagedPathForType(classObj);
 
             // Perform code generation
-            var file = ctx[managedPath.Replace("BmSDK.", "").Replace(".", "/") + ".cs"];
+            var file = ctx[managedPath.Replace("BmSDK.", "").Replace(".", "/") + ".g.cs"];
             file.WriteLine(FileTemplate.Render(classObj));
         }
 
         // Write static init file
-        ctx["StaticInit.cs"]
+        ctx["StaticInit.g.cs"]
             .WriteLine(StaticInitTemplate.Render(TypeMapper.Classes, TypeMapper.IntrinsicClasses));
 
         // Create/clear output directory

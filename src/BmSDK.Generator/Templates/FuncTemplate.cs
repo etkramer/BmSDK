@@ -123,18 +123,6 @@ static class FuncTemplate
         {
             var paramType = TypeMapper.GetManagedTypeForProp(paramProp, outerClass);
             var paramIsOptional = paramProp.HasPropertyFlag(PropertyFlagsLO.OptionalParm);
-            var paramIsReference =
-                paramProp is UObjectProperty
-                || paramProp is UStringProperty
-                || paramProp is UStrProperty
-                || paramProp is UDelegateProperty;
-
-            // Compute param type name
-            if (paramIsReference && paramIsOptional)
-            {
-                // Optional non-value params are nullable
-                paramType += "?";
-            }
 
             var paramText = $"{paramType} {paramProp.Name}";
             if (paramIsOptional)

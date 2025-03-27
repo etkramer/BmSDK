@@ -6,6 +6,9 @@ namespace BmSDK;
 
 public partial class GameObject
 {
+    public static unsafe ref TArray<GameObject> GObjects =>
+        ref *(TArray<GameObject>*)(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
+
     public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
 
     public static unsafe Package? LoadPackage(Package? InOuter, string Filename, int LoadFlags = 0)
@@ -28,14 +31,7 @@ public partial class GameObject
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjects<T>()
-        where T : GameObject
-    {
-        var GObjects = *(TArray<GameObject>*)(
-            MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects)
-        );
-
-        return GObjects.OfType<T>();
-    }
+        where T : GameObject => GObjects.OfType<T>();
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>

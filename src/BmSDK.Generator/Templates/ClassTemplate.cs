@@ -43,7 +43,7 @@ static class ClassTemplate
             public partial class {{classObj.ManagedName}}{{classDeclSuper}}
             {
                 public static Class StaticClass() => _staticClass ??= StaticFindObjectChecked<Class>(null, null, "{{classObj.ShortPath}}", false);
-                static Class? _staticClass = null;
+                static Class _staticClass = null;
 
                 internal {{classObj.ManagedName}}() { }
 
@@ -77,10 +77,10 @@ static class ClassTemplate
             /// Constructs a new {{classObj.ManagedName}}.
             /// </summary>
             public {{classObj.ManagedName}}(
-                GameObject? Outer = null,
-                string? Name = null,
+                GameObject Outer = null,
+                string Name = null,
                 EObjectFlags SetFlags = 0,
-                {{classObj.ManagedName}}? Template = null
+                {{classObj.ManagedName}} Template = null
             )
                 : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
             
