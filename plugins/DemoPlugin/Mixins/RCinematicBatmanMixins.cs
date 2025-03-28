@@ -7,10 +7,10 @@ namespace DemoPlugin.Mixins;
 
 public static class RCinematicBatmanMixins
 {
-    [Mixin(typeof(RCinematicBatman), nameof(RCinematicBatman.PostBeginPlay))]
+    [Mixin(typeof(RCinematicBatman), nameof(RCinematicBatman.PostBeginPlay), MixinOrder.Before)]
     public static void PostBeginPlayBefore(RCinematicBatman self)
     {
-        Debug.WriteLine("Mixin: RCinematicBatman.PostBeginPlay");
+        Debug.WriteLine("DemoPlugin mixin: RCinematicBatman.PostBeginPlay");
 
         // Hide body mesh
         var meshComponent = self.Components.OfType<SkeletalMeshComponent>().ElementAt(0);

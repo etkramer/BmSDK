@@ -8,11 +8,18 @@ namespace BmSDK.Framework;
 
 public static class MixinManager
 {
+    readonly record struct MixinInfo
+    {
+        public MethodInfo MixinMethod { get; init; }
+
+        public Type TargetClass { get; init; }
+    }
+
     const BindingFlags MixinBindingFlags =
         BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
 
-    static readonly Dictionary<string, List<MethodInfo>> _beforeMixins = [];
-    static readonly Dictionary<string, List<MethodInfo>> _afterMixins = [];
+    static readonly Dictionary<string, List<MixinInfo>> _beforeMixins = [];
+    static readonly Dictionary<string, List<MixinInfo>> _afterMixins = [];
 
     /// <summary>
     /// Registers all static [Mixin]-tagged methods from the given target type.
@@ -60,7 +67,9 @@ public static class MixinManager
                 mixinList = mixinDict[targetFuncPath] = [];
             }
 
-            mixinList.Add(mixinMethod);
+            mixinList.Add(
+                new MixinInfo() { MixinMethod = mixinMethod, TargetClass = targetClass! }
+            );
         }
     }
 
@@ -68,16 +77,27 @@ public static class MixinManager
     /// Gets all mixins for the given function object, or returns false if none exist.
     /// </summary>
     public static bool TryGetMixinMethods(
+        GameObject obj,
         Function func,
         MixinOrder order,
-        [MaybeNullWhen(false)] out List<MethodInfo> mixinMethods
+        [MaybeNullWhen(false)] out IEnumerable<MethodInfo> mixinMethods
     )
     {
         var funcPath = func.GetPathName();
-        return GetOrderDict(order).TryGetValue(funcPath, out mixinMethods);
+        if (GetOrderDict(order).TryGetValue(funcPath, out var mixinInfos))
+        {
+            mixinMethods = mixinInfos
+                .Where(info => obj.GetType().IsAssignableTo(info.TargetClass))
+                .Select(info => info.MixinMethod);
+
+            return true;
+        }
+
+        mixinMethods = null;
+        return false;
     }
 
-    static Dictionary<string, List<MethodInfo>> GetOrderDict(MixinOrder order)
+    static Dictionary<string, List<MixinInfo>> GetOrderDict(MixinOrder order)
     {
         return order switch
         {

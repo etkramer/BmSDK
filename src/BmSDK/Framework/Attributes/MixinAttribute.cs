@@ -9,24 +9,18 @@ public enum MixinOrder
 }
 
 [AttributeUsage(AttributeTargets.Method)]
-public class MixinAttribute : Attribute
+public class MixinAttribute(Type targetClass, string targetMethodName, MixinOrder order) : Attribute
 {
-    public MethodInfo TargetMethod { get; }
+    public Type TargetClass { get; } = targetClass;
 
-    public MixinOrder Order { get; }
-
-    public MixinAttribute(Type targetClass, string targetMethodName, MixinOrder order)
-    {
-        Order = order;
-        TargetMethod = Guard.NotNull(
+    public MethodInfo TargetMethod { get; } =
+        Guard.NotNull(
             targetClass.GetMethod(
                 targetMethodName,
-                BindingFlags.Public
-                    | BindingFlags.NonPublic
-                    | BindingFlags.Instance
-                    | BindingFlags.FlattenHierarchy
+                BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
             ),
             $"Couldn't find target method {targetMethodName} in {targetClass.Name}"
         );
-    }
+
+    public MixinOrder Order { get; } = order;
 }

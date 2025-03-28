@@ -17,6 +17,7 @@ public class DemoPlugin : ManagedPlugin
         // Setup mixins
         MixinManager.RegisterMixins(typeof(RCinematicBatmanMixins));
         MixinManager.RegisterMixins(typeof(RPawnPlayerBmMixins));
+        MixinManager.RegisterMixins(typeof(RPawnPlayerChallengeJokerMixins));
 
         // Test script functions
         Debug.WriteLine($"1 + 2 = {GameObject.Add_IntInt(1, 2)}");

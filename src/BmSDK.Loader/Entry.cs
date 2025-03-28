@@ -114,16 +114,15 @@ static class Entry
             HasGameStarted = true;
         }
 
-        if (
-            funcObj.GetPathName().Contains("RPawnPlayerBm")
-            && !funcObj.GetPathName().Contains("Tick")
-        )
-        {
-            Debug.WriteLine($"ProcessEventDetour: {funcObj.GetPathName()}");
-        }
-
         // Do we have any 'before' mixins?
-        if (MixinManager.TryGetMixinMethods(funcObj, MixinOrder.Before, out var mixinMethods))
+        if (
+            MixinManager.TryGetMixinMethods(
+                selfObj,
+                funcObj,
+                MixinOrder.Before,
+                out var mixinMethods
+            )
+        )
         {
             foreach (var mixinMethod in mixinMethods)
             {
@@ -144,7 +143,7 @@ static class Entry
         _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
 
         // Do we have any 'after' mixins?
-        if (MixinManager.TryGetMixinMethods(funcObj, MixinOrder.After, out mixinMethods))
+        if (MixinManager.TryGetMixinMethods(selfObj, funcObj, MixinOrder.After, out mixinMethods))
         {
             foreach (var mixinMethod in mixinMethods)
             {
