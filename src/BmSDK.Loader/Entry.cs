@@ -85,40 +85,81 @@ static class Entry
     static bool HasGameInited = false;
 
     // Detour for UObject::ProcessEvent()
-    public static void ProcessEventDetour(
+    public static unsafe void ProcessEventDetour(
         IntPtr self,
         IntPtr Function,
         IntPtr Parms,
         IntPtr UnusedResult
     )
     {
-        unsafe
+        var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
+        var selfObj = MarshalUtil.MarshalToManaged<GameObject>(&self);
+
+        var funcNameForGameInit = "Engine.GameInfo:InitGame";
+        var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
+
+        // Perform game load logic
+        if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
         {
-            var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
-            var funcNameForGameInit = "Engine.GameInfo:InitGame";
-            var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
+            // Call OnInit() for plugins
+            _pluginInstances.ForEach(plugin => plugin.OnInit());
+            HasGameInited = true;
+        }
 
-            // Perform game load logic
-            if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
+        // Perform game start logic
+        if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
+        {
+            // Call OnStart() for plugins
+            _pluginInstances.ForEach(plugin => plugin.OnStart());
+            HasGameStarted = true;
+        }
+
+        if (
+            funcObj.GetPathName().Contains("RPawnPlayerBm")
+            && !funcObj.GetPathName().Contains("Tick")
+        )
+        {
+            Debug.WriteLine($"ProcessEventDetour: {funcObj.GetPathName()}");
+        }
+
+        // Do we have any 'before' mixins?
+        if (MixinManager.TryGetMixinMethods(funcObj, MixinOrder.Before, out var mixinMethods))
+        {
+            foreach (var mixinMethod in mixinMethods)
             {
-                // Call OnInit() for plugins
-                _pluginInstances.ForEach(plugin => plugin.OnInit());
+                // Call mixin method
+                // TODO: Marshal rest of parameters
+                var mixinParams = new object[] { selfObj };
+                var mixinResult = mixinMethod.Invoke(null, mixinParams);
 
-                HasGameInited = true;
-            }
-
-            // Perform game start logic
-            if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
-            {
-                // Call OnStart() for plugins
-                _pluginInstances.ForEach(plugin => plugin.OnStart());
-
-                HasGameStarted = true;
+                // Check if we need to stop the original function from executing
+                if (mixinResult is bool result && !result)
+                {
+                    return;
+                }
             }
         }
 
         // Call base impl
         _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
+
+        // Do we have any 'after' mixins?
+        if (MixinManager.TryGetMixinMethods(funcObj, MixinOrder.After, out mixinMethods))
+        {
+            foreach (var mixinMethod in mixinMethods)
+            {
+                // Call mixin method
+                // TODO: Marshal rest of parameters
+                var mixinParams = new object[] { selfObj };
+                var mixinResult = mixinMethod.Invoke(null, mixinParams);
+
+                // Check if we need to stop the original function from executing
+                if (mixinResult is bool result && !result)
+                {
+                    return;
+                }
+            }
+        }
     }
 
     // Detour for UObject::AddObject()
@@ -149,6 +190,16 @@ static class Entry
         }
     }
 
+    // Detour for UObject::~UObject()
+    public static void ObjectDtorDetour(IntPtr self)
+    {
+        // Call base impl
+        _ObjectDtorDetourBase!.Invoke(self);
+
+        // Destroy this object's managed instance
+        MarshalUtil.DestroyManagedWrapper(self);
+    }
+
     static unsafe string GetClassPath(IntPtr obj)
     {
         // Fetch class name.
@@ -161,16 +212,5 @@ static class Entry
             (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
         return $"{classOuterName}.{className}";
-    }
-
-    // Detour for UObject::~UObject()
-    public static void ObjectDtorDetour(IntPtr self)
-    {
-        // Call base impl
-        _ObjectDtorDetourBase!.Invoke(self);
-
-        // Wrap this object in a managed instance
-        // TODO: We want to check UObject.Class to get the actual matching type.
-        MarshalUtil.DestroyManagedWrapper(self);
     }
 }

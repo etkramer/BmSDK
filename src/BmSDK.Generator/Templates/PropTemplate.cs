@@ -52,7 +52,13 @@ static class PropTemplate
                     $"get => (GetPropertyValue<int>(this, {prop.PropertyOffset}) & (1 << {boolProp.BitfieldIdx})) != 0;";
 
                 // TODO: Setter
-                setterText = "set => throw new NotImplementedException();";
+                setterText = $$"""
+                    set
+                    {
+                        var fieldValue = GetPropertyValue<int>(this, {{prop.PropertyOffset}});
+                        SetPropertyValue<int>(this, {{prop.PropertyOffset}}, value ? fieldValue | (1 << {{boolProp.BitfieldIdx}}) : fieldValue & ~(1 << {{boolProp.BitfieldIdx}}));
+                    }
+                    """;
             }
             else
             {

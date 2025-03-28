@@ -17,6 +17,7 @@ static class StaticInitTemplate
             public static class StaticInit
             {
                 static Dictionary<string, Type> _classPathToManagedTypeMap = [];
+                static Dictionary<Type, string> _managedTypeToClassPathMap = [];
 
                 public static void StaticInitClasses()
                 {
@@ -33,6 +34,16 @@ static class StaticInitTemplate
 
                     return typeof(BmSDK.IntrinsicDummy);
                 }
+
+                public static string GetClassPathForManagedType(Type type)
+                {
+                    if (_managedTypeToClassPathMap.TryGetValue(type, out var res))
+                    {
+                        return res;
+                    }
+
+                    return null;
+                }
             }
             """;
     }
@@ -46,6 +57,9 @@ static class StaticInitTemplate
             _classPathToManagedTypeMap["{{classPath}}"] = typeof({{TypeMapper.GetManagedPathForType(
                 classPath
             )}});
+            _managedTypeToClassPathMap[typeof({{TypeMapper.GetManagedPathForType(
+                classPath
+            )}})] = "{{classPath}}";
             """;
     }
 }
