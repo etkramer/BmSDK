@@ -15,11 +15,7 @@ public class MixinAttribute : Attribute
 
     public MixinOrder Order { get; }
 
-    public MixinAttribute(
-        Type targetClass,
-        string targetMethodName,
-        MixinOrder order = MixinOrder.Before
-    )
+    public MixinAttribute(Type targetClass, string targetMethodName, MixinOrder order)
     {
         Order = order;
         TargetMethod = Guard.NotNull(

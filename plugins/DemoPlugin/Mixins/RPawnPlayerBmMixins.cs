@@ -9,10 +9,10 @@ namespace DemoPlugin.Mixins;
 
 public static class RPawnPlayerBmMixins
 {
-    [Mixin(typeof(RPawnPlayerBm), nameof(RPawnPlayerBm.EyeMaterialUpdated))]
-    public static void PostBeginPlayBefore(RPawnPlayerBm self)
+    [Mixin(typeof(RPawnPlayerBm), nameof(RPawnPlayerBm.PostBeginPlay), MixinOrder.After)]
+    public static void PostBeginPlayAfter(RPawnPlayerBm self)
     {
-        Debug.WriteLine($"Mixin: RPawnPlayerBm.PostBeginPlay on {self}");
+        Debug.WriteLine($"DemoPlugin mixin: RPawnPlayerBm.PostBeginPlay");
 
         // Load Joker meshes
         var meshClass = SkeletalMesh.StaticClass();
