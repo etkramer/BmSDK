@@ -127,6 +127,19 @@ public partial class GameObject
     }
 
     /// <summary>
+    /// Enumerates all objects in this object's outer chain.
+    /// </summary>
+    public IEnumerable<GameObject> EnumerateOuter()
+    {
+        var outer = this.Outer;
+        while (outer is not null)
+        {
+            yield return outer;
+            outer = outer.Outer;
+        }
+    }
+
+    /// <summary>
     /// Returns the fully qualified pathname for this object as well as the name of the class.
     /// </summary>
     public string GetFullName(GameObject? StopOuter = null)
@@ -178,5 +191,5 @@ public partial class GameObject
     }
 
     /// <inheritdoc/>
-    public override string ToString() => $"{GetPathName()} ({GetType().Name})";
+    public override string ToString() => $"{GetFullName()} ({GetType().Name})";
 }

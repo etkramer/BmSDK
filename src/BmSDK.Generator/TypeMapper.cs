@@ -122,6 +122,8 @@ public static class TypeMapper
         RegisterIntrinsicClass("Core.Package", "BmSDK.Package");
 
         // Record hardcoded intrinsic classes (Engine)
+        RegisterIntrinsicClass("Engine.World", "BmSDK.Engine.World");
+        RegisterIntrinsicClass("Engine.Level", "BmSDK.Engine.Level");
         RegisterIntrinsicClass("Engine.StaticMesh", "BmSDK.Engine.StaticMesh");
 
         // Report results to console
