@@ -21,6 +21,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BmSDK.Host", "src\BmSDK.Hos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmSDK.Loader", "src\BmSDK.Loader\BmSDK.Loader.csproj", "{B74BEC51-69A0-4C3A-80EB-73605C7A9830}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{0313C3A2-4FF9-433C-BA8E-3AB2AA904E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPlugin", "plugins\DemoPlugin\DemoPlugin.csproj", "{6D726114-127B-4986-AA0E-04977709D3D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -47,11 +51,16 @@ Global
 		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Debug|x86.Build.0 = Debug|Any CPU
 		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Release|x86.ActiveCfg = Release|Any CPU
 		{B74BEC51-69A0-4C3A-80EB-73605C7A9830}.Release|x86.Build.0 = Release|Any CPU
+		{6D726114-127B-4986-AA0E-04977709D3D2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6D726114-127B-4986-AA0E-04977709D3D2}.Debug|x86.Build.0 = Debug|Any CPU
+		{6D726114-127B-4986-AA0E-04977709D3D2}.Release|x86.ActiveCfg = Release|Any CPU
+		{6D726114-127B-4986-AA0E-04977709D3D2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A7030329-7DF2-4426-847A-38D595841DCF} = {2BC92803-E28D-46D1-8418-DE498A9A387A}
+		{6D726114-127B-4986-AA0E-04977709D3D2} = {0313C3A2-4FF9-433C-BA8E-3AB2AA904E0F}
 	EndGlobalSection
 EndGlobal

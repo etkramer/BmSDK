@@ -27,6 +27,7 @@ sealed class MainCommand : Command<MainCommand.Settings>
         foreach (
             var path in Directory
                 .GetFiles(pkgDir, "*.u")
+                .Concat(Directory.GetFiles(pkgDir, "*.upk", SearchOption.AllDirectories))
                 .Concat(Directory.GetFiles(pkgDir, "*.umap", SearchOption.AllDirectories))
         )
         {

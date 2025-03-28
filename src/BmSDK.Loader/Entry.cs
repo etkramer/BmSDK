@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
-using BmSDK.BmScript;
-using BmSDK.Engine;
+using System.Reflection;
 using BmSDK.Framework;
 
 namespace BmSDK.Loader;
@@ -13,12 +12,56 @@ static class Entry
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ObjectDtorDelegate? _ObjectDtorDetourBase = null;
 
+    static List<ManagedPlugin> _pluginInstances = [];
+
     public static void DllMain()
     {
         Debug.WriteLine($"Hello from BmSDK.Loader");
 
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
+
+        // Prepare for assembly loading
+        AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
+        {
+            // Try to see if we already have this assembly loaded
+            return AppDomain
+                .CurrentDomain.GetAssemblies()
+                .ToList()
+                .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
+        };
+
+        // Find plugins
+        var pluginsDir = Path.Combine(Environment.CurrentDirectory, "plugins");
+        foreach (var pluginDir in Directory.GetDirectories(pluginsDir))
+        {
+            // Locate/load plugin assembly
+            var pluginName = Path.GetFileName(pluginDir);
+            var pluginPath = Path.Combine(pluginDir, $"{pluginName}.dll");
+            var pluginAssembly = Assembly.LoadFile(pluginPath);
+
+            var pluginType = pluginAssembly
+                .GetTypes()
+                .Where(type => type.IsAssignableTo(typeof(ManagedPlugin)))
+                .FirstOrDefault();
+
+            if (pluginType is null)
+            {
+                Debug.WriteLine($"No {nameof(ManagedPlugin)} instance found in {pluginName}");
+                continue;
+            }
+            else
+            {
+                // Instantiate plugin type
+                var pluginInstance = Guard.NotNull(
+                    Activator.CreateInstance(pluginType) as ManagedPlugin,
+                    $"Failed to instantiate plugin {pluginName}"
+                );
+
+                Debug.WriteLine($"Loaded plugin {pluginName}");
+                _pluginInstances.Add(pluginInstance);
+            }
+        }
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
@@ -38,48 +81,8 @@ static class Entry
         Debug.Write("\n");
     }
 
-    static void OnGameStart()
-    {
-        // Test script functions
-        Debug.WriteLine($"1 + 2 = {GameObject.Add_IntInt(1, 2)}");
-
-        // Test StaticClass()
-        Debug.WriteLine($"Class::StaticClass(): {Class.StaticClass()}");
-        Debug.WriteLine($"Actor::StaticClass(): {Actor.StaticClass()}");
-
-        // Test ConstructObject()
-        var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
-        Debug.WriteLine($"New object: {newObj}");
-
-        // Test FindObjects(), actor properties
-        var meshActor = GameObject.FindObjects<RCinematicBatman>().Last();
-        var meshComponent = meshActor.Components.OfType<SkeletalMeshComponent>().ElementAt(0);
-        Debug.WriteLine($"Found actor {meshActor}");
-        Debug.WriteLine($"Found component {meshComponent}");
-
-        // Test object methods
-        meshComponent.SetHidden(true);
-
-        // Test dynamic object loading
-        var jokerMesh = GameObject.DynamicLoadObject(
-            "Joker.Mesh.Combat_joker",
-            SkeletalMesh.StaticClass()
-        );
-        Debug.WriteLine($"Loaded mesh {jokerMesh}");
-
-        // TODO: Prop offsets are still wrong (ActorComponent has size 73 at runtime, but PrimitiveComponent begins at 76)
-        // TODO: Prop offsets are still wrong (PrimitiveComponent has size 420 at runtime, but MeshComponent begins at 432)
-        // TODO: Prop offsets are still wrong (MeshComponent has size 432 at runtime, but SkeletalMeshComponent begins at 444)
-        Debug.WriteLine($"Component: {Component.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"ActorComponent: {ActorComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"PrimitiveComponent: {PrimitiveComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"MeshComponent: {MeshComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine(
-            $"SkeletalMeshComponent: {SkeletalMeshComponent.StaticClass().PropertiesSize}"
-        );
-    }
-
     static bool HasGameStarted = false;
+    static bool HasGameInited = false;
 
     // Detour for UObject::ProcessEvent()
     public static void ProcessEventDetour(
@@ -92,12 +95,24 @@ static class Entry
         unsafe
         {
             var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
+            var funcNameForGameInit = "Engine.GameInfo:InitGame";
             var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
+
+            // Perform game load logic
+            if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
+            {
+                // Call OnLoad() for plugins
+                _pluginInstances.ForEach(plugin => plugin.OnLoad());
+
+                HasGameInited = true;
+            }
 
             // Perform game start logic
             if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
-                OnGameStart();
+                // Call OnGameStart() for plugins
+                _pluginInstances.ForEach(plugin => plugin.OnGameStart());
+
                 HasGameStarted = true;
             }
         }
