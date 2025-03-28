@@ -6,8 +6,11 @@ namespace BmSDK;
 
 public partial class GameObject
 {
+    /// <summary>
+    /// Returns a reference to the global objects array. Should not be used directly.
+    /// </summary>
     public static unsafe ref TArray<GameObject> GObjects =>
-        ref *(TArray<GameObject>*)(MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects));
+        ref *(TArray<GameObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
     public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
 

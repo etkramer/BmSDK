@@ -77,8 +77,6 @@ static class Entry
         Debug.WriteLine(
             $"SkeletalMeshComponent: {SkeletalMeshComponent.StaticClass().PropertiesSize}"
         );
-
-        // Debug.WriteLine(meshComponent.SkeletalMesh?.GetPathName());
     }
 
     static bool HasGameStarted = false;
@@ -91,9 +89,6 @@ static class Entry
         IntPtr UnusedResult
     )
     {
-        // Call base impl
-        _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
-
         unsafe
         {
             var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
@@ -106,6 +101,9 @@ static class Entry
                 HasGameStarted = true;
             }
         }
+
+        // Call base impl
+        _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
     }
 
     // Detour for UObject::AddObject()

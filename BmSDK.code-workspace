@@ -47,7 +47,7 @@
 				"request": "launch",
 				"preLaunchTask": "Build BmSDK",
 				"program": "D:\\Games\\BatmanArkhamAsylum\\Binaries\\ShippingPC-BmGame.exe",
-				"args": [ "-nosplash", "-nomovie" ],
+				"args": [ "-nosplash" ],
 				"cwd": "D:\\Games\\BatmanArkhamAsylum\\Binaries",
 				"logging": {
 					"exceptions": false,
