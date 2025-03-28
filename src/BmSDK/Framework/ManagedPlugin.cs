@@ -6,12 +6,12 @@ public abstract class ManagedPlugin
     /// Called once when the engine first becomes ready. Should be used to perform basic setup
     /// that doesn't need access to the game world.
     /// </summary>
-    public virtual void OnLoad() { }
+    public virtual void OnInit() { }
 
     /// <summary>
     /// Called when we first load into the menu, after all actors have begun play.
     /// </summary>
-    public virtual void OnGameStart() { }
+    public virtual void OnStart() { }
 
     // /// <summary>
     // /// Called every time we load into a world, after all actors have begun play.

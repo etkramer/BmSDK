@@ -101,8 +101,8 @@ static class Entry
             // Perform game load logic
             if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
             {
-                // Call OnLoad() for plugins
-                _pluginInstances.ForEach(plugin => plugin.OnLoad());
+                // Call OnInit() for plugins
+                _pluginInstances.ForEach(plugin => plugin.OnInit());
 
                 HasGameInited = true;
             }
@@ -110,8 +110,8 @@ static class Entry
             // Perform game start logic
             if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
-                // Call OnGameStart() for plugins
-                _pluginInstances.ForEach(plugin => plugin.OnGameStart());
+                // Call OnStart() for plugins
+                _pluginInstances.ForEach(plugin => plugin.OnStart());
 
                 HasGameStarted = true;
             }
