@@ -12,6 +12,13 @@ namespace UELib.Core
         {
             return "Qword";
         }
+
+        protected override void Deserialize()
+        {
+            base.Deserialize();
+            ElementSize = 8;
+            Alignment = 8;
+        }
     }
 }
 #endif

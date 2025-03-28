@@ -33,7 +33,7 @@ static class ClassTemplate
 
         // Format layout info
         var layoutInfoText =
-            $"(size = 0x{classObj.StructSize:X}, offset = 0x{classObj.StructStartOffset:X})";
+            $"(size = {classObj.StructSize}, offset = {classObj.StructStartOffset})";
 
         return $$"""
             /// <summary>

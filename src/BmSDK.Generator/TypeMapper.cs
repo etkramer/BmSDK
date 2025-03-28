@@ -120,6 +120,12 @@ public static class TypeMapper
         RegisterIntrinsicClass("Core.Class", "BmSDK.Class");
         RegisterIntrinsicClass("Core.Function", "BmSDK.Function");
         RegisterIntrinsicClass("Core.Package", "BmSDK.Package");
+        RegisterIntrinsicClass("Core.Property", "BmSDK.Property");
+        RegisterIntrinsicClass("Core.BoolProperty", "BmSDK.BoolProperty");
+        RegisterIntrinsicClass("Core.ByteProperty", "BmSDK.ByteProperty");
+        RegisterIntrinsicClass("Core.FloatProperty", "BmSDK.FloatProperty");
+        RegisterIntrinsicClass("Core.ArrayProperty", "BmSDK.ArrayProperty");
+        RegisterIntrinsicClass("Core.StructProperty", "BmSDK.StructProperty");
 
         // Record hardcoded intrinsic classes (Engine)
         RegisterIntrinsicClass("Engine.World", "BmSDK.Engine.World");

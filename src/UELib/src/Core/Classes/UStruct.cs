@@ -316,7 +316,8 @@ namespace UELib.Core
             // Measure/layout props
             var fieldOffset = StructStartOffset = (Super?.StructSize ?? 0);
             var fieldBit = -1;
-            foreach (var prop in EnumerateFields().OfType<UProperty>())
+            var props = EnumerateFields().OfType<UProperty>().ToArray();
+            foreach (var prop in props)
             {
                 // Ensure prop is deserialized
                 if (prop.ElementSize == 0)
@@ -331,7 +332,7 @@ namespace UELib.Core
                 }
                 else
                 {
-                    fieldBit = 0;
+                    fieldBit = -1;
                 }
 
                 // Begin new bitfield if needed. Function params are always full size
@@ -339,6 +340,12 @@ namespace UELib.Core
                 {
                     fieldBit = 0;
                     fieldOffset += 4;
+                }
+
+                // Handle alignment
+                if (fieldBit < 1)
+                {
+                    fieldOffset = (fieldOffset + (prop.Alignment - 1)) & ~(prop.Alignment - 1);
                 }
 
                 // Store prop offset
@@ -355,9 +362,7 @@ namespace UELib.Core
                 }
                 else
                 {
-                    // Align offsets to 4 bytes
                     fieldOffset += prop.ElementSize;
-                    fieldOffset = (fieldOffset + 3) & ~3;
                 }
             }
 

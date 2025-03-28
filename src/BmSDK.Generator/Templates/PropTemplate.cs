@@ -23,7 +23,7 @@ static class PropTemplate
                 : $" ({FlagUtils.DropUnknownBits((PropertyFlagsLO)prop.PropertyFlags)})";
 
         // Format layout info
-        var layoutInfoText = $"(offset = 0x{prop.PropertyOffset - outer.StructStartOffset:X})";
+        var layoutInfoText = $"(offset = {prop.PropertyOffset})";
 
         // Format getter/setter definitions
         var getterText = "";

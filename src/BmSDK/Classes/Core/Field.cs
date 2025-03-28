@@ -2,5 +2,8 @@
 
 public class Field : GameObject
 {
-    // TODO
+    public static new Class StaticClass() =>
+        _staticClass ??= StaticFindObjectChecked<Class>(null, null, "Core.Field", false);
+
+    static Class? _staticClass = null;
 }

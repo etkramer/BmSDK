@@ -53,11 +53,15 @@
     <OutDir>$(SolutionDir)build\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
     <TargetName>dinput8</TargetName>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>Build</CustomBuildBeforeTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)build\</OutDir>
     <IntDir>obj\$(Configuration)\</IntDir>
     <TargetName>dinput8</TargetName>
+    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>Build</CustomBuildBeforeTargets>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

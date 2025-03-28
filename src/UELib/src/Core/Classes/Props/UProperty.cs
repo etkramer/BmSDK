@@ -24,6 +24,8 @@ namespace UELib.Core
 
         public ushort ElementSize { get; protected set; }
 
+        public ushort Alignment { get; protected set; } = 4;
+
         public ulong PropertyFlags { get; private set; }
 
         public int PropertyOffset { get; internal set; } = -1;

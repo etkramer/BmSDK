@@ -20,17 +20,6 @@ public class DemoPlugin : ManagedPlugin
         // Test ConstructObject()
         var newObj = new MacroReachSpec(null, "SomeMacroReachSpec");
         Debug.WriteLine($"New object: {newObj}");
-
-        // TODO: Prop offsets are still wrong (ActorComponent has size 73 at runtime, but PrimitiveComponent begins at 76)
-        // TODO: Prop offsets are still wrong (PrimitiveComponent has size 420 at runtime, but MeshComponent begins at 432)
-        // TODO: Prop offsets are still wrong (MeshComponent has size 432 at runtime, but SkeletalMeshComponent begins at 444)
-        Debug.WriteLine($"Component: {Component.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"ActorComponent: {ActorComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"PrimitiveComponent: {PrimitiveComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine($"MeshComponent: {MeshComponent.StaticClass().PropertiesSize}");
-        Debug.WriteLine(
-            $"SkeletalMeshComponent: {SkeletalMeshComponent.StaticClass().PropertiesSize}"
-        );
     }
 
     public override void OnStart()

@@ -30,6 +30,7 @@ namespace UELib.Core
             Record(nameof(Enum), Enum);
 
             ElementSize = sizeof(byte);
+            Alignment = sizeof(byte);
         }
 
         public override string GetFriendlyType()

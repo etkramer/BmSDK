@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using Spectre.Console;
 using UELib.Types;
 
 namespace UELib.Core
@@ -31,6 +33,17 @@ namespace UELib.Core
             Record(nameof(Struct), Struct);
 
             ElementSize = (ushort)Struct.StructSize;
+            Alignment = 4;
+            foreach (var prop in Struct.EnumerateFields().OfType<UProperty>())
+            {
+                Alignment = Math.Max(Alignment, prop.Alignment);
+            }
+
+            // Special alignment rules for FMatrix
+            if (Struct.Name == "Matrix")
+            {
+                Alignment = 16;
+            }
         }
 
         /// <inheritdoc/>
