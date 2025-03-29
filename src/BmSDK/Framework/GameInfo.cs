@@ -6,7 +6,7 @@ public static class GameInfo
     {
         public const IntPtr GNames = 0x2231BB4;
         public const IntPtr GObjObjects = 0x2231BE4;
-        public const IntPtr GError = 0x021F66E8;
+        public const IntPtr GError = 0x21F66E8;
     }
 
     public static class FuncOffsets

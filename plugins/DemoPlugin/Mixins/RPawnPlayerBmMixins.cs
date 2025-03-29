@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using BmSDK;
 using BmSDK.BmGame;
-using BmSDK.BmScript;
 using BmSDK.Engine;
 using BmSDK.Framework;
 

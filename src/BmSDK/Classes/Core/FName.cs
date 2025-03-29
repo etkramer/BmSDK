@@ -32,6 +32,8 @@ public struct FName
         }
     }
 
+    public static implicit operator FName(string name) => new(name);
+
     public override unsafe string ToString()
     {
         var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
