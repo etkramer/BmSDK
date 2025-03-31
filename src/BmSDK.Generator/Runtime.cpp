@@ -47,29 +47,33 @@ void Runtime::OnReady()
 
 	TRACE("Found {} classes", classObjects.size());
 
+	classObjects.clear();
+	classObjects.push_back(UObject::FindClass("Class Core.Object"));
+	classObjects.push_back(UObject::FindClass("Class Core.Component"));
+	classObjects.push_back(UObject::FindClass("Class Engine.ActorComponent"));
+
 	// Print some classes
-	for (INT i = 2; i < 3; i++)
+	for (auto i = 0u; i < classObjects.size(); i++)
 	{
 		auto classObj = classObjects.at(i);
 
-		cout << "\n"
-			 << classObj->GetName() << ".cs:\n";
+		cout << "\n" << classObj->GetName() << ".g.cs:\n";
 
 		// Print namespace declaration
-		cout << "namespace " << classObj->Outer->GetName() << ";" << endl;
+		cout << "namespace " << classObj->GetPackageNameManaged() << ";" << endl;
 		cout << "\n";
 
 		// Print class comment
 		cout << "/// <summary>" << endl;
-		cout << "/// Class: " << classObj->GetName() << "<br/>" << endl;
+		cout << "/// Class: " << classObj->GetNameManaged() << "<br/>" << endl;
 		cout << "/// (size = " << classObj->PropertiesSize << ")" << endl;
 		cout << "/// </summary>" << endl;
 
 		// Print class declaration
-		cout << "public partial class " << classObj->GetName();
+		cout << "public class " << classObj->GetNameManaged();
 		if (classObj->SuperField)
 		{
-			cout << " : " << classObj->SuperField->GetName();
+			cout << " : " << classObj->SuperField->GetPathNameManaged();
 		}
 		cout << endl;
 
@@ -89,12 +93,18 @@ void Runtime::OnReady()
 
 				// Print prop comment
 				cout << "    /// <summary>" << endl;
-				cout << "    /// Property: " << prop->GetName() << "<br/>" << endl;
-				cout << "    /// (offset = " << prop->Offset << ")" << endl;
+				cout << "    /// Property: " << prop->GetName() << endl;
 				cout << "    /// </summary>" << endl;
 
 				// Print prop declaration
-				cout << "    public int " << prop->GetName() << ";" << endl;
+				cout << "    public " << prop->GetInnerTypeNameManaged() << " " << prop->GetName()
+					 << endl;
+
+				// Print prop body
+				cout << "    {" << endl;
+				cout << "        get => throw new System.NotImplementedException();" << endl;
+				cout << "        set => throw new System.NotImplementedException();" << endl;
+				cout << "    }" << endl;
 
 				if (prop->Next && prop->Next->IsA(UProperty::StaticClass()))
 				{
@@ -106,26 +116,10 @@ void Runtime::OnReady()
 		}
 		cout << "}" << endl;
 	}
+
+	// Exit game early
+	exit(0);
 	return;
-
-	// Pick a class to display
-	auto someClass = UObject::FindClass("Class Engine.SkeletalMeshComponent");
-	TRACE("\nClass {} (size {}):", someClass->GetName(), someClass->PropertiesSize);
-
-	// Enumerate class members
-	auto propLink = someClass->Children;
-	while (propLink)
-	{
-		if (propLink->IsA(UProperty::StaticClass()))
-		{
-			TRACE("  {}: {} {}", ((UProperty*)propLink)->Offset, propLink->Class->GetName(), propLink->GetName());
-		}
-		else
-		{
-			TRACE("  {} {}", propLink->Class->GetName(), propLink->GetName());
-		}
-		propLink = propLink->Next;
-	}
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)

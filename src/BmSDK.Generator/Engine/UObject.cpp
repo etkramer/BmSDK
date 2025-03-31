@@ -16,11 +16,36 @@ string UObject::GetPathName() const
 	return res;
 }
 
+string UObject::GetPackageName() const
+{
+	for (auto outer = this->Outer; outer; outer = outer->Outer)
+	{
+		if (outer->Class->GetPathName() == "Core.Package")
+		{
+			return outer->GetName();
+		}
+	}
+
+	return "";
+}
+
+string UObject::GetPackageNameManaged() const
+{
+	string packageName = this->GetPackageName();
+	if (packageName == "Core")
+	{
+		return "BmSDK";
+	}
+
+	return "BmSDK." + packageName;
+}
+
 bool UObject::IsA(class UClass* classObj) const
 {
 	if (classObj)
 	{
-		for (UClass* superClass = (UClass*)(this->Class); superClass; superClass = (UClass*)(superClass->SuperField))
+		for (UClass* superClass = (UClass*)(this->Class); superClass;
+			 superClass = (UClass*)(superClass->SuperField))
 		{
 			if (superClass == classObj)
 			{

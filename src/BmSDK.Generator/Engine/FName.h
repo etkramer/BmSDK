@@ -44,15 +44,9 @@ class FName
 	FIELD(INT, Number)
 
 public:
-	string ToString() const
-	{
-		return GetNameEntry().ToString();
-	}
+	string ToString() const { return GetNameEntry().ToString(); }
 
-	const FNameEntry GetNameEntry() const
-	{
-		return *Runtime::GNames->ElementAt(Index);
-	}
+	const FNameEntry GetNameEntry() const { return *Runtime::GNames->ElementAt(Index); }
 };
 
 CHECK_CLASS(FName)

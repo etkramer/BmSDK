@@ -19,8 +19,13 @@ class UObject
 
 public:
 	FORCEINLINE string GetName() const { return this->Name.ToString(); };
-	FORCEINLINE string GetFullName() const { return this->Class->GetName() + " " + this->GetPathName(); };
+	FORCEINLINE string GetFullName() const
+	{
+		return this->Class->GetName() + " " + this->GetPathName();
+	};
 	string GetPathName() const;
+	string GetPackageName() const;
+	string GetPackageNameManaged() const;
 
 	bool IsA(class UClass* classObj) const;
 
