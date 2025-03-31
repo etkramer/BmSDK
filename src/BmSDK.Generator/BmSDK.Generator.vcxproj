@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Engine\UObject.cpp" />
     <ClCompile Include="Runtime.cpp" />
-    <ClCompile Include="Detours.cpp" />
+    <ClCompile Include="ProcessEvent.cpp" />
+    <ClCompile Include="Engine\UObject.cpp" />
+    <ClCompile Include="Framework\Debug.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Detours.h" />
+    <ClInclude Include="Framework\Detours.h" />
     <ClInclude Include="Engine\FName.h" />
     <ClInclude Include="Engine\UClass.h" />
     <ClInclude Include="Engine\UField.h" />
@@ -15,7 +16,7 @@
     <ClInclude Include="Engine\UStruct.h" />
     <ClInclude Include="Runtime.h" />
     <ClInclude Include="Engine\TArray.h" />
-    <ClInclude Include="Game\Offsets.h" />
+    <ClInclude Include="Engine\GameOffsets.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup Label="ProjectConfigurations">

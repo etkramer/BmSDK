@@ -5,13 +5,17 @@
 class UObject;
 class FNameEntry;
 
-class Runtime {
+class Runtime
+{
 private:
 	Runtime() = delete;
 
 public:
 	static void OnAttach();
 	static void OnReady();
+
+private:
+	static void DetourProcessEvent();
 
 public:
 	static uintptr_t BaseAddress;

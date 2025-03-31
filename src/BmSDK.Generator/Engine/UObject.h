@@ -10,8 +10,8 @@ class UObject
 	UObject* HashNext;
 	UObject* HashOuterNext;
 	class FStateFrame* StateFrame;
-	UObject* Outer;
 
+	FIELD(UObject*, Outer)
 	FIELD(FName, Name)
 	FIELD(UObject*, Class)
 

@@ -1,12 +1,9 @@
 #include "pch.h"
-#include "Detours.h"
 #include "Runtime.h"
-#include "Game/Offsets.h"
-#include "Engine\TArray.h"
+#include "Engine\GameOffsets.h"
 #include "Engine\UObject.h"
 
 DECLARE_DETOUR(ProcessEvent, void, __fastcall, UObject*, void*, class UFunction*, void*, void*)
-DECLARE_DETOUR(WinShowWindow, BOOL, WINAPI, HWND, int nCmdShow)
 
 static void __fastcall ProcessEventDetour(UObject* pThis, void* unk, class UFunction* Function, void* Parms, void* Result)
 {
@@ -21,7 +18,7 @@ static void __fastcall ProcessEventDetour(UObject* pThis, void* unk, class UFunc
 	ProcessEvent(pThis, unk, Function, Parms, Result);
 }
 
-void Detours::DetourProcessEvent()
+void Runtime::DetourProcessEvent()
 {
-	Detours::DetourFunction(Runtime::BaseAddress + Offsets::UObject_ProcessEvent, &ProcessEvent, &ProcessEventDetour);
+	Detours::DetourFunction(Runtime::BaseAddress + GameOffsets::UObject_ProcessEvent, &ProcessEvent, &ProcessEventDetour);
 }

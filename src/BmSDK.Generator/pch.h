@@ -28,16 +28,6 @@ private:
 #define CHECK_CLASS(TYPE, ...) \
 	static_assert(sizeof(TYPE##__VA_ARGS__) == SIZE_##TYPE, #TYPE " doesn't match declared size");
 
-// Debug macros
-#define ASSERT(x)                                                                                              \
-	if (!(x))                                                                                                  \
-	{                                                                                                          \
-		std::cerr << "Assertion failed: " << #x << " in " << __FILE__ << " at line " << __LINE__ << std::endl; \
-		std::abort();                                                                                          \
-	}
-#define TRACE(x, ...) OutputDebugStringA((std::format(x, __VA_ARGS__) + "\n").c_str())
-
-#undef ERROR
-#define ERROR(x, ...)      \
-	TRACE(x, __VA_ARGS__); \
-	abort();
+// Framework
+#include "Framework/Debug.h"
+#include "Framework/Detours.h"
