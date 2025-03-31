@@ -13,7 +13,31 @@
       "**/*proj.user": true
     },
     "dotnet.defaultSolution": "BmSDK.sln",
-    "C_Cpp.default.compilerPath": "cl.exe"
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
+    "files.associations": {
+      "format": "cpp",
+      "initializer_list": "cpp",
+      "utility": "cpp",
+      "vector": "cpp",
+      "xstring": "cpp",
+      "xtree": "cpp",
+      "xutility": "cpp",
+      "compare": "cpp",
+      "filesystem": "cpp",
+      "memory": "cpp",
+      "ratio": "cpp",
+      "tuple": "cpp",
+      "type_traits": "cpp",
+      "xmemory": "cpp",
+      "xtr1common": "cpp",
+      "xlocmon": "cpp",
+      "chrono": "cpp",
+      "system_error": "cpp",
+      "xlocale": "cpp",
+      "map": "cpp"
+    }
   },
   "tasks": {
     "version": "2.0.0",
@@ -21,24 +45,11 @@
       {
         "label": "Build BmSDK",
         "type": "process",
-        "command": "src/MSBuild.cmd",
+        "command": "${workspaceFolder}/src/MSBuild.cmd",
         "args": ["BmSDK.sln"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
-      },
-      {
-        "label": "Build BmSDK.Generator",
-        "type": "process",
-        "command": "dotnet",
-        "args": [
-          "build",
-          "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj",
-          "--no-restore"
-        ],
-        "problemMatcher": "$msCompile",
-        "presentation": { "echo": false, "clear": true },
-        "group": { "kind": "build" }
       }
     ]
   },
@@ -57,17 +68,6 @@
           "exceptions": false,
           "moduleLoad": false
         }
-      },
-      {
-        "name": "Launch Generator",
-        "type": "coreclr",
-        "request": "launch",
-        "preLaunchTask": "Build BmSDK.Generator",
-        "program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
-        "args": [
-          "D:\\Games\\BatmanArkhamAsylum\\BmGame\\CookedPC (unpacked)",
-          "${workspaceFolder}\\src\\BmSDK"
-        ]
       }
     ]
   }

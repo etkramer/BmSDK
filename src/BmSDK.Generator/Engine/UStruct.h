@@ -3,11 +3,13 @@
 #include "TArray.h"
 #include "UField.h"
 
+CLASS(UStruct, 136)
 class UStruct : public UField
 {
 	BYTE UNK1[8];
-	FIELD(UField*, Children);
-	FIELD(INT, PropertiesSize);
+
+	FIELD(UField*, Children, 64);
+	FIELD(INT, PropertiesSize, 68);
 
 	TArray<BYTE> Script;
 	INT TextPos;
@@ -23,3 +25,7 @@ class UStruct : public UField
 
 	TArray<UObject*> ScriptObjectReferences;
 };
+
+CHECK_CLASS(UStruct)
+CHECK_FIELD(UStruct, Children)
+CHECK_FIELD(UStruct, PropertiesSize)

@@ -5,7 +5,8 @@
 #include "Engine\TArray.h"
 #include "Engine\UObject.h"
 
-DECLARE_DETOUR(ProcessEvent, void, UObject*, void*, class UFunction*, void*, void*)
+DECLARE_DETOUR(ProcessEvent, void, __fastcall, UObject*, void*, class UFunction*, void*, void*)
+DECLARE_DETOUR(WinShowWindow, BOOL, WINAPI, HWND, int nCmdShow)
 
 static void __fastcall ProcessEventDetour(UObject* pThis, void* unk, class UFunction* Function, void* Parms, void* Result)
 {

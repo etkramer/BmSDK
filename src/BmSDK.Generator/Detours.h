@@ -20,6 +20,6 @@ public:
     }
 };
 
-#define DECLARE_DETOUR(NAME, RETURN, ...) \
-    typedef RETURN (__fastcall* ##NAME##Func) (__VA_ARGS__); \
+#define DECLARE_DETOUR(NAME, RETURN, CONV, ...) \
+    typedef RETURN (CONV* ##NAME##Func) (__VA_ARGS__); \
     ##NAME##Func NAME = nullptr;

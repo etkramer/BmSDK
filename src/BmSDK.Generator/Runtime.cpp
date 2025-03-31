@@ -1,13 +1,11 @@
 #include "pch.h"
-#include "Engine\TArray.h"
-#include "Engine\UObject.h"
+#include "Runtime.h"
+#include "Detours.h"
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
-#include "Runtime.h"
-#include "Game/Offsets.h"
-#include "Detours.h"
+#include "Game\Offsets.h"
 
-#include <detours/detours.h>
+#include <vector>
 
 uintptr_t Runtime::BaseAddress = 0;
 
@@ -32,18 +30,30 @@ void Runtime::OnAttach()
 void Runtime::OnReady()
 {
 	TRACE("\nReady, preparing SDK generation");
-	TRACE("GObjects: Num={}, Max={}", Runtime::GObjects->Num, Runtime::GObjects->Max);
 
-	// Grab class objects
-	auto propClass = UObject::FindClass("Class Core.Property");
+	// Enumerate objects
+	vector<UClass*> classObjects;
+	for (INT i = 0; i < Runtime::GObjects->Num; i++)
+	{
+		auto obj = Runtime::GObjects->ElementAt(i);
+
+		if (obj->IsA(UClass::StaticClass()))
+		{
+			classObjects.push_back((UClass*)obj);
+		}
+	}
+
+	TRACE("Found {} classes", classObjects.size());
+
+	// Pick a class to display
 	auto someClass = UObject::FindClass("Class Engine.SkeletalMeshComponent");
-	TRACE("Class {} (size {}):", someClass->GetName(), someClass->PropertiesSize);
+	TRACE("\nClass {} (size {}):", someClass->GetName(), someClass->PropertiesSize);
 
 	// Enumerate class members
 	auto propLink = someClass->Children;
 	while (propLink != NULL)
 	{
-		if (propLink->IsA(propClass))
+		if (propLink->IsA(UProperty::StaticClass()))
 		{
 			TRACE("  {}: {} {}", ((UProperty*)propLink)->Offset, propLink->Class->GetName(), propLink->GetName());
 		}

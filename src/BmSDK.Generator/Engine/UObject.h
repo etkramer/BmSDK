@@ -2,18 +2,19 @@
 
 #include "FName.h"
 
-typedef QWORD EObjectFlags;
-
+CLASS(UObject, 48)
 class UObject
 {
-	FIELD(INT, Index)
-	FIELD(EObjectFlags, ObjectFlags)
+	INT Index;
+	QWORD ObjectFlags;
 	UObject* HashNext;
 	UObject* HashOuterNext;
 	class FStateFrame* StateFrame;
-	FIELD(UObject*, Outer)
-	FIELD(FName, Name)
-	FIELD(UObject*, Class)
+	UObject* Outer;
+
+	FIELD(FName, Name, 32)
+	FIELD(UObject*, Class, 40)
+
 	UObject* ObjectArchetype;
 
 public:
@@ -24,10 +25,9 @@ public:
 	bool IsA(class UClass* classObj) const;
 
 public:
-	static class UClass* StaticClass()
-	{
-		return UObject::FindClass("Class Core.Object");
-	}
-
 	static class UClass* FindClass(const string& classPath);
 };
+
+CHECK_CLASS(UObject)
+CHECK_FIELD(UObject, Name)
+CHECK_FIELD(UObject, Class)

@@ -5,16 +5,19 @@
 constexpr INT NAME_UNICODE_MASK = 0x1;
 constexpr INT NAME_INDEX_SHIFT = 1;
 
+// NOTE: Not fixed-size. Engine intentionally avoids allocating
+// complete FNameEntry instances, basing the actual size on the name length.
 class FNameEntry
 {
-	FIELD(QWORD, Flags)
-	FIELD(INT, Index)
+	QWORD Flags;
+	INT Index;
+
 	FNameEntry* HashNext;
 
 	union
 	{
-		FIELD(char, AnsiName[128])
-		FIELD(wchar_t, UniName[128])
+		char AnsiName[128];
+		wchar_t UniName[128];
 	};
 
 public:
@@ -27,25 +30,18 @@ public:
 		}
 		else
 		{
-			return string(AnsiName);
+			return string((char*)UniName);
 		}
 	}
 
-	INT GetIndex() const
-	{
-		return Index >> NAME_INDEX_SHIFT;
-	}
-
-	BOOL IsUnicode() const
-	{
-		return (Index & NAME_UNICODE_MASK);
-	}
+	BOOL IsUnicode() const { return (Index & NAME_UNICODE_MASK); }
 };
 
+CLASS(FName, 8)
 class FName
 {
-	FIELD(INT, Index)
-	INT Number;
+	FIELD(INT, Index, 0)
+	FIELD(INT, Number, 4);
 
 public:
 	string ToString() const
@@ -58,3 +54,6 @@ public:
 		return *Runtime::GNames->ElementAt(Index);
 	}
 };
+
+CHECK_CLASS(FName)
+CHECK_FIELD(FName, Index)
