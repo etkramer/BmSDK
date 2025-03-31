@@ -1,70 +1,74 @@
 {
-	"folders": [
-		{
-			"name": "BmSDK",
-			"path": "."
-		}
-	],
-	"settings": {
-		"files.exclude": {
-			"**/bin/": true,
-			"**/obj/": true,
-			"**/.vs/": true,
-			"**/*proj.user": true,
-		},
-		"dotnet.defaultSolution": "BmSDK.sln",
-		"C_Cpp.default.compilerPath": "cl.exe"
-	},
-	"tasks": {
-		"version": "2.0.0",
-		"tasks": [
-			{
-				"label": "Build BmSDK",
-				"type": "process",
-				"command": "src/MSBuild.cmd",
-				"args": [ "BmSDK.sln" ],
-				"problemMatcher": "$msCompile",
-				"presentation": { "echo": false, "clear": true },
-				"group": { "kind": "build", "isDefault": true }
-			},
-			{
-				"label": "Build BmSDK.Generator",
-				"type": "process",
-				"command": "dotnet",
-				"args": [ "build", "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj", "--no-restore" ],
-				"problemMatcher": "$msCompile",
-				"presentation": { "echo": false, "clear": true },
-				"group": { "kind": "build" }
-			}
-		]
-	},
-	"launch": {
-		"version": "0.2.0",
-		"configurations": [
-			{
-				"name": "Launch Game",
-				"type": "cppvsdbg",
-				"request": "launch",
-				"preLaunchTask": "Build BmSDK",
-				"program": "D:\\Games\\BatmanArkhamAsylum\\Binaries\\ShippingPC-BmGame.exe",
-				"args": [ "-nosplash" ],
-				"cwd": "D:\\Games\\BatmanArkhamAsylum\\Binaries",
-				"logging": {
-					"exceptions": false,
-					"moduleLoad": false
-				}
-			},
-			{
-				"name": "Launch Generator",
-				"type": "coreclr",
-				"request": "launch",
-				"preLaunchTask": "Build BmSDK.Generator",
-				"program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
-				"args": [
-					"D:\\Games\\BatmanArkhamAsylum\\BmGame\\CookedPC (unpacked)",
-					"${workspaceFolder}\\src\\BmSDK"
-				],
-			}
-		]
-	}
+  "folders": [
+    {
+      "name": "BmSDK",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/bin/": true,
+      "**/obj/": true,
+      "**/.vs/": true,
+      "**/*proj.user": true
+    },
+    "dotnet.defaultSolution": "BmSDK.sln",
+    "C_Cpp.default.compilerPath": "cl.exe"
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build BmSDK",
+        "type": "process",
+        "command": "src/MSBuild.cmd",
+        "args": ["BmSDK.sln"],
+        "problemMatcher": "$msCompile",
+        "presentation": { "echo": false, "clear": true },
+        "group": { "kind": "build", "isDefault": true }
+      },
+      {
+        "label": "Build BmSDK.Generator",
+        "type": "process",
+        "command": "dotnet",
+        "args": [
+          "build",
+          "${workspaceFolder}/src/BmSDK.Generator/BmSDK.Generator.csproj",
+          "--no-restore"
+        ],
+        "problemMatcher": "$msCompile",
+        "presentation": { "echo": false, "clear": true },
+        "group": { "kind": "build" }
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch Game",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "preLaunchTask": "Build BmSDK",
+        "program": "D:\\Games\\BatmanArkhamAsylum\\Binaries\\ShippingPC-BmGame.exe",
+        "args": ["-nosplash"],
+        "cwd": "D:\\Games\\BatmanArkhamAsylum\\Binaries",
+        "logging": {
+          "exceptions": false,
+          "moduleLoad": false
+        }
+      },
+      {
+        "name": "Launch Generator",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "Build BmSDK.Generator",
+        "program": "${workspaceFolder}/src/BmSDK.Generator/bin/Debug/net9.0/BmSDK.Generator.dll",
+        "args": [
+          "D:\\Games\\BatmanArkhamAsylum\\BmGame\\CookedPC (unpacked)",
+          "${workspaceFolder}\\src\\BmSDK"
+        ]
+      }
+    ]
+  }
 }
