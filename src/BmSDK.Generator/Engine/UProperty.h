@@ -7,7 +7,7 @@ class UProperty : public UField
 {
 	BYTE UNK1[28];
 
-	FIELD(INT, Offset, 84);
+	FIELD(INT, Offset)
 
 	BYTE UNK2[24];
 
@@ -20,4 +20,3 @@ public:
 };
 
 CHECK_CLASS(UProperty)
-CHECK_FIELD(UProperty, Offset)

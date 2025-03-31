@@ -5,11 +5,6 @@
 
 #include <map>
 
-string UObject::GetName() const
-{
-	return this->Name.ToString();
-}
-
 string UObject::GetPathName() const
 {
 	string res = this->GetName();
@@ -19,11 +14,6 @@ string UObject::GetPathName() const
 	}
 
 	return res;
-}
-
-string UObject::GetFullName() const
-{
-	return this->Class->GetName() + " " + this->GetPathName();
 }
 
 bool UObject::IsA(class UClass* classObj) const

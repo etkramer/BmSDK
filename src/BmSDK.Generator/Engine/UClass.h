@@ -13,5 +13,3 @@ public:
 		return classObj ? classObj : classObj = UObject::FindClass("Class Core.Class");
 	}
 };
-
-// CHECK_SIZE(UClass, TODO);

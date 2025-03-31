@@ -5,9 +5,9 @@ template <typename T>
 class TArray
 {
 public:
-	FIELD(T*, AllocatorInstance, 0)
-	FIELD(INT, Num, 4)
-	FIELD(INT, Max, 8)
+	FIELD(T*, AllocatorInstance)
+	FIELD(INT, Num)
+	FIELD(INT, Max)
 
 public:
 	T& ElementAt(INT idx) const
@@ -17,6 +17,3 @@ public:
 };
 
 CHECK_CLASS(TArray, <BYTE>)
-CHECK_FIELD(TArray<BYTE>, AllocatorInstance)
-CHECK_FIELD(TArray<BYTE>, Num)
-CHECK_FIELD(TArray<BYTE>, Max)

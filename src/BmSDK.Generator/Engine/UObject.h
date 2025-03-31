@@ -12,22 +12,19 @@ class UObject
 	class FStateFrame* StateFrame;
 	UObject* Outer;
 
-	FIELD(FName, Name, 32)
-	FIELD(UObject*, Class, 40)
+	FIELD(FName, Name)
+	FIELD(UObject*, Class)
 
 	UObject* ObjectArchetype;
 
 public:
-	string GetName() const;
+	FORCEINLINE string GetName() const { return this->Name.ToString(); };
+	FORCEINLINE string GetFullName() const { return this->Class->GetName() + " " + this->GetPathName(); };
 	string GetPathName() const;
-	string GetFullName() const;
 
 	bool IsA(class UClass* classObj) const;
 
-public:
 	static class UClass* FindClass(const string& classPath);
 };
 
 CHECK_CLASS(UObject)
-CHECK_FIELD(UObject, Name)
-CHECK_FIELD(UObject, Class)

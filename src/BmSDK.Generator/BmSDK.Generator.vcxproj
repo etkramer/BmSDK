@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Engine\UObject.cpp" />
+    <ClCompile Include="Runtime.cpp" />
+    <ClCompile Include="Detours.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Detours.h" />
+    <ClInclude Include="Engine\FName.h" />
+    <ClInclude Include="Engine\UClass.h" />
+    <ClInclude Include="Engine\UField.h" />
+    <ClInclude Include="Engine\UObject.h" />
+    <ClInclude Include="Engine\UProperty.h" />
+    <ClInclude Include="Engine\UStruct.h" />
+    <ClInclude Include="Runtime.h" />
+    <ClInclude Include="Engine\TArray.h" />
+    <ClInclude Include="Game\Offsets.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -100,6 +118,8 @@
       <AdditionalOptions>/Zc:offsetof- %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4244</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,6 +149,8 @@
       <AdditionalOptions>/Zc:offsetof- %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4244</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,6 +180,8 @@
       <AdditionalOptions>/Zc:offsetof- %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4244</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -187,6 +211,8 @@
       <AdditionalOptions>/Zc:offsetof- %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4244</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -206,27 +232,6 @@
       <Inputs>$(TargetPath);%(Inputs)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Engine\UObject.cpp" />
-    <ClCompile Include="Runtime.cpp" />
-    <ClCompile Include="Detours.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Detours.h" />
-    <ClInclude Include="Engine\FName.h" />
-    <ClInclude Include="Engine\UClass.h" />
-    <ClInclude Include="Engine\UField.h" />
-    <ClInclude Include="Engine\UObject.h" />
-    <ClInclude Include="Engine\UProperty.h" />
-    <ClInclude Include="Engine\UStruct.h" />
-    <ClInclude Include="Runtime.h" />
-    <ClInclude Include="Engine\TArray.h" />
-    <ClInclude Include="Game\Offsets.h" />
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

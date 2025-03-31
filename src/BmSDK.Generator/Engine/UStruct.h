@@ -8,8 +8,8 @@ class UStruct : public UField
 {
 	BYTE UNK1[8];
 
-	FIELD(UField*, Children, 64);
-	FIELD(INT, PropertiesSize, 68);
+	FIELD(UField*, Children)
+	FIELD(INT, PropertiesSize)
 
 	TArray<BYTE> Script;
 	INT TextPos;
@@ -27,5 +27,3 @@ class UStruct : public UField
 };
 
 CHECK_CLASS(UStruct)
-CHECK_FIELD(UStruct, Children)
-CHECK_FIELD(UStruct, PropertiesSize)

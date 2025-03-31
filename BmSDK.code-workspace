@@ -46,7 +46,8 @@
         "label": "Build BmSDK",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln"],
+        // "args": ["BmSDK.sln"],
+        "args": ["src/BmSDK.Generator/BmSDK.Generator.vcxproj"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }

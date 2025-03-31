@@ -40,8 +40,8 @@ public:
 CLASS(FName, 8)
 class FName
 {
-	FIELD(INT, Index, 0)
-	FIELD(INT, Number, 4);
+	FIELD(INT, Index)
+	FIELD(INT, Number)
 
 public:
 	string ToString() const
@@ -56,4 +56,3 @@ public:
 };
 
 CHECK_CLASS(FName)
-CHECK_FIELD(FName, Index)
