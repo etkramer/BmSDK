@@ -3,6 +3,7 @@
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
+#include "Printer\Printer.h"
 
 #include <vector>
 
@@ -33,6 +34,9 @@ void Runtime::OnReady()
 {
 	TRACE("\nReady, preparing SDK generation");
 
+	TRACE("GObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
+	TRACE("GNames: Num = {}, Max = {}", Runtime::GNames->Num, Runtime::GNames->Max);
+
 	// Enumerate objects
 	vector<UClass*> classObjects;
 	for (INT i = 0; i < Runtime::GObjects->Num; i++)
@@ -58,63 +62,7 @@ void Runtime::OnReady()
 		auto classObj = classObjects.at(i);
 
 		cout << "\n" << classObj->GetName() << ".g.cs:\n";
-
-		// Print namespace declaration
-		cout << "namespace " << classObj->GetPackageNameManaged() << ";" << endl;
-		cout << "\n";
-
-		// Print class comment
-		cout << "/// <summary>" << endl;
-		cout << "/// Class: " << classObj->GetNameManaged() << "<br/>" << endl;
-		cout << "/// (size = " << classObj->PropertiesSize << ")" << endl;
-		cout << "/// </summary>" << endl;
-
-		// Print class declaration
-		cout << "public class " << classObj->GetNameManaged();
-		if (classObj->SuperField)
-		{
-			cout << " : " << classObj->SuperField->GetPathNameManaged();
-		}
-		cout << endl;
-
-		// Print class body
-		cout << "{" << endl;
-		{
-			UField* fieldLink = classObj->Children;
-			while (fieldLink)
-			{
-				if (!fieldLink->IsA(UProperty::StaticClass()))
-				{
-					fieldLink = fieldLink->Next;
-					continue;
-				}
-
-				auto prop = (UProperty*)fieldLink;
-
-				// Print prop comment
-				cout << "    /// <summary>" << endl;
-				cout << "    /// Property: " << prop->GetName() << endl;
-				cout << "    /// </summary>" << endl;
-
-				// Print prop declaration
-				cout << "    public " << prop->GetInnerTypeNameManaged() << " " << prop->GetName()
-					 << endl;
-
-				// Print prop body
-				cout << "    {" << endl;
-				cout << "        get => throw new System.NotImplementedException();" << endl;
-				cout << "        set => throw new System.NotImplementedException();" << endl;
-				cout << "    }" << endl;
-
-				if (prop->Next && prop->Next->IsA(UProperty::StaticClass()))
-				{
-					cout << endl;
-				}
-
-				fieldLink = fieldLink->Next;
-			}
-		}
-		cout << "}" << endl;
+		Printer::PrintFile(classObj, cout);
 	}
 
 	// Exit game early

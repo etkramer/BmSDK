@@ -15,7 +15,10 @@
     "dotnet.defaultSolution": "BmSDK.sln",
     "C_Cpp.default.compilerPath": "cl.exe",
     "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.intelliSenseMode": "windows-msvc-x86"
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
+    "files.associations": {
+      "iosfwd": "cpp"
+    }
   },
   "tasks": {
     "version": "2.0.0",

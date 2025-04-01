@@ -11,7 +11,6 @@ class FNameEntry
 {
 	QWORD Flags;
 	INT Index;
-
 	FNameEntry* HashNext;
 
 	union
@@ -30,7 +29,7 @@ public:
 		}
 		else
 		{
-			return string((char*)UniName);
+			return string(AnsiName);
 		}
 	}
 

@@ -6,6 +6,7 @@
     <ClCompile Include="Engine\UField.cpp" />
     <ClCompile Include="Engine\UObject.cpp" />
     <ClCompile Include="Engine\UProperty.cpp" />
+    <ClCompile Include="Printer\Printer.cpp" />
     <ClCompile Include="Framework\Debug.cpp" />
   </ItemGroup>
   <ItemGroup>
