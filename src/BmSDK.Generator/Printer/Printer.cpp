@@ -6,6 +6,10 @@
 
 void Printer::PrintFile(UClass* _class, ostream& out)
 {
+	// Print preprocessor directives
+	out << "#nullable enable annotations" << endl;
+	out << endl;
+
 	// Print namespace declaration
 	out << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
 	out << endl;

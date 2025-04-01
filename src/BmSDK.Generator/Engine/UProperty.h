@@ -48,7 +48,7 @@ public:
 	static class UClass* StaticClass()
 	{
 		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.StructProperty");
+		return classObj ? classObj : classObj = UObject::FindClass("Class Core.ObjectProperty");
 	}
 };
 
@@ -63,7 +63,7 @@ public:
 	static class UClass* StaticClass()
 	{
 		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.StructProperty");
+		return classObj ? classObj : classObj = UObject::FindClass("Class Core.ByteProperty");
 	}
 };
 
