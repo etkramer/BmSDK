@@ -2,6 +2,7 @@
 #include "Printer.h"
 #include "Engine/UClass.h"
 #include "Engine/UProperty.h"
+#include "Engine/UEnum.h"
 
 void Printer::PrintFile(UClass* _class, ostream& out)
 {
@@ -35,25 +36,48 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 		UField* fieldLink = _class->Children;
 		while (fieldLink)
 		{
-			if (!fieldLink->IsA(UProperty::StaticClass()))
+			if (fieldLink->IsA(UProperty::StaticClass()))
 			{
-				fieldLink = fieldLink->Next;
-				continue;
+				Printer::PrintProperty((UProperty*)fieldLink, out);
+
+				if (fieldLink->Next)
+				{
+					cout << endl;
+				}
 			}
-
-			auto prop = (UProperty*)fieldLink;
-
-			Printer::PrintProperty(prop, out);
-
-			if (prop->Next && prop->Next->IsA(UProperty::StaticClass()))
+			else if (fieldLink->IsA(UEnum::StaticClass()))
 			{
-				cout << endl;
+				Printer::PrintEnum((UEnum*)fieldLink, out);
+
+				if (fieldLink->Next)
+				{
+					cout << endl;
+				}
 			}
 
 			fieldLink = fieldLink->Next;
 		}
 	}
 	cout << "}" << endl;
+}
+
+void Printer::PrintEnum(UEnum* enum_, ostream& out)
+{
+	// Print prop comment
+	cout << "    /// <summary>" << endl;
+	cout << "    /// Enum: " << enum_->GetName() << endl;
+	cout << "    /// </summary>" << endl;
+
+	// Print prop declaration
+	cout << "    public enum " << enum_->GetNameManaged() << endl;
+
+	// Print prop body
+	cout << "    {" << endl;
+	for (INT i = 0; i < enum_->Names.Num; i++)
+	{
+		cout << "        " << enum_->Names.ElementAt(i).ToString() << " = " << i << "," << endl;
+	}
+	cout << "    }" << endl;
 }
 
 void Printer::PrintProperty(UProperty* prop, ostream& out)

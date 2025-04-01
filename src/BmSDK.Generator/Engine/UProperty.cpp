@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "UProperty.h"
 #include "UClass.h"
+#include "UEnum.h"
 
 string UProperty::GetInnerTypeNameManaged() const
 {
@@ -10,6 +11,13 @@ string UProperty::GetInnerTypeNameManaged() const
 	}
 	if (Class->GetPathName() == "Core.ByteProperty")
 	{
+		// Try to use proper type for enums
+		auto byteProp = (UByteProperty*)this;
+		if (byteProp->Enum)
+		{
+			return byteProp->Enum->GetPathNameManaged();
+		}
+
 		return "byte";
 	}
 	else if (Class->GetPathName() == "Core.FloatProperty")

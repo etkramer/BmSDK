@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "UStruct.h"
 #include "UClass.h"
+#include "UEnum.h"
 
 string UField::GetNameManaged() const
 {
@@ -8,7 +9,7 @@ string UField::GetNameManaged() const
 	{
 		return "GameObject";
 	}
-	else if (this->IsA(UClass::StaticClass()))
+	else if (this->IsA(UClass::StaticClass()) || this->IsA(UEnum::StaticClass()))
 	{
 		return GetName();
 	}

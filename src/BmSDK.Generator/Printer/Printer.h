@@ -4,9 +4,10 @@ private:
 	Printer() = delete;
 
 public:
-	static void PrintFile(class UClass* classObj, ostream& out);
+	static void PrintFile(class UClass* class_, ostream& out);
 
 private:
-	static void PrintClass(class UClass* classObj, ostream& out);
-	static void PrintProperty(class UProperty* propObj, ostream& out);
+	static void PrintClass(class UClass* class_, ostream& out);
+	static void PrintEnum(class UEnum* enum_, ostream& out);
+	static void PrintProperty(class UProperty* prop, ostream& out);
 };

@@ -53,3 +53,18 @@ public:
 };
 
 CHECK_CLASS(UObjectProperty)
+
+CLASS(UByteProperty, 120)
+class UByteProperty : public UProperty
+{
+	FIELD(class UEnum*, Enum)
+
+public:
+	static class UClass* StaticClass()
+	{
+		static UClass* classObj = nullptr;
+		return classObj ? classObj : classObj = UObject::FindClass("Class Core.StructProperty");
+	}
+};
+
+CHECK_CLASS(UByteProperty)
