@@ -37,7 +37,27 @@ string UProperty::GetInnerTypeNameManaged() const
 	else if (Class->GetPathName() == "Core.StructProperty")
 	{
 		auto structProp = (UStructProperty*)this;
-		return structProp->Struct->GetPathNameManaged();
+		auto _struct = structProp->Struct;
+
+		// Manually swap out some structs
+		if (structProp->GetPathName() == "Core.Object.ObjectFlags")
+		{
+			return "global::BmSDK.EObjectFlags";
+		}
+		else if (_struct->GetName() == "Pointer")
+		{
+			return "global::System.IntPtr";
+		}
+		else if (_struct->GetName() == "Double")
+		{
+			return "double";
+		}
+		else if (_struct->GetName() == "QWord")
+		{
+			return "ulong";
+		}
+
+		return _struct->GetPathNameManaged();
 	}
 	else if (Class->GetPathName() == "Core.ObjectProperty" ||
 			 Class->GetPathName() == "Core.ComponentProperty" ||
