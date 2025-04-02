@@ -21,6 +21,7 @@ mono_crash.*
 
 # Generated SDK files
 /build/*
+/build-old/*
 src/BmSDK/Generated/*
 
 # Build results

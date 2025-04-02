@@ -21,7 +21,7 @@ string UField::GetPathNameManaged() const
 {
 	if (this->IsA(UClass::StaticClass()))
 	{
-		return GetPackageNameManaged() + "." + GetNameManaged();
+		return "global::" + GetPackageNameManaged() + "." + GetNameManaged();
 	}
 
 	return ((UField*)this->Outer)->GetPathNameManaged() + "." + GetNameManaged();

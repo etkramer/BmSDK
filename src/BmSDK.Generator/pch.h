@@ -13,19 +13,21 @@ typedef unsigned __int64 QWORD;
 #include <string>
 using namespace std;
 
+#include <filesystem>
+namespace fs = std::filesystem;
+
 // FIELD() macro. Used to declare a field with a specific offset.
-#define FIELD(TYPE, NAME) \
-public:                   \
-	TYPE NAME;            \
-                          \
+#define FIELD(TYPE, NAME)                                                                          \
+public:                                                                                            \
+	TYPE NAME;                                                                                     \
+                                                                                                   \
 private:
 
 // CLASS() macro. Used to declare a class with a specific size.
-#define CLASS(NAME, SIZE) \
-	static constexpr int SIZE_##NAME = SIZE;
+#define CLASS(NAME, SIZE) static constexpr int SIZE_##NAME = SIZE;
 
 // CHECK_CLASS() macro. Used to enforce a class matches its expected size.
-#define CHECK_CLASS(TYPE, ...) \
+#define CHECK_CLASS(TYPE, ...)                                                                     \
 	static_assert(sizeof(TYPE##__VA_ARGS__) == SIZE_##TYPE, #TYPE " doesn't match declared size");
 
 // Framework

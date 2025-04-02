@@ -6,6 +6,7 @@
 #include "Printer\Printer.h"
 
 #include <vector>
+#include <fstream>
 
 uintptr_t Runtime::BaseAddress = 0;
 
@@ -34,8 +35,8 @@ void Runtime::OnReady()
 {
 	TRACE("\nReady, preparing SDK generation");
 
-	TRACE("GObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
-	TRACE("GNames: Num = {}, Max = {}", Runtime::GNames->Num, Runtime::GNames->Max);
+	TRACE("\nGObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
+	TRACE("GNames: Num = {}, Max = {}\n", Runtime::GNames->Num, Runtime::GNames->Max);
 
 	// Enumerate objects
 	vector<UClass*> classObjects;
@@ -49,20 +50,31 @@ void Runtime::OnReady()
 		}
 	}
 
-	TRACE("Found {} classes", classObjects.size());
-
-	classObjects.clear();
-	classObjects.push_back(UObject::FindClass("Class Core.Object"));
-	classObjects.push_back(UObject::FindClass("Class Core.Component"));
-	classObjects.push_back(UObject::FindClass("Class Engine.ActorComponent"));
+	TRACE("Found {} loaded classes", classObjects.size());
 
 	// Print some classes
 	for (auto i = 0u; i < classObjects.size(); i++)
 	{
 		auto classObj = classObjects.at(i);
+		auto classFilePath = fs::path("I:\\BmSDK\\src\\BmSDK\\Generated\\") /
+							 classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
 
-		cout << "\n" << classObj->GetName() << ".g.cs:\n";
-		Printer::PrintFile(classObj, cout);
+		if (!fs::exists(classFilePath.parent_path()) &&
+			fs::exists(classFilePath.parent_path().parent_path()))
+		{
+			TRACE("Creating output subdir {}", classFilePath.parent_path().filename().string());
+			fs::create_directories(classFilePath.parent_path());
+		}
+
+		ofstream classFileStream(classFilePath, ios::trunc);
+		if (!classFileStream.is_open())
+		{
+			TRACE("Couldn't open file {}", classFilePath.string());
+			continue;
+		}
+
+		// TRACE("Printing {}", classObj->GetPathName());
+		Printer::PrintFile(classObj, classFileStream);
 	}
 
 	// Exit game early

@@ -40,7 +40,8 @@ string UProperty::GetInnerTypeNameManaged() const
 		return structProp->Struct->GetPathNameManaged();
 	}
 	else if (Class->GetPathName() == "Core.ObjectProperty" ||
-			 Class->GetPathName() == "Core.ClassProperty")
+			 Class->GetPathName() == "Core.ClassProperty" ||
+			 Class->GetPathName() == "Core.ComponentProperty")
 	{
 		auto objectProp = (UObjectProperty*)this;
 		return objectProp->PropertyClass->GetPathNameManaged() + "?";
