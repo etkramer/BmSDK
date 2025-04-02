@@ -1,6 +1,6 @@
 namespace BmSDK;
 
-public partial class Property : Field
+public partial class Property
 {
     /// <summary>
     /// Property: ArrayDim

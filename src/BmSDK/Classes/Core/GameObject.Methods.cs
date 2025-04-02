@@ -147,7 +147,7 @@ public partial class GameObject
     /// </summary>
     public string GetFullName(GameObject? StopOuter = null)
     {
-        var result = Class.Name.ToString();
+        var result = Guard.NotNull(Class).Name.ToString();
         result += " ";
         GetPathName(StopOuter, ref result);
 

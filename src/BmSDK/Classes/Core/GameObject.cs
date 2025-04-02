@@ -13,7 +13,7 @@ public interface IStaticObject
     public static abstract Class StaticClass();
 }
 
-public partial class GameObject : IStaticObject
+public partial class GameObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
