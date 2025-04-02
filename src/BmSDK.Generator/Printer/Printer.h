@@ -8,7 +8,7 @@ public:
 
 private:
 	static void PrintClass(class UClass* class_, ostream& out);
-	static void PrintStruct(class UStruct* struct_, ostream& out);
+	static void PrintStruct(class UScriptStruct* struct_, ostream& out);
 	static void PrintEnum(class UEnum* enum_, ostream& out);
 	static void PrintProperty(class UProperty* prop, ostream& out);
 	static void PrintStructProperty(class UProperty* prop, ostream& out);

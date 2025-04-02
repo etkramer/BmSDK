@@ -62,9 +62,9 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 					out << endl;
 				}
 			}
-			else if (fieldLink->IsA(UStruct::StaticClass()))
+			else if (fieldLink->IsA(UScriptStruct::StaticClass()))
 			{
-				Printer::PrintStruct((UStruct*)fieldLink, out);
+				Printer::PrintStruct((UScriptStruct*)fieldLink, out);
 
 				if (fieldLink->Next)
 				{
@@ -79,7 +79,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintStruct(UStruct* _struct, ostream& out)
+void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 {
 	// Print struct comment
 	Printer::Indent(out) << "/// <summary>" << endl;
