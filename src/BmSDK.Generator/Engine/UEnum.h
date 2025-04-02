@@ -9,11 +9,7 @@ class UEnum : public UField
 	FIELD(TArray<FName>, Names)
 
 public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.Enum");
-	}
+	STATIC_CLASS("Core.Enum")
 };
 
 CHECK_CLASS(UEnum)

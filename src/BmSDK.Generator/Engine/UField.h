@@ -12,6 +12,7 @@ class UField : public UObject
 public:
 	string GetNameManaged() const;
 	string GetPathNameManaged() const;
+	STATIC_CLASS("Core.Field")
 };
 
 CHECK_CLASS(UField)

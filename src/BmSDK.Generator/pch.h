@@ -30,6 +30,14 @@ private:
 #define CHECK_CLASS(TYPE, ...)                                                                     \
 	static_assert(sizeof(TYPE##__VA_ARGS__) == SIZE_##TYPE, #TYPE " doesn't match declared size");
 
+// STATIC_CLASS() macro. Used declare a StaticClass() helper.
+#define STATIC_CLASS(PATH, ...)                                                                    \
+	static class UClass* StaticClass()                                                             \
+	{                                                                                              \
+		static UClass* classObj = nullptr;                                                         \
+		return classObj ? classObj : classObj = UObject::FindClass("Class "##PATH);                \
+	}
+
 // Framework
 #include "Framework/Debug.h"
 #include "Framework/Detours.h"

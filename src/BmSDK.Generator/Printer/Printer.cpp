@@ -4,14 +4,16 @@
 #include "Engine/UProperty.h"
 #include "Engine/UEnum.h"
 
+int Printer::IndentLevel = 0;
+
 void Printer::PrintFile(UClass* _class, ostream& out)
 {
 	// Print preprocessor directives
-	out << "#nullable enable annotations" << endl;
+	Printer::Indent(out) << "#nullable enable annotations" << endl;
 	out << endl;
 
 	// Print namespace declaration
-	out << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
+	Printer::Indent(out) << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
 	out << endl;
 
 	// Print class declaration
@@ -21,13 +23,13 @@ void Printer::PrintFile(UClass* _class, ostream& out)
 void Printer::PrintClass(UClass* _class, ostream& out)
 {
 	// Print class comment
-	out << "/// <summary>" << endl;
-	out << "/// Class: " << _class->GetNameManaged() << "<br/>" << endl;
-	out << "/// (size = " << _class->PropertiesSize << ")" << endl;
-	out << "/// </summary>" << endl;
+	Printer::Indent(out) << "/// <summary>" << endl;
+	Printer::Indent(out) << "/// Class: " << _class->GetNameManaged() << "<br/>" << endl;
+	Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
+	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print class declaration
-	out << "public class " << _class->GetNameManaged();
+	Printer::Indent(out) << "public partial class " << _class->GetNameManaged();
 	if (_class->SuperField)
 	{
 		out << " : " << _class->SuperField->GetPathNameManaged();
@@ -35,7 +37,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	out << endl;
 
 	// Print class body
-	out << "{" << endl;
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
 	{
 		UField* fieldLink = _class->Children;
 		while (fieldLink)
@@ -58,45 +61,96 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 					out << endl;
 				}
 			}
+			else if (fieldLink->IsA(UStruct::StaticClass()))
+			{
+				Printer::PrintStruct((UStruct*)fieldLink, out);
+
+				if (fieldLink->Next)
+				{
+					out << endl;
+				}
+			}
 
 			fieldLink = fieldLink->Next;
 		}
 	}
-	out << "}" << endl;
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
+}
+
+void Printer::PrintStruct(UStruct* _struct, ostream& out)
+{
+	// Print struct comment
+	Printer::Indent(out) << "/// <summary>" << endl;
+	Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << "<br/>" << endl;
+	Printer::Indent(out) << "/// </summary>" << endl;
+
+	// Print struct declaration
+	Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
+						 << ")]" << endl;
+	Printer::Indent(out) << "public struct " << _struct->GetNameManaged() << endl;
+
+	// Print struct body
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
+	{
+		UField* fieldLink = _struct->Children;
+		while (fieldLink)
+		{
+			if (fieldLink->IsA(UProperty::StaticClass()))
+			{
+				Printer::PrintProperty((UProperty*)fieldLink, out);
+
+				if (fieldLink->Next)
+				{
+					out << endl;
+				}
+			}
+
+			fieldLink = fieldLink->Next;
+		}
+	}
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
 }
 
 void Printer::PrintEnum(UEnum* enum_, ostream& out)
 {
 	// Print prop comment
-	out << "    /// <summary>" << endl;
-	out << "    /// Enum: " << enum_->GetName() << endl;
-	out << "    /// </summary>" << endl;
+	Printer::Indent(out) << "/// <summary>" << endl;
+	Printer::Indent(out) << "/// Enum: " << enum_->GetName() << endl;
+	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print prop declaration
-	out << "    public enum " << enum_->GetNameManaged() << endl;
+	Printer::Indent(out) << "public enum " << enum_->GetNameManaged() << endl;
 
 	// Print prop body
-	out << "    {" << endl;
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
 	for (INT i = 0; i < enum_->Names.Num; i++)
 	{
-		out << "        " << enum_->Names.ElementAt(i).ToString() << " = " << i << "," << endl;
+		Printer::Indent(out) << enum_->Names.ElementAt(i).ToString() << " = " << i << "," << endl;
 	}
-	out << "    }" << endl;
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
 }
 
 void Printer::PrintProperty(UProperty* prop, ostream& out)
 {
 	// Print prop comment
-	out << "    /// <summary>" << endl;
-	out << "    /// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
-	out << "    /// </summary>" << endl;
+	Printer::Indent(out) << "/// <summary>" << endl;
+	Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
+	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print prop declaration
-	out << "    public " << prop->GetInnerTypeNameManaged() << " " << prop->GetName() << endl;
+	Printer::Indent(out) << "public " << prop->GetInnerTypeNameManaged() << " " << prop->GetName()
+						 << endl;
 
 	// Print prop body
-	out << "    {" << endl;
-	out << "        get => throw new global::System.NotImplementedException();" << endl;
-	out << "        set => throw new global::System.NotImplementedException();" << endl;
-	out << "    }" << endl;
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
+	Printer::Indent(out) << "get => throw new global::System.NotImplementedException();" << endl;
+	Printer::Indent(out) << "set => throw new global::System.NotImplementedException();" << endl;
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
 }

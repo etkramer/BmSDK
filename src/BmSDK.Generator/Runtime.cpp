@@ -44,7 +44,8 @@ void Runtime::OnReady()
 	{
 		auto obj = Runtime::GObjects->ElementAt(i);
 
-		if (obj->IsA(UClass::StaticClass()))
+		// Collect class objects (but not the CDO)
+		if (obj->IsA(UClass::StaticClass()) && obj->GetName() != "Default__Class")
 		{
 			classObjects.push_back((UClass*)obj);
 		}

@@ -7,9 +7,5 @@ class UClass : public UStruct
 	// TODO
 
 public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.Class");
-	}
+	STATIC_CLASS("Core.Class")
 };

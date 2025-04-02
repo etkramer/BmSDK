@@ -13,13 +13,7 @@ class UProperty : public UField
 
 public:
 	string GetInnerTypeNameManaged() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.Property");
-	}
+	STATIC_CLASS("Core.Property")
 };
 
 CHECK_CLASS(UProperty)
@@ -30,11 +24,7 @@ class UStructProperty : public UProperty
 	FIELD(class UStruct*, Struct)
 
 public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.StructProperty");
-	}
+	STATIC_CLASS("Core.StructProperty")
 };
 
 CHECK_CLASS(UStructProperty)
@@ -45,11 +35,7 @@ class UObjectProperty : public UProperty
 	FIELD(class UClass*, PropertyClass)
 
 public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.ObjectProperty");
-	}
+	STATIC_CLASS("Core.ObjectProperty")
 };
 
 CHECK_CLASS(UObjectProperty)
@@ -60,11 +46,7 @@ class UByteProperty : public UProperty
 	FIELD(class UEnum*, Enum)
 
 public:
-	static class UClass* StaticClass()
-	{
-		static UClass* classObj = nullptr;
-		return classObj ? classObj : classObj = UObject::FindClass("Class Core.ByteProperty");
-	}
+	STATIC_CLASS("Core.ByteProperty")
 };
 
 CHECK_CLASS(UByteProperty)

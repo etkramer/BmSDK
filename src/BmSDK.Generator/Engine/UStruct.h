@@ -24,6 +24,9 @@ class UStruct : public UField
 	class UProperty* TransientPropertyLink;
 
 	TArray<UObject*> ScriptObjectReferences;
+
+public:
+	STATIC_CLASS("Core.Struct")
 };
 
 CHECK_CLASS(UStruct)
