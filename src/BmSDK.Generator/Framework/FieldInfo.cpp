@@ -24,6 +24,12 @@ string FieldInfo::GetNameManaged()
 		return "F" + field->GetName();
 	}
 
+	// Workaround fields with same name as their outer
+	if (field->GetName() == field->Outer->GetName())
+	{
+		return "_" + field->GetName();
+	}
+
 	// De-duplicate prop names for structs and functions
 	if (field->IsA(UProperty::StaticClass()) && (field->Outer->IsA(UFunction::StaticClass()) ||
 												 field->Outer->IsA(UScriptStruct::StaticClass())))

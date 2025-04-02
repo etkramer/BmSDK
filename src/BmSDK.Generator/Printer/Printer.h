@@ -4,12 +4,12 @@ private:
 	Printer() = delete;
 
 public:
-	static void PrintFile(class UClass* class_, ostream& out);
+	static void PrintFile(class UClass* _class, ostream& out);
 
 private:
-	static void PrintClass(class UClass* class_, ostream& out);
-	static void PrintStruct(class UScriptStruct* struct_, ostream& out);
-	static void PrintEnum(class UEnum* enum_, ostream& out);
+	static void PrintClass(class UClass* _class, ostream& out);
+	static void PrintStruct(class UScriptStruct* _struct, ostream& out);
+	static void PrintEnum(class UEnum* _enum, ostream& out);
 	static void PrintProperty(class UProperty* prop, ostream& out);
 	static void PrintFunction(class UFunction* func, ostream& out);
 

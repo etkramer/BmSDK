@@ -54,6 +54,10 @@ string UProperty::GetInnerTypeNameManaged() const
 
 		return "global::BmSDK.TArray<" + innerName + ">";
 	}
+	else if (Class->GetPathName() == "Core.MapProperty")
+	{
+		return "global::BmSDK.TMap<object, object> /* TODO */";
+	}
 	else if (Class->GetPathName() == "Core.DelegateProperty")
 	{
 		return "global::System.IntPtr";

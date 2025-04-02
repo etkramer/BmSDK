@@ -45,8 +45,15 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::PushIndent();
 	{
 		UField* fieldLink = _class->Children;
-		while (fieldLink)
+		for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
 		{
+			// Don't print any members for intrinsic classes - they occasionally exist
+			// at runtime, but we just want their declaration so we can reference them.
+			if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Intrinsic)
+			{
+				break;
+			}
+
 			if (fieldLink->IsA(UProperty::StaticClass()))
 			{
 				Printer::PrintProperty((UProperty*)fieldLink, out);
@@ -83,8 +90,6 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 					out << endl;
 				}
 			}
-
-			fieldLink = fieldLink->Next;
 		}
 	}
 	Printer::PopIndent();
@@ -95,7 +100,7 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 {
 	// Print struct comment
 	Printer::Indent(out) << "/// <summary>" << endl;
-	Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << "<br/>" << endl;
+	Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << endl;
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print struct declaration
@@ -127,22 +132,44 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 	Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintEnum(UEnum* enum_, ostream& out)
+void Printer::PrintEnum(UEnum* _enum, ostream& out)
 {
+	// De-duplicate enum names
+	map<string, int> enumNameFreqs;
+	vector<string> enumNames;
+	for (auto i = 0; i < _enum->Names.Num; i++)
+	{
+		auto nameStr = _enum->Names.ElementAt(i).ToString();
+		if (enumNameFreqs.find(nameStr) == enumNameFreqs.end())
+		{
+			enumNameFreqs[nameStr] = 1;
+			enumNames.push_back(nameStr);
+		}
+		else
+		{
+			enumNameFreqs[nameStr]++;
+		}
+
+		if (enumNameFreqs[nameStr] > 1)
+		{
+			enumNames.push_back(nameStr + "_" + to_string(enumNameFreqs[nameStr]));
+		}
+	}
+
 	// Print prop comment
 	Printer::Indent(out) << "/// <summary>" << endl;
-	Printer::Indent(out) << "/// Enum: " << enum_->GetName() << endl;
+	Printer::Indent(out) << "/// Enum: " << _enum->GetName() << endl;
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print prop declaration
-	Printer::Indent(out) << "public enum " << enum_->GetNameManaged() << endl;
+	Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << endl;
 
 	// Print prop body
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
-	for (INT i = 0; i < enum_->Names.Num; i++)
+	for (auto i = 0u; i < enumNames.size(); i++)
 	{
-		Printer::Indent(out) << enum_->Names.ElementAt(i).ToString() << " = " << i << "," << endl;
+		Printer::Indent(out) << enumNames.at(i) << " = " << i << "," << endl;
 	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
@@ -201,8 +228,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 
 	// Print func comment
 	Printer::Indent(out) << "/// <summary>" << endl;
-	Printer::Indent(out) << "/// Function: " << func->GetName() << "<br/>" << endl;
-	Printer::Indent(out) << "/// (flags = " << (DWORD)func->FunctionFlags << ")" << endl;
+	Printer::Indent(out) << "/// Function: " << func->GetName() << endl;
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print func declaration

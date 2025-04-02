@@ -38,6 +38,12 @@ void Runtime::OnReady()
 	TRACE("\nGObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
 	TRACE("GNames: Num = {}, Max = {}\n", Runtime::GNames->Num, Runtime::GNames->Max);
 
+	// Clear output directory
+	TRACE("Clearing output directory");
+	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
+	fs::remove_all(outDir);
+	fs::create_directory(outDir);
+
 	// Enumerate objects
 	vector<UClass*> classObjects;
 	for (INT i = 0; i < Runtime::GObjects->Num; i++)
@@ -57,8 +63,8 @@ void Runtime::OnReady()
 	for (auto i = 0u; i < classObjects.size(); i++)
 	{
 		auto classObj = classObjects.at(i);
-		auto classFilePath = fs::path("I:\\BmSDK\\src\\BmSDK\\Generated\\") /
-							 classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
+		auto classFilePath =
+			outDir / classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
 
 		if (!fs::exists(classFilePath.parent_path()) &&
 			fs::exists(classFilePath.parent_path().parent_path()))

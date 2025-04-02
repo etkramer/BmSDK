@@ -1,6 +1,6 @@
 ﻿namespace BmSDK;
 
-public class Struct : Field
+public partial class Struct
 {
     /// <summary>
     /// Property: PropertiesSize

@@ -1,6 +1,6 @@
 namespace BmSDK;
 
-public sealed class Function : Struct
+public partial class Function
 {
     /// <summary>
     /// Property: FunctionFlags

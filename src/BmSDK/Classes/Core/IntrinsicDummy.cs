@@ -7,5 +7,4 @@ namespace BmSDK;
 public sealed class IntrinsicDummy : GameObject
 {
     private IntrinsicDummy() { }
-    // TODO
 }

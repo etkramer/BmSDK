@@ -1,12 +1,7 @@
 namespace BmSDK;
 
-public class Property : Field
+public partial class Property : Field
 {
-    public static new Class StaticClass() =>
-        _staticClass ??= StaticFindObjectChecked<Class>(null, null, "Core.Property", false);
-
-    static Class? _staticClass = null;
-
     /// <summary>
     /// Property: ArrayDim
     /// </summary>
