@@ -10,6 +10,7 @@ void Printer::PrintFile(UClass* _class, ostream& out)
 {
 	// Print preprocessor directives
 	Printer::Indent(out) << "#nullable enable annotations" << endl;
+	Printer::Indent(out) << "#pragma warning disable CS0108" << endl;
 	out << endl;
 
 	// Print namespace declaration
@@ -143,8 +144,8 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print prop declaration
-	Printer::Indent(out) << "public " << prop->GetInnerTypeNameManaged() << " " << prop->GetName()
-						 << endl;
+	Printer::Indent(out) << "public " << prop->GetInnerTypeNameManaged() << " "
+						 << prop->GetNameManaged() << endl;
 
 	// Print prop body
 	Printer::Indent(out) << "{" << endl;

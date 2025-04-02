@@ -9,12 +9,12 @@ string UField::GetNameManaged() const
 	{
 		return "GameObject";
 	}
-	else if (this->IsA(UClass::StaticClass()) || this->IsA(UEnum::StaticClass()))
+	else if (this->IsA(UScriptStruct::StaticClass()))
 	{
-		return GetName();
+		return "F" + GetName();
 	}
 
-	return "F" + GetName();
+	return GetName();
 }
 
 string UField::GetPathNameManaged() const

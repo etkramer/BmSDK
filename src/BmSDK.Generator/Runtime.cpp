@@ -78,6 +78,8 @@ void Runtime::OnReady()
 		Printer::PrintFile(classObj, classFileStream);
 	}
 
+	TRACE("Done writing {} classes to disk", classObjects.size());
+
 	// Exit game early
 	exit(0);
 	return;

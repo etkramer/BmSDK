@@ -29,4 +29,12 @@ public:
 	STATIC_CLASS("Core.Struct")
 };
 
+class UScriptStruct : public UStruct
+{
+	// TODO
+
+public:
+	STATIC_CLASS("Core.ScriptStruct")
+};
+
 CHECK_CLASS(UStruct)

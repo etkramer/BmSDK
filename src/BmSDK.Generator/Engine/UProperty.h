@@ -16,8 +16,6 @@ public:
 	STATIC_CLASS("Core.Property")
 };
 
-CHECK_CLASS(UProperty)
-
 CLASS(UStructProperty, 120)
 class UStructProperty : public UProperty
 {
@@ -26,8 +24,6 @@ class UStructProperty : public UProperty
 public:
 	STATIC_CLASS("Core.StructProperty")
 };
-
-CHECK_CLASS(UStructProperty)
 
 CLASS(UObjectProperty, 120)
 class UObjectProperty : public UProperty
@@ -38,8 +34,6 @@ public:
 	STATIC_CLASS("Core.ObjectProperty")
 };
 
-CHECK_CLASS(UObjectProperty)
-
 CLASS(UByteProperty, 120)
 class UByteProperty : public UProperty
 {
@@ -49,4 +43,17 @@ public:
 	STATIC_CLASS("Core.ByteProperty")
 };
 
+CLASS(UArrayProperty, 120)
+class UArrayProperty : public UProperty
+{
+	FIELD(class UProperty*, Inner)
+
+public:
+	STATIC_CLASS("Core.ArrayProperty")
+};
+
+CHECK_CLASS(UProperty)
+CHECK_CLASS(UStructProperty)
+CHECK_CLASS(UObjectProperty)
 CHECK_CLASS(UByteProperty)
+CHECK_CLASS(UArrayProperty)

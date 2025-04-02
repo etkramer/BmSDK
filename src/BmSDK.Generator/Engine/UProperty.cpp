@@ -40,11 +40,23 @@ string UProperty::GetInnerTypeNameManaged() const
 		return structProp->Struct->GetPathNameManaged();
 	}
 	else if (Class->GetPathName() == "Core.ObjectProperty" ||
+			 Class->GetPathName() == "Core.ComponentProperty" ||
 			 Class->GetPathName() == "Core.ClassProperty" ||
-			 Class->GetPathName() == "Core.ComponentProperty")
+			 Class->GetPathName() == "Core.InterfaceProperty")
 	{
 		auto objectProp = (UObjectProperty*)this;
 		return objectProp->PropertyClass->GetPathNameManaged() + "?";
+	}
+	else if (Class->GetPathName() == "Core.ArrayProperty")
+	{
+		auto arrayProp = (UArrayProperty*)this;
+		auto innerName = arrayProp->Inner->GetInnerTypeNameManaged();
+
+		return "global::BmSDK.TArray<" + innerName + ">";
+	}
+	else if (Class->GetPathName() == "Core.DelegateProperty")
+	{
+		return "global::System.IntPtr";
 	}
 
 	return "UNKNOWN";
