@@ -47,7 +47,7 @@ public static class MixinManager
         foreach (var (mixinMethod, mixinAttribute) in mixinMethods)
         {
             var targetMethod = mixinAttribute!.TargetMethod;
-            var targetClass = targetMethod.DeclaringType;
+            var targetClass = Guard.NotNull(targetMethod.DeclaringType);
 
             var targetClassPath = StaticInit.GetClassPathForManagedType(targetClass);
             var targetFuncPath = $"{targetClassPath}:{targetMethod.Name}";

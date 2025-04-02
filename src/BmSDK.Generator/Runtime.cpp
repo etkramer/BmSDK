@@ -84,6 +84,10 @@ void Runtime::OnReady()
 		Printer::PrintFile(classObj, classFileStream);
 	}
 
+	// Print StaticInit file
+	ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc);
+	Printer::PrintStaticInit(classObjects, staticInitFileStream);
+
 	TRACE("Done writing {} classes to disk", classObjects.size());
 
 	// Exit game early

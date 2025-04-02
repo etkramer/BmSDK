@@ -5,6 +5,7 @@ private:
 
 public:
 	static void PrintFile(class UClass* _class, ostream& out);
+	static void PrintStaticInit(vector<UClass*>& classes, ostream& out);
 
 private:
 	static void PrintClass(class UClass* _class, ostream& out);

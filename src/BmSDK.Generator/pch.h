@@ -11,6 +11,7 @@ typedef unsigned __int64 QWORD;
 #include <format>
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 #include <filesystem>

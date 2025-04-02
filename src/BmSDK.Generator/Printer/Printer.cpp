@@ -276,3 +276,46 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
 }
+
+void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
+{
+	// Print usings
+	Printer::Indent(out) << "using System.Collections.Generic;" << endl;
+	out << endl;
+	Printer::Indent(out) << "namespace BmSDK;" << endl;
+	out << endl;
+
+	// Print class declaration
+	Printer::Indent(out) << "static partial class StaticInit" << endl;
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
+	{
+		// Print props
+		Printer::Indent(out) << "static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
+							 << endl;
+		Printer::Indent(out) << "static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
+							 << endl;
+		out << endl;
+
+		// Print StaticInitClasses()
+		Printer::Indent(out) << "public static void StaticInitClasses()" << endl;
+		Printer::Indent(out) << "{" << endl;
+		Printer::PushIndent();
+		{
+			for (auto _class : classes)
+			{
+				auto classPath = _class->GetPathName();
+				auto managedPath = _class->GetPathNameManaged();
+				Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << classPath
+									 << "\"] = typeof(" << managedPath << ");" << endl;
+
+				Printer::Indent(out) << "_managedTypeToClassPathMap[typeof(" << managedPath
+									 << ")] = \"" << classPath << "\";" << endl;
+			}
+		}
+		Printer::PopIndent();
+		Printer::Indent(out) << "}" << endl;
+	}
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
+}
