@@ -38,17 +38,24 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print class declaration
-	Printer::Indent(out) << "public partial class " << _class->GetNameManaged();
+	Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
 	if (_class->SuperField)
 	{
-		out << " : " << _class->SuperField->GetPathNameManaged();
+		out << _class->SuperField->GetPathNameManaged() << ", ";
 	}
-	out << endl;
+	out << "global::BmSDK.IStaticObject" << endl;
 
 	// Print class body
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
 	{
+		// Print StaticClass() helper
+		Printer::Indent(out) << "public static global::BmSDK.Class StaticClass() => _staticClass "
+								"??= StaticFindObjectChecked<Class>(null, null, \""
+							 << _class->GetPathName() << "\", false);" << endl;
+		Printer::Indent(out) << "static global::BmSDK.Class _staticClass = null;" << endl;
+		out << endl;
+
 		UField* fieldLink = _class->Children;
 		for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
 		{
