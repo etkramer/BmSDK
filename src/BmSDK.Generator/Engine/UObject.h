@@ -2,6 +2,10 @@
 
 #include "FName.h"
 
+// NOTE: May need to change for 64-bit.
+#define PROPERTY_ALIGNMENT 4
+#pragma pack(push, PROPERTY_ALIGNMENT)
+
 CLASS(UObject, 48)
 class UObject
 {
@@ -16,6 +20,10 @@ class UObject
 	FIELD(UObject*, Class)
 
 	UObject* ObjectArchetype;
+
+private:
+	// Dummy function so a vtable will be created.
+	virtual void VirtualDummy() {}
 
 public:
 	FORCEINLINE string GetName() const { return this->Name.ToString(); };

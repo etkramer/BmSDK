@@ -3,6 +3,9 @@
 #include "Engine/UClass.h"
 #include "Engine/UProperty.h"
 #include "Engine/UEnum.h"
+#include "Engine/UFunction.h"
+
+#include <map>
 
 int Printer::IndentLevel = 0;
 
@@ -65,6 +68,15 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			else if (fieldLink->IsA(UScriptStruct::StaticClass()))
 			{
 				Printer::PrintStruct((UScriptStruct*)fieldLink, out);
+
+				if (fieldLink->Next)
+				{
+					out << endl;
+				}
+			}
+			else if (fieldLink->IsA(UFunction::StaticClass()))
+			{
+				Printer::PrintFunction((UFunction*)fieldLink, out);
 
 				if (fieldLink->Next)
 				{
@@ -152,6 +164,77 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 	Printer::PushIndent();
 	Printer::Indent(out) << "get => throw new global::System.NotImplementedException();" << endl;
 	Printer::Indent(out) << "set => throw new global::System.NotImplementedException();" << endl;
+	Printer::PopIndent();
+	Printer::Indent(out) << "}" << endl;
+}
+
+void Printer::PrintFunction(class UFunction* func, ostream& out)
+{
+	vector<UProperty*> params = {};
+	UProperty* returnParam = nullptr;
+
+	// Skip operator functions
+	if ((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Operator)
+	{
+		return;
+	}
+
+	// Gather func params
+	UField* fieldLink = func->Children;
+	while (fieldLink)
+	{
+		if (fieldLink->IsA(UProperty::StaticClass()))
+		{
+			auto prop = (UProperty*)fieldLink;
+			if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_ReturnParm)
+			{
+				returnParam = prop;
+			}
+			else if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_Parm)
+			{
+				params.push_back(prop);
+			}
+		}
+
+		fieldLink = fieldLink->Next;
+	}
+
+	// Print func comment
+	Printer::Indent(out) << "/// <summary>" << endl;
+	Printer::Indent(out) << "/// Function: " << func->GetName() << "<br/>" << endl;
+	Printer::Indent(out) << "/// (flags = " << (DWORD)func->FunctionFlags << ")" << endl;
+	Printer::Indent(out) << "/// </summary>" << endl;
+
+	// Print func declaration
+	Printer::Indent(out) << "public unsafe ";
+	if ((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static)
+	{
+		out << "static ";
+	}
+	out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
+	out << func->GetNameManaged() << "(";
+	for (auto i = 0u; i < params.size(); i++)
+	{
+		auto prop = params[i];
+
+		// Print param declaration
+		out << prop->GetInnerTypeNameManaged() << " " << prop->GetNameManaged();
+		if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm)
+		{
+			out << " = default";
+		}
+
+		if (i < params.size() - 1)
+		{
+			out << ", ";
+		}
+	}
+	out << ")" << endl;
+
+	// Print func body
+	Printer::Indent(out) << "{" << endl;
+	Printer::PushIndent();
+	Printer::Indent(out) << "throw new global::System.NotImplementedException();" << endl;
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
 }

@@ -3,7 +3,7 @@
 #include "TArray.h"
 #include "UField.h"
 
-CLASS(UStruct, 136)
+CLASS(UStruct, 132)
 class UStruct : public UField
 {
 	BYTE UNK1[8];
@@ -11,19 +11,7 @@ class UStruct : public UField
 	FIELD(UField*, Children)
 	FIELD(INT, PropertiesSize)
 
-	TArray<BYTE> Script;
-	INT TextPos;
-	INT Line;
-	INT MinAlignment;
-
-	class UProperty* RefLink;
-	class UProperty* PropertyLink;
-	class UProperty* ConfigLink;
-	class UProperty* ConstructorLink;
-	class UProperty* ComponentPropertyLink;
-	class UProperty* TransientPropertyLink;
-
-	TArray<UObject*> ScriptObjectReferences;
+	BYTE UNK2[58];
 
 public:
 	STATIC_CLASS("Core.Struct")

@@ -8,6 +8,7 @@
     <ClCompile Include="Engine\UProperty.cpp" />
     <ClCompile Include="Printer\Printer.cpp" />
     <ClCompile Include="Framework\Debug.cpp" />
+    <ClCompile Include="Framework\FieldInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Detours.h" />

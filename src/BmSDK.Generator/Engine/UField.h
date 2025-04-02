@@ -1,6 +1,7 @@
 #pragma once
 
 #include "UObject.h"
+#include "Framework/FieldInfo.h"
 
 CLASS(UField, 56)
 class UField : public UObject
@@ -10,8 +11,9 @@ class UField : public UObject
 	FIELD(UField*, Next)
 
 public:
-	string GetNameManaged() const;
-	string GetPathNameManaged() const;
+	FieldInfo* GetInfo();
+	string GetNameManaged() { return GetInfo()->managedName; }
+	string GetPathNameManaged() { return GetInfo()->managedPathName; }
 	STATIC_CLASS("Core.Field")
 };
 

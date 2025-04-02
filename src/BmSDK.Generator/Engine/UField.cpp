@@ -2,27 +2,18 @@
 #include "UStruct.h"
 #include "UClass.h"
 #include "UEnum.h"
+#include "UProperty.h"
+#include "UFunction.h"
+#include <map>
 
-string UField::GetNameManaged() const
+static map<UField*, FieldInfo*> fieldInfoMap = {};
+
+FieldInfo* UField::GetInfo()
 {
-	if (this->GetPathName() == "Core.Object")
+	if (fieldInfoMap.find(this) == fieldInfoMap.end())
 	{
-		return "GameObject";
-	}
-	else if (this->IsA(UScriptStruct::StaticClass()))
-	{
-		return "F" + GetName();
+		fieldInfoMap[this] = new FieldInfo(this);
 	}
 
-	return GetName();
-}
-
-string UField::GetPathNameManaged() const
-{
-	if (this->IsA(UClass::StaticClass()))
-	{
-		return "global::" + GetPackageNameManaged() + "." + GetNameManaged();
-	}
-
-	return ((UField*)this->Outer)->GetPathNameManaged() + "." + GetNameManaged();
+	return fieldInfoMap[this];
 }
