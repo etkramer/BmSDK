@@ -94,22 +94,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>D:\Games\BatmanArkhamAsylum\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)build\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>D:\Games\BatmanArkhamAsylum\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)build\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>D:\Games\BatmanArkhamAsylum\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)build\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>D:\Games\BatmanArkhamAsylum\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)build\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
   </PropertyGroup>

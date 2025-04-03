@@ -33,6 +33,9 @@ void Runtime::OnAttach()
 
 void Runtime::OnReady()
 {
+	// Skip SDK generation for now
+	return;
+
 	TRACE("\nReady, preparing SDK generation");
 
 	TRACE("\nGObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
@@ -90,9 +93,9 @@ void Runtime::OnReady()
 
 	TRACE("Done writing {} classes to disk", classObjects.size());
 
-	// Exit game early
-	exit(0);
-	return;
+	// // Exit game early
+	// exit(0);
+	// return;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)

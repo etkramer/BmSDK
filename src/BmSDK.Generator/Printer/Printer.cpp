@@ -35,6 +35,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	}
 	Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
 	Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
+	Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print class declaration
