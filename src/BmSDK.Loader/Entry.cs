@@ -92,8 +92,8 @@ static class Entry
         IntPtr UnusedResult
     )
     {
-        var funcObj = MarshalUtil.MarshalToManaged<Function>(&Function);
-        var selfObj = MarshalUtil.MarshalToManaged<GameObject>(&self);
+        var funcObj = MarshalUtil.ToManaged<Function>(&Function);
+        var selfObj = MarshalUtil.ToManaged<GameObject>(&self);
 
         var funcNameForGameInit = "Engine.GameInfo:InitGame";
         var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";

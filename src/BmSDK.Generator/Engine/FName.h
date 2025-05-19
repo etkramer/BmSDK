@@ -9,6 +9,7 @@ constexpr INT NAME_INDEX_SHIFT = 1;
 // complete FNameEntry instances, basing the actual size on the name length.
 class FNameEntry
 {
+public: // REMOVE ME
 	QWORD Flags;
 	INT Index;
 	FNameEntry* HashNext;
@@ -43,9 +44,9 @@ class FName
 	FIELD(INT, Number)
 
 public:
-	string ToString() const { return GetNameEntry().ToString(); }
+	string ToString() const { return GetNameEntry()->ToString(); }
 
-	const FNameEntry GetNameEntry() const { return *Runtime::GNames->ElementAt(Index); }
+	const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
 };
 
 CHECK_CLASS(FName)

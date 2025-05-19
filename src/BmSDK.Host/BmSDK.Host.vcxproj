@@ -50,14 +50,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -78,24 +78,6 @@
       <AdditionalDependencies>libnethost.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
-    <CustomBuildStep />
-    <PostBuildEvent>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
-      <Message>Deploying .asi</Message>
-    </PostBuildEvent>
-    <CustomBuildStep />
-    <CustomBuildStep>
-      <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Deploying to game directory</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>NONE;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>NONE;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -119,25 +101,6 @@
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>libnethost.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent />
-    <CustomBuildStep />
-    <PostBuildEvent>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
-      <Message>Deploying .asi</Message>
-    </PostBuildEvent>
-    <CustomBuildStep />
-    <CustomBuildStep>
-      <Command>xcopy /hievry /s "$(SolutionDir)build\" "D:\Games\BatmanArkhamAsylum\Binaries\"</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Deploying to game directory</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>NONE;%(Outputs)</Outputs>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Inputs>NONE;%(Inputs)</Inputs>
-    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />

@@ -94,24 +94,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)build\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
-    <CustomBuildAfterTargets>Build</CustomBuildAfterTargets>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -131,15 +135,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
     <CustomBuildStep>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Deploying .asi</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(TargetDir)$(TargetName).asi;%(Outputs)</Outputs>
-      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+      <Message />
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -164,15 +164,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent />
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep />
     <CustomBuildStep>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Deploying .asi</Message>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Outputs>$(TargetDir)$(TargetName).asi;%(Outputs)</Outputs>
-      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+      <Message />
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -194,14 +190,18 @@
     </Link>
     <PostBuildEvent />
     <CustomBuildStep>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Deploying .asi</Message>
+      <Message>
+      </Message>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(TargetDir)$(TargetName).asi;%(Outputs)</Outputs>
-      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -227,14 +227,18 @@
     </Link>
     <PostBuildEvent />
     <CustomBuildStep>
-      <Command>cp $(TargetPath) $(TargetDir)$(TargetName).asi</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Deploying .asi</Message>
+      <Message>
+      </Message>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>$(TargetDir)$(TargetName).asi;%(Outputs)</Outputs>
-      <Inputs>$(TargetPath);%(Inputs)</Inputs>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

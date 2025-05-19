@@ -7,6 +7,8 @@
 
 #include <vector>
 #include <fstream>
+#include <thread>
+#include <atomic>
 
 uintptr_t Runtime::BaseAddress = 0;
 
@@ -29,23 +31,36 @@ void Runtime::OnAttach()
 
 	// Don't do anything else until engine is ready
 	Runtime::DetourProcessEvent();
+
+	// Start a background thread to wait for keypress
+	std::thread(
+		[]()
+		{
+			TRACE("Press 'P' to start SDK generation");
+			while (true)
+			{
+				if (GetAsyncKeyState('P') & 0x8000)
+				{
+					Runtime::OnReady();
+					break;
+				}
+				std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			}
+		})
+		.detach();
 }
 
 void Runtime::OnReady()
 {
-	// Skip SDK generation for now
-	return;
-
-	TRACE("\nReady, preparing SDK generation");
-
-	TRACE("\nGObjects: Num = {}, Max = {}", Runtime::GObjects->Num, Runtime::GObjects->Max);
-	TRACE("GNames: Num = {}, Max = {}\n", Runtime::GNames->Num, Runtime::GNames->Max);
+	TRACE("\nPreparing SDK generation");
 
 	// Clear output directory
 	TRACE("Clearing output directory");
-	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
+	fs::path outDir = "I:\\BmSDK2\\src\\BmSDK\\Generated\\";
 	fs::remove_all(outDir);
 	fs::create_directory(outDir);
+
+	TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
 	// Enumerate objects
 	vector<UClass*> classObjects;
@@ -60,7 +75,7 @@ void Runtime::OnReady()
 		}
 	}
 
-	TRACE("Found {} loaded classes", classObjects.size());
+	TRACE("Found {} classes, printing", classObjects.size());
 
 	// Print some classes
 	for (auto i = 0u; i < classObjects.size(); i++)
@@ -83,7 +98,6 @@ void Runtime::OnReady()
 			continue;
 		}
 
-		// TRACE("Printing {}", classObj->GetPathName());
 		Printer::PrintFile(classObj, classFileStream);
 	}
 
@@ -93,9 +107,9 @@ void Runtime::OnReady()
 
 	TRACE("Done writing {} classes to disk", classObjects.size());
 
-	// // Exit game early
-	// exit(0);
-	// return;
+	// Exit game early
+	exit(0);
+	return;
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)

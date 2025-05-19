@@ -26,7 +26,7 @@ public partial class GameObject
                 LoadFlags
             );
 
-            return MarshalUtil.MarshalToManaged<Package>(&result);
+            return MarshalUtil.ToManaged<Package>(&result);
         }
     }
 
@@ -65,7 +65,7 @@ public partial class GameObject
             );
 
             return Guard.NotNull(
-                (T?)(object?)MarshalUtil.MarshalToManaged<GameObject>(&result),
+                (T?)(object?)MarshalUtil.ToManaged<GameObject>(&result),
                 $"Failed to find object: {Name}"
             );
         }
@@ -89,7 +89,7 @@ public partial class GameObject
     )
     {
         var result = ConstructObjectInternal(Class, Outer, Name, SetFlags, Template);
-        return MarshalUtil.MarshalToManaged<GameObject>(&result);
+        return MarshalUtil.ToManaged<GameObject>(&result);
     }
 
     /// <inheritdoc cref="ConstructObject"/>

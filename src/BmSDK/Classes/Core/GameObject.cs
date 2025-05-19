@@ -21,7 +21,7 @@ public partial class GameObject
     /// Gets a property value from a <see cref="GameObject"/> instance
     /// </summary>
     public static unsafe TValue GetPropertyValue<TValue>(GameObject obj, IntPtr offset) =>
-        MarshalUtil.MarshalToManaged<TValue>((obj.Ptr + offset).ToPointer());
+        MarshalUtil.ToManaged<TValue>((obj.Ptr + offset).ToPointer());
 
     /// <summary>
     /// Gets a property value from a struct instance
@@ -31,7 +31,7 @@ public partial class GameObject
     {
         fixed (TStruct* ptr = &obj)
         {
-            return MarshalUtil.MarshalToManaged<TValue>(((IntPtr)ptr + offset).ToPointer());
+            return MarshalUtil.ToManaged<TValue>(((IntPtr)ptr + offset).ToPointer());
         }
     }
 
@@ -42,7 +42,7 @@ public partial class GameObject
         GameObject obj,
         IntPtr offset,
         TValue value
-    ) => MarshalUtil.MarshalToNative(value, (obj.Ptr + offset).ToPointer());
+    ) => MarshalUtil.ToUnmanaged(value, (obj.Ptr + offset).ToPointer());
 
     /// <summary>
     /// Sets a property value for a struct instance
@@ -56,7 +56,7 @@ public partial class GameObject
     {
         fixed (TStruct* ptr = &obj)
         {
-            MarshalUtil.MarshalToNative(value, ((IntPtr)ptr + offset).ToPointer());
+            MarshalUtil.ToUnmanaged(value, ((IntPtr)ptr + offset).ToPointer());
         }
     }
 }

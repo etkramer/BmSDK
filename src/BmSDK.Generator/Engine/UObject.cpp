@@ -63,6 +63,7 @@ class UClass* UObject::FindClass(const string& classFullName)
 
 	if (classCache.empty())
 	{
+		// TODO: Why -1?
 		for (INT i = 0; i < (Runtime::GObjects->Num - 1); i++)
 		{
 			UObject* obj = Runtime::GObjects->ElementAt(i);

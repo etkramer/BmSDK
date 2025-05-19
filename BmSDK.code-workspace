@@ -89,28 +89,58 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Build BmSDK",
+        "label": "Build All",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln"],
-        // "args": ["src/BmSDK.Host/BmSDK.Host.vcxproj"],
+        "args": ["BmSDK.sln", "/t:BmSDK_Generator", "/t:BmSDK", "/t:BmSDK_Loader", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
-      }
+      },
+      {
+        "label": "Build SDK",
+        "type": "process",
+        "command": "${workspaceFolder}/src/MSBuild.cmd",
+        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Loader", "/t:BmSDK_Host"],
+        "problemMatcher": "$msCompile",
+        "presentation": { "echo": false, "clear": true },
+        "group": { "kind": "build", "isDefault": true }
+      },
+      {
+        "label": "Build Generator",
+        "type": "process",
+        "command": "${workspaceFolder}/src/MSBuild.cmd",
+        "args": ["BmSDK.sln", "/t:BmSDK_Generator"],
+        "problemMatcher": "$msCompile",
+        "presentation": { "echo": false, "clear": true },
+        "group": { "kind": "build", "isDefault": true }
+      },
     ]
   },
   "launch": {
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Launch Game",
+        "name": "Launch",
         "type": "cppvsdbg",
         "request": "launch",
-        "preLaunchTask": "Build BmSDK",
-        "program": "D:\\Games\\BatmanArkhamAsylum\\Binaries\\ShippingPC-BmGame.exe",
+        "preLaunchTask": "Build All",
+        "program": "${workspaceFolder}/bin/Binaries/ShippingPC-BmGame.exe",
         "args": ["-nosplash"],
-        "cwd": "D:\\Games\\BatmanArkhamAsylum\\Binaries",
+        "cwd": "${workspaceFolder}/bin/Binaries/",
+        "logging": {
+          "exceptions": false,
+          "moduleLoad": false
+        }
+      },
+      {
+        "name": "Launch Generator",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "preLaunchTask": "Build Generator",
+        "program": "${workspaceFolder}/bin/Binaries/ShippingPC-BmGame.exe",
+        "args": ["-nosplash"],
+        "cwd": "${workspaceFolder}/bin/Binaries/",
         "logging": {
           "exceptions": false,
           "moduleLoad": false

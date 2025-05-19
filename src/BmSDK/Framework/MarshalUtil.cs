@@ -2,12 +2,12 @@
 
 namespace BmSDK.Framework;
 
-public static class MarshalUtil
+public static unsafe class MarshalUtil
 {
     static readonly Dictionary<IntPtr, GameObject> _managedObjects = [];
 
     // Marshals unmanaged data to managed, then returns it.
-    public static unsafe TManaged MarshalToManaged<TManaged>(void* data)
+    public static TManaged ToManaged<TManaged>(void* data)
     {
         // TODO: UStrProperty, UArrayProperty
 
@@ -40,7 +40,7 @@ public static class MarshalUtil
     }
 
     // Marshals a managed object to native, then copies it into an existing buffer.
-    public static unsafe void MarshalToNative<TManaged>(TManaged value, void* data)
+    public static void ToUnmanaged<TManaged>(TManaged value, void* data)
     {
         // TODO: UStrProperty, UArrayProperty
 
@@ -68,12 +68,12 @@ public static class MarshalUtil
             // Handle null object references.
             if (value is null)
             {
-                MarshalToNative(IntPtr.Zero, data);
+                ToUnmanaged(IntPtr.Zero, data);
                 return;
             }
 
             // We already have a pointer to this object's native instance, so just assign it.
-            MarshalToNative(((GameObject)(object)value!).Ptr, data);
+            ToUnmanaged(((GameObject)(object)value!).Ptr, data);
             return;
         }
         throw new NotImplementedException(
@@ -81,7 +81,7 @@ public static class MarshalUtil
         );
     }
 
-    public static unsafe void CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    public static void CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
         Guard.Require(
             !_managedObjects.ContainsKey(objPtr),
@@ -96,7 +96,7 @@ public static class MarshalUtil
         newObj.Ptr = objPtr;
     }
 
-    public static unsafe void DestroyManagedWrapper(IntPtr objPtr)
+    public static void DestroyManagedWrapper(IntPtr objPtr)
     {
         Guard.Require(
             _managedObjects.Remove(objPtr),

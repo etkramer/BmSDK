@@ -12,11 +12,8 @@ public unsafe struct TArray<TManaged> : IEnumerable<TManaged>
 
     public readonly TManaged this[int idx]
     {
-        get =>
-            MarshalUtil.MarshalToManaged<TManaged>(
-                ((byte*)AllocatorInstance) + (idx * sizeof(int))
-            );
-        set => MarshalUtil.MarshalToNative(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
+        get => MarshalUtil.ToManaged<TManaged>(((byte*)AllocatorInstance) + (idx * sizeof(int)));
+        set => MarshalUtil.ToUnmanaged(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
     }
 
     public readonly unsafe IEnumerator<TManaged> GetEnumerator()
