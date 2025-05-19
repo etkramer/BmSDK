@@ -16,7 +16,7 @@ static class Entry
 
     public static void DllMain()
     {
-        Debug.WriteLine($"Hello from BmSDK.Loader");
+        Debug.WriteLine($"Hello from BmSDK loader");
 
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();

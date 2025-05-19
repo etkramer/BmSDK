@@ -92,7 +92,7 @@
         "label": "Build All",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK_Generator", "/t:BmSDK", "/t:BmSDK_Loader", "/t:BmSDK_Host"],
+        "args": ["BmSDK.sln", "/t:BmSDK_Generator", "/t:BmSDK", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
@@ -101,7 +101,7 @@
         "label": "Build SDK",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Loader", "/t:BmSDK_Host"],
+        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }

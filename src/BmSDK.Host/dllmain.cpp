@@ -26,7 +26,12 @@ HostCloseFn hostCloseFn = nullptr;
 HostLoadAssemblyFn hostLoadAssemblyFn = nullptr;
 
 // Filesystem helpers
-wstring GetModulePath() { wstring result(MAX_PATH, L'\0'); GetModuleFileName(NULL, result.data(), MAX_PATH); return result; }
+wstring GetModulePath()
+{
+	wstring result(MAX_PATH, L'\0');
+	GetModuleFileName(NULL, result.data(), MAX_PATH);
+	return result;
+}
 wstring GetModuleDir() { return path(GetModulePath()).parent_path(); }
 
 // Entry point func
@@ -41,8 +46,10 @@ bool LoadHostModule()
 
 	// Load hostfxr.dll
 	HMODULE hostModule = LoadLibraryW(hostPath.data());
-	hostInitFn = (hostfxr_initialize_for_runtime_config_fn)GetProcAddress(hostModule, "hostfxr_initialize_for_runtime_config");
-	hostGetDelegateFn = (hostfxr_get_runtime_delegate_fn)GetProcAddress(hostModule, "hostfxr_get_runtime_delegate");
+	hostInitFn = (hostfxr_initialize_for_runtime_config_fn)GetProcAddress(
+		hostModule, "hostfxr_initialize_for_runtime_config");
+	hostGetDelegateFn =
+		(hostfxr_get_runtime_delegate_fn)GetProcAddress(hostModule, "hostfxr_get_runtime_delegate");
 	hostCloseFn = (hostfxr_close_fn)GetProcAddress(hostModule, "hostfxr_close");
 
 	return (hostInitFn && hostGetDelegateFn && hostCloseFn);
@@ -62,14 +69,18 @@ bool LoadAssembly(wstring asmPath)
 	assert(!hostInitFn(configPath.c_str(), nullptr, &ctx) && ctx);
 
 	// Find 'load assembly' func
-	assert(!hostGetDelegateFn(ctx, hdt_load_assembly_and_get_function_pointer, (void**)(void*)(&hostLoadAssemblyFn)) && hostLoadAssemblyFn);
+	assert(!hostGetDelegateFn(ctx, hdt_load_assembly_and_get_function_pointer,
+							  (void**)(void*)(&hostLoadAssemblyFn)) &&
+		   hostLoadAssemblyFn);
 	hostCloseFn(ctx);
 
 	// Load managed assembly
-	wstring entryTypeName = TEXT("BmSDK.Loader.Entry, BmSDK.Loader");
+	wstring entryTypeName = TEXT("BmSDK.Loader.Entry, BmSDK");
 	wstring entryMethodName = TEXT("DllMain");
-	wstring entryDelegateName = TEXT("BmSDK.Loader.Entry+DllMainDelegate, BmSDK.Loader");
-	auto loadAssemblyResult = hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(), entryDelegateName.c_str(), nullptr, (void**)&entryFn);
+	wstring entryDelegateName = TEXT("BmSDK.Loader.Entry+DllMainDelegate, BmSDK");
+	auto loadAssemblyResult =
+		hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(),
+						   entryDelegateName.c_str(), nullptr, (void**)&entryFn);
 
 	// Call loader entry func
 	assert(loadAssemblyResult == 0);
@@ -83,22 +94,20 @@ void OnAttach()
 	assert(LoadHostModule());
 
 	// Load BmSDK.Loader.dll
-	assert(LoadAssembly(TEXT("/sdk/BmSDK.Loader")));
+	assert(LoadAssembly(TEXT("/sdk/BmSDK")));
 }
 
-BOOL APIENTRY DllMain(HMODULE hModule,
-                      DWORD ul_reason_for_call,
-                      LPVOID lpReserved)
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
 		OnAttach();
 		break;
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
+	case DLL_THREAD_ATTACH:
+	case DLL_THREAD_DETACH:
+	case DLL_PROCESS_DETACH:
+		break;
+	}
+	return TRUE;
 }
