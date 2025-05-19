@@ -5,7 +5,6 @@
 #include "Engine\GameOffsets.h"
 #include "Printer\Printer.h"
 
-#include <vector>
 #include <fstream>
 #include <thread>
 #include <atomic>
@@ -29,10 +28,7 @@ void Runtime::OnAttach()
 	Runtime::GObjects = (TArray<UObject*>*)(void*)(Runtime::BaseAddress + GameOffsets::GObjects);
 	Runtime::GNames = (TArray<FNameEntry*>*)(void*)(Runtime::BaseAddress + GameOffsets::GNames);
 
-	// Don't do anything else until engine is ready
-	Runtime::DetourProcessEvent();
-
-	// Start a background thread to wait for keypress
+	// Wait for keypress in another thread
 	std::thread(
 		[]()
 		{
@@ -41,16 +37,17 @@ void Runtime::OnAttach()
 			{
 				if (GetAsyncKeyState('P') & 0x8000)
 				{
-					Runtime::OnReady();
+					// Perform SDK generation
+					Runtime::GenerateSDK();
 					break;
 				}
-				std::this_thread::sleep_for(std::chrono::milliseconds(100));
+				this_thread::sleep_for(chrono::milliseconds(100));
 			}
 		})
 		.detach();
 }
 
-void Runtime::OnReady()
+void Runtime::GenerateSDK()
 {
 	TRACE("\nPreparing SDK generation");
 

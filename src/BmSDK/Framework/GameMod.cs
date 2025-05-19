@@ -1,6 +1,6 @@
 namespace BmSDK.Framework;
 
-public abstract class ManagedPlugin
+public abstract class GameMod
 {
     /// <summary>
     /// Called once when the engine first becomes ready. Should be used to perform basic setup

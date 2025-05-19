@@ -6,17 +6,17 @@ namespace BmSDK.Framework;
 
 public static class MemUtil
 {
-    static IntPtr _baseAddress = 0;
+    static IntPtr s_baseAddress = 0;
 
     public static IntPtr GetBaseAddress()
     {
-        if (_baseAddress == 0)
+        if (s_baseAddress == 0)
         {
             var proc = Process.GetCurrentProcess();
-            _baseAddress = Guard.NotNull(proc.MainModule?.BaseAddress);
+            s_baseAddress = Guard.NotNull(proc.MainModule?.BaseAddress);
         }
 
-        return _baseAddress;
+        return s_baseAddress;
     }
 
     public static unsafe IntPtr GetIntPointer(IntPtr offset) => (IntPtr)GetPointer(offset);

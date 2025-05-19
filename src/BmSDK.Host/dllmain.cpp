@@ -75,9 +75,9 @@ bool LoadAssembly(wstring asmPath)
 	hostCloseFn(ctx);
 
 	// Load managed assembly
-	wstring entryTypeName = TEXT("BmSDK.Loader.Entry, BmSDK");
-	wstring entryMethodName = TEXT("DllMain");
-	wstring entryDelegateName = TEXT("BmSDK.Loader.Entry+DllMainDelegate, BmSDK");
+	wstring entryTypeName = TEXT("BmSDK.Loader, BmSDK");
+	wstring entryMethodName = TEXT("GuardedDllMain");
+	wstring entryDelegateName = TEXT("BmSDK.Loader+DllMainDelegate, BmSDK");
 	auto loadAssemblyResult =
 		hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(),
 						   entryDelegateName.c_str(), nullptr, (void**)&entryFn);

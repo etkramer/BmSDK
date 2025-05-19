@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿namespace BmSDK.Framework;
 
-namespace BmSDK.Framework;
+#pragma warning disable CS8500
 
 public static unsafe class MarshalUtil
 {
-    static readonly Dictionary<IntPtr, GameObject> _managedObjects = [];
+    static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Marshals unmanaged data to managed, then returns it.
     public static TManaged ToManaged<TManaged>(void* data)
@@ -28,7 +28,7 @@ public static unsafe class MarshalUtil
 
             // We should already have wrappers for all objects.
             Guard.Require(
-                _managedObjects.TryGetValue(objPtr, out var obj),
+                s_managedObjects.TryGetValue(objPtr, out var obj),
                 $"No managed wrapper found for object at 0x{objPtr:X}"
             );
             return (TManaged)(object)Guard.NotNull(obj);
@@ -84,12 +84,12 @@ public static unsafe class MarshalUtil
     public static void CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
         Guard.Require(
-            !_managedObjects.ContainsKey(objPtr),
+            !s_managedObjects.ContainsKey(objPtr),
             $"Object 0x{objPtr:X} already has a managed wrapper!"
         );
 
         // Create a new managed object
-        var newObj = _managedObjects[objPtr] = Guard.NotNull(
+        var newObj = s_managedObjects[objPtr] = Guard.NotNull(
             (GameObject?)Activator.CreateInstance(managedType, true),
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
@@ -99,7 +99,7 @@ public static unsafe class MarshalUtil
     public static void DestroyManagedWrapper(IntPtr objPtr)
     {
         Guard.Require(
-            _managedObjects.Remove(objPtr),
+            s_managedObjects.Remove(objPtr),
             $"Object 0x{objPtr:X} does not have a managed wrapper!"
         );
     }

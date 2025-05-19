@@ -101,7 +101,7 @@
         "label": "Build SDK",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Host"],
+        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Host", "/t:DemoMod"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }

@@ -12,7 +12,7 @@ private:
 
 public:
 	static void OnAttach();
-	static void OnReady();
+	static void GenerateSDK();
 
 private:
 	static void DetourProcessEvent();

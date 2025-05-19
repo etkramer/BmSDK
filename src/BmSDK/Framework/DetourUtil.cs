@@ -4,7 +4,7 @@ using BmSDK.Framework;
 using Windows.Win32;
 using PInvokeDetours = Microsoft.Detours.PInvoke;
 
-namespace BmSDK.Loader;
+namespace BmSDK.Framework;
 
 public static class DetourUtil
 {

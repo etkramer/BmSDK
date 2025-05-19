@@ -2,9 +2,9 @@
 using System.Reflection;
 using BmSDK.Framework;
 
-namespace BmSDK.Loader;
+namespace BmSDK;
 
-static class Entry
+static class Loader
 {
     delegate void DllMainDelegate();
 
@@ -12,7 +12,20 @@ static class Entry
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ObjectDtorDelegate? _ObjectDtorDetourBase = null;
 
-    static List<ManagedPlugin> _pluginInstances = [];
+    static readonly List<GameMod> s_modInstances = [];
+
+    public static void GuardedDllMain()
+    {
+        try
+        {
+            DllMain();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
+    }
 
     public static void DllMain()
     {
@@ -31,37 +44,43 @@ static class Entry
                 .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
         };
 
-        // Find plugins
-        // var pluginsDir = Path.Combine(Environment.CurrentDirectory, "plugins");
-        // foreach (var pluginDir in Directory.GetDirectories(pluginsDir))
-        // {
-        //     // Locate/load plugin assembly
-        //     var pluginName = Path.GetFileName(pluginDir);
-        //     var pluginPath = Path.Combine(pluginDir, $"{pluginName}.dll");
-        //     var pluginAssembly = Assembly.LoadFile(pluginPath);
+        // Find mods (note we're relative to the host asi)
+        var modsDir = Path.Combine(Environment.CurrentDirectory, "..", "mods");
+        if (Directory.Exists(modsDir))
+        {
+            foreach (var modDir in Directory.GetDirectories(modsDir))
+            {
+                // Load mod assembly
+                var modName = Path.GetFileName(modDir);
+                var modPath = Path.Combine(modDir, $"{modName}.dll");
+                var modAssembly = Assembly.LoadFile(modPath);
 
-        //     var pluginType = pluginAssembly
-        //         .GetTypes()
-        //         .Where(type => type.IsAssignableTo(typeof(ManagedPlugin)))
-        //         .FirstOrDefault();
+                // Locate mod instance type
+                var modType = modAssembly
+                    .GetTypes()
+                    .Where(type => type.IsAssignableTo(typeof(GameMod)))
+                    .FirstOrDefault();
 
-        //     if (pluginType is null)
-        //     {
-        //         Debug.WriteLine($"No {nameof(ManagedPlugin)} instance found in {pluginName}");
-        //         continue;
-        //     }
-        //     else
-        //     {
-        //         // Instantiate plugin type
-        //         var pluginInstance = Guard.NotNull(
-        //             Activator.CreateInstance(pluginType) as ManagedPlugin,
-        //             $"Failed to instantiate plugin {pluginName}"
-        //         );
+                if (modType is null)
+                {
+                    Debug.WriteLine($"No {nameof(GameMod)} type found in {modName}");
+                    continue;
+                }
+                else
+                {
+                    // Instantiate mod type
+                    var modInstance = Guard.NotNull(
+                        Activator.CreateInstance(modType) as GameMod,
+                        $"Failed to instantiate mod {modName}"
+                    );
 
-        //         Debug.WriteLine($"Loaded plugin {pluginName}");
-        //         _pluginInstances.Add(pluginInstance);
-        //     }
-        // }
+                    s_modInstances.Add(modInstance);
+                }
+            }
+        }
+
+        // Report successful load
+        Trace.WriteLine($"Loaded {s_modInstances.Count} mod(s)");
 
         // Create function detours
         // _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
@@ -92,73 +111,36 @@ static class Entry
         IntPtr UnusedResult
     )
     {
-        var funcObj = MarshalUtil.ToManaged<Function>(&Function);
-        var selfObj = MarshalUtil.ToManaged<GameObject>(&self);
-
-        var funcNameForGameInit = "Engine.GameInfo:InitGame";
-        var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
-
-        // Perform game load logic
-        if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
+        RunGuarded(() =>
         {
-            // Call OnInit() for plugins
-            _pluginInstances.ForEach(plugin => plugin.OnInit());
-            HasGameInited = true;
-        }
+            IntPtr funcPtr = Function;
+            IntPtr selfPtr = self;
 
-        // Perform game start logic
-        if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
-        {
-            // Call OnStart() for plugins
-            _pluginInstances.ForEach(plugin => plugin.OnStart());
-            HasGameStarted = true;
-        }
+            var funcObj = MarshalUtil.ToManaged<Function>(&funcPtr);
+            var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
 
-        // Do we have any 'before' mixins?
-        if (
-            MixinManager.TryGetMixinMethods(
-                selfObj,
-                funcObj,
-                MixinOrder.Before,
-                out var mixinMethods
-            )
-        )
-        {
-            foreach (var mixinMethod in mixinMethods)
+            var funcNameForGameInit = "Engine.GameInfo:InitGame";
+            var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
+
+            // Perform game load logic
+            if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
             {
-                // Call mixin method
-                // TODO: Marshal rest of parameters
-                var mixinParams = new object[] { selfObj };
-                var mixinResult = mixinMethod.Invoke(null, mixinParams);
-
-                // Check if we need to stop the original function from executing
-                if (mixinResult is bool result && !result)
-                {
-                    return;
-                }
+                // Call OnInit() for plugins
+                s_modInstances.ForEach(plugin => plugin.OnInit());
+                HasGameInited = true;
             }
-        }
+
+            // Perform game start logic
+            if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
+            {
+                // Call OnStart() for plugins
+                s_modInstances.ForEach(plugin => plugin.OnStart());
+                HasGameStarted = true;
+            }
+        });
 
         // Call base impl
         _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
-
-        // Do we have any 'after' mixins?
-        if (MixinManager.TryGetMixinMethods(selfObj, funcObj, MixinOrder.After, out mixinMethods))
-        {
-            foreach (var mixinMethod in mixinMethods)
-            {
-                // Call mixin method
-                // TODO: Marshal rest of parameters
-                var mixinParams = new object[] { selfObj };
-                var mixinResult = mixinMethod.Invoke(null, mixinParams);
-
-                // Check if we need to stop the original function from executing
-                if (mixinResult is bool result && !result)
-                {
-                    return;
-                }
-            }
-        }
     }
 
     // Detour for UObject::AddObject()
@@ -211,5 +193,18 @@ static class Entry
             (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
         return $"{classOuterName}.{className}";
+    }
+
+    static void RunGuarded(Action action)
+    {
+        try
+        {
+            action();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine(ex);
+            throw;
+        }
     }
 }
