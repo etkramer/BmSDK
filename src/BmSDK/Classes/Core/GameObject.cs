@@ -1,4 +1,3 @@
-global using System;
 global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Framework;
@@ -16,24 +15,6 @@ public interface IStaticObject
 public partial class GameObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
-
-    /// <summary>
-    /// Gets a property value from a <see cref="GameObject"/> instance
-    /// </summary>
-    public static unsafe TValue GetPropertyValue<TValue>(GameObject obj, IntPtr offset) =>
-        MarshalUtil.ToManaged<TValue>((obj.Ptr + offset).ToPointer());
-
-    /// <summary>
-    /// Gets a property value from a struct instance
-    /// </summary>
-    public static unsafe TValue GetPropertyValue<TValue, TStruct>(ref TStruct obj, IntPtr offset)
-        where TStruct : unmanaged
-    {
-        fixed (TStruct* ptr = &obj)
-        {
-            return MarshalUtil.ToManaged<TValue>(((IntPtr)ptr + offset).ToPointer());
-        }
-    }
 
     /// <summary>
     /// Sets a property value for a <see cref="GameObject"/> instance

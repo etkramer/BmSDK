@@ -1,4 +1,6 @@
-﻿namespace BmSDK;
+﻿using BmSDK.Framework;
+
+namespace BmSDK;
 
 public partial class Struct
 {
@@ -7,6 +9,6 @@ public partial class Struct
     /// </summary>
     public int PropertiesSize
     {
-        get => GetPropertyValue<int>(this, 56 + 4 + 4 + 4);
+        get => MarshalUtil.ToManagedSafe<int>(Ptr + 56 + 4 + 4 + 4);
     }
 }

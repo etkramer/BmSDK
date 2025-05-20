@@ -1,3 +1,5 @@
+using BmSDK.Framework;
+
 namespace BmSDK;
 
 public partial class Property
@@ -5,9 +7,9 @@ public partial class Property
     /// <summary>
     /// Property: ArrayDim
     /// </summary>
-    public int ArrayDim
+    public unsafe int ArrayDim
     {
-        get => GetPropertyValue<int>(this, 56);
+        get => MarshalUtil.ToManagedSafe<int>(Ptr + 56);
     }
 
     /// <summary>
@@ -15,7 +17,7 @@ public partial class Property
     /// </summary>
     public ushort ElementSize
     {
-        get => GetPropertyValue<ushort>(this, 56 + 4);
+        get => MarshalUtil.ToManagedSafe<ushort>(Ptr + 56 + 4);
     }
 
     /// <summary>
@@ -23,7 +25,7 @@ public partial class Property
     /// </summary>
     public ushort Offset
     {
-        get => GetPropertyValue<ushort>(this, 56 + 4 + 4 + 8 + 8 + 4);
+        get => MarshalUtil.ToManagedSafe<ushort>(Ptr + 56 + 4 + 4 + 8 + 8 + 4);
     }
 
     /// <summary>
@@ -31,6 +33,6 @@ public partial class Property
     /// </summary>
     public GameObject PropertyLinkNext
     {
-        get => GetPropertyValue<GameObject>(this, 56 + 4 + 4 + 8 + 8 + 4 + 4);
+        get => MarshalUtil.ToManagedSafe<GameObject>(Ptr + 56 + 4 + 4 + 8 + 8 + 4 + 4);
     }
 }

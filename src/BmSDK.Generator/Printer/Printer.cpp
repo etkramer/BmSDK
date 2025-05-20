@@ -212,9 +212,8 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 			// Class getter
 			if (prop->Outer->IsA(UClass::StaticClass()))
 			{
-				out << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
-					<< prop->GetInnerTypeNameManaged() << ">((Ptr + " << prop->Offset
-					<< ").ToPointer());";
+				out << "return global::BmSDK.Framework.MarshalUtil.ToManagedSafe<"
+					<< prop->GetInnerTypeNameManaged() << ">(Ptr + " << prop->Offset << ");";
 			}
 			// Struct getter
 			else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
