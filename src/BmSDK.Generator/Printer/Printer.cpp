@@ -227,9 +227,26 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 		}
 		out << " }" << endl;
 
-		// TODO: Print prop setter
-		Printer::Indent(out) << "set => throw new global::System.NotImplementedException();"
-							 << endl;
+		// Print prop setter (single line)
+		// TODO: Handle boolean masks
+		Printer::Indent(out) << "set { ";
+		{
+			// Class setter
+			if (prop->Outer->IsA(UClass::StaticClass()))
+			{
+				out << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + "
+					<< prop->Offset << ");";
+			}
+			// Struct setter
+			else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
+			{
+				out << "fixed (void* thisPtr = &this) { "
+					<< "global::BmSDK.Framework.MarshalUtil.ToUnmanaged(value, (byte*)thisPtr + "
+					<< prop->Offset << ");"
+					<< " }";
+			}
+		}
+		out << " }" << endl;
 	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;

@@ -40,6 +40,9 @@ public static unsafe class MarshalUtil
         );
     }
 
+    public static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
+        ToUnmanaged(value, data.ToPointer());
+
     // Marshals a managed object to native, then copies it into an existing buffer.
     public static void ToUnmanaged<TManaged>(TManaged value, void* data)
     {
