@@ -14,18 +14,7 @@ static class Loader
 
     static readonly List<GameMod> s_modInstances = [];
 
-    public static void GuardedDllMain()
-    {
-        try
-        {
-            DllMain();
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine(ex);
-            throw;
-        }
-    }
+    public static void GuardedDllMain() => RunGuarded(DllMain);
 
     public static void DllMain()
     {
