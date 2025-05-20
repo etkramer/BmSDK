@@ -83,10 +83,10 @@ static class Loader
         Trace.WriteLine($"Loaded {s_modInstances.Count} mod(s)");
 
         // Create function detours
-        // _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
-        //     GameInfo.FuncOffsets.ProcessEvent,
-        //     ProcessEventDetour
-        // );
+        _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
+            GameInfo.FuncOffsets.ProcessEvent,
+            ProcessEventDetour
+        );
         _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
             AddObjectDetour

@@ -29,10 +29,13 @@ string UProperty::GetInnerTypeNameManaged() const
 		return "bool";
 	}
 	else if (Class->GetPathName() == "Core.StrProperty" ||
-			 Class->GetPathName() == "Core.StringProperty" ||
-			 Class->GetPathName() == "Core.NameProperty")
+			 Class->GetPathName() == "Core.StringProperty")
 	{
 		return "string";
+	}
+	else if (Class->GetPathName() == "Core.NameProperty")
+	{
+		return "global::BmSDK.FName";
 	}
 	else if (Class->GetPathName() == "Core.StructProperty")
 	{

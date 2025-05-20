@@ -11,7 +11,7 @@ public class DemoMod : GameMod
         Debug.WriteLine("DemoMod: OnInit()");
 
         // Test script functions
-        Debug.WriteLine($"abs(-2) = {GameObject.Abs(-2)}");
+        // Debug.WriteLine($"abs(-2) = {GameObject.Abs(-2)}");
     }
 
     public override void OnStart()

@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BmSDK.Generator", "src\BmSD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BmSDK.Host", "src\BmSDK.Host\BmSDK.Host.vcxproj", "{BCA40631-3E36-4227-A7D2-7CB604E26AA0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mods", "mods", "{7E4E9354-A589-4178-9469-CA35514B9DAD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMod", "mods\DemoMod\DemoMod.csproj", "{9FAF334A-7B5D-4623-B142-972665DF8F78}"
 EndProject
 Global
@@ -77,8 +75,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2EB602B-8EAF-4F0D-A8D3-CE250ACCCC49}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9FAF334A-7B5D-4623-B142-972665DF8F78} = {7E4E9354-A589-4178-9469-CA35514B9DAD}
 	EndGlobalSection
 EndGlobal

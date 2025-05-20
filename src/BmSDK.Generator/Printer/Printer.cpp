@@ -180,9 +180,11 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
 	// Print prop body
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
-	for (auto i = 0u; i < enumNames.size(); i++)
 	{
-		Printer::Indent(out) << enumNames.at(i) << " = " << i << "," << endl;
+		for (auto i = 0u; i < enumNames.size(); i++)
+		{
+			Printer::Indent(out) << enumNames.at(i) << " = " << i << "," << endl;
+		}
 	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
@@ -196,14 +198,40 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 	Printer::Indent(out) << "/// </summary>" << endl;
 
 	// Print prop declaration
-	Printer::Indent(out) << "public " << prop->GetInnerTypeNameManaged() << " "
+	Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
 						 << prop->GetNameManaged() << endl;
 
 	// Print prop body
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
-	Printer::Indent(out) << "get => throw new global::System.NotImplementedException();" << endl;
-	Printer::Indent(out) << "set => throw new global::System.NotImplementedException();" << endl;
+	{
+		// Print prop getter (single line)
+		// TODO: Handle boolean masks
+		Printer::Indent(out) << "get { ";
+		{
+			// Class getter
+			if (prop->Outer->IsA(UClass::StaticClass()))
+			{
+				out << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
+					<< prop->GetInnerTypeNameManaged() << ">((Ptr + " << prop->Offset
+					<< ").ToPointer());";
+			}
+			// Struct getter
+			else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
+			{
+				out << "fixed (void* thisPtr = &this) { "
+					<< "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
+					<< prop->GetInnerTypeNameManaged() << ">((byte*)thisPtr + " << prop->Offset
+					<< ");"
+					<< " }";
+			}
+		}
+		out << " }" << endl;
+
+		// TODO: Print prop setter
+		Printer::Indent(out) << "set => throw new global::System.NotImplementedException();"
+							 << endl;
+	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
 }
@@ -273,7 +301,9 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	// Print func body
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
-	Printer::Indent(out) << "throw new global::System.NotImplementedException();" << endl;
+	{
+		Printer::Indent(out) << "throw new global::System.NotImplementedException();" << endl;
+	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;
 }

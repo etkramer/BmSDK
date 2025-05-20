@@ -1,10 +1,8 @@
 ﻿namespace BmSDK.Framework;
 
-#pragma warning disable CS8500
-
 public static unsafe class MarshalUtil
 {
-    static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
+    public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Marshals unmanaged data to managed, then returns it.
     public static TManaged ToManaged<TManaged>(void* data)
