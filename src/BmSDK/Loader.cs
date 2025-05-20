@@ -29,8 +29,6 @@ static class Loader
 
     public static void DllMain()
     {
-        Debug.WriteLine($"Hello from BmSDK loader");
-
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
@@ -63,7 +61,7 @@ static class Loader
 
                 if (modType is null)
                 {
-                    Debug.WriteLine($"No {nameof(GameMod)} type found in {modName}");
+                    Trace.WriteLine($"Loader: No {nameof(GameMod)} type found in {modName}");
                     continue;
                 }
                 else
@@ -80,7 +78,7 @@ static class Loader
         }
 
         // Report successful load
-        Trace.WriteLine($"Loaded {s_modInstances.Count} mod(s)");
+        Trace.WriteLine($"Loader: Loaded {s_modInstances.Count} mod(s)");
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
@@ -95,9 +93,6 @@ static class Loader
             GameInfo.FuncOffsets.ObjectDtor,
             ObjectDtorDetour
         );
-
-        // End with a newline
-        Debug.Write("\n");
     }
 
     static bool HasGameStarted = false;

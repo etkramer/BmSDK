@@ -9,7 +9,7 @@ public partial class Property
     /// </summary>
     public unsafe int ArrayDim
     {
-        get => MarshalUtil.ToManagedSafe<int>(Ptr + 56);
+        get => MarshalUtil.ToManaged<int>(Ptr + 56);
     }
 
     /// <summary>
@@ -17,7 +17,7 @@ public partial class Property
     /// </summary>
     public ushort ElementSize
     {
-        get => MarshalUtil.ToManagedSafe<ushort>(Ptr + 56 + 4);
+        get => MarshalUtil.ToManaged<ushort>(Ptr + 56 + 4);
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public partial class Property
     /// </summary>
     public ushort Offset
     {
-        get => MarshalUtil.ToManagedSafe<ushort>(Ptr + 56 + 4 + 4 + 8 + 8 + 4);
+        get => MarshalUtil.ToManaged<ushort>(Ptr + 56 + 4 + 4 + 8 + 8 + 4);
     }
 
     /// <summary>
@@ -33,6 +33,6 @@ public partial class Property
     /// </summary>
     public GameObject PropertyLinkNext
     {
-        get => MarshalUtil.ToManagedSafe<GameObject>(Ptr + 56 + 4 + 4 + 8 + 8 + 4 + 4);
+        get => MarshalUtil.ToManaged<GameObject>(Ptr + 56 + 4 + 4 + 8 + 8 + 4 + 4);
     }
 }

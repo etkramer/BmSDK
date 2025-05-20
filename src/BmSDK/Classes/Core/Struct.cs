@@ -9,6 +9,6 @@ public partial class Struct
     /// </summary>
     public int PropertiesSize
     {
-        get => MarshalUtil.ToManagedSafe<int>(Ptr + 56 + 4 + 4 + 4);
+        get => MarshalUtil.ToManaged<int>(Ptr + 56 + 4 + 4 + 4);
     }
 }

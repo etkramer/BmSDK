@@ -4,7 +4,7 @@ public static unsafe class MarshalUtil
 {
     public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
-    public static TManaged ToManagedSafe<TManaged>(IntPtr data) =>
+    public static TManaged ToManaged<TManaged>(IntPtr data) =>
         ToManaged<TManaged>(data.ToPointer());
 
     // Marshals unmanaged data to managed, then returns it.

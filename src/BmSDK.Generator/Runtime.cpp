@@ -19,8 +19,6 @@ void Runtime::OnAttach()
 	// Setup debug console
 	Debug::Init();
 
-	TRACE("Attached, waiting for engine ready");
-
 	// Find base address
 	Runtime::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
 

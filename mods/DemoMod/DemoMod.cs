@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using BmSDK;
+using BmSDK.BmScript;
 using BmSDK.Framework;
 
 namespace DemoMod;
@@ -16,6 +17,8 @@ public class DemoMod : GameMod
 
     public override void OnStart()
     {
-        Debug.WriteLine("DemoMod: OnStart()");
+        Debug.WriteLine(
+            $"DemoMod: Found {GameObject.GObjects.OfType<RCinematicBatman>().Last().GetFullName()}"
+        );
     }
 }
