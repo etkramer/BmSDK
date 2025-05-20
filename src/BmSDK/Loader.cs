@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Reflection;
+﻿using System.Reflection;
 using BmSDK.Framework;
 
 namespace BmSDK;
@@ -14,7 +13,12 @@ static class Loader
 
     static readonly List<GameMod> s_modInstances = [];
 
-    public static void GuardedDllMain() => RunGuarded(DllMain);
+    public static void GuardedDllMain()
+    {
+        Debug.PushSender("Loader");
+        RunGuarded(DllMain);
+        Debug.PopSender();
+    }
 
     public static void DllMain()
     {
@@ -50,7 +54,7 @@ static class Loader
 
                 if (modType is null)
                 {
-                    Trace.WriteLine($"Loader: No {nameof(GameMod)} type found in {modName}");
+                    Debug.Log($"No {nameof(GameMod)} type found in {modName}");
                     continue;
                 }
                 else
@@ -67,7 +71,7 @@ static class Loader
         }
 
         // Report successful load
-        Trace.WriteLine($"Loader: Loaded {s_modInstances.Count} mod(s)");
+        Debug.Log($"Loaded {s_modInstances.Count} mod(s)");
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
@@ -109,16 +113,28 @@ static class Loader
             // Perform game load logic
             if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
             {
-                // Call OnInit() for plugins
-                s_modInstances.ForEach(plugin => plugin.OnInit());
+                // Call OnInit() for mods
+                s_modInstances.ForEach(mod =>
+                {
+                    Debug.PushSender(mod.GetType().Name);
+                    mod.OnInit();
+                    Debug.PopSender();
+                });
+
                 HasGameInited = true;
             }
 
             // Perform game start logic
             if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
-                // Call OnStart() for plugins
-                s_modInstances.ForEach(plugin => plugin.OnStart());
+                // Call OnStart() for mods
+                s_modInstances.ForEach(mod =>
+                {
+                    Debug.PushSender(mod.GetType().Name);
+                    mod.OnStart();
+                    Debug.PopSender();
+                });
+
                 HasGameStarted = true;
             }
         });
@@ -187,7 +203,7 @@ static class Loader
         }
         catch (Exception ex)
         {
-            Debug.WriteLine(ex);
+            Debug.Log(ex);
             throw;
         }
     }
