@@ -4,6 +4,8 @@ namespace BmSDK;
 
 public static class GameFunctions
 {
+    // TODO: Update signatures for BM2 (if needed)
+
     // UObject::StaticConstructObject()
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate IntPtr StaticConstructObjectDelegate(
