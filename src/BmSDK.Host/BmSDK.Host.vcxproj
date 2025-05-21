@@ -50,12 +50,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\Win32\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)bin\Binaries\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\Win32\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>

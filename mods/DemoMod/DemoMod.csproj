@@ -10,7 +10,7 @@
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <OutputPath>$(SolutionDir)bin\Binaries\mods\DemoMod\</OutputPath>
+    <OutputPath>$(SolutionDir)bin\Binaries\Win32\mods\DemoMod\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

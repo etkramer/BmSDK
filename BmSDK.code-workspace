@@ -125,9 +125,9 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build All",
-        "program": "${workspaceFolder}/bin/Binaries/ShippingPC-BmGame.exe",
+        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
-        "cwd": "${workspaceFolder}/bin/Binaries/",
+        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
         "logging": {
           "exceptions": false,
           "moduleLoad": false
@@ -138,9 +138,9 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build Generator",
-        "program": "${workspaceFolder}/bin/Binaries/ShippingPC-BmGame.exe",
+        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
-        "cwd": "${workspaceFolder}/bin/Binaries/",
+        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
         "logging": {
           "exceptions": false,
           "moduleLoad": false

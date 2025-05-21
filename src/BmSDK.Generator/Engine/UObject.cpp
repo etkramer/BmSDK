@@ -45,7 +45,7 @@ bool UObject::IsA(class UClass* classObj) const
 	if (classObj)
 	{
 		for (UClass* superClass = (UClass*)(this->Class); superClass;
-			 superClass = (UClass*)(superClass->SuperField))
+			 superClass = (UClass*)(superClass->SuperStruct))
 		{
 			if (superClass == classObj)
 			{

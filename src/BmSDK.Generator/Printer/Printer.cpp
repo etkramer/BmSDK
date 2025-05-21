@@ -40,9 +40,9 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
 	// Print class declaration
 	Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
-	if (_class->SuperField)
+	if (_class->SuperStruct)
 	{
-		out << _class->SuperField->GetPathNameManaged() << ", ";
+		out << _class->SuperStruct->GetPathNameManaged() << ", ";
 	}
 	out << "global::BmSDK.IStaticObject" << endl;
 

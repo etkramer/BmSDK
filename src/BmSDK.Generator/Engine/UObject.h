@@ -6,15 +6,13 @@
 #define PROPERTY_ALIGNMENT 4
 #pragma pack(push, PROPERTY_ALIGNMENT)
 
-CLASS(UObject, 48)
+CLASS(UObject, 44)
 class UObject
 {
 	INT Index;
 	QWORD ObjectFlags;
 	UObject* HashNext;
 	UObject* HashOuterNext;
-	class FStateFrame* StateFrame;
-
 	FIELD(UObject*, Outer)
 	FIELD(FName, Name)
 	FIELD(UObject*, Class)

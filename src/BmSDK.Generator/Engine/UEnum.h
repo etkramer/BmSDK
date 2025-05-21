@@ -2,7 +2,7 @@
 
 #include "UField.h"
 
-CLASS(UEnum, 68)
+CLASS(UEnum, 60)
 class UEnum : public UField
 {
 	// TODO
