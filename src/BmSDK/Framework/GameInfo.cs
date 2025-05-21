@@ -12,13 +12,13 @@ public static class GameInfo
     public static class FuncOffsets
     {
         // UObject (static)
-        public const IntPtr StaticFindObject = 0x1D88C0; // TODO: Update for BM2
+        public const IntPtr StaticFindObject = 0x87E80;
         public const IntPtr StaticConstructObject = 0x98BE0;
-        public const IntPtr LoadPackage = 0x1EB6C0; // TODO: Update for BM2
+        public const IntPtr LoadPackage = 0x9FCA0;
 
         // UObject (local)
-        public const IntPtr ProcessEvent = 0x20C8B0;
-        public const IntPtr AddObject = 0x1D4080; // TODO: Update for BM2
+        public const IntPtr ProcessEvent = 0x46A60;
+        public const IntPtr AddObject = 0x8E0A0;
         public const IntPtr ObjectDtor = 0x1D30B0; // TODO: Update for BM2
         public const IntPtr FindFunction = 0x1D7C50; // TODO: Update for BM2
 

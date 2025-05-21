@@ -266,6 +266,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	// Gather func info
 	bool funcIsStatic = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static;
 	bool funcIsNative = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Native;
+	bool funcIsEvent = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Event;
 
 	// Gather func params
 	UField* fieldLink = func->Children;
@@ -299,6 +300,10 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		out << "static ";
 	}
 	out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
+	if (funcIsEvent)
+	{
+		out << "Event";
+	}
 	out << func->GetNameManaged() << "(";
 	for (auto i = 0u; i < params.size(); i++)
 	{
