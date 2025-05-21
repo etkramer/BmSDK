@@ -4,6 +4,7 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -13,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" />
+    <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" Private="false" ExcludeAssets="all" />
   </ItemGroup>
 
 </Project>
