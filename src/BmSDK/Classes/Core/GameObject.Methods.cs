@@ -37,6 +37,12 @@ public partial class GameObject
         where T : GameObject => GObjects.OfType<T>();
 
     /// <summary>
+    /// Typed wrapper around UnrealScript FindObject().
+    /// </summary>
+    public static unsafe T? FindObject<T>(string ObjectName)
+        where T : GameObject, IStaticObject => FindObject(ObjectName, T.StaticClass()) as T;
+
+    /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
     /// These are optional because the InName can contain all of the necessary information.
     /// </summary>
@@ -147,11 +153,7 @@ public partial class GameObject
     /// </summary>
     public string GetFullName(GameObject? StopOuter = null)
     {
-        var result = Guard.NotNull(Class).Name.ToString();
-        result += " ";
-        GetPathName(StopOuter, ref result);
-
-        return result;
+        return $"{Guard.NotNull(Class).Name} {GetPathName(StopOuter)}";
     }
 
     /// <summary>
@@ -160,20 +162,17 @@ public partial class GameObject
     public string GetPathName(GameObject? StopOuter = null)
     {
         var res = "";
-        GetPathName(StopOuter, ref res);
+        GetPathNameRecursive(StopOuter, ref res);
         return res;
     }
 
-    /// <summary>
-    /// Internal version of GetPathName() that eliminates unnecessary copies.
-    /// </summary>
-    void GetPathName(GameObject? StopOuter, ref string ResultString)
+    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {
             if (Outer is not null && Outer != StopOuter)
             {
-                Outer.GetPathName(StopOuter, ref ResultString);
+                Outer.GetPathNameRecursive(StopOuter, ref ResultString);
 
                 if (Outer.Class != Package.StaticClass())
                 {
