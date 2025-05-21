@@ -4,37 +4,36 @@
 
 enum class EPropertyFlags : DWORD
 {
+	CPF_Parm = 0x8,
 	CPF_OptionalParm = 0x10,
-	CPF_Parm = 0x80,
-	CPF_ReturnParm = 0x400
+	CPF_ReturnParm = 0x80
 };
 
-CLASS(UProperty, 72)
+CLASS(UProperty, 88)
 class UProperty : public UField
 {
 	INT ArrayDim;
 	FIELD(EPropertyFlags, PropertyFlags)
+	BYTE UNK1[4];
 	WORD ElementSize;
 	FIELD(WORD, Offset)
-	UProperty* PropertyLinkNext;
-	UProperty* ConstructorLinkNext;
-	UProperty* NextRef;
+	BYTE UNK2[24];
 
 public:
 	string GetInnerTypeNameManaged() const;
 	STATIC_CLASS("Core.Property")
 };
 
-CLASS(UStructProperty, 76)
+CLASS(UStructProperty, 92)
 class UStructProperty : public UProperty
 {
-	FIELD(class UStruct*, Struct)
+	FIELD(class UScriptStruct*, Struct)
 
 public:
 	STATIC_CLASS("Core.StructProperty")
 };
 
-CLASS(UObjectProperty, 76)
+CLASS(UObjectProperty, 92)
 class UObjectProperty : public UProperty
 {
 	FIELD(class UClass*, PropertyClass)
@@ -43,7 +42,7 @@ public:
 	STATIC_CLASS("Core.ObjectProperty")
 };
 
-CLASS(UByteProperty, 76)
+CLASS(UByteProperty, 92)
 class UByteProperty : public UProperty
 {
 	FIELD(class UEnum*, Enum)
@@ -52,7 +51,7 @@ public:
 	STATIC_CLASS("Core.ByteProperty")
 };
 
-CLASS(UArrayProperty, 76)
+CLASS(UArrayProperty, 92)
 class UArrayProperty : public UProperty
 {
 	FIELD(class UProperty*, Inner)

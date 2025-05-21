@@ -3,15 +3,16 @@
 #include "TArray.h"
 #include "UField.h"
 
-CLASS(UStruct, 92)
+CLASS(UStruct, 108)
 class UStruct : public UField
 {
+	BYTE UNK1[8];
 	FIELD(UStruct*, SuperStruct)
 	FIELD(UField*, Children)
 	FIELD(WORD, PropertiesSize)
 	WORD MinAlignment;
 
-	BYTE UNK[32];
+	BYTE UNK2[40];
 
 public:
 	STATIC_CLASS("Core.Struct")

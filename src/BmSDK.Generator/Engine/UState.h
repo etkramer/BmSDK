@@ -2,7 +2,7 @@
 
 #include "UStruct.h"
 
-CLASS(UState, 164)
+CLASS(UState, 180)
 class UState : public UStruct
 {
 	// TODO
