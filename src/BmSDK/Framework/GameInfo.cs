@@ -19,11 +19,11 @@ public static class GameInfo
         // UObject (local)
         public const IntPtr ProcessEvent = 0x46A60;
         public const IntPtr AddObject = 0x8E0A0;
-        public const IntPtr ObjectDtor = 0x1D30B0; // TODO: Update for BM2
-        public const IntPtr FindFunction = 0x1D7C50; // TODO: Update for BM2
+        public const IntPtr ConditionalDestroy = 0x8C6C0;
+        public const IntPtr FindFunction = 0x8A980;
 
         // FName (local)
-        public const IntPtr NameInit = 0x1D24F0; // TODO: Update for BM2
+        public const IntPtr NameInit = 0x7E990;
 
         // FString (local)
         public const IntPtr StringCtor = 0x4650;

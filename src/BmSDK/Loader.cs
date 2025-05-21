@@ -9,7 +9,7 @@ static class Loader
 
     static GameFunctions.ProcessEventDelegate? _ProcessEventDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
-    static GameFunctions.ObjectDtorDelegate? _ObjectDtorDetourBase = null;
+    static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
     static readonly List<GameMod> s_modInstances = [];
 
@@ -82,10 +82,11 @@ static class Loader
             GameInfo.FuncOffsets.AddObject,
             AddObjectDetour
         );
-        _ObjectDtorDetourBase = DetourUtil.NewDetour<GameFunctions.ObjectDtorDelegate>(
-            GameInfo.FuncOffsets.ObjectDtor,
-            ObjectDtorDetour
-        );
+        _ConditionalDestroyDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
+                GameInfo.FuncOffsets.ConditionalDestroy,
+                ConditionalDestroyDetour
+            );
     }
 
     static bool HasGameStarted = false;
@@ -172,10 +173,10 @@ static class Loader
     }
 
     // Detour for UObject::~UObject()
-    public static void ObjectDtorDetour(IntPtr self)
+    public static void ConditionalDestroyDetour(IntPtr self)
     {
         // Call base impl
-        _ObjectDtorDetourBase!.Invoke(self);
+        _ConditionalDestroyDetourBase!.Invoke(self);
 
         // Destroy this object's managed instance
         MarshalUtil.DestroyManagedWrapper(self);

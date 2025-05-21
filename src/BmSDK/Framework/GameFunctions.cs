@@ -4,8 +4,6 @@ namespace BmSDK;
 
 public static class GameFunctions
 {
-    // TODO: Update signatures for BM2 (if needed)
-
     // UObject::StaticConstructObject()
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate IntPtr StaticConstructObjectDelegate(
@@ -41,19 +39,20 @@ public static class GameFunctions
         IntPtr UnusedResult
     );
 
-    // UObject::ProcessEvent()
+    // UObject::AddObject()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void AddObjectDelegate(IntPtr self, int InIndex);
 
     // UObject::~UObject()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void ObjectDtorDelegate(IntPtr self);
+    public delegate void ConditionalDestroyDelegate(IntPtr self);
 
     // UObject::FindFunction()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr FindFunctionDelegate(IntPtr self, FName InName, int Global);
 
     // FName::Init()
+    // TODO: Update signature for BM2 (if needed)
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void NameInitDelegate(
         IntPtr self,
@@ -72,7 +71,7 @@ public static class GameFunctions
     static LoadPackageDelegate? _LoadPackage = null;
     static ProcessEventDelegate? _ProcessEvent = null;
     static AddObjectDelegate? _AddObject = null;
-    static ObjectDtorDelegate? _ObjectDtor = null;
+    static ConditionalDestroyDelegate? _ConditionalDestroy = null;
     static FindFunctionDelegate? _FindFunction = null;
     static NameInitDelegate? _NameInit = null;
     static StringCtorDelegate? _StringCtor = null;
@@ -103,9 +102,9 @@ public static class GameFunctions
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.AddObject)
         );
 
-    public static ObjectDtorDelegate ObjectDtor =>
-        _ObjectDtor ??= Marshal.GetDelegateForFunctionPointer<ObjectDtorDelegate>(
-            MemUtil.GetIntPointer(GameInfo.FuncOffsets.ObjectDtor)
+    public static ConditionalDestroyDelegate ConditionalDestroy =>
+        _ConditionalDestroy ??= Marshal.GetDelegateForFunctionPointer<ConditionalDestroyDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.ConditionalDestroy)
         );
 
     public static FindFunctionDelegate FindFunction =>
