@@ -263,6 +263,10 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		return;
 	}
 
+	// Gather func info
+	bool funcIsStatic = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static;
+	bool funcIsNative = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Native;
+
 	// Gather func params
 	UField* fieldLink = func->Children;
 	while (fieldLink)
@@ -290,7 +294,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 
 	// Print func declaration
 	Printer::Indent(out) << "public unsafe ";
-	if ((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Static)
+	if (funcIsStatic)
 	{
 		out << "static ";
 	}
@@ -318,7 +322,59 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
 	{
-		Printer::Indent(out) << "throw new global::System.NotImplementedException();" << endl;
+		string ptrText = funcIsStatic ? "StaticClass().Ptr" : "Ptr";
+
+		Printer::Indent(out) << "var funcPtr = BmSDK.GameFunctions.FindFunction(" << ptrText
+							 << ", new FName(\"" << func->Name.ToString() << "\"), 0);" << endl;
+
+		Printer::Indent(out)
+			<< "var funcManaged = "
+			   "BmSDK.Framework.MarshalUtil.ToManaged<global::BmSDK.Function>(&funcPtr);"
+			<< endl;
+
+		Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
+							 << endl;
+		for (auto i = 0u; i < params.size(); i++)
+		{
+			auto param = params[i];
+
+			// Print param declaration
+			Printer::Indent(out) << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged("
+								 << param->GetNameManaged() << ", paramsPtr + " << param->Offset
+								 << ");" << endl;
+		}
+
+		if (funcIsNative)
+		{
+			Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
+			Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
+			Printer::Indent(out)
+				<< "funcManaged.FunctionFlags &= ~global::BmSDK.EFunctionFlags.Native;" << endl;
+			Printer::Indent(out)
+				<< "funcManaged.FunctionFlags |= global::BmSDK.EFunctionFlags.Defined;" << endl;
+			Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
+		}
+
+		Printer::Indent(out) << "global::BmSDK.GameFunctions.ProcessEvent(" << ptrText
+							 << ", funcPtr, (nint)paramsPtr, 0);" << endl;
+
+		if (funcIsNative)
+		{
+			Printer::Indent(out) << "funcManaged.iNative = oldNative;" << endl;
+			Printer::Indent(out) << "funcManaged.FunctionFlags = oldFlags;" << endl;
+		}
+
+		if (returnParam != nullptr)
+		{
+			// Print return param declaration
+			Printer::Indent(out) << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
+								 << returnParam->GetInnerTypeNameManaged() << ">(paramsPtr + "
+								 << returnParam->Offset << ");" << endl;
+		}
+		else
+		{
+			Printer::Indent(out) << "return;" << endl;
+		}
 	}
 	Printer::PopIndent();
 	Printer::Indent(out) << "}" << endl;

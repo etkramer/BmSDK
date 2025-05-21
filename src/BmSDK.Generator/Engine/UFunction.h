@@ -4,6 +4,7 @@
 
 enum class EFunctionFlags : DWORD
 {
+	FUNC_Native = 0x400,
 	FUNC_Operator = 0x1000,
 	FUNC_Static = 0x2000,
 };
