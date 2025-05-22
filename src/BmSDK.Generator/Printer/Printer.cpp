@@ -57,6 +57,43 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 		Printer::Indent(out) << "static global::BmSDK.Class _staticClass = null;" << endl;
 		out << endl;
 
+		// Print internal ctor
+		Printer::Indent(out) << "internal " << _class->GetNameManaged() << "() { }" << endl << endl;
+
+		// Print main ctor (unless abstract)
+		if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
+		{
+			Printer::Indent(out) << "/// <summary>" << endl;
+			Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
+			Printer::Indent(out) << "/// </summary>" << endl;
+			Printer::Indent(out)
+				<< "public " << _class->GetNameManaged()
+				<< "(global::BmSDK.GameObject Outer = null, string Name = null, "
+				   "global::BmSDK.EObjectFlags SetFlags = 0, "
+				<< _class->GetNameManaged()
+				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "
+				   "Outer, Name, SetFlags, Template)) { }"
+				<< endl
+				<< endl;
+		}
+
+		// Print pointer ctor
+		Printer::Indent(out) << "/// <summary>" << endl;
+		Printer::Indent(out)
+			<< "/// Constructs a new wrapper instance from the given object pointer." << endl;
+		Printer::Indent(out) << "/// </summary>" << endl;
+		Printer::Indent(out) << "protected " << _class->GetNameManaged() << "(nint ptr)";
+		if (_class->GetName() == "Object")
+		{
+			out << " { Ptr = ptr; }" << endl;
+		}
+		else
+		{
+			out << " : base(ptr) { }" << endl;
+		}
+		out << endl;
+
+		// Print fields
 		UField* fieldLink = _class->Children;
 		for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
 		{
