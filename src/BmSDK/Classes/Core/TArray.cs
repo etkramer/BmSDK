@@ -1,14 +1,20 @@
 using System.Collections;
-using System.Collections.Generic;
 using BmSDK.Framework;
+
+#pragma warning disable IDE0044
+#pragma warning disable IDE0051
+#pragma warning disable CS0169
+#pragma warning disable CS0649
 
 namespace BmSDK;
 
-public unsafe struct TArray<TManaged> : IEnumerable<TManaged>
+public unsafe struct TArray<TManaged> : IEnumerable<TManaged>, IReadOnlyCollection<TManaged>
 {
-    public void* AllocatorInstance;
-    public int Num;
-    public int Max;
+    public readonly int Count => Num;
+
+    private void* AllocatorInstance;
+    private int Num;
+    private int Max;
 
     public readonly TManaged this[int idx]
     {
@@ -24,7 +30,7 @@ public unsafe struct TArray<TManaged> : IEnumerable<TManaged>
         }
     }
 
-    IEnumerator IEnumerable.GetEnumerator()
+    readonly IEnumerator IEnumerable.GetEnumerator()
     {
         return GetEnumerator();
     }

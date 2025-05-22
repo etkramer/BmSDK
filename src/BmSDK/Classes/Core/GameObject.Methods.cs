@@ -8,9 +8,9 @@ namespace BmSDK;
 public partial class GameObject
 {
     /// <summary>
-    /// Returns a reference to the global objects array. Should not be used directly.
+    /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjects"/> instead.
     /// </summary>
-    public static unsafe ref TArray<GameObject> GObjects =>
+    private static unsafe ref TArray<GameObject> GObjects =>
         ref *(TArray<GameObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
     public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
