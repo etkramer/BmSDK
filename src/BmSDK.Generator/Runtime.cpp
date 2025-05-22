@@ -51,7 +51,7 @@ void Runtime::GenerateSDK()
 
 	// Clear output directory
 	TRACE("Clearing output directory");
-	fs::path outDir = "I:\\BmSDK2-bm2\\src\\BmSDK\\Generated\\";
+	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
 	fs::remove_all(outDir);
 	fs::create_directory(outDir);
 
