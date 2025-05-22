@@ -337,10 +337,6 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		out << "static ";
 	}
 	out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
-	if (funcIsEvent)
-	{
-		out << "Event";
-	}
 	out << func->GetNameManaged() << "(";
 	for (auto i = 0u; i < params.size(); i++)
 	{

@@ -40,7 +40,7 @@ public class DemoMod : GameMod
 
         // Create split-screen player
         var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
-        gameViewport.EventCreatePlayer(1, "fun", true);
+        gameViewport.CreatePlayer(1, "fun", true);
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
     }
 }
