@@ -136,7 +136,6 @@ static class Loader
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnEnterMenu();
-                    mod.OnEnterGame();
                     Debug.PopSender();
                 });
 

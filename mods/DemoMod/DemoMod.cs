@@ -37,5 +37,10 @@ public class DemoMod : GameMod
             .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
 
         Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
+
+        // Create split-screen player
+        var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
+        gameViewport.EventCreatePlayer(1, "fun", true);
+        gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
     }
 }
