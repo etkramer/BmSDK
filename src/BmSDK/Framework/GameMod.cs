@@ -9,17 +9,18 @@ public abstract class GameMod
     public virtual void OnInit() { }
 
     /// <summary>
-    /// Called when we first load into the menu, after all actors have begun play.
+    /// Called when we first load into the main menu, after all actors have begun play.
     /// </summary>
-    public virtual void OnStart() { }
+    public virtual void OnEnterMenu() { }
 
-    // /// <summary>
-    // /// Called every time we load into a world, after all actors have begun play.
-    // /// </summary>
-    // public virtual void OnBeginPlay() { }
+    /// <summary>
+    /// Called every time we load into a new world, after all actors have begun play.
+    /// Does not get called when levels are streamed in dynamically.
+    /// </summary>
+    public virtual void OnEnterGame() { }
 
-    // /// <summary>
-    // /// Called once every world tick.
-    // /// </summary>
-    // public virtual void OnTick() { }
+    /// <summary>
+    /// Called once every world tick.
+    /// </summary>
+    public virtual void OnTick() { }
 }

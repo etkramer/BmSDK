@@ -1,4 +1,5 @@
 ﻿using BmSDK;
+using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 using Console = BmSDK.Engine.Console;
@@ -14,7 +15,7 @@ public class DemoMod : GameMod
         defaultRainComponent.ParticleCount *= 5;
     }
 
-    public override void OnStart()
+    public override void OnEnterMenu()
     {
         var console = GameObject.FindObjects<Console>().Last();
         Debug.Log($"Found {console}");
@@ -27,5 +28,15 @@ public class DemoMod : GameMod
                     "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
                 );
             });
+    }
+
+    public override void OnEnterGame()
+    {
+        var playerPawns = GameObject
+            .FindObjects<RPawnPlayer>()
+            .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
+
+        Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
+        base.OnEnterGame();
     }
 }

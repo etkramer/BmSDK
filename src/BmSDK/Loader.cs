@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using BmSDK.BmGame;
 using BmSDK.Framework;
 
 namespace BmSDK;
@@ -110,8 +111,10 @@ static class Loader
 
             var funcNameForGameInit = "Engine.GameInfo:InitGame";
             var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
+            var funcNameForGameTick = "BmGame.RGameInfo:Tick";
+            var funcNameForGameBeginPlay = "BmGame.RPlayerController:ClientReady";
 
-            // Perform game load logic
+            // Notify mods of game init
             if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
             {
                 // Call OnInit() for mods
@@ -125,18 +128,43 @@ static class Loader
                 HasGameInited = true;
             }
 
-            // Perform game start logic
+            // Notify mods of game start
             if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
                 // Call OnStart() for mods
                 s_modInstances.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
-                    mod.OnStart();
+                    mod.OnEnterMenu();
+                    mod.OnEnterGame();
                     Debug.PopSender();
                 });
 
                 HasGameStarted = true;
+            }
+
+            // Notify mods of game begin play
+            if (funcObj.GetPathName() == funcNameForGameBeginPlay)
+            {
+                // Call OnBeginPlay() for mods
+                s_modInstances.ForEach(mod =>
+                {
+                    Debug.PushSender(mod.GetType().Name);
+                    mod.OnEnterGame();
+                    Debug.PopSender();
+                });
+            }
+
+            // Notify mods of game tick
+            if (funcObj.GetPathName() == funcNameForGameTick)
+            {
+                // Call OnTick() for mods
+                s_modInstances.ForEach(mod =>
+                {
+                    Debug.PushSender(mod.GetType().Name);
+                    mod.OnTick();
+                    Debug.PopSender();
+                });
             }
         });
 
