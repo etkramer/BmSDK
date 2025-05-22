@@ -1,5 +1,4 @@
 ﻿using BmSDK;
-using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 using Console = BmSDK.Engine.Console;
@@ -10,8 +9,6 @@ public class DemoMod : GameMod
 {
     public override void OnInit()
     {
-        Debug.Log("OnInit called");
-
         // Boost snow intensity
         var defaultRainComponent = GameObject.FindObjects<RRainComponent>().First();
         defaultRainComponent.ParticleCount *= 5;

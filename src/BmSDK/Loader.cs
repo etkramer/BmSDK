@@ -92,8 +92,6 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    static bool isTicking = false;
-
     // Detour for UObject::ProcessEvent()
     public static unsafe void ProcessEventDetour(
         IntPtr self,
