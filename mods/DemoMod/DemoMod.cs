@@ -37,6 +37,5 @@ public class DemoMod : GameMod
             .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
 
         Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
-        base.OnEnterGame();
     }
 }
