@@ -145,12 +145,12 @@ static class Loader
     }
 
     // Detour for UObject::AddObject()
-    public static void AddObjectDetour(IntPtr self, int InIndex)
+    public static unsafe void AddObjectDetour(IntPtr self, int InIndex)
     {
         // Call base impl
         _AddObjectDetourBase!.Invoke(self, InIndex);
 
-        unsafe
+        RunGuarded(() =>
         {
             var classPtr = *(IntPtr*)(self + GameInfo.MemberOffsets.Object__Class).ToPointer();
             var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
@@ -169,17 +169,17 @@ static class Loader
             // Wrap this object in a managed instance
             var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
             MarshalUtil.CreateManagedWrapper(self, managedType);
-        }
+        });
     }
 
-    // Detour for UObject::~UObject()
+    // Detour for UObject::ConditionalDestroy()
     public static void ConditionalDestroyDetour(IntPtr self)
     {
+        // Destroy this object's managed instance
+        RunGuarded(() => MarshalUtil.DestroyManagedWrapper(self));
+
         // Call base impl
         _ConditionalDestroyDetourBase!.Invoke(self);
-
-        // Destroy this object's managed instance
-        MarshalUtil.DestroyManagedWrapper(self);
     }
 
     static unsafe string GetClassPath(IntPtr obj)

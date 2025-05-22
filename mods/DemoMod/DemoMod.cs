@@ -35,6 +35,6 @@ public class DemoMod : GameMod
 
     public override void OnStart()
     {
-        Debug.Log($"Found {GameObject.FindObjects<RCinematicBatman>().Last()}");
+        Debug.Log($"Found {GameObject.FindObjects<RCinematicBatman>().First()}");
     }
 }

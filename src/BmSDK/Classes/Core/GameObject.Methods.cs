@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using BmSDK.Framework;
 
 namespace BmSDK;
@@ -173,15 +174,7 @@ public partial class GameObject
             if (Outer is not null && Outer != StopOuter)
             {
                 Outer.GetPathNameRecursive(StopOuter, ref ResultString);
-
-                if (Outer.Class != Package.StaticClass())
-                {
-                    ResultString += ":";
-                }
-                else
-                {
-                    ResultString += ".";
-                }
+                ResultString += Outer is Package ? "." : ":";
             }
 
             ResultString += Name.ToString();

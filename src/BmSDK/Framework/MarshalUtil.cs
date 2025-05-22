@@ -80,6 +80,7 @@ public static unsafe class MarshalUtil
             ToUnmanaged(((GameObject)(object)value!).Ptr, data);
             return;
         }
+
         throw new NotImplementedException(
             $"Marshaling not implemented for type {typeof(TManaged).Name}"
         );
@@ -87,10 +88,11 @@ public static unsafe class MarshalUtil
 
     public static void CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
-        Guard.Require(
-            !s_managedObjects.ContainsKey(objPtr),
-            $"Object 0x{objPtr:X} already has a managed wrapper!"
-        );
+        // Warn in case of duplicate objects
+        if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
+        {
+            Debug.LogWarning($"Object 0x{objPtr:X} already has managed wrapper {existingObj}!");
+        }
 
         // Create a new managed object
         var newObj = s_managedObjects[objPtr] = Guard.NotNull(
@@ -102,9 +104,6 @@ public static unsafe class MarshalUtil
 
     public static void DestroyManagedWrapper(IntPtr objPtr)
     {
-        Guard.Require(
-            s_managedObjects.Remove(objPtr),
-            $"Object 0x{objPtr:X} does not have a managed wrapper!"
-        );
+        s_managedObjects.Remove(objPtr);
     }
 }

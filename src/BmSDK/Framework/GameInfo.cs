@@ -12,7 +12,7 @@ public static class GameInfo
     public static class FuncOffsets
     {
         // UObject (static)
-        public const IntPtr StaticFindObject = 0x87E80;
+        public const IntPtr StaticFindObject = 0x8ED20;
         public const IntPtr StaticConstructObject = 0x98BE0;
         public const IntPtr LoadPackage = 0x9FCA0;
 
@@ -31,9 +31,9 @@ public static class GameInfo
 
     public static class MemberOffsets
     {
-        public const IntPtr Object__ObjectInternalInteger = 0x4;
-        public const IntPtr Object__Outer = 0x1C;
-        public const IntPtr Object__Name = 0x20;
-        public const IntPtr Object__Class = 0x28;
+        public const IntPtr Object__ObjectInternalInteger = 4;
+        public const IntPtr Object__Outer = 24;
+        public const IntPtr Object__Name = 28;
+        public const IntPtr Object__Class = 36;
     }
 }
