@@ -8,18 +8,20 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public unsafe struct TArray<TManaged> : IEnumerable<TManaged>, IReadOnlyCollection<TManaged>
+public unsafe struct TArray<TManaged> : IReadOnlyList<TManaged>
 {
     public readonly int Count => Num;
 
-    private void* AllocatorInstance;
+    private IntPtr AllocatorInstance;
     private int Num;
     private int Max;
 
+    // Could we be wrongly assuming that elements of AllocatorInstance are always pointers?
+    // We're used to seeing it where the element type is UObject* (4-byte pointer/sizeof(int)) - what if it's just tightly-packed in general?
     public readonly TManaged this[int idx]
     {
-        get => MarshalUtil.ToManaged<TManaged>(((byte*)AllocatorInstance) + (idx * sizeof(int)));
-        set => MarshalUtil.ToUnmanaged(value, ((byte*)AllocatorInstance) + (idx * sizeof(int)));
+        get => MarshalUtil.ToManaged<TManaged>(AllocatorInstance + (idx * sizeof(int)));
+        set => MarshalUtil.ToUnmanaged(value, AllocatorInstance + (idx * sizeof(int)));
     }
 
     public readonly unsafe IEnumerator<TManaged> GetEnumerator()
@@ -30,10 +32,7 @@ public unsafe struct TArray<TManaged> : IEnumerable<TManaged>, IReadOnlyCollecti
         }
     }
 
-    readonly IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
+    readonly IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-    public readonly IntPtr GetDataPointer() => (IntPtr)AllocatorInstance;
+    public readonly IntPtr GetDataPointer() => AllocatorInstance;
 }

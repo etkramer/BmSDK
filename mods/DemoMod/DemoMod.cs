@@ -52,5 +52,20 @@ public class DemoMod : GameMod
         var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, "fun", true);
+
+        foreach (var info in gameViewport.SplitscreenInfo)
+        {
+            Debug.Log($"Begin FSplitScreenData");
+            foreach (var playerData in info.PlayerData)
+            {
+                Debug.Log($"  Begin FPerPlayerSplitScreenData");
+                Debug.Log($"    SizeX {playerData.SizeX}");
+                Debug.Log($"    SizeY {playerData.SizeY}");
+                Debug.Log($"    OriginX {playerData.OriginX}");
+                Debug.Log($"    OriginY {playerData.OriginY}");
+                Debug.Log($"  End FPerPlayerSplitScreenData");
+            }
+            Debug.Log($"End FSplitScreenData");
+        }
     }
 }

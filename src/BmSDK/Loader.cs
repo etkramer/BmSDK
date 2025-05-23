@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using BmSDK.BmGame;
 using BmSDK.Framework;
+using MoreLinq;
 
 namespace BmSDK;
 
@@ -12,8 +13,6 @@ static class Loader
     static GameFunctions.CallFunctionDelegate? _CallFunctionDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
-
-    static readonly List<GameMod> s_modInstances = [];
 
     public static void GuardedDllMain()
     {
@@ -27,53 +26,8 @@ static class Loader
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
-        // Prepare for assembly loading
-        AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
-        {
-            // Try to see if we already have this assembly loaded
-            return AppDomain
-                .CurrentDomain.GetAssemblies()
-                .ToList()
-                .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
-        };
-
-        // Find mods (note we're relative to the host asi)
-        var modsDir = Path.Combine(Environment.CurrentDirectory, "..", "mods");
-        if (Directory.Exists(modsDir))
-        {
-            foreach (var modDir in Directory.GetDirectories(modsDir))
-            {
-                // Load mod assembly
-                var modName = Path.GetFileName(modDir);
-                var modPath = Path.Combine(modDir, $"{modName}.dll");
-                var modAssembly = Assembly.LoadFile(modPath);
-
-                // Locate mod instance type
-                var modType = modAssembly
-                    .GetTypes()
-                    .Where(type => type.IsAssignableTo(typeof(GameMod)))
-                    .FirstOrDefault();
-
-                if (modType is null)
-                {
-                    Debug.Log($"No {nameof(GameMod)} type found in {modName}");
-                    continue;
-                }
-                else
-                {
-                    // Instantiate mod type
-                    var modInstance = Guard.NotNull(
-                        Activator.CreateInstance(modType) as GameMod,
-                        $"Failed to instantiate mod {modName}"
-                    );
-
-                    s_modInstances.Add(modInstance);
-                }
-            }
-        }
-
-        // Report successful load
-        Debug.Log($"Loaded {s_modInstances.Count} mod(s)");
+        // Find/load mods
+        ModManager.Init();
 
         // Create function detours
         _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
@@ -137,7 +91,7 @@ static class Loader
             if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
             {
                 // Call OnInit() for mods
-                s_modInstances.ForEach(mod =>
+                ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnInit();
@@ -151,7 +105,7 @@ static class Loader
             if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
             {
                 // Call OnStart() for mods
-                s_modInstances.ForEach(mod =>
+                ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnEnterMenu();
@@ -165,7 +119,7 @@ static class Loader
             if (funcObj.GetPathName() == funcNameForGameBeginPlay)
             {
                 // Call OnBeginPlay() for mods
-                s_modInstances.ForEach(mod =>
+                ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnEnterGame();
@@ -177,11 +131,11 @@ static class Loader
             if (funcObj.GetPathName() == funcNameForGameTick)
             {
                 // Tick framework stuff
-                InputManager.Tick(s_modInstances);
+                InputManager.Tick(ModManager.Mods);
                 GameWindow.Tick();
 
                 // Call OnTick() for mods
-                s_modInstances.ForEach(mod =>
+                ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnTick();
@@ -254,8 +208,10 @@ static class Loader
         }
         catch (Exception ex)
         {
-            Debug.Log(ex);
-            throw;
+            // Just abort, because otherwise UE3 will crash anyway but print
+            // its more-or-less useless DBGHELP messages.
+            Debug.LogError(ex.ToString());
+            Environment.Exit(1);
         }
     }
 }
