@@ -4,7 +4,7 @@ using Windows.Win32.UI.WindowsAndMessaging;
 
 namespace BmSDK.Framework;
 
-public static class GameWindow
+internal static class GameWindow
 {
     static HWND gameHwnd = default;
     static WNDPROC? s_wndProc;

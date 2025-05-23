@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public static partial class StaticInit
+internal static partial class StaticInit
 {
     public static Type GetManagedTypeForClassPath(string classPath)
     {

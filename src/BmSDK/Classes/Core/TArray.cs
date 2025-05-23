@@ -18,6 +18,7 @@ public unsafe struct TArray<TManaged> : IReadOnlyList<TManaged>
 
     // Could we be wrongly assuming that elements of AllocatorInstance are always pointers?
     // We're used to seeing it where the element type is UObject* (4-byte pointer/sizeof(int)) - what if it's just tightly-packed in general?
+    // In that case we'd want sizeof(FSplitScreenData), not sizeof(int). So we need to store and multiply by some Stride.
     public readonly TManaged this[int idx]
     {
         get => MarshalUtil.ToManaged<TManaged>(AllocatorInstance + (idx * sizeof(int)));

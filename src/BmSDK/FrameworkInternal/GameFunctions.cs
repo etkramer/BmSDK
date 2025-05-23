@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public static class GameFunctions
+internal static class GameFunctions
 {
     // UObject::StaticConstructObject()
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

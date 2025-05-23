@@ -2,7 +2,7 @@ using System.Reflection;
 
 namespace BmSDK.Framework;
 
-public static class ModManager
+internal static class ModManager
 {
     static readonly List<GameMod> s_modInstances = [];
 
