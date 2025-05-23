@@ -10,20 +10,10 @@ public static unsafe class MarshalUtil
     // Marshals unmanaged data to managed, then returns it.
     public static TManaged ToManaged<TManaged>(void* data)
     {
-        // TODO: UStrProperty, UArrayProperty
-
         // Try to copy memory directly (for struct, primitive types)
         if (typeof(TManaged).IsValueType)
         {
             return MemUtil.Blit<TManaged>(data);
-        }
-        else if (typeof(TManaged) == typeof(string))
-        {
-            // FString extends TArray<TCHAR>
-            var baseArray = MemUtil.Blit<TArray<char>>(data);
-
-            return (TManaged)
-                (object)Marshal.PtrToStringUni(baseArray.GetDataPointer(), baseArray.Count)!;
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
@@ -54,25 +44,10 @@ public static unsafe class MarshalUtil
     // Marshals a managed object to native, then copies it into an existing buffer.
     public static void ToUnmanaged<TManaged>(TManaged value, void* data)
     {
-        // TODO: UStrProperty, UArrayProperty
-
         // Try to copy memory directly (for struct, primitive types)
         if (typeof(TManaged).IsValueType)
         {
             MemUtil.Blit(value, data);
-            return;
-        }
-        else if (typeof(TManaged) == typeof(string))
-        {
-            var managedStr = (string)(object)value!;
-
-            // Get TCHAR* from string
-            fixed (char* stringDataPtr = managedStr)
-            {
-                // Call native func
-                GameFunctions.StringCtor((IntPtr)data, (IntPtr)stringDataPtr);
-            }
-
             return;
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))

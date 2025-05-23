@@ -6,6 +6,4 @@ public partial class Package
         _transientPackage ??= StaticFindObjectChecked<Package>(null, null, "Transient", false);
 
     static Package? _transientPackage = null;
-
-    // TODO
 }

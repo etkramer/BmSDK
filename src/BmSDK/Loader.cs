@@ -82,13 +82,14 @@ static class Loader
             var funcObj = MarshalUtil.ToManaged<Function>(&funcPtr);
             var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
 
+            var funcName = funcObj.GetPathName();
             var funcNameForGameInit = "Engine.GameInfo:InitGame";
             var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
             var funcNameForGameTick = "BmGame.RGameInfo:Tick";
             var funcNameForGameBeginPlay = "BmGame.RPlayerController:ClientReady";
 
             // Notify mods of game init
-            if (!HasGameInited && funcObj.GetPathName() == funcNameForGameInit)
+            if (!HasGameInited && funcName == funcNameForGameInit)
             {
                 // Call OnInit() for mods
                 ModManager.Mods.ForEach(mod =>
@@ -102,7 +103,7 @@ static class Loader
             }
 
             // Notify mods of game start
-            if (!HasGameStarted && funcObj.GetPathName() == funcNameForGameStart)
+            if (!HasGameStarted && funcName == funcNameForGameStart)
             {
                 // Call OnStart() for mods
                 ModManager.Mods.ForEach(mod =>
@@ -116,7 +117,7 @@ static class Loader
             }
 
             // Notify mods of game begin play
-            if (funcObj.GetPathName() == funcNameForGameBeginPlay)
+            if (funcName == funcNameForGameBeginPlay)
             {
                 // Call OnBeginPlay() for mods
                 ModManager.Mods.ForEach(mod =>
@@ -128,7 +129,7 @@ static class Loader
             }
 
             // Notify mods of game tick
-            if (funcObj.GetPathName() == funcNameForGameTick)
+            if (funcName == funcNameForGameTick)
             {
                 // Tick framework stuff
                 InputManager.Tick(ModManager.Mods);

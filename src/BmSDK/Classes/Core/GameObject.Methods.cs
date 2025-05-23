@@ -40,7 +40,7 @@ public partial class GameObject
     /// <summary>
     /// Typed wrapper around UnrealScript FindObject().
     /// </summary>
-    public static unsafe T? FindObject<T>(string ObjectName)
+    public static unsafe T? FindObject<T>(FString ObjectName)
         where T : GameObject, IStaticObject => FindObject(ObjectName, T.StaticClass()) as T;
 
     /// <summary>
