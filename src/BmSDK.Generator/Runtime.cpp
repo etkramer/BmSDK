@@ -33,11 +33,18 @@ void Runtime::OnAttach()
 			TRACE("Press 'P' to start SDK generation");
 			while (true)
 			{
-				if (GetAsyncKeyState('P') & 0x8000)
+				if ((GetAsyncKeyState('P') & 0x8000))
 				{
-					// Perform SDK generation
-					Runtime::GenerateSDK();
-					break;
+					DWORD foregroundPID = 0;
+					GetWindowThreadProcessId(GetForegroundWindow(), &foregroundPID);
+
+					// Don't generate if the game window isn't focused.
+					if (foregroundPID == GetCurrentProcessId())
+					{
+						// Perform SDK generation
+						Runtime::GenerateSDK();
+						break;
+					}
 				}
 				this_thread::sleep_for(chrono::milliseconds(100));
 			}

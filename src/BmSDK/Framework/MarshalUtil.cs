@@ -17,6 +17,14 @@ public static unsafe class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
+        else if (typeof(TManaged) == typeof(string))
+        {
+            // FString extends TArray<TCHAR>
+            var baseArray = MemUtil.Blit<TArray<char>>(data);
+
+            return (TManaged)
+                (object)Marshal.PtrToStringUni(baseArray.GetDataPointer(), baseArray.Count)!;
+        }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);

@@ -18,6 +18,7 @@ public static class GameInfo
 
         // UObject (local)
         public const IntPtr ProcessEvent = 0x46A60;
+        public const IntPtr CallFunction = 0x4F8A0;
         public const IntPtr AddObject = 0x8E0A0;
         public const IntPtr ConditionalDestroy = 0x8C6C0;
         public const IntPtr FindFunction = 0x8A980;

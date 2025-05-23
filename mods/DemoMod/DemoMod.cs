@@ -39,25 +39,8 @@ public class DemoMod : GameMod
         Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
 
         // Create split-screen player
-        var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
-        gameViewport.CreatePlayer(1, "fun", true);
-        gameViewport.SetSplitscreenConfiguration(
-            GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL
-        );
-
-        // foreach (var info in gameViewport.SplitscreenInfo)
-        // {
-        //     Debug.Log($"Begin FSplitScreenData");
-        //     foreach (var playerData in info.PlayerData)
-        //     {
-        //         Debug.Log($"  Begin FPerPlayerSplitScreenData");
-        //         Debug.Log($"    SizeX {playerData.SizeX}");
-        //         Debug.Log($"    SizeY {playerData.SizeY}");
-        //         Debug.Log($"    OriginX {playerData.OriginX}");
-        //         Debug.Log($"    OriginY {playerData.OriginY}");
-        //         Debug.Log($"  End FPerPlayerSplitScreenData");
-        //     }
-        //     Debug.Log($"End FSplitScreenData");
-        // }
+        // var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
+        // gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
+        // gameViewport.CreatePlayer(1, "fun", true);
     }
 }

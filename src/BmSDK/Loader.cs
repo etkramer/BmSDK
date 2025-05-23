@@ -9,6 +9,7 @@ static class Loader
     delegate void DllMainDelegate();
 
     static GameFunctions.ProcessEventDelegate? _ProcessEventDetourBase = null;
+    static GameFunctions.CallFunctionDelegate? _CallFunctionDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -79,6 +80,10 @@ static class Loader
             GameInfo.FuncOffsets.ProcessEvent,
             ProcessEventDetour
         );
+        _CallFunctionDetourBase = DetourUtil.NewDetour<GameFunctions.CallFunctionDelegate>(
+            GameInfo.FuncOffsets.CallFunction,
+            CallFunctionDetour
+        );
         _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
             AddObjectDetour
@@ -92,6 +97,32 @@ static class Loader
 
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
+
+    static int a = 0;
+
+    // Detour for UObject::CallFunction()
+    public static unsafe void CallFunctionDetour(
+        IntPtr self,
+        IntPtr Stack,
+        IntPtr Result,
+        IntPtr Function
+    )
+    {
+        RunGuarded(() =>
+        {
+            IntPtr funcPtr = Function;
+
+            // Log for a bit, then do nothing
+            if (a++ < 50)
+            {
+                var funcObj = MarshalUtil.ToManaged<Function>(&funcPtr);
+                Debug.Log(funcObj.GetPathName());
+            }
+        });
+
+        // Call base impl
+        _CallFunctionDetourBase!.Invoke(self, Stack, Result, Function);
+    }
 
     // Detour for UObject::ProcessEvent()
     public static unsafe void ProcessEventDetour(

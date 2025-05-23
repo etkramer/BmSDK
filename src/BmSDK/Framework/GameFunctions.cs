@@ -39,6 +39,15 @@ public static class GameFunctions
         IntPtr UnusedResult
     );
 
+    // UObject::CallFunction()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void CallFunctionDelegate(
+        IntPtr self,
+        IntPtr Stack,
+        IntPtr Result,
+        IntPtr Function
+    );
+
     // UObject::AddObject()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void AddObjectDelegate(IntPtr self, int InIndex);
@@ -52,7 +61,6 @@ public static class GameFunctions
     public delegate IntPtr FindFunctionDelegate(IntPtr self, FName InName, int Global);
 
     // FName::Init()
-    // TODO: Update signature for BM2 (if needed)
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void NameInitDelegate(
         IntPtr self,
@@ -70,6 +78,7 @@ public static class GameFunctions
     static StaticFindObjectDelegate? _StaticFindObject = null;
     static LoadPackageDelegate? _LoadPackage = null;
     static ProcessEventDelegate? _ProcessEvent = null;
+    static CallFunctionDelegate? _CallFunction = null;
     static AddObjectDelegate? _AddObject = null;
     static ConditionalDestroyDelegate? _ConditionalDestroy = null;
     static FindFunctionDelegate? _FindFunction = null;
@@ -95,6 +104,11 @@ public static class GameFunctions
     public static ProcessEventDelegate ProcessEvent =>
         _ProcessEvent ??= Marshal.GetDelegateForFunctionPointer<ProcessEventDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.ProcessEvent)
+        );
+
+    public static CallFunctionDelegate CallFunction =>
+        _CallFunction ??= Marshal.GetDelegateForFunctionPointer<CallFunctionDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.CallFunction)
         );
 
     public static AddObjectDelegate AddObject =>

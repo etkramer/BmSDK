@@ -34,4 +34,6 @@ public unsafe struct TArray<TManaged> : IEnumerable<TManaged>, IReadOnlyCollecti
     {
         return GetEnumerator();
     }
+
+    public readonly IntPtr GetDataPointer() => (IntPtr)AllocatorInstance;
 }
