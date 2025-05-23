@@ -23,4 +23,9 @@ public abstract class GameMod
     /// Called once every world tick.
     /// </summary>
     public virtual void OnTick() { }
+
+    /// <summary>
+    /// Called every time a key is pressed.
+    /// </summary>
+    public virtual void OnKeyDown(Keys key) { }
 }

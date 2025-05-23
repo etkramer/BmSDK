@@ -98,8 +98,6 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    static int a = 0;
-
     // Detour for UObject::CallFunction()
     public static unsafe void CallFunctionDetour(
         IntPtr self,
@@ -108,17 +106,7 @@ static class Loader
         IntPtr Function
     )
     {
-        RunGuarded(() =>
-        {
-            IntPtr funcPtr = Function;
-
-            // Log for a bit, then do nothing
-            if (a++ < 50)
-            {
-                var funcObj = MarshalUtil.ToManaged<Function>(&funcPtr);
-                Debug.Log(funcObj.GetPathName());
-            }
-        });
+        // TODO: Mixins
 
         // Call base impl
         _CallFunctionDetourBase!.Invoke(self, Stack, Result, Function);
@@ -188,6 +176,10 @@ static class Loader
             // Notify mods of game tick
             if (funcObj.GetPathName() == funcNameForGameTick)
             {
+                // Tick framework stuff
+                InputManager.Tick(s_modInstances);
+                GameWindow.Tick();
+
                 // Call OnTick() for mods
                 s_modInstances.ForEach(mod =>
                 {

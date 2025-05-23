@@ -8,4 +8,16 @@ DetourTransactionBegin
 DetourTransactionCommit
 DetourFinishHelperProcess
 
+GetWindowThreadProcessId
+GetForegroundWindow
+GetCurrentProcessId
+EnumWindows
+IsWindowVisible
+GetWindowLong
+SetWindowLong
+CallWindowProc
+
+WM_KEYUP
+WM_KEYDOWN
+
 WIN32_ERROR

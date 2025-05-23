@@ -15,21 +15,6 @@ public class DemoMod : GameMod
         defaultRainComponent.ParticleCount *= 5;
     }
 
-    public override void OnEnterMenu()
-    {
-        var console = GameObject.FindObjects<Console>().Last();
-        Debug.Log($"Found {console}");
-
-        Task.Delay(1000)
-            .ContinueWith(_ =>
-            {
-                Debug.Log("Entering game");
-                console.ConsoleCommand(
-                    "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
-                );
-            });
-    }
-
     public override void OnEnterGame()
     {
         var playerPawns = GameObject
@@ -37,10 +22,35 @@ public class DemoMod : GameMod
             .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
 
         Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
+    }
 
-        // Create split-screen player
-        // var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
-        // gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
-        // gameViewport.CreatePlayer(1, "fun", true);
+    public override void OnKeyDown(Keys key)
+    {
+        // Use key press to figure out action.
+        if (key == Keys.Enter)
+        {
+            Debug.Log("Entering game");
+            DebugLoadGame();
+        }
+        else if (key == Keys.T)
+        {
+            Debug.Log("Spawning P2");
+            DebugAddSplitScreenPlayer();
+        }
+    }
+
+    private static void DebugLoadGame()
+    {
+        var console = GameObject.FindObjects<Console>().Last();
+        console.ConsoleCommand(
+            "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
+        );
+    }
+
+    private static void DebugAddSplitScreenPlayer()
+    {
+        var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
+        gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
+        gameViewport.CreatePlayer(1, "fun", true);
     }
 }
