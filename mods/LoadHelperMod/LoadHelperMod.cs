@@ -1,8 +1,5 @@
 ﻿using BmSDK;
-using BmSDK.BmGame;
-using BmSDK.Engine;
 using BmSDK.Framework;
-using Console = BmSDK.Engine.Console;
 
 namespace LoadHelperMod;
 
@@ -12,5 +9,6 @@ public class LoadHelperMod : GameMod
     {
         // Load packages containing classes we'll want at generation time
         GameObject.LoadPackage("Playable_Batman_SF");
+        GameObject.LoadPackage("Playable_Robin_SF");
     }
 }

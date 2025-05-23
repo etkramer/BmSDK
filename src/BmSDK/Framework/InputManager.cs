@@ -15,7 +15,9 @@ public static class InputManager
                 // Let mods know about the key press.
                 foreach (var mod in mods)
                 {
+                    Debug.PushSender(mod.GetType().Name);
                     mod.OnKeyDown((Keys)i);
+                    Debug.PopSender();
                 }
             }
         }

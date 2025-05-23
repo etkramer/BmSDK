@@ -33,9 +33,6 @@ public static class GameWindow
             // If not, keep trying to find it.
             if (TryFindGameWindow(out gameHwnd))
             {
-                // Just found it!
-                Debug.Log($"Found game window: {gameHwnd}");
-
                 // Subclass the window procedure
                 s_wndProc = CustomWndProc;
                 var originalWndProc = PInvoke.SetWindowLong(

@@ -26,7 +26,7 @@ public class DemoMod : GameMod
 
     public override void OnKeyDown(Keys key)
     {
-        // Use key press to figure out action.
+        // Debug actions based on key press.
         if (key == Keys.Enter)
         {
             Debug.Log("Entering game");
