@@ -2,7 +2,6 @@
 using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
-using Console = BmSDK.Engine.Console;
 
 namespace DemoMod;
 
@@ -11,10 +10,10 @@ public class DemoMod : GameMod
     public override void OnInit()
     {
         // Boost snow intensity
-        var defaultRainComponent = GameObject.FindObjects<RRainComponent>().First();
+        var defaultRainComponent = UObject.FindObjects<URRainComponent>().First();
         defaultRainComponent.ParticleCount *= 5;
 
-        Debug.Log($"abs(-5) = {GameObject.Abs(-5)}");
+        Debug.Log($"abs(-5) = {UObject.Abs(-5)}");
     }
 
     public override void OnEnterMenu()
@@ -28,8 +27,8 @@ public class DemoMod : GameMod
 
     public override void OnEnterGame()
     {
-        var playerPawns = GameObject
-            .FindObjects<RPawnPlayer>()
+        var playerPawns = UObject
+            .FindObjects<ARPawnPlayer>()
             .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
 
         Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
@@ -52,7 +51,7 @@ public class DemoMod : GameMod
 
     private static void DebugLoadGame()
     {
-        var console = GameObject.FindObjects<Console>().Last();
+        var console = UObject.FindObjects<UConsole>().Last();
         console.ConsoleCommand(
             "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
         );
@@ -60,8 +59,8 @@ public class DemoMod : GameMod
 
     private static void DebugAddSplitScreenPlayer()
     {
-        var gameViewport = GameObject.FindObjects<GameViewportClient>().Last();
-        gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
+        var gameViewport = UObject.FindObjects<UGameViewportClient>().Last();
+        gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, "fun", true);
 
         // TODO: Fix TArray stride

@@ -36,6 +36,9 @@ public:
 	bool IsA(class UClass* classObj) const;
 
 	static class UClass* FindClass(const string& classPath);
+
+public:
+	STATIC_CLASS("Core.Object")
 };
 
 CHECK_CLASS(UObject)

@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class Property
+public partial class UProperty
 {
     /// <summary>
     /// Property: ArrayDim

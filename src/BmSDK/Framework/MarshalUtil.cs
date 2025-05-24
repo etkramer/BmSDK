@@ -2,7 +2,7 @@
 
 public static unsafe class MarshalUtil
 {
-    public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
+    public static readonly Dictionary<IntPtr, UObject> s_managedObjects = [];
 
     public static TManaged ToManaged<TManaged>(IntPtr data) =>
         ToManaged<TManaged>(data.ToPointer());
@@ -15,7 +15,7 @@ public static unsafe class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -50,7 +50,7 @@ public static unsafe class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
         {
             // Handle null object references.
             if (value is null)
@@ -60,7 +60,7 @@ public static unsafe class MarshalUtil
             }
 
             // We already have a pointer to this object's native instance, so just assign it.
-            ToUnmanaged(((GameObject)(object)value!).Ptr, data);
+            ToUnmanaged(((UObject)(object)value!).Ptr, data);
             return;
         }
 
@@ -79,7 +79,7 @@ public static unsafe class MarshalUtil
 
         // Create a new managed object
         var newObj = s_managedObjects[objPtr] = Guard.NotNull(
-            (GameObject?)Activator.CreateInstance(managedType, true),
+            (UObject?)Activator.CreateInstance(managedType, true),
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;

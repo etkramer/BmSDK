@@ -5,17 +5,21 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class GameObject
+public partial class UObject
 {
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjects"/> instead.
     /// </summary>
-    private static unsafe ref TArray<GameObject> GObjects =>
-        ref *(TArray<GameObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
+    private static unsafe ref TArray<UObject> GObjects =>
+        ref *(TArray<UObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
-    public static unsafe Package? LoadPackage(string Filename) => LoadPackage(null, Filename);
+    public static unsafe UPackage? LoadPackage(string Filename) => LoadPackage(null, Filename);
 
-    public static unsafe Package? LoadPackage(Package? InOuter, string Filename, int LoadFlags = 0)
+    public static unsafe UPackage? LoadPackage(
+        UPackage? InOuter,
+        string Filename,
+        int LoadFlags = 0
+    )
     {
         // Get TCHAR* from string
         fixed (char* filenamePtr = Filename)
@@ -27,7 +31,7 @@ public partial class GameObject
                 LoadFlags
             );
 
-            return MarshalUtil.ToManaged<Package>(&result);
+            return MarshalUtil.ToManaged<UPackage>(&result);
         }
     }
 
@@ -35,13 +39,13 @@ public partial class GameObject
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjects<T>()
-        where T : GameObject => GObjects.OfType<T>();
+        where T : UObject => GObjects.OfType<T>();
 
     /// <summary>
     /// Typed wrapper around UnrealScript FindObject().
     /// </summary>
     public static unsafe T? FindObject<T>(FString ObjectName)
-        where T : GameObject, IStaticObject => FindObject(ObjectName, T.StaticClass()) as T;
+        where T : UObject, IStaticObject => FindObject(ObjectName, T.StaticClass()) as T;
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
@@ -53,12 +57,12 @@ public partial class GameObject
     /// <param name="ExactClass">Whether to require an exact match with the passed in class</param>
     /// <returns>Returns the found object or null if none could be found</returns>
     public static unsafe T StaticFindObjectChecked<T>(
-        Class? Class,
-        GameObject? InOuter,
+        UClass? Class,
+        UObject? InOuter,
         string Name,
         bool ExactClass
     )
-        where T : GameObject
+        where T : UObject
     {
         // Get TCHAR* from string
         fixed (char* namePtr = Name)
@@ -72,7 +76,7 @@ public partial class GameObject
             );
 
             return Guard.NotNull(
-                (T?)(object?)MarshalUtil.ToManaged<GameObject>(&result),
+                (T?)(object?)MarshalUtil.ToManaged<UObject>(&result),
                 $"Failed to find object: {Name}"
             );
         }
@@ -87,38 +91,38 @@ public partial class GameObject
     /// <param name="SetFlags">The object flags to apply to the new object</param>
     /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
     /// <returns>A reference to a new object of the specified class</returns>
-    public static unsafe GameObject ConstructObject(
-        Class Class,
-        GameObject? Outer = null,
+    public static unsafe UObject ConstructObject(
+        UClass Class,
+        UObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        GameObject? Template = null
+        UObject? Template = null
     )
     {
         var result = ConstructObjectInternal(Class, Outer, Name, SetFlags, Template);
-        return MarshalUtil.ToManaged<GameObject>(&result);
+        return MarshalUtil.ToManaged<UObject>(&result);
     }
 
     /// <inheritdoc cref="ConstructObject"/>
     public static unsafe T ConstructObject<T>(
-        GameObject? Outer = null,
+        UObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        GameObject? Template = null
+        UObject? Template = null
     )
-        where T : GameObject, IStaticObject =>
+        where T : UObject, IStaticObject =>
         (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
     internal static unsafe IntPtr ConstructObjectInternal(
-        Class Class,
-        GameObject? Outer,
+        UClass Class,
+        UObject? Outer,
         string? Name,
         EObjectFlags SetFlags,
-        GameObject? Template
+        UObject? Template
     )
     {
         // Default to transient package
-        Outer ??= Package.GetTransientPackage();
+        Outer ??= UPackage.GetTransientPackage();
 
         // Call native func
         var result = GameFunctions.StaticConstructObject(
@@ -139,7 +143,7 @@ public partial class GameObject
     /// <summary>
     /// Enumerates all objects in this object's outer chain.
     /// </summary>
-    public IEnumerable<GameObject> EnumerateOuter()
+    public IEnumerable<UObject> EnumerateOuter()
     {
         var outer = this.Outer;
         while (outer is not null)
@@ -152,7 +156,7 @@ public partial class GameObject
     /// <summary>
     /// Returns the fully qualified pathname for this object as well as the name of the class.
     /// </summary>
-    public string GetFullName(GameObject? StopOuter = null)
+    public string GetFullName(UObject? StopOuter = null)
     {
         return $"{Guard.NotNull(Class).Name} {GetPathName(StopOuter)}";
     }
@@ -160,21 +164,21 @@ public partial class GameObject
     /// <summary>
     /// Returns the fully qualified pathname for this object.
     /// </summary>
-    public string GetPathName(GameObject? StopOuter = null)
+    public string GetPathName(UObject? StopOuter = null)
     {
         var res = "";
         GetPathNameRecursive(StopOuter, ref res);
         return res;
     }
 
-    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
+    private void GetPathNameRecursive(UObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {
             if (Outer is not null && Outer != StopOuter)
             {
                 Outer.GetPathNameRecursive(StopOuter, ref ResultString);
-                ResultString += Outer is Package ? "." : ":";
+                ResultString += Outer is UPackage ? "." : ":";
             }
 
             ResultString += Name.ToString();

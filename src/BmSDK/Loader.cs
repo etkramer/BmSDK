@@ -79,8 +79,8 @@ static class Loader
             IntPtr funcPtr = Function;
             IntPtr selfPtr = self;
 
-            var funcObj = MarshalUtil.ToManaged<Function>(&funcPtr);
-            var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
+            var funcObj = MarshalUtil.ToManaged<UFunction>(&funcPtr);
+            var selfObj = MarshalUtil.ToManaged<UObject>(&selfPtr);
 
             var funcName = funcObj.GetPathName();
             var funcNameForGameInit = "Engine.GameInfo:InitGame";
@@ -164,7 +164,7 @@ static class Loader
             var classIndex = *(int*)classIndexPtr.ToPointer();
             if (classIndex < 1)
             {
-                MarshalUtil.CreateManagedWrapper(self, typeof(Class));
+                MarshalUtil.CreateManagedWrapper(self, typeof(UClass));
                 return;
             }
 

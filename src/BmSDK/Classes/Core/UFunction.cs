@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class Function
+public partial class UFunction
 {
     /// <summary>
     /// Property: FunctionFlags

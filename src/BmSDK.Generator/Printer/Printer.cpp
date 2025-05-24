@@ -51,10 +51,10 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::PushIndent();
 	{
 		// Print StaticClass() helper
-		Printer::Indent(out) << "public static global::BmSDK.Class StaticClass() => _staticClass "
-								"??= StaticFindObjectChecked<Class>(null, null, \""
+		Printer::Indent(out) << "public static global::BmSDK.UClass StaticClass() => _staticClass "
+								"??= StaticFindObjectChecked<UClass>(null, null, \""
 							 << _class->GetPathName() << "\", false);" << endl;
-		Printer::Indent(out) << "static global::BmSDK.Class _staticClass = null;" << endl;
+		Printer::Indent(out) << "static global::BmSDK.UClass _staticClass = null;" << endl;
 		out << endl;
 
 		// Print internal ctor
@@ -68,7 +68,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::Indent(out) << "/// </summary>" << endl;
 			Printer::Indent(out)
 				<< "public " << _class->GetNameManaged()
-				<< "(global::BmSDK.GameObject Outer = null, string Name = null, "
+				<< "(global::BmSDK.UObject Outer = null, string Name = null, "
 				   "global::BmSDK.EObjectFlags SetFlags = 0, "
 				<< _class->GetNameManaged()
 				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "
@@ -367,7 +367,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 
 		Printer::Indent(out)
 			<< "var funcManaged = "
-			   "BmSDK.Framework.MarshalUtil.ToManaged<global::BmSDK.Function>(&funcPtr);"
+			   "BmSDK.Framework.MarshalUtil.ToManaged<global::BmSDK.UFunction>(&funcPtr);"
 			<< endl;
 
 		Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"

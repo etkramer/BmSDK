@@ -2,7 +2,7 @@
 
 namespace BmSDK;
 
-public partial class Struct
+public partial class UStruct
 {
     /// <summary>
     /// Property: PropertiesSize

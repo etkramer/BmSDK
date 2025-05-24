@@ -9,21 +9,18 @@ namespace BmSDK;
 
 public interface IStaticObject
 {
-    public static abstract Class StaticClass();
+    public static abstract UClass StaticClass();
 }
 
-public partial class GameObject
+public partial class UObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
     /// <summary>
-    /// Sets a property value for a <see cref="GameObject"/> instance
+    /// Sets a property value for a <see cref="UObject"/> instance
     /// </summary>
-    public static unsafe void SetPropertyValue<TValue>(
-        GameObject obj,
-        IntPtr offset,
-        TValue value
-    ) => MarshalUtil.ToUnmanaged(value, (obj.Ptr + offset).ToPointer());
+    public static unsafe void SetPropertyValue<TValue>(UObject obj, IntPtr offset, TValue value) =>
+        MarshalUtil.ToUnmanaged(value, (obj.Ptr + offset).ToPointer());
 
     /// <summary>
     /// Sets a property value for a struct instance
