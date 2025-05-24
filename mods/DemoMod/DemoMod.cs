@@ -17,6 +17,15 @@ public class DemoMod : GameMod
         Debug.Log($"abs(-5) = {GameObject.Abs(-5)}");
     }
 
+    public override void OnEnterMenu()
+    {
+        // TODO: Let's find out why this doesn't work.
+        {
+            // var worldInfo = WorldInfo.GetWorldInfo();
+            // Debug.Log(worldInfo);
+        }
+    }
+
     public override void OnEnterGame()
     {
         var playerPawns = GameObject
@@ -55,6 +64,7 @@ public class DemoMod : GameMod
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, "fun", true);
 
+        // TODO: Fix TArray stride
         // foreach (var info in gameViewport.SplitscreenInfo)
         // {
         //     Debug.Log($"Begin FSplitScreenData");

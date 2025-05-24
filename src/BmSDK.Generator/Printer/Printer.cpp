@@ -363,7 +363,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		string ptrText = funcIsStatic ? "StaticClass().Ptr" : "Ptr";
 
 		Printer::Indent(out) << "var funcPtr = BmSDK.GameFunctions.FindFunction(" << ptrText
-							 << ", new FName(\"" << func->Name.ToString() << "\"), 0);" << endl;
+							 << ", \"" << func->Name.ToString() << "\", 0);" << endl;
 
 		Printer::Indent(out)
 			<< "var funcManaged = "
