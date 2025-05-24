@@ -10,7 +10,7 @@ public partial class Function
     public EFunctionFlags FunctionFlags
     {
         get => MarshalUtil.ToManaged<EFunctionFlags>(Ptr + 108);
-        set => SetPropertyValue(this, 92, value);
+        set => SetPropertyValue(this, 108, value);
     }
 
     /// <summary>
@@ -19,6 +19,6 @@ public partial class Function
     public ushort iNative
     {
         get => MarshalUtil.ToManaged<ushort>(Ptr + 112);
-        set => SetPropertyValue(this, 96, value);
+        set => SetPropertyValue(this, 112, value);
     }
 }

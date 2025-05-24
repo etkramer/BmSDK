@@ -14,10 +14,7 @@ public class DemoMod : GameMod
         var defaultRainComponent = GameObject.FindObjects<RRainComponent>().First();
         defaultRainComponent.ParticleCount *= 5;
 
-        // Something's very wrong with our function calls. Likely connected to other methods crashing too.
-        {
-            Debug.Log($"abs(-5) = {GameObject.Abs(-5)}");
-        }
+        Debug.Log($"abs(-5) = {GameObject.Abs(-5)}");
     }
 
     public override void OnEnterGame()
@@ -42,29 +39,6 @@ public class DemoMod : GameMod
             Debug.Log("Spawning P2");
             DebugAddSplitScreenPlayer();
         }
-        else if (key == Keys.R)
-        {
-            DebugSpawnActor();
-        }
-    }
-
-    private static void DebugSpawnActor()
-    {
-        Debug.Log(SkeletalMesh.StaticClass());
-
-        // Try FindObject()
-        // TODO: Why do so many script functions just crash? This should definitely work.
-        var bodyMesh = GameObject.FindObject<SkeletalMesh>("Assault_Rifle.Mesh.Assault_Rifle_Mesh");
-
-        // This works though.
-        // var bodyMesh = GameObject.StaticFindObjectChecked<SkeletalMesh>(
-        //     SkeletalMesh.StaticClass(),
-        //     null,
-        //     "Assault_Rifle.Mesh.Assault_Rifle_Mesh",
-        //     false
-        // );
-
-        Debug.Log(bodyMesh);
     }
 
     private static void DebugLoadGame()
