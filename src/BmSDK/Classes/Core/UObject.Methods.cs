@@ -38,7 +38,7 @@ public partial class UObject
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
-    public static unsafe IEnumerable<T> FindObjects<T>()
+    public static unsafe IEnumerable<T> FindObjectsSlow<T>()
         where T : UObject => GObjects.OfType<T>();
 
     /// <summary>

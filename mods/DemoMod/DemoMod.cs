@@ -10,7 +10,7 @@ public class DemoMod : GameMod
     public override void OnInit()
     {
         // Boost snow intensity
-        var defaultRainComponent = UObject.FindObjects<URRainComponent>().First();
+        var defaultRainComponent = UObject.FindObjectsSlow<URRainComponent>().First();
         defaultRainComponent.ParticleCount *= 5;
 
         Debug.Log($"abs(-5) = {UObject.Abs(-5)}");
@@ -70,7 +70,7 @@ public class DemoMod : GameMod
 
     private static void DebugLoadGame()
     {
-        var console = UObject.FindObjects<UConsole>().Last();
+        var console = Game.GetConsole();
         console.ConsoleCommand(
             "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
         );
@@ -78,7 +78,7 @@ public class DemoMod : GameMod
 
     private static void DebugAddSplitScreenPlayer()
     {
-        var gameViewport = UObject.FindObjects<UGameViewportClient>().Last();
+        var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, "fun", true);
 

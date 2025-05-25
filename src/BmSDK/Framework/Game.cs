@@ -31,12 +31,34 @@ public static class Game
     }
 
     /// <summary>
-    /// Gets the current GameReplicationInfo, which can be used to access various game state.
+    /// Gets the replication info object for the currently-loaded world.
     /// </summary>
-    /// <returns></returns>
     public static ARGameRI GetGameRI()
     {
         var worldInfo = GetWorldInfo();
         return Guard.NotNull(worldInfo.GRI as ARGameRI);
+    }
+
+    /// <summary>
+    /// Gets the global engine object.
+    /// </summary>
+    public static UGameEngine GetEngine() => Guard.NotNull(UEngine.GetEngine() as UGameEngine);
+
+    /// <summary>
+    /// Gets the global viewport client object.
+    /// </summary>
+    public static URGFxGameViewportClient GetGameViewportClient()
+    {
+        var engine = GetEngine();
+        return Guard.NotNull(engine.GameViewport as URGFxGameViewportClient);
+    }
+
+    /// <summary>
+    /// Gets the global console object.
+    /// </summary>
+    public static UConsole GetConsole()
+    {
+        var gameViewport = GetGameViewportClient();
+        return Guard.NotNull(gameViewport.ViewportConsole);
     }
 }
