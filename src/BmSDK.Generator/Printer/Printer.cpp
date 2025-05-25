@@ -12,7 +12,6 @@ int Printer::IndentLevel = 0;
 void Printer::PrintFile(UClass* _class, ostream& out)
 {
 	// Print preprocessor directives
-	Printer::Indent(out) << "#nullable enable annotations" << endl;
 	Printer::Indent(out) << "#pragma warning disable CS0108" << endl;
 	out << endl;
 

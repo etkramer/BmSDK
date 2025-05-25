@@ -68,7 +68,7 @@ string UProperty::GetInnerTypeNameManaged() const
 			 Class->GetPathName() == "Core.InterfaceProperty")
 	{
 		auto objectProp = (UObjectProperty*)this;
-		return objectProp->PropertyClass->GetPathNameManaged() + "?";
+		return objectProp->PropertyClass->GetPathNameManaged();
 	}
 	else if (Class->GetPathName() == "Core.ArrayProperty")
 	{

@@ -1,3 +1,4 @@
+using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 
@@ -27,5 +28,15 @@ public static class Game
     {
         var playerController = GetPlayerController();
         return Guard.NotNull(playerController.Pawn, "Controller is not possessing a pawn.");
+    }
+
+    /// <summary>
+    /// Gets the current GameReplicationInfo, which can be used to access various game state.
+    /// </summary>
+    /// <returns></returns>
+    public static ARGameRI GetGameRI()
+    {
+        var worldInfo = GetWorldInfo();
+        return Guard.NotNull(worldInfo.GRI as ARGameRI);
     }
 }

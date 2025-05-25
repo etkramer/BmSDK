@@ -26,6 +26,6 @@ public unsafe struct FString
 
     public override readonly string ToString()
     {
-        return Marshal.PtrToStringUni(*(IntPtr*)AllocatorInstance, Num)!;
+        return Marshal.PtrToStringUni(AllocatorInstance, Num - 1)!;
     }
 }
