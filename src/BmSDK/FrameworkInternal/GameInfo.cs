@@ -23,6 +23,9 @@ internal static class GameInfo
         public const IntPtr ConditionalDestroy = 0x8C6C0;
         public const IntPtr FindFunction = 0x8A980;
 
+        // UClass (local)
+        public const IntPtr GetDefaultObject = 0x4C8E0;
+
         // FName (local)
         public const IntPtr NameInit = 0x7E990;
 

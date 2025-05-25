@@ -60,6 +60,10 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr FindFunctionDelegate(IntPtr self, FName InName, int Global);
 
+    // UClass::GetDefaultObject()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate IntPtr GetDefaultObjectDelegate(IntPtr self, int bForce);
+
     // FName::Init()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void NameInitDelegate(
@@ -82,6 +86,7 @@ internal static class GameFunctions
     static AddObjectDelegate? _AddObject = null;
     static ConditionalDestroyDelegate? _ConditionalDestroy = null;
     static FindFunctionDelegate? _FindFunction = null;
+    static GetDefaultObjectDelegate? _GetDefaultObject = null;
     static NameInitDelegate? _NameInit = null;
     static StringCtorDelegate? _StringCtor = null;
 
@@ -124,6 +129,11 @@ internal static class GameFunctions
     public static FindFunctionDelegate FindFunction =>
         _FindFunction ??= Marshal.GetDelegateForFunctionPointer<FindFunctionDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.FindFunction)
+        );
+
+    public static GetDefaultObjectDelegate GetDefaultObject =>
+        _GetDefaultObject ??= Marshal.GetDelegateForFunctionPointer<GetDefaultObjectDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.GetDefaultObject)
         );
 
     public static NameInitDelegate NameInit =>

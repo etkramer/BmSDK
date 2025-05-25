@@ -1,5 +1,4 @@
 ﻿using BmSDK;
-using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 
@@ -16,22 +15,10 @@ public class DemoMod : GameMod
         Debug.Log($"abs(-5) = {UObject.Abs(-5)}");
     }
 
-    public override void OnEnterMenu()
-    {
-        // TODO: Let's find out why this doesn't work.
-        {
-            // var worldInfo = WorldInfo.GetWorldInfo();
-            // Debug.Log(worldInfo);
-        }
-    }
-
     public override void OnEnterGame()
     {
-        var playerPawns = UObject
-            .FindObjects<ARPawnPlayer>()
-            .Where(obj => !obj.Name.ToString().StartsWith("Default__"));
-
-        Debug.Log($"Found {playerPawns.Count()} loaded player pawns");
+        var playerPawn = Game.GetPlayerPawn();
+        Debug.Log($"Found pawn {playerPawn}");
     }
 
     public override void OnKeyDown(Keys key)
