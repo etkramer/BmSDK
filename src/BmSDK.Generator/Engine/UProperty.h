@@ -6,6 +6,7 @@ enum class EPropertyFlags : DWORD
 {
 	CPF_Parm = 0x8,
 	CPF_OptionalParm = 0x10,
+	CPF_OutParm = 0x20,
 	CPF_ReturnParm = 0x80
 };
 

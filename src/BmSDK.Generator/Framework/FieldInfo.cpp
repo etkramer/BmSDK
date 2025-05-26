@@ -23,13 +23,15 @@ string FieldInfo::GetNameManaged()
 	{
 		bool isActorClass = false;
 		UStruct* classSuper = (UClass*)field;
-		while (classSuper = classSuper->SuperStruct)
+		while (classSuper)
 		{
 			if (classSuper->GetPathName() == "Engine.Actor")
 			{
 				isActorClass = true;
 				break;
 			}
+
+			classSuper = classSuper->SuperStruct;
 		}
 
 		if (isActorClass)

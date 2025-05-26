@@ -324,6 +324,22 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		fieldLink = fieldLink->Next;
 	}
 
+	bool shouldSuppressOptional = false;
+	for (auto i = 0u; i < params.size(); i++)
+	{
+		auto prop = params[i];
+
+		// C# doesn't support optional out params. To avoid reordering and to avoid making
+		// any functional changes, let's just force everything to be non-optional when we encounter
+		// one.
+		if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
+			((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm))
+		{
+			shouldSuppressOptional = true;
+			break;
+		}
+	}
+
 	// Print func comment
 	Printer::Indent(out) << "/// <summary>" << endl;
 	Printer::Indent(out) << "/// Function: " << func->GetName() << endl;
@@ -341,9 +357,16 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	{
 		auto prop = params[i];
 
+		// "out" keyword for out params
+		if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+		{
+			out << "out ";
+		}
+
 		// Print param declaration
 		out << prop->GetInnerTypeNameManaged() << " " << prop->GetNameManaged();
-		if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm)
+		if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
+			!shouldSuppressOptional)
 		{
 			out << " = default";
 		}
@@ -375,7 +398,13 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		{
 			auto param = params[i];
 
-			// Print param declaration
+			// Don't marshal in 'out' params
+			if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+			{
+				continue;
+			}
+
+			// Print
 			Printer::Indent(out) << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged("
 								 << param->GetNameManaged() << ", paramsPtr + " << param->Offset
 								 << ");" << endl;
@@ -399,6 +428,20 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		{
 			Printer::Indent(out) << "funcManaged.iNative = oldNative;" << endl;
 			Printer::Indent(out) << "funcManaged.FunctionFlags = oldFlags;" << endl;
+		}
+
+		// Marshal/assign out params
+		for (auto i = 0u; i < params.size(); i++)
+		{
+			auto param = params[i];
+
+			if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+			{
+				Printer::Indent(out) << param->GetNameManaged()
+									 << " = global::BmSDK.Framework.MarshalUtil.ToManaged<"
+									 << param->GetInnerTypeNameManaged() << ">(paramsPtr + "
+									 << param->Offset << ");" << endl;
+			}
 		}
 
 		if (returnParam != nullptr)

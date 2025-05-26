@@ -80,7 +80,7 @@ public class DemoMod : GameMod
     {
         var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
-        gameViewport.CreatePlayer(1, "fun", true);
+        gameViewport.CreatePlayer(1, out _, true);
 
         // TODO: Fix TArray stride
         // foreach (var info in gameViewport.SplitscreenInfo)

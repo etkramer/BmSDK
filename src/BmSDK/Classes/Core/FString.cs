@@ -24,8 +24,13 @@ public unsafe struct FString
 
     public static implicit operator FString(string str) => new(str);
 
-    public override readonly string ToString()
+    public override readonly string? ToString()
     {
+        if (AllocatorInstance == IntPtr.Zero)
+        {
+            return null;
+        }
+
         return Marshal.PtrToStringUni(AllocatorInstance, Num - 1)!;
     }
 }
