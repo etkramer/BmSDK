@@ -31,6 +31,17 @@ public static class Game
     }
 
     /// <summary>
+    /// Gets (or creates if needed) the cheat manager owned by the local player controller (returned by <see cref="GetPlayerController"/>).
+    /// </summary>
+    public static URCheatManager GetCheatManager()
+    {
+        var playerController = GetPlayerController();
+        playerController.CheatManager ??= new URCheatManager(playerController);
+
+        return (URCheatManager)playerController.CheatManager;
+    }
+
+    /// <summary>
     /// Gets the replication info object for the currently-loaded world.
     /// </summary>
     public static ARGameRI GetGameRI()

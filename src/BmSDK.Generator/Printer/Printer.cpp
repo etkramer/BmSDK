@@ -67,7 +67,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::Indent(out) << "/// </summary>" << endl;
 			Printer::Indent(out)
 				<< "public " << _class->GetNameManaged()
-				<< "(global::BmSDK.UObject Outer = null, string Name = null, "
+				<< "(global::BmSDK.UObject Outer, string Name = null, "
 				   "global::BmSDK.EObjectFlags SetFlags = 0, "
 				<< _class->GetNameManaged()
 				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "

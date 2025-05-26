@@ -1,4 +1,5 @@
-﻿using BmSDK.BmScript;
+﻿using BmSDK.BmGame;
+using BmSDK.BmScript;
 using BmSDK.Engine;
 
 namespace DemoMod;
@@ -26,6 +27,11 @@ public class DemoMod : GameMod
         {
             Debug.Log("Spawning P2");
             DebugAddSplitScreenPlayer();
+        }
+        else if (key == Keys.V)
+        {
+            Debug.Log("Toggling ghost");
+            DebugToggleGhost();
         }
         else if (key == Keys.R)
         {
@@ -72,6 +78,12 @@ public class DemoMod : GameMod
         console.ConsoleCommand(
             "start batentry?Players=Playable_Batman?Area=Church?Flags=Vertical_Slice?Chapters=1,2?unlockall"
         );
+    }
+
+    private static void DebugToggleGhost()
+    {
+        var cheatManager = Game.GetCheatManager();
+        cheatManager.ToggleGhost();
     }
 
     private static void DebugAddSplitScreenPlayer()
