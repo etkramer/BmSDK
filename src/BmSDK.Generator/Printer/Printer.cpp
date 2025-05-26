@@ -50,10 +50,13 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::PushIndent();
 	{
 		// Print StaticClass() helper
-		Printer::Indent(out) << "public static global::BmSDK.UClass StaticClass() => _staticClass "
-								"??= StaticFindObjectChecked<UClass>(null, null, \""
+		// TODO: Cache this. Will need better GC integration for that to make sense (lifetimes don't
+		// match up currently - 'destroying' a managed wrapper doesn't remove references to it). For
+		// instance, we could add objects to the root set when we create their managed wrappers, but
+		// remove them from the root set in the wrapper's finalizer.
+		Printer::Indent(out) << "public static global::BmSDK.UClass StaticClass() => "
+								"StaticFindObjectChecked<UClass>(null, null, \""
 							 << _class->GetPathName() << "\", false);" << endl;
-		Printer::Indent(out) << "static global::BmSDK.UClass _staticClass = null;" << endl;
 		out << endl;
 
 		// Print internal ctor
@@ -155,7 +158,7 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 	// Print struct declaration
 	Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
 						 << ")]" << endl;
-	Printer::Indent(out) << "public struct " << _struct->GetNameManaged() << endl;
+	Printer::Indent(out) << "public record struct " << _struct->GetNameManaged() << endl;
 
 	// Print struct body
 	Printer::Indent(out) << "{" << endl;

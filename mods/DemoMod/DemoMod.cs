@@ -11,8 +11,6 @@ public class DemoMod : GameMod
         // Boost snow intensity
         var defaultRainComponent = UObject.FindObjectsSlow<URRainComponent>().First();
         defaultRainComponent.ParticleCount *= 5;
-
-        Debug.Log($"abs(-5) = {UObject.Abs(-5)}");
     }
 
     public override void OnKeyDown(Keys key)
@@ -44,7 +42,6 @@ public class DemoMod : GameMod
         // Print some game info
         var gri = Game.GetGameRI();
         Debug.Log(gri.GetCurrentAreaName());
-        Debug.Log(gri.GameMode);
         foreach (var player in gri.PlayerList)
         {
             Debug.Log($"  {player}");
@@ -52,9 +49,11 @@ public class DemoMod : GameMod
 
         // Grab player pawn
         var playerPawn = Game.GetPlayerPawn();
+        Debug.Log($"{playerPawn.Location}, {playerPawn.Rotation}");
 
         // TODO: Let's get this working
         var spawnClass = ARCinematicBatman.StaticClass();
+        Debug.Log(spawnClass);
         var spawnPos = playerPawn.Location;
         var spawnRot = playerPawn.Rotation;
         spawnPos.Y += 100;
