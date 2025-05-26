@@ -15,6 +15,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Using Include="BmSDK" />
+    <Using Include="BmSDK.Framework" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" Private="false" ExcludeAssets="all" />
   </ItemGroup>
 
