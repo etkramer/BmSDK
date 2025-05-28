@@ -13,6 +13,17 @@ public class DemoMod : GameMod
         defaultRainComponent.ParticleCount *= 5;
     }
 
+    public override void OnEnterGame()
+    {
+        // Enable 1-hit counters
+        foreach (var counterMove in UObject.FindObjectsSlow<ARCombatMove_BatmanCounter>())
+        {
+            counterMove.bShouldKill = true;
+        }
+
+        base.OnEnterGame();
+    }
+
     public override void OnKeyDown(Keys key)
     {
         // Debug actions based on key press.

@@ -61,8 +61,18 @@ public:
 	STATIC_CLASS("Core.ArrayProperty")
 };
 
+CLASS(UBoolProperty, 92)
+class UBoolProperty : public UProperty
+{
+	FIELD(INT, BitMask)
+
+public:
+	STATIC_CLASS("Core.BoolProperty")
+};
+
 CHECK_CLASS(UProperty)
 CHECK_CLASS(UStructProperty)
 CHECK_CLASS(UObjectProperty)
 CHECK_CLASS(UByteProperty)
 CHECK_CLASS(UArrayProperty)
+CHECK_CLASS(UBoolProperty)

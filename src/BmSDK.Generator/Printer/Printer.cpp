@@ -246,44 +246,68 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 	Printer::PushIndent();
 	{
 		// Print prop getter (single line)
-		// TODO: Handle boolean masks
 		Printer::Indent(out) << "get { ";
 		{
-			// Class getter
-			if (prop->Outer->IsA(UClass::StaticClass()))
+			bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+
+			// Make Ptr available locally so we can reuse the same getter code
+			if (isInStruct)
+			{
+				out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+			}
+
+			// Booleans (stored as bitmasks) need special handling
+			if (prop->IsA(UBoolProperty::StaticClass()))
+			{
+				UBoolProperty* boolProp = (UBoolProperty*)prop;
+				out << "return (global::BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+					<< prop->Offset << ") & " << boolProp->BitMask << ") != 0;";
+			}
+			else
 			{
 				out << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
 					<< prop->GetInnerTypeNameManaged() << ">(Ptr + " << prop->Offset << ");";
 			}
-			// Struct getter
-			else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
+
+			if (isInStruct)
 			{
-				out << "fixed (void* thisPtr = &this) { "
-					<< "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
-					<< prop->GetInnerTypeNameManaged() << ">((byte*)thisPtr + " << prop->Offset
-					<< ");"
-					<< " }";
+				out << " };";
 			}
 		}
 		out << " }" << endl;
 
 		// Print prop setter (single line)
-		// TODO: Handle boolean masks
 		Printer::Indent(out) << "set { ";
 		{
-			// Class setter
-			if (prop->Outer->IsA(UClass::StaticClass()))
+			bool isInStruct = !prop->Outer->IsA(UClass::StaticClass());
+
+			// Make Ptr available locally so we can reuse the same setter code
+			if (isInStruct)
+			{
+				out << "fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; ";
+			}
+
+			// Booleans (stored as bitmasks) need special handling
+			if (prop->IsA(UBoolProperty::StaticClass()))
+			{
+				UBoolProperty* boolProp = (UBoolProperty*)prop;
+				out << "var currentMask = global::BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+					<< prop->Offset << ");";
+				out << " var newMask = value ? (currentMask | " << boolProp->BitMask
+					<< ") : (currentMask & ~" << boolProp->BitMask << ");";
+
+				out << " global::BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
+					<< prop->Offset << ");";
+			}
+			else
 			{
 				out << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + "
 					<< prop->Offset << ");";
 			}
-			// Struct setter
-			else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
+
+			if (isInStruct)
 			{
-				out << "fixed (void* thisPtr = &this) { "
-					<< "global::BmSDK.Framework.MarshalUtil.ToUnmanaged(value, (byte*)thisPtr + "
-					<< prop->Offset << ");"
-					<< " }";
+				out << " };";
 			}
 		}
 		out << " }" << endl;
