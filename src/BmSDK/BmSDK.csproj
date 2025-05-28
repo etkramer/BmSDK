@@ -8,6 +8,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseWindowsForms>true</UseWindowsForms>
+    <DocumentationFile>$(OutputPath)BmSDK.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup>

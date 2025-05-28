@@ -13,6 +13,7 @@ void Printer::PrintFile(UClass* _class, ostream& out)
 {
 	// Print preprocessor directives
 	Printer::Indent(out) << "#pragma warning disable CS0108" << endl;
+	Printer::Indent(out) << "#pragma warning disable CS1591" << endl;
 	out << endl;
 
 	// Print namespace declaration
@@ -296,8 +297,9 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	vector<UProperty*> params = {};
 	UProperty* returnParam = nullptr;
 
-	// Skip operator functions
-	if ((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Operator)
+	// Skip operator and iterator functions
+	if (((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Operator) ||
+		((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Iterator))
 	{
 		return;
 	}

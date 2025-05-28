@@ -8,7 +8,7 @@ namespace BmSDK;
 public partial class UObject
 {
     /// <summary>
-    /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjects"/> instead.
+    /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
     private static unsafe ref TArray<UObject> GObjects =>
         ref *(TArray<UObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);

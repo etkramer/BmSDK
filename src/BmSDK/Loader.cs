@@ -1,7 +1,12 @@
-﻿using System.Reflection;
+﻿global using System.Runtime.InteropServices;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using BmSDK.BmGame;
 using BmSDK.Framework;
 using MoreLinq;
+
+[assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
+[assembly: SuppressMessage("Usage", "IDE0130:Namespace does not match folder structure")]
 
 namespace BmSDK;
 
