@@ -49,25 +49,16 @@ public class DemoMod : GameMod
 
         // Grab player pawn
         var playerPawn = Game.GetPlayerPawn();
-        Debug.Log($"{playerPawn.Location}, {playerPawn.Rotation}");
+        Debug.Log($"Player is at {playerPawn.Location}");
 
         // TODO: Let's get this working
-        var spawnClass = ARCinematicBatman.StaticClass();
+        var spawnClass = APointLight.StaticClass();
+        var spawnPos = playerPawn.Location with { Z = playerPawn.Location.Z + 120 };
         Debug.Log(spawnClass);
-        var spawnPos = playerPawn.Location;
-        var spawnRot = playerPawn.Rotation;
-        spawnPos.Y += 100;
 
         // Spawn the actor
-        var newActor = playerPawn.Spawn(
-            spawnClass,
-            default,
-            default,
-            spawnPos,
-            spawnRot,
-            default,
-            true
-        );
+        // NOTE: APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
+        var newActor = Game.SpawnActor<APointLight>("TestActor", spawnPos);
         Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
     }
 

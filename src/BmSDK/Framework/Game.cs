@@ -50,6 +50,17 @@ public static class Game
         return Guard.NotNull(worldInfo.GRI as ARGameRI);
     }
 
+    public static T? SpawnActor<T>(
+        FName InName,
+        UObject.FVector Position = default,
+        UObject.FRotator Rotation = default
+    )
+        where T : AActor, IStaticObject
+    {
+        return GetWorldInfo().Spawn(T.StaticClass(), null, InName, Position, Rotation, null, true)
+            as T;
+    }
+
     /// <summary>
     /// Gets the global engine object.
     /// </summary>
