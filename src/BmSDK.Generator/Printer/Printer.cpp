@@ -416,9 +416,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		Printer::Indent(out) << "var funcManaged = "
 								"BmSDK.UObject.StaticFindObjectChecked<BmSDK."
 								"UFunction>(BmSDK.UFunction.StaticClass(), null, \""
-							 << func->GetPathName() << "\", false);" << endl;
-
-		Printer::Indent(out) << "var funcPtr = funcManaged.Ptr;" << endl;
+							 << func->GetPathName() << "\", true);" << endl;
 
 		Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
 							 << endl;
@@ -450,7 +448,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		}
 
 		Printer::Indent(out) << "BmSDK.GameFunctions.ProcessEvent(" << ptrText
-							 << ", funcPtr, (nint)paramsPtr, 0);" << endl;
+							 << ", funcManaged.Ptr, (nint)paramsPtr, 0);" << endl;
 
 		if (funcIsNative)
 		{
