@@ -31,11 +31,11 @@ string UProperty::GetInnerTypeNameManaged() const
 	else if (Class->GetPathName() == "Core.StrProperty" ||
 			 Class->GetPathName() == "Core.StringProperty")
 	{
-		return "global::BmSDK.FString";
+		return "BmSDK.FString";
 	}
 	else if (Class->GetPathName() == "Core.NameProperty")
 	{
-		return "global::BmSDK.FName";
+		return "BmSDK.FName";
 	}
 	else if (Class->GetPathName() == "Core.StructProperty")
 	{
@@ -45,11 +45,11 @@ string UProperty::GetInnerTypeNameManaged() const
 		// Manually swap out some structs
 		if (structProp->GetPathName() == "Core.Object.ObjectFlags")
 		{
-			return "global::BmSDK.EObjectFlags";
+			return "BmSDK.EObjectFlags";
 		}
 		else if (_struct->GetName() == "Pointer")
 		{
-			return "global::System.IntPtr";
+			return "System.IntPtr";
 		}
 		else if (_struct->GetName() == "Double")
 		{
@@ -75,15 +75,15 @@ string UProperty::GetInnerTypeNameManaged() const
 		auto arrayProp = (UArrayProperty*)this;
 		auto innerName = arrayProp->Inner->GetInnerTypeNameManaged();
 
-		return "global::BmSDK.TArray<" + innerName + ">";
+		return "BmSDK.TArray<" + innerName + ">";
 	}
 	else if (Class->GetPathName() == "Core.MapProperty")
 	{
-		return "global::BmSDK.TMap<object, object> /* TODO */";
+		return "BmSDK.TMap<object, object> /* TODO */";
 	}
 	else if (Class->GetPathName() == "Core.DelegateProperty")
 	{
-		return "global::System.IntPtr";
+		return "System.IntPtr";
 	}
 
 	return "UNKNOWN";

@@ -44,7 +44,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	{
 		out << _class->SuperStruct->GetPathNameManaged() << ", ";
 	}
-	out << "global::BmSDK.IStaticObject" << endl;
+	out << "BmSDK.IStaticObject" << endl;
 
 	// Print class body
 	Printer::Indent(out) << "{" << endl;
@@ -55,7 +55,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 		// match up currently - 'destroying' a managed wrapper doesn't remove references to it). For
 		// instance, we could add objects to the root set when we create their managed wrappers, but
 		// remove them from the root set in the wrapper's finalizer.
-		Printer::Indent(out) << "public static global::BmSDK.UClass StaticClass() => "
+		Printer::Indent(out) << "public static BmSDK.UClass StaticClass() => "
 								"StaticFindObjectChecked<UClass>(null, null, \""
 							 << _class->GetPathName() << "\", false);" << endl;
 		out << endl;
@@ -71,8 +71,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::Indent(out) << "/// </summary>" << endl;
 			Printer::Indent(out)
 				<< "public " << _class->GetNameManaged()
-				<< "(global::BmSDK.UObject Outer, string Name = null, "
-				   "global::BmSDK.EObjectFlags SetFlags = 0, "
+				<< "(BmSDK.UObject Outer, string Name = null, "
+				   "BmSDK.EObjectFlags SetFlags = 0, "
 				<< _class->GetNameManaged()
 				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "
 				   "Outer, Name, SetFlags, Template)) { }"
@@ -260,12 +260,12 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 			if (prop->IsA(UBoolProperty::StaticClass()))
 			{
 				UBoolProperty* boolProp = (UBoolProperty*)prop;
-				out << "return (global::BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
-					<< prop->Offset << ") & " << boolProp->BitMask << ") != 0;";
+				out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << prop->Offset
+					<< ") & " << boolProp->BitMask << ") != 0;";
 			}
 			else
 			{
-				out << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
+				out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
 					<< prop->GetInnerTypeNameManaged() << ">(Ptr + " << prop->Offset << ");";
 			}
 
@@ -291,18 +291,18 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
 			if (prop->IsA(UBoolProperty::StaticClass()))
 			{
 				UBoolProperty* boolProp = (UBoolProperty*)prop;
-				out << "var currentMask = global::BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
+				out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
 					<< prop->Offset << ");";
 				out << " var newMask = value ? (currentMask | " << boolProp->BitMask
 					<< ") : (currentMask & ~" << boolProp->BitMask << ");";
 
-				out << " global::BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
+				out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
 					<< prop->Offset << ");";
 			}
 			else
 			{
-				out << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + "
-					<< prop->Offset << ");";
+				out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << prop->Offset
+					<< ");";
 			}
 
 			if (isInStruct)
@@ -413,13 +413,12 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	{
 		string ptrText = funcIsStatic ? "StaticClass().GetDefaultObjectPtr()" : "Ptr";
 
-		Printer::Indent(out) << "var funcPtr = BmSDK.GameFunctions.FindFunction(" << ptrText
-							 << ", \"" << func->Name.ToString() << "\", 0);" << endl;
+		Printer::Indent(out) << "var funcManaged = "
+								"BmSDK.UObject.StaticFindObjectChecked<BmSDK."
+								"UFunction>(BmSDK.UFunction.StaticClass(), null, \""
+							 << func->GetPathName() << "\", false);" << endl;
 
-		Printer::Indent(out)
-			<< "var funcManaged = "
-			   "BmSDK.Framework.MarshalUtil.ToManaged<global::BmSDK.UFunction>(&funcPtr);"
-			<< endl;
+		Printer::Indent(out) << "var funcPtr = funcManaged.Ptr;" << endl;
 
 		Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
 							 << endl;
@@ -434,7 +433,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 			}
 
 			// Print
-			Printer::Indent(out) << "global::BmSDK.Framework.MarshalUtil.ToUnmanaged("
+			Printer::Indent(out) << "BmSDK.Framework.MarshalUtil.ToUnmanaged("
 								 << param->GetNameManaged() << ", paramsPtr + " << param->Offset
 								 << ");" << endl;
 		}
@@ -443,14 +442,14 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		{
 			Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
 			Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
-			Printer::Indent(out)
-				<< "funcManaged.FunctionFlags &= ~global::BmSDK.EFunctionFlags.Native;" << endl;
-			Printer::Indent(out)
-				<< "funcManaged.FunctionFlags |= global::BmSDK.EFunctionFlags.Defined;" << endl;
+			Printer::Indent(out) << "funcManaged.FunctionFlags &= ~BmSDK.EFunctionFlags.Native;"
+								 << endl;
+			Printer::Indent(out) << "funcManaged.FunctionFlags |= BmSDK.EFunctionFlags.Defined;"
+								 << endl;
 			Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
 		}
 
-		Printer::Indent(out) << "global::BmSDK.GameFunctions.ProcessEvent(" << ptrText
+		Printer::Indent(out) << "BmSDK.GameFunctions.ProcessEvent(" << ptrText
 							 << ", funcPtr, (nint)paramsPtr, 0);" << endl;
 
 		if (funcIsNative)
@@ -466,17 +465,17 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 
 			if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
 			{
-				Printer::Indent(out) << param->GetNameManaged()
-									 << " = global::BmSDK.Framework.MarshalUtil.ToManaged<"
-									 << param->GetInnerTypeNameManaged() << ">(paramsPtr + "
-									 << param->Offset << ");" << endl;
+				Printer::Indent(out)
+					<< param->GetNameManaged() << " = BmSDK.Framework.MarshalUtil.ToManaged<"
+					<< param->GetInnerTypeNameManaged() << ">(paramsPtr + " << param->Offset << ");"
+					<< endl;
 			}
 		}
 
 		if (returnParam != nullptr)
 		{
 			// Print return param declaration
-			Printer::Indent(out) << "return global::BmSDK.Framework.MarshalUtil.ToManaged<"
+			Printer::Indent(out) << "return BmSDK.Framework.MarshalUtil.ToManaged<"
 								 << returnParam->GetInnerTypeNameManaged() << ">(paramsPtr + "
 								 << returnParam->Offset << ");" << endl;
 		}

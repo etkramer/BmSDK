@@ -83,7 +83,7 @@ string FieldInfo::GetPathNameManaged()
 {
 	if (field->IsA(UClass::StaticClass()))
 	{
-		return "global::" + field->GetPackageNameManaged() + "." + managedName;
+		return field->GetPackageNameManaged() + "." + managedName;
 	}
 
 	return ((UField*)field->Outer)->GetPathNameManaged() + "." + managedName;
