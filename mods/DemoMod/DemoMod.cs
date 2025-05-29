@@ -1,4 +1,5 @@
-﻿using BmSDK.BmGame;
+﻿using BmSDK;
+using BmSDK.BmGame;
 using BmSDK.Engine;
 
 namespace DemoMod;
@@ -92,6 +93,6 @@ public class DemoMod : GameMod
         gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
 
-        Debug.Log(gameViewport.SplitscreenInfo.ToJson());
+        Debug.Log(gameViewport.ShouldForceFullscreenViewport());
     }
 }

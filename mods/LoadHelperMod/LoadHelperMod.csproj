@@ -4,6 +4,8 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableDynamicLoading>true</EnableDynamicLoading>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -13,7 +15,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" Private="false" ExcludeAssets="all" />
+    <Using Include="BmSDK.Framework" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" Private="false" ExcludeAssets="runtime;native" />
   </ItemGroup>
 
 </Project>
