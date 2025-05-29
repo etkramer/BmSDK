@@ -1,5 +1,4 @@
 ﻿using BmSDK.BmGame;
-using BmSDK.BmScript;
 using BmSDK.Engine;
 
 namespace DemoMod;
@@ -94,19 +93,19 @@ public class DemoMod : GameMod
         gameViewport.CreatePlayer(1, out _, true);
 
         // TODO: Fix TArray stride
-        // foreach (var info in gameViewport.SplitscreenInfo)
-        // {
-        //     Debug.Log($"Begin FSplitScreenData");
-        //     foreach (var playerData in info.PlayerData)
-        //     {
-        //         Debug.Log($"  Begin FPerPlayerSplitScreenData");
-        //         Debug.Log($"    SizeX {playerData.SizeX}");
-        //         Debug.Log($"    SizeY {playerData.SizeY}");
-        //         Debug.Log($"    OriginX {playerData.OriginX}");
-        //         Debug.Log($"    OriginY {playerData.OriginY}");
-        //         Debug.Log($"  End FPerPlayerSplitScreenData");
-        //     }
-        //     Debug.Log($"End FSplitScreenData");
-        // }
+        foreach (var info in gameViewport.SplitscreenInfo)
+        {
+            Debug.Log($"Begin FSplitScreenData");
+            foreach (var playerData in info.PlayerData)
+            {
+                Debug.Log($"  Begin FPerPlayerSplitScreenData");
+                Debug.Log($"    SizeX {playerData.SizeX}");
+                Debug.Log($"    SizeY {playerData.SizeY}");
+                Debug.Log($"    OriginX {playerData.OriginX}");
+                Debug.Log($"    OriginY {playerData.OriginY}");
+                Debug.Log($"  End FPerPlayerSplitScreenData");
+            }
+            Debug.Log($"End FSplitScreenData");
+        }
     }
 }

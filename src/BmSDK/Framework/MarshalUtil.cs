@@ -34,7 +34,7 @@ public static unsafe class MarshalUtil
         }
 
         throw new NotImplementedException(
-            $"Marshaling not implemented for type {typeof(TManaged).Name}"
+            $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
         );
     }
 
@@ -65,7 +65,24 @@ public static unsafe class MarshalUtil
         }
 
         throw new NotImplementedException(
-            $"Marshaling not implemented for type {typeof(TManaged).Name}"
+            $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
+        );
+    }
+
+    public static int GetSizeUnmanaged<TManaged>()
+    {
+        // Try to use managed size directly (for struct, primitive types)
+        if (typeof(TManaged).IsValueType)
+        {
+            return Marshal.SizeOf<TManaged>();
+        }
+        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        {
+            return sizeof(IntPtr);
+        }
+
+        throw new NotImplementedException(
+            $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
         );
     }
 
