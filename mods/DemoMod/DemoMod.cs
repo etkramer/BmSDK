@@ -29,10 +29,6 @@ public class DemoMod : GameMod
         {
             counterMove.bShouldKill = true;
         }
-
-        // More test stuff
-        var playerController = Game.GetPlayerController() as ARPlayerController;
-        playerController.bDebugSpeedometer = true;
     }
 
     public override void OnKeyDown(Keys key)
