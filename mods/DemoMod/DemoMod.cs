@@ -20,8 +20,6 @@ public class DemoMod : GameMod
         {
             counterMove.bShouldKill = true;
         }
-
-        base.OnEnterGame();
     }
 
     public override void OnKeyDown(Keys key)

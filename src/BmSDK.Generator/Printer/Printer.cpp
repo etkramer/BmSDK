@@ -447,7 +447,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 			Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
 		}
 
-		Printer::Indent(out) << "BmSDK.GameFunctions.ProcessEvent(" << ptrText
+		Printer::Indent(out) << "BmSDK.Framework.GameFunctions.ProcessEvent(" << ptrText
 							 << ", funcManaged.Ptr, (nint)paramsPtr, 0);" << endl;
 
 		if (funcIsNative)
@@ -491,7 +491,7 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
 	// Print usings
 	Printer::Indent(out) << "using System.Collections.Generic;" << endl;
 	out << endl;
-	Printer::Indent(out) << "namespace BmSDK;" << endl;
+	Printer::Indent(out) << "namespace BmSDK.Framework;" << endl;
 	out << endl;
 
 	// Print class declaration

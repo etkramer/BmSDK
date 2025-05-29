@@ -1,6 +1,8 @@
 #pragma warning disable CS0169
 #pragma warning disable CS0649
 
+using BmSDK.Framework;
+
 namespace BmSDK;
 
 public unsafe struct FString

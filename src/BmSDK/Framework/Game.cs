@@ -1,8 +1,7 @@
 using BmSDK.BmGame;
 using BmSDK.Engine;
-using BmSDK.Framework;
 
-namespace BmSDK;
+namespace BmSDK.Framework;
 
 public static class Game
 {

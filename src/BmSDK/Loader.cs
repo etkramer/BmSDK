@@ -8,7 +8,7 @@ using MoreLinq;
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
 [assembly: SuppressMessage("Usage", "IDE0130:Namespace does not match folder structure")]
 
-namespace BmSDK;
+namespace BmSDK.Framework;
 
 static class Loader
 {

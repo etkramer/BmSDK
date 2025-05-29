@@ -23,7 +23,6 @@ mono_crash.*
 /build/*
 /build-old/*
 src/BmSDK/Generated/*
-src/BmSDK/BmSDK.xml
 
 # Build results
 [Dd]ebug/

@@ -1,3 +1,5 @@
+using BmSDK.Framework;
+
 namespace BmSDK;
 
 public partial class UClass

@@ -1,6 +1,4 @@
-using BmSDK.Framework;
-
-namespace BmSDK;
+namespace BmSDK.Framework;
 
 internal static partial class StaticInit
 {
