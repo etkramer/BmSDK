@@ -12,7 +12,7 @@ public class DemoMod : GameMod
         var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
         defaultRainComponent.ParticleCount *= 5;
 
-        // Set max players (defualt and current/frontend)
+        // Set max players (default and current/frontend)
         foreach (var gameInfo in UObject.FindObjectsSlow<ARGameInfo>())
         {
             gameInfo.MaxPlayers = 4;
