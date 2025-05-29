@@ -411,7 +411,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 	Printer::Indent(out) << "{" << endl;
 	Printer::PushIndent();
 	{
-		string ptrText = funcIsStatic ? "StaticClass().GetDefaultObjectPtr()" : "Ptr";
+		string ptrText = funcIsStatic ? "StaticClass().DefaultObject.Ptr" : "Ptr";
 
 		Printer::Indent(out) << "var funcManaged = "
 								"BmSDK.UObject.StaticFindObjectChecked<BmSDK."

@@ -9,8 +9,14 @@ public class DemoMod : GameMod
     public override void OnInit()
     {
         // Boost snow intensity
-        var defaultRainComponent = UObject.FindObjectsSlow<URRainComponent>().First();
+        var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
         defaultRainComponent.ParticleCount *= 5;
+
+        // Set max players (defualt and current/frontend)
+        foreach (var gameInfo in UObject.FindObjectsSlow<ARGameInfo>())
+        {
+            gameInfo.MaxPlayers = 4;
+        }
     }
 
     public override void OnEnterMenu()
@@ -100,6 +106,6 @@ public class DemoMod : GameMod
         gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
 
-        Debug.Log(gameViewport.ShouldForceFullscreenViewport());
+        // Debug.Log(gameViewport.ShouldForceFullscreenViewport());
     }
 }

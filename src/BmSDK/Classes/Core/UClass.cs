@@ -5,11 +5,14 @@ namespace BmSDK;
 public partial class UClass
 {
     /// <summary>
-    /// Gets a pointer to the default object for this class.
-    /// TODO: Marshal this correctly.
+    /// Gets the default object for this class.
     /// </summary>
-    public IntPtr GetDefaultObjectPtr()
+    public unsafe UObject DefaultObject
     {
-        return GameFunctions.GetDefaultObject(Ptr, 0);
+        get
+        {
+            var ptr = GameFunctions.GetDefaultObject(Ptr, 0);
+            return MarshalUtil.ToManaged<UObject>(&ptr);
+        }
     }
 }
