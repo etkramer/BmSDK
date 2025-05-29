@@ -13,6 +13,15 @@ public class DemoMod : GameMod
         defaultRainComponent.ParticleCount *= 5;
     }
 
+    public override void OnEnterMenu()
+    {
+        // Enable info display
+        Game.GetGameViewportClient().bShowSessionDebug = true;
+
+        // Show lighting only
+        Game.GetGameViewportClient().bOverrideDiffuseAndSpecular = true;
+    }
+
     public override void OnEnterGame()
     {
         // Enable 1-hit counters
@@ -20,6 +29,10 @@ public class DemoMod : GameMod
         {
             counterMove.bShouldKill = true;
         }
+
+        // More test stuff
+        var playerController = Game.GetPlayerController() as ARPlayerController;
+        playerController.bDebugSpeedometer = true;
     }
 
     public override void OnKeyDown(Keys key)

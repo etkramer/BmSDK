@@ -14,10 +14,10 @@ public static class Game
     /// Gets the player controller belonging to the local player.
     /// May return a random controller in case of split-screen.
     /// </summary>
-    public static APlayerController GetPlayerController()
+    public static ARPlayerController GetPlayerController()
     {
         var worldInfo = GetWorldInfo();
-        return Guard.NotNull(worldInfo.GetALocalPlayerController(), "No player controllers found.");
+        return (ARPlayerController)worldInfo.GetALocalPlayerController();
     }
 
     /// <summary>
@@ -38,6 +38,15 @@ public static class Game
         playerController.CheatManager ??= new URCheatManager(playerController);
 
         return (URCheatManager)playerController.CheatManager;
+    }
+
+    /// <summary>
+    /// Gets the game info object for the currently-loaded world.
+    /// </summary>
+    public static ARGameInfo GetGameInfo()
+    {
+        var worldInfo = GetWorldInfo();
+        return Guard.NotNull(worldInfo.Game as ARGameInfo);
     }
 
     /// <summary>
