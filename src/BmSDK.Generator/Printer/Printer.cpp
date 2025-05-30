@@ -51,13 +51,28 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::PushIndent();
 	{
 		// Print StaticClass() helper
-		// TODO: Cache this. Will need better GC integration for that to make sense (lifetimes don't
-		// match up currently - 'destroying' a managed wrapper doesn't remove references to it). For
-		// instance, we could add objects to the root set when we create their managed wrappers, but
-		// remove them from the root set in the wrapper's finalizer.
-		Printer::Indent(out) << "public static BmSDK.UClass StaticClass() => "
-								"StaticFindObjectChecked<UClass>(null, null, \""
-							 << _class->GetPathName() << "\", false);" << endl;
+		Printer::Indent(out) << "static BmSDK.UClass s_staticClass = null;" << endl;
+		Printer::Indent(out) << "public static BmSDK.UClass StaticClass()" << endl;
+		Printer::Indent(out) << "{" << endl;
+		Printer::PushIndent();
+		{
+			Printer::Indent(out) << "if (s_staticClass is null)" << endl;
+			Printer::Indent(out) << "{" << endl;
+			Printer::PushIndent();
+			{
+				Printer::Indent(out)
+					<< "s_staticClass = StaticFindObjectChecked<UClass>(null, null, \""
+					<< _class->GetPathName() << "\", false);" << endl;
+				Printer::Indent(out) << "s_staticClass.AddToRoot();" << endl;
+			}
+			Printer::PopIndent();
+			Printer::Indent(out) << "}" << endl;
+
+			Printer::Indent(out) << "return s_staticClass;" << endl;
+		}
+		Printer::PopIndent();
+		Printer::Indent(out) << "}" << endl;
+
 		out << endl;
 
 		// Print internal ctor
