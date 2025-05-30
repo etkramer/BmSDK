@@ -1,5 +1,6 @@
 ﻿using BmSDK;
 using BmSDK.BmGame;
+using BmSDK.BmScript;
 using BmSDK.Engine;
 
 namespace DemoMod;
@@ -76,13 +77,13 @@ public class DemoMod : GameMod
         Debug.Log($"Player is at {playerPawn.Location}");
 
         // TODO: Let's get this working
-        var spawnClass = APointLight.StaticClass();
+        var spawnClass = ARCinematicBatman.StaticClass();
         var spawnPos = playerPawn.Location with { Z = playerPawn.Location.Z + 120 };
         Debug.Log(spawnClass);
 
         // Spawn the actor
         // NOTE: APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
-        var newActor = Game.SpawnActor<APointLight>("TestActor", spawnPos);
+        var newActor = Game.SpawnActor<ARCinematicBatman>("TestActor", spawnPos);
         Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
     }
 

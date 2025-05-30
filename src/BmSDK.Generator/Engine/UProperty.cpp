@@ -5,11 +5,15 @@
 
 string UProperty::GetInnerTypeNameManaged() const
 {
-	if (Class->GetPathName() == "Core.IntProperty")
+	if (GetPathName() == "Core.Object.ObjectFlags")
+	{
+		return "BmSDK.EObjectFlags";
+	}
+	else if (Class->GetPathName() == "Core.IntProperty")
 	{
 		return "int";
 	}
-	if (Class->GetPathName() == "Core.ByteProperty")
+	else if (Class->GetPathName() == "Core.ByteProperty")
 	{
 		// Try to use proper type for enums
 		auto byteProp = (UByteProperty*)this;

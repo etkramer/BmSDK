@@ -186,14 +186,20 @@ public partial class UObject
         }
     }
 
+    /// <summary>
+    /// Causes this object (and anything it references) to be excluded from UE3's GC.
+    /// </summary>
     public void AddToRoot()
     {
-        ObjectFlags |= (int)EObjectFlags.RootSet;
+        ObjectFlags |= EObjectFlags.RootSet;
     }
 
+    /// <summary>
+    /// Causes this object to be included in UE3's GC again after being excluded with <see cref="AddToRoot"/>.
+    /// </summary>
     public void RemoveFromRoot()
     {
-        ObjectFlags &= ~(int)EObjectFlags.RootSet;
+        ObjectFlags &= ~EObjectFlags.RootSet;
     }
 
     /// <inheritdoc/>

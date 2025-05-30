@@ -1,7 +1,7 @@
 ﻿namespace BmSDK;
 
 [Flags]
-public enum EObjectFlags : int
+public enum EObjectFlags : ulong
 {
     RootSet = 0x400,
 }
