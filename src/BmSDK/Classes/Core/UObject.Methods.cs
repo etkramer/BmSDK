@@ -186,6 +186,16 @@ public partial class UObject
         }
     }
 
+    public void AddToRoot()
+    {
+        ObjectFlags |= (int)EObjectFlags.RootSet;
+    }
+
+    public void RemoveFromRoot()
+    {
+        ObjectFlags &= ~(int)EObjectFlags.RootSet;
+    }
+
     /// <inheritdoc/>
     public override string ToString() => $"{GetFullName()} ({GetType().Name})";
 }
