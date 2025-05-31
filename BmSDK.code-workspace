@@ -17,7 +17,7 @@
       "**/bower_components": true,
       "/build-old/": true
     },
-    "dotnet.defaultSolution": "BmSDK.sln",
+    "dotnet.defaultSolution": "BmSDK.slnx",
     "C_Cpp.default.compilerPath": "cl.exe",
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
@@ -92,7 +92,14 @@
         "label": "Build All",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK_Generator", "/t:BmSDK", "/t:BmSDK_Host", "/t:LoadHelperMod", "/t:DemoMod"],
+        "args": [
+          "BmSDK.slnx",
+          "/t:BmSDK_Generator",
+          "/t:BmSDK",
+          "/t:BmSDK_Host",
+          "/t:LoadHelperMod",
+          "/t:DemoMod"
+        ],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
@@ -101,7 +108,7 @@
         "label": "Build SDK",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK", "/t:BmSDK_Host"],
+        "args": ["BmSDK.slnx", "/t:BmSDK", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
@@ -110,11 +117,11 @@
         "label": "Build Generator",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.sln", "/t:BmSDK_Generator"],
+        "args": ["BmSDK.slnx", "/t:BmSDK_Generator", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
-      },
+      }
     ]
   },
   "launch": {

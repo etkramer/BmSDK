@@ -15,7 +15,6 @@ using namespace std::filesystem;
 // Func aliases for hostfxr
 typedef hostfxr_initialize_for_runtime_config_fn HostInitFn;
 typedef hostfxr_get_runtime_delegate_fn HostGetDelegateFn;
-typedef hostfxr_run_app_fn HostRunAppFn;
 typedef hostfxr_close_fn HostCloseFn;
 typedef load_assembly_and_get_function_pointer_fn HostLoadAssemblyFn;
 
@@ -46,11 +45,10 @@ bool LoadHostModule()
 
 	// Load hostfxr.dll
 	HMODULE hostModule = LoadLibraryW(hostPath.data());
-	hostInitFn = (hostfxr_initialize_for_runtime_config_fn)GetProcAddress(
-		hostModule, "hostfxr_initialize_for_runtime_config");
+	hostInitFn = (HostInitFn)GetProcAddress(hostModule, "hostfxr_initialize_for_runtime_config");
 	hostGetDelegateFn =
-		(hostfxr_get_runtime_delegate_fn)GetProcAddress(hostModule, "hostfxr_get_runtime_delegate");
-	hostCloseFn = (hostfxr_close_fn)GetProcAddress(hostModule, "hostfxr_close");
+		(HostGetDelegateFn)GetProcAddress(hostModule, "hostfxr_get_runtime_delegate");
+	hostCloseFn = (HostCloseFn)GetProcAddress(hostModule, "hostfxr_close");
 
 	return (hostInitFn && hostGetDelegateFn && hostCloseFn);
 }
@@ -94,7 +92,7 @@ void OnAttach()
 	assert(LoadHostModule());
 
 	// Load BmSDK.Loader.dll
-	assert(LoadAssembly(TEXT("/sdk/BmSDK")));
+	assert(LoadAssembly(TEXT("\\sdk\\BmSDK")));
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
