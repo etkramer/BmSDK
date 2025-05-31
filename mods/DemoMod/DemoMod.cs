@@ -27,6 +27,12 @@ public class DemoMod : GameMod
 
         // Show lighting only
         Game.GetGameViewportClient().bOverrideDiffuseAndSpecular = true;
+
+        // TODO: Why does this (UObject::GetEngineVersion()) cause a crash? Should be relatively easy to debug.
+        // Could it be related to being a built-in method that uses IMPLEMENT_FUNCTION() with INDEX_NONE?
+        // var someObj = Game.GetGameViewportClient();
+        // var engineVersion = someObj.GetEngineVersion();
+        // Debug.Log(engineVersion);
     }
 
     public override void OnEnterGame()
