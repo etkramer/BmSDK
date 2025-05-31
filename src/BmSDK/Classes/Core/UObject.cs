@@ -11,6 +11,12 @@ public partial class UObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 
+    [Flags]
+    public enum EObjectFlags : ulong
+    {
+        RF_RootSet = 0x400,
+    }
+
     /// <summary>
     /// Sets a property value for a <see cref="UObject"/> instance
     /// </summary>

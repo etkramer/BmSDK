@@ -191,7 +191,7 @@ public partial class UObject
     /// </summary>
     public void AddToRoot()
     {
-        ObjectFlags |= EObjectFlags.RootSet;
+        ObjectFlags |= EObjectFlags.RF_RootSet;
     }
 
     /// <summary>
@@ -199,7 +199,7 @@ public partial class UObject
     /// </summary>
     public void RemoveFromRoot()
     {
-        ObjectFlags &= ~EObjectFlags.RootSet;
+        ObjectFlags &= ~EObjectFlags.RF_RootSet;
     }
 
     /// <inheritdoc/>

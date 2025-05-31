@@ -7,7 +7,7 @@ string UProperty::GetInnerTypeNameManaged() const
 {
 	if (GetPathName() == "Core.Object.ObjectFlags")
 	{
-		return "BmSDK.EObjectFlags";
+		return "BmSDK.UObject.EObjectFlags";
 	}
 	else if (Class->GetPathName() == "Core.IntProperty")
 	{
@@ -47,11 +47,7 @@ string UProperty::GetInnerTypeNameManaged() const
 		auto _struct = structProp->Struct;
 
 		// Manually swap out some structs
-		if (structProp->GetPathName() == "Core.Object.ObjectFlags")
-		{
-			return "BmSDK.EObjectFlags";
-		}
-		else if (_struct->GetName() == "Pointer")
+		if (_struct->GetName() == "Pointer")
 		{
 			return "System.IntPtr";
 		}

@@ -8,7 +8,7 @@ internal static class GameFunctions
         IntPtr InClass,
         IntPtr InOuter,
         FName InName,
-        EObjectFlags InFlags,
+        UObject.EObjectFlags InFlags,
         IntPtr InTemplate,
         IntPtr Error,
         IntPtr SubobjectRoot,

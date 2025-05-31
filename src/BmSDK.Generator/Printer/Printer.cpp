@@ -87,7 +87,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::Indent(out)
 				<< "public " << _class->GetNameManaged()
 				<< "(BmSDK.UObject Outer, string Name = null, "
-				   "BmSDK.EObjectFlags SetFlags = 0, "
+				   "BmSDK.UObject.EObjectFlags SetFlags = 0, "
 				<< _class->GetNameManaged()
 				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "
 				   "Outer, Name, SetFlags, Template)) { }"
@@ -455,10 +455,12 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		{
 			Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
 			Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
-			Printer::Indent(out) << "funcManaged.FunctionFlags &= ~BmSDK.EFunctionFlags.Native;"
-								 << endl;
-			Printer::Indent(out) << "funcManaged.FunctionFlags |= BmSDK.EFunctionFlags.Defined;"
-								 << endl;
+			Printer::Indent(out)
+				<< "funcManaged.FunctionFlags &= ~BmSDK.UFunction.EFunctionFlags.FUNC_Native;"
+				<< endl;
+			Printer::Indent(out)
+				<< "funcManaged.FunctionFlags |= BmSDK.UFunction.EFunctionFlags.FUNC_Defined;"
+				<< endl;
 			Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
 		}
 

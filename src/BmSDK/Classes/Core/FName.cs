@@ -44,7 +44,7 @@ public struct FName
 #pragma warning disable CS0649
     unsafe struct FNameEntry
     {
-        public EObjectFlags Flags;
+        public UObject.EObjectFlags Flags;
         public int Index;
         public FNameEntry* HashNext;
         public fixed char UniName[128];
