@@ -2,13 +2,14 @@
   <PropertyGroup>
     <Platform>x86</Platform>
     <Platforms>x86</Platforms>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>13</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>

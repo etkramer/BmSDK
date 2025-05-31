@@ -100,6 +100,13 @@ public static unsafe class MarshalUtil
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
+
+        // Prevent class objects from being GC'd. Keeps things simple,
+        // and shouldn't be *too* bad for perf as there's only so many of them.
+        if (newObj is UClass)
+        {
+            newObj.AddToRoot();
+        }
     }
 
     public static void DestroyManagedWrapper(IntPtr objPtr)

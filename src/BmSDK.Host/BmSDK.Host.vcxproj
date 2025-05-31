@@ -16,7 +16,6 @@
     <ProjectGuid>{bca40631-3e36-4227-a7d2-7cb604e26aa0}</ProjectGuid>
     <RootNamespace>BmSDKHost</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <TargetFramework>net9.0</TargetFramework>
     <WindowsTargetPlatformMinVersion>7.0</WindowsTargetPlatformMinVersion>
     <ProjectName>BmSDK.Host</ProjectName>
   </PropertyGroup>
