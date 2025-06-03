@@ -27,12 +27,6 @@ public class DemoMod : GameMod
 
         // Show lighting only
         Game.GetGameViewportClient().bOverrideDiffuseAndSpecular = true;
-
-        // TODO: Why does this (UObject::GetEngineVersion()) cause a crash? Should be relatively easy to debug.
-        // Could it be related to being a built-in method that uses IMPLEMENT_FUNCTION() with INDEX_NONE?
-        // var someObj = Game.GetGameViewportClient();
-        // var engineVersion = someObj.GetEngineVersion();
-        // Debug.Log(engineVersion);
     }
 
     public override void OnEnterGame()
@@ -82,14 +76,13 @@ public class DemoMod : GameMod
         var playerPawn = Game.GetPlayerPawn();
         Debug.Log($"Player is at {playerPawn.Location}");
 
-        // TODO: Let's get this working
-        var spawnClass = ARCinematicBatman.StaticClass();
-        var spawnPos = playerPawn.Location with { Z = playerPawn.Location.Z + 120 };
-        Debug.Log(spawnClass);
+        // TODO: Why does this cause a crash? Could it be related to being a built-in method with INDEX_NONE?
+        // May want to switch to CallFunction()? Noting that ProcessEvent() is NOT intended for calling native functions - this is why we need to remove FUNC_Native.
+        var engineVersion = playerPawn.GetEngineVersion();
+        Debug.Log(engineVersion);
 
-        // Spawn the actor
-        // NOTE: APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
-        var newActor = Game.SpawnActor<ARCinematicBatman>("TestActor", spawnPos);
+        // TODO: Let's get this working. APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
+        var newActor = Game.SpawnActor<APointLight>("TestActor");
         Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
     }
 
