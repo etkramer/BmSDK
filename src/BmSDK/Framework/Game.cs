@@ -12,20 +12,19 @@ public static class Game
 
     /// <summary>
     /// Gets the player controller belonging to the local player.
-    /// May return a random controller in case of split-screen.
     /// </summary>
-    public static ARPlayerController GetPlayerController()
+    public static ARPlayerController GetPlayerController(int controllerId = 0)
     {
-        var worldInfo = GetWorldInfo();
-        return (ARPlayerController)worldInfo.GetALocalPlayerController();
+        var player = GetGameViewportClient().FindPlayerByControllerId(controllerId);
+        return Guard.NotNull(player.Actor as ARPlayerController);
     }
 
     /// <summary>
     /// Gets the pawn currently possessed by the local player controller (returned by <see cref="GetPlayerController"/>).
     /// </summary>
-    public static APawn GetPlayerPawn()
+    public static APawn GetPlayerPawn(int controllerId = 0)
     {
-        var playerController = GetPlayerController();
+        var playerController = GetPlayerController(controllerId);
         return Guard.NotNull(playerController.Pawn, "Controller is not possessing a pawn.");
     }
 
