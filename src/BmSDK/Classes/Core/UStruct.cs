@@ -7,8 +7,8 @@ public partial class UStruct
     /// <summary>
     /// Property: PropertiesSize
     /// </summary>
-    public int PropertiesSize
+    public short PropertiesSize
     {
-        get => MarshalUtil.ToManaged<int>(Ptr + 92 + 4 + 4);
+        get => MarshalUtil.ToManaged<short>(Ptr + 64);
     }
 }

@@ -31,6 +31,7 @@ void Runtime::OnAttach()
 		[]()
 		{
 			TRACE("Press 'P' to start SDK generation");
+			// TRACE("UStruct::PropertiesSize is at ")
 			while (true)
 			{
 				if ((GetAsyncKeyState('P') & 0x8000))

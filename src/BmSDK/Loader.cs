@@ -120,10 +120,10 @@ static class Loader
                 });
 
                 // Old implementation of WorldInfo.GetWorldInfo()
-                AWorldInfo? worldInfo = null;
+                object? worldInfo = null;
                 {
-                    var funcManaged = BmSDK.UObject.StaticFindObjectChecked<BmSDK.UFunction>(
-                        BmSDK.UFunction.StaticClass(),
+                    var funcManaged = UObject.StaticFindObjectChecked<UFunction>(
+                        UFunction.StaticClass(),
                         null,
                         "Engine.WorldInfo.GetWorldInfo",
                         true
@@ -131,10 +131,10 @@ static class Loader
                     byte* paramsPtr = stackalloc byte[4];
                     var oldFlags = funcManaged.FunctionFlags;
                     var oldNative = funcManaged.iNative;
-                    funcManaged.FunctionFlags &= ~BmSDK.UFunction.EFunctionFlags.FUNC_Native;
-                    funcManaged.FunctionFlags |= BmSDK.UFunction.EFunctionFlags.FUNC_Defined;
+                    funcManaged.FunctionFlags &= ~UFunction.EFunctionFlags.FUNC_Native;
+                    funcManaged.FunctionFlags |= UFunction.EFunctionFlags.FUNC_Defined;
                     funcManaged.iNative = 0;
-                    BmSDK.Framework.GameFunctions.ProcessEvent(
+                    Framework.GameFunctions.ProcessEvent(
                         AWorldInfo.StaticClass().DefaultObject.Ptr,
                         funcManaged.Ptr,
                         (nint)paramsPtr,
@@ -142,36 +142,22 @@ static class Loader
                     );
                     funcManaged.iNative = oldNative;
                     funcManaged.FunctionFlags = oldFlags;
-                    worldInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AWorldInfo>(
-                        paramsPtr + 0
-                    );
+                    worldInfo = Framework.MarshalUtil.ToManaged<Engine.AWorldInfo>(paramsPtr + 0);
                 }
                 Debug.Log($"Old: {worldInfo}");
 
                 // New implementation of WorldInfo.GetWorldInfo()
                 {
-                    var funcManaged = BmSDK.UObject.StaticFindObjectChecked<BmSDK.UFunction>(
-                        BmSDK.UFunction.StaticClass(),
+                    worldInfo = null;
+                    var funcManaged = UObject.StaticFindObjectChecked<UFunction>(
+                        UFunction.StaticClass(),
                         null,
                         "Engine.WorldInfo.GetWorldInfo",
                         true
                     );
-                    byte* paramsPtr = stackalloc byte[4];
-                    var oldFlags = funcManaged.FunctionFlags;
-                    var oldNative = funcManaged.iNative;
-                    funcManaged.FunctionFlags &= ~BmSDK.UFunction.EFunctionFlags.FUNC_Native;
-                    funcManaged.FunctionFlags |= BmSDK.UFunction.EFunctionFlags.FUNC_Defined;
-                    funcManaged.iNative = 0;
-                    BmSDK.Framework.GameFunctions.ProcessEvent(
-                        AWorldInfo.StaticClass().DefaultObject.Ptr,
-                        funcManaged.Ptr,
-                        (nint)paramsPtr,
-                        0
-                    );
-                    funcManaged.iNative = oldNative;
-                    funcManaged.FunctionFlags = oldFlags;
-                    worldInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AWorldInfo>(
-                        paramsPtr + 0
+
+                    worldInfo = funcManaged.Invoke<AWorldInfo>(
+                        AWorldInfo.StaticClass().DefaultObject
                     );
                 }
                 Debug.Log($"New: {worldInfo}");

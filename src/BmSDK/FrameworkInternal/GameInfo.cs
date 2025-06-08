@@ -31,6 +31,9 @@ internal static class GameInfo
 
         // FString (local)
         public const IntPtr StringCtor = 0x4650;
+
+        // FFrame (local)
+        public const IntPtr FrameCtor = 0x42380;
     }
 
     public static class MemberOffsets

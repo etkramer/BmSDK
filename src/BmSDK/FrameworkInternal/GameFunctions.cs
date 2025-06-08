@@ -74,7 +74,18 @@ internal static class GameFunctions
 
     // FString::FString()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate IntPtr StringCtorDelegate(IntPtr self, IntPtr In);
+    public delegate void StringCtorDelegate(IntPtr self, IntPtr In);
+
+    // FFrame::FFrame()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void FrameCtorDelegate(
+        IntPtr self,
+        IntPtr InObject,
+        IntPtr InNode,
+        int CodeOffset,
+        IntPtr InLocals,
+        IntPtr InPreviousFrame
+    );
 
     static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
@@ -87,6 +98,7 @@ internal static class GameFunctions
     static GetDefaultObjectDelegate? _GetDefaultObject = null;
     static NameInitDelegate? _NameInit = null;
     static StringCtorDelegate? _StringCtor = null;
+    static FrameCtorDelegate? _FrameCtor = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
         _StaticConstructObject ??=
@@ -142,5 +154,10 @@ internal static class GameFunctions
     public static StringCtorDelegate StringCtor =>
         _StringCtor ??= Marshal.GetDelegateForFunctionPointer<StringCtorDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.StringCtor)
+        );
+
+    public static FrameCtorDelegate FrameCtor =>
+        _FrameCtor ??= Marshal.GetDelegateForFunctionPointer<FrameCtorDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.FrameCtor)
         );
 }

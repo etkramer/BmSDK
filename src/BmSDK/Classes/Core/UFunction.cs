@@ -32,4 +32,34 @@ public partial class UFunction
         get => MarshalUtil.ToManaged<ushort>(Ptr + 112);
         set => SetPropertyValue(this, 112, value);
     }
+
+    public unsafe TReturn? Invoke<TReturn>(UObject? self, params object[] args)
+    {
+        // Allocate locals
+        Span<byte> localsData = stackalloc byte[PropertiesSize];
+        localsData.Clear();
+        Debug.Log($"Locals size: {localsData.Length}");
+
+        {
+            // TODO: Marshal params
+        }
+
+        // First param is "this" object - null because this is a static call.
+        var frame = new FFrame(self, this, 0, localsData, null);
+
+        // TODO: Don't hardcode me
+        Span<byte> returnData = stackalloc byte[MarshalUtil.GetSizeUnmanaged<TReturn>()];
+        fixed (byte* returnDataPtr = returnData)
+        {
+            GameFunctions.CallFunction(
+                self?.Ptr ?? 0,
+                (IntPtr)(&frame),
+                (IntPtr)returnDataPtr,
+                Ptr
+            );
+
+            Debug.Log(string.Join(" ", returnData.ToArray().Select(b => b.ToString("X2"))));
+            return MarshalUtil.ToManaged<TReturn>(returnDataPtr);
+        }
+    }
 }
