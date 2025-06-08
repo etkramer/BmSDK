@@ -2,7 +2,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.BmGame;
-using BmSDK.Engine;
 using BmSDK.Framework;
 using MoreLinq;
 
@@ -119,8 +118,7 @@ static class Loader
                     Debug.PopSender();
                 });
 
-                // Old implementation of WorldInfo.GetWorldInfo()
-                object? worldInfo = null;
+                // New implementation of STATIC WorldInfo.GetWorldInfo()
                 {
                     var funcManaged = UObject.StaticFindObjectChecked<UFunction>(
                         UFunction.StaticClass(),
@@ -128,39 +126,49 @@ static class Loader
                         "Engine.WorldInfo.GetWorldInfo",
                         true
                     );
-                    byte* paramsPtr = stackalloc byte[4];
-                    var oldFlags = funcManaged.FunctionFlags;
-                    var oldNative = funcManaged.iNative;
-                    funcManaged.FunctionFlags &= ~UFunction.EFunctionFlags.FUNC_Native;
-                    funcManaged.FunctionFlags |= UFunction.EFunctionFlags.FUNC_Defined;
-                    funcManaged.iNative = 0;
-                    Framework.GameFunctions.ProcessEvent(
-                        AWorldInfo.StaticClass().DefaultObject.Ptr,
-                        funcManaged.Ptr,
-                        (nint)paramsPtr,
-                        0
-                    );
-                    funcManaged.iNative = oldNative;
-                    funcManaged.FunctionFlags = oldFlags;
-                    worldInfo = Framework.MarshalUtil.ToManaged<Engine.AWorldInfo>(paramsPtr + 0);
-                }
-                Debug.Log($"Old: {worldInfo}");
 
-                // New implementation of WorldInfo.GetWorldInfo()
+                    var worldInfo = funcManaged.Invoke<Engine.AWorldInfo>(
+                        Engine.AWorldInfo.StaticClass().DefaultObject,
+                        []
+                    );
+
+                    Debug.Log($"GetWorldInfo (static): {worldInfo}");
+                }
+
+                // New implementation of STATIC WorldInfo.IsShippingBuild()
                 {
-                    worldInfo = null;
                     var funcManaged = UObject.StaticFindObjectChecked<UFunction>(
                         UFunction.StaticClass(),
                         null,
-                        "Engine.WorldInfo.GetWorldInfo",
+                        "Engine.WorldInfo.IsShippingBuild",
                         true
                     );
 
-                    worldInfo = funcManaged.Invoke<AWorldInfo>(
-                        AWorldInfo.StaticClass().DefaultObject
+                    var worldInfo = funcManaged.Invoke<bool>(
+                        Engine.AWorldInfo.StaticClass().DefaultObject,
+                        []
                     );
+
+                    Debug.Log($"IsShippingBuild (static): {worldInfo}");
                 }
-                Debug.Log($"New: {worldInfo}");
+
+                // New implementation of NON-STATIC GameViewportClient.FindPlayerByControllerId()
+                {
+                    var viewportClient = Game.GetGameViewportClient();
+                    var funcManaged = UObject.StaticFindObjectChecked<UFunction>(
+                        UFunction.StaticClass(),
+                        null,
+                        "Engine.GameViewportClient.FindPlayerByControllerId",
+                        true
+                    );
+
+                    Debug.Log(viewportClient);
+                    Debug.Log(funcManaged);
+
+                    var res = funcManaged.Invoke<Engine.ULocalPlayer>(viewportClient, [0]);
+
+                    Debug.Log($"FindPlayerByControllerId (non-static): {res}");
+                }
 
                 HasGameStarted = true;
             }

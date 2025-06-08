@@ -1,11 +1,8 @@
-#pragma warning disable CS0169
-#pragma warning disable CS0649
-
 using BmSDK.Framework;
 
 namespace BmSDK;
 
-[StructLayout(LayoutKind.Explicit)]
+[StructLayout(LayoutKind.Explicit, Size = 1024)]
 internal unsafe struct FFrame
 {
     [FieldOffset(0x8)]
@@ -27,11 +24,11 @@ internal unsafe struct FFrame
     public IntPtr OutParms;
 
     public FFrame(
-        UObject? InObject,
-        UStruct InNode,
+        UObject InObject,
+        UFunction InNode,
         int CodeOffset,
-        ReadOnlySpan<byte> InLocals,
-        FFrame* InPreviousFrame
+        Span<byte> InLocals,
+        FFrame* InPreviousFrame = null
     )
     {
         fixed (FFrame* thisPtr = &this)
@@ -39,7 +36,7 @@ internal unsafe struct FFrame
         {
             GameFunctions.FrameCtor(
                 (IntPtr)thisPtr,
-                InObject?.Ptr ?? 0,
+                InObject.Ptr,
                 InNode.Ptr,
                 CodeOffset,
                 (IntPtr)localsPtr,

@@ -33,32 +33,45 @@ public partial class UFunction
         set => SetPropertyValue(this, 112, value);
     }
 
-    public unsafe TReturn? Invoke<TReturn>(UObject? self, params object[] args)
+    public unsafe TReturn? Invoke<TReturn>(UObject obj, object[] args)
     {
+        // TODO: Use actual 'ReturnValue' property
+        var returnSize = MarshalUtil.GetSizeUnmanaged<TReturn>();
+
         // Allocate locals
         Span<byte> localsData = stackalloc byte[PropertiesSize];
         localsData.Clear();
-        Debug.Log($"Locals size: {localsData.Length}");
 
         {
             // TODO: Marshal params
         }
 
-        // First param is "this" object - null because this is a static call.
-        var frame = new FFrame(self, this, 0, localsData, null);
+        // First param is "this" object
+        var newStack = new FFrame(obj, this, 0, localsData);
 
-        // TODO: Don't hardcode me
-        Span<byte> returnData = stackalloc byte[MarshalUtil.GetSizeUnmanaged<TReturn>()];
+        Span<byte> returnData = stackalloc byte[returnSize];
         fixed (byte* returnDataPtr = returnData)
         {
-            GameFunctions.CallFunction(
-                self?.Ptr ?? 0,
-                (IntPtr)(&frame),
-                (IntPtr)returnDataPtr,
-                Ptr
-            );
+            // Use CallFunction() for simple native functions
+            if (FunctionFlags.HasFlag(EFunctionFlags.FUNC_Native))
+            {
+                GameFunctions.CallFunction(
+                    obj.Ptr,
+                    (IntPtr)(&newStack),
+                    (IntPtr)returnDataPtr,
+                    Ptr
+                );
+            }
+            // Let ProcessInternal() handle more complex logic for non-native functions
+            else
+            {
+                GameFunctions.ProcessInternal(obj.Ptr, (IntPtr)(&newStack), (IntPtr)returnDataPtr);
+            }
 
-            Debug.Log(string.Join(" ", returnData.ToArray().Select(b => b.ToString("X2"))));
+            Debug.Log(
+                "returnData: "
+                    + string.Join(" ", returnData.ToArray().Select(b => b.ToString("X2")))
+            );
             return MarshalUtil.ToManaged<TReturn>(returnDataPtr);
         }
     }
