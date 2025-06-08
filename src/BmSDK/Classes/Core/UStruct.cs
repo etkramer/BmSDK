@@ -19,4 +19,12 @@ public partial class UStruct
     {
         get => MarshalUtil.ToManaged<short>(Ptr + 64);
     }
+
+    public IEnumerable<UField> EnumerateFields()
+    {
+        for (UField fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
+        {
+            yield return fieldLink;
+        }
+    }
 }
