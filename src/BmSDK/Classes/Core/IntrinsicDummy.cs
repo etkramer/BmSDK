@@ -7,4 +7,6 @@ namespace BmSDK;
 public sealed class IntrinsicDummy : UObject
 {
     private IntrinsicDummy() { }
+
+    public override string ToString() => $"(UNRECOGNIZED TYPE) {base.ToString()}";
 }

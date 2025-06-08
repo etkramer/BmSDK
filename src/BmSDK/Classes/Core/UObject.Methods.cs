@@ -203,5 +203,5 @@ public partial class UObject
     }
 
     /// <inheritdoc/>
-    public override string ToString() => $"{GetFullName()} ({GetType().Name})";
+    public override string ToString() => GetFullName();
 }
