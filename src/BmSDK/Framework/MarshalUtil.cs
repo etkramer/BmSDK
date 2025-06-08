@@ -69,6 +69,34 @@ public static unsafe class MarshalUtil
         );
     }
 
+    // Marshals a managed object to native, then copies it into an existing buffer.
+    public static void ToUnmanaged2(object value, Type valueType, void* data)
+    {
+        // Try to copy memory directly (for struct, primitive types)
+        if (valueType.IsValueType)
+        {
+            Marshal.StructureToPtr(value, (IntPtr)data, false);
+            return;
+        }
+        else if (valueType.IsAssignableTo(typeof(UObject)))
+        {
+            // Handle null object references.
+            if (value is null)
+            {
+                ToUnmanaged(IntPtr.Zero, data);
+                return;
+            }
+
+            // We already have a pointer to this object's native instance, so just assign it.
+            ToUnmanaged(((UObject)value!).Ptr, data);
+            return;
+        }
+
+        throw new NotImplementedException(
+            $"Marshaling not (fully) implemented for type {valueType.Name}"
+        );
+    }
+
     public static int GetSizeUnmanaged<TManaged>()
     {
         // Try to use managed size directly (for struct, primitive types)

@@ -32,8 +32,7 @@ string UProperty::GetInnerTypeNameManaged() const
 	{
 		return "bool";
 	}
-	else if (Class->GetPathName() == "Core.StrProperty" ||
-			 Class->GetPathName() == "Core.StringProperty")
+	else if (Class->GetPathName() == "Core.StrProperty")
 	{
 		return "BmSDK.FString";
 	}

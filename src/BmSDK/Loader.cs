@@ -132,7 +132,7 @@ static class Loader
                         []
                     );
 
-                    Debug.Log($"GetWorldInfo (static): {worldInfo}");
+                    Debug.Log($"GetWorldInfo (static): {worldInfo?.ToString() ?? "null"}");
                 }
 
                 // New implementation of STATIC WorldInfo.IsShippingBuild()
@@ -144,12 +144,12 @@ static class Loader
                         true
                     );
 
-                    var worldInfo = funcManaged.Invoke<bool>(
+                    var res = funcManaged.Invoke<bool>(
                         Engine.AWorldInfo.StaticClass().DefaultObject,
                         []
                     );
 
-                    Debug.Log($"IsShippingBuild (static): {worldInfo}");
+                    Debug.Log($"IsShippingBuild (static): {res}");
                 }
 
                 // New implementation of NON-STATIC GameViewportClient.FindPlayerByControllerId()
@@ -165,9 +165,11 @@ static class Loader
                     Debug.Log(viewportClient);
                     Debug.Log(funcManaged);
 
-                    var res = funcManaged.Invoke<Engine.ULocalPlayer>(viewportClient, [0]);
+                    var res = funcManaged.Invoke<Engine.ULocalPlayer>(viewportClient, [1]);
 
-                    Debug.Log($"FindPlayerByControllerId (non-static): {res}");
+                    Debug.Log(
+                        $"FindPlayerByControllerId (non-static): {res?.ToString() ?? "null"}"
+                    );
                 }
 
                 HasGameStarted = true;
