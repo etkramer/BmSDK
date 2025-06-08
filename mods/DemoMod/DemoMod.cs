@@ -79,12 +79,12 @@ public class DemoMod : GameMod
         // TODO: Why does this cause a crash? Could it be related to being a built-in method with INDEX_NONE?
         // May want to switch to CallFunction()? Noting that ProcessEvent() is NOT intended for calling native functions - this is why we need to remove FUNC_Native.
         // See https://www.unknowncheats.me/forum/unreal-engine-3-a/204345-ue3-fframe.html
-        var engineVersion = gri.GetEngineVersion();
-        Debug.Log(engineVersion);
+        // var engineVersion = gri.GetEngineVersion();
+        // Debug.Log(engineVersion);
 
         // TODO: Let's get this working. APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
-        // var newActor = Game.SpawnActor<APointLight>("TestActor");
-        // Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
+        var newActor = Game.SpawnActor<APointLight>("TestActor");
+        Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
     }
 
     private static void DebugLoadGame()

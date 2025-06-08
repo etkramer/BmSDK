@@ -158,6 +158,7 @@ public partial class UFunction
             // Use CallFunction() for simple native functions
             if (FunctionFlags.HasFlag(EFunctionFlags.FUNC_Native))
             {
+                Debug.Log("1");
                 GameFunctions.CallFunction(
                     obj.Ptr,
                     (IntPtr)(&newStack),
@@ -168,6 +169,7 @@ public partial class UFunction
             // Let ProcessInternal() handle more complex logic for non-native functions
             else
             {
+                Debug.Log("2");
                 GameFunctions.ProcessInternal(obj.Ptr, (IntPtr)(&newStack), (IntPtr)returnParmPtr);
             }
         }
