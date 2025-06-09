@@ -117,7 +117,7 @@
         "label": "Build Generator",
         "type": "process",
         "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.slnx", "/t:BmSDK_Generator", "/t:BmSDK_Host"],
+        "args": ["BmSDK.slnx", "/t:BmSDK_Generator"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }

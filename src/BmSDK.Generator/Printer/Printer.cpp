@@ -29,9 +29,9 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	// Print class comment
 	Printer::Indent(out) << "/// <summary>" << endl;
 	Printer::Indent(out) << "/// ";
-	if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Intrinsic)
+	if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract)
 	{
-		out << "INTRINSIC ";
+		out << "ABSTRACT ";
 	}
 	Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
 	Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
