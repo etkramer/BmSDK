@@ -61,14 +61,18 @@ public class DemoMod : GameMod
 
     private static void TestSpawnActor()
     {
-        // Spawn in another Batman
         var playerPawn = Game.GetPlayerPawn();
-        var newActor = Game.SpawnActor<ARPawnPlayerBm>(
-            "TestActor",
-            playerPawn.Location,
+
+        // Spawn in a pawn
+        var newCharacter = Game.SpawnCharacter<ARPawnVillainNinja, URCharacter_Strange>(
+            playerPawn.Location with
+            {
+                Y = playerPawn.Location.Y + 100,
+            },
             playerPawn.Rotation
         );
-        Debug.Log($"Spawned actor {newActor?.ToString() ?? "NULL"}");
+
+        Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");
     }
 
     private static void DebugLoadGame()

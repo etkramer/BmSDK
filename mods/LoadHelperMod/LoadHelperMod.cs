@@ -9,5 +9,6 @@ public class LoadHelperMod : GameMod
         // Load packages containing classes we'll want at generation time
         UObject.LoadPackage("Playable_Batman_SF");
         UObject.LoadPackage("Playable_Robin_SF");
+        UObject.LoadPackage("Under_B6_Ch7");
     }
 }

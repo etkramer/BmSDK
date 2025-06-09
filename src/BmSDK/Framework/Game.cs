@@ -57,6 +57,9 @@ public static class Game
         return Guard.NotNull(worldInfo.GRI as ARGameRI);
     }
 
+    /// <summary>
+    /// Spawns a new actor of the given type.
+    /// </summary>
     public static unsafe T? SpawnActor<T>(
         FName InName,
         UObject.FVector Position,
@@ -84,6 +87,29 @@ public static class Game
         );
 
         return MarshalUtil.ToManaged<T>(&resPtr);
+    }
+
+    /// <summary>
+    /// Spawns a new actor of the given pawn and character types.
+    /// </summary>
+    public static unsafe TPawn? SpawnCharacter<TPawn, TCharacter>(
+        UObject.FVector Position,
+        UObject.FRotator Rotation
+    )
+        where TPawn : ARBMPawnAI, IStaticObject
+        where TCharacter : URCharacter, IStaticObject
+    {
+        return (TPawn)
+            URCharacter.StaticCreatePawn(
+                Position,
+                Rotation,
+                null,
+                TPawn.StaticClass(),
+                TCharacter.StaticClass(),
+                true,
+                FName.None,
+                FName.None
+            );
     }
 
     /// <summary>
