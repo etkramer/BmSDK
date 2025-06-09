@@ -61,19 +61,8 @@ public class DemoMod : GameMod
 
     private static void TestSpawnActor()
     {
-        // Print some game info
-        var gri = Game.GetGameRI();
-        Debug.Log(gri.GetCurrentAreaName());
-        foreach (var player in gri.PlayerList)
-        {
-            Debug.Log($"  {player}");
-        }
-
-        // Grab player pawn
+        // Spawn in another Batman
         var playerPawn = Game.GetPlayerPawn();
-        Debug.Log($"Player is at {playerPawn.Location}");
-
-        // TODO: Let's get this working. APointLight narrows it down - it can't be a collision issue because lights are allowed to intersect.
         var newActor = Game.SpawnActor<ARPawnPlayerBm>(
             "TestActor",
             playerPawn.Location,
