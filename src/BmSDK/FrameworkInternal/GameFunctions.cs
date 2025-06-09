@@ -62,6 +62,22 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr GetDefaultObjectDelegate(IntPtr self, int bForce);
 
+    // UWorld::SpawnActor()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate IntPtr SpawnActorDelegate(
+        IntPtr self,
+        IntPtr Class,
+        FName InName,
+        IntPtr Location,
+        IntPtr Rotation,
+        IntPtr Template,
+        int bNoCollisionFail,
+        int bRemoteOwned,
+        IntPtr Owner,
+        IntPtr Instigator,
+        int bNoFail
+    );
+
     // FName::Init()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void NameInitDelegate(
@@ -85,6 +101,7 @@ internal static class GameFunctions
     static ConditionalDestroyDelegate? _ConditionalDestroy = null;
     static FindFunctionDelegate? _FindFunction = null;
     static GetDefaultObjectDelegate? _GetDefaultObject = null;
+    static SpawnActorDelegate? _SpawnActor = null;
     static NameInitDelegate? _NameInit = null;
     static StringCtorDelegate? _StringCtor = null;
 
@@ -132,6 +149,11 @@ internal static class GameFunctions
     public static GetDefaultObjectDelegate GetDefaultObject =>
         _GetDefaultObject ??= Marshal.GetDelegateForFunctionPointer<GetDefaultObjectDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.GetDefaultObject)
+        );
+
+    public static SpawnActorDelegate SpawnActor =>
+        _SpawnActor ??= Marshal.GetDelegateForFunctionPointer<SpawnActorDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.SpawnActor)
         );
 
     public static NameInitDelegate NameInit =>

@@ -1,6 +1,6 @@
 ﻿namespace BmSDK.Framework;
 
-public static unsafe class MarshalUtil
+internal static unsafe class MarshalUtil
 {
     public static readonly Dictionary<IntPtr, UObject> s_managedObjects = [];
 

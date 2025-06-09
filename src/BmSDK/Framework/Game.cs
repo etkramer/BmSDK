@@ -57,15 +57,33 @@ public static class Game
         return Guard.NotNull(worldInfo.GRI as ARGameRI);
     }
 
-    public static T? SpawnActor<T>(
+    public static unsafe T? SpawnActor<T>(
         FName InName,
-        UObject.FVector Position = default,
-        UObject.FRotator Rotation = default
+        UObject.FVector Position,
+        UObject.FRotator Rotation,
+        UObject? Owner = null
     )
         where T : AActor, IStaticObject
     {
-        return GetWorldInfo().Spawn(T.StaticClass(), null, InName, Position, Rotation, null, true)
-            as T;
+        // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
+        // If we wanted to get the script version working, we'd probably have to patch it.
+
+        var world = (UWorld)GetWorldInfo().Outer.Outer;
+        var resPtr = GameFunctions.SpawnActor(
+            world.Ptr,
+            T.StaticClass().Ptr,
+            InName,
+            (IntPtr)(&Position),
+            (IntPtr)(&Rotation),
+            0,
+            1,
+            1,
+            Owner?.Ptr ?? 0,
+            0,
+            1
+        );
+
+        return MarshalUtil.ToManaged<T>(&resPtr);
     }
 
     /// <summary>
