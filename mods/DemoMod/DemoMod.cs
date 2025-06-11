@@ -16,19 +16,12 @@ public static class RGameInfoMixins
     // (for now - in the future, the second invocation of CallFunction can call the second mixin instead of being ignored).
 
     [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.PostBeginPlay))]
-    public static void DoPostRenderLogic(ARCinematicCustomActor self)
+    public static void PostBeginPlay(ARCinematicCustomActor self)
     {
         Debug.Log($"Hello from PostBeginPlay! Self is {self}");
 
-        // DrawTitleSafeArea (but inlined)
-        // {
-        //     canvas.SetDrawColor(255, 0, 255);
-        //     canvas.SetPos(0, 0);
-        //     canvas.DrawBox(0.5f, 0.5f);
-        // }
-
         // Base implementation
-        // self.DoPostRenderLogic(canvas);
+        self.PostBeginPlay();
     }
 }
 

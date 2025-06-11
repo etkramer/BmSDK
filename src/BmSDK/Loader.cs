@@ -57,27 +57,30 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    static int removeme = 0;
+    static UFunction? lastFuncForMixins = null;
 
     // Detour for UObject::ProcessInternal()
     public static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
         RunGuarded(() =>
         {
-            // Call base impl
-            _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
-
             IntPtr selfPtr = self;
             FFrame* stackPtr = (FFrame*)Stack.ToPointer();
 
             var selfObj = MarshalUtil.ToManaged<UObject>(&selfPtr);
             var funcObj = MarshalUtil.ToManaged<UFunction>(&stackPtr->Node);
 
-            // Do we have any mixins to run?
-            if (MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod))
-            {
-                // Debug.Log("Found a mixin!");
+            // Don't run the same mixin twice in a row - in that case, we assume the user is attempting to call the base implementation.
+            // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
+            bool shouldIgnoreMixins = lastFuncForMixins == funcObj;
+            lastFuncForMixins = funcObj;
 
+            // Do we have any mixins to run?
+            if (
+                MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod)
+                && !shouldIgnoreMixins
+            )
+            {
                 // Marshal args, add self as first arg if needed.
                 var args = stackPtr->ParamsToManaged().ToList();
                 if (!funcObj.IsStatic)
@@ -94,36 +97,11 @@ static class Loader
 
                 // return;
             }
-
-            // var funcName = funcObj.GetPathName();
-            // if (funcName == "BmGame.RGameInfo:DoPostRenderLogic")
-            // {
-            //     // TEMP: Only do this once, we're just testing right now.
-            //     if (removeme++ >= 1)
-            //     {
-            //         return;
-            //     }
-
-            //     Debug.Log($"RGameInfo.DoPostRenderLogic() called!");
-
-            //     // IntPtr localsPtr = stackPtr->Locals;
-            //     // foreach (var prop in funcObj.EnumerateParams())
-            //     // {
-            //     //     var valuePtr = localsPtr + prop.Offset;
-            //     //     Debug.Log($"{prop.Name} is at {prop.Offset} (0x{valuePtr:X})");
-
-            //     //     var valueManaged = MarshalUtil.ToManaged<Engine.UCanvas>(valuePtr);
-            //     //     Debug.Log($"{prop.Name} is {valueManaged}");
-            //     // }
-
-            //     foreach (var param in stackPtr->ParamsToManaged())
-            //     {
-            //         Debug.Log($"Found param {param}");
-            //     }
-            // }
-
-            // // Call base impl
-            // _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+            else
+            {
+                // Call base impl
+                _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+            }
         });
 
         // TODO: Mixins
