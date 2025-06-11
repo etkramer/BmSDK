@@ -4,7 +4,7 @@ namespace BmSDK.Framework;
 
 internal static unsafe class MarshalUtil
 {
-    public static readonly Dictionary<IntPtr, UObject> s_managedObjects = [];
+    public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
     public static object? ToManaged(IntPtr data, Type managedType)
@@ -32,7 +32,7 @@ internal static unsafe class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -67,7 +67,7 @@ internal static unsafe class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
             if (value is null)
@@ -77,7 +77,7 @@ internal static unsafe class MarshalUtil
             }
 
             // We already have a pointer to this object's native instance, so just assign it.
-            ToUnmanaged(((UObject)(object)value!).Ptr, data);
+            ToUnmanaged(((GameObject)(object)value!).Ptr, data);
             return;
         }
 
@@ -93,7 +93,7 @@ internal static unsafe class MarshalUtil
         {
             return Marshal.SizeOf<TManaged>();
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(UObject)))
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             return sizeof(IntPtr);
         }
@@ -113,14 +113,14 @@ internal static unsafe class MarshalUtil
 
         // Create a new managed object
         var newObj = s_managedObjects[objPtr] = Guard.NotNull(
-            (UObject?)Activator.CreateInstance(managedType, true),
+            (GameObject?)Activator.CreateInstance(managedType, true),
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
 
         // Prevent class objects from being GC'd. Keeps things simple,
         // and shouldn't be *too* bad for perf as there's only so many of them.
-        if (newObj is UClass)
+        if (newObj is Class)
         {
             newObj.AddToRoot();
         }

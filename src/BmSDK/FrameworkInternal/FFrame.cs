@@ -27,7 +27,7 @@ internal unsafe record struct FFrame
     {
         var nodePtr = Node;
         var localsPtr = Locals;
-        var funcObj = MarshalUtil.ToManaged<UFunction>(&nodePtr);
+        var funcObj = MarshalUtil.ToManaged<Function>(&nodePtr);
 
         return funcObj
             .EnumerateParams()

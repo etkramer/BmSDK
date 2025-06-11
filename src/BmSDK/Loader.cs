@@ -52,7 +52,7 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    static UFunction? lastFuncForMixins = null;
+    static Function? lastFuncForMixins = null;
 
     // Detour for UObject::ProcessInternal()
     public static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
@@ -62,8 +62,8 @@ static class Loader
             IntPtr selfPtr = self;
             FFrame* stackPtr = (FFrame*)Stack.ToPointer();
 
-            var selfObj = MarshalUtil.ToManaged<UObject>(&selfPtr);
-            var funcObj = MarshalUtil.ToManaged<UFunction>(&stackPtr->Node);
+            var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
+            var funcObj = MarshalUtil.ToManaged<Function>(&stackPtr->Node);
 
             var funcName = funcObj.GetPathName();
             var funcNameForGameInit = "Engine.GameInfo:InitGame";
@@ -183,7 +183,7 @@ static class Loader
             var classIndex = *(int*)classIndexPtr.ToPointer();
             if (classIndex < 1)
             {
-                MarshalUtil.CreateManagedWrapper(self, typeof(UClass));
+                MarshalUtil.CreateManagedWrapper(self, typeof(Class));
                 return;
             }
 

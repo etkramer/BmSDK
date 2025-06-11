@@ -2,14 +2,14 @@
 
 namespace BmSDK;
 
-public partial class UStruct
+public partial class Struct
 {
     /// <summary>
     /// Property: Children
     /// </summary>
-    public UField Children
+    public Field Children
     {
-        get => MarshalUtil.ToManaged<UField>(Ptr + 60);
+        get => MarshalUtil.ToManaged<Field>(Ptr + 60);
     }
 
     /// <summary>
@@ -20,9 +20,9 @@ public partial class UStruct
         get => MarshalUtil.ToManaged<short>(Ptr + 64);
     }
 
-    public IEnumerable<UField> EnumerateFields()
+    public IEnumerable<Field> EnumerateFields()
     {
-        for (UField fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
+        for (Field fieldLink = Children; fieldLink != null; fieldLink = fieldLink.Next)
         {
             yield return fieldLink;
         }

@@ -8,21 +8,21 @@ public static class Game
     /// <summary>
     /// Gets the world info object for the currently-loaded world.
     /// </summary>
-    public static AWorldInfo GetWorldInfo() => Guard.NotNull(AWorldInfo.GetWorldInfo());
+    public static WorldInfo GetWorldInfo() => Guard.NotNull(WorldInfo.GetWorldInfo());
 
     /// <summary>
     /// Gets the player controller belonging to the local player.
     /// </summary>
-    public static ARPlayerController GetPlayerController(int controllerId = 0)
+    public static RPlayerController GetPlayerController(int controllerId = 0)
     {
         var player = GetGameViewportClient().FindPlayerByControllerId(controllerId);
-        return Guard.NotNull(player.Actor as ARPlayerController);
+        return Guard.NotNull(player.Actor as RPlayerController);
     }
 
     /// <summary>
     /// Gets the pawn currently possessed by the local player controller (returned by <see cref="GetPlayerController"/>).
     /// </summary>
-    public static APawn GetPlayerPawn(int controllerId = 0)
+    public static Pawn GetPlayerPawn(int controllerId = 0)
     {
         var playerController = GetPlayerController(controllerId);
         return Guard.NotNull(playerController.Pawn, "Controller is not possessing a pawn.");
@@ -31,50 +31,50 @@ public static class Game
     /// <summary>
     /// Gets (or creates if needed) the cheat manager owned by the local player controller (returned by <see cref="GetPlayerController"/>).
     /// </summary>
-    public static URCheatManager GetCheatManager()
+    public static RCheatManager GetCheatManager()
     {
         var playerController = GetPlayerController();
-        playerController.CheatManager ??= new URCheatManager(playerController);
+        playerController.CheatManager ??= new RCheatManager(playerController);
 
-        return (URCheatManager)playerController.CheatManager;
+        return (RCheatManager)playerController.CheatManager;
     }
 
     /// <summary>
     /// Gets the game info object for the currently-loaded world.
     /// </summary>
-    public static ARGameInfo GetGameInfo()
+    public static RGameInfo GetGameInfo()
     {
         var worldInfo = GetWorldInfo();
-        return Guard.NotNull(worldInfo.Game as ARGameInfo);
+        return Guard.NotNull(worldInfo.Game as RGameInfo);
     }
 
     /// <summary>
     /// Gets the replication info object for the currently-loaded world.
     /// </summary>
-    public static ARGameRI GetGameRI()
+    public static RGameRI GetGameRI()
     {
         var worldInfo = GetWorldInfo();
-        return Guard.NotNull(worldInfo.GRI as ARGameRI);
+        return Guard.NotNull(worldInfo.GRI as RGameRI);
     }
 
     /// <summary>
     /// Gets the global engine object.
     /// </summary>
-    public static UGameEngine GetEngine() => Guard.NotNull(UEngine.GetEngine() as UGameEngine);
+    public static GameEngine GetEngine() => Guard.NotNull(_Engine.GetEngine() as GameEngine);
 
     /// <summary>
     /// Gets the global viewport client object.
     /// </summary>
-    public static URGFxGameViewportClient GetGameViewportClient()
+    public static RGFxGameViewportClient GetGameViewportClient()
     {
         var engine = GetEngine();
-        return Guard.NotNull(engine.GameViewport as URGFxGameViewportClient);
+        return Guard.NotNull(engine.GameViewport as RGFxGameViewportClient);
     }
 
     /// <summary>
     /// Gets the global console object.
     /// </summary>
-    public static UConsole GetConsole()
+    public static _Console GetConsole()
     {
         var gameViewport = GetGameViewportClient();
         return Guard.NotNull(gameViewport.ViewportConsole);
@@ -84,23 +84,24 @@ public static class Game
     /// Finds and returns the object with the given path. Will be null if the object hasn't been loaded yet (see <see cref="LoadPackage"/> ).
     /// </summary>
     public static unsafe T? FindObject<T>(string pathName)
-        where T : UObject, IStaticObject => UObject.FindObject(pathName, T.StaticClass()) as T;
+        where T : GameObject, IStaticObject =>
+        GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
     public static unsafe T? SpawnActor<T>(
         FName InName,
-        UObject.FVector Position,
-        UObject.FRotator Rotation,
-        UObject? Owner = null
+        GameObject.FVector Position,
+        GameObject.FRotator Rotation,
+        GameObject? Owner = null
     )
-        where T : AActor, IStaticObject
+        where T : Actor, IStaticObject
     {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
 
-        var world = (UWorld)GetWorldInfo().Outer.Outer;
+        var world = (World)GetWorldInfo().Outer.Outer;
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
             T.StaticClass().Ptr,
@@ -122,14 +123,14 @@ public static class Game
     /// Spawns a new actor of the given pawn and character types.
     /// </summary>
     public static unsafe TPawn? SpawnCharacter<TPawn, TCharacter>(
-        UObject.FVector Position,
-        UObject.FRotator Rotation
+        GameObject.FVector Position,
+        GameObject.FRotator Rotation
     )
-        where TPawn : ARBMPawnAI, IStaticObject
-        where TCharacter : URCharacter, IStaticObject
+        where TPawn : RBMPawnAI, IStaticObject
+        where TCharacter : RCharacter, IStaticObject
     {
         return (TPawn)
-            URCharacter.StaticCreatePawn(
+            RCharacter.StaticCreatePawn(
                 Position,
                 Rotation,
                 null,
@@ -144,7 +145,7 @@ public static class Game
     /// <summary>
     /// Loads a package into memory given its .upk file name.
     /// </summary>
-    public static unsafe UPackage? LoadPackage(string Filename)
+    public static unsafe Package? LoadPackage(string Filename)
     {
         // Get TCHAR* from string
         fixed (char* filenamePtr = Filename)
@@ -152,7 +153,7 @@ public static class Game
             // Call native func
             var result = GameFunctions.LoadPackage(0, (IntPtr)filenamePtr, 0);
 
-            return MarshalUtil.ToManaged<UPackage>(&result);
+            return MarshalUtil.ToManaged<Package>(&result);
         }
     }
 }

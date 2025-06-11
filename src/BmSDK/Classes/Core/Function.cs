@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class UFunction
+public partial class Function
 {
     [Flags]
     public enum EFunctionFlags
@@ -35,10 +35,10 @@ public partial class UFunction
         set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
     }
 
-    public IEnumerable<UProperty> EnumerateParams()
+    public IEnumerable<Property> EnumerateParams()
     {
         return EnumerateFields()
-            .OfType<UProperty>()
-            .Where(prop => prop.PropertyFlags.HasFlag(UProperty.EPropertyFlags.CPF_Parm));
+            .OfType<Property>()
+            .Where(prop => prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_Parm));
     }
 }

@@ -2,13 +2,13 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class UField
+public partial class Field
 {
     /// <summary>
     /// Property: Next
     /// </summary>
-    public unsafe UField Next
+    public unsafe Field Next
     {
-        get => MarshalUtil.ToManaged<UField>(Ptr + 44);
+        get => MarshalUtil.ToManaged<Field>(Ptr + 44);
     }
 }

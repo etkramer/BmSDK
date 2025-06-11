@@ -2,19 +2,19 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class UObject
+public partial class GameObject
 {
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
-    private static unsafe ref TArray<UObject> GObjects =>
-        ref *(TArray<UObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
+    private static unsafe ref TArray<GameObject> GObjects =>
+        ref *(TArray<GameObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjectsSlow<T>()
-        where T : UObject => GObjects.OfType<T>();
+        where T : GameObject => GObjects.OfType<T>();
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
@@ -26,12 +26,12 @@ public partial class UObject
     /// <param name="ExactClass">Whether to require an exact match with the passed in class</param>
     /// <returns>Returns the found object or null if none could be found</returns>
     public static unsafe T StaticFindObjectChecked<T>(
-        UClass? Class,
-        UObject? InOuter,
+        Class? Class,
+        GameObject? InOuter,
         string Name,
         bool ExactClass
     )
-        where T : UObject
+        where T : GameObject
     {
         // Get TCHAR* from string
         fixed (char* namePtr = Name)
@@ -45,7 +45,7 @@ public partial class UObject
             );
 
             return Guard.NotNull(
-                (T?)(object?)MarshalUtil.ToManaged<UObject>(&result),
+                (T?)(object?)MarshalUtil.ToManaged<GameObject>(&result),
                 $"Failed to find object: {Name}"
             );
         }
@@ -60,38 +60,38 @@ public partial class UObject
     /// <param name="SetFlags">The object flags to apply to the new object</param>
     /// <param name="Template">The object to use for initializing the new object.  If not specified, the class's default object will be used</param>
     /// <returns>A reference to a new object of the specified class</returns>
-    public static unsafe UObject ConstructObject(
-        UClass Class,
-        UObject? Outer = null,
+    public static unsafe GameObject ConstructObject(
+        Class Class,
+        GameObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        UObject? Template = null
+        GameObject? Template = null
     )
     {
         var result = ConstructObjectInternal(Class, Outer, Name, SetFlags, Template);
-        return MarshalUtil.ToManaged<UObject>(&result);
+        return MarshalUtil.ToManaged<GameObject>(&result);
     }
 
     /// <inheritdoc cref="ConstructObject"/>
     public static unsafe T ConstructObject<T>(
-        UObject? Outer = null,
+        GameObject? Outer = null,
         string? Name = null,
         EObjectFlags SetFlags = 0,
-        UObject? Template = null
+        GameObject? Template = null
     )
-        where T : UObject, IStaticObject =>
+        where T : GameObject, IStaticObject =>
         (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
     internal static unsafe IntPtr ConstructObjectInternal(
-        UClass Class,
-        UObject? Outer,
+        Class Class,
+        GameObject? Outer,
         string? Name,
         EObjectFlags SetFlags,
-        UObject? Template
+        GameObject? Template
     )
     {
         // Default to transient package
-        Outer ??= UPackage.GetTransientPackage();
+        Outer ??= Package.GetTransientPackage();
 
         // Call native func
         var result = GameFunctions.StaticConstructObject(
@@ -112,7 +112,7 @@ public partial class UObject
     /// <summary>
     /// Enumerates all objects in this object's outer chain.
     /// </summary>
-    public IEnumerable<UObject> EnumerateOuter()
+    public IEnumerable<GameObject> EnumerateOuter()
     {
         var outer = Outer;
         while (outer is not null)
@@ -125,7 +125,7 @@ public partial class UObject
     /// <summary>
     /// Returns the fully qualified pathname for this object as well as the name of the class.
     /// </summary>
-    public string GetFullName(UObject? StopOuter = null)
+    public string GetFullName(GameObject? StopOuter = null)
     {
         return $"{Guard.NotNull(Class).Name} {GetPathName(StopOuter)}";
     }
@@ -133,21 +133,21 @@ public partial class UObject
     /// <summary>
     /// Returns the fully qualified pathname for this object.
     /// </summary>
-    public string GetPathName(UObject? StopOuter = null)
+    public string GetPathName(GameObject? StopOuter = null)
     {
         var res = "";
         GetPathNameRecursive(StopOuter, ref res);
         return res;
     }
 
-    private void GetPathNameRecursive(UObject? StopOuter, ref string ResultString)
+    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {
             if (Outer is not null && Outer != StopOuter)
             {
                 Outer.GetPathNameRecursive(StopOuter, ref ResultString);
-                ResultString += Outer is UPackage ? "." : ":";
+                ResultString += Outer is Package ? "." : ":";
             }
 
             ResultString += Name.ToString();

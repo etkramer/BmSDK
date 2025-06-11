@@ -70,8 +70,8 @@ public static class MixinManager
     /// Gets all mixins for the given function object, or returns false if none exist.
     /// </summary>
     public static bool TryGetMixinMethod(
-        UObject obj,
-        UFunction func,
+        GameObject obj,
+        Function func,
         [MaybeNullWhen(false)] out MethodInfo mixinMethod
     )
     {

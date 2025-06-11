@@ -2,7 +2,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-public partial class UProperty
+public partial class Property
 {
     [Flags]
     public enum EPropertyFlags

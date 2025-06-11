@@ -51,8 +51,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	Printer::PushIndent();
 	{
 		// Print StaticClass() helper
-		Printer::Indent(out) << "static BmSDK.UClass s_staticClass = null;" << endl;
-		Printer::Indent(out) << "public static BmSDK.UClass StaticClass()" << endl;
+		Printer::Indent(out) << "static BmSDK.Class s_staticClass = null;" << endl;
+		Printer::Indent(out) << "public static BmSDK.Class StaticClass()" << endl;
 		Printer::Indent(out) << "{" << endl;
 		Printer::PushIndent();
 		{
@@ -61,7 +61,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::PushIndent();
 			{
 				Printer::Indent(out)
-					<< "s_staticClass = StaticFindObjectChecked<UClass>(null, null, \""
+					<< "s_staticClass = StaticFindObjectChecked<Class>(null, null, \""
 					<< _class->GetPathName() << "\", false);" << endl;
 				Printer::Indent(out) << "s_staticClass.AddToRoot();" << endl;
 			}
@@ -86,8 +86,8 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 			Printer::Indent(out) << "/// </summary>" << endl;
 			Printer::Indent(out)
 				<< "public " << _class->GetNameManaged()
-				<< "(BmSDK.UObject Outer, string Name = null, "
-				   "BmSDK.UObject.EObjectFlags SetFlags = 0, "
+				<< "(BmSDK.GameObject Outer, string Name = null, "
+				   "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
 				<< _class->GetNameManaged()
 				<< " Template = null) : base(ConstructObjectInternal(StaticClass(), "
 				   "Outer, Name, SetFlags, Template)) { }"
@@ -429,8 +429,8 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 		string ptrText = funcIsStatic ? "StaticClass().DefaultObject.Ptr" : "Ptr";
 
 		Printer::Indent(out) << "var funcManaged = "
-								"BmSDK.UObject.StaticFindObjectChecked<BmSDK."
-								"UFunction>(BmSDK.UFunction.StaticClass(), null, \""
+								"BmSDK.GameObject.StaticFindObjectChecked<BmSDK."
+								"Function>(BmSDK.Function.StaticClass(), null, \""
 							 << func->GetPathName() << "\", true);" << endl;
 
 		Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
@@ -456,10 +456,10 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
 			Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
 			Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
 			Printer::Indent(out)
-				<< "funcManaged.FunctionFlags &= ~BmSDK.UFunction.EFunctionFlags.FUNC_Native;"
+				<< "funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;"
 				<< endl;
 			Printer::Indent(out)
-				<< "funcManaged.FunctionFlags |= BmSDK.UFunction.EFunctionFlags.FUNC_Defined;"
+				<< "funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;"
 				<< endl;
 			Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
 		}

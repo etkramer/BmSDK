@@ -15,33 +15,23 @@ FieldInfo::FieldInfo(UField* field)
 
 string FieldInfo::GetNameManaged()
 {
+	// Manually rename some classes to avoid conflicts with the System namespace
+	if (field->GetPathName() == "Core.Object")
+	{
+		return "GameObject";
+	}
+	else if (field->GetPathName() == "Core.System")
+	{
+		return "_System";
+	}
+	else if (field->GetPathName() == "Engine.Console")
+	{
+		return "_Console";
+	}
+
 	if (field->IsA(UScriptStruct::StaticClass()))
 	{
 		return "F" + field->GetName();
-	}
-	else if (field->IsA(UClass::StaticClass()))
-	{
-		bool isActorClass = false;
-		UStruct* classSuper = (UClass*)field;
-		while (classSuper)
-		{
-			if (classSuper->GetPathName() == "Engine.Actor")
-			{
-				isActorClass = true;
-				break;
-			}
-
-			classSuper = classSuper->SuperStruct;
-		}
-
-		if (isActorClass)
-		{
-			return "A" + field->GetName();
-		}
-		else
-		{
-			return "U" + field->GetName();
-		}
 	}
 
 	// Workaround fields with same name as their outer

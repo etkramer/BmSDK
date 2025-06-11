@@ -2,10 +2,10 @@ namespace BmSDK;
 
 public interface IStaticObject
 {
-    public static abstract UClass StaticClass();
+    public static abstract Class StaticClass();
 }
 
-public partial class UObject
+public partial class GameObject
 {
     public IntPtr Ptr { get; internal set; } = IntPtr.Zero;
 

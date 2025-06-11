@@ -7,8 +7,8 @@ namespace DemoMod;
 
 public static class RCinematicCustomActorMixins
 {
-    [MixinMethod(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.PostBeginPlay))]
-    public static void PostBeginPlay(ARCinematicCustomActor self)
+    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
+    public static void PostBeginPlay(RCinematicCustomActor self)
     {
         // Load package with Robin's meshes
         Game.LoadPackage("Playable_Robin_Std_SF");
@@ -16,8 +16,8 @@ public static class RCinematicCustomActorMixins
         // Replace cinematic Batman (head/body)
         if (self.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
         {
-            var newHeadMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
-            var newBodyMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
+            var newHeadMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
+            var newBodyMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
             self.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
             self.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
             Debug.Log("Using Robin's head/body");
@@ -26,7 +26,7 @@ public static class RCinematicCustomActorMixins
         // Replace cinematic Batman (cape)
         if (self.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
         {
-            var newCapeMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
+            var newCapeMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
             self.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
             Debug.Log("Using Robin's cape");
         }
@@ -35,8 +35,8 @@ public static class RCinematicCustomActorMixins
         self.PostBeginPlay();
     }
 
-    [MixinMethod(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.BeginAnimControl))]
-    public static void BeginAnimControl(ARCinematicCustomActor self, UInterpGroup inInterpGroup)
+    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
+    public static void BeginAnimControl(RCinematicCustomActor self, InterpGroup inInterpGroup)
     {
         Debug.Log($"Hello from BeginAnimControl!");
 
@@ -52,11 +52,11 @@ public class DemoMod : GameMod
         MixinManager.RegisterMixins(typeof(RCinematicCustomActorMixins));
 
         // Boost snow intensity
-        var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
+        var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
         defaultRainComponent.ParticleCount *= 5;
 
         // Set max players (default and current/frontend)
-        foreach (var gameInfo in UObject.FindObjectsSlow<ARGameInfo>())
+        foreach (var gameInfo in GameObject.FindObjectsSlow<RGameInfo>())
         {
             gameInfo.MaxPlayers = 4;
         }
@@ -71,7 +71,7 @@ public class DemoMod : GameMod
     public override void OnEnterGame()
     {
         // Enable 1-hit counters
-        foreach (var counterMove in UObject.FindObjectsSlow<ARCombatMove_BatmanCounter>())
+        foreach (var counterMove in GameObject.FindObjectsSlow<RCombatMove_BatmanCounter>())
         {
             counterMove.bShouldKill = true;
         }
@@ -110,7 +110,7 @@ public class DemoMod : GameMod
         Game.LoadPackage("Under_B6_Ch7");
 
         // Spawn in a pawn
-        var newCharacter = Game.SpawnCharacter<ARPawnVillainNinja, URCharacter_Strange>(
+        var newCharacter = Game.SpawnCharacter<RPawnVillainNinja, RCharacter_Strange>(
             playerPawn.Location with
             {
                 Y = playerPawn.Location.Y + 100,
@@ -138,7 +138,7 @@ public class DemoMod : GameMod
     private static void DebugAddSplitScreenPlayer()
     {
         var gameViewport = Game.GetGameViewportClient();
-        gameViewport.DesiredSplitscreenType = UGameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
+        gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
 
         // Debug.Log(gameViewport.ShouldForceFullscreenViewport());
