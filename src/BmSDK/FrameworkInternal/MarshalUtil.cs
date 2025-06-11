@@ -7,7 +7,7 @@ internal static unsafe class MarshalUtil
     public static readonly Dictionary<IntPtr, UObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
-    public static object? ToManaged2(IntPtr data, Type managedType)
+    public static object? ToManaged(IntPtr data, Type managedType)
     {
         var method = Guard.NotNull(
             typeof(MarshalUtil).GetMethod(

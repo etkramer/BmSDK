@@ -7,13 +7,13 @@ namespace DemoMod;
 
 public static class RCinematicCustomActorMixins
 {
-    [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.PostBeginPlay))]
-    public static void PostBeginPlay(ARCinematicCustomActor self)
+    [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.BeginAnimControl))]
+    public static void BeginAnimControl(ARCinematicCustomActor self, UInterpGroup inInterpGroup)
     {
-        Debug.Log($"Hello from PostBeginPlay! Self is {self}");
+        Debug.Log($"Hello from BeginAnimControl! Self is {self}, arg 0 is {inInterpGroup}");
 
-        // Base implementation
-        self.PostBeginPlay();
+        // Intentionally skip calling the base implementation.
+        // self.BeginAnimControl(inInterpGroup);
     }
 }
 

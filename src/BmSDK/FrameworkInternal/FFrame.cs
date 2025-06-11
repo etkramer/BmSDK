@@ -23,7 +23,7 @@ internal unsafe record struct FFrame
     [FieldOffset(0x1C)]
     public IntPtr OutParms;
 
-    public readonly IEnumerable<object?> ParamsToManaged()
+    public readonly IEnumerable<object?> ParamsToManaged(Type[] managedTypes)
     {
         var nodePtr = Node;
         var localsPtr = Locals;
@@ -31,25 +31,14 @@ internal unsafe record struct FFrame
 
         return funcObj
             .EnumerateParams()
-            .Select(prop =>
-            {
-                var valuePtr = localsPtr + prop.Offset;
-                // var valueManaged = MarshalUtil.ToManaged<Engine.UCanvas>(valuePtr);
+            .Select(
+                (prop, i) =>
+                {
+                    var typeManaged = managedTypes[i];
+                    var valueManaged = MarshalUtil.ToManaged(localsPtr + prop.Offset, typeManaged);
 
-                var valueManaged = MarshalUtil.ToManaged2(valuePtr, typeof(Engine.UCanvas));
-
-                return valueManaged;
-            });
-
-        // foreach (var prop in funcObj.EnumerateParams())
-        // {
-        //     var valuePtr = Locals + prop.Offset;
-        //     Debug.Log($"{prop.Name} is at {prop.Offset} (0x{valuePtr:X})");
-
-        //     var valueManaged = MarshalUtil.ToManaged<Engine.UCanvas>(valuePtr);
-        //     Debug.Log($"{prop.Name} is {valueManaged}");
-
-        //     yield return valueManaged;
-        // }
+                    return valueManaged;
+                }
+            );
     }
 }

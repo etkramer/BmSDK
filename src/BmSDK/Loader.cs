@@ -139,8 +139,15 @@ static class Loader
                 && !shouldIgnoreMixins
             )
             {
+                // Gather (expected) managed types using the mixin impl, noting the artificial 'self' param.
+                var argTypes = mixinMethod
+                    .GetParameters()
+                    .Select(p => p.ParameterType)
+                    .Skip(funcObj.IsStatic ? 0 : 1)
+                    .ToArray();
+
                 // Marshal args, add self as first arg if needed.
-                var args = stackPtr->ParamsToManaged().ToList();
+                var args = stackPtr->ParamsToManaged(argTypes).ToList();
                 if (!funcObj.IsStatic)
                 {
                     args.Insert(0, selfObj);
