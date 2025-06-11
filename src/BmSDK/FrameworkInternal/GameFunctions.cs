@@ -28,15 +28,6 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate IntPtr LoadPackageDelegate(IntPtr InOuter, IntPtr Filename, int LoadFlags);
 
-    // UObject::ProcessEvent()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
-    public delegate void ProcessEventDelegate(
-        IntPtr self,
-        IntPtr Function,
-        IntPtr Parms,
-        IntPtr UnusedResult
-    );
-
     // UObject::ProcessInternal()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessInternalDelegate(IntPtr self, IntPtr Stack, IntPtr Result);
@@ -99,7 +90,6 @@ internal static class GameFunctions
     static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
     static LoadPackageDelegate? _LoadPackage = null;
-    static ProcessEventDelegate? _ProcessEvent = null;
     static ProcessInternalDelegate? _ProcessInternal = null;
     static CallFunctionDelegate? _CallFunction = null;
     static AddObjectDelegate? _AddObject = null;
@@ -124,11 +114,6 @@ internal static class GameFunctions
     public static LoadPackageDelegate LoadPackage =>
         _LoadPackage ??= Marshal.GetDelegateForFunctionPointer<LoadPackageDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.LoadPackage)
-        );
-
-    public static ProcessEventDelegate ProcessEvent =>
-        _ProcessEvent ??= Marshal.GetDelegateForFunctionPointer<ProcessEventDelegate>(
-            MemUtil.GetIntPointer(GameInfo.FuncOffsets.ProcessEvent)
         );
 
     public static ProcessInternalDelegate ProcessInternal =>

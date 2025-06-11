@@ -5,16 +5,8 @@ using BmSDK.Engine;
 
 namespace DemoMod;
 
-public static class RGameInfoMixins
+public static class RCinematicCustomActorMixins
 {
-    // Rules:
-    // Mixin methods take the full original parameter list. If non-static, the first parameter is the original instance.
-    // Mixin methods may (or may not) call the original method by calling it on 'self'. This will result in a stack overflow,
-    // UNLESS we ignore mixins when the same method goes through CallFunction twice in a row.
-    //
-    // In case of multiple mixins on the same method, an exception should be thrown
-    // (for now - in the future, the second invocation of CallFunction can call the second mixin instead of being ignored).
-
     [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.PostBeginPlay))]
     public static void PostBeginPlay(ARCinematicCustomActor self)
     {
@@ -29,7 +21,7 @@ public class DemoMod : GameMod
 {
     public override void OnInit()
     {
-        MixinManager.RegisterMixins(typeof(RGameInfoMixins));
+        MixinManager.RegisterMixins(typeof(RCinematicCustomActorMixins));
 
         // Boost snow intensity
         var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
