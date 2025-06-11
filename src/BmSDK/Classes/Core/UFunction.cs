@@ -15,6 +15,8 @@ public partial class UFunction
         FUNC_Static = 0x2000,
     }
 
+    public bool IsStatic => FunctionFlags.HasFlag(EFunctionFlags.FUNC_Static);
+
     /// <summary>
     /// Property: FunctionFlags
     /// </summary>
@@ -31,5 +33,12 @@ public partial class UFunction
     {
         get => MarshalUtil.ToManaged<ushort>(Ptr + 112);
         set => SetPropertyValue(this, 112, value);
+    }
+
+    public IEnumerable<UProperty> EnumerateParams()
+    {
+        return EnumerateFields()
+            .OfType<UProperty>()
+            .Where(prop => prop.PropertyFlags.HasFlag(UProperty.EPropertyFlags.CPF_Parm));
     }
 }

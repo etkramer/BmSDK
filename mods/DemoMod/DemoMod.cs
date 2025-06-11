@@ -5,10 +5,24 @@ using BmSDK.Engine;
 
 namespace DemoMod;
 
+public static class RCinematicCustomActorMixins
+{
+    [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.BeginAnimControl))]
+    public static void BeginAnimControl(ARCinematicCustomActor self, UInterpGroup inInterpGroup)
+    {
+        Debug.Log($"Hello from BeginAnimControl! Self is {self}, arg 0 is {inInterpGroup}");
+
+        // Intentionally skip calling the base implementation.
+        // self.BeginAnimControl(inInterpGroup);
+    }
+}
+
 public class DemoMod : GameMod
 {
     public override void OnInit()
     {
+        MixinManager.RegisterMixins(typeof(RCinematicCustomActorMixins));
+
         // Boost snow intensity
         var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
         defaultRainComponent.ParticleCount *= 5;

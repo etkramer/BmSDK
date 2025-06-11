@@ -1,8 +1,25 @@
-﻿namespace BmSDK.Framework;
+﻿using System.Reflection;
+
+namespace BmSDK.Framework;
 
 internal static unsafe class MarshalUtil
 {
     public static readonly Dictionary<IntPtr, UObject> s_managedObjects = [];
+
+    // Temp-ish hack. Let's see about refactoring this later.
+    public static object? ToManaged(IntPtr data, Type managedType)
+    {
+        var method = Guard.NotNull(
+            typeof(MarshalUtil).GetMethod(
+                nameof(ToManaged),
+                BindingFlags.Public | BindingFlags.Static,
+                [typeof(IntPtr)]
+            )
+        );
+
+        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
+        return genericMethod.Invoke(null, [data]);
+    }
 
     public static TManaged ToManaged<TManaged>(IntPtr data) =>
         ToManaged<TManaged>(data.ToPointer());

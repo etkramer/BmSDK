@@ -14,8 +14,7 @@ static class Loader
 {
     delegate void DllMainDelegate();
 
-    static GameFunctions.ProcessEventDelegate? _ProcessEventDetourBase = null;
-    static GameFunctions.CallFunctionDelegate? _CallFunctionDetourBase = null;
+    static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -35,13 +34,9 @@ static class Loader
         ModManager.Init();
 
         // Create function detours
-        _ProcessEventDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessEventDelegate>(
-            GameInfo.FuncOffsets.ProcessEvent,
-            ProcessEventDetour
-        );
-        _CallFunctionDetourBase = DetourUtil.NewDetour<GameFunctions.CallFunctionDelegate>(
-            GameInfo.FuncOffsets.CallFunction,
-            CallFunctionDetour
+        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+            GameInfo.FuncOffsets.ProcessInternal,
+            ProcessInternalDetour
         );
         _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
@@ -57,35 +52,18 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    // Detour for UObject::CallFunction()
-    public static unsafe void CallFunctionDetour(
-        IntPtr self,
-        IntPtr Stack,
-        IntPtr Result,
-        IntPtr Function
-    )
-    {
-        // TODO: Mixins
+    static UFunction? lastFuncForMixins = null;
 
-        // Call base impl
-        _CallFunctionDetourBase!.Invoke(self, Stack, Result, Function);
-    }
-
-    // Detour for UObject::ProcessEvent()
-    public static unsafe void ProcessEventDetour(
-        IntPtr self,
-        IntPtr Function,
-        IntPtr Parms,
-        IntPtr UnusedResult
-    )
+    // Detour for UObject::ProcessInternal()
+    public static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
         RunGuarded(() =>
         {
-            IntPtr funcPtr = Function;
             IntPtr selfPtr = self;
+            FFrame* stackPtr = (FFrame*)Stack.ToPointer();
 
-            var funcObj = MarshalUtil.ToManaged<UFunction>(&funcPtr);
             var selfObj = MarshalUtil.ToManaged<UObject>(&selfPtr);
+            var funcObj = MarshalUtil.ToManaged<UFunction>(&stackPtr->Node);
 
             var funcName = funcObj.GetPathName();
             var funcNameForGameInit = "Engine.GameInfo:InitGame";
@@ -148,10 +126,46 @@ static class Loader
                     Debug.PopSender();
                 });
             }
-        });
 
-        // Call base impl
-        _ProcessEventDetourBase!.Invoke(self, Function, Parms, UnusedResult);
+            // Don't run the same mixin twice in a row - in that case, we assume the user is attempting to call the base implementation.
+            // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
+            // TODO: Instead of falling back to the base impl, we can support multiple mixins on the same function by having subsequent calls fall back to the next mixin instead (until we run out).
+            bool shouldIgnoreMixins = lastFuncForMixins == funcObj;
+            lastFuncForMixins = funcObj;
+
+            // Do we have any mixins to run?
+            if (
+                MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod)
+                && !shouldIgnoreMixins
+            )
+            {
+                // Gather (expected) managed types using the mixin impl, noting the artificial 'self' param.
+                var argTypes = mixinMethod
+                    .GetParameters()
+                    .Select(p => p.ParameterType)
+                    .Skip(funcObj.IsStatic ? 0 : 1)
+                    .ToArray();
+
+                // Marshal args, add self as first arg if needed.
+                var args = stackPtr->ParamsToManaged(argTypes).ToList();
+                if (!funcObj.IsStatic)
+                {
+                    args.Insert(0, selfObj);
+                }
+
+                var result = mixinMethod.Invoke(null, args.ToArray());
+
+                if (result != null)
+                {
+                    // TODO: Marshal result back for non-void functions.
+                }
+            }
+            else
+            {
+                // Call base impl. Mixin implementations are expected to reach this by calling "themselves" a second time.
+                _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+            }
+        });
     }
 
     // Detour for UObject::AddObject()
