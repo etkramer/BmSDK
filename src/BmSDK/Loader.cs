@@ -15,7 +15,7 @@ static class Loader
     delegate void DllMainDelegate();
 
     static GameFunctions.ProcessEventDelegate? _ProcessEventDetourBase = null;
-    static GameFunctions.CallFunctionDelegate? _CallFunctionDetourBase = null;
+    static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
@@ -39,9 +39,9 @@ static class Loader
             GameInfo.FuncOffsets.ProcessEvent,
             ProcessEventDetour
         );
-        _CallFunctionDetourBase = DetourUtil.NewDetour<GameFunctions.CallFunctionDelegate>(
-            GameInfo.FuncOffsets.CallFunction,
-            CallFunctionDetour
+        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+            GameInfo.FuncOffsets.ProcessInternal,
+            ProcessInternalDetour
         );
         _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
             GameInfo.FuncOffsets.AddObject,
@@ -57,18 +57,86 @@ static class Loader
     static bool HasGameStarted = false;
     static bool HasGameInited = false;
 
-    // Detour for UObject::CallFunction()
-    public static unsafe void CallFunctionDetour(
-        IntPtr self,
-        IntPtr Stack,
-        IntPtr Result,
-        IntPtr Function
-    )
+    static int removeme = 0;
+
+    // Detour for UObject::ProcessInternal()
+    public static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
+        RunGuarded(() =>
+        {
+            // Call base impl
+            _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+
+            IntPtr selfPtr = self;
+            FFrame* stackPtr = (FFrame*)Stack.ToPointer();
+
+            var selfObj = MarshalUtil.ToManaged<UObject>(&selfPtr);
+            var funcObj = MarshalUtil.ToManaged<UFunction>(&stackPtr->Node);
+
+            // Do we have any mixins to run?
+            if (MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod))
+            {
+                // Debug.Log("Found a mixin!");
+
+                // Marshal args, add self as first arg if needed.
+                var args = stackPtr->ParamsToManaged().ToList();
+                if (!funcObj.IsStatic)
+                {
+                    args.Insert(0, selfObj);
+                }
+
+                var result = mixinMethod.Invoke(null, args.ToArray());
+
+                if (result != null)
+                {
+                    // TODO: Marshal result back for non-void functions.
+                }
+
+                // return;
+            }
+
+            // var funcName = funcObj.GetPathName();
+            // if (funcName == "BmGame.RGameInfo:DoPostRenderLogic")
+            // {
+            //     // TEMP: Only do this once, we're just testing right now.
+            //     if (removeme++ >= 1)
+            //     {
+            //         return;
+            //     }
+
+            //     Debug.Log($"RGameInfo.DoPostRenderLogic() called!");
+
+            //     // IntPtr localsPtr = stackPtr->Locals;
+            //     // foreach (var prop in funcObj.EnumerateParams())
+            //     // {
+            //     //     var valuePtr = localsPtr + prop.Offset;
+            //     //     Debug.Log($"{prop.Name} is at {prop.Offset} (0x{valuePtr:X})");
+
+            //     //     var valueManaged = MarshalUtil.ToManaged<Engine.UCanvas>(valuePtr);
+            //     //     Debug.Log($"{prop.Name} is {valueManaged}");
+            //     // }
+
+            //     foreach (var param in stackPtr->ParamsToManaged())
+            //     {
+            //         Debug.Log($"Found param {param}");
+            //     }
+            // }
+
+            // // Call base impl
+            // _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+        });
+
         // TODO: Mixins
+        // var func = MarshalUtil.ToManaged<UFunction>(&Function);
+        // if (func.GetPathName() == "Engine.GameViewportClient:PostRender")
+        // {
+        //     Debug.Log("PostRender called!");
+
+        //     FFrame* stackPtr = (FFrame*)Stack.ToPointer();
+        // }
 
         // Call base impl
-        _CallFunctionDetourBase!.Invoke(self, Stack, Result, Function);
+        // _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
     }
 
     // Detour for UObject::ProcessEvent()

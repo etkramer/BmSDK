@@ -5,10 +5,39 @@ using BmSDK.Engine;
 
 namespace DemoMod;
 
+public static class RGameInfoMixins
+{
+    // Rules:
+    // Mixin methods take the full original parameter list. If non-static, the first parameter is the original instance.
+    // Mixin methods may (or may not) call the original method by calling it on 'self'. This will result in a stack overflow,
+    // UNLESS we ignore mixins when the same method goes through CallFunction twice in a row.
+    //
+    // In case of multiple mixins on the same method, an exception should be thrown
+    // (for now - in the future, the second invocation of CallFunction can call the second mixin instead of being ignored).
+
+    [FunctionMixin(typeof(ARCinematicCustomActor), nameof(ARCinematicCustomActor.PostBeginPlay))]
+    public static void DoPostRenderLogic(ARCinematicCustomActor self)
+    {
+        Debug.Log($"Hello from PostBeginPlay! Self is {self}");
+
+        // DrawTitleSafeArea (but inlined)
+        // {
+        //     canvas.SetDrawColor(255, 0, 255);
+        //     canvas.SetPos(0, 0);
+        //     canvas.DrawBox(0.5f, 0.5f);
+        // }
+
+        // Base implementation
+        // self.DoPostRenderLogic(canvas);
+    }
+}
+
 public class DemoMod : GameMod
 {
     public override void OnInit()
     {
+        MixinManager.RegisterMixins(typeof(RGameInfoMixins));
+
         // Boost snow intensity
         var defaultRainComponent = URRainComponent.StaticClass().DefaultObject as URRainComponent;
         defaultRainComponent.ParticleCount *= 5;
