@@ -17,12 +17,6 @@ public partial class UObject
         where T : UObject => GObjects.OfType<T>();
 
     /// <summary>
-    /// Typed wrapper around UnrealScript FindObject().
-    /// </summary>
-    public static unsafe T? FindObject<T>(FString ObjectName)
-        where T : UObject, IStaticObject => FindObject(ObjectName, T.StaticClass()) as T;
-
-    /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
     /// These are optional because the InName can contain all of the necessary information.
     /// </summary>
@@ -120,7 +114,7 @@ public partial class UObject
     /// </summary>
     public IEnumerable<UObject> EnumerateOuter()
     {
-        var outer = this.Outer;
+        var outer = Outer;
         while (outer is not null)
         {
             yield return outer;

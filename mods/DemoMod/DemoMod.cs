@@ -16,8 +16,8 @@ public static class RCinematicCustomActorMixins
         // Replace cinematic Batman (head/body)
         if (self.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
         {
-            var newHeadMesh = UObject.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
-            var newBodyMesh = UObject.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
+            var newHeadMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
+            var newBodyMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
             self.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
             self.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
             Debug.Log("Using Robin's head/body");
@@ -26,7 +26,7 @@ public static class RCinematicCustomActorMixins
         // Replace cinematic Batman (cape)
         if (self.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
         {
-            var newCapeMesh = UObject.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
+            var newCapeMesh = Game.FindObject<USkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
             self.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
             Debug.Log("Using Robin's cape");
         }
