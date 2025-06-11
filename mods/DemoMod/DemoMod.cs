@@ -12,8 +12,8 @@ public static class RCinematicCustomActorMixins
     {
         Debug.Log($"Hello from BeginAnimControl! Self is {self}, arg 0 is {inInterpGroup}");
 
-        // Intentionally skip calling the base implementation.
-        // self.BeginAnimControl(inInterpGroup);
+        // Calling the base implementation is optional.
+        self.BeginAnimControl(inInterpGroup);
     }
 }
 

@@ -135,8 +135,8 @@ static class Loader
 
             // Do we have any mixins to run?
             if (
-                MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod)
-                && !shouldIgnoreMixins
+                !shouldIgnoreMixins
+                && MixinManager.TryGetMixinMethod(selfObj, funcObj, out var mixinMethod)
             )
             {
                 // Gather (expected) managed types using the mixin impl, noting the artificial 'self' param.
