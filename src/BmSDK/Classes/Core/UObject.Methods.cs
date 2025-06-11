@@ -10,28 +10,6 @@ public partial class UObject
     private static unsafe ref TArray<UObject> GObjects =>
         ref *(TArray<UObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
-    public static unsafe UPackage? LoadPackage(string Filename) => LoadPackage(null, Filename);
-
-    public static unsafe UPackage? LoadPackage(
-        UPackage? InOuter,
-        string Filename,
-        int LoadFlags = 0
-    )
-    {
-        // Get TCHAR* from string
-        fixed (char* filenamePtr = Filename)
-        {
-            // Call native func
-            var result = GameFunctions.LoadPackage(
-                InOuter?.Ptr ?? 0,
-                (IntPtr)filenamePtr,
-                LoadFlags
-            );
-
-            return MarshalUtil.ToManaged<UPackage>(&result);
-        }
-    }
-
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>

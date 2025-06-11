@@ -28,8 +28,8 @@ public static class MixinManager
         var mixinMethods = mixinType
             .GetMethods(MixinBindingFlags)
             .Select(method =>
-                ((MethodInfo, FunctionMixinAttribute?))
-                    (method, method.GetCustomAttribute<FunctionMixinAttribute>())
+                ((MethodInfo, MixinMethodAttribute?))
+                    (method, method.GetCustomAttribute<MixinMethodAttribute>())
             )
             .Where(tuple => tuple.Item2 is not null)
             .Select(tuple => (tuple.Item1, tuple.Item2!));

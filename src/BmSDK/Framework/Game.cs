@@ -58,6 +58,29 @@ public static class Game
     }
 
     /// <summary>
+    /// Gets the global engine object.
+    /// </summary>
+    public static UGameEngine GetEngine() => Guard.NotNull(UEngine.GetEngine() as UGameEngine);
+
+    /// <summary>
+    /// Gets the global viewport client object.
+    /// </summary>
+    public static URGFxGameViewportClient GetGameViewportClient()
+    {
+        var engine = GetEngine();
+        return Guard.NotNull(engine.GameViewport as URGFxGameViewportClient);
+    }
+
+    /// <summary>
+    /// Gets the global console object.
+    /// </summary>
+    public static UConsole GetConsole()
+    {
+        var gameViewport = GetGameViewportClient();
+        return Guard.NotNull(gameViewport.ViewportConsole);
+    }
+
+    /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
     public static unsafe T? SpawnActor<T>(
@@ -113,25 +136,17 @@ public static class Game
     }
 
     /// <summary>
-    /// Gets the global engine object.
+    /// Loads a package into memory given its .upk file name.
     /// </summary>
-    public static UGameEngine GetEngine() => Guard.NotNull(UEngine.GetEngine() as UGameEngine);
-
-    /// <summary>
-    /// Gets the global viewport client object.
-    /// </summary>
-    public static URGFxGameViewportClient GetGameViewportClient()
+    public static unsafe UPackage? LoadPackage(string Filename)
     {
-        var engine = GetEngine();
-        return Guard.NotNull(engine.GameViewport as URGFxGameViewportClient);
-    }
+        // Get TCHAR* from string
+        fixed (char* filenamePtr = Filename)
+        {
+            // Call native func
+            var result = GameFunctions.LoadPackage(0, (IntPtr)filenamePtr, 0);
 
-    /// <summary>
-    /// Gets the global console object.
-    /// </summary>
-    public static UConsole GetConsole()
-    {
-        var gameViewport = GetGameViewportClient();
-        return Guard.NotNull(gameViewport.ViewportConsole);
+            return MarshalUtil.ToManaged<UPackage>(&result);
+        }
     }
 }

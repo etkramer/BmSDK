@@ -3,7 +3,7 @@ using System.Reflection;
 namespace BmSDK.Framework;
 
 [AttributeUsage(AttributeTargets.Method)]
-public class FunctionMixinAttribute(Type targetClass, string targetMethodName) : Attribute
+public class MixinMethodAttribute(Type targetClass, string targetMethodName) : Attribute
 {
     public Type TargetClass { get; } = targetClass;
 
