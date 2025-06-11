@@ -20,19 +20,19 @@ public partial class UFunction
     /// <summary>
     /// Property: FunctionFlags
     /// </summary>
-    public EFunctionFlags FunctionFlags
+    public unsafe EFunctionFlags FunctionFlags
     {
         get => MarshalUtil.ToManaged<EFunctionFlags>(Ptr + 108);
-        set => SetPropertyValue(this, 108, value);
+        set => MarshalUtil.ToUnmanaged(value, (Ptr + 108).ToPointer());
     }
 
     /// <summary>
     /// Property: iNative
     /// </summary>
-    public ushort iNative
+    public unsafe ushort iNative
     {
         get => MarshalUtil.ToManaged<ushort>(Ptr + 112);
-        set => SetPropertyValue(this, 112, value);
+        set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
     }
 
     public IEnumerable<UProperty> EnumerateParams()
