@@ -17,6 +17,7 @@ internal static class GameInfo
         public const IntPtr LoadPackage = 0x9FCA0;
 
         // UObject (local)
+        public const IntPtr ProcessEvent = 0x46A60;
         public const IntPtr ProcessInternal = 0x468A0;
         public const IntPtr CallFunction = 0x4F8A0;
         public const IntPtr AddObject = 0x8E0A0;
