@@ -33,6 +33,13 @@ static class Loader
         // Find/load mods
         ModManager.Init();
 
+        // Find/load scripts
+        if (!ScriptManager.LoadScripts())
+        {
+            // We don't have any valid scripts, just abort here.
+            return;
+        }
+
         // Create function detours
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
             GameInfo.FuncOffsets.ProcessInternal,
@@ -82,17 +89,33 @@ static class Loader
                     Debug.PopSender();
                 });
 
+                // Call OnInit() for scripts
+                ScriptManager.Scripts.ForEach(script =>
+                {
+                    Debug.PushSender(script.Name);
+                    script.OnInit();
+                    Debug.PopSender();
+                });
+
                 HasGameInited = true;
             }
 
             // Notify mods of game start
             if (!HasGameStarted && funcName == funcNameForGameStart)
             {
-                // Call OnStart() for mods
+                // Call OnEnterMenu() for mods
                 ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnEnterMenu();
+                    Debug.PopSender();
+                });
+
+                // Call OnEnterMenu() for scripts
+                ScriptManager.Scripts.ForEach(script =>
+                {
+                    Debug.PushSender(script.Name);
+                    script.OnEnterMenu();
                     Debug.PopSender();
                 });
 
@@ -102,11 +125,19 @@ static class Loader
             // Notify mods of game begin play
             if (funcName == funcNameForGameBeginPlay)
             {
-                // Call OnBeginPlay() for mods
+                // Call OnEnterGame() for mods
                 ModManager.Mods.ForEach(mod =>
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnEnterGame();
+                    Debug.PopSender();
+                });
+
+                // Call OnEnterGame() for scripts
+                ScriptManager.Scripts.ForEach(script =>
+                {
+                    Debug.PushSender(script.Name);
+                    script.OnEnterGame();
                     Debug.PopSender();
                 });
             }
@@ -115,7 +146,7 @@ static class Loader
             if (funcName == funcNameForGameTick)
             {
                 // Tick framework stuff
-                InputManager.Tick(ModManager.Mods);
+                InputManager.Tick(ModManager.Mods, ScriptManager.Scripts);
                 GameWindow.Tick();
 
                 // Call OnTick() for mods
@@ -123,6 +154,14 @@ static class Loader
                 {
                     Debug.PushSender(mod.GetType().Name);
                     mod.OnTick();
+                    Debug.PopSender();
+                });
+
+                // Call OnTick() for scripts
+                ScriptManager.Scripts.ForEach(script =>
+                {
+                    Debug.PushSender(script.Name);
+                    script.OnTick();
                     Debug.PopSender();
                 });
             }

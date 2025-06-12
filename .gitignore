@@ -22,6 +22,12 @@ mono_crash.*
 # Generated SDK files
 /src/BmSDK/Generated/*
 
+# Non-SDK game files
+/bin/*
+!bin/BmGame/
+/bin/BmGame/*
+!bin/BmGame/UserScripts/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -33,7 +39,7 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
+**/*/[Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/

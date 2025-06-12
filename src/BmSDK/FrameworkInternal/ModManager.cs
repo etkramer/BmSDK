@@ -29,6 +29,12 @@ internal static class ModManager
                 // Load mod assembly
                 var modName = Path.GetFileName(modDir);
                 var modPath = Path.Combine(modDir, $"{modName}.dll");
+                if (!File.Exists(modPath))
+                {
+                    Debug.LogWarning($"Couldn't find assembly {modName}.dll");
+                    continue;
+                }
+
                 var modAssembly = Assembly.LoadFile(modPath);
 
                 // Locate mod instance type

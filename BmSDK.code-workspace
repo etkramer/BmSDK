@@ -7,15 +7,25 @@
   ],
   "settings": {
     "files.exclude": {
-      "**/bin/": true,
+      "bin/*.*": true,
+      "bin/Binaries/": true,
+      "bin/Engine/": true,
+      "bin/Setup/": true,
+      "bin/TFCInstallerBackups/": true,
+      "bin/BmGame/Config/": true,
+      "bin/BmGame/CookedPCConsole/": true,
+      "bin/BmGame/Localization/": true,
+      "bin/BmGame/Movies/": true,
+      "bin/BmGame/MoviesStereo/": true,
+      "bin/BmGame/Splash/": true,
+      "**/*/bin/": true,
       "**/obj/": true,
       "**/.vs/": true,
       "**/*proj.user": true
     },
     "search.exclude": {
       "**/node_modules": true,
-      "**/bower_components": true,
-      "/build-old/": true
+      "**/bower_components": true
     },
     "dotnet.defaultSolution": "BmSDK.slnx",
     "C_Cpp.default.compilerPath": "cl.exe",
@@ -132,6 +142,19 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build All",
+        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
+        "args": ["-nosplash"],
+        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
+        "logging": {
+          "exceptions": false,
+          "moduleLoad": false
+        }
+      },
+      {
+        "name": "Launch SDK",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "preLaunchTask": "Build SDK",
         "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
