@@ -5,6 +5,7 @@ namespace BmSDK.Framework;
 public static class Debug
 {
     private static readonly Stack<string> s_senderStack = new();
+    private static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
 
     public static void Log(object? msg, bool skipSender = false)
     {
@@ -13,14 +14,16 @@ public static class Debug
 
     public static void LogWarning(object msg, bool skipSender = false)
     {
-        // TODO: Colorize
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Log(msg, skipSender);
+        Console.ForegroundColor = s_defaultColor;
     }
 
     public static void LogError(object msg, bool skipSender = false)
     {
-        // TODO: Colorize
+        Console.ForegroundColor = ConsoleColor.Red;
         Log(msg, skipSender);
+        Console.ForegroundColor = s_defaultColor;
     }
 
     private static void LogInternal(string msg, bool skipSender = false)
