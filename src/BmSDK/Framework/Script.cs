@@ -8,7 +8,7 @@ public abstract class Script
     /// Script entry point, called once when the engine first becomes ready.
     /// Should be used to perform basic setup that doesn't need access to the game world.
     /// </summary>
-    public virtual void Main() { }
+    public abstract void Main();
 
     /// <summary>
     /// Called when we first load into the main menu, after all actors have begun play.
