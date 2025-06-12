@@ -1,0 +1,35 @@
+using System.Text.Json;
+
+namespace BmSDK.Framework;
+
+public static class CommonUtils
+{
+    static readonly JsonSerializerOptions s_opts = new()
+    {
+        WriteIndented = true,
+        IncludeFields = false,
+    };
+
+    public static string ToJson<T>(this T obj)
+    {
+        return JsonSerializer.Serialize(obj, s_opts);
+    }
+
+    public static string Join<T>(this T items, string separator = ", ")
+        where T : IEnumerable<T>
+    {
+        return string.Join(separator, items.Select(item => item.ToString()));
+    }
+
+    public static string FormatPlural(int count, string singular, string? plural = null)
+    {
+        return count == 1 ? singular : (plural ?? $"{singular}s");
+    }
+
+    public static string FormatDuration(this TimeSpan span)
+    {
+        return span.TotalSeconds < 1
+            ? $"{span.TotalMilliseconds:0}ms"
+            : $"{span.TotalSeconds:0.##}s";
+    }
+}

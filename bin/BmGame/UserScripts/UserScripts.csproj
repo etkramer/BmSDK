@@ -10,7 +10,6 @@
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <OutputPath>$(SolutionDir)bin\Binaries\Win32\mods\DemoMod\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\BmSDK\BmSDK.csproj" Private="false" ExcludeAssets="runtime;native" />
+    <Reference Include="BmSDK" HintPath="..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native"/>
   </ItemGroup>
 
 </Project>

@@ -1,51 +1,9 @@
 ﻿using BmSDK;
 using BmSDK.BmGame;
-using BmSDK.BmScript;
 using BmSDK.Engine;
 
-namespace DemoMod;
-
-public static class RCinematicCustomActorMixins
-{
-    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
-    public static void PostBeginPlay(RCinematicCustomActor self)
-    {
-        // Load package with Robin's meshes
-        Game.LoadPackage("Playable_Robin_Std_SF");
-
-        // Replace cinematic Batman (head/body)
-        if (self.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
-        {
-            var newHeadMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
-            var newBodyMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
-            self.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
-            self.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
-            Debug.Log("Using Robin's head/body");
-        }
-
-        // Replace cinematic Batman (cape)
-        if (self.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
-        {
-            var newCapeMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
-            self.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
-            Debug.Log("Using Robin's cape");
-        }
-
-        // Calling the base implementation is optional.
-        self.PostBeginPlay();
-    }
-
-    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
-    public static void BeginAnimControl(RCinematicCustomActor self, InterpGroup inInterpGroup)
-    {
-        Debug.Log($"Hello from BeginAnimControl!");
-
-        // Calling the base implementation is optional.
-        self.BeginAnimControl(inInterpGroup);
-    }
-}
-
-public class DemoMod : GameMod
+[Script]
+public class DemoScript : Script
 {
     public override void OnInit()
     {
@@ -106,7 +64,7 @@ public class DemoMod : GameMod
         var playerPawn = Game.GetPlayerPawn();
 
         // Load packages we need for RPawnVillainNinja, RCharacter_Strange
-        Game.LoadPackage("Under_B2_Ch4");
+        /*Game.LoadPackage("Under_B2_Ch4");
         Game.LoadPackage("Under_B6_Ch7");
 
         // Spawn in a pawn
@@ -118,7 +76,7 @@ public class DemoMod : GameMod
             playerPawn.Rotation
         );
 
-        Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");
+        Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");*/
     }
 
     private static void DebugLoadGame()
@@ -142,5 +100,45 @@ public class DemoMod : GameMod
         gameViewport.CreatePlayer(1, out _, true);
 
         // Debug.Log(gameViewport.ShouldForceFullscreenViewport());
+    }
+}
+
+public static class RCinematicCustomActorMixins
+{
+    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
+    public static void PostBeginPlay(RCinematicCustomActor self)
+    {
+        // Load package with Robin's meshes
+        Game.LoadPackage("Playable_Robin_Std_SF");
+
+        // Replace cinematic Batman (head/body)
+        if (self.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
+        {
+            var newHeadMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
+            var newBodyMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
+            self.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
+            self.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
+            Debug.Log("Using Robin's head/body");
+        }
+
+        // Replace cinematic Batman (cape)
+        if (self.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
+        {
+            var newCapeMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
+            self.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
+            Debug.Log("Using Robin's cape");
+        }
+
+        // Calling the base implementation is optional.
+        self.PostBeginPlay();
+    }
+
+    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
+    public static void BeginAnimControl(RCinematicCustomActor self, InterpGroup inInterpGroup)
+    {
+        Debug.Log($"Hello from BeginAnimControl!");
+
+        // Calling the base implementation is optional.
+        self.BeginAnimControl(inInterpGroup);
     }
 }

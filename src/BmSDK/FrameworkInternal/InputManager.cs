@@ -5,18 +5,18 @@ internal static class InputManager
     static readonly bool[] s_keyStates = new bool[255];
     static readonly bool[] s_keyStatesPrev = new bool[255];
 
-    public static void Tick(IEnumerable<GameMod> mods)
+    public static void Tick(IEnumerable<Script> scripts)
     {
         // Check for any new key presses.
         for (var i = 0; i < 255; i++)
         {
             if (s_keyStates[i] && !s_keyStatesPrev[i])
             {
-                // Let mods know about the key press.
-                foreach (var mod in mods)
+                // Let scripts know about the key press.
+                foreach (var script in scripts)
                 {
-                    Debug.PushSender(mod.GetType().Name);
-                    mod.OnKeyDown((Keys)i);
+                    Debug.PushSender(script.Name);
+                    script.OnKeyDown((Keys)i);
                     Debug.PopSender();
                 }
             }

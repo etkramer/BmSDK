@@ -1,8 +1,7 @@
 ﻿using BmSDK;
 
-namespace LoadHelperMod;
-
-public class LoadHelperMod : GameMod
+[Script]
+public class LoadHelperScript : Script
 {
     public override void OnInit()
     {

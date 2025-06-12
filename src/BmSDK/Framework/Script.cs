@@ -1,7 +1,9 @@
 namespace BmSDK.Framework;
 
-public abstract class GameMod
+public abstract class Script
 {
+    public string Name { get; set; } = "Script";
+
     /// <summary>
     /// Called once when the engine first becomes ready. Should be used to perform basic setup
     /// that doesn't need access to the game world.

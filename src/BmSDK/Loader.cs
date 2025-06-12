@@ -30,8 +30,12 @@ static class Loader
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
-        // Find/load mods
-        ModManager.Init();
+        // Find/load scripts
+        if (!ScriptManager.LoadScripts())
+        {
+            // We don't have any valid scripts, just abort here.
+            return;
+        }
 
         // Create function detours
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
@@ -71,58 +75,58 @@ static class Loader
             var funcNameForGameTick = "BmGame.RGameInfo:Tick";
             var funcNameForGameBeginPlay = "BmGame.RPlayerController:ClientReady";
 
-            // Notify mods of game init
+            // Notify scripts of game init
             if (!HasGameInited && funcName == funcNameForGameInit)
             {
-                // Call OnInit() for mods
-                ModManager.Mods.ForEach(mod =>
+                // Call OnInit() for scripts
+                ScriptManager.Scripts.ForEach(script =>
                 {
-                    Debug.PushSender(mod.GetType().Name);
-                    mod.OnInit();
+                    Debug.PushSender(script.Name);
+                    script.OnInit();
                     Debug.PopSender();
                 });
 
                 HasGameInited = true;
             }
 
-            // Notify mods of game start
+            // Notify scripts of game start
             if (!HasGameStarted && funcName == funcNameForGameStart)
             {
-                // Call OnStart() for mods
-                ModManager.Mods.ForEach(mod =>
+                // Call OnEnterMenu() for scripts
+                ScriptManager.Scripts.ForEach(script =>
                 {
-                    Debug.PushSender(mod.GetType().Name);
-                    mod.OnEnterMenu();
+                    Debug.PushSender(script.Name);
+                    script.OnEnterMenu();
                     Debug.PopSender();
                 });
 
                 HasGameStarted = true;
             }
 
-            // Notify mods of game begin play
+            // Notify scripts of game begin play
             if (funcName == funcNameForGameBeginPlay)
             {
-                // Call OnBeginPlay() for mods
-                ModManager.Mods.ForEach(mod =>
+                // Call OnEnterGame() for scripts
+                ScriptManager.Scripts.ForEach(script =>
                 {
-                    Debug.PushSender(mod.GetType().Name);
-                    mod.OnEnterGame();
+                    Debug.PushSender(script.Name);
+                    script.OnEnterGame();
                     Debug.PopSender();
                 });
             }
 
-            // Notify mods of game tick
+            // Notify scripts of game tick
             if (funcName == funcNameForGameTick)
             {
                 // Tick framework stuff
-                InputManager.Tick(ModManager.Mods);
+                InputManager.Tick(ScriptManager.Scripts);
                 GameWindow.Tick();
 
-                // Call OnTick() for mods
-                ModManager.Mods.ForEach(mod =>
+                // Call OnTick() for scripts
+                ScriptManager.Scripts.ForEach(script =>
                 {
-                    Debug.PushSender(mod.GetType().Name);
-                    mod.OnTick();
+                    Debug.PushSender(script.Name);
+                    script.OnTick();
                     Debug.PopSender();
                 });
             }
