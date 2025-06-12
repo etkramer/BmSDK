@@ -44,7 +44,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 	{
 		out << _class->SuperStruct->GetPathNameManaged() << ", ";
 	}
-	out << "BmSDK.IStaticObject" << endl;
+	out << "BmSDK.IGameObject" << endl;
 
 	// Print class body
 	Printer::Indent(out) << "{" << endl;

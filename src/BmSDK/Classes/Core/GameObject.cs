@@ -1,6 +1,6 @@
 namespace BmSDK;
 
-public interface IStaticObject
+public interface IGameObject
 {
     public static abstract Class StaticClass();
 }

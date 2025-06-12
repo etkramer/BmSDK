@@ -84,8 +84,7 @@ public static partial class Game
     /// Finds and returns the object with the given path. Will be null if the object hasn't been loaded yet (see <see cref="LoadPackage"/> ).
     /// </summary>
     public static unsafe T? FindObject<T>(string pathName)
-        where T : GameObject, IStaticObject =>
-        GameObject.FindObject(pathName, T.StaticClass()) as T;
+        where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
     /// Spawns a new actor of the given type.
@@ -96,7 +95,7 @@ public static partial class Game
         GameObject.FRotator Rotation,
         GameObject? Owner = null
     )
-        where T : Actor, IStaticObject
+        where T : Actor, IGameObject
     {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
@@ -126,8 +125,8 @@ public static partial class Game
         GameObject.FVector Position,
         GameObject.FRotator Rotation
     )
-        where TPawn : RBMPawnAI, IStaticObject
-        where TCharacter : RCharacter, IStaticObject
+        where TPawn : RBMPawnAI, IGameObject
+        where TCharacter : RCharacter, IGameObject
     {
         return (TPawn)
             RCharacter.StaticCreatePawn(

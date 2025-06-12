@@ -79,7 +79,7 @@ public partial class GameObject
         EObjectFlags SetFlags = 0,
         GameObject? Template = null
     )
-        where T : GameObject, IStaticObject =>
+        where T : GameObject, IGameObject =>
         (T)ConstructObject(T.StaticClass(), Outer, Name, SetFlags, Template);
 
     internal static unsafe IntPtr ConstructObjectInternal(

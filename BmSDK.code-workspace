@@ -104,19 +104,10 @@
         "command": "${workspaceFolder}/src/MSBuild.cmd",
         "args": [
           "BmSDK.slnx",
-          "/t:BmSDK_Generator",
           "/t:BmSDK",
-          "/t:BmSDK_Host"
+          "/t:BmSDK_Host",
+          "/t:BmSDK_Generator"
         ],
-        "problemMatcher": "$msCompile",
-        "presentation": { "echo": false, "clear": true },
-        "group": { "kind": "build", "isDefault": true }
-      },
-      {
-        "label": "Build SDK",
-        "type": "process",
-        "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.slnx", "/t:BmSDK", "/t:BmSDK_Host"],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },
         "group": { "kind": "build", "isDefault": true }
@@ -140,19 +131,6 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build All",
-        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
-        "args": ["-nosplash"],
-        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
-        "logging": {
-          "exceptions": false,
-          "moduleLoad": false
-        }
-      },
-      {
-        "name": "Launch SDK",
-        "type": "cppvsdbg",
-        "request": "launch",
-        "preLaunchTask": "Build SDK",
         "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
