@@ -8,13 +8,6 @@ public class DemoScript : Script
 {
     public override void OnInit()
     {
-        // Redirect RCinematicCustomActor.PostBeginPlay()
-        Game.SetFunctionRedirect(
-            typeof(RCinematicCustomActor),
-            "PostBeginPlay",
-            RCinematicCustomActorRedirects.PostBeginPlay
-        );
-
         // Redirect RCinematicCustomActor.BeginAnimControl()
         Game.SetFunctionRedirect(
             typeof(RCinematicCustomActor),
@@ -26,6 +19,13 @@ public class DemoScript : Script
                 // Calling the base implementation is optional.
                 self.BeginAnimControl(inInterpGroup);
             }
+        );
+
+        // Redirect RCinematicCustomActor.PostBeginPlay()
+        Game.SetFunctionRedirect(
+            typeof(RCinematicCustomActor),
+            "PostBeginPlay",
+            CustomPostBeginPlay
         );
 
         // Boost snow intensity
@@ -117,14 +117,9 @@ public class DemoScript : Script
         var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
-
-        // Debug.Log(gameViewport.ShouldForceFullscreenViewport());
     }
-}
 
-static class RCinematicCustomActorRedirects
-{
-    public static void PostBeginPlay(RCinematicCustomActor self)
+    static void CustomPostBeginPlay(RCinematicCustomActor self)
     {
         // Load package with Robin's meshes
         Game.LoadPackage("Playable_Robin_Std_SF");

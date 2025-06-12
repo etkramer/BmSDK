@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace BmSDK.Framework;
 
@@ -7,38 +8,49 @@ public static class Debug
     private static readonly Stack<string> s_senderStack = new();
     private static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
 
-    public static void Log(object? msg, bool skipSender = false)
+    public static void Log(
+        object? msg,
+        bool skipSender = false,
+        [CallerFilePath] string? callerFilePath = null
+    )
     {
-        LogInternal(msg?.ToString() ?? "null", skipSender);
-    }
+        var msgText = msg?.ToString() ?? "null";
 
-    public static void LogWarning(object msg, bool skipSender = false)
-    {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Log(msg, skipSender);
-        Console.ForegroundColor = s_defaultColor;
-    }
-
-    public static void LogError(object msg, bool skipSender = false)
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Log(msg, skipSender);
-        Console.ForegroundColor = s_defaultColor;
-    }
-
-    private static void LogInternal(string msg, bool skipSender = false)
-    {
         if (skipSender)
         {
             Trace.WriteLine(msg);
             return;
         }
 
-        // Get sender
-        s_senderStack.TryPeek(out var sender);
-        sender ??= "UNKNOWN";
+        // Get sender, else fall back to the source file name.
+        if (!s_senderStack.TryPeek(out var sender))
+        {
+            sender = callerFilePath is null ? "UNKNOWN" : Path.GetFileName(callerFilePath);
+        }
 
-        Trace.WriteLine($"{sender}: {msg}");
+        Trace.WriteLine($"{sender}: {msgText}");
+    }
+
+    public static void LogWarning(
+        object msg,
+        bool skipSender = false,
+        [CallerFilePath] string? callerFilePath = null
+    )
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Log(msg, skipSender, callerFilePath);
+        Console.ForegroundColor = s_defaultColor;
+    }
+
+    public static void LogError(
+        object msg,
+        bool skipSender = false,
+        [CallerFilePath] string? callerFilePath = null
+    )
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Log(msg, skipSender, callerFilePath);
+        Console.ForegroundColor = s_defaultColor;
     }
 
     internal static void PushSender(string sender)

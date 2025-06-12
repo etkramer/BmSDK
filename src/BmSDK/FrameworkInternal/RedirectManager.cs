@@ -52,8 +52,6 @@ public static class RedirectManager
             throw new InvalidOperationException($"{targetFuncPath} has already been redirected!");
         }
 
-        Debug.Log($"Redirecting {targetFuncPath}");
-
         // Get the delegate's MethodInfo.
         MethodInfo newMethodInfo;
         try
