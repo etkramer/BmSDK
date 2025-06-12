@@ -3,7 +3,7 @@
 [Script]
 public class LoadHelperScript : Script
 {
-    public override void OnInit()
+    public override void Main()
     {
         // Load packages containing classes we'll want at generation time
         Game.LoadPackage("Playable_Batman_SF");

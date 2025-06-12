@@ -5,10 +5,10 @@ public abstract class Script
     public string Name { get; set; } = "Script";
 
     /// <summary>
-    /// Called once when the engine first becomes ready. Should be used to perform basic setup
-    /// that doesn't need access to the game world.
+    /// Script entry point, called once when the engine first becomes ready.
+    /// Should be used to perform basic setup that doesn't need access to the game world.
     /// </summary>
-    public virtual void OnInit() { }
+    public virtual void Main() { }
 
     /// <summary>
     /// Called when we first load into the main menu, after all actors have begun play.

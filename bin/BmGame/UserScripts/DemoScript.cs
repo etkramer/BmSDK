@@ -6,7 +6,7 @@ using BmSDK.Engine;
 [Script]
 public class DemoScript : Script
 {
-    public override void OnInit()
+    public override void Main()
     {
         // Redirect RCinematicCustomActor.BeginAnimControl()
         Game.SetFunctionRedirect(

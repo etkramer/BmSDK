@@ -42,13 +42,21 @@ internal static class ScriptManager
             .Select(file => CSharpSyntaxTree.ParseText(File.ReadAllText(file), parseOptions, file))
             .ToList();
 
-        // Parse generated generated sources (for global usings, etc.)
+        // Parse generated sources (for global usings, etc.)
         {
             syntaxTrees.Insert(
                 0,
                 CSharpSyntaxTree.ParseText(
                     """
-                    global using BmSDK.Framework;
+                    global using global::System;
+                    global using global::System.Collections.Generic;
+                    global using global::System.IO;
+                    global using global::System.Linq;
+                    global using global::System.Net.Http;
+                    global using global::System.Threading;
+                    global using global::System.Threading.Tasks;
+
+                    global using global::BmSDK.Framework;
                     """,
                     parseOptions,
                     "UserScripts.GlobalUsings.g.cs"

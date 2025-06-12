@@ -78,11 +78,11 @@ static class Loader
             // Notify scripts of game init
             if (!HasGameInited && funcName == funcNameForGameInit)
             {
-                // Call OnInit() for scripts
+                // Call Main() for scripts
                 ScriptManager.Scripts.ForEach(script =>
                 {
                     Debug.PushSender(script.Name);
-                    script.OnInit();
+                    script.Main();
                     Debug.PopSender();
                 });
 
