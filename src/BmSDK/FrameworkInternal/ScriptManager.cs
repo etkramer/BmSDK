@@ -16,8 +16,9 @@ internal static class ScriptManager
 
     public static bool LoadScripts()
     {
-        var baseDir = @"I:\BmSDK\bin\";
-        var scriptDir = @"I:\BmSDK\bin\BmGame\UserScripts\";
+        // Find directories (note we're relative to the host asi)
+        var baseDir = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, ".."));
+        var scriptDir = Path.Combine(baseDir, "..\\..\\BmGame\\UserScripts\\");
 
         // Read C# source files from disk
         var sourceFiles = Directory
@@ -63,6 +64,13 @@ internal static class ScriptManager
             // BmSDK.dll
             MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
         ];
+
+        // Set custom AssemblyResolve so we don't try to load things we already have loaded.
+        AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
+            AppDomain
+                .CurrentDomain.GetAssemblies()
+                .ToList()
+                .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
 
         var watch = Stopwatch.StartNew();
         Debug.Log(

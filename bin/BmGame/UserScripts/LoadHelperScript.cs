@@ -1,6 +1,6 @@
 ﻿using BmSDK;
 
-[Script("Load Helper")]
+[Script]
 public class LoadHelperScript : Script
 {
     public override void OnInit()

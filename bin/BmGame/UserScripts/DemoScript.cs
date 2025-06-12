@@ -2,7 +2,7 @@
 using BmSDK.BmGame;
 using BmSDK.Engine;
 
-[Script("Demo Script")]
+[Script]
 public class DemoScript : Script
 {
     public override void OnInit()
