@@ -21,12 +21,7 @@
   </ItemGroup>
    
   <ItemGroup>
-    <Compile Include="..\Scripts\**\*.cs">
-    </Compile>
+    <Compile Include="..\Scripts\**\*.cs"/>
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <Folder Include="..\Scripts" />
-  </ItemGroup>-->
 
 </Project>
