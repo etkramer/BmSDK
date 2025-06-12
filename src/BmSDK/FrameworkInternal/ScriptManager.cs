@@ -18,7 +18,7 @@ internal static class ScriptManager
     {
         // Find directories (note we're relative to the host asi)
         var baseDir = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, ".."));
-        var scriptDir = Path.Combine(baseDir, "..\\..\\BmGame\\UserScripts\\");
+        var scriptDir = Path.Combine(baseDir, "..\\..\\BmGame\\Scripts\\");
 
         // Read C# source files from disk
         var sourceFiles = Directory
@@ -59,7 +59,7 @@ internal static class ScriptManager
                     global using global::BmSDK.Framework;
                     """,
                     parseOptions,
-                    "UserScripts.GlobalUsings.g.cs"
+                    "Scripts.GlobalUsings.g.cs"
                 )
             );
         }
@@ -89,7 +89,7 @@ internal static class ScriptManager
         {
             // Create compilation from parsed source.
             var compilation = CSharpCompilation
-                .Create("UserScripts.dll")
+                .Create("Scripts.dll")
                 .WithOptions(
                     new CSharpCompilationOptions(
                         OutputKind.DynamicallyLinkedLibrary,

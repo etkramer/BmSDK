@@ -2,7 +2,9 @@
   <Configurations>
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="bin/BmGame/UserScripts/UserScripts.csproj" />
+  <Project Path="bin/BmGame/ScriptsDev/ScriptsDev.csproj" >
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
   <Project Path="src/BmSDK.Generator/BmSDK.Generator.vcxproj" Id="aa5554d7-fd14-4ade-b76b-c56e897ec16b" />
   <Project Path="src/BmSDK.Host/BmSDK.Host.vcxproj" Id="bca40631-3e36-4227-a7d2-7cb604e26aa0" />
   <Project Path="src/BmSDK/BmSDK.csproj" />

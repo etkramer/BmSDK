@@ -1,6 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="UserScripts.csproj" />
-</Solution>

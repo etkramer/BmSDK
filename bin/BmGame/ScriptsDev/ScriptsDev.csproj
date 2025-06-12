@@ -17,7 +17,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="BmSDK" HintPath="..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native"/>
+    <Reference Include="BmSDK" HintPath="..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native" />
   </ItemGroup>
+   
+  <ItemGroup>
+    <Compile Include="..\Scripts\**\*.cs">
+    </Compile>
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Folder Include="..\Scripts" />
+  </ItemGroup>-->
 
 </Project>

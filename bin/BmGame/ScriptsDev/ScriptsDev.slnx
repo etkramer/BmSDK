@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ScriptsDev.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+</Solution>
