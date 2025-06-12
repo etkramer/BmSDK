@@ -17,8 +17,8 @@ internal static class ScriptManager
     public static bool LoadScripts()
     {
         // Find directories (note we're relative to the host asi)
-        var baseDir = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, ".."));
-        var scriptDir = Path.Combine(baseDir, "..\\..\\BmGame\\Scripts\\");
+        var baseDir = FileUtils.GetBasePath();
+        var scriptDir = Path.Combine(baseDir, "BmGame\\Scripts\\");
 
         // Read C# source files from disk
         var sourceFiles = Directory

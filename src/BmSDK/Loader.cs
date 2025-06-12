@@ -27,6 +27,16 @@ static class Loader
 
     public static void DllMain()
     {
+        // Environment.CurrentDirectory gets unreliable once we start
+        // running code in detours, so let's store it early.
+        FileUtils.Init();
+
+        // Disable the generator immediately (if present) until everything is properly loaded.
+        if (GeneratorBridge.IsGeneratorPresent)
+        {
+            GeneratorBridge.DisableGenerator();
+        }
+
         // Perform static init (before engine load)
         StaticInit.StaticInitClasses();
 
@@ -51,6 +61,35 @@ static class Loader
                 GameInfo.FuncOffsets.ConditionalDestroy,
                 ConditionalDestroyDetour
             );
+    }
+
+    private static void OnGameInit()
+    {
+        // Do we have the generator present?
+        if (GeneratorBridge.IsGeneratorPresent)
+        {
+            // Load packages containing classes we'll want at generation time.
+            Game.LoadPackage("Playable_Batman_SF");
+            Game.LoadPackage("Playable_Robin_SF");
+            Game.LoadPackage("FunFair");
+            Game.LoadPackage("Under_B6_Ch7");
+            Game.LoadPackage("Under_S3_Ch4");
+            Game.LoadPackage("Under_S2_Ch8");
+            Game.LoadPackage("BaneSS_B1");
+            Game.LoadPackage("GCPD_A1_Ch5");
+            Game.LoadPackage("Church_B1_Ch3456789");
+
+            // Reenable the generator now that we're ready.
+            GeneratorBridge.EnableGenerator();
+        }
+
+        // Call Main() for scripts
+        ScriptManager.Scripts.ForEach(script =>
+        {
+            Debug.PushSender(script.Name);
+            script.Main();
+            Debug.PopSender();
+        });
     }
 
     static bool HasGameStarted = false;
@@ -78,14 +117,7 @@ static class Loader
             // Notify scripts of game init
             if (!HasGameInited && funcName == funcNameForGameInit)
             {
-                // Call Main() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.Main();
-                    Debug.PopSender();
-                });
-
+                OnGameInit();
                 HasGameInited = true;
             }
 
