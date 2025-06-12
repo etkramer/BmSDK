@@ -8,6 +8,16 @@ public class DemoScript : Script
 {
     public override void Main()
     {
+        // Boost snow intensity
+        var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
+        defaultRainComponent.ParticleCount *= 5;
+
+        // Set max players (default and current/frontend)
+        foreach (var gameInfo in GameObject.FindObjectsSlow<RGameInfo>())
+        {
+            gameInfo.MaxPlayers = 4;
+        }
+
         // Redirect RCinematicCustomActor.BeginAnimControl()
         Game.SetFunctionRedirect(
             typeof(RCinematicCustomActor),
@@ -27,16 +37,6 @@ public class DemoScript : Script
             "PostBeginPlay",
             CustomPostBeginPlay
         );
-
-        // Boost snow intensity
-        var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
-        defaultRainComponent.ParticleCount *= 5;
-
-        // Set max players (default and current/frontend)
-        foreach (var gameInfo in GameObject.FindObjectsSlow<RGameInfo>())
-        {
-            gameInfo.MaxPlayers = 4;
-        }
     }
 
     public override void OnEnterMenu()

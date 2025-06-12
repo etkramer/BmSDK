@@ -80,6 +80,7 @@ internal static class ScriptManager
                 .ToList()
                 .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
 
+        // TODO: Perform compilation in another thread.
         var watch = Stopwatch.StartNew();
         Debug.Log(
             $"Compiling {sourceFiles.Count} {CommonUtils.FormatPlural(sourceFiles.Count, "script")}"
