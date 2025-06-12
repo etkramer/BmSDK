@@ -1,5 +1,6 @@
 ﻿using BmSDK;
 using BmSDK.BmGame;
+using BmSDK.BmScript;
 using BmSDK.Engine;
 
 [Script]
@@ -7,7 +8,25 @@ public class DemoScript : Script
 {
     public override void OnInit()
     {
-        MixinManager.RegisterMixins(typeof(RCinematicCustomActorMixins));
+        // Redirect RCinematicCustomActor.PostBeginPlay()
+        Game.SetFunctionRedirect(
+            typeof(RCinematicCustomActor),
+            "PostBeginPlay",
+            RCinematicCustomActorRedirects.PostBeginPlay
+        );
+
+        // Redirect RCinematicCustomActor.BeginAnimControl()
+        Game.SetFunctionRedirect(
+            typeof(RCinematicCustomActor),
+            "BeginAnimControl",
+            (RCinematicCustomActor self, InterpGroup inInterpGroup) =>
+            {
+                Debug.Log($"Hello from BeginAnimControl!");
+
+                // Calling the base implementation is optional.
+                self.BeginAnimControl(inInterpGroup);
+            }
+        );
 
         // Boost snow intensity
         var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
@@ -64,7 +83,7 @@ public class DemoScript : Script
         var playerPawn = Game.GetPlayerPawn();
 
         // Load packages we need for RPawnVillainNinja, RCharacter_Strange
-        /*Game.LoadPackage("Under_B2_Ch4");
+        Game.LoadPackage("Under_B2_Ch4");
         Game.LoadPackage("Under_B6_Ch7");
 
         // Spawn in a pawn
@@ -76,7 +95,7 @@ public class DemoScript : Script
             playerPawn.Rotation
         );
 
-        Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");*/
+        Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");
     }
 
     private static void DebugLoadGame()
@@ -103,9 +122,8 @@ public class DemoScript : Script
     }
 }
 
-public static class RCinematicCustomActorMixins
+static class RCinematicCustomActorRedirects
 {
-    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
     public static void PostBeginPlay(RCinematicCustomActor self)
     {
         // Load package with Robin's meshes
@@ -131,14 +149,5 @@ public static class RCinematicCustomActorMixins
 
         // Calling the base implementation is optional.
         self.PostBeginPlay();
-    }
-
-    [MixinMethod(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
-    public static void BeginAnimControl(RCinematicCustomActor self, InterpGroup inInterpGroup)
-    {
-        Debug.Log($"Hello from BeginAnimControl!");
-
-        // Calling the base implementation is optional.
-        self.BeginAnimControl(inInterpGroup);
     }
 }

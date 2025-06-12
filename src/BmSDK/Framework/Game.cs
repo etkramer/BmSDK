@@ -3,7 +3,7 @@ using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-public static class Game
+public static partial class Game
 {
     /// <summary>
     /// Gets the world info object for the currently-loaded world.
@@ -156,4 +156,23 @@ public static class Game
             return MarshalUtil.ToManaged<Package>(&result);
         }
     }
+
+    /// <summary>
+    /// "Sets" an UnrealScript function to run your own C# code instead of the original.
+    /// </summary>
+    public static void SetFunctionRedirect(
+        Type targetClass,
+        string targetMethodName,
+        Delegate newDelegate
+    ) =>
+        RedirectManager.RegisterRedirector(
+            GameObject.StaticFindObjectChecked<Class>(
+                null,
+                null,
+                StaticInit.GetClassPathForManagedType(targetClass),
+                false
+            ),
+            targetMethodName,
+            newDelegate
+        );
 }

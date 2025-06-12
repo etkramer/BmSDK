@@ -106,9 +106,7 @@
           "BmSDK.slnx",
           "/t:BmSDK_Generator",
           "/t:BmSDK",
-          "/t:BmSDK_Host",
-          "/t:LoadHelperMod",
-          "/t:DemoMod"
+          "/t:BmSDK_Host"
         ],
         "problemMatcher": "$msCompile",
         "presentation": { "echo": false, "clear": true },

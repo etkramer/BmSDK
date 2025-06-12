@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Text;
 using System.Text.Json;
 
 namespace BmSDK.Framework;
@@ -15,10 +17,20 @@ public static class CommonUtils
         return JsonSerializer.Serialize(obj, s_opts);
     }
 
-    public static string Join<T>(this T items, string separator = ", ")
-        where T : IEnumerable<T>
+    public static string Join(this IEnumerable items, string separator = ", ")
     {
-        return string.Join(separator, items.Select(item => item.ToString()));
+        var sb = new StringBuilder();
+        foreach (var item in items)
+        {
+            if (sb.Length > 0)
+            {
+                sb.Append(separator);
+            }
+
+            sb.Append(item?.ToString());
+        }
+
+        return sb.ToString();
     }
 
     public static string FormatPlural(int count, string singular, string? plural = null)
