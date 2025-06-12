@@ -21,7 +21,7 @@
   </ItemGroup>
    
   <ItemGroup>
-    <Compile Include="..\Scripts\**\*.cs"/>
+    <Compile Include="..\Scripts\**\*.cs" LinkBase="Scripts"/>
   </ItemGroup>
 
 </Project>
