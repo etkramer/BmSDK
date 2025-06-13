@@ -165,12 +165,7 @@ public static partial class Game
         Delegate newDelegate
     ) =>
         RedirectManager.RegisterRedirector(
-            GameObject.StaticFindObjectChecked<Class>(
-                null,
-                null,
-                StaticInit.GetClassPathForManagedType(targetClass),
-                false
-            ),
+            Class.FindByManagedType(targetClass),
             targetMethodName,
             newDelegate
         );
