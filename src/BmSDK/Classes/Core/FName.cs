@@ -12,19 +12,26 @@ public struct FName
     /// <summary>
     /// Creates a new FName with the given index.
     /// </summary>
-    public unsafe FName(int Index)
+    public unsafe FName(int index)
     {
-        this.Index = Index;
+        Index = index;
         Number = 0;
     }
 
     /// <summary>
     /// Creates a new FName for the given string, reusing existing names where possible.
     /// </summary>
-    public unsafe FName(string Name)
+    public unsafe FName(string? name)
     {
+        if (name is null)
+        {
+            Index = None.Index;
+            Number = None.Number;
+            return;
+        }
+
         // Get TCHAR* from string
-        fixed (char* namePtr = Name)
+        fixed (char* namePtr = name)
         fixed (FName* thisPtr = &this)
         {
             // Call native func
@@ -32,7 +39,7 @@ public struct FName
         }
     }
 
-    public static implicit operator FName(string str) => new(str);
+    public static implicit operator FName(string? str) => new(str);
 
     public static implicit operator string(FName name) => name.ToString();
 

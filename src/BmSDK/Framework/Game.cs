@@ -26,7 +26,10 @@ public static partial class Game
     public static Pawn GetPlayerPawn(int controllerId = 0)
     {
         var playerController = GetPlayerController(controllerId);
-        return Guard.NotNull(playerController.Pawn, "Controller is not possessing a pawn.");
+        return Guard.NotNull(
+            (RPawnPlayer)playerController.Pawn,
+            "Controller is not possessing a pawn."
+        );
     }
 
     /// <summary>
@@ -91,10 +94,9 @@ public static partial class Game
     /// Spawns a new actor of the given type.
     /// </summary>
     public static unsafe T? SpawnActor<T>(
-        FName InName,
-        GameObject.FVector Position,
-        GameObject.FRotator Rotation,
-        GameObject? Owner = null
+        GameObject.FVector position = default,
+        GameObject.FRotator rotation = default,
+        GameObject? owner = null
     )
         where T : Actor, IGameObject
     {
@@ -105,13 +107,13 @@ public static partial class Game
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
             T.StaticClass().Ptr,
-            InName,
-            (IntPtr)(&Position),
-            (IntPtr)(&Rotation),
+            FName.None,
+            (IntPtr)(&position),
+            (IntPtr)(&rotation),
             0,
             1,
             1,
-            Owner?.Ptr ?? 0,
+            owner?.Ptr ?? 0,
             0,
             1
         );
