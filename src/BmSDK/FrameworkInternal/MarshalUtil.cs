@@ -55,6 +55,21 @@ internal static unsafe class MarshalUtil
         );
     }
 
+    // Temp-ish hack. Let's see about refactoring this later.
+    public static void ToUnmanaged(object? value, IntPtr data, Type managedType)
+    {
+        var method = Guard.NotNull(
+            typeof(MarshalUtil)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static)
+                .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
+                .Where(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
+                .FirstOrDefault()
+        );
+
+        var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
+        genericMethod.Invoke(null, [value, data]);
+    }
+
     public static void ToUnmanaged<TManaged>(TManaged value, IntPtr data) =>
         ToUnmanaged(value, data.ToPointer());
 

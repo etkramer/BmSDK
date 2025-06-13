@@ -39,6 +39,9 @@ public partial class Function
     {
         return EnumerateFields()
             .OfType<Property>()
-            .Where(prop => prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_Parm));
+            .Where(prop =>
+                prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_Parm)
+                && !prop.PropertyFlags.HasFlag(Property.EPropertyFlags.CPF_ReturnParm)
+            );
     }
 }

@@ -18,7 +18,14 @@ public class DemoScript : Script
             gameInfo.MaxPlayers = 4;
         }
 
-        // Redirect RCinematicCustomActor.BeginAnimControl()
+        // Redirect PostBeginPlay() on RCinematicCustomActor
+        Game.SetFunctionRedirect(
+            typeof(RCinematicCustomActor),
+            "PostBeginPlay",
+            CustomPostBeginPlay
+        );
+
+        // Redirect BeginAnimControl() on RCinematicCustomActor
         Game.SetFunctionRedirect(
             typeof(RCinematicCustomActor),
             "BeginAnimControl",
@@ -29,13 +36,6 @@ public class DemoScript : Script
                 // Calling the base implementation is optional.
                 self.BeginAnimControl(inInterpGroup);
             }
-        );
-
-        // Redirect RCinematicCustomActor.PostBeginPlay()
-        Game.SetFunctionRedirect(
-            typeof(RCinematicCustomActor),
-            "PostBeginPlay",
-            CustomPostBeginPlay
         );
     }
 

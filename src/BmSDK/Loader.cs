@@ -194,9 +194,11 @@ static class Loader
 
                 var result = redirectMethod.Invoke(redirectTarget, args.ToArray());
 
-                if (result != null)
+                if (result != null && redirectMethod.ReturnType != null)
                 {
-                    // TODO: Marshal result back for non-void functions.
+                    // Marshal result back (if non-void).
+                    var returnType = redirectMethod.ReturnType;
+                    MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
                 }
             }
             else

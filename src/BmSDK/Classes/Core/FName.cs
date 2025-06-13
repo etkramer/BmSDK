@@ -32,7 +32,9 @@ public struct FName
         }
     }
 
-    public static implicit operator FName(string name) => new(name);
+    public static implicit operator FName(string str) => new(str);
+
+    public static implicit operator string(FName name) => name.ToString();
 
     public override unsafe string ToString()
     {

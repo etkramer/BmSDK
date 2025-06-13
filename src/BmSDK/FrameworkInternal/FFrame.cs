@@ -23,11 +23,17 @@ internal unsafe record struct FFrame
     [FieldOffset(0x1C)]
     public IntPtr OutParms;
 
+    public readonly Function GetFunction()
+    {
+        var nodePtr = Node;
+        return MarshalUtil.ToManaged<Function>(&nodePtr);
+    }
+
     public readonly IEnumerable<object?> ParamsToManaged(Type[] managedTypes)
     {
         var nodePtr = Node;
         var localsPtr = Locals;
-        var funcObj = MarshalUtil.ToManaged<Function>(&nodePtr);
+        var funcObj = GetFunction();
 
         return funcObj
             .EnumerateParams()
