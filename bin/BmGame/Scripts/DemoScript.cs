@@ -21,14 +21,14 @@ public class DemoScript : Script
         // Redirect PostBeginPlay() on RCinematicCustomActor
         Game.SetFunctionRedirect(
             typeof(RCinematicCustomActor),
-            "PostBeginPlay",
+            nameof(RCinematicCustomActor.PostBeginPlay),
             CustomPostBeginPlay
         );
 
         // Redirect BeginAnimControl() on RCinematicCustomActor
         Game.SetFunctionRedirect(
             typeof(RCinematicCustomActor),
-            "BeginAnimControl",
+            nameof(RCinematicCustomActor.BeginAnimControl),
             (RCinematicCustomActor self, InterpGroup inInterpGroup) =>
             {
                 Debug.Log($"Hello from BeginAnimControl!");
