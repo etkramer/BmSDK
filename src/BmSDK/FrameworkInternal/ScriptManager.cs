@@ -7,6 +7,10 @@ using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
 
+// TODO: Support hot reload. This can be done using a combination of Compilation.EmitDifference() and MetadataUpdater.ApplyUpdate().
+// See https://blog.jetbrains.com/dotnet/2021/12/02/how-rider-hot-reload-works-under-the-hood/
+// and https://learn.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadataupdater.applyupdate
+
 internal static class ScriptManager
 {
     static Assembly? s_scriptsAssembly = null;
