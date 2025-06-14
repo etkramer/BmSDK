@@ -82,12 +82,11 @@ public class DemoScript : Script
     {
         var playerPawn = Game.GetPlayerPawn();
 
-        // Load packages we need for RPawnVillainNinja, RCharacter_Strange
-        Game.LoadPackage("Under_B2_Ch4");
-        Game.LoadPackage("Under_B6_Ch7");
+        // Load package we need for RCharacter_Joker
+        Game.LoadPackage("FunFair");
 
         // Spawn in a pawn
-        var newCharacter = Game.SpawnCharacter<RPawnVillainNinja, RCharacter_Strange>(
+        var newCharacter = Game.SpawnCharacter<RPawnVillainThug, RCharacter_Joker>(
             playerPawn.Location with
             {
                 Y = playerPawn.Location.Y + 100,
