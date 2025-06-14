@@ -160,7 +160,7 @@ public static partial class Game
     }
 
     /// <summary>
-    /// "Sets" an UnrealScript function to run your own C# code instead of the original.
+    /// Redirects an UnrealScript function to run your own C# code instead of the original.
     /// </summary>
     public static void SetFunctionRedirect(
         Type targetClass,
