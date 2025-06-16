@@ -7,14 +7,15 @@ public partial class GameObject
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
-    private static unsafe ref TArray<GameObject> GObjects =>
-        ref *(TArray<GameObject>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
+    private static unsafe ref TArray<IntPtr> GObjects =>
+        ref *(TArray<IntPtr>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
 
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.
     /// </summary>
     public static unsafe IEnumerable<T> FindObjectsSlow<T>()
-        where T : GameObject => GObjects.OfType<T>();
+        where T : GameObject =>
+        GObjects.Select(ptr => MarshalUtil.ToManaged<GameObject>(&ptr)).OfType<T>();
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
@@ -108,72 +109,4 @@ public partial class GameObject
         Guard.Require(result != 0, "StaticConstructObject() returned null");
         return result;
     }
-
-    /// <summary>
-    /// Enumerates all objects in this object's outer chain.
-    /// </summary>
-    public IEnumerable<GameObject> EnumerateOuter()
-    {
-        var outer = Outer;
-        while (outer is not null)
-        {
-            yield return outer;
-            outer = outer.Outer;
-        }
-    }
-
-    /// <summary>
-    /// Returns the fully qualified pathname for this object as well as the name of the class.
-    /// </summary>
-    public string GetFullName(GameObject? StopOuter = null)
-    {
-        return $"{Guard.NotNull(Class).Name} {GetPathName(StopOuter)}";
-    }
-
-    /// <summary>
-    /// Returns the fully qualified pathname for this object.
-    /// </summary>
-    public string GetPathName(GameObject? StopOuter = null)
-    {
-        var res = "";
-        GetPathNameRecursive(StopOuter, ref res);
-        return res;
-    }
-
-    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
-    {
-        if (this != StopOuter)
-        {
-            if (Outer is not null && Outer != StopOuter)
-            {
-                Outer.GetPathNameRecursive(StopOuter, ref ResultString);
-                ResultString += Outer is Package ? "." : ":";
-            }
-
-            ResultString += Name.ToString();
-        }
-        else
-        {
-            ResultString += "None";
-        }
-    }
-
-    /// <summary>
-    /// Causes this object (and anything it references) to be excluded from UE3's GC.
-    /// </summary>
-    public void AddToRoot()
-    {
-        ObjectFlags |= EObjectFlags.RF_RootSet;
-    }
-
-    /// <summary>
-    /// Causes this object to be included in UE3's GC again after being excluded with <see cref="AddToRoot"/>.
-    /// </summary>
-    public void RemoveFromRoot()
-    {
-        ObjectFlags &= ~EObjectFlags.RF_RootSet;
-    }
-
-    /// <inheritdoc/>
-    public override string ToString() => GetFullName();
 }
