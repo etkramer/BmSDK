@@ -23,13 +23,10 @@ public static partial class Game
     /// <summary>
     /// Gets the pawn currently possessed by the local player controller (returned by <see cref="GetPlayerController"/>).
     /// </summary>
-    public static Pawn GetPlayerPawn(int controllerId = 0)
+    public static RPawn GetPlayerPawn(int controllerId = 0)
     {
         var playerController = GetPlayerController(controllerId);
-        return Guard.NotNull(
-            (RPawnPlayer)playerController.Pawn,
-            "Controller is not possessing a pawn."
-        );
+        return Guard.NotNull((RPawn)playerController.Pawn, "Controller is not possessing a pawn.");
     }
 
     /// <summary>
