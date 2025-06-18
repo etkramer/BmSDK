@@ -109,20 +109,20 @@ static class Loader
             var funcObj = MarshalUtil.ToManaged<Function>(&stackPtr->Node);
 
             var funcName = funcObj.GetPathName();
-            var funcNameForGameInit = "Engine.GameInfo:InitGame";
-            var funcNameForGameStart = "Engine.PlayerController:ServerUpdateLevelVisibility";
-            var funcNameForGameTick = "BmGame.RGameInfo:Tick";
-            var funcNameForGameBeginPlay = "BmGame.RPlayerController:ClientReady";
+            var funcNameForInit = "Engine.GameInfo:InitGame";
+            var funcNameForTick = "BmGame.RGameInfo:Tick";
+            var funcNameForEnterMenu = "GFxUI.GFxMoviePlayer:Init";
+            var funcNameForEnterGame = "BmGame.RPlayerController:ClientReady";
 
             // Notify scripts of game init
-            if (!HasGameInited && funcName == funcNameForGameInit)
+            if (!HasGameInited && funcName == funcNameForInit)
             {
                 OnGameInit();
                 HasGameInited = true;
             }
 
             // Notify scripts of game start
-            if (!HasGameStarted && funcName == funcNameForGameStart)
+            if (!HasGameStarted && funcName == funcNameForEnterMenu)
             {
                 // Call OnEnterMenu() for scripts
                 ScriptManager.Scripts.ForEach(script =>
@@ -136,7 +136,7 @@ static class Loader
             }
 
             // Notify scripts of game begin play
-            if (funcName == funcNameForGameBeginPlay)
+            if (funcName == funcNameForEnterGame)
             {
                 // Call OnEnterGame() for scripts
                 ScriptManager.Scripts.ForEach(script =>
@@ -148,7 +148,7 @@ static class Loader
             }
 
             // Notify scripts of game tick
-            if (funcName == funcNameForGameTick)
+            if (funcName == funcNameForTick)
             {
                 // Tick framework stuff
                 InputManager.Tick(ScriptManager.Scripts);
