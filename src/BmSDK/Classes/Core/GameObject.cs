@@ -20,7 +20,7 @@ public partial class GameObject
     /// <summary>
     /// Returns true if this object is "alive", false if it has been destroyed or garbage collected on the UE3 side.
     /// </summary>
-    public bool IsAlive()
+    public bool IsValid()
     {
         // Behavior ported from UObject::IsValid().
         if (Ptr == IntPtr.Zero)
