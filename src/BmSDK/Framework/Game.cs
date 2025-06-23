@@ -82,6 +82,15 @@ public static partial class Game
     }
 
     /// <summary>
+    /// Gets the time in seconds since the last world tick.
+    /// </summary>
+    public static float GetDeltaTime()
+    {
+        var worldInfo = GetWorldInfo();
+        return worldInfo.DeltaSeconds;
+    }
+
+    /// <summary>
     /// Finds and returns the object with the given path. Will be null if the object hasn't been loaded yet (see <see cref="LoadPackage"/> ).
     /// </summary>
     public static unsafe T? FindObject<T>(string pathName)
