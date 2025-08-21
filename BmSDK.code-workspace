@@ -101,25 +101,36 @@
       {
         "label": "Build All",
         "type": "process",
-        "command": "${workspaceFolder}/src/MSBuild.cmd",
+        "command": "powershell.exe",
         "args": [
-          "BmSDK.slnx",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder}/scripts/Build.ps1",
+          "${workspaceFolder}/BmSDK.slnx",
           "/t:BmSDK",
           "/t:BmSDK_Host",
           "/t:BmSDK_Generator"
         ],
         "problemMatcher": "$msCompile",
-        "presentation": { "echo": false, "clear": true },
-        "group": { "kind": "build", "isDefault": true }
+        "presentation": {"echo": false, "clear": true},
+        "group": {"kind": "build", "isDefault": true}
       },
       {
         "label": "Build Generator",
         "type": "process",
-        "command": "${workspaceFolder}/src/MSBuild.cmd",
-        "args": ["BmSDK.slnx", "/t:BmSDK_Generator"],
+        "command": "powershell.exe",
+        "args": [
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder}/scripts/Build.ps1",
+          "${workspaceFolder}/BmSDK.slnx",
+          "/t:BmSDK_Generator"
+        ],
         "problemMatcher": "$msCompile",
-        "presentation": { "echo": false, "clear": true },
-        "group": { "kind": "build", "isDefault": true }
+        "presentation": {"echo": false, "clear": true},
+        "group": {"kind": "build", "isDefault": true}
       }
     ]
   },
