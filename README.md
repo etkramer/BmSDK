@@ -1,10 +1,12 @@
 # BmSDK
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
+**Only the Epic Games Store version of the game is supported.**
+
+Support for the Steam version is planned for the near future.
+
 ## 📖 About
 BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to add custom gameplay and logic to the game. Check out the [wiki](../../wiki) for more info.
-
-**Only the Epic Games Store version of the game is supported**. Support for the Steam version is planned for the near future.
 
 ## 🚀 Getting started (users)
 If you're a user (meaning you just want to run script mods, not make them), getting started is simple:
@@ -19,3 +21,6 @@ Keep in mind that script mods can potentially harm your computer. Make sure you 
 
 ## 💡 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
+
+
