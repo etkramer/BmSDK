@@ -4,7 +4,7 @@
 ## 📖 About
 BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to add custom gameplay and logic to the game. Check out the [wiki](../../wiki) for more info.
 
-Currently only the EGS version of the game is supported, though extending support to the Steam version is planned.
+**Only the Epic Games Store version of the game is supported**. Support for the Steam version is planned for the near future.
 
 ## 🚀 Getting started (users)
 If you're a user (meaning you just want to run script mods, not make them), getting started is simple:
