@@ -106,11 +106,8 @@
           "-ExecutionPolicy",
           "Bypass",
           "-File",
-          "${workspaceFolder}/scripts/Build.ps1",
-          "${workspaceFolder}/BmSDK.slnx",
-          "/t:BmSDK",
-          "/t:BmSDK_Host",
-          "/t:BmSDK_Generator"
+          "${workspaceFolder}/scripts/Build-New.ps1",
+          "Build"
         ],
         "problemMatcher": "$msCompile",
         "presentation": {"echo": false, "clear": true},
@@ -124,9 +121,8 @@
           "-ExecutionPolicy",
           "Bypass",
           "-File",
-          "${workspaceFolder}/scripts/Build.ps1",
-          "${workspaceFolder}/BmSDK.slnx",
-          "/t:BmSDK_Generator"
+          "${workspaceFolder}/scripts/Build-New.ps1",
+          "Prebuild"
         ],
         "problemMatcher": "$msCompile",
         "presentation": {"echo": false, "clear": true},

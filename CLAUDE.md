@@ -12,8 +12,10 @@ The project uses MSBuild with Visual Studio 2022 and requires the x86 platform t
 
 ### Build Commands
 
-- **Build all components**: `scripts\Build.ps1 BmSDK.slnx /t:BmSDK /t:BmSDK_Host /t:BmSDK_Generator`
-- **Build generator only**: `scripts\Build.ps1 BmSDK.slnx /t:BmSDK_Generator`
+- **Build all components**: `scripts\Build-New.ps1 Build`
+- **Build generator only**: `scripts\Build-New.ps1 Prebuild`
+- **Clean build artifacts**: `scripts\Build-New.ps1 Clean`
+- **Create release package**: `scripts\Build-New.ps1 Publish`
 - **VS Code tasks available**: "Build All" and "Build Generator"
 
 ### Build Dependencies
@@ -82,7 +84,7 @@ Both BmSDK.Generator and BmSDK.Host are `.asi` plugins that get injected into th
 ## Development Workflow
 
 1. **Initial setup**: Build and run BmSDK.Generator first to generate required bindings
-2. Build the full solution using `scripts\Build.ps1 BmSDK.slnx /t:BmSDK /t:BmSDK_Host /t:BmSDK_Generator`
+2. Build the full solution using `scripts\Build-New.ps1 Build`
 3. Copy output files to game directory (`bin\` contents go to game folder)
 4. Create scripts in `bin\BmGame\Scripts\` directory
 5. Use the ScriptsDev project for IntelliSense and development
