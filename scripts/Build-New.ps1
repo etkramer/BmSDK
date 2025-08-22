@@ -115,6 +115,7 @@ function Invoke-Publish {
         "bin/BmGame/Scripts/MinimalScript.cs"     = "BmGame/Scripts/MinimalScript.cs"
         "bin/BmGame/ScriptsDev/ScriptsDev.csproj" = "BmGame/ScriptsDev/ScriptsDev.csproj"
         "bin/BmGame/ScriptsDev/ScriptsDev.slnx"   = "BmGame/ScriptsDev/ScriptsDev.slnx"
+        "bin/BmGame/ScriptsDev/Properties"        = "BmGame/ScriptsDev/Properties"
     }
 
     # Validate all required files exist
