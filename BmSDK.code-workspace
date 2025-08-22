@@ -99,31 +99,19 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Build All",
-        "type": "process",
-        "command": "powershell.exe",
-        "args": [
-          "-ExecutionPolicy",
-          "Bypass",
-          "-File",
-          "${workspaceFolder}/scripts/Build-New.ps1",
-          "Build"
-        ],
+        "label": "Prebuild",
+        "type": "shell",
+        "command": "${workspaceFolder}/Build.ps1",
+        "args": ["Prebuild", "Debug"],
         "problemMatcher": "$msCompile",
         "presentation": {"echo": false, "clear": true},
-        "group": {"kind": "build", "isDefault": true}
+        "group": {"kind": "build"}
       },
       {
-        "label": "Build Generator",
-        "type": "process",
-        "command": "powershell.exe",
-        "args": [
-          "-ExecutionPolicy",
-          "Bypass",
-          "-File",
-          "${workspaceFolder}/scripts/Build-New.ps1",
-          "Prebuild"
-        ],
+        "label": "Build",
+        "type": "shell",
+        "command": "${workspaceFolder}/Build.ps1",
+        "args": ["Build", "Debug"],
         "problemMatcher": "$msCompile",
         "presentation": {"echo": false, "clear": true},
         "group": {"kind": "build", "isDefault": true}
@@ -137,7 +125,7 @@
         "name": "Launch",
         "type": "cppvsdbg",
         "request": "launch",
-        "preLaunchTask": "Build All",
+        "preLaunchTask": "Build",
         "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
@@ -150,7 +138,7 @@
         "name": "Launch Generator",
         "type": "cppvsdbg",
         "request": "launch",
-        "preLaunchTask": "Build Generator",
+        "preLaunchTask": "Prebuild",
         "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",

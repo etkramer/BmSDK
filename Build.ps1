@@ -9,7 +9,7 @@ param(
 )
 
 function Show-Help {
-    Write-Host "Usage: Build-New.ps1 <task> [configuration]"
+    Write-Host "Usage: Build.ps1 <task> [configuration]"
     Write-Host ""
     Write-Host "Tasks:"
     Write-Host "  Prebuild"
