@@ -110,8 +110,8 @@ function Invoke-Publish {
     $RequiredFiles = @{
         "README.md"                               = "README.md"
         "bin/Binaries/Win32/dinput8.dll"          = "Binaries/Win32/dinput8.dll"
-        "bin/Binaries/Win32/plugins"              = "Binaries/Win32/plugins"
-        "bin/Binaries/Win32/sdk"                  = "Binaries/Win32/sdk"
+        "publish/Binaries/Win32/plugins"          = "Binaries/Win32/plugins"
+        "publish/Binaries/Win32/sdk"              = "Binaries/Win32/sdk"
         "bin/BmGame/Scripts/MinimalScript.cs"     = "BmGame/Scripts/MinimalScript.cs"
         "bin/BmGame/ScriptsDev/ScriptsDev.csproj" = "BmGame/ScriptsDev/ScriptsDev.csproj"
         "bin/BmGame/ScriptsDev/ScriptsDev.slnx"   = "BmGame/ScriptsDev/ScriptsDev.slnx"
