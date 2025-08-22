@@ -92,12 +92,12 @@ function Invoke-Clean {
     
     if (Test-Path $PluginsDir) {
         Write-Host "Deleting files in $PluginsDir"
-        Get-ChildItem $PluginsDir -File | Remove-Item -Force
+        Get-ChildItem $PluginsDir | Remove-Item -Force -Recurse
     }
     
     if (Test-Path $SdkDir) {
         Write-Host "Deleting files in $SdkDir"
-        Get-ChildItem $SdkDir -File | Remove-Item -Force
+        Get-ChildItem $SdkDir | Remove-Item -Force -Recurse
     }
     
     Write-Host "Clean completed."
