@@ -59,6 +59,15 @@ public static partial class Game
     }
 
     /// <summary>
+    /// Gets the persistent data object for the currently-loaded world.
+    /// </summary>
+    public static RPersistentData GetPersistentData()
+    {
+        var gameInfo = GetGameInfo();
+        return Guard.NotNull(gameInfo.PersistentData);
+    }
+
+    /// <summary>
     /// Gets the global engine object.
     /// </summary>
     public static GameEngine GetEngine() => Guard.NotNull(_Engine.GetEngine() as GameEngine);
