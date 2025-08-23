@@ -68,16 +68,59 @@ static class Loader
         // Do we have the generator present?
         if (GeneratorBridge.IsGeneratorPresent)
         {
+            var packageDir = Path.Combine(FileUtils.GetGamePath(), "CookedPCConsole");
+
             // Load packages containing classes we'll want at generation time.
-            Game.LoadPackage("Playable_Batman_SF");
-            Game.LoadPackage("Playable_Robin_SF");
-            Game.LoadPackage("FunFair");
-            Game.LoadPackage("Under_B6_Ch7");
-            Game.LoadPackage("Under_S3_Ch4");
-            Game.LoadPackage("Under_S2_Ch8");
-            Game.LoadPackage("BaneSS_B1");
-            Game.LoadPackage("GCPD_A1_Ch5");
-            Game.LoadPackage("Church_B1_Ch3456789");
+            foreach (var packagePath in Directory.EnumerateFiles(packageDir, "*.upk"))
+            {
+                var packageName = Path.GetFileNameWithoutExtension(packagePath);
+
+                // Skip common packages we know are always loaded.
+                if (
+                    packageName.Equals("Core", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Engine", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("BmGame", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("Online", StringComparison.OrdinalIgnoreCase)
+                )
+                {
+                    continue;
+                }
+
+                // In most cases, don't load SeekFree packages as these won't contain classes.
+                if (
+                    packageName.StartsWith("Playable_", StringComparison.OrdinalIgnoreCase)
+                    && !packageName.EndsWith("_SF", StringComparison.OrdinalIgnoreCase)
+                )
+                {
+                    continue;
+                }
+
+                // Don't load these package types as these won't contain classes.
+                if (
+                    packageName.Contains("_Static", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_FX", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_Lights", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_CLights", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_Audio", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_LOD", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Anim_", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Bio_", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("CS_", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("CV_", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Dlg-", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("LH-", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("WwSpch-", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Tape", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Synopsis", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("Gallery", StringComparison.OrdinalIgnoreCase)
+                )
+                {
+                    continue;
+                }
+
+                // Load whole package into memory.
+                Game.LoadPackage(packageName);
+            }
 
             // Reenable the generator now that we're ready.
             GeneratorBridge.EnableGenerator();
