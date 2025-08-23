@@ -24,4 +24,12 @@ public static class FileUtils
     {
         return Path.Combine(GetBasePath(), "Binaries", "Win32");
     }
+
+    /// <summary>
+    /// Returns the full path to the game directory (./BmGame/).
+    /// </summary>
+    public static string GetGamePath()
+    {
+        return Path.Combine(GetBasePath(), "BmGame");
+    }
 }
