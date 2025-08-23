@@ -8,9 +8,6 @@ Support for the Steam version is planned for the near future.
 ## 📖 About
 BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to add custom gameplay and logic to the game. Check out the [wiki](../../wiki) for more info.
 
-## 📦 Dependencies
-[.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
-
 ## 🚀 Getting started (for users)
 If you're a user (meaning you just want to run script mods, not make them), getting started is simple:
 1. Go to [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download) and install the .NET 8 SDK if you haven't already.
@@ -25,6 +22,7 @@ Keep in mind that script mods can potentially harm your computer. Make sure you 
 
 ## 💡 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
 
 
 
