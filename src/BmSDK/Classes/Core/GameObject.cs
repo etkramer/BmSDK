@@ -74,6 +74,16 @@ public partial class GameObject
     {
         if (this != StopOuter)
         {
+            try
+            {
+                _ = Outer;
+            }
+            catch (ArgumentException)
+            {
+                // Outer has been destroyed, probably because we're mid-destroy too.
+                return;
+            }
+
             if (Outer is not null && Outer != StopOuter)
             {
                 Outer.GetPathNameRecursive(StopOuter, ref ResultString);

@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.BmGame;
+using BmSDK.Engine;
 using BmSDK.Framework;
 using MoreLinq;
 
@@ -204,6 +205,14 @@ static class Loader
                     script.OnTick();
                     Debug.PopSender();
                 });
+
+                // Call OnTick() for script components
+                foreach (var scriptComponent in Actor.AllScriptComponents)
+                {
+                    Debug.PushSender(scriptComponent.GetType().Name);
+                    scriptComponent.OnTick();
+                    Debug.PopSender();
+                }
             }
 
             // Don't run the same redirector twice in a row - in that case, we assume the user is attempting to call the base implementation.

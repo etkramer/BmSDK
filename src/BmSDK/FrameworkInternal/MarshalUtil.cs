@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
@@ -143,6 +144,19 @@ internal static unsafe class MarshalUtil
 
     public static void DestroyManagedWrapper(IntPtr objPtr)
     {
+        if (s_managedObjects.TryGetValue(objPtr, out var obj) && obj is Actor actor)
+        {
+            // Detach all script components
+            if (actor.ScriptComponents.Any())
+            {
+                foreach (var scriptComponent in actor.ScriptComponents.ToArray())
+                {
+                    actor.DetachScriptComponent(scriptComponent);
+                }
+            }
+        }
+
+        // Remove managed wrapper from storage
         s_managedObjects.Remove(objPtr);
     }
 }

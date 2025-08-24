@@ -15,7 +15,7 @@ public partial class GameObject
     /// </summary>
     public static unsafe IEnumerable<T> FindObjectsSlow<T>()
         where T : GameObject =>
-        GObjects.Select(ptr => MarshalUtil.ToManaged<GameObject>(&ptr)).OfType<T>();
+        GObjects.Where(ptr => ptr != 0).Select(ptr => MarshalUtil.ToManaged<GameObject>(&ptr)).OfType<T>();
 
     /// <summary>
     /// Find or load an object by string name with optional outer and filename specifications.<br/>
