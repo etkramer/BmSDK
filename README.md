@@ -1,3 +1,5 @@
+<img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
+
 # BmSDK
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
@@ -22,6 +24,7 @@ Keep in mind that script mods can potentially harm your computer. Make sure you 
 
 ## 💡 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
 
 
 
