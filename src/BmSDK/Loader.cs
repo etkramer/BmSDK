@@ -207,11 +207,14 @@ static class Loader
                 });
 
                 // Call OnTick() for script components
-                foreach (var scriptComponent in Actor.AllScriptComponents)
+                if (Actor.AllScriptComponents.Count > 0)
                 {
-                    Debug.PushSender(scriptComponent.GetType().Name);
-                    scriptComponent.OnTick();
-                    Debug.PopSender();
+                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    {
+                        Debug.PushSender(scriptComponent.GetType().Name);
+                        scriptComponent.OnTick();
+                        Debug.PopSender();
+                    }
                 }
             }
 

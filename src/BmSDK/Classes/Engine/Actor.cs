@@ -5,16 +5,16 @@ namespace BmSDK.Engine;
 public partial class Actor
 {
     /// <summary>
-    /// Enumerates all script components attached to this actor.
+    /// Collection of all script components attached to this actor.
     /// </summary>
-    public static IEnumerable<ScriptComponent> AllScriptComponents => s_scriptComponents;
+    public static IReadOnlyCollection<ScriptComponent> AllScriptComponents => s_scriptComponents;
 
     private static readonly List<ScriptComponent> s_scriptComponents = [];
 
     /// <summary>
-    /// Enumerates all script components attached to this actor.
+    /// Collection of all script components attached to this actor.
     /// </summary>
-    public IEnumerable<ScriptComponent> ScriptComponents => _scriptComponents;
+    public IReadOnlyCollection<ScriptComponent> ScriptComponents => _scriptComponents;
 
     private readonly List<ScriptComponent> _scriptComponents = [];
 

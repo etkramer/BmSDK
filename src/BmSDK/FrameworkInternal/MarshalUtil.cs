@@ -147,7 +147,7 @@ internal static unsafe class MarshalUtil
         if (s_managedObjects.TryGetValue(objPtr, out var obj) && obj is Actor actor)
         {
             // Detach all script components
-            if (actor.ScriptComponents.Any())
+            if (actor.ScriptComponents.Count > 0)
             {
                 foreach (var scriptComponent in actor.ScriptComponents.ToArray())
                 {
