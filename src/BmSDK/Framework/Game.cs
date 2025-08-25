@@ -111,7 +111,8 @@ public static partial class Game
     public static unsafe T? SpawnActor<T>(
         GameObject.FVector position = default,
         GameObject.FRotator rotation = default,
-        GameObject? owner = null
+        GameObject? owner = null,
+        GameObject? instigator = null
     )
         where T : Actor, IGameObject
     {
@@ -129,7 +130,7 @@ public static partial class Game
             1,
             1,
             owner?.Ptr ?? 0,
-            0,
+            instigator?.Ptr ?? 0,
             1
         );
 
