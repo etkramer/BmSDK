@@ -108,13 +108,14 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given type.
     /// </summary>
-    public static unsafe T? SpawnActor<T>(
-        GameObject.FVector position = default,
-        GameObject.FRotator rotation = default,
-        GameObject? owner = null,
-        GameObject? instigator = null
+    public static unsafe Actor SpawnActor(
+        Class Class,
+        GameObject.FVector Location = default,
+        GameObject.FRotator Rotation = default,
+        Actor? Template = null,
+        GameObject? Owner = null,
+        GameObject? Instigator = null
     )
-        where T : Actor, IGameObject
     {
         // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
         // If we wanted to get the script version working, we'd probably have to patch it.
@@ -122,20 +123,31 @@ public static partial class Game
         var world = (World)GetWorldInfo().Outer.Outer;
         var resPtr = GameFunctions.SpawnActor(
             world.Ptr,
-            T.StaticClass().Ptr,
+            Class.Ptr,
             FName.None,
-            (IntPtr)(&position),
-            (IntPtr)(&rotation),
-            0,
+            (IntPtr)(&Location),
+            (IntPtr)(&Rotation),
+            Template?.Ptr ?? 0,
             1,
             1,
-            owner?.Ptr ?? 0,
-            instigator?.Ptr ?? 0,
+            Owner?.Ptr ?? 0,
+            Instigator?.Ptr ?? 0,
             1
         );
 
-        return MarshalUtil.ToManaged<T>(&resPtr);
+        return MarshalUtil.ToManaged<Actor>(&resPtr);
     }
+
+    /// <inheritdoc cref="SpawnActor"/>
+    public static unsafe T? SpawnActor<T>(
+        GameObject.FVector Location = default,
+        GameObject.FRotator Rotation = default,
+        Actor? Template = null,
+        GameObject? Owner = null,
+        GameObject? Instigator = null
+    )
+        where T : Actor, IGameObject =>
+        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
 
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.

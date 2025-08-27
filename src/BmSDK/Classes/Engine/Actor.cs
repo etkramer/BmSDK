@@ -49,4 +49,10 @@ public partial class Actor
         s_scriptComponents.Remove(component);
         component.Owner = null!;
     }
+
+    /// <inheritdoc cref="GameObject.Clone"/>
+    public new Actor Clone()
+    {
+        return Game.SpawnActor(Class, Location, Rotation, this, Owner);
+    }
 }
