@@ -112,4 +112,10 @@ public partial class GameObject
         Guard.Require(result != 0, "StaticConstructObject() returned null");
         return result;
     }
+
+    /// <inheritdoc cref="ICloneable.Clone"/>
+    public GameObject Clone()
+    {
+        return ConstructObject(Class, Outer, Template: this);
+    }
 }
