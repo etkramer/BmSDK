@@ -33,6 +33,20 @@ internal static unsafe class MarshalUtil
         {
             return MemUtil.Blit<TManaged>(data);
         }
+        else if (
+            typeof(TManaged).IsGenericType
+            && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
+        )
+        {
+            // Create new TArray instance - duplicates will still refer to the same native object.
+            var instance = Guard.NotNull(
+                Activator.CreateInstance<TManaged>() as IArray,
+                $"Couldn't create an instance of array 0x{new IntPtr(data):X}"
+            );
+
+            instance.Ptr = (IntPtr)data;
+            return (TManaged)instance;
+        }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);

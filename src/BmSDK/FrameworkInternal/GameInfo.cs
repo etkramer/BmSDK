@@ -11,6 +11,9 @@ internal static class GameInfo
 
     public static class FuncOffsets
     {
+        // app (global)
+        public const IntPtr AppRealloc = 0x1EC10;
+
         // UObject (static)
         public const IntPtr StaticFindObject = 0x8ED20;
         public const IntPtr StaticConstructObject = 0x98BE0;

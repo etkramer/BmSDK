@@ -7,8 +7,10 @@ public partial class GameObject
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
-    private static unsafe ref TArray<IntPtr> GObjects =>
-        ref *(TArray<IntPtr>*)MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects);
+    private static readonly TArray<IntPtr> GObjects = new()
+    {
+        Ptr = MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects),
+    };
 
     /// <summary>
     /// Returns an enumerable containing all objects of the given type.

@@ -96,6 +96,10 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr StringCtorDelegate(IntPtr self, IntPtr In);
 
+    // appRealloc()
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    public delegate IntPtr AppReallocDelegate(IntPtr Original, int Count, int Alignment);
+
     static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
     static LoadPackageDelegate? _LoadPackage = null;
@@ -109,6 +113,7 @@ internal static class GameFunctions
     static SpawnActorDelegate? _SpawnActor = null;
     static NameInitDelegate? _NameInit = null;
     static StringCtorDelegate? _StringCtor = null;
+    static AppReallocDelegate? _AppRealloc = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
         _StaticConstructObject ??=
@@ -174,5 +179,10 @@ internal static class GameFunctions
     public static StringCtorDelegate StringCtor =>
         _StringCtor ??= Marshal.GetDelegateForFunctionPointer<StringCtorDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.StringCtor)
+        );
+
+    public static AppReallocDelegate AppRealloc =>
+        _AppRealloc ??= Marshal.GetDelegateForFunctionPointer<AppReallocDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.AppRealloc)
         );
 }
