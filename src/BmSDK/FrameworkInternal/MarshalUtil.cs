@@ -97,6 +97,18 @@ internal static unsafe class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
+        else if (
+            typeof(TManaged).IsGenericType
+            && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
+        )
+        {
+            // TODO: Fully handle two-way array marshaling.
+            if (data == null)
+            {
+                // Do nothing (leave zeroed) and return.
+                return;
+            }
+        }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
