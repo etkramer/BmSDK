@@ -19,18 +19,32 @@ public partial class Actor
     private readonly List<ScriptComponent> _scriptComponents = [];
 
     /// <summary>
-    /// Attaches a new script component of the given type to this actor.
+    /// Attaches an existing script component to this actor.
     /// </summary>
-    public T AttachScriptComponent<T>()
-        where T : ScriptComponent, new()
+    public void AttachScriptComponent(ScriptComponent newComponent)
     {
-        // Create/store new component
-        var newComponent = new T { Owner = this };
+        Guard.Require(newComponent.Owner == null, "Component is already attached to an actor");
+
+        newComponent.Owner = this;
+
+        // Store new component
         s_scriptComponents.Add(newComponent);
         _scriptComponents.Add(newComponent);
 
         // Invoke attach callback
         newComponent.OnAttach();
+    }
+
+    /// <summary>
+    /// Attaches a new script component of the given type to this actor.
+    /// </summary>
+    public T AttachScriptComponent<T>()
+        where T : ScriptComponent, new()
+    {
+        // Create/attach new component
+        var newComponent = new T();
+        AttachScriptComponent(newComponent);
+
         return newComponent;
     }
 
