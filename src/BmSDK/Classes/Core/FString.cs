@@ -33,6 +33,6 @@ public unsafe struct FString
             return null;
         }
 
-        return Marshal.PtrToStringUni(AllocatorInstance, Num - 1)!;
+        return Marshal.PtrToStringUni(AllocatorInstance, Num - 1);
     }
 }

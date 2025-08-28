@@ -54,13 +54,14 @@ public unsafe class TArray<TManaged> : IArray, IReadOnlyList<TManaged>
     {
         // Resize array to fit new items.
         var oldCount = Count;
-        var newCount = Count + items.Length;
+        var newCount = oldCount + items.Length;
         Resize(newCount);
 
         // Assign new items to array.
         for (var i = 0; i < items.Length; i++)
         {
-            MarshalUtil.ToUnmanaged(items[oldCount + i], Data.AllocatorInstance + (i * Stride));
+            var idx = oldCount + i;
+            MarshalUtil.ToUnmanaged(items[i], Data.AllocatorInstance + (idx * Stride));
         }
     }
 
@@ -92,7 +93,11 @@ public unsafe class TArray<TManaged> : IArray, IReadOnlyList<TManaged>
         // Grow array (beyond capacity): reallocate array
         if (newNum > Data.Num)
         {
-            var dataPtr = (IntPtr*)Data.AllocatorInstance.ToPointer();
+            // TODO: This doesn't seem right. Isn't AllocatorInstance[0] the first element?
+            // Disable it all for now.
+            throw new NotImplementedException("Array reallocation is not yet implemented!");
+
+            /*var dataPtr = (IntPtr*)Data.AllocatorInstance.ToPointer();
             var newMax = ((newNum / Data.Max) + 1) * Data.Max;
             *dataPtr = GameFunctions.AppRealloc(*dataPtr, newMax * Stride, 8);
 
@@ -100,7 +105,7 @@ public unsafe class TArray<TManaged> : IArray, IReadOnlyList<TManaged>
 
             Data.Num = newNum;
             Data.Max = newMax;
-            return;
+            return;*/
         }
     }
 
