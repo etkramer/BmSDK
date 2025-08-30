@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using BmSDK.Framework;
 
 #pragma warning disable CS0169
@@ -11,7 +13,7 @@ internal interface IArray
     public IntPtr Ptr { set; }
 }
 
-public unsafe class TArray<TManaged> : IArray, IReadOnlyList<TManaged>
+public unsafe class TArray<TManaged> : IArray, IList<TManaged>
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct NativeData
@@ -135,5 +137,95 @@ public unsafe class TArray<TManaged> : IArray, IReadOnlyList<TManaged>
         }
 
         return false;
+    }
+
+    public void Add(TManaged item)
+    {
+        Push(item);
+    }
+
+    public int IndexOf(TManaged item)
+    {
+        for (var i = 0; i < Count; i++)
+        {
+            if (this[i]?.Equals(item) ?? false)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void Insert(int index, TManaged item)
+    {
+        if (index < 0 || index > Count)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index));
+        }
+
+        if (index == Count)
+        {
+            Add(item);
+            return;
+        }
+
+        var oldCount = Count;
+        Resize(oldCount + 1);
+
+        for (var i = oldCount; i > index; i--)
+        {
+            this[i] = this[i - 1];
+        }
+
+        this[index] = item;
+    }
+
+    public bool Remove(TManaged item)
+    {
+        var index = IndexOf(item);
+        if (index >= 0)
+        {
+            RemoveAt(index);
+            return true;
+        }
+        return false;
+    }
+
+    public void RemoveAt(int index)
+    {
+        if (index < 0 || index >= Count)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index));
+        }
+
+        for (var i = index; i < Count - 1; i++)
+        {
+            this[i] = this[i + 1];
+        }
+
+        Resize(Count - 1);
+    }
+
+    public void CopyTo(TManaged[] array, int arrayIndex)
+    {
+        if (array == null)
+        {
+            throw new ArgumentNullException(nameof(array));
+        }
+        if (arrayIndex < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(arrayIndex));
+        }
+        if (array.Length - arrayIndex < Count)
+        {
+            throw new ArgumentException(
+                "Destination array is not long enough to copy all the items in the collection. Check array index and length."
+            );
+        }
+
+        for (var i = 0; i < Count; i++)
+        {
+            array[arrayIndex + i] = this[i];
+        }
     }
 }
