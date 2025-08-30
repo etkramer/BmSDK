@@ -121,6 +121,33 @@ function Invoke-Clean {
 function Invoke-Publish {
     Write-Host "Publishing BmSDK..." -ForegroundColor Green
 
+    # Set up Visual Studio environment
+    if (-not (Install-VSEnvironment "Release")) {
+        return $false
+    }
+
+    # Build BmSDK.Host in Release mode
+    Write-Host "Building BmSDK.Host in Release mode..." -ForegroundColor Yellow
+    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_Host") "Release"
+    if ($ExitCode -ne 0) {
+        Write-Error "Failed to build BmSDK.Host"
+        return $false
+    }
+
+    # Publish BmSDK to populate publish directory
+    Write-Host "Publishing BmSDK project..." -ForegroundColor Yellow
+    $PublishPath = Join-Path (Get-Location) "publish\Binaries\Win32\sdk"
+    $PublishOutput = & dotnet publish "src/BmSDK/BmSDK.csproj" --configuration Release --output $PublishPath --verbosity minimal 2>&1
+    $ExitCode = $LASTEXITCODE
+    
+    # Display publish output
+    $PublishOutput | ForEach-Object { Write-Host $_ }
+    
+    if ($ExitCode -ne 0) {
+        Write-Error "Failed to publish BmSDK project"
+        return $false
+    }
+
     # Define required files
     $RequiredFiles = @{
         "README.md"                               = "README.md"
