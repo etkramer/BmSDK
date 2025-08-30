@@ -80,8 +80,23 @@ function Invoke-MSBuild {
     Write-Host "Targets: $($Targets -join ', ')"
     Write-Host "Configuration: $ConfigParam"
     
-    & msbuild.exe @AllArgs
-    return $LASTEXITCODE
+    # Capture both stdout and stderr
+    $Output = & msbuild.exe @AllArgs 2>&1
+    $ExitCode = $LASTEXITCODE
+    
+    # Display all output
+    $Output | ForEach-Object { Write-Host $_ }
+    
+    Write-Host ""
+    if ($ExitCode -eq 0) {
+        Write-Host "Build successful!" -ForegroundColor Green
+    }
+    else {
+        Write-Host "Build failed (exit code $ExitCode)" -ForegroundColor Red
+        Write-Host "Check the above output for compilation errors." -ForegroundColor Yellow
+    }
+    
+    return $ExitCode
 }
 
 function Invoke-Clean {
