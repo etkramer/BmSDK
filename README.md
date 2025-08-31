@@ -9,7 +9,7 @@ BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to a
 ## 🚀 Getting started (for users)
 
 ### ⚠️ Notice for Steam users:
-If you have a Steam copy of the game, you must first install a compatibility patch. First, look in [releases](../../releases/latest) for the `SteamPatch` file. Download it, then replace the `BatmanAC.exe` in your game folder (see below) with the one provided. To avoid any potential problems, backing up the file first is recommended.
+If you have a Steam copy of the game, you must first install a compatibility patch. First, look in [releases](../../releases/latest) for the latest `SteamPatch.zip` file. Download it, then replace the `BatmanAC.exe` in your game folder (see below) with the one provided. Making a backup of the file first is recommended.
 
 ---------------
 
