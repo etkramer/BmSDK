@@ -197,26 +197,26 @@ function Invoke-Publish {
     }
     
     # Create output directory
-    $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-    $ReleaseDir = "releases/BmSDK-$GitTag"
-    $ZipPath = "releases/BmSDK-$GitTag.zip"
-    $SteamPatchZipPath = "releases/SteamPatch-$GitTag.zip"
+    $TempDir = "releases/$GitTag-BmSDK"
+    $ZipPath = "releases/$GitTag-BmSDK.zip"
+    $TempDirSteam = "releases/$GitTag-SteamPatch"
+    $ZipPathSteam = "releases/$GitTag-SteamPatch.zip"
 
-    if (Test-Path $ReleaseDir) {
-        Remove-Item $ReleaseDir -Recurse -Force
+    if (Test-Path $TempDir) {
+        Remove-Item $TempDir -Recurse -Force
     }
 
     if (Test-Path $ZipPath) {
         Remove-Item $ZipPath -Force
     }
 
-    New-Item -ItemType Directory -Path $ReleaseDir -Force | Out-Null
+    New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
 
     # Copy files to release directory
     Write-Host "Copying release files..." -ForegroundColor Yellow
 
     foreach ($Source in $RequiredFiles.Keys) {
-        $Destination = Join-Path $ReleaseDir $RequiredFiles[$Source]
+        $Destination = Join-Path $TempDir $RequiredFiles[$Source]
         $DestinationDir = Split-Path $Destination -Parent
         
         if (-not (Test-Path $DestinationDir)) {
@@ -237,67 +237,54 @@ function Invoke-Publish {
 
     # Create the main release zip archive
     Write-Host "Creating release archive..." -ForegroundColor Yellow
-    Compress-Archive -Path "$ReleaseDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
+    Compress-Archive -Path "$TempDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
 
-    # Create Steam patch with only BatmanAC.exe
-    if ($GitTag) {
-        $SteamPatchReleaseDir = "releases/SteamPatch-$GitTag"
-    }
-    else {
-        $SteamPatchReleaseDir = "releases/SteamPatch-$Timestamp"
+    # Create Steam patch archive with only BatmanAC.exe
+    if (Test-Path $TempDirSteam) {
+        Remove-Item $TempDirSteam -Recurse -Force
     }
 
-    if (Test-Path $SteamPatchReleaseDir) {
-        Remove-Item $SteamPatchReleaseDir -Recurse -Force
+    if (Test-Path $ZipPathSteam) {
+        Remove-Item $ZipPathSteam -Force
     }
 
-    if (Test-Path $SteamPatchZipPath) {
-        Remove-Item $SteamPatchZipPath -Force
-    }
+    Write-Host "Creating Steam patch..." -ForegroundColor Yellow
+    
+    New-Item -ItemType Directory -Path $TempDirSteam -Force | Out-Null
 
-    # Check if BatmanAC.exe exists for Steam patch
-    if (Test-Path "bin/Binaries/Win32/BatmanAC.exe") {
-        Write-Host "Creating Steam patch with BatmanAC.exe..." -ForegroundColor Yellow
+    # Copy only Steam-specific files (BatmanAC.exe)
+    foreach ($Source in $SteamFiles.Keys) {
+        $Destination = Join-Path $TempDirSteam $SteamFiles[$Source]
+        $DestinationDir = Split-Path $Destination -Parent
         
-        New-Item -ItemType Directory -Path $SteamPatchReleaseDir -Force | Out-Null
-
-        # Copy only Steam-specific files (BatmanAC.exe)
-        foreach ($Source in $SteamFiles.Keys) {
-            $Destination = Join-Path $SteamPatchReleaseDir $SteamFiles[$Source]
-            $DestinationDir = Split-Path $Destination -Parent
-            
-            if (-not (Test-Path $DestinationDir)) {
-                New-Item -ItemType Directory -Path $DestinationDir -Force | Out-Null
-            }
-            
-            Copy-Item $Source $Destination -Force
-            Write-Host "  ✓ $Source -> $($SteamFiles[$Source])" -ForegroundColor Gray
+        if (-not (Test-Path $DestinationDir)) {
+            New-Item -ItemType Directory -Path $DestinationDir -Force | Out-Null
         }
-
-        # Create the Steam patch zip archive
-        Compress-Archive -Path "$SteamPatchReleaseDir/*" -DestinationPath $SteamPatchZipPath -CompressionLevel Optimal
-
-        # Clean up Steam patch temporary directory
-        Remove-Item $SteamPatchReleaseDir -Recurse -Force
-
-        $SteamPatchZipSize = (Get-Item $SteamPatchZipPath).Length / 1MB
-        Write-Host "Steam patch package created: $SteamPatchZipPath ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor Green
+        
+        Copy-Item $Source $Destination -Force
+        Write-Host "  ✓ $Source -> $($SteamFiles[$Source])" -ForegroundColor Gray
     }
-    else {
-        Write-Host "BatmanAC.exe not found, skipping Steam patch" -ForegroundColor Yellow
-    }
+
+    # Create the Steam patch zip archive
+    Compress-Archive -Path "$TempDirSteam/*" -DestinationPath $ZipPathSteam -CompressionLevel Optimal
+
+    # Clean up Steam patch temporary directory
+    Remove-Item $TempDirSteam -Recurse -Force
+
+    $SteamPatchZipSize = (Get-Item $ZipPathSteam).Length / 1MB
+    Write-Host "Steam patch package created: $ZipPathSteam ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor Green
 
     # Clean up main temporary directory
-    Remove-Item $ReleaseDir -Recurse -Force
+    Remove-Item $TempDir -Recurse -Force
 
     # Output success message
     $ZipSize = (Get-Item $ZipPath).Length / 1MB
+    $ZipSizeSteam = (Get-Item $ZipPathSteam).Length / 1MB
     Write-Host "" -ForegroundColor Green
-    Write-Host "✅ Release package(s) created successfully!" -ForegroundColor Green
-    Write-Host "   📦 Main: $ZipPath ($([Math]::Round($ZipSize, 2)) MB)" -ForegroundColor White
-    if (Test-Path $SteamPatchZipPath) {
-        $SteamPatchZipSize = (Get-Item $SteamPatchZipPath).Length / 1MB
-        Write-Host "   📦 Steam Patch: $SteamPatchZipPath ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor White
+    Write-Host "Release package(s) created successfully!" -ForegroundColor Green
+    Write-Host "   📦 $ZipPath ($([Math]::Round($ZipSize, 2)) MB)" -ForegroundColor White
+    if (Test-Path $ZipPathSteam) {
+        Write-Host "   📦 $ZipPathSteam ($([Math]::Round($ZipSizeSteam, 2)) MB)" -ForegroundColor White
     }
     Write-Host "" -ForegroundColor Green
     Write-Host "Ready for distribution! 🚀" -ForegroundColor Green
