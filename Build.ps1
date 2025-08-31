@@ -126,11 +126,11 @@ function Invoke-Publish {
         return $false
     }
 
-    # Build BmSDK.Host in Release mode
-    Write-Host "Building BmSDK.Host in Release mode..." -ForegroundColor Yellow
-    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_Host") "Release"
+    # Build BmSDK in Release mode
+    Write-Host "Building BmSDK, BmSDK.Host in Release mode..." -ForegroundColor Yellow
+    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_Host", "BmSDK") $Configuration
     if ($ExitCode -ne 0) {
-        Write-Error "Failed to build BmSDK.Host"
+        Write-Error "Failed to build BmSDK"
         return $false
     }
 
@@ -160,6 +160,11 @@ function Invoke-Publish {
         "bin/BmGame/ScriptsDev/Properties"        = "BmGame/ScriptsDev/Properties"
     }
 
+    # Define Steam-specific files (includes BatmanAC.exe)
+    $SteamFiles = @{
+        "bin/Binaries/Win32/BatmanAC.exe" = "Binaries/Win32/BatmanAC.exe"
+    }
+
     # Validate all required files exist
     Write-Host "Validating build artifacts..." -ForegroundColor Yellow
     $MissingFiles = @()
@@ -180,7 +185,7 @@ function Invoke-Publish {
     # Create output directory
     $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
     $ReleaseDir = "releases/BmSDK-$Timestamp"
-    $ZipPath = "releases/BmSDK-$Timestamp.zip"
+    $ZipPath = "releases/BmSDK.zip"
 
     if (Test-Path $ReleaseDir) {
         Remove-Item $ReleaseDir -Recurse -Force
@@ -215,19 +220,66 @@ function Invoke-Publish {
         Write-Host "  ✓ $Source -> $($RequiredFiles[$Source])" -ForegroundColor Gray
     }
 
-    # Create the zip archive
+    # Create the main release zip archive
     Write-Host "Creating release archive..." -ForegroundColor Yellow
     Compress-Archive -Path "$ReleaseDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
 
-    # Clean up temporary directory
+    # Create Steam patch with only BatmanAC.exe
+    $SteamPatchZipPath = "releases/SteamPatch.zip"
+    $SteamPatchReleaseDir = "releases/SteamPatch-$Timestamp"
+
+    if (Test-Path $SteamPatchReleaseDir) {
+        Remove-Item $SteamPatchReleaseDir -Recurse -Force
+    }
+
+    if (Test-Path $SteamPatchZipPath) {
+        Remove-Item $SteamPatchZipPath -Force
+    }
+
+    # Check if BatmanAC.exe exists for Steam patch
+    if (Test-Path "bin/Binaries/Win32/BatmanAC.exe") {
+        Write-Host "Creating Steam patch with BatmanAC.exe..." -ForegroundColor Yellow
+        
+        New-Item -ItemType Directory -Path $SteamPatchReleaseDir -Force | Out-Null
+
+        # Copy only Steam-specific files (BatmanAC.exe)
+        foreach ($Source in $SteamFiles.Keys) {
+            $Destination = Join-Path $SteamPatchReleaseDir $SteamFiles[$Source]
+            $DestinationDir = Split-Path $Destination -Parent
+            
+            if (-not (Test-Path $DestinationDir)) {
+                New-Item -ItemType Directory -Path $DestinationDir -Force | Out-Null
+            }
+            
+            Copy-Item $Source $Destination -Force
+            Write-Host "  ✓ $Source -> $($SteamFiles[$Source])" -ForegroundColor Gray
+        }
+
+        # Create the Steam patch zip archive
+        Compress-Archive -Path "$SteamPatchReleaseDir/*" -DestinationPath $SteamPatchZipPath -CompressionLevel Optimal
+
+        # Clean up Steam patch temporary directory
+        Remove-Item $SteamPatchReleaseDir -Recurse -Force
+
+        $SteamPatchZipSize = (Get-Item $SteamPatchZipPath).Length / 1MB
+        Write-Host "Steam patch package created: $SteamPatchZipPath ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor Green
+    }
+    else {
+        Write-Host "BatmanAC.exe not found, skipping Steam patch" -ForegroundColor Yellow
+    }
+
+    # Clean up main temporary directory
     Remove-Item $ReleaseDir -Recurse -Force
 
     # Output success message
     $ZipSize = (Get-Item $ZipPath).Length / 1MB
     Write-Host "" -ForegroundColor Green
-    Write-Host "✅ Release package created successfully!" -ForegroundColor Green
-    Write-Host "   📦 File: $ZipPath" -ForegroundColor White
-    Write-Host "   📏 Size: $([Math]::Round($ZipSize, 2)) MB" -ForegroundColor White
+    Write-Host "✅ Release package(s) created successfully!" -ForegroundColor Green
+    Write-Host "   📦 Main: $ZipPath ($([Math]::Round($ZipSize, 2)) MB)" -ForegroundColor White
+    if (Test-Path $SteamPatchZipPath) {
+        $SteamPatchZipSize = (Get-Item $SteamPatchZipPath).Length / 1MB
+        Write-Host "   📦 Steam Patch: $SteamPatchZipPath ($([Math]::Round($SteamPatchZipSize, 2)) MB)" -ForegroundColor White
+    }
     Write-Host "" -ForegroundColor Green
     Write-Host "Ready for distribution! 🚀" -ForegroundColor Green
     
