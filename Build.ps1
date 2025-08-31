@@ -128,7 +128,7 @@ function Invoke-Publish {
 
     # Build BmSDK in Release mode
     Write-Host "Building BmSDK, BmSDK.Host in Release mode..." -ForegroundColor Yellow
-    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_Host", "BmSDK") $Configuration
+    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") "Release"
     if ($ExitCode -ne 0) {
         Write-Error "Failed to build BmSDK"
         return $false
@@ -182,10 +182,25 @@ function Invoke-Publish {
         return $false
     }
 
+    # Get latest git version tag
+    $GitTag = ""
+    try {
+        $GitTag = git describe --tags --abbrev=0 2>$null
+        if ($LASTEXITCODE -ne 0) {
+            Write-Error "Couldn't determine git tag name"
+            return $false
+        }
+    }
+    catch {
+        Write-Error "Couldn't determine git tag name"
+        return $false
+    }
+    
     # Create output directory
     $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
-    $ReleaseDir = "releases/BmSDK-$Timestamp"
-    $ZipPath = "releases/BmSDK.zip"
+    $ReleaseDir = "releases/BmSDK-$GitTag"
+    $ZipPath = "releases/BmSDK-$GitTag.zip"
+    $SteamPatchZipPath = "releases/SteamPatch-$GitTag.zip"
 
     if (Test-Path $ReleaseDir) {
         Remove-Item $ReleaseDir -Recurse -Force
@@ -225,8 +240,12 @@ function Invoke-Publish {
     Compress-Archive -Path "$ReleaseDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
 
     # Create Steam patch with only BatmanAC.exe
-    $SteamPatchZipPath = "releases/SteamPatch.zip"
-    $SteamPatchReleaseDir = "releases/SteamPatch-$Timestamp"
+    if ($GitTag) {
+        $SteamPatchReleaseDir = "releases/SteamPatch-$GitTag"
+    }
+    else {
+        $SteamPatchReleaseDir = "releases/SteamPatch-$Timestamp"
+    }
 
     if (Test-Path $SteamPatchReleaseDir) {
         Remove-Item $SteamPatchReleaseDir -Recurse -Force
@@ -309,7 +328,7 @@ switch ($Task) {
             exit 1
         }
         
-        $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK_Host", "BmSDK") $Configuration
+        $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") $Configuration
         exit $ExitCode
     }
     
