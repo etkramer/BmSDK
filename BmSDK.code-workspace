@@ -31,6 +31,7 @@
     "C_Cpp.default.compilerPath": "cl.exe",
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
+    "C_Cpp.default.defines": ["WIN32", "_DEBUG", "_CONSOLE", "BATMAN2"],
     "files.associations": {
       "iosfwd": "cpp",
       "xstring": "cpp",

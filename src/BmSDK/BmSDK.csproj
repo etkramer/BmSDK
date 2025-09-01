@@ -16,6 +16,10 @@
     <OutputPath>$(SolutionDir)bin\Binaries\Win32\sdk\</OutputPath>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);BATMAN2</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <AdditionalFiles Include="NativeMethods.txt" />
   </ItemGroup>
