@@ -82,11 +82,11 @@ public class DemoScript : Script
     {
         var playerPawn = Game.GetPlayerPawn();
 
-        // Load package we need for RCharacter_Joker
-        Game.LoadPackage("FunFair");
+        // Load package we need for MCharacter_Alfred
+        Game.LoadPackage("BatCaveHQ_A1");
 
         // Spawn in a pawn
-        var newCharacter = Game.SpawnCharacter<RPawnVillainThug, RCharacter_Joker>(
+        var newCharacter = Game.SpawnCharacter<RPawnVillainThug, MCharacter_Alfred>(
             playerPawn.Location with
             {
                 Y = playerPawn.Location.Y + 100,
@@ -101,7 +101,7 @@ public class DemoScript : Script
     {
         var console = Game.GetConsole();
         console.ConsoleCommand(
-            "start batentry?Players=Playable_Batman?Area=OW,OW_A9,OW_A6,OW_A7,OW_A8,OW_R1,OW_R2,OW_E3,OW_E4,OW_A1_Static_LOD,OW_A2,OW_A3_Static_LOD,OW_A4_Static_LOD,OW_A5_Static_LOD,OW_R3,OW_E2_Static_LOD,OW_E6_Static_LOD,OW_E5_Static_LOD,OW_RE1_Static_LOD?Flags=Vertical_Slice,Demo_Riddler_Door_Switch,Map_TriggeredCityStories,Batman_ResonatorCodes,Teleport_Church_To_Museum,Demo_Ryder_Bully,Demo_Courthouse_Lock,Public_Demo?Chapters=1,1b,2,2a,Z1,V1?Start=BeginVS?"
+            "start batentry?Area=OpenWorld,NewGotham_A3,NewGotham_A3_Static,NewGotham_A2,NewGotham_A4,NewGotham_A5?Start=Episode2_Start?Chapters=2,E1,K1,Y1?Flags=Chapter2_Start,CH2_OW_BeenBefore,Enable_FT_Batcave?Abilities=Batman_SmokePellets"
         );
     }
 

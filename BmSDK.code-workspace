@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "BmSDK (BM2)",
+      "name": "BmSDK (BM3)",
       "path": "."
     }
   ],
@@ -127,7 +127,7 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build",
-        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
+        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanOrigins.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
         "logging": {
@@ -140,7 +140,7 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Prebuild",
-        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
+        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanOrigins.exe",
         "args": ["-nosplash"],
         "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
         "logging": {

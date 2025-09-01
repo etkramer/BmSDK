@@ -160,9 +160,9 @@ function Invoke-Publish {
         "bin/BmGame/ScriptsDev/Properties"        = "BmGame/ScriptsDev/Properties"
     }
 
-    # Define Steam-specific files (includes BatmanAC.exe)
+    # Define Steam-specific files (includes BatmanOrigins.exe)
     $SteamFiles = @{
-        "bin/Binaries/Win32/BatmanAC.exe" = "Binaries/Win32/BatmanAC.exe"
+        "bin/Binaries/Win32/BatmanOrigins.exe" = "Binaries/Win32/BatmanOrigins.exe"
     }
 
     # Validate all required files exist
@@ -239,7 +239,7 @@ function Invoke-Publish {
     Write-Host "Creating release archive..." -ForegroundColor Yellow
     Compress-Archive -Path "$TempDir/*" -DestinationPath $ZipPath -CompressionLevel Optimal
 
-    # Create Steam patch archive with only BatmanAC.exe
+    # Create Steam patch archive with only BatmanOrigins.exe
     if (Test-Path $TempDirSteam) {
         Remove-Item $TempDirSteam -Recurse -Force
     }
@@ -252,7 +252,7 @@ function Invoke-Publish {
     
     New-Item -ItemType Directory -Path $TempDirSteam -Force | Out-Null
 
-    # Copy only Steam-specific files (BatmanAC.exe)
+    # Copy only Steam-specific files (BatmanOrigins.exe)
     foreach ($Source in $SteamFiles.Keys) {
         $Destination = Join-Path $TempDirSteam $SteamFiles[$Source]
         $DestinationDir = Split-Path $Destination -Parent

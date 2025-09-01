@@ -39,7 +39,7 @@ void Runtime::OnAttach()
 					GetWindowThreadProcessId(GetForegroundWindow(), &foregroundPID);
 
 					// Don't generate if the disable flag is present.
-					if (fs::exists("I:\\BmSDK\\bin\\Binaries\\Win32\\plugins\\.no-generate"))
+					if (fs::exists("I:\\BmSDK-bm3\\bin\\Binaries\\Win32\\plugins\\.no-generate"))
 					{
 						continue;
 					}
@@ -89,7 +89,7 @@ void Runtime::GenerateSDK()
 	// Clear output directory
 	// TODO: Un-hardcode this
 	TRACE("Found {} classes, preparing to print", classObjects.size());
-	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
+	fs::path outDir = "I:\\BmSDK-bm3\\src\\BmSDK\\Generated\\";
 	fs::remove_all(outDir);
 	fs::create_directory(outDir);
 

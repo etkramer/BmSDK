@@ -39,6 +39,11 @@ string FieldInfo::GetNameManaged()
 	{
 		return "_" + field->GetName();
 	}
+	// Special handling for conflicts with C#-defined fields
+	else if (field->IsA(UFunction::StaticClass()) && field->GetName() == "ToString")
+	{
+		return "_ToString";
+	}
 
 	// De-duplicate prop names for structs and functions
 	if (field->IsA(UProperty::StaticClass()) && (field->Outer->IsA(UFunction::StaticClass()) ||

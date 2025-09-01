@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DefineConstants>$(DefineConstants);BATMAN2</DefineConstants>
+    <DefineConstants>$(DefineConstants);BATMAN3</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
