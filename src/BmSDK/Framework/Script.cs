@@ -1,7 +1,14 @@
 namespace BmSDK.Framework;
 
+/// <summary>
+/// Base class for user-defined scripts.
+/// </summary>
 public abstract class Script
 {
+    /// <summary>
+    /// Name of this script, used mainly for logging. Defaults to the name of
+    /// the original .cs file, but can be customized using the [Script] attribute.
+    /// </summary>
     public string Name { get; set; } = "Script";
 
     /// <summary>
