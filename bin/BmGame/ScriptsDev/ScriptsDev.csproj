@@ -22,7 +22,7 @@
   </ItemGroup>
    
   <ItemGroup>
-    <Compile Include="..\Scripts\**\*.cs" />
+    <Compile Include="..\Scripts\**\*.cs*" />
   </ItemGroup>
 
 </Project>
