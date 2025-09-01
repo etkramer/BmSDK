@@ -1,10 +1,10 @@
-<img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
-
 # BmSDK
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
+<img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
+
 ### ⚠️ Notice for Steam users:
-If you have a Steam copy of the game, you must first install a compatibility patch. First, look in [releases](../../releases/latest) for the latest `SteamPatch.zip` file. Download it, and replace the `BatmanAC.exe` in your game folder (see below) with the one provided. It's recommended to make a backup first.
+If you have a Steam copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest), just replace the `BatmanAC.exe` from your game folder (see below) with the one provided. It's a good idea to make a backup first.
 
 ## 📖 About
 BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to add custom gameplay and logic to the game. Check out the [wiki](../../wiki) for more info.
@@ -25,9 +25,3 @@ Keep in mind that script mods can potentially harm your computer. Make sure you 
 
 ## 💡 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
-
-
-
-
-
-
