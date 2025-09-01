@@ -87,8 +87,9 @@ void Runtime::GenerateSDK()
 	}
 
 	// Clear output directory
+	// TODO: Un-hardcode this
 	TRACE("Found {} classes, preparing to print", classObjects.size());
-	fs::path outDir = "I:\\BmSDK-bm3\\src\\BmSDK\\Generated\\";
+	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
 	fs::remove_all(outDir);
 	fs::create_directory(outDir);
 

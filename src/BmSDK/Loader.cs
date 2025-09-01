@@ -11,7 +11,7 @@ using MoreLinq;
 
 namespace BmSDK.Framework;
 
-static class Loader
+internal static class Loader
 {
     delegate void DllMainDelegate();
 
@@ -19,6 +19,9 @@ static class Loader
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
+    /// <summary>
+    /// Main .NET entry point, called from BmSDK.Host.
+    /// </summary>
     public static void GuardedDllMain()
     {
         Debug.PushSender("Loader");
@@ -26,7 +29,7 @@ static class Loader
         Debug.PopSender();
     }
 
-    public static void DllMain()
+    private static void DllMain()
     {
         // Environment.CurrentDirectory gets unreliable once we start
         // running code in detours, so let's store it early.
@@ -187,7 +190,7 @@ static class Loader
     static Function? lastFuncForRedirects = null;
 
     // Detour for UObject::ProcessInternal()
-    public static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
+    private static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
         RunGuarded(() =>
         {
@@ -310,7 +313,7 @@ static class Loader
     }
 
     // Detour for UObject::AddObject()
-    public static unsafe void AddObjectDetour(IntPtr self, int InIndex)
+    private static unsafe void AddObjectDetour(IntPtr self, int InIndex)
     {
         // Call base impl
         _AddObjectDetourBase!.Invoke(self, InIndex);
@@ -338,7 +341,7 @@ static class Loader
     }
 
     // Detour for UObject::ConditionalDestroy()
-    public static void ConditionalDestroyDetour(IntPtr self)
+    private static void ConditionalDestroyDetour(IntPtr self)
     {
         // Destroy this object's managed instance
         RunGuarded(() => MarshalUtil.DestroyManagedWrapper(self));
@@ -347,7 +350,7 @@ static class Loader
         _ConditionalDestroyDetourBase!.Invoke(self);
     }
 
-    static unsafe string GetClassPath(IntPtr obj)
+    private static unsafe string GetClassPath(IntPtr obj)
     {
         // Fetch class name.
         var classPtr = *(IntPtr*)(obj + GameInfo.MemberOffsets.Object__Class).ToPointer();
@@ -361,7 +364,7 @@ static class Loader
         return $"{classOuterName}.{className}";
     }
 
-    static void RunGuarded(Action action)
+    private static void RunGuarded(Action action)
     {
         try
         {

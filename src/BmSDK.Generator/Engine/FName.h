@@ -9,7 +9,6 @@ constexpr INT NAME_INDEX_SHIFT = 1;
 // complete FNameEntry instances, basing the actual size on the name length.
 class FNameEntry
 {
-public: // REMOVE ME
 #if BATMAN2
 	QWORD Flags;
 #elif BATMAN3

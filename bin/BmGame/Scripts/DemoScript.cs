@@ -43,7 +43,6 @@ public class DemoScript : Script
     {
         // Enable info display
         Game.GetGameViewportClient().bShowSessionDebug = true;
-        Game.GetGameViewportClient().bOverrideDiffuseAndSpecular = true;
     }
 
     public override void OnEnterGame()
