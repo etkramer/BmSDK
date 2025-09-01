@@ -47,13 +47,22 @@ public struct FName
     {
         var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
         var GNamesData = *GNames;
+
+#if BATMAN2
         return Guard.NotNull(Marshal.PtrToStringUni((IntPtr)GNamesData[Index]->UniName));
+#elif BATMAN3
+        return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->UniName));
+#endif
     }
 
 #pragma warning disable CS0649
     unsafe struct FNameEntry
     {
-        public GameObject.EObjectFlags Flags;
+#if BATMAN2
+        public ulong Flags;
+#elif BATMAN3
+        public int Flags;
+#endif
         public int Index;
         public FNameEntry* HashNext;
         public fixed char UniName[128];

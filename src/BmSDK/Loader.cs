@@ -87,6 +87,47 @@ static class Loader
                     continue;
                 }
 
+#if BATMAN3
+                // Some BM3 packages seem to crash the game when loaded. Let's blacklist them here.
+                if (
+                    packageName.Equals("Bank_A1_Ch4b", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("GothamBridge_A3", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("CargoShip_S1_Ch2a", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("CargoShip_S1_Ch2b", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("NewGotham_A9_Ch3", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals(
+                        "NewGotham_RB1_Ch6789",
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                    || packageName.Equals("OldGotham_RA1_ChJ2", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("OldGotham_RE2_Ch4", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals(
+                        "PoliceStation_B2_Ch3a",
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                    || packageName.Equals(
+                        "PoliceStation_B2_Ch3b",
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                    || packageName.Equals(
+                        "PoliceStation_C2_Ch3",
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                    || packageName.Equals("Prison_A1_Ch1", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Prison_B2_Ch1", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Prison_B3_Ch8", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Prison_C4_Ch8", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Prison_C6", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Prison_C8_Ch1", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("RegentHotel_A2_Ch6", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("SteelMill_C1", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Equals("Tower_A1", StringComparison.OrdinalIgnoreCase)
+                )
+                {
+                    continue;
+                }
+#endif
+
                 // In most cases, don't load SeekFree packages as these won't contain classes.
                 if (
                     packageName.StartsWith("Playable_", StringComparison.OrdinalIgnoreCase)
@@ -104,6 +145,8 @@ static class Loader
                     || packageName.Contains("_CLights", StringComparison.OrdinalIgnoreCase)
                     || packageName.Contains("_Audio", StringComparison.OrdinalIgnoreCase)
                     || packageName.Contains("_LOD", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("_Px", StringComparison.OrdinalIgnoreCase)
+                    || packageName.Contains("ShaderCache", StringComparison.OrdinalIgnoreCase)
                     || packageName.StartsWith("Anim_", StringComparison.OrdinalIgnoreCase)
                     || packageName.StartsWith("Bio_", StringComparison.OrdinalIgnoreCase)
                     || packageName.StartsWith("CS_", StringComparison.OrdinalIgnoreCase)
@@ -118,6 +161,8 @@ static class Loader
                 {
                     continue;
                 }
+
+                Debug.Log($"Loading {packageName}");
 
                 // Load whole package into memory.
                 Game.LoadPackage(packageName);

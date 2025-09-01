@@ -10,7 +10,11 @@ constexpr INT NAME_INDEX_SHIFT = 1;
 class FNameEntry
 {
 public: // REMOVE ME
+#if BATMAN2
 	QWORD Flags;
+#elif BATMAN3
+	DWORD Flags;
+#endif
 	INT Index;
 	FNameEntry* HashNext;
 

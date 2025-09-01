@@ -9,7 +9,7 @@
 CLASS(UObject, 44)
 class UObject
 {
-	INT Index;
+	FIELD(INT, Index)
 	QWORD ObjectFlags;
 	UObject* HashNext;
 	UObject* HashOuterNext;

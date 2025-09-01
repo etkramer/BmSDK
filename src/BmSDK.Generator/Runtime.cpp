@@ -64,12 +64,6 @@ void Runtime::GenerateSDK()
 {
 	TRACE("\nPreparing SDK generation");
 
-	// Clear output directory
-	TRACE("Clearing output directory");
-	fs::path outDir = "I:\\BmSDK\\src\\BmSDK\\Generated\\";
-	fs::remove_all(outDir);
-	fs::create_directory(outDir);
-
 	TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
 	// Enumerate objects
@@ -78,6 +72,13 @@ void Runtime::GenerateSDK()
 	{
 		auto obj = Runtime::GObjects->ElementAt(i);
 
+		bool isValid = obj != nullptr && (Runtime::GObjects->ElementAt(obj->Index) == obj);
+		if (!isValid)
+		{
+			TRACE("Skipping invalid object {} ({})", obj->GetName(), obj->Index);
+			continue;
+		}
+
 		// Collect class objects (but not the CDO)
 		if (obj->IsA(UClass::StaticClass()) && obj->GetName() != "Default__Class")
 		{
@@ -85,7 +86,11 @@ void Runtime::GenerateSDK()
 		}
 	}
 
-	TRACE("Found {} classes, printing", classObjects.size());
+	// Clear output directory
+	TRACE("Found {} classes, preparing to print", classObjects.size());
+	fs::path outDir = "I:\\BmSDK-bm3\\src\\BmSDK\\Generated\\";
+	fs::remove_all(outDir);
+	fs::create_directory(outDir);
 
 	// Print some classes
 	for (auto i = 0u; i < classObjects.size(); i++)

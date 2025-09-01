@@ -4,9 +4,13 @@ internal static partial class StaticInit
 {
     public static Type GetManagedTypeForClassPath(string classPath)
     {
-        return _classPathToManagedTypeMap.TryGetValue(classPath, out var res)
-            ? res
-            : typeof(IntrinsicDummy);
+        if (_classPathToManagedTypeMap.TryGetValue(classPath, out var res))
+        {
+            return res;
+        }
+
+        // Debug.LogWarning($"Couldn't find managed type for class '{classPath}'");
+        return typeof(IntrinsicDummy);
     }
 
     public static string GetClassPathForManagedType(Type type)
