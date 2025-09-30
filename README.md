@@ -13,7 +13,7 @@ BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to a
 
 If you're a user (meaning you just want to run script mods, not make them), getting started is simple:
 
-1. Go to [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download) and install the .NET 8 SDK if you haven't already.
+1. Go to [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.414-windows-x86-installer) and install the .NET 8 SDK if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
 2. Download the latest release from [releases](../../releases/latest) and open the .zip file.
 3. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both to your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). There should already be 2 folders in there with the same names.
 4. Done, BmSDK is installed! Now to install script mods, simply drop any .cs files into your `BmGame\Scripts` folder.
