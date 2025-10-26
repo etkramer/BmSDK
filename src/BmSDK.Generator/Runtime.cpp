@@ -38,12 +38,6 @@ void Runtime::OnAttach()
 					DWORD foregroundPID = 0;
 					GetWindowThreadProcessId(GetForegroundWindow(), &foregroundPID);
 
-					// Don't generate if the disable flag is present.
-					if (fs::exists("I:\\BmSDK\\bin\\Binaries\\Win32\\plugins\\.no-generate"))
-					{
-						continue;
-					}
-
 					// Don't generate if the game window isn't focused.
 					if (foregroundPID != GetCurrentProcessId())
 					{
