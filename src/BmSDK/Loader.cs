@@ -78,7 +78,7 @@ internal static class Loader
                     packageName.Equals("Core", StringComparison.OrdinalIgnoreCase)
                     || packageName.Equals("Engine", StringComparison.OrdinalIgnoreCase)
                     || packageName.Equals("BmGame", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("Online", StringComparison.OrdinalIgnoreCase)
+                    || packageName.StartsWith("OnlineSubsystem", StringComparison.OrdinalIgnoreCase)
                 )
                 {
                     continue;
@@ -86,8 +86,8 @@ internal static class Loader
 
                 // In most cases, don't load SeekFree packages as these won't contain classes.
                 if (
-                    packageName.StartsWith("Playable_", StringComparison.OrdinalIgnoreCase)
-                    && !packageName.EndsWith("_SF", StringComparison.OrdinalIgnoreCase)
+                    !packageName.StartsWith("Playable_", StringComparison.OrdinalIgnoreCase)
+                    && packageName.EndsWith("_SF", StringComparison.OrdinalIgnoreCase)
                 )
                 {
                     continue;

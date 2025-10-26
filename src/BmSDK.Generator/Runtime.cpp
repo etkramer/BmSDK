@@ -56,7 +56,7 @@ void Runtime::OnAttach()
 
 void Runtime::GenerateSDK()
 {
-	TRACE("\nPreparing SDK generation");
+	TRACE("Preparing SDK generation");
 
 	TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
