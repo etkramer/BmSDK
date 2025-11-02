@@ -34,7 +34,7 @@ public partial class Property
     /// </summary>
     public ushort ElementSize
     {
-        get => MarshalUtil.ToManaged<ushort>(Ptr + 48 + 4 + 4);
+        get => MarshalUtil.ToManaged<ushort>(Ptr + 52 + 4 + 4);
     }
 
     /// <summary>
@@ -42,6 +42,6 @@ public partial class Property
     /// </summary>
     public ushort Offset
     {
-        get => MarshalUtil.ToManaged<ushort>(Ptr + 48 + 4 + 4 + 2);
+        get => MarshalUtil.ToManaged<ushort>(Ptr + 52 + 4 + 4 + 2);
     }
 }
