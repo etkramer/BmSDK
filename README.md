@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
 ## 📖 About
-BmSDK is a C#-based scripting system for Batman: Arkham City, allowing mods to add custom gameplay and logic to the game. Check out the [wiki](../../wiki) for further insight.
+BmSDK is a C# **scripting system** for Batman: Arkham City, allowing mods to add **custom gameplay and logic** to the game. This is done by exposing a **game-mapped API** _(RPlayerController, WorldInfo, RGameRI, etc.)_ and providing useful helper methods that spawn Actors/Characters and retrieve any in-game class instance. The SDK also provides **lifecycle and input events** (script start, enter menu/game, tick, button press). Check out the [wiki](../../wiki) for further insight.
 
 <img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
 
@@ -41,4 +41,5 @@ Follow these steps to set up the development environment so you can build, run, 
 
 ## 📋 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
 
