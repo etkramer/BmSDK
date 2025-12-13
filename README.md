@@ -18,8 +18,8 @@ If you're a user (meaning you just want to run script mods, not make them), gett
 
 Keep in mind that script mods can potentially harm your computer. Make sure you only download and install scripts from trusted sources.
 
-### ⚠️ Notice for Steam users:
-If you have a Steam copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest), just replace the `BatmanAC.exe` from your game folder (see below) with the one provided. It's a good idea to make a backup first.
+### ⚠️ Notice for non–Epic Games Store users:
+If you have a Steam/GOG copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest). Just extract the ZIP and drop the `Binaries` folder in the game directory. Replace `BatmanAC.exe` when prompted though it is a good idea to make a backup first.
 
 ---
 
@@ -41,5 +41,6 @@ Follow these steps to set up the development environment so you can build, run, 
 
 ## 📋 Licence
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
 
 
