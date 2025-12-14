@@ -4,7 +4,7 @@
 
 ## 📖 About
 
-BmSDK is a C# **scripting system** for Batman: Arkham City, allowing mods to add custom gameplay and logic. BmSDK provides a full game-mapped API and SDK _(RPlayerController, WorldInfo, RGameRI, etc.)_, also providing a set of useful helper methods for interacting with the game world. BmSDK also provides **lifecycle and input events** (script start, enter menu/game, tick, button press). Check out the [wiki](../../wiki) for further insight.
+BmSDK is a C# **scripting system** for Batman: Arkham City, allowing mods to add custom gameplay and logic. BmSDK provides a full game-mapped API and SDK _(RPlayerController, WorldInfo, RGameRI, etc.)_ and a set of useful helper methods for interacting with the game world. BmSDK also provides **lifecycle and input events** (script start, enter menu/game, tick, button press). Check out the [wiki](../../wiki) for further insight.
 
 <img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
 
@@ -21,7 +21,7 @@ If you're a user (meaning you just want to run script mods, not make them), gett
 
 Keep in mind that script mods can potentially harm your computer. Make sure you only download and install scripts from trusted sources.
 
-### ⚠️ Notice for non–Epic Games Store users:
+### ⚠️ Notice for non-Epic Games Store users:
 
 If you have a Steam/GOG copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest). Just extract the ZIP and drop the `Binaries` folder in the game directory. Replace `BatmanAC.exe` when prompted - it's a good idea to make a backup first.
 
@@ -39,9 +39,9 @@ Follow these steps to set up the development environment so you can build, run, 
 6. Test your code by pressing **F5** in Visual Studio _(Running the BatmanAC debug profile)_.
 7. Follow the [wiki](../../wiki) to understand the API better.
 
-### 💡 Common development issues and their solution
+### 💡 Common development issues and their solutions
 
-- Sometimes the debugger might not attach properly which will result in the game window never showing up. Press **Ctrl + Shift + F5** _(Restart debugging)_ in that case.
+- Sometimes the debugger might not attach properly, which will result in the game window never showing up. Press **Ctrl + Shift + F5** _(Restart debugging)_ in that case.
 - If the game doesn't start because the game's executable can't be found, open `...\ScriptsDev\Properties\launchSettings.json` and replace "**executablePath**" with the absolute path to `%GameDir%\Binaries\Win32\BatmanAC.exe` and "**workingDirectory**" with the absolute path to `%GameDir%\Binaries\Win32` (Don't forget to escape the backslashes).
 
 ---
