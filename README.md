@@ -37,11 +37,11 @@ Follow these steps to set up the development environment so you can build, run, 
 4. Start Visual Studio and open the solution in `%GameDir%\BmGame\ScriptsDev`.
 5. Write your code in `MinimalScript.cs` or any other C# source file in `%GameDir%\BmGame\Scripts`.
 6. Test your code by pressing **F5** in Visual Studio _(Running the BatmanAC debug profile)_.
-7. Follow the [wiki](../../wiki) to understand the API better.
+7. Follow the [wiki](../../wiki/Creating-your-first-mod) to write your first script.
 
 ### 💡 Common development issues and their solutions
 
-- Sometimes the debugger might not attach properly, which will result in the game window never showing up. Press **Ctrl + Shift + F5** _(Restart debugging)_ in that case.
+- Sometimes the game window never shows up. In that case try **Alt + Tab** to open it. If that doesn't work, press **Ctrl + Shift + F5** _(Restart debugging)_ in that case.
 - If the game doesn't start because the game's executable can't be found, open `...\ScriptsDev\Properties\launchSettings.json` and replace "**executablePath**" with the absolute path to `%GameDir%\Binaries\Win32\BatmanAC.exe` and "**workingDirectory**" with the absolute path to `%GameDir%\Binaries\Win32` (Don't forget to escape the backslashes).
 
 ---
@@ -49,3 +49,4 @@ Follow these steps to set up the development environment so you can build, run, 
 ## 📋 Licence
 
 BmSDK is licenced under the [MIT licence](LICENSE.md).
+
