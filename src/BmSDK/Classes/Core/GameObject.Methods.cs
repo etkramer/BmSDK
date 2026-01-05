@@ -102,6 +102,14 @@ public partial class GameObject
         /// <param name="v">The direction vector for which to compute the rotation.</param>
         /// <returns>An FRotator corresponding to the Vector3.</returns>
         public static FRotator FromVector3(Vector3 v) => FromDirectionCoords(v.X, v.Y, v.Z);
+
+        public static explicit operator FRotator(FVector v) => FromFVector(v);
+
+        public static explicit operator FRotator(Vector3 v) => FromVector3(v);
+
+        public static explicit operator FVector(FRotator r) => r.ToFVector();
+
+        public static explicit operator Vector3(FRotator r) => r.ToVector3();
     }
 
     public partial record struct FVector
@@ -114,6 +122,13 @@ public partial class GameObject
         }
 
         public Vector3 ToVector3() => new(X, Y, Z);
+
+        /// <summary>
+        /// Converts this vector to an FRotator representing its orientation.
+        /// <see cref="FRotator.FromFVector(FVector)"/>
+        /// </summary>
+        /// <returns>An FRotator that describes the orientation of this vector.</returns>
+        public FRotator ToFRotator() => FRotator.FromFVector(this);
 
         public static FVector FromVector3(Vector3 v) => new(v.X, v.Y, v.Z);
 
