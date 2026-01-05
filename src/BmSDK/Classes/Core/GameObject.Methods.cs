@@ -7,7 +7,15 @@ public partial class GameObject
 {
     public partial record struct FRotator
     {
+        /// <summary>
+        /// Factor used to convert Rotational Unreal Units (RUUs) to radians.
+        /// This is useful for using trigonomic functions on FRotators.
+        /// </summary>
         public const float RuuToRadiansFactor = MathF.PI / 32768f;
+        /// <summary>
+        /// Factor used to convert radians to Rotational Unreal Units (RUUs).
+        /// This is useful when applying angles to FRotators.
+        /// </summary>
         public const float RadiansToRuuFactor = 1f / RuuToRadiansFactor;
 
         public FRotator(int pitch, int yaw, int roll)
@@ -17,7 +25,12 @@ public partial class GameObject
             Roll = roll;
         }
 
-        public (float x, float y, float z) ToVectorCoords()
+        /// <summary>
+        /// Converts the current pitch and yaw angles to a normalized direction vector.
+        /// </summary>
+        /// <returns>A tuple containing the x, y, and z components of the direction vector
+        /// corresponding to the FRotator.</returns>
+        public (float x, float y, float z) ToDirectionCoords()
         {
             float pitchRad = Pitch * RuuToRadiansFactor;
             float sinPitch = MathF.Sin(pitchRad);
@@ -30,15 +43,23 @@ public partial class GameObject
             return (x: cosPitch * cosYaw, y: cosPitch * sinYaw, z: sinPitch);
         }
 
+        /// <summary>
+        /// Converts the instance's pitch and yaw to a directional unit <see cref="FVector"/>.
+        /// </summary>
+        /// <returns>An FVector that represents the direction of the FRotator.</returns>
         public FVector ToFVector()
         {
-            var (x, y, z) = ToVectorCoords();
+            var (x, y, z) = ToDirectionCoords();
             return new(x, y, z);
         }
 
+        /// <summary>
+        /// Converts the instance's pitch and yaw to a directional unit <see cref="Vector3"/>.
+        /// </summary>
+        /// <returns>An Vector3 that represents the direction of the FRotator.</returns>
         public Vector3 ToVector3()
         {
-            var (x, y, z) = ToVectorCoords();
+            var (x, y, z) = ToDirectionCoords();
             return new(x, y, z);
         }
     }
