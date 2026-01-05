@@ -1,9 +1,64 @@
 using BmSDK.Framework;
+using System.Numerics;
 
 namespace BmSDK;
 
 public partial class GameObject
 {
+    public partial record struct FVector
+    {
+        public FVector(float x, float y, float z)
+        {
+            X = x;
+            Y = y;
+            Z = z;
+        }
+
+        public Vector3 ToVector3() => new(X, Y, Z);
+
+        public static FVector FromVector3(Vector3 v) => new(v.X, v.Y, v.Z);
+
+        public static implicit operator Vector3(FVector v) => v.ToVector3();
+
+        public static implicit operator FVector(Vector3 v) => FromVector3(v);
+    }
+
+    public partial record struct FVector2D
+    {
+        public FVector2D(float x, float y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public Vector2 ToVector2() => new(X, Y);
+
+        public static FVector2D FromVector2(Vector2 v) => new(v.X, v.Y);
+
+        public static implicit operator Vector2(FVector2D v) => v.ToVector2();
+
+        public static implicit operator FVector2D(Vector2 v) => FromVector2(v);
+    }
+
+    public partial record struct FVector4
+    {
+        public FVector4(float x, float y, float z, float w)
+        {
+            X = x;
+            Y = y;
+            Z = z;
+            W = w;
+        }
+
+        public Vector4 ToVector4() => new(X, Y, Z, W);
+
+        public static FVector4 FromVector4(Vector4 v) => new(v.X, v.Y, v.Z, v.W);
+
+        public static implicit operator Vector4(FVector4 v) => v.ToVector4();
+
+        public static implicit operator FVector4(Vector4 v) => FromVector4(v);
+    }
+
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
