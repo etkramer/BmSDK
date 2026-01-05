@@ -5,6 +5,44 @@ namespace BmSDK;
 
 public partial class GameObject
 {
+    public partial record struct FRotator
+    {
+        public const float RuuToRadiansFactor = MathF.PI / 32768f;
+        public const float RadiansToRuuFactor = 1f / RuuToRadiansFactor;
+
+        public FRotator(int pitch, int yaw, int roll)
+        {
+            Pitch = pitch;
+            Yaw = yaw;
+            Roll = roll;
+        }
+
+        public (float x, float y, float z) ToVectorCoords()
+        {
+            float pitchRad = Pitch * RuuToRadiansFactor;
+            float sinPitch = MathF.Sin(pitchRad);
+            float cosPitch = MathF.Cos(pitchRad);
+
+            float yawRad = Yaw * RuuToRadiansFactor;
+            float sinYaw = MathF.Sin(yawRad);
+            float cosYaw = MathF.Cos(yawRad);
+
+            return (x: cosPitch * cosYaw, y: cosPitch * sinYaw, z: sinPitch);
+        }
+
+        public FVector ToFVector()
+        {
+            var (x, y, z) = ToVectorCoords();
+            return new(x, y, z);
+        }
+
+        public Vector3 ToVector3()
+        {
+            var (x, y, z) = ToVectorCoords();
+            return new(x, y, z);
+        }
+    }
+
     public partial record struct FVector
     {
         public FVector(float x, float y, float z)
