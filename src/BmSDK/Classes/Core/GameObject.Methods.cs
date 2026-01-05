@@ -62,6 +62,46 @@ public partial class GameObject
             var (x, y, z) = ToDirectionCoords();
             return new(x, y, z);
         }
+
+        /// <summary>
+        /// Creates an FRotator representing the orientation corresponding to the specified direction vector components.
+        /// </summary>
+        /// <remarks>The input vector does not need to be normalized.
+        /// The resulting FRotator has Roll set to 0.</remarks>
+        /// <param name="x">The X component of the direction vector.</param>
+        /// <param name="y">The Y component of the direction vector.</param>
+        /// <param name="z">The Z component of the direction vector.</param>
+        /// <returns>An FRotator instance with pitch and yaw calculated from the direction vector.</returns>
+        public static FRotator FromDirectionCoords(float x, float y, float z)
+        {
+            float length = MathF.Sqrt(x * x + y * y);
+            float pitch = MathF.Atan2(z, length) * RadiansToRuuFactor;
+            float yaw = MathF.Atan2(y, x) * RadiansToRuuFactor;
+
+            return new FRotator(
+                (int) MathF.Round(pitch),
+                (int) MathF.Round(yaw),
+                roll: 0
+            );
+        }
+
+        /// <summary>
+        /// Creates an FRotator representing the orientation corresponding to the specified direction <see cref="FVector"/>.
+        /// </summary>
+        /// <remarks>The input vector does not need to be normalized.
+        /// The resulting FRotator has Roll set to 0.</remarks>
+        /// <param name="v">The direction vector for which to compute the rotation.</param>
+        /// <returns>An FRotator corresponding to the FVector.</returns>
+        public static FRotator FromFVector(FVector v) => FromDirectionCoords(v.X, v.Y, v.Z);
+
+        /// <summary>
+        /// Creates an FRotator representing the orientation corresponding to the specified direction <see cref="Vector3"/>.
+        /// </summary>
+        /// <remarks>The input vector does not need to be normalized.
+        /// The resulting FRotator has Roll set to 0.</remarks>
+        /// <param name="v">The direction vector for which to compute the rotation.</param>
+        /// <returns>An FRotator corresponding to the Vector3.</returns>
+        public static FRotator FromVector3(Vector3 v) => FromDirectionCoords(v.X, v.Y, v.Z);
     }
 
     public partial record struct FVector
