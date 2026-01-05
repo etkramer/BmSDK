@@ -174,7 +174,7 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 	// Print struct declaration
 	Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
 						 << ")]" << endl;
-	Printer::Indent(out) << "public record struct " << _struct->GetNameManaged() << endl;
+	Printer::Indent(out) << "public partial record struct " << _struct->GetNameManaged() << endl;
 
 	// Print struct body
 	Printer::Indent(out) << "{" << endl;
