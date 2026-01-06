@@ -2,6 +2,8 @@
 
 #include "Engine\TArray.h"
 
+using LoadPackageFn = void* (__cdecl*)(void* InOuter, const void* Filename, int LoadFlags);
+
 class UObject;
 class FNameEntry;
 
@@ -12,6 +14,7 @@ private:
 
 public:
 	static void OnAttach();
+	static void LoadClassesIntoMemory();
 	static void GenerateSDK();
 
 private:
@@ -22,4 +25,5 @@ public:
 
 	static TArray<UObject*>* GObjects;
 	static TArray<FNameEntry*>* GNames;
+	static LoadPackageFn LoadPackage;
 };
