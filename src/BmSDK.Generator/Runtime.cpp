@@ -26,12 +26,9 @@ void Runtime::OnAttach()
 	Runtime::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
 
 	// Set global pointers
-	Runtime::GObjects = (TArray<UObject*>*)(void*)(Runtime::BaseAddress + GameOffsets::GObjects);
-	Runtime::GNames = (TArray<FNameEntry*>*)(void*)(Runtime::BaseAddress + GameOffsets::GNames);
-	Runtime::LoadPackage =
-		reinterpret_cast<LoadPackageFn>(
-			(void*)(Runtime::BaseAddress + GameOffsets::LoadPackage)
-		);
+	Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
+	Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
+	Runtime::LoadPackage = (LoadPackageFn) (Runtime::BaseAddress + GameOffsets::LoadPackage);
 
 	// Wait for keypress in another thread
 	std::thread(
@@ -81,13 +78,12 @@ void Runtime::LoadClassesIntoMemory() {
 	for (const auto& entry : fs::directory_iterator(upkDir)) {
 		if (!entry.is_regular_file()) continue;	// filter files
 		if (entry.path().extension() != ".upk") continue;	// filter UPKs
-		//auto stem = entry.path().stem();
 		auto name = entry.path().stem().wstring();
 
 		// Filter packages that are only for assets
 		if (regex_search(name, packageFilter)) continue;
 
-		//TRACE("Loading in: {}", stem.string());
+		TRACE("Loading in: {}", entry.path().stem().string());
 		LoadPackage(0, name.c_str(), 0);
 	}
 	TRACE("Done loading packages");
