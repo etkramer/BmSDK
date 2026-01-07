@@ -9,6 +9,7 @@
 #include <fstream>
 #include <thread>
 #include <atomic>
+#include <regex>
 
 uintptr_t Runtime::BaseAddress = 0;
 
@@ -61,50 +62,35 @@ void Runtime::OnAttach()
 }
 
 void Runtime::LoadClassesIntoMemory() {
-	TRACE("Loading all UPKs");
+	TRACE("Loading all UPKs into memory");
 
-	fs::path upkDir = "..\\..\\BmGame\\CookedPCConsole";
+	const wregex packageFilter(
+		// exact match these names
+		// these packages are always loaded
+		L"(?:^Core$|^Engine$|^BmGame$|^OnlineSubsystem$|"
+		// match if Playable_ is NOT present, but _SF is
+		// SeekFree packages don't contain classes
+		L"^(?!Playable_).*_SF$|"
+		// match if these affixes are present anywhere
+		L"_Static|_FX|_Lights|_CLights|_Audio|_LOD|_Px|Anim_|Bio_|CS_|CV_|"
+		L"Dlg-|LH-|WwSpch-|"
+		L"ShaderCache|Tape|Synopsis|Gallery)",
+		regex_constants::icase);
+
+	const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
 	for (const auto& entry : fs::directory_iterator(upkDir)) {
 		if (!entry.is_regular_file()) continue;	// filter files
 		if (entry.path().extension() != ".upk") continue;	// filter UPKs
-		auto stem = entry.path().stem();
-		auto name = stem.string();
-
-		// Skip automatically loaded packages
-		if (name == "Core"
-			|| name == "Engine"
-			|| name == "BmGame"
-			|| name == "OnlineSubsystem") continue;
-
-		// SeekFree packages except PCs do not contain scripts
-		if (!name.starts_with("Playable_")
-			&& name.ends_with("_SF")) continue;
+		//auto stem = entry.path().stem();
+		auto name = entry.path().stem().wstring();
 
 		// Filter packages that are only for assets
-		if (name.find("_Static") != string::npos
-			|| name.find("_FX") != string::npos
-			|| name.find("_Lights") != string::npos
-			|| name.find("_CLights") != string::npos
-			|| name.find("_Audio") != string::npos
-			|| name.find("_LOD") != string::npos
-			|| name.find("_Px") != string::npos
-			|| name.find("ShaderCache") != string::npos
-			|| name.find("Anim_") != string::npos
-			|| name.find("Bio_") != string::npos
-			|| name.find("CS_") != string::npos
-			|| name.find("CV_") != string::npos
-			|| name.find("Dlg-") != string::npos
-			|| name.find("LH-") != string::npos
-			|| name.find("WwSpch-") != string::npos
-			|| name.find("Tape") != string::npos
-			|| name.find("Synopsis") != string::npos
-			|| name.find("Gallery") != string::npos) continue;
+		if (regex_search(name, packageFilter)) continue;
 
-		//TRACE("Would load in: {}", name);
-		wstring encodedName = stem.wstring();
-		const wchar_t* namePtr = encodedName.c_str();
-		LoadPackage(0, namePtr, 0);
+		//TRACE("Loading in: {}", stem.string());
+		LoadPackage(0, name.c_str(), 0);
 	}
+	TRACE("Done loading packages");
 }
 
 void Runtime::GenerateSDK()

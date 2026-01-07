@@ -2,7 +2,7 @@
 
 #include "Engine\TArray.h"
 
-using LoadPackageFn = void* (__cdecl*)(void* InOuter, const void* Filename, int LoadFlags);
+using LoadPackageFn = void* (__cdecl*)(void* InOuter, const wchar_t* Filename, int LoadFlags);
 
 class UObject;
 class FNameEntry;
