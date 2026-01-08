@@ -98,9 +98,10 @@ void Runtime::OnAttach()
 							if (this != &other)
 							{
 								// Clean up our current handle before taking ownership of the other
+								// We must resume the thread before closing to maintain RAII guarantees
 								if (handle)
 								{
-									// Don't resume - just close the handle since the thread should stay suspended
+									ResumeThread(handle);
 									CloseHandle(handle);
 								}
 								handle = other.handle;
