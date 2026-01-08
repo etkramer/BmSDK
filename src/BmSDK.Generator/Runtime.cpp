@@ -68,15 +68,23 @@ void Runtime::OnAttach()
 						TRACE("Warning: Main thread ID not initialized, skipping suspension");
 					}
 
+					// RAII wrapper to ensure main thread is resumed
+					struct ThreadResumeGuard
+					{
+						HANDLE& handle;
+						~ThreadResumeGuard()
+						{
+							if (handle)
+							{
+								ResumeThread(handle);
+								CloseHandle(handle);
+								handle = NULL;
+							}
+						}
+					} guard{hMainThread};
+
 					// Perform SDK generation
 					Runtime::GenerateSDK();
-
-					// Resume the main thread
-					if (hMainThread)
-					{
-						ResumeThread(hMainThread);
-						CloseHandle(hMainThread);
-					}
 
 					break;
 				}
