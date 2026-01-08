@@ -63,68 +63,6 @@ internal static class Loader
 
     private static void OnGameInit()
     {
-        // Do we have the generator present?
-        if (GeneratorBridge.IsGeneratorPresent)
-        {
-            var packageDir = Path.Combine(FileUtils.GetGamePath(), "CookedPCConsole");
-
-            // Load packages containing classes we'll want at generation time.
-            foreach (var packagePath in Directory.EnumerateFiles(packageDir, "*.upk"))
-            {
-                var packageName = Path.GetFileNameWithoutExtension(packagePath);
-
-                // Skip common packages we know are always loaded.
-                if (
-                    packageName.Equals("Core", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Equals("Engine", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Equals("BmGame", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("OnlineSubsystem", StringComparison.OrdinalIgnoreCase)
-                )
-                {
-                    continue;
-                }
-
-                // In most cases, don't load SeekFree packages as these won't contain classes.
-                if (
-                    !packageName.StartsWith("Playable_", StringComparison.OrdinalIgnoreCase)
-                    && packageName.EndsWith("_SF", StringComparison.OrdinalIgnoreCase)
-                )
-                {
-                    continue;
-                }
-
-                // Don't load these package types as these won't contain classes.
-                if (
-                    packageName.Contains("_Static", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_FX", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_Lights", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_CLights", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_Audio", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_LOD", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("_Px", StringComparison.OrdinalIgnoreCase)
-                    || packageName.Contains("ShaderCache", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Anim_", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Bio_", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("CS_", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("CV_", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Dlg-", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("LH-", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("WwSpch-", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Tape", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Synopsis", StringComparison.OrdinalIgnoreCase)
-                    || packageName.StartsWith("Gallery", StringComparison.OrdinalIgnoreCase)
-                )
-                {
-                    continue;
-                }
-
-                Debug.Log($"Loading {packageName}");
-
-                // Load whole package into memory.
-                Game.LoadPackage(packageName);
-            }
-        }
-
         // Call Main() for scripts
         ScriptManager.Scripts.ForEach(script =>
         {
