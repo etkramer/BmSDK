@@ -22,4 +22,6 @@ public:
 
 	static TArray<UObject*>* GObjects;
 	static TArray<FNameEntry*>* GNames;
+
+	static DWORD MainThreadId;
 };

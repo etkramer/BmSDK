@@ -14,8 +14,13 @@ uintptr_t Runtime::BaseAddress = 0;
 TArray<UObject*>* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
 
+DWORD Runtime::MainThreadId = 0;
+
 void Runtime::OnAttach()
 {
+	// Save the main thread ID (we're on the main thread at this point)
+	Runtime::MainThreadId = GetCurrentThreadId();
+
 	// Setup debug console
 	Debug::Init();
 
@@ -44,8 +49,23 @@ void Runtime::OnAttach()
 						continue;
 					}
 
+					// Open the main thread and suspend it
+					HANDLE hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
+					if (hMainThread)
+					{
+						SuspendThread(hMainThread);
+					}
+
 					// Perform SDK generation
 					Runtime::GenerateSDK();
+
+					// Resume the main thread
+					if (hMainThread)
+					{
+						ResumeThread(hMainThread);
+						CloseHandle(hMainThread);
+					}
+
 					break;
 				}
 				this_thread::sleep_for(chrono::milliseconds(100));
