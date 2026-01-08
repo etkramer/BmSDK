@@ -77,7 +77,10 @@ void Runtime::OnAttach()
 					// RAII wrapper to ensure main thread is resumed
 					struct ThreadResumeGuard
 					{
-						HANDLE& handle;
+						HANDLE handle;
+						
+						explicit ThreadResumeGuard(HANDLE h) : handle(h) {}
+						
 						~ThreadResumeGuard()
 						{
 							if (handle)
@@ -88,7 +91,6 @@ void Runtime::OnAttach()
 									TRACE("Error: Failed to resume main thread (error {})", GetLastError());
 								}
 								CloseHandle(handle);
-								handle = NULL;
 							}
 						}
 					} guard{hMainThread};
