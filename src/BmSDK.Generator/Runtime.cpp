@@ -56,7 +56,13 @@ void Runtime::OnAttach()
 						hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
 						if (hMainThread)
 						{
-							SuspendThread(hMainThread);
+							DWORD suspendCount = SuspendThread(hMainThread);
+							if (suspendCount == (DWORD)-1)
+							{
+								TRACE("Warning: Failed to suspend main thread (error {})", GetLastError());
+								CloseHandle(hMainThread);
+								hMainThread = NULL;
+							}
 						}
 						else
 						{
@@ -76,7 +82,11 @@ void Runtime::OnAttach()
 						{
 							if (handle)
 							{
-								ResumeThread(handle);
+								DWORD resumeCount = ResumeThread(handle);
+								if (resumeCount == (DWORD)-1)
+								{
+									TRACE("Error: Failed to resume main thread (error {})", GetLastError());
+								}
 								CloseHandle(handle);
 								handle = NULL;
 							}
