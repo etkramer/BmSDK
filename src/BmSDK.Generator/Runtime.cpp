@@ -55,6 +55,10 @@ void Runtime::OnAttach()
 					{
 						SuspendThread(hMainThread);
 					}
+					else
+					{
+						TRACE("Warning: Failed to open main thread for suspension (error {})", GetLastError());
+					}
 
 					// Perform SDK generation
 					Runtime::GenerateSDK();
