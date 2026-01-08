@@ -56,8 +56,9 @@ void Runtime::OnAttach()
 						hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
 						if (hMainThread)
 						{
+							constexpr DWORD SUSPEND_THREAD_ERROR = (DWORD)-1;
 							DWORD suspendCount = SuspendThread(hMainThread);
-							if (suspendCount == (DWORD)-1)
+							if (suspendCount == SUSPEND_THREAD_ERROR)
 							{
 								TRACE("Warning: Failed to suspend main thread (error {})", GetLastError());
 								CloseHandle(hMainThread);
@@ -81,12 +82,17 @@ void Runtime::OnAttach()
 						
 						explicit ThreadResumeGuard(HANDLE h) : handle(h) {}
 						
+						// Delete copy operations to prevent double-close
+						ThreadResumeGuard(const ThreadResumeGuard&) = delete;
+						ThreadResumeGuard& operator=(const ThreadResumeGuard&) = delete;
+						
 						~ThreadResumeGuard()
 						{
 							if (handle)
 							{
+								constexpr DWORD RESUME_THREAD_ERROR = (DWORD)-1;
 								DWORD resumeCount = ResumeThread(handle);
-								if (resumeCount == (DWORD)-1)
+								if (resumeCount == RESUME_THREAD_ERROR)
 								{
 									TRACE("Error: Failed to resume main thread (error {})", GetLastError());
 								}
