@@ -49,6 +49,9 @@ void Runtime::OnAttach()
 						continue;
 					}
 
+					// Error constants for thread suspend/resume operations
+					constexpr DWORD THREAD_OPERATION_ERROR = (DWORD)-1;
+
 					// Open the main thread and suspend it
 					HANDLE hMainThread = NULL;
 					if (Runtime::MainThreadId != 0)
@@ -56,9 +59,8 @@ void Runtime::OnAttach()
 						hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
 						if (hMainThread)
 						{
-							constexpr DWORD SUSPEND_THREAD_ERROR = (DWORD)-1;
 							DWORD suspendCount = SuspendThread(hMainThread);
-							if (suspendCount == SUSPEND_THREAD_ERROR)
+							if (suspendCount == THREAD_OPERATION_ERROR)
 							{
 								TRACE("Warning: Failed to suspend main thread (error {})", GetLastError());
 								CloseHandle(hMainThread);
@@ -111,9 +113,8 @@ void Runtime::OnAttach()
 						{
 							if (handle)
 							{
-								constexpr DWORD RESUME_THREAD_ERROR = (DWORD)-1;
 								DWORD resumeCount = ResumeThread(handle);
-								if (resumeCount == RESUME_THREAD_ERROR)
+								if (resumeCount == THREAD_OPERATION_ERROR)
 								{
 									TRACE("Error: Failed to resume main thread (error {})", GetLastError());
 								}
