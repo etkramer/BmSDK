@@ -5,14 +5,18 @@
 #include "Engine\GameOffsets.h"
 #include "Printer\Printer.h"
 
+#include <cstdint>
 #include <fstream>
 #include <thread>
 #include <atomic>
+#include <regex>
 
 uintptr_t Runtime::BaseAddress = 0;
+DWORD Runtime::MainThreadId = 0;
 
 TArray<UObject*>* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
+LoadPackageFn Runtime::LoadPackage = 0;
 
 void Runtime::OnAttach()
 {
@@ -22,9 +26,13 @@ void Runtime::OnAttach()
 	// Find base address
 	Runtime::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
 
+	// Get the main thread Id
+	Runtime::MainThreadId = GetCurrentThreadId();
+
 	// Set global pointers
-	Runtime::GObjects = (TArray<UObject*>*)(void*)(Runtime::BaseAddress + GameOffsets::GObjects);
-	Runtime::GNames = (TArray<FNameEntry*>*)(void*)(Runtime::BaseAddress + GameOffsets::GNames);
+	Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
+	Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
+	Runtime::LoadPackage = (LoadPackageFn) (Runtime::BaseAddress + GameOffsets::LoadPackage);
 
 	// Wait for keypress in another thread
 	std::thread(
@@ -44,8 +52,15 @@ void Runtime::OnAttach()
 						continue;
 					}
 
-					// Perform SDK generation
+					HANDLE mainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
+					if (mainThread) SuspendThread(mainThread);
+
 					Runtime::GenerateSDK();
+
+					if (mainThread) {
+						ResumeThread(mainThread);
+						CloseHandle(mainThread);
+					}
 					break;
 				}
 				this_thread::sleep_for(chrono::milliseconds(100));
@@ -54,9 +69,41 @@ void Runtime::OnAttach()
 		.detach();
 }
 
+void Runtime::LoadClassesIntoMemory() {
+	TRACE("Loading all UPKs into memory");
+
+	const wregex packageFilter(
+		// exact match these names
+		// these packages are always loaded
+		L"(?:^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
+		// match if Playable_ is NOT present, but _SF is
+		// SeekFree packages don't contain classes
+		L"^(?!Playable_).*_SF$|"
+		// match if these are present anywhere
+		L"_Static|_FX|_Lights|_CLights|_Audio|_LOD|_Px|ShaderCache|"
+		// match if these are at the start
+		L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery)",
+		regex_constants::icase);
+
+	const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
+	for (const auto& entry : fs::directory_iterator(upkDir)) {
+		if (!entry.is_regular_file()) continue;	// filter files
+		if (entry.path().extension() != ".upk") continue;	// filter UPKs
+		auto name = entry.path().stem().wstring();
+
+		// Filter packages that are only for assets
+		if (regex_search(name, packageFilter)) continue;
+
+		LoadPackage(0, name.c_str(), 0);
+	}
+	TRACE("Done loading packages");
+}
+
 void Runtime::GenerateSDK()
 {
 	TRACE("Preparing SDK generation");
+
+	LoadClassesIntoMemory();
 
 	TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
 
