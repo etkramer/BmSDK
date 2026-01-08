@@ -50,14 +50,22 @@ void Runtime::OnAttach()
 					}
 
 					// Open the main thread and suspend it
-					HANDLE hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
-					if (hMainThread)
+					HANDLE hMainThread = NULL;
+					if (Runtime::MainThreadId != 0)
 					{
-						SuspendThread(hMainThread);
+						hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
+						if (hMainThread)
+						{
+							SuspendThread(hMainThread);
+						}
+						else
+						{
+							TRACE("Warning: Failed to open main thread for suspension (error {})", GetLastError());
+						}
 					}
 					else
 					{
-						TRACE("Warning: Failed to open main thread for suspension (error {})", GetLastError());
+						TRACE("Warning: Main thread ID not initialized, skipping suspension");
 					}
 
 					// Perform SDK generation
