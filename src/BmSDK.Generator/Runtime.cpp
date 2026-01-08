@@ -49,83 +49,19 @@ void Runtime::OnAttach()
 						continue;
 					}
 
-					// Error constants for thread suspend/resume operations
-					constexpr DWORD THREAD_OPERATION_ERROR = (DWORD)-1;
-
-					// Open the main thread and suspend it
-					HANDLE hMainThread = NULL;
-					if (Runtime::MainThreadId != 0)
-					{
-						hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
-						if (hMainThread)
-						{
-							DWORD suspendCount = SuspendThread(hMainThread);
-							if (suspendCount == THREAD_OPERATION_ERROR)
-							{
-								TRACE("Warning: Failed to suspend main thread (error {})", GetLastError());
-								CloseHandle(hMainThread);
-								hMainThread = NULL;
-							}
-						}
-						else
-						{
-							TRACE("Warning: Failed to open main thread for suspension (error {})", GetLastError());
-						}
-					}
-					else
-					{
-						TRACE("Warning: Main thread ID not initialized, skipping suspension");
-					}
-
-					// RAII wrapper to ensure main thread is resumed
-					struct ThreadResumeGuard
-					{
-						HANDLE handle;
-						
-						explicit ThreadResumeGuard(HANDLE h) : handle(h) {}
-						
-						// Delete copy operations to prevent double-close
-						ThreadResumeGuard(const ThreadResumeGuard&) = delete;
-						ThreadResumeGuard& operator=(const ThreadResumeGuard&) = delete;
-						
-						// Move operations
-						ThreadResumeGuard(ThreadResumeGuard&& other) noexcept : handle(other.handle)
-						{
-							other.handle = NULL;
-						}
-						ThreadResumeGuard& operator=(ThreadResumeGuard&& other) noexcept
-						{
-							if (this != &other)
-							{
-								// Clean up our current handle before taking ownership of the other
-								// We must resume the thread before closing to maintain RAII guarantees
-								if (handle)
-								{
-									ResumeThread(handle);
-									CloseHandle(handle);
-								}
-								handle = other.handle;
-								other.handle = NULL;
-							}
-							return *this;
-						}
-						
-						~ThreadResumeGuard()
-						{
-							if (handle)
-							{
-								DWORD resumeCount = ResumeThread(handle);
-								if (resumeCount == THREAD_OPERATION_ERROR)
-								{
-									TRACE("Error: Failed to resume main thread (error {})", GetLastError());
-								}
-								CloseHandle(handle);
-							}
-						}
-					} guard{hMainThread};
+					// Suspend the main thread during generation
+					HANDLE hMainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
+					if (hMainThread) SuspendThread(hMainThread);
 
 					// Perform SDK generation
 					Runtime::GenerateSDK();
+
+					// Resume the main thread
+					if (hMainThread)
+					{
+						ResumeThread(hMainThread);
+						CloseHandle(hMainThread);
+					}
 
 					break;
 				}
