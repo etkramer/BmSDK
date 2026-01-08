@@ -86,6 +86,27 @@ void Runtime::OnAttach()
 						ThreadResumeGuard(const ThreadResumeGuard&) = delete;
 						ThreadResumeGuard& operator=(const ThreadResumeGuard&) = delete;
 						
+						// Move operations
+						ThreadResumeGuard(ThreadResumeGuard&& other) noexcept : handle(other.handle)
+						{
+							other.handle = NULL;
+						}
+						ThreadResumeGuard& operator=(ThreadResumeGuard&& other) noexcept
+						{
+							if (this != &other)
+							{
+								// Clean up our current handle before taking ownership of the other
+								if (handle)
+								{
+									ResumeThread(handle);
+									CloseHandle(handle);
+								}
+								handle = other.handle;
+								other.handle = NULL;
+							}
+							return *this;
+						}
+						
 						~ThreadResumeGuard()
 						{
 							if (handle)
