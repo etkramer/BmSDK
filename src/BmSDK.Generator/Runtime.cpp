@@ -79,10 +79,10 @@ void Runtime::LoadClassesIntoMemory() {
 		// match if Playable_ is NOT present, but _SF is
 		// SeekFree packages don't contain classes
 		L"^(?!Playable_).*_SF$|"
-		// match if these affixes are present anywhere
-		L"_Static|_FX|_Lights|_CLights|_Audio|_LOD|_Px|Anim_|Bio_|CS_|CV_|"
-		L"Dlg-|LH-|WwSpch-|"
-		L"ShaderCache|Tape|Synopsis|Gallery)",
+		// match if these are present anywhere
+		L"_Static|_FX|_Lights|_CLights|_Audio|_LOD|_Px|ShaderCache|"
+		// match if these are at the start
+		L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery)",
 		regex_constants::icase);
 
 	const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
