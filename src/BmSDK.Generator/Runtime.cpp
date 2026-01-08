@@ -12,6 +12,7 @@
 #include <regex>
 
 uintptr_t Runtime::BaseAddress = 0;
+DWORD Runtime::MainThreadId = 0;
 
 TArray<UObject*>* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
@@ -24,6 +25,9 @@ void Runtime::OnAttach()
 
 	// Find base address
 	Runtime::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
+
+	// Get the main thread Id
+	Runtime::MainThreadId = GetCurrentThreadId();
 
 	// Set global pointers
 	Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
@@ -48,8 +52,15 @@ void Runtime::OnAttach()
 						continue;
 					}
 
-					// Perform SDK generation
+					HANDLE mainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, Runtime::MainThreadId);
+					if (mainThread) SuspendThread(mainThread);
+
 					Runtime::GenerateSDK();
+
+					if (mainThread) {
+						ResumeThread(mainThread);
+						CloseHandle(mainThread);
+					}
 					break;
 				}
 				this_thread::sleep_for(chrono::milliseconds(100));
@@ -64,7 +75,7 @@ void Runtime::LoadClassesIntoMemory() {
 	const wregex packageFilter(
 		// exact match these names
 		// these packages are always loaded
-		L"(?:^Core$|^Engine$|^BmGame$|^OnlineSubsystem$|"
+		L"(?:^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
 		// match if Playable_ is NOT present, but _SF is
 		// SeekFree packages don't contain classes
 		L"^(?!Playable_).*_SF$|"
@@ -83,7 +94,6 @@ void Runtime::LoadClassesIntoMemory() {
 		// Filter packages that are only for assets
 		if (regex_search(name, packageFilter)) continue;
 
-		TRACE("Loading in: {}", entry.path().stem().string());
 		LoadPackage(0, name.c_str(), 0);
 	}
 	TRACE("Done loading packages");

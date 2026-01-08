@@ -22,6 +22,7 @@ private:
 
 public:
 	static uintptr_t BaseAddress;
+	static DWORD MainThreadId;
 
 	static TArray<UObject*>* GObjects;
 	static TArray<FNameEntry*>* GNames;
