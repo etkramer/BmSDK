@@ -98,7 +98,7 @@ void Runtime::OnAttach()
 								// Clean up our current handle before taking ownership of the other
 								if (handle)
 								{
-									ResumeThread(handle);
+									// Don't resume - just close the handle since the thread should stay suspended
 									CloseHandle(handle);
 								}
 								handle = other.handle;
