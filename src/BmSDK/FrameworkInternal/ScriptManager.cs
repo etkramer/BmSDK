@@ -13,6 +13,28 @@ namespace BmSDK.Framework;
 
 internal static class ScriptManager
 {
+    public const LanguageVersion LangVer = LanguageVersion.CSharp12;
+    public static readonly CSharpParseOptions ParseOptions = CSharpParseOptions.Default.WithLanguageVersion(LangVer);
+    public const string GlobalUsings = """
+                global using global::System;
+                global using global::System.Collections.Generic;
+                global using global::System.IO;
+                global using global::System.Linq;
+                global using global::System.Net.Http;
+                global using global::System.Threading;
+                global using global::System.Threading.Tasks;
+
+                global using global::BmSDK.Framework;
+                """;
+    public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
+    public static readonly CSharpCompilationOptions CompilerOptions = new(
+        OutputKind.DynamicallyLinkedLibrary,
+        platform: Platform.X86,
+        allowUnsafe: true,
+        // TODO: Not clear why this needs to be false.
+        concurrentBuild: false,
+        optimizationLevel: OptimizationLevel.Debug);
+
     static Assembly? s_scriptsAssembly = null;
     static readonly List<Script> s_scriptInstances = [];
 
@@ -25,53 +47,34 @@ internal static class ScriptManager
         var scriptDir = FileUtils.GetScriptsPath();
 
         // Read C# source files from disk
-        var sourceFiles = Directory
+        var sourceFilePaths = Directory
             .EnumerateFiles(scriptDir, "*.cs", SearchOption.AllDirectories)
-            .Where(file => !file.Replace("\\", "/").Contains("/obj/"))
+            .Where(filePath => !filePath.Replace("\\", "/").Contains("/obj/"))
             .ToList();
 
         // If no scripts found, return false
-        if (sourceFiles.Count == 0)
+        if (sourceFilePaths.Count == 0)
         {
-            Debug.LogWarning(
-                $"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}"
-            );
-
+            Debug.LogWarning($"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}");
             return false;
         }
 
         // Parse C# sources with Roslyn
-        var parseOptions = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.CSharp12);
-        var syntaxTrees = sourceFiles
-            .Select(file => CSharpSyntaxTree.ParseText(File.ReadAllText(file), parseOptions, file))
+        var syntaxTrees = sourceFilePaths
+            .Select(filePath => CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath))
             .ToList();
 
         // Parse generated sources (for global usings, etc.)
-        {
-            syntaxTrees.Insert(
-                0,
-                CSharpSyntaxTree.ParseText(
-                    """
-                    global using global::System;
-                    global using global::System.Collections.Generic;
-                    global using global::System.IO;
-                    global using global::System.Linq;
-                    global using global::System.Net.Http;
-                    global using global::System.Threading;
-                    global using global::System.Threading.Tasks;
-
-                    global using global::BmSDK.Framework;
-                    """,
-                    parseOptions,
-                    "Scripts.GlobalUsings.g.cs"
-                )
-            );
-        }
+        syntaxTrees.Insert(
+            index: 0,
+            CSharpSyntaxTree.ParseText(GlobalUsings, ParseOptions, GlobalUsingsPath)
+        );
 
         // Gather assembly/metadata references
         List<MetadataReference> metadataReferences =
         [
             // Basic .NET 8 assemblies
+            // Note: Putting this is in a constant freezes the game if a debugger is attached
             .. ReferenceAssemblies.Net80.References.All,
             // BmSDK.dll
             MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
@@ -85,87 +88,79 @@ internal static class ScriptManager
                 .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
 
         // TODO: Perform compilation in another thread.
-        var watch = Stopwatch.StartNew();
         Debug.Log(
-            $"Compiling {sourceFiles.Count} {CommonUtils.FormatPlural(sourceFiles.Count, "script")}"
+            $"Compiling {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")}"
         );
         Debug.Log("(...)");
+
+        var watch = Stopwatch.StartNew();
+
+        // Create compilation from parsed source.
+        var compilation = CSharpCompilation
+            .Create("Scripts.dll")
+            .WithOptions(CompilerOptions)
+            .AddReferences(metadataReferences)
+            .AddSyntaxTrees(syntaxTrees);
+
+        // Emit assembly in-memory.
+        var emitStream = new MemoryStream();
+        var emitResult = compilation.Emit(emitStream);
+
+        // Did we succeed?
+        if (!emitResult.Success)
         {
-            // Create compilation from parsed source.
-            var compilation = CSharpCompilation
-                .Create("Scripts.dll")
-                .WithOptions(
-                    new CSharpCompilationOptions(
-                        OutputKind.DynamicallyLinkedLibrary,
-                        platform: Platform.X86,
-                        allowUnsafe: true,
-                        // TODO: Not clear why this needs to be false.
-                        concurrentBuild: false,
-                        optimizationLevel: OptimizationLevel.Debug
-                    )
-                )
-                .AddReferences(metadataReferences)
-                .AddSyntaxTrees(syntaxTrees);
+            // Retrieve errors from the emit result.
+            var errors = GetErrors(emitResult);
+            var errorsByFilePath = errors
+                .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
+                .ToDictionary(group => group.Key, group => group.ToArray());
 
-            // Emit assembly in-memory.
-            var emitStream = new MemoryStream();
-            var emitResult = compilation.Emit(emitStream);
-
-            // Did we succeed?
-            if (!emitResult.Success)
+            // Print compilation errors by file.
+            foreach (var filePath in errorsByFilePath.Keys)
             {
-                // Retrieve errors from the emit result.
-                var errors = GetErrors(emitResult);
-                var errorsByFilePath = errors
-                    .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
-                    .ToDictionary(group => group.Key, group => group.ToArray());
+                var shortPath = Path.GetRelativePath(scriptDir, filePath);
+                Debug.LogError(
+                    $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
+                    skipSender: true);
 
-                // Print compilation errors by file.
-                foreach (var filePath in errorsByFilePath.Keys)
+                foreach (var error in errorsByFilePath[filePath])
                 {
-                    var shortPath = Path.GetRelativePath(scriptDir, filePath);
-                    Debug.LogError(
-                        $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
-                        true
-                    );
-
-                    foreach (var error in errorsByFilePath[filePath])
+                    // Grab error location for printing.
+                    var lineSpan = error.Location.GetLineSpan();
+                    var mappedLineSpan = error.Location.GetMappedLineSpan();
+                    if (mappedLineSpan.HasMappedPath)
                     {
-                        // Grab error location for printing.
-                        var lineSpan = error.Location.GetLineSpan();
-                        var mappedLineSpan = error.Location.GetMappedLineSpan();
-                        if (mappedLineSpan.HasMappedPath)
-                        {
-                            lineSpan = mappedLineSpan;
-                        }
-
-                        // Print error location.
-                        var locationText = "";
-                        if (lineSpan.IsValid)
-                        {
-                            var pos = lineSpan.StartLinePosition;
-                            locationText = $"({pos.Line + 1}) ";
-                        }
-
-                        // Print error.
-                        Debug.LogError($"  {locationText}{error.Id}: {error.GetMessage()}", true);
+                        lineSpan = mappedLineSpan;
                     }
-                }
 
-                // Print failed message.
-                Debug.LogError($"Compilation failed!");
-                return false;
+                    // Print error location.
+                    var locationText = "";
+                    if (lineSpan.IsValid)
+                    {
+                        var pos = lineSpan.StartLinePosition;
+                        locationText = $"({pos.Line + 1}) ";
+                    }
+
+                    // Print error.
+                    Debug.LogError(
+                        $"  {locationText}{error.Id}: {error.GetMessage()}",
+                        skipSender: true);
+                }
             }
 
-            // Load into Assembly object.
-            emitStream.Position = 0;
-            s_scriptsAssembly = Assembly.Load(emitStream.ToArray());
+            // Print failed message.
+            Debug.LogError($"Compilation failed!");
+            return false;
         }
+
+        // Load into Assembly object.
+        emitStream.Position = 0;
+        s_scriptsAssembly = Assembly.Load(emitStream.ToArray());
 
         // Report compilation duration.
         watch.Stop();
         Debug.Log(
-            $"Success! {sourceFiles.Count} {CommonUtils.FormatPlural(sourceFiles.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
+            $"Success! {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
         );
 
         // Instantiate script types.
@@ -198,7 +193,7 @@ internal static class ScriptManager
             {
                 Debug.LogError(
                     $"Failed to create instance of script {scriptName}: {e.Message}",
-                    true
+                    skipSender: true
                 );
 
                 continue;
