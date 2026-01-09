@@ -22,7 +22,7 @@ internal static class ScriptManager
     {
         // Find directories (note we're relative to the host asi)
         var baseDir = FileUtils.GetBasePath();
-        var scriptDir = Path.Combine(baseDir, "BmGame\\Scripts\\");
+        var scriptDir = FileUtils.GetScriptsPath();
 
         // Read C# source files from disk
         var sourceFiles = Directory

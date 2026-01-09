@@ -12,24 +12,17 @@ public static class FileUtils
     /// <summary>
     /// Returns the full path to the game directory (./).
     /// </summary>
-    public static string GetBasePath()
-    {
-        return Path.GetFullPath(Path.Combine(s_exeDir, "..", ".."));
-    }
+    public static string GetBasePath() => Path.GetFullPath(Path.Combine(s_exeDir, "..", ".."));
 
     /// <summary>
     /// Returns the full path to the binaries directory (./Binaries/Win32/).
     /// </summary>
-    public static string GetBinariesPath()
-    {
-        return Path.Combine(GetBasePath(), "Binaries", "Win32");
-    }
+    public static string GetBinariesPath() => Path.Combine(GetBasePath(), "Binaries", "Win32");
 
     /// <summary>
     /// Returns the full path to the game directory (./BmGame/).
     /// </summary>
-    public static string GetGamePath()
-    {
-        return Path.Combine(GetBasePath(), "BmGame");
-    }
+    public static string GetGamePath() => Path.Combine(GetBasePath(), "BmGame");
+
+    public static string GetScriptsPath() => Path.Combine(GetBasePath(), "BmGame", "Scripts");
 }
