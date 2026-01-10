@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Loader;
+using BmSDK.Engine;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -47,14 +48,37 @@ internal static class ScriptManager
         var emitStream = CompileScripts();
         if (emitStream == null) return false;
 
-        _scriptsAlc?.Unload();
+        // Load in new mods
+        RemoveOldScripts();
         _scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
         var asm = _scriptsAlc.LoadFromStream(emitStream);
 
         // Instantiate script types.
         var scripts = CreateScriptIntsances(asm);
-        _scripts = scripts;
+        _scripts.AddRange(scripts);
         return true;
+    }
+
+    private static void RemoveOldScripts()
+    {
+        if (_scriptsAlc == null) return;
+
+        // Clear function redirects of scripts
+        RedirectManager.s_redirectorDict.Clear();
+
+        // Clear scripts attached to in-game actors
+        Actor.s_scriptComponents.ForEach(component =>
+        {
+            component.Owner._scriptComponents.Clear();
+        });
+        Actor.s_scriptComponents.Clear();
+
+        // Clear mods
+        _scripts.Clear();
+
+        // Initiaite closure of AssemblyLoadContext
+        _scriptsAlc.Unload();
+        _scriptsAlc = null;
     }
 
     private static MemoryStream? CompileScripts()

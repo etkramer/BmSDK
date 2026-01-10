@@ -9,14 +9,14 @@ public partial class Actor
     /// </summary>
     public static IReadOnlyCollection<ScriptComponent> AllScriptComponents => s_scriptComponents;
 
-    private static readonly List<ScriptComponent> s_scriptComponents = [];
+    internal static readonly List<ScriptComponent> s_scriptComponents = [];
 
     /// <summary>
     /// Collection of all script components attached to this actor.
     /// </summary>
     public IReadOnlyCollection<ScriptComponent> ScriptComponents => _scriptComponents;
 
-    private readonly List<ScriptComponent> _scriptComponents = [];
+    internal readonly List<ScriptComponent> _scriptComponents = [];
 
     /// <summary>
     /// Attaches an existing script component to this actor.
