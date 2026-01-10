@@ -42,6 +42,19 @@ internal static class ScriptManager
 
     public static bool LoadScripts()
     {
+        var emitStream = CompileScripts();
+        if (emitStream == null) return false;
+
+        s_scriptsAssembly = Assembly.Load(emitStream.ToArray());
+
+        // Instantiate script types.
+        var scripts = GetScripts(s_scriptsAssembly);
+        s_scriptInstances = scripts;
+        return true;
+    }
+
+    private static MemoryStream? CompileScripts()
+    {
         // Find directories (note we're relative to the host asi)
         var baseDir = FileUtils.GetBasePath();
         var scriptDir = FileUtils.GetScriptsPath();
@@ -56,7 +69,7 @@ internal static class ScriptManager
         if (sourceFilePaths.Count == 0)
         {
             Debug.LogWarning($"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}");
-            return false;
+            return null;
         }
 
         // Parse C# sources with Roslyn
@@ -109,53 +122,9 @@ internal static class ScriptManager
         // Did we succeed?
         if (!emitResult.Success)
         {
-            // Retrieve errors from the emit result.
-            var errors = GetErrors(emitResult);
-            var errorsByFilePath = errors
-                .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
-                .ToDictionary(group => group.Key, group => group.ToArray());
-
-            // Print compilation errors by file.
-            foreach (var filePath in errorsByFilePath.Keys)
-            {
-                var shortPath = Path.GetRelativePath(scriptDir, filePath);
-                Debug.LogError(
-                    $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
-                    skipSender: true);
-
-                foreach (var error in errorsByFilePath[filePath])
-                {
-                    // Grab error location for printing.
-                    var lineSpan = error.Location.GetLineSpan();
-                    var mappedLineSpan = error.Location.GetMappedLineSpan();
-                    if (mappedLineSpan.HasMappedPath)
-                    {
-                        lineSpan = mappedLineSpan;
-                    }
-
-                    // Print error location.
-                    var locationText = "";
-                    if (lineSpan.IsValid)
-                    {
-                        var pos = lineSpan.StartLinePosition;
-                        locationText = $"({pos.Line + 1}) ";
-                    }
-
-                    // Print error.
-                    Debug.LogError(
-                        $"  {locationText}{error.Id}: {error.GetMessage()}",
-                        skipSender: true);
-                }
-            }
-
-            // Print failed message.
-            Debug.LogError($"Compilation failed!");
-            return false;
-        }
-
-        // Load into Assembly object.
-        emitStream.Position = 0;
-        s_scriptsAssembly = Assembly.Load(emitStream.ToArray());
+            PrintErrors(emitResult, scriptDir);
+            return null;
+        }        
 
         // Report compilation duration.
         watch.Stop();
@@ -163,14 +132,63 @@ internal static class ScriptManager
             $"Success! {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")} compiled in {watch.Elapsed.FormatDuration()}"
         );
 
-        // Instantiate script types.
-        var scripts = GetScripts(s_scriptsAssembly);
-        s_scriptInstances = scripts;
-
-        return true;
+        emitStream.Position = 0;
+        return emitStream;
     }
 
-    static List<Script> GetScripts(Assembly asm)
+    private static void PrintErrors(EmitResult emitResult, string scriptsDir)
+    {
+        // Retrieve errors from the emit result.
+        var errors = GetErrors(emitResult);
+        var errorsByFilePath = errors
+            .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
+            .ToDictionary(group => group.Key, group => group.ToArray());
+
+        // Print compilation errors by file.
+        foreach (var filePath in errorsByFilePath.Keys)
+        {
+            var shortPath = Path.GetRelativePath(scriptsDir, filePath);
+            Debug.LogError(
+                $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
+                skipSender: true);
+
+            foreach (var error in errorsByFilePath[filePath])
+            {
+                // Grab error location for printing.
+                var lineSpan = error.Location.GetLineSpan();
+                var mappedLineSpan = error.Location.GetMappedLineSpan();
+                if (mappedLineSpan.HasMappedPath)
+                {
+                    lineSpan = mappedLineSpan;
+                }
+
+                // Print error location.
+                var locationText = "";
+                if (lineSpan.IsValid)
+                {
+                    var pos = lineSpan.StartLinePosition;
+                    locationText = $"({pos.Line + 1}) ";
+                }
+
+                // Print error.
+                Debug.LogError(
+                    $"  {locationText}{error.Id}: {error.GetMessage()}",
+                    skipSender: true);
+            }
+        }
+
+        // Print failed message.
+        Debug.LogError($"Compilation failed!");
+    }
+    private static Diagnostic[] GetErrors(EmitResult emitResult)
+    {
+        var diags = emitResult.Diagnostics;
+        return diags
+            .Where(diag => diag.IsWarningAsError || diag.Severity == DiagnosticSeverity.Error)
+            .ToArray();
+    }
+
+    private static List<Script> GetScripts(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
@@ -201,13 +219,5 @@ internal static class ScriptManager
         }
 
         return scripts;
-    }
-
-    static Diagnostic[] GetErrors(EmitResult emitResult)
-    {
-        var diags = emitResult.Diagnostics;
-        return diags
-            .Where(diag => diag.IsWarningAsError || diag.Severity == DiagnosticSeverity.Error)
-            .ToArray();
     }
 }
