@@ -13,6 +13,14 @@ namespace BmSDK.Framework;
 // See https://blog.jetbrains.com/dotnet/2021/12/02/how-rider-hot-reload-works-under-the-hood/
 // and https://learn.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadataupdater.applyupdate
 
+/// <summary>
+/// Provides the plugin loading system--compilation and instantiation of user scripts.
+/// </summary>
+/// <remarks>The ScriptManager class is responsible for discovering user script files, compiling them into an
+/// in-memory assembly, and managing their lifecycle through dynamic loading and unloading. It maintains a collection of
+/// loaded scripts and exposes options and configuration relevant to script compilation. This class is intended for
+/// internal use and is not thread-safe. Scripts are loaded into a collectible AssemblyLoadContext, allowing for
+/// complete unloading and reloading of scripts without restarting the application.</remarks>
 internal static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp12;
@@ -38,11 +46,18 @@ internal static class ScriptManager
         optimizationLevel: OptimizationLevel.Debug);
     public const string TargetName = "Scripts.dll";
 
-    private static AssemblyLoadContext? _scriptsAlc = null;
-    private static List<Script> _scripts = [];
+    private static AssemblyLoadContext? s_scriptsAlc = null;
+    private static readonly List<Script> s_scripts = [];
 
-    public static IEnumerable<Script> Scripts => _scripts;
+    public static IEnumerable<Script> Scripts => s_scripts;
 
+    /// <summary>
+    /// Loads and initializes all available script assemblies for the current context.
+    /// </summary>
+    /// <remarks>This method compiles user scripts, loads them into a new assembly load context, and instantiates
+    /// script types. Previously loaded scripts are removed before new scripts are loaded. If script compilation fails,
+    /// no scripts are loaded and the method returns false.</remarks>
+    /// <returns>true if the scripts were successfully compiled and loaded; otherwise, false.</returns>
     public static bool LoadScripts()
     {
         var emitStream = CompileScripts();
@@ -50,18 +65,24 @@ internal static class ScriptManager
 
         // Load in new mods
         RemoveOldScripts();
-        _scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
-        var asm = _scriptsAlc.LoadFromStream(emitStream);
+        s_scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
+        var asm = s_scriptsAlc.LoadFromStream(emitStream);
 
         // Instantiate script types.
         var scripts = CreateScriptIntsances(asm);
-        _scripts.AddRange(scripts);
+        s_scripts.AddRange(scripts);
         return true;
     }
 
+    /// <summary>
+    /// Unloads the current script assembly context and clears all registered script components and mods.
+    /// </summary>
+    /// <remarks>This method should be called when scripts need to be fully unloaded and detached from in-game
+    /// actors, such as during a reload operation. After execution, the script assembly context is released
+    /// and cannot be reused until reinitialized using <see cref="LoadScripts"/>.</remarks>
     private static void RemoveOldScripts()
     {
-        if (_scriptsAlc == null) return;
+        if (s_scriptsAlc == null) return;
 
         // Clear function redirects of scripts
         RedirectManager.s_redirectorDict.Clear();
@@ -74,13 +95,23 @@ internal static class ScriptManager
         Actor.s_scriptComponents.Clear();
 
         // Clear mods
-        _scripts.Clear();
+        s_scripts.Clear();
 
         // Initiaite closure of AssemblyLoadContext
-        _scriptsAlc.Unload();
-        _scriptsAlc = null;
+        s_scriptsAlc.Unload();
+        s_scriptsAlc = null;
     }
 
+
+    /// <summary>
+    /// Compiles all C# script files found in the scripts directory into an in-memory assembly stream.
+    /// </summary>
+    /// <remarks>The returned stream is positioned at the beginning and contains the compiled assembly in
+    /// memory. The method logs warnings if no scripts are found and outputs compilation errors to the log if
+    /// compilation fails. This method is intended for internal use and does not perform compilation on a separate
+    /// thread (yet).</remarks>
+    /// <returns>A <see cref="MemoryStream"/> containing the compiled assembly if compilation succeeds; otherwise, <see
+    /// langword="null"/> if no scripts are found or compilation fails.</returns>
     private static MemoryStream? CompileScripts()
     {
         // Find directories (note we're relative to the host asi)
@@ -164,6 +195,13 @@ internal static class ScriptManager
         return emitStream;
     }
 
+    /// <summary>
+    /// Prints compilation errors grouped by source file to the debug log.
+    /// </summary>
+    /// <remarks>Each error is displayed with its file location, error code, and message. Errors are grouped
+    /// by file, and file paths are shown relative to the specified scripts directory to improve readability.</remarks>
+    /// <param name="emitResult">The result of the compilation process containing diagnostics to be reported.</param>
+    /// <param name="scriptsDir">The root directory used to display relative file paths for error reporting.</param>
     private static void PrintErrors(EmitResult emitResult, string scriptsDir)
     {
         // Retrieve errors from the emit result.
@@ -208,6 +246,10 @@ internal static class ScriptManager
         // Print failed message.
         Debug.LogError($"Compilation failed!");
     }
+
+    /// <summary>
+    /// Retrieves all diagnostics from the specified emit result that represent errors or warnings treated as errors.
+    /// </summary>
     private static Diagnostic[] GetErrors(EmitResult emitResult)
     {
         var diags = emitResult.Diagnostics;
@@ -216,6 +258,13 @@ internal static class ScriptManager
             .ToArray();
     }
 
+    /// <summary>
+    /// Instatiates all Scripts in the specified assembly.
+    /// </summary>
+    /// <param name="asm">The assembly to search for script types. Only types that inherit from Script and are decorated with
+    /// ScriptAttribute are considered.</param>
+    /// <returns>A list of Script instances created from the eligible types found in the assembly. The list will be empty if no
+    /// matching types are found.</returns>
     private static List<Script> CreateScriptIntsances(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
