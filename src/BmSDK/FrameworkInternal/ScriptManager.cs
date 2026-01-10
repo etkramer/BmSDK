@@ -36,7 +36,7 @@ internal static class ScriptManager
         optimizationLevel: OptimizationLevel.Debug);
 
     static Assembly? s_scriptsAssembly = null;
-    static readonly List<Script> s_scriptInstances = [];
+    static List<Script> s_scriptInstances = [];
 
     public static IEnumerable<Script> Scripts => s_scriptInstances;
 
@@ -165,12 +165,12 @@ internal static class ScriptManager
 
         // Instantiate script types.
         var scripts = GetScripts(s_scriptsAssembly);
-        s_scriptInstances.AddRange(scripts);
+        s_scriptInstances = scripts;
 
         return true;
     }
 
-    static Script[] GetScripts(Assembly asm)
+    static List<Script> GetScripts(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
@@ -200,7 +200,7 @@ internal static class ScriptManager
             }
         }
 
-        return scripts.ToArray();
+        return scripts;
     }
 
     static Diagnostic[] GetErrors(EmitResult emitResult)
