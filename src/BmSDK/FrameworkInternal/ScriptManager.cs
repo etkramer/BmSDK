@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Reflection;
+using System.Runtime.Loader;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -34,22 +35,25 @@ internal static class ScriptManager
         // TODO: Not clear why this needs to be false.
         concurrentBuild: false,
         optimizationLevel: OptimizationLevel.Debug);
+    public const string TargetName = "Scripts.dll";
 
-    static Assembly? s_scriptsAssembly = null;
-    static List<Script> s_scriptInstances = [];
+    private static AssemblyLoadContext? _scriptsAlc = null;
+    private static List<Script> _scripts = [];
 
-    public static IEnumerable<Script> Scripts => s_scriptInstances;
+    public static IEnumerable<Script> Scripts => _scripts;
 
     public static bool LoadScripts()
     {
         var emitStream = CompileScripts();
         if (emitStream == null) return false;
 
-        s_scriptsAssembly = Assembly.Load(emitStream.ToArray());
+        _scriptsAlc?.Unload();
+        _scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
+        var asm = _scriptsAlc.LoadFromStream(emitStream);
 
         // Instantiate script types.
-        var scripts = GetScripts(s_scriptsAssembly);
-        s_scriptInstances = scripts;
+        var scripts = CreateScriptIntsances(asm);
+        _scripts = scripts;
         return true;
     }
 
@@ -110,7 +114,7 @@ internal static class ScriptManager
 
         // Create compilation from parsed source.
         var compilation = CSharpCompilation
-            .Create("Scripts.dll")
+            .Create(TargetName)
             .WithOptions(CompilerOptions)
             .AddReferences(metadataReferences)
             .AddSyntaxTrees(syntaxTrees);
@@ -188,7 +192,7 @@ internal static class ScriptManager
             .ToArray();
     }
 
-    private static List<Script> GetScripts(Assembly asm)
+    private static List<Script> CreateScriptIntsances(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
