@@ -24,5 +24,8 @@ public static class FileUtils
     /// </summary>
     public static string GetGamePath() => Path.Combine(GetBasePath(), "BmGame");
 
+    /// <summary>
+    /// Returns the full path to the scripts directory (./BmGame/Scripts/).
+    /// </summary>
     public static string GetScriptsPath() => Path.Combine(GetBasePath(), "BmGame", "Scripts");
 }

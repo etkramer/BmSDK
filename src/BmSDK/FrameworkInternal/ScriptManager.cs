@@ -1,10 +1,10 @@
-using System.Diagnostics;
-using System.Reflection;
-using System.Runtime.Loader;
 using BmSDK.Engine;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
+using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.Loader;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
@@ -46,10 +46,22 @@ internal static class ScriptManager
         optimizationLevel: OptimizationLevel.Debug);
     public const string TargetName = "Scripts.dll";
 
-    private static AssemblyLoadContext? s_scriptsAlc = null;
+    private static AssemblyLoadContext? s_scriptsAlc;
     private static readonly List<Script> s_scripts = [];
 
+    private static FileSystemWatcher? watcher;
+
     public static IEnumerable<Script> Scripts => s_scripts;
+
+    /// <summary>
+    /// Initializes the script system and begins monitoring for script changes.
+    /// </summary>
+    /// <remarks>This method is only be called once during application startup.</remarks>
+    public static void Init()
+    {
+        LoadScripts();
+        WatchForScriptChanges();
+    }
 
     /// <summary>
     /// Loads and initializes all available script assemblies for the current context.
@@ -58,7 +70,7 @@ internal static class ScriptManager
     /// script types. Previously loaded scripts are removed before new scripts are loaded. If script compilation fails,
     /// no scripts are loaded and the method returns false.</remarks>
     /// <returns>true if the scripts were successfully compiled and loaded; otherwise, false.</returns>
-    public static bool LoadScripts()
+    private static bool LoadScripts()
     {
         var emitStream = CompileScripts();
         if (emitStream == null) return false;
@@ -69,7 +81,7 @@ internal static class ScriptManager
         var asm = s_scriptsAlc.LoadFromStream(emitStream);
 
         // Instantiate script types.
-        var scripts = CreateScriptIntsances(asm);
+        var scripts = CreateScriptInstances(asm);
         s_scripts.AddRange(scripts);
         return true;
     }
@@ -269,7 +281,7 @@ internal static class ScriptManager
     /// ScriptAttribute are considered.</param>
     /// <returns>A list of Script instances created from the eligible types found in the assembly. The list will be empty if no
     /// matching types are found.</returns>
-    private static List<Script> CreateScriptIntsances(Assembly asm)
+    private static List<Script> CreateScriptInstances(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
@@ -301,4 +313,25 @@ internal static class ScriptManager
 
         return scripts;
     }
+
+    public static void WatchForScriptChanges()
+    {
+        watcher = new(FileUtils.GetScriptsPath())
+        {
+            Filter = "*.cs",
+            IncludeSubdirectories = true,
+            EnableRaisingEvents = true,
+            NotifyFilter = NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastWrite
+        };
+
+        watcher.Changed += ApplyScriptChanges;
+        watcher.Created += ApplyScriptChanges;
+        watcher.Deleted += ApplyScriptChanges;
+        watcher.Renamed += ApplyScriptChanges;
+    }
+
+    public static void ApplyScriptChanges(object sender, FileSystemEventArgs e)
+        => LoadScripts();
 }
