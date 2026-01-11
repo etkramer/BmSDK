@@ -84,6 +84,8 @@ internal static class ScriptManager
     {
         if (s_scriptsAlc == null) return;
 
+        // TODO(Samuil1337): Kill threads by mods when async support is added
+
         // Clear function redirects of scripts
         RedirectManager.s_redirectorDict.Clear();
 
@@ -100,6 +102,8 @@ internal static class ScriptManager
         // Initiaite closure of AssemblyLoadContext
         s_scriptsAlc.Unload();
         s_scriptsAlc = null;
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
     }
 
 
