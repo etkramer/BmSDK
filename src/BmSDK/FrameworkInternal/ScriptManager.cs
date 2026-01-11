@@ -41,7 +41,7 @@ internal static class ScriptManager
         }
 
         // Parse C# sources with Roslyn
-        var parseOptions = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.CSharp12);
+        var parseOptions = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.CSharp14);
         var syntaxTrees = sourceFiles
             .Select(file => CSharpSyntaxTree.ParseText(File.ReadAllText(file), parseOptions, file))
             .ToList();
@@ -72,7 +72,7 @@ internal static class ScriptManager
         List<MetadataReference> metadataReferences =
         [
             // Basic .NET 8 assemblies
-            .. ReferenceAssemblies.Net80.References.All,
+            .. ReferenceAssemblies.Net100.References.All,
             // BmSDK.dll
             MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
         ];
