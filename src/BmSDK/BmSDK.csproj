@@ -10,6 +10,11 @@
     <LangVersion>13</LangVersion>
   </PropertyGroup>
 
+  <!-- Configure runtime behavior -->
+  <PropertyGroup>
+    <UseWindowsThreadPool>true</UseWindowsThreadPool>
+  </PropertyGroup>
+
   <PropertyGroup>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
