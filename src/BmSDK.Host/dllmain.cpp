@@ -27,6 +27,8 @@ HostGetDelegateFn hostGetDelegateFn = nullptr;
 HostCloseFn hostCloseFn = nullptr;
 HostLoadAssemblyFn hostLoadAssemblyFn = nullptr;
 
+hostfxr_handle cxt = nullptr;
+
 // Filesystem helpers
 static path get_plugin_path()
 {
@@ -80,7 +82,6 @@ static HostLoadAssemblyFn get_dotnet_load_assembly(const char_t* config_path)
 {
 	// Load .NET Core
 	void* hostLoadAssemblyFn = nullptr;
-	hostfxr_handle cxt = nullptr;
 	int rc = hostInitFn(config_path, nullptr, &cxt);
 	if (rc != 0 || cxt == nullptr)
 	{
@@ -97,7 +98,6 @@ static HostLoadAssemblyFn get_dotnet_load_assembly(const char_t* config_path)
 	if (rc != 0 || hostLoadAssemblyFn == nullptr)
 		std::cerr << "Get delegate failed: " << std::hex << std::showbase << rc << std::endl;
 
-	hostCloseFn(cxt);
 	return (HostLoadAssemblyFn)hostLoadAssemblyFn;
 }
 
@@ -143,8 +143,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 		load_dll();
 		break;
 	case DLL_THREAD_ATTACH:
+		break;
 	case DLL_THREAD_DETACH:
+		break;
 	case DLL_PROCESS_DETACH:
+		hostCloseFn(cxt);
 		break;
 	}
 	return TRUE;
