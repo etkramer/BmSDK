@@ -120,7 +120,6 @@ static void load_dll() {
 	// Load managed assembly and get function pointer to a managed method
 	const wstring dotnetType = L"BmSDK.Framework.Loader, BmSDK";
 	const wstring dotnetMethod = L"GuardedDllMain";
-	const wstring dotnetMethodDelegate = L"BmSDK.Framework.Loader+DllMainDelegate, BmSDK";
 
 	// Function pointer to managed delegate
 	ComponentEntryFn GuardedDllMain = nullptr;
@@ -128,7 +127,7 @@ static void load_dll() {
 		dotnetDllPath.c_str(),
 		dotnetType.c_str(),
 		dotnetMethod.c_str(),
-		dotnetMethodDelegate.c_str(),
+		UNMANAGEDCALLERSONLY_METHOD,
 		nullptr,
 		(void**)&GuardedDllMain);
 

@@ -1,10 +1,11 @@
 ﻿global using System.Runtime.InteropServices;
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
 using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework;
 using MoreLinq;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
 [assembly: SuppressMessage("Usage", "IDE0130:Namespace does not match folder structure")]
@@ -13,8 +14,6 @@ namespace BmSDK.Framework;
 
 internal static class Loader
 {
-    delegate void DllMainDelegate();
-
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
     static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
@@ -22,6 +21,7 @@ internal static class Loader
     /// <summary>
     /// Main .NET entry point, called from BmSDK.Host.
     /// </summary>
+    [UnmanagedCallersOnly]
     public static void GuardedDllMain()
     {
         Debug.PushSender("Loader");
