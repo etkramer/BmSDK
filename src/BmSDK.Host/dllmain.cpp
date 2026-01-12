@@ -131,6 +131,11 @@ static void load_dll() {
 		nullptr,
 		(void**)&GuardedDllMain);
 
+	if (rc != 0 || GuardedDllMain == nullptr) {
+		assert(false && "Failure: hostLoadAssemblyFn()");
+		return;
+	}
+	
 	GuardedDllMain();
 }
 
