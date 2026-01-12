@@ -8,15 +8,18 @@
 #include <nethost.h>
 
 #include <cassert>
+#include <iostream>
 
 using namespace std;
 using namespace std::filesystem;
 
 // Func aliases for hostfxr
-typedef hostfxr_initialize_for_runtime_config_fn HostInitFn;
-typedef hostfxr_get_runtime_delegate_fn HostGetDelegateFn;
-typedef hostfxr_close_fn HostCloseFn;
-typedef load_assembly_and_get_function_pointer_fn HostLoadAssemblyFn;
+using HostInitFn = hostfxr_initialize_for_runtime_config_fn;
+using HostGetDelegateFn = hostfxr_get_runtime_delegate_fn;
+using HostCloseFn = hostfxr_close_fn;
+using HostLoadAssemblyFn = load_assembly_and_get_function_pointer_fn;
+// Entry point func type alias
+typedef void(CORECLR_DELEGATE_CALLTYPE* ComponentEntryFn)();
 
 // Funcs from hostfxr
 HostInitFn hostInitFn = nullptr;
@@ -25,74 +28,111 @@ HostCloseFn hostCloseFn = nullptr;
 HostLoadAssemblyFn hostLoadAssemblyFn = nullptr;
 
 // Filesystem helpers
-wstring GetModulePath()
+static path get_plugin_path()
 {
 	wstring result(MAX_PATH, L'\0');
 	GetModuleFileName(NULL, result.data(), MAX_PATH);
-	return result;
+	return path(result);
 }
-wstring GetModuleDir() { return path(GetModulePath()).parent_path(); }
 
-// Entry point func
-typedef int(__stdcall* ComponentEntryFn)();
+static path get_game_dir() { return get_plugin_path().parent_path(); }
 
-bool LoadHostModule()
+static void* load_library(const char_t* path)
 {
-	// Find hostfxr.dll
-	wstring hostPath(MAX_PATH, L'\0');
-	size_t hostPathLen = hostPath.size();
-	assert(!get_hostfxr_path(hostPath.data(), &hostPathLen, nullptr));
+	HMODULE h = LoadLibraryW(path);
+	assert(h != nullptr);
+	return (void*)h;
+}
+static void* get_export(void* h, const char* name)
+{
+	void* f = GetProcAddress((HMODULE)h, name);
+	assert(f != nullptr);
+	return f;
+}
 
-	// Load hostfxr.dll
-	HMODULE hostModule = LoadLibraryW(hostPath.data());
-	hostInitFn = (HostInitFn)GetProcAddress(hostModule, "hostfxr_initialize_for_runtime_config");
-	hostGetDelegateFn =
-		(HostGetDelegateFn)GetProcAddress(hostModule, "hostfxr_get_runtime_delegate");
-	hostCloseFn = (HostCloseFn)GetProcAddress(hostModule, "hostfxr_close");
+// Using the nethost library, discover the location of hostfxr and get exports
+static bool load_hostfxr(const char_t* assembly_path)
+{
+	get_hostfxr_parameters params{
+		sizeof(get_hostfxr_parameters),
+		assembly_path,
+		nullptr
+	};
+
+	// Pre-allocate a large buffer for the path to hostfxr
+	char_t buffer[MAX_PATH];
+	size_t buffer_size = sizeof(buffer) / sizeof(char_t);
+	int rc = get_hostfxr_path(buffer, &buffer_size, &params);
+	if (rc != 0)
+		return false;
+
+	// Load hostfxr and get desired exports
+	void* lib = load_library(buffer);
+	hostInitFn = (HostInitFn)get_export(lib, "hostfxr_initialize_for_runtime_config");
+	hostGetDelegateFn = (HostGetDelegateFn)get_export(lib, "hostfxr_get_runtime_delegate");
+	hostCloseFn = (HostCloseFn)get_export(lib, "hostfxr_close");
 
 	return (hostInitFn && hostGetDelegateFn && hostCloseFn);
 }
 
-bool LoadAssembly(wstring asmPath)
+// Load and initialize .NET Core and get desired function pointer for scenario
+static HostLoadAssemblyFn get_dotnet_load_assembly(const char_t* config_path)
 {
-	ComponentEntryFn entryFn = nullptr;
+	// Load .NET Core
+	void* hostLoadAssemblyFn = nullptr;
+	hostfxr_handle cxt = nullptr;
+	int rc = hostInitFn(config_path, nullptr, &cxt);
+	if (rc != 0 || cxt == nullptr)
+	{
+		std::cerr << "Init failed: " << std::hex << std::showbase << rc << std::endl;
+		hostCloseFn(cxt);
+		return nullptr;
+	}
 
-	// Locate assembly paths
-	wstring basePath = GetModuleDir();
-	wstring configPath = basePath + asmPath + L".runtimeconfig.json";
-	wstring dllPath = basePath + asmPath + TEXT(".dll");
+	// Get the load assembly function pointer
+	rc = hostGetDelegateFn(
+		cxt,
+		hdt_load_assembly_and_get_function_pointer,
+		&hostLoadAssemblyFn);
+	if (rc != 0 || hostLoadAssemblyFn == nullptr)
+		std::cerr << "Get delegate failed: " << std::hex << std::showbase << rc << std::endl;
 
-	// Launch .NET runtime
-	hostfxr_handle ctx = nullptr;
-	assert(!hostInitFn(configPath.c_str(), nullptr, &ctx) && ctx);
-
-	// Find 'load assembly' func
-	assert(!hostGetDelegateFn(ctx, hdt_load_assembly_and_get_function_pointer,
-							  (void**)(void*)(&hostLoadAssemblyFn)) &&
-		   hostLoadAssemblyFn);
-	hostCloseFn(ctx);
-
-	// Load managed assembly
-	wstring entryTypeName = TEXT("BmSDK.Framework.Loader, BmSDK");
-	wstring entryMethodName = TEXT("GuardedDllMain");
-	wstring entryDelegateName = TEXT("BmSDK.Framework.Loader+DllMainDelegate, BmSDK");
-	auto loadAssemblyResult =
-		hostLoadAssemblyFn(dllPath.c_str(), entryTypeName.c_str(), entryMethodName.c_str(),
-						   entryDelegateName.c_str(), nullptr, (void**)&entryFn);
-
-	// Call loader entry func
-	assert(loadAssemblyResult == 0);
-	assert(entryFn != nullptr);
-	return !entryFn();
+	hostCloseFn(cxt);
+	return (HostLoadAssemblyFn)hostLoadAssemblyFn;
 }
 
-void OnAttach()
-{
-	// Load hostfxr.dll
-	assert(LoadHostModule());
+static void load_dll() {
+	const wstring basePath = get_game_dir();
+	const wstring asmPath = L"\\sdk\\BmSDK";
+	const wstring dotnetDllPath = basePath + asmPath + L".dll";
 
-	// Load BmSDK.Loader.dll
-	assert(LoadAssembly(TEXT("\\sdk\\BmSDK")));
+	// Load HostFxr and get exported hosting functions
+	if (!load_hostfxr(dotnetDllPath.c_str())) {
+		assert(false && "Failure: load_hostfxr()");
+		return;
+	}
+
+	// Initialize and start the .NET Core runtime
+	const wstring configPath = basePath + asmPath + L".runtimeconfig.json";
+	hostLoadAssemblyFn = get_dotnet_load_assembly(configPath.c_str());
+	assert(hostLoadAssemblyFn != nullptr && "Failure: get_dotnet_load_assembly()");
+
+	// Load managed assembly and get function pointer to a managed method
+	const wstring dotnetType = L"BmSDK.Framework.Loader, BmSDK";
+	const wstring dotnetMethod = L"GuardedDllMain";
+	const wstring dotnetMethodDelegate = L"BmSDK.Framework.Loader+DllMainDelegate, BmSDK";
+
+	// Function pointer to managed delegate
+	ComponentEntryFn GuardedDllMain = nullptr;
+	int rc = hostLoadAssemblyFn(
+		dotnetDllPath.c_str(),
+		dotnetType.c_str(),
+		dotnetMethod.c_str(),
+		dotnetMethodDelegate.c_str(),
+		nullptr,
+		(void**)&GuardedDllMain);
+
+	GuardedDllMain();
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
@@ -100,7 +140,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		OnAttach();
+		load_dll();
 		break;
 	case DLL_THREAD_ATTACH:
 	case DLL_THREAD_DETACH:
