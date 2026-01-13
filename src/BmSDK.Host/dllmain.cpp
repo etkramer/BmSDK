@@ -53,18 +53,12 @@ static void* get_export(void* h, const char* name)
 }
 
 // Using the nethost library, discover the location of hostfxr and get exports
-static bool load_hostfxr(const char_t* assembly_path)
+static bool load_hostfxr()
 {
-	get_hostfxr_parameters params{
-		sizeof(get_hostfxr_parameters),
-		assembly_path,
-		nullptr
-	};
-
 	// Pre-allocate a large buffer for the path to hostfxr
 	char_t buffer[MAX_PATH];
 	size_t buffer_size = sizeof(buffer) / sizeof(char_t);
-	int rc = get_hostfxr_path(buffer, &buffer_size, &params);
+	int rc = get_hostfxr_path(buffer, &buffer_size, nullptr);
 	if (rc != 0)
 		return false;
 
@@ -107,7 +101,7 @@ static void load_dll() {
 	const wstring dotnetDllPath = basePath + asmPath + L".dll";
 
 	// Load HostFxr and get exported hosting functions
-	if (!load_hostfxr(dotnetDllPath.c_str())) {
+	if (!load_hostfxr()) {
 		assert(false && "Failure: load_hostfxr()");
 		return;
 	}
