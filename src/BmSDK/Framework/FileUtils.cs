@@ -6,7 +6,7 @@ public static class FileUtils
 
     internal static void Init()
     {
-        s_exeDir = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, ".."));
+        s_exeDir = Path.GetFullPath(Environment.CurrentDirectory);
     }
 
     /// <summary>

@@ -100,7 +100,7 @@ internal static class ScriptManager
                         platform: Platform.X86,
                         allowUnsafe: true,
                         // TODO: Not clear why this needs to be false.
-                        concurrentBuild: false,
+                        //concurrentBuild: false,
                         optimizationLevel: OptimizationLevel.Debug
                     )
                 )

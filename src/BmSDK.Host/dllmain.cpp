@@ -9,6 +9,7 @@
 
 #include <cassert>
 #include <iostream>
+#include <thread>
 
 using namespace std;
 using namespace std::filesystem;
@@ -133,12 +134,27 @@ static void load_dll() {
 	GuardedDllMain();
 }
 
+static void run_bmsdk() {
+	DWORD mainThreadId = GetCurrentThreadId();
+	thread(
+		[mainThreadId]() {
+			HANDLE mainThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, mainThreadId);
+			if (mainThread) SuspendThread(mainThread);
+			load_dll();
+			if (mainThread) {
+				ResumeThread(mainThread);
+				CloseHandle(mainThread);
+			}
+		}
+	).detach();
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
 	switch (ul_reason_for_call)
 	{
 	case DLL_PROCESS_ATTACH:
-		load_dll();
+		run_bmsdk();
 		break;
 	case DLL_THREAD_ATTACH:
 		break;
