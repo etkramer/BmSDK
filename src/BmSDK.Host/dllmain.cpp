@@ -1,8 +1,10 @@
 #include <Windows.h>
 
+#include "Framework/offsets.h"
 #include "runtime.h"
 
 static void init_runtime() {
+	offsets::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
 	runtime::load_dll();
 }
 
