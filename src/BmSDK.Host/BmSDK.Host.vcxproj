@@ -111,9 +111,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="runtime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="runtime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
