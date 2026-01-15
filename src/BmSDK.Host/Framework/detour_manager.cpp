@@ -9,6 +9,7 @@ static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) 
 	static bool isRuntimeReady = false;
 	if (!isRuntimeReady) {
 		runtime::load_dll();
+		isRuntimeReady = true;
 	}
 
 	// Call original
