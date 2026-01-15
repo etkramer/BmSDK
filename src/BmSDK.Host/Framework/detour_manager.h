@@ -14,10 +14,14 @@ private:
 
 public:
     template <typename TFunc>
-    inline static bool Attach(TFunc* ppOriginalFunc, TFunc pDetourFunc) {
+    inline static bool Attach(uintptr_t pOrigAddr, TFunc* pOrigFunc, TFunc pDetourFunc) {
+        // Set original function reference
+        *pOrigFunc = (TFunc)pOrigAddr;
+
+        // Register detour
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
-        DetourAttach(&(PVOID&)*ppOriginalFunc, pDetourFunc);
+        DetourAttach(&(PVOID&)*pOrigFunc, pDetourFunc);
         return DetourTransactionCommit() == NO_ERROR;
     }
 

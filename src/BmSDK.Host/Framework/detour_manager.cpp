@@ -16,6 +16,9 @@ static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) 
 }
 
 void DetourManager::RegisterEngineLoopPreInitDetour() {
-	EngineLoopPreInit = (EngineLoopPreInitFunc)(offsets::BaseAddress + offsets::EngineLoopPreInit);
-	Attach(&EngineLoopPreInit, &EngineLoopPreInitDetour);
+	Attach(
+		offsets::BaseAddress + offsets::EngineLoopPreInit,
+		&EngineLoopPreInit,
+		&EngineLoopPreInitDetour
+	);
 }
