@@ -41,8 +41,6 @@ internal static class ScriptManager
         OutputKind.DynamicallyLinkedLibrary,
         platform: Platform.X86,
         allowUnsafe: true,
-        // TODO: Not clear why this needs to be false.
-        concurrentBuild: false,
         optimizationLevel: OptimizationLevel.Debug);
     public const string TargetName = "Scripts.dll";
 
