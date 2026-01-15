@@ -111,12 +111,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Framework\detour_manager.cpp" />
     <ClCompile Include="runtime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vcpkg.json" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\detour_manager.h" />
     <ClInclude Include="Framework\offsets.h" />
     <ClInclude Include="runtime.h" />
   </ItemGroup>

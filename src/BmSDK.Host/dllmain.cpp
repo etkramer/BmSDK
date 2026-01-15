@@ -1,11 +1,12 @@
 #include <Windows.h>
 
 #include "Framework/offsets.h"
-#include "runtime.h"
+#include "Framework/detour_manager.h"
 
 static void init_runtime() {
 	offsets::BaseAddress = (uintptr_t)(GetModuleHandle(NULL));
-	runtime::load_dll();
+	DetourRestoreAfterWith();
+	DetourManager::RegisterEngineLoopPreInitDetour();
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
