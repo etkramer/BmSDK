@@ -5,7 +5,7 @@ namespace BmSDK.Framework;
 
 public static class RedirectManager
 {
-    static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    internal static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
 
     public readonly record struct RedirectorInfo
     {

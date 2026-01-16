@@ -39,11 +39,7 @@ internal static class Loader
         StaticInit.StaticInitClasses();
 
         // Find/load scripts
-        if (!ScriptManager.LoadScripts())
-        {
-            // We don't have any valid scripts, just abort here.
-            return;
-        }
+        ScriptManager.Init();
 
         // Create function detours
         _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
