@@ -47,10 +47,17 @@ internal static class ScriptManager
     private static AssemblyLoadContext? s_scriptsAlc;
     private static readonly List<Script> s_scripts = [];
 
-    private static FileSystemWatcher? watcher;
+    private static readonly FileSystemWatcher watcher = new(FileUtils.GetScriptsPath())
+    {
+        Filter = "*.cs",
+        IncludeSubdirectories = true,
+        NotifyFilter = NotifyFilters.LastWrite
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.DirectoryName
+    };
     private const int debounceMillis = 500;
-    private static Timer? debounceTimer;
-    private static object lockObj = new();
+    private static readonly Timer debounceTimer = new(ApplyScriptChangesCallback);
+    private static readonly object lockObj = new();
 
     public static IEnumerable<Script> Scripts => s_scripts;
 
@@ -317,38 +324,21 @@ internal static class ScriptManager
 
     private static void WatchForScriptChanges()
     {
-        watcher = new(FileUtils.GetScriptsPath())
-        {
-            Filter = "*.cs",
-            IncludeSubdirectories = true,
-            EnableRaisingEvents = true,
-            NotifyFilter = NotifyFilters.DirectoryName
-                                 | NotifyFilters.FileName
-                                 | NotifyFilters.LastWrite
-        };
-
         watcher.Changed += OnScriptChangedDebounced;
         watcher.Created += OnScriptChangedDebounced;
         watcher.Deleted += OnScriptChangedDebounced;
         watcher.Renamed += OnScriptChangedDebounced;
+
+        watcher.EnableRaisingEvents = true;
     }
 
     private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e)
     {
-        lock (lockObj)
-        {
-            debounceTimer?.Dispose();
-            debounceTimer = new Timer(ApplyScriptChangesCallback, null, debounceMillis, Timeout.Infinite);
-        }
+        lock (lockObj) debounceTimer.Change(debounceMillis, Timeout.Infinite);
     }
 
     private static void ApplyScriptChangesCallback(object? state)
     {
-        lock (lockObj)
-        {
-            debounceTimer?.Dispose();
-            debounceTimer = null;
-            LoadScripts();
-        }
+        lock (lockObj) LoadScripts();
     }
 }
