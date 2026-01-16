@@ -48,6 +48,9 @@ internal static class ScriptManager
     private static readonly List<Script> s_scripts = [];
 
     private static FileSystemWatcher? watcher;
+    private const int debounceMillis = 500;
+    private static Timer? debounceTimer;
+    private static object lockObj = new();
 
     public static IEnumerable<Script> Scripts => s_scripts;
 
@@ -312,7 +315,7 @@ internal static class ScriptManager
         return scripts;
     }
 
-    public static void WatchForScriptChanges()
+    private static void WatchForScriptChanges()
     {
         watcher = new(FileUtils.GetScriptsPath())
         {
@@ -324,12 +327,28 @@ internal static class ScriptManager
                                  | NotifyFilters.LastWrite
         };
 
-        watcher.Changed += ApplyScriptChanges;
-        watcher.Created += ApplyScriptChanges;
-        watcher.Deleted += ApplyScriptChanges;
-        watcher.Renamed += ApplyScriptChanges;
+        watcher.Changed += OnScriptChangedDebounced;
+        watcher.Created += OnScriptChangedDebounced;
+        watcher.Deleted += OnScriptChangedDebounced;
+        watcher.Renamed += OnScriptChangedDebounced;
     }
 
-    public static void ApplyScriptChanges(object sender, FileSystemEventArgs e)
-        => LoadScripts();
+    private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e)
+    {
+        lock (lockObj)
+        {
+            debounceTimer?.Dispose();
+            debounceTimer = new Timer(ApplyScriptChangesCallback, null, debounceMillis, Timeout.Infinite);
+        }
+    }
+
+    private static void ApplyScriptChangesCallback(object? state)
+    {
+        lock (lockObj)
+        {
+            debounceTimer?.Dispose();
+            debounceTimer = null;
+            LoadScripts();
+        }
+    }
 }
