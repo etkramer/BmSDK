@@ -206,26 +206,7 @@ internal static class Loader
         // Call base impl
         _AddObjectDetourBase!.Invoke(self, InIndex);
 
-        RunGuarded(() =>
-        {
-            var classPtr = *(IntPtr*)(self + GameInfo.MemberOffsets.Object__Class).ToPointer();
-            var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
-
-            // Not clear yet why this happens, but maybe we don't need to worry about it.
-            var classIndex = *(int*)classIndexPtr.ToPointer();
-            if (classIndex < 1)
-            {
-                MarshalUtil.CreateManagedWrapper(self, typeof(Class));
-                return;
-            }
-
-            // Match native classes to managed types
-            var classPath = GetClassPath(self);
-
-            // Wrap this object in a managed instance
-            var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
-            MarshalUtil.CreateManagedWrapper(self, managedType);
-        });
+        RunGuarded(() => MarshalUtil.HandleNewObject(self));
     }
 
     // Detour for UObject::ConditionalDestroy()
@@ -236,20 +217,6 @@ internal static class Loader
 
         // Call base impl
         _ConditionalDestroyDetourBase!.Invoke(self);
-    }
-
-    private static unsafe string GetClassPath(IntPtr obj)
-    {
-        // Fetch class name.
-        var classPtr = *(IntPtr*)(obj + GameInfo.MemberOffsets.Object__Class).ToPointer();
-        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        // Fetch outer name.
-        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
-        var classOuterName = *(FName*)
-            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
-
-        return $"{classOuterName}.{className}";
     }
 
     private static void RunGuarded(Action action)

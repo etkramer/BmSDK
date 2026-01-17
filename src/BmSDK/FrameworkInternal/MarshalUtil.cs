@@ -145,6 +145,40 @@ internal static unsafe class MarshalUtil
         );
     }
 
+    public static unsafe string GetClassPath(IntPtr objPtr)
+    {
+        // Fetch class name.
+        var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
+        var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        // Fetch outer name.
+        var classOuterPtr = *(IntPtr*)(classPtr + GameInfo.MemberOffsets.Object__Outer).ToPointer();
+        var classOuterName = *(FName*)
+            (classOuterPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
+
+        return $"{classOuterName}.{className}";
+    }
+
+    public static GameObject? HandleNewObject(IntPtr objPtr)
+    {
+        var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
+        var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
+
+        // Not clear yet why this happens, but maybe we don't need to worry about it.
+        var classIndex = *(int*)classIndexPtr.ToPointer();
+        if (classIndex < 1)
+        {
+            return CreateManagedWrapper(objPtr, typeof(Class));
+        }
+
+        // Match native classes to managed types
+        var classPath = GetClassPath(objPtr);
+
+        // Wrap this object in a managed instance
+        var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
+        return CreateManagedWrapper(objPtr, managedType);
+    }
+
     public static GameObject? CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
         // Warn in case of duplicate objects
