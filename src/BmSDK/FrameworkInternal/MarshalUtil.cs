@@ -145,7 +145,7 @@ internal static unsafe class MarshalUtil
         );
     }
 
-    public static void CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    public static GameObject? CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
         // Warn in case of duplicate objects
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
@@ -166,6 +166,8 @@ internal static unsafe class MarshalUtil
         {
             newObj.AddToRoot();
         }
+
+        return newObj;
     }
 
     public static void DestroyManagedWrapper(IntPtr objPtr)
