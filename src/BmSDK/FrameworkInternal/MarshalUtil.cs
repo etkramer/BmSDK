@@ -57,11 +57,12 @@ internal static unsafe class MarshalUtil
                 return (TManaged)(object)null!;
             }
 
-            // We should already have wrappers for all objects.
-            Guard.Require(
-                s_managedObjects.TryGetValue(objPtr, out var obj),
-                $"No managed wrapper found for object at 0x{objPtr:X}"
-            );
+            // We should create wrappers in edge cases even though
+            // we are supposed to have one managed equivalent of each objects.
+            if (!s_managedObjects.TryGetValue(objPtr, out var obj))
+            {
+                obj = HandleNewObject(objPtr);
+            }
             return (TManaged)(object)Guard.NotNull(obj);
         }
 
@@ -193,14 +194,6 @@ internal static unsafe class MarshalUtil
             $"Couldn't create an instance of managed type {managedType.Name}"
         );
         newObj.Ptr = objPtr;
-
-        // Prevent class objects from being GC'd. Keeps things simple,
-        // and shouldn't be *too* bad for perf as there's only so many of them.
-        if (newObj is Class)
-        {
-            newObj.AddToRoot();
-        }
-
         return newObj;
     }
 
