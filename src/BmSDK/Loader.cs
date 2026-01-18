@@ -46,19 +46,15 @@ internal static class Loader
         }
 
         // Create function detours
-        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
-            GameInfo.FuncOffsets.ProcessInternal,
-            ProcessInternalDetour
-        );
-        _AddObjectDetourBase = DetourUtil.NewDetour<GameFunctions.AddObjectDelegate>(
-            GameInfo.FuncOffsets.AddObject,
-            AddObjectDetour
-        );
+        _ProcessInternalDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+                GameInfo.FuncOffsets.ProcessInternal,
+                ProcessInternalDetour);
+
         _ConditionalDestroyDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
                 GameInfo.FuncOffsets.ConditionalDestroy,
-                ConditionalDestroyDetour
-            );
+                ConditionalDestroyDetour);
     }
 
     private static void OnGameInit()
@@ -198,15 +194,6 @@ internal static class Loader
                 _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
             }
         });
-    }
-
-    // Detour for UObject::AddObject()
-    private static unsafe void AddObjectDetour(IntPtr self, int InIndex)
-    {
-        // Call base impl
-        _AddObjectDetourBase!.Invoke(self, InIndex);
-
-        RunGuarded(() => MarshalUtil.HandleNewObject(self));
     }
 
     // Detour for UObject::ConditionalDestroy()
