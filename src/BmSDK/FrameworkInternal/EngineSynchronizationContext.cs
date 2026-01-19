@@ -60,7 +60,7 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
         }
 
         using var done = new ManualResetEventSlim();
-        Exception? capturedException = null;
+        ExceptionDispatchInfo? capturedException = null;
 
         // Passthrough callback to main thread
         Post(_ =>
@@ -71,7 +71,7 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
             }
             catch (Exception exception)
             {
-                capturedException = exception;
+                capturedException = ExceptionDispatchInfo.Capture(exception);
             }
             finally
             {
@@ -84,11 +84,6 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
         done.Wait();
 
         // Re-throw exceptions on calling thread
-        if (capturedException != null)
-        {
-            ExceptionDispatchInfo
-                .Capture(capturedException)
-                .Throw();
-        }
+        capturedException?.Throw();
     }
 }
