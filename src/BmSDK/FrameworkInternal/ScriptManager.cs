@@ -80,17 +80,24 @@ internal static class ScriptManager
     /// <returns>true if the scripts were successfully compiled and loaded; otherwise, false.</returns>
     private static bool LoadScripts()
     {
+        // Compile new scripts
         var emitStream = CompileScripts();
         if (emitStream == null) return false;
 
-        // Load in new mods
-        RemoveOldScripts();
-        s_scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
-        var asm = s_scriptsAlc.LoadFromStream(emitStream);
-
-        // Instantiate script types.
+        // Load in new mods and instantiate script types
+        var scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
+        var asm = scriptsAlc.LoadFromStream(emitStream);
         var scripts = CreateScriptInstances(asm);
-        s_scripts.AddRange(scripts);
+
+        // Register scripts on main thread
+        EngineSynchronizationContext.Instance.Post(_ =>
+        {
+            RemoveOldScripts();
+            s_scriptsAlc = scriptsAlc;
+            s_scripts.AddRange(scripts);
+        },
+        state: null);
+        
         return true;
     }
 
@@ -333,9 +340,7 @@ internal static class ScriptManager
     }
 
     private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e)
-    {
-        lock (lockObj) debounceTimer.Change(debounceMillis, Timeout.Infinite);
-    }
+        => debounceTimer.Change(debounceMillis, Timeout.Infinite);
 
     private static void ApplyScriptChangesCallback(object? state)
     {
