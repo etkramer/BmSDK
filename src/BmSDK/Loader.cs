@@ -32,7 +32,7 @@ internal static class Loader
 
     private static void DllMain()
     {
-        EngineSynchronizationContext.Init();
+        EngineSynchronizationContext.InitOnThread();
 
         // Environment.CurrentDirectory gets unreliable once we start
         // running code in detours, so let's store it early.
@@ -67,6 +67,7 @@ internal static class Loader
 
     private static IntPtr EngineTickDetour(IntPtr self)
     {
+        // Run the scheduled callbacks
         EngineSynchronizationContext.Instance.ExecutePending();
         return _EngineTickDetourBase!.Invoke(self);
     }
