@@ -20,6 +20,7 @@ internal static class GameInfo
 #if BATMAN2
         // app (global)
         public const IntPtr AppRealloc = 0x1EC10;
+        public const IntPtr EngineTick = 0x7D8980;
 
         // UObject (static)
         public const IntPtr StaticFindObject = 0x8ED20;
@@ -48,6 +49,7 @@ internal static class GameInfo
 #elif BATMAN3
         // app (global)
         public const IntPtr AppRealloc = 0x1EF50;
+        public const IntPtr EngineTick = /* TODO */;
 
         // UObject (static)
         public const IntPtr StaticFindObject = 0x86950;

@@ -14,12 +14,13 @@ namespace BmSDK.Framework;
 
 internal static class Loader
 {
+    static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
-    static GameFunctions.AddObjectDelegate? _AddObjectDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
     /// <summary>
     /// Main .NET entry point, called from BmSDK.Host.
+    /// This is done when FEngineLoop::PreInit() is executed.
     /// </summary>
     [UnmanagedCallersOnly]
     public static void GuardedDllMain()
@@ -31,6 +32,8 @@ internal static class Loader
 
     private static void DllMain()
     {
+        EngineSynchronizationContext.InitOnThread();
+
         // Environment.CurrentDirectory gets unreliable once we start
         // running code in detours, so let's store it early.
         FileUtils.Init();
@@ -51,10 +54,22 @@ internal static class Loader
                 GameInfo.FuncOffsets.ProcessInternal,
                 ProcessInternalDetour);
 
+        _EngineTickDetourBase =
+            DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+                GameInfo.FuncOffsets.EngineTick,
+                EngineTickDetour);
+
         _ConditionalDestroyDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
                 GameInfo.FuncOffsets.ConditionalDestroy,
                 ConditionalDestroyDetour);
+    }
+
+    private static IntPtr EngineTickDetour(IntPtr self)
+    {
+        // Run the scheduled callbacks
+        EngineSynchronizationContext.Instance.ExecutePending();
+        return _EngineTickDetourBase!.Invoke(self);
     }
 
     private static void OnGameInit()
