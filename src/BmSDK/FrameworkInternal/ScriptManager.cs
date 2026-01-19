@@ -44,6 +44,7 @@ internal static class ScriptManager
         optimizationLevel: OptimizationLevel.Debug);
     public const string TargetName = "Scripts.dll";
 
+    private static bool inited = false;
     private static AssemblyLoadContext? s_scriptsAlc;
     private static readonly List<Script> s_scripts = [];
 
@@ -67,8 +68,10 @@ internal static class ScriptManager
     /// <remarks>This method is only be called once during application startup.</remarks>
     public static void Init()
     {
+        if (inited) return;
         LoadScripts();
         WatchForScriptChanges();
+        inited = true;
     }
 
     /// <summary>
@@ -95,7 +98,8 @@ internal static class ScriptManager
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
             s_scripts.AddRange(scripts);
-            s_scripts.ForEach(script => script.OnLoad());
+            if (inited)
+                s_scripts.ForEach(script => script.OnLoad());
         },
         state: null);
         
