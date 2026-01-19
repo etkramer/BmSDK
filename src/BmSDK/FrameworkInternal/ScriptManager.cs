@@ -95,6 +95,7 @@ internal static class ScriptManager
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
             s_scripts.AddRange(scripts);
+            s_scripts.ForEach(script => script.OnLoad());
         },
         state: null);
         
@@ -117,14 +118,10 @@ internal static class ScriptManager
         RedirectManager.s_redirectorDict.Clear();
 
         // Clear scripts attached to in-game actors
-        Actor.s_scriptComponents.ForEach(component =>
-        {
-            component.Owner._scriptComponents.Clear();
-        });
-        Actor.s_scriptComponents.Clear();
+        Actor.DetachAllScriptComponents();
 
         // Clear mods
-        s_scripts.Clear();
+        UnloadScripts();
 
         // Initiaite closure of AssemblyLoadContext
         s_scriptsAlc.Unload();
@@ -133,6 +130,11 @@ internal static class ScriptManager
         GC.WaitForPendingFinalizers();
     }
 
+    private static void UnloadScripts()
+    {
+        s_scripts.ForEach(script => script.OnUnload());
+        s_scripts.Clear();
+    }
 
     /// <summary>
     /// Compiles all C# script files found in the scripts directory into an in-memory assembly stream.
