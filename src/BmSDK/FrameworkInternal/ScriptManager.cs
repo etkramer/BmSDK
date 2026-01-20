@@ -2,16 +2,13 @@ using BmSDK.Engine;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
+using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Loader;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
 namespace BmSDK.Framework;
-
-// TODO: Support hot reload. This can be done using a combination of Compilation.EmitDifference() and MetadataUpdater.ApplyUpdate().
-// See https://blog.jetbrains.com/dotnet/2021/12/02/how-rider-hot-reload-works-under-the-hood/
-// and https://learn.microsoft.com/en-us/dotnet/api/system.reflection.metadata.metadataupdater.applyupdate
 
 /// <summary>
 /// Provides the plugin loading system--compilation and instantiation of user scripts.
@@ -25,6 +22,13 @@ internal static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp12;
     public static readonly CSharpParseOptions ParseOptions = CSharpParseOptions.Default.WithLanguageVersion(LangVer);
+    public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies = ReferenceAssemblies.Net80.References.All;
+    public static readonly ImmutableList<MetadataReference> MetadataReferences =
+        [
+            .. DotNetAssemblies,
+            // BmSDK.dll
+            MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
+        ];
     public const string GlobalUsings = """
                 global using global::System;
                 global using global::System.Collections.Generic;
@@ -37,18 +41,14 @@ internal static class ScriptManager
                 global using global::BmSDK.Framework;
                 """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
+    public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(GlobalUsings, ParseOptions, GlobalUsingsPath);
     public static readonly CSharpCompilationOptions CompilerOptions = new(
         OutputKind.DynamicallyLinkedLibrary,
         platform: Platform.X86,
-        allowUnsafe: true,
-        optimizationLevel: OptimizationLevel.Debug);
+        allowUnsafe: true);
     public const string TargetName = "Scripts.dll";
 
-    private static bool inited = false;
-    private static AssemblyLoadContext? s_scriptsAlc;
-    private static readonly List<Script> s_scripts = [];
-
-    private static readonly FileSystemWatcher watcher = new(FileUtils.GetScriptsPath())
+    private static readonly FileSystemWatcher _watcher = new(FileUtils.GetScriptsPath())
     {
         Filter = "*.cs",
         IncludeSubdirectories = true,
@@ -56,11 +56,15 @@ internal static class ScriptManager
                                  | NotifyFilters.FileName
                                  | NotifyFilters.DirectoryName
     };
-    private const int debounceMillis = 500;
-    private static readonly Timer debounceTimer = new(ApplyScriptChangesCallback);
-    private static readonly object lockObj = new();
+    private const int DebounceMillis = 500;
+    private static readonly Timer _debounceTimer = new(ApplyScriptChangesCallback);
+    private static readonly object _lockObj = new();
 
-    public static IEnumerable<Script> Scripts => s_scripts;
+    private static AssemblyLoadContext? _scriptsAlc;
+    private static readonly List<Script> _scripts = [];
+    public static IEnumerable<Script> Scripts => _scripts;
+
+    private static bool _inited = false;
 
     /// <summary>
     /// Initializes the script system and begins monitoring for script changes.
@@ -68,10 +72,22 @@ internal static class ScriptManager
     /// <remarks>This method is only be called once during application startup.</remarks>
     public static void Init()
     {
-        if (inited) return;
+        if (_inited) return;
+        PrepareCompilation();
         LoadScripts();
         WatchForScriptChanges();
-        inited = true;
+        _inited = true;
+    }
+
+    private static void PrepareCompilation()
+    {
+        // Set custom AssemblyResolve so we don't try to load things we already have loaded.
+        // TODO: Move to custom AssemblyDependencyResolver for _scriptsAlc
+        AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
+            AppDomain
+                .CurrentDomain.GetAssemblies()
+                .ToList()
+                .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
     }
 
     /// <summary>
@@ -96,10 +112,10 @@ internal static class ScriptManager
         EngineSynchronizationContext.Instance.Post(_ =>
         {
             RemoveOldScripts();
-            s_scriptsAlc = scriptsAlc;
-            s_scripts.AddRange(scripts);
-            if (inited)
-                s_scripts.ForEach(script => script.OnLoad());
+            _scriptsAlc = scriptsAlc;
+            _scripts.AddRange(scripts);
+            if (_inited)
+                _scripts.ForEach(script => script.OnLoad());
         },
         state: null);
         
@@ -114,12 +130,9 @@ internal static class ScriptManager
     /// and cannot be reused until reinitialized using <see cref="LoadScripts"/>.</remarks>
     private static void RemoveOldScripts()
     {
-        if (s_scriptsAlc == null) return;
+        if (_scriptsAlc == null) return;
 
-        // TODO(Samuil1337): Kill threads by mods when async support is added
-
-        // Clear function redirects of scripts
-        RedirectManager.s_redirectorDict.Clear();
+        // TODO: Kill threads by mods when async support is added
 
         // Clear scripts attached to in-game actors
         Actor.DetachAllScriptComponents();
@@ -127,17 +140,20 @@ internal static class ScriptManager
         // Clear mods
         UnloadScripts();
 
+        // Clear function redirects of scripts
+        RedirectManager.s_redirectorDict.Clear();
+
         // Initiaite closure of AssemblyLoadContext
-        s_scriptsAlc.Unload();
-        s_scriptsAlc = null;
+        _scriptsAlc.Unload();
+        _scriptsAlc = null;
         GC.Collect();
         GC.WaitForPendingFinalizers();
     }
 
     private static void UnloadScripts()
     {
-        s_scripts.ForEach(script => script.OnUnload());
-        s_scripts.Clear();
+        _scripts.ForEach(script => script.OnUnload());
+        _scripts.Clear();
     }
 
     /// <summary>
@@ -176,27 +192,9 @@ internal static class ScriptManager
         // Parse generated sources (for global usings, etc.)
         syntaxTrees.Insert(
             index: 0,
-            CSharpSyntaxTree.ParseText(GlobalUsings, ParseOptions, GlobalUsingsPath)
+            GlobalUsingsTree
         );
 
-        // Gather assembly/metadata references
-        List<MetadataReference> metadataReferences =
-        [
-            // Basic .NET 8 assemblies
-            // Note: Putting this is in a constant freezes the game if a debugger is attached
-            .. ReferenceAssemblies.Net80.References.All,
-            // BmSDK.dll
-            MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
-        ];
-
-        // Set custom AssemblyResolve so we don't try to load things we already have loaded.
-        AppDomain.CurrentDomain.AssemblyResolve += (sender, e) =>
-            AppDomain
-                .CurrentDomain.GetAssemblies()
-                .ToList()
-                .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
-
-        // TODO: Perform compilation in another thread.
         Debug.Log(
             $"Compiling {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")}"
         );
@@ -208,7 +206,7 @@ internal static class ScriptManager
         var compilation = CSharpCompilation
             .Create(TargetName)
             .WithOptions(CompilerOptions)
-            .AddReferences(metadataReferences)
+            .AddReferences(MetadataReferences)
             .AddSyntaxTrees(syntaxTrees);
 
         // Emit assembly in-memory.
@@ -337,19 +335,19 @@ internal static class ScriptManager
 
     private static void WatchForScriptChanges()
     {
-        watcher.Changed += OnScriptChangedDebounced;
-        watcher.Created += OnScriptChangedDebounced;
-        watcher.Deleted += OnScriptChangedDebounced;
-        watcher.Renamed += OnScriptChangedDebounced;
+        _watcher.Changed += OnScriptChangedDebounced;
+        _watcher.Created += OnScriptChangedDebounced;
+        _watcher.Deleted += OnScriptChangedDebounced;
+        _watcher.Renamed += OnScriptChangedDebounced;
 
-        watcher.EnableRaisingEvents = true;
+        _watcher.EnableRaisingEvents = true;
     }
 
     private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e)
-        => debounceTimer.Change(debounceMillis, Timeout.Infinite);
+        => _debounceTimer.Change(DebounceMillis, Timeout.Infinite);
 
     private static void ApplyScriptChangesCallback(object? state)
     {
-        lock (lockObj) LoadScripts();
+        lock (_lockObj) LoadScripts();
     }
 }
