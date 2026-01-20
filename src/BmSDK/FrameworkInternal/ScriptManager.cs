@@ -20,9 +20,9 @@ namespace BmSDK.Framework;
 /// complete unloading and reloading of scripts without restarting the application.</remarks>
 internal static class ScriptManager
 {
-    public const LanguageVersion LangVer = LanguageVersion.CSharp12;
+    public const LanguageVersion LangVer = LanguageVersion.CSharp14;
     public static readonly CSharpParseOptions ParseOptions = CSharpParseOptions.Default.WithLanguageVersion(LangVer);
-    public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies = ReferenceAssemblies.Net80.References.All;
+    public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies = ReferenceAssemblies.Net100.References.All;
     public static readonly ImmutableList<MetadataReference> MetadataReferences =
         [
             .. DotNetAssemblies,
@@ -58,7 +58,7 @@ internal static class ScriptManager
     };
     private const int DebounceMillis = 500;
     private static readonly Timer _debounceTimer = new(ApplyScriptChangesCallback);
-    private static readonly object _lockObj = new();
+    private static readonly Lock _lockObj = new();
 
     private static AssemblyLoadContext? _scriptsAlc;
     private static readonly List<Script> _scripts = [];
