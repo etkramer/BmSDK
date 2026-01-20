@@ -5,7 +5,7 @@ namespace BmSDK.Framework;
 
 public static class RedirectManager
 {
-    static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    private static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
 
     public readonly record struct RedirectorInfo
     {
@@ -15,6 +15,9 @@ public static class RedirectManager
 
         public object? RedirectTarget { get; init; }
     }
+
+    internal static void UnregisterAllRedirectors()
+        => s_redirectorDict.Clear();
 
     /// <summary>
     /// Registers a delegate as a redirector for the given script function.
@@ -45,13 +48,6 @@ public static class RedirectManager
         // Get the full path of the function (as originally declared).
         var targetFuncPath = $"{declaringClass.GetPathName()}:{targetMethodName}";
 
-        // Disallow multiple redirectors on the same function.
-        // NOTE: We've got an approach for solving this described in Loader.cs.
-        if (s_redirectorDict.ContainsKey(targetFuncPath))
-        {
-            throw new InvalidOperationException($"{targetFuncPath} has already been redirected!");
-        }
-
         // Get the delegate's MethodInfo.
         MethodInfo newMethodInfo;
         try
@@ -64,12 +60,19 @@ public static class RedirectManager
         }
 
         // Store the redirect for later use.
-        s_redirectorDict[targetFuncPath] = new RedirectorInfo()
+        var redirInfo = new RedirectorInfo()
         {
             TargetClass = targetClass,
             RedirectMethod = newMethodInfo,
             RedirectTarget = newMethodInfo.IsStatic ? null : newDelegate.Target,
         };
+
+        if (!s_redirectorDict.TryAdd(targetFuncPath, redirInfo))
+        {
+            // Disallow multiple redirectors on the same function.
+            // NOTE: We've got an approach for solving this described in Loader.cs.
+            throw new InvalidOperationException($"{targetFuncPath} has already been redirected!");
+        }
     }
 
     /// <summary>
@@ -81,17 +84,16 @@ public static class RedirectManager
         [MaybeNullWhen(false)] out RedirectorInfo redirectorInfo
     )
     {
-        var funcPath = func.GetPathName();
-        if (
-            s_redirectorDict.TryGetValue(funcPath, out var redirectInfo)
-            && redirectInfo.TargetClass == obj.Class
-        )
-        {
-            redirectorInfo = redirectInfo;
-            return true;
-        }
-
         redirectorInfo = default;
-        return false;
+
+        var funcPath = func.GetPathName();
+        if (!s_redirectorDict.TryGetValue(funcPath, out var info))
+            return false;
+
+        if (info.TargetClass != obj.Class)
+            return false;
+
+        redirectorInfo = info;
+        return true;
     }
 }

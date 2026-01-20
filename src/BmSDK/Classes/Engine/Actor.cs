@@ -9,14 +9,27 @@ public partial class Actor
     /// </summary>
     public static IReadOnlyCollection<ScriptComponent> AllScriptComponents => s_scriptComponents;
 
-    private static readonly List<ScriptComponent> s_scriptComponents = [];
+    internal static readonly List<ScriptComponent> s_scriptComponents = [];
 
     /// <summary>
     /// Collection of all script components attached to this actor.
     /// </summary>
     public IReadOnlyCollection<ScriptComponent> ScriptComponents => _scriptComponents;
 
-    private readonly List<ScriptComponent> _scriptComponents = [];
+    internal readonly List<ScriptComponent> _scriptComponents = [];
+
+    public static void DetachAllScriptComponents()
+    {
+        // Run external OnDetach() of each component
+        s_scriptComponents.ForEach(component => component.OnDetach());
+        // Remove all local copies of script components
+        s_scriptComponents.ForEach(component =>
+        {
+            component.Owner._scriptComponents.Clear();
+        });
+        // Clear global copies of components
+        s_scriptComponents.Clear();
+    }
 
     /// <summary>
     /// Attaches an existing script component to this actor.

@@ -1,11 +1,7 @@
 ﻿global using System.Runtime.InteropServices;
-using BmSDK.BmGame;
 using BmSDK.Engine;
-using BmSDK.Framework;
 using MoreLinq;
 using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
 [assembly: SuppressMessage("Usage", "IDE0130:Namespace does not match folder structure")]
@@ -42,11 +38,7 @@ internal static class Loader
         StaticInit.StaticInitClasses();
 
         // Find/load scripts
-        if (!ScriptManager.LoadScripts())
-        {
-            // We don't have any valid scripts, just abort here.
-            return;
-        }
+        ScriptManager.Init();
 
         // Create function detours
         _ProcessInternalDetourBase =

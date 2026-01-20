@@ -37,4 +37,16 @@ public abstract class Script
     /// Called every time a key is pressed.
     /// </summary>
     public virtual void OnKeyDown(Keys key) { }
+
+    /// <summary>
+    /// Called when the hot reloading system uninstalls
+    /// the old version of the script class
+    /// </summary>
+    public virtual void OnUnload() { }
+
+    /// <summary>
+    /// Called only when the hot reloading system installs
+    /// the new verison of the scripts class
+    /// </summary>
+    public virtual void OnLoad() { }
 }
