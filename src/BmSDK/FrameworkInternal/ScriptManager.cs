@@ -64,7 +64,7 @@ internal static class ScriptManager
     private static readonly List<Script> _scripts = [];
     public static IEnumerable<Script> Scripts => _scripts;
 
-    private static bool _inited = false;
+    private static bool s_isInitialized = false;
 
     /// <summary>
     /// Initializes the script system and begins monitoring for script changes.
@@ -72,11 +72,11 @@ internal static class ScriptManager
     /// <remarks>This method is only be called once during application startup.</remarks>
     public static void Init()
     {
-        if (_inited) return;
+        if (s_isInitialized) return;
         PrepareCompilation();
         LoadScripts();
         WatchForScriptChanges();
-        _inited = true;
+        s_isInitialized = true;
     }
 
     private static void PrepareCompilation()
@@ -106,15 +106,14 @@ internal static class ScriptManager
         // Load in new mods and instantiate script types
         var scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
         var asm = scriptsAlc.LoadFromStream(emitStream);
-        var scripts = CreateScriptInstances(asm);
 
         // Register scripts on main thread
         EngineSynchronizationContext.Instance.Post(_ =>
         {
             RemoveOldScripts();
             _scriptsAlc = scriptsAlc;
-            _scripts.AddRange(scripts);
-            if (_inited)
+            _scripts.AddRange(CreateScriptInstances(asm));
+            if (s_isInitialized)
                 _scripts.ForEach(script => script.OnLoad());
         },
         state: null);
@@ -141,7 +140,7 @@ internal static class ScriptManager
         UnloadScripts();
 
         // Clear function redirects of scripts
-        RedirectManager.s_redirectorDict.Clear();
+        RedirectManager.UnregisterAllRedirectors();
 
         // Initiaite closure of AssemblyLoadContext
         _scriptsAlc.Unload();

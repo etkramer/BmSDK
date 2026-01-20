@@ -1,4 +1,3 @@
-using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
@@ -6,7 +5,7 @@ namespace BmSDK.Framework;
 
 public static class RedirectManager
 {
-    internal static readonly ConcurrentDictionary<string, RedirectorInfo> s_redirectorDict = [];
+    private static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
 
     public readonly record struct RedirectorInfo
     {
@@ -16,6 +15,9 @@ public static class RedirectManager
 
         public object? RedirectTarget { get; init; }
     }
+
+    internal static void UnregisterAllRedirectors()
+        => s_redirectorDict.Clear();
 
     /// <summary>
     /// Registers a delegate as a redirector for the given script function.
