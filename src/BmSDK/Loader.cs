@@ -75,10 +75,10 @@ static class Loader
         });
     }
 
-    static bool HasGameStarted = false;
-    static bool HasGameInited = false;
+    static bool s_hasGameStarted = false;
+    static bool s_hasGameInited = false;
 
-    static Function? lastFuncForRedirects = null;
+    static Function? s_lastFuncForRedirects = null;
 
     // Detour for UObject::ProcessInternal()
     static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
@@ -98,14 +98,14 @@ static class Loader
             var funcNameForEnterGame = "BmGame.RPlayerController:ClientReady";
 
             // Notify scripts of game init
-            if (!HasGameInited && funcName == funcNameForInit)
+            if (!s_hasGameInited && funcName == funcNameForInit)
             {
                 OnGameInit();
-                HasGameInited = true;
+                s_hasGameInited = true;
             }
 
             // Notify scripts of game start
-            if (!HasGameStarted && funcName == funcNameForEnterMenu)
+            if (!s_hasGameStarted && funcName == funcNameForEnterMenu)
             {
                 // Call OnEnterMenu() for scripts
                 ScriptManager.Scripts.ForEach(script =>
@@ -115,7 +115,7 @@ static class Loader
                     Debug.PopSender();
                 });
 
-                HasGameStarted = true;
+                s_hasGameStarted = true;
             }
 
             // Notify scripts of game begin play
@@ -160,8 +160,8 @@ static class Loader
             // Don't run the same redirector twice in a row - in that case, we assume the user is attempting to call the base implementation.
             // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
             // TODO: Instead of falling back to the base impl, we can support multiple redirectors on the same function by having subsequent calls fall back to the next redirector instead (until we run out).
-            bool shouldIgnoreRedirects = lastFuncForRedirects == funcObj;
-            lastFuncForRedirects = funcObj;
+            bool shouldIgnoreRedirects = s_lastFuncForRedirects == funcObj;
+            s_lastFuncForRedirects = funcObj;
 
             // Do we have any redirections to run?
             if (
