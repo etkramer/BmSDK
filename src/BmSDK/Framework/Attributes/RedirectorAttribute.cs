@@ -22,7 +22,7 @@ public sealed class RedirectorAttribute(Type targetClass, string targetMethod) :
 
     /// <summary>
     /// When true, an instance of this component will be automatically attached
-    /// to all actors of the target class. Defaults to true.
+    /// to all actors of the target class. Defaults to false.
     /// </summary>
-    public bool AutoAttach { get; init; } = true;
+    public bool AutoAttach { get; init; } = false;
 }

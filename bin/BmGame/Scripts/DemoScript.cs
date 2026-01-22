@@ -108,7 +108,7 @@ public class CinematicActorComponent : ScriptComponent
     // Access the target actor via Owner, cast to the specific type
     RCinematicCustomActor Target => (RCinematicCustomActor)Owner;
 
-    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
+    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay), AutoAttach = true)]
     public void CustomPostBeginPlay()
     {
         // Load package with Robin's meshes
@@ -136,7 +136,7 @@ public class CinematicActorComponent : ScriptComponent
         Target.PostBeginPlay();
     }
 
-    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
+    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl), AutoAttach = true)]
     public void CustomBeginAnimControl(InterpGroup inInterpGroup)
     {
         Debug.Log($"Hello from BeginAnimControl!");
