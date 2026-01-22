@@ -63,22 +63,4 @@ public abstract class ScriptComponent
     {
         RedirectManager.UnregisterComponentRedirectors(this);
     }
-
-    /// <summary>
-    /// Gets all [Redirector] attribute metadata from the given component type.
-    /// Used during auto-attach registration.
-    /// </summary>
-    internal static IEnumerable<RedirectorAttribute> GetRedirectorAttributes(Type componentType)
-    {
-        var methods = componentType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-
-        foreach (var method in methods)
-        {
-            var attr = method.GetCustomAttribute<RedirectorAttribute>();
-            if (attr != null)
-            {
-                yield return attr;
-            }
-        }
-    }
 }

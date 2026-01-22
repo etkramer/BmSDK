@@ -348,7 +348,7 @@ static class ScriptManager
     }
 
     /// <summary>
-    /// Scans the assembly for ScriptComponent types with [Redirector] methods that have AutoAttach=true,
+    /// Scans the assembly for ScriptComponent types with [ScriptComponent(AutoAttach = ...)]
     /// and registers them for auto-attachment.
     /// </summary>
     static void RegisterAutoAttachComponents(Assembly asm)
@@ -359,25 +359,14 @@ static class ScriptManager
 
         foreach (var componentType in componentTypes)
         {
-            var redirectorAttrs = ScriptComponent.GetRedirectorAttributes(componentType)
-                .Where(attr => attr.AutoAttach)
-                .ToList();
-
-            if (redirectorAttrs.Count == 0)
+            var attr = componentType.GetCustomAttribute<ScriptComponentAttribute>();
+            if (attr?.AutoAttach == null)
             {
                 continue;
             }
 
-            // Register for each unique target class
-            var targetClasses = redirectorAttrs
-                .Select(attr => attr.TargetClass)
-                .Distinct();
-
-            foreach (var targetManagedClass in targetClasses)
-            {
-                var targetClass = Class.FindByManagedType(targetManagedClass);
-                RedirectManager.RegisterAutoAttachType(componentType, targetClass);
-            }
+            var targetClass = Class.FindByManagedType(attr.AutoAttach);
+            RedirectManager.RegisterAutoAttachType(componentType, targetClass);
         }
     }
 
