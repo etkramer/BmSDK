@@ -74,7 +74,7 @@ dotnet_remove_unnecessary_suppression_exclusions = none
 
 # New line preferences
 dotnet_style_allow_multiple_blank_lines_experimental = false:suggestion
-dotnet_style_allow_statement_immediately_after_block_experimental = false:suggestion
+dotnet_style_allow_statement_immediately_after_block_experimental = false:warning
 
 #### C# Coding Conventions ####
 
@@ -111,7 +111,7 @@ csharp_style_prefer_readonly_struct = true:suggestion
 csharp_style_prefer_readonly_struct_member = true:suggestion
 
 # Code-block preferences
-csharp_prefer_braces = true:suggestion
+csharp_prefer_braces = true:warning
 csharp_prefer_simple_using_statement = true:suggestion
 csharp_style_namespace_declarations = file_scoped:warning
 csharp_style_prefer_method_group_conversion = true:suggestion

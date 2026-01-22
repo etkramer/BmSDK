@@ -88,10 +88,14 @@ public static class RedirectManager
 
         var funcPath = func.GetPathName();
         if (!s_redirectorDict.TryGetValue(funcPath, out var info))
+        {
             return false;
+        }
 
         if (info.TargetClass != obj.Class)
+        {
             return false;
+        }
 
         redirectorInfo = info;
         return true;

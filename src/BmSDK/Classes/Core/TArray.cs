@@ -153,6 +153,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
                 return i;
             }
         }
+
         return -1;
     }
 
@@ -188,6 +189,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
             RemoveAt(index);
             return true;
         }
+
         return false;
     }
 
@@ -212,10 +214,12 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         {
             throw new ArgumentNullException(nameof(array));
         }
+
         if (arrayIndex < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(arrayIndex));
         }
+
         if (array.Length - arrayIndex < Count)
         {
             throw new ArgumentException(

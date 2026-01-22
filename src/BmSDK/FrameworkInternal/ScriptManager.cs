@@ -73,7 +73,10 @@ static class ScriptManager
     public static void Init()
     {
         if (s_isInitialized)
+        {
             return;
+        }
+
         PrepareCompilation();
         LoadScripts();
         WatchForScriptChanges();
@@ -103,7 +106,9 @@ static class ScriptManager
         // Compile new scripts
         var emitStream = CompileScripts();
         if (emitStream == null)
+        {
             return false;
+        }
 
         // Load in new mods and instantiate script types
         var scriptsAlc = new AssemblyLoadContext(TargetName, isCollectible: true);
@@ -116,7 +121,9 @@ static class ScriptManager
             s_scriptsAlc = scriptsAlc;
             s_scripts.AddRange(CreateScriptInstances(asm));
             if (s_isInitialized)
+            {
                 s_scripts.ForEach(script => script.OnLoad());
+            }
         },
         state: null);
 
@@ -132,7 +139,9 @@ static class ScriptManager
     static void RemoveOldScripts()
     {
         if (s_scriptsAlc == null)
+        {
             return;
+        }
 
         // TODO: Kill threads by mods when async support is added
 
@@ -351,6 +360,8 @@ static class ScriptManager
     static void ApplyScriptChangesCallback(object? state)
     {
         lock (s_lockObj)
+        {
             LoadScripts();
+        }
     }
 }
