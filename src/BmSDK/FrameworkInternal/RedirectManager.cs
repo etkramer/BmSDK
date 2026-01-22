@@ -92,7 +92,7 @@ public static class RedirectManager
             return false;
         }
 
-        if (info.TargetClass != obj.Class)
+        if (!obj.Class.EnumerateSupersAndSelf().Contains(info.TargetClass))
         {
             return false;
         }
