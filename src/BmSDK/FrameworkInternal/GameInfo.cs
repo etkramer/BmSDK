@@ -1,6 +1,6 @@
 ﻿namespace BmSDK.Framework;
 
-internal static class GameInfo
+static class GameInfo
 {
     public static class GlobalOffsets
     {

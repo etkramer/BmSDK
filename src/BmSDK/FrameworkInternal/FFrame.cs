@@ -1,9 +1,9 @@
-using BmSDK.Framework;
+﻿using BmSDK.Framework;
 
 namespace BmSDK;
 
 [StructLayout(LayoutKind.Explicit)]
-internal unsafe record struct FFrame
+unsafe record struct FFrame
 {
     [FieldOffset(0x8)]
     public IntPtr Node;

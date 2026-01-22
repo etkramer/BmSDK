@@ -1,4 +1,4 @@
-#pragma warning disable CS0169
+﻿#pragma warning disable CS0169
 #pragma warning disable CS0649
 
 using BmSDK.Framework;
@@ -7,9 +7,9 @@ namespace BmSDK;
 
 public unsafe struct FString
 {
-    private IntPtr AllocatorInstance;
-    private int Num;
-    private int Max;
+    IntPtr AllocatorInstance;
+    int Num;
+    int Max;
 
     /// <summary>
     /// Creates a new FString from the given managed string.

@@ -1,16 +1,16 @@
-using Windows.Win32;
+﻿using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 
 namespace BmSDK.Framework;
 
-internal static class GameWindow
+static class GameWindow
 {
     static HWND gameHwnd = default;
     static WNDPROC? s_wndProc;
     static WNDPROC? s_wndProcBase;
 
-    private static LRESULT CustomWndProc(HWND hWnd, uint msg, WPARAM wParam, LPARAM lParam)
+    static LRESULT CustomWndProc(HWND hWnd, uint msg, WPARAM wParam, LPARAM lParam)
     {
         switch (msg)
         {
@@ -46,7 +46,7 @@ internal static class GameWindow
         }
     }
 
-    private static bool TryFindGameWindow(out HWND result)
+    static bool TryFindGameWindow(out HWND result)
     {
         var foundHwnd = default(HWND);
         var processId = Environment.ProcessId;

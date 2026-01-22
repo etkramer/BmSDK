@@ -1,4 +1,4 @@
-using BmSDK.Framework;
+﻿using BmSDK.Framework;
 
 namespace BmSDK;
 
@@ -8,7 +8,7 @@ public partial class GameObject
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>
-    private static readonly TArray<IntPtr> GObjects = new()
+    static readonly TArray<IntPtr> GObjects = new()
     {
         Ptr = MemUtil.GetIntPointer(GameInfo.GlobalOffsets.GObjObjects),
     };

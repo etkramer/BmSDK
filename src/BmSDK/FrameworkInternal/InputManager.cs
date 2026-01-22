@@ -1,6 +1,6 @@
-namespace BmSDK.Framework;
+﻿namespace BmSDK.Framework;
 
-internal static class InputManager
+static class InputManager
 {
     static readonly bool[] s_keyStates = new bool[255];
     static readonly bool[] s_keyStatesPrev = new bool[255];

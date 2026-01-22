@@ -1,4 +1,4 @@
-using System.Numerics;
+﻿using System.Numerics;
 using BmSDK.BmGame;
 using FRotator = BmSDK.GameObject.FRotator;
 using FVector = BmSDK.GameObject.FVector;
@@ -6,7 +6,7 @@ using FVector = BmSDK.GameObject.FVector;
 [Script]
 public class CameraScript : Script
 {
-    private CameraController _cameraController = null;
+    CameraController _cameraController = null;
 
     public override void OnKeyDown(Keys key)
     {
