@@ -1,4 +1,4 @@
-namespace BmSDK.Framework;
+﻿namespace BmSDK.Framework;
 
 /// <summary>
 /// Base class for user-defined scripts.

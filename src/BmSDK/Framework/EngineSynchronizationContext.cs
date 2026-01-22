@@ -22,9 +22,9 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
     /// This is always the <see cref="Loader.DllMain"/> which runs on the game thread.
     /// </summary>
     public readonly int MainThreadId = Environment.CurrentManagedThreadId;
-    private readonly ConcurrentQueue<(SendOrPostCallback callback, object? state)> _queue = new();
+    readonly ConcurrentQueue<(SendOrPostCallback callback, object? state)> _queue = new();
 
-    private EngineSynchronizationContext() { }
+    EngineSynchronizationContext() { }
 
     public override void Post(SendOrPostCallback d, object? state)
     {

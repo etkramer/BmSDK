@@ -1,11 +1,11 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace BmSDK.Framework;
 
 public static class RedirectManager
 {
-    private static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
 
     public readonly record struct RedirectorInfo
     {
@@ -88,10 +88,14 @@ public static class RedirectManager
 
         var funcPath = func.GetPathName();
         if (!s_redirectorDict.TryGetValue(funcPath, out var info))
+        {
             return false;
+        }
 
         if (info.TargetClass != obj.Class)
+        {
             return false;
+        }
 
         redirectorInfo = info;
         return true;

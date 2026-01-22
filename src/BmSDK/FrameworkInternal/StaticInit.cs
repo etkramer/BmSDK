@@ -1,6 +1,6 @@
-namespace BmSDK.Framework;
+﻿namespace BmSDK.Framework;
 
-internal static partial class StaticInit
+static partial class StaticInit
 {
     public static Type GetManagedTypeForClassPath(string classPath)
     {

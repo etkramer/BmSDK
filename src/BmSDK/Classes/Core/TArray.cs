@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using BmSDK.Framework;
@@ -8,9 +8,9 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-internal interface IArray
+interface IArray
 {
-    public IntPtr Ptr { set; }
+    IntPtr Ptr { set; }
 }
 
 public unsafe class TArray<TManaged> : IArray, IList<TManaged>
@@ -70,7 +70,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
     /// <summary>
     /// Resizes the array to the specified count, reallocating if necessary and filling empty values with zeroes.
     /// </summary>
-    private void Resize(int newNum)
+    void Resize(int newNum)
     {
         // Nothing to resize
         if (newNum == Data.Num)
@@ -153,6 +153,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
                 return i;
             }
         }
+
         return -1;
     }
 
@@ -188,6 +189,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
             RemoveAt(index);
             return true;
         }
+
         return false;
     }
 
@@ -212,10 +214,12 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         {
             throw new ArgumentNullException(nameof(array));
         }
+
         if (arrayIndex < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(arrayIndex));
         }
+
         if (array.Length - arrayIndex < Count)
         {
             throw new ArgumentException(

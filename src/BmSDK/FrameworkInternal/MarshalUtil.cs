@@ -3,7 +3,7 @@ using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-internal static unsafe class MarshalUtil
+static unsafe class MarshalUtil
 {
     public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
@@ -63,6 +63,7 @@ internal static unsafe class MarshalUtil
             {
                 obj = HandleNewObject(objPtr);
             }
+
             return (TManaged)(object)Guard.NotNull(obj);
         }
 

@@ -4,7 +4,7 @@
 
 namespace BmSDK.Framework;
 
-internal static class MemUtil
+static class MemUtil
 {
     static IntPtr s_baseAddress = 0;
 

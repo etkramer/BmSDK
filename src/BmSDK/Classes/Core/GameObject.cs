@@ -1,10 +1,10 @@
-using BmSDK.Framework;
+﻿using BmSDK.Framework;
 
 namespace BmSDK;
 
 public interface IGameObject
 {
-    public static abstract Class StaticClass();
+    abstract static Class StaticClass();
 }
 
 public partial class GameObject
@@ -70,7 +70,7 @@ public partial class GameObject
         return res;
     }
 
-    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
+    void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {

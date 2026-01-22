@@ -78,7 +78,7 @@ public class DemoScript : Script
         }
     }
 
-    private static void TestSpawnActor()
+    static void TestSpawnActor()
     {
         var playerPawn = Game.GetPlayerPawn();
 
@@ -97,7 +97,7 @@ public class DemoScript : Script
         Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");
     }
 
-    private static void DebugLoadGame()
+    static void DebugLoadGame()
     {
         var console = Game.GetConsole();
         console.ConsoleCommand(
@@ -105,13 +105,13 @@ public class DemoScript : Script
         );
     }
 
-    private static void DebugToggleGhost()
+    static void DebugToggleGhost()
     {
         var cheatManager = Game.GetCheatManager();
         cheatManager.ToggleGhost();
     }
 
-    private static void DebugAddSplitScreenPlayer()
+    static void DebugAddSplitScreenPlayer()
     {
         var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
