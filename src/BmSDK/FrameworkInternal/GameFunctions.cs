@@ -1,6 +1,6 @@
-namespace BmSDK.Framework;
+﻿namespace BmSDK.Framework;
 
-internal static class GameFunctions
+static class GameFunctions
 {
     // UObject::StaticConstructObject()
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]

@@ -6,7 +6,7 @@ root = true
 indent_style = space
 indent_size = 4
 end_of_line = lf
-charset = utf-8
+charset = utf-8-bom
 trim_trailing_whitespace = true
 insert_final_newline = true
 
@@ -222,10 +222,12 @@ dotnet_naming_rule.constants_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.constants_should_be_pascal_case.symbols = constants
 dotnet_naming_rule.constants_should_be_pascal_case.style = pascal_case
 
-# NOTE: Parameters use PascalCase intentionally to match Unreal Engine conventions
-dotnet_naming_rule.parameters_should_be_pascal_case.severity = suggestion
-dotnet_naming_rule.parameters_should_be_pascal_case.symbols = parameters
-dotnet_naming_rule.parameters_should_be_pascal_case.style = pascal_case
+# Parameters use camelCase (.NET default)
+# Exception: PascalCase is used in Classes/ folder (partial classes matching generated code),
+#            when detouring built-in methods, or in generated code
+dotnet_naming_rule.parameters_should_be_camelcase.severity = suggestion
+dotnet_naming_rule.parameters_should_be_camelcase.symbols = parameters
+dotnet_naming_rule.parameters_should_be_camelcase.style = camelcase
 
 # Symbol specifications
 
