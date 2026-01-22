@@ -341,7 +341,81 @@ static class ScriptManager
             }
         }
 
+        // Register auto-attach ScriptComponent types
+        RegisterAutoAttachComponents(asm);
+
         return scripts;
+    }
+
+    /// <summary>
+    /// Scans the assembly for ScriptComponent types with [Redirector] methods that have AutoAttach=true,
+    /// and registers them for auto-attachment.
+    /// </summary>
+    static void RegisterAutoAttachComponents(Assembly asm)
+    {
+        var componentTypes = asm.GetTypes()
+            .Where(type => type.IsAssignableTo(typeof(ScriptComponent)))
+            .Where(type => !type.IsAbstract);
+
+        foreach (var componentType in componentTypes)
+        {
+            var redirectorAttrs = ScriptComponent.GetRedirectorAttributes(componentType)
+                .Where(attr => attr.AutoAttach)
+                .ToList();
+
+            if (redirectorAttrs.Count == 0)
+            {
+                continue;
+            }
+
+            // Register for each unique target class
+            var targetClasses = redirectorAttrs
+                .Select(attr => attr.TargetClass)
+                .Distinct();
+
+            foreach (var targetManagedClass in targetClasses)
+            {
+                var targetClass = Class.FindByManagedType(targetManagedClass);
+                RedirectManager.RegisterAutoAttachType(componentType, targetClass);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Attaches auto-attach components to an actor if it matches any registered target classes.
+    /// Called when actors are initialized (PostBeginPlay).
+    /// </summary>
+    internal static void TryAutoAttachComponents(Actor actor)
+    {
+        if (!RedirectManager.HasAutoAttachTypes())
+        {
+            return;
+        }
+
+        var componentTypes = RedirectManager.GetAutoAttachTypesForActor(actor.Class).Distinct();
+
+        foreach (var componentType in componentTypes)
+        {
+            // Check if this actor already has this component type attached
+            var alreadyAttached = actor.ScriptComponents.Any(c => c.GetType() == componentType);
+            if (alreadyAttached)
+            {
+                continue;
+            }
+
+            try
+            {
+                var component = (ScriptComponent)Guard.NotNull(Activator.CreateInstance(componentType));
+                actor.AttachScriptComponent(component);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(
+                    $"Failed to auto-attach {componentType.Name} to {actor}: {e.Message}",
+                    skipSender: true
+                );
+            }
+        }
     }
 
     static void WatchForScriptChanges()

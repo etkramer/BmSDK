@@ -96,12 +96,19 @@ static class Loader
             var funcNameForTick = "BmGame.RGameInfo:Tick";
             var funcNameForEnterMenu = "GFxUI.GFxMoviePlayer:Init";
             var funcNameForEnterGame = "BmGame.RPlayerController:ClientReady";
+            var funcNameForPostBeginPlay = "Engine.Actor:PostBeginPlay";
 
             // Notify scripts of game init
             if (!s_hasGameInited && funcName == funcNameForInit)
             {
                 OnGameInit();
                 s_hasGameInited = true;
+            }
+
+            // Auto-attach components to newly spawned actors
+            if (funcName == funcNameForPostBeginPlay && selfObj is Engine.Actor actor)
+            {
+                ScriptManager.TryAutoAttachComponents(actor);
             }
 
             // Notify scripts of game start
@@ -170,28 +177,25 @@ static class Loader
             )
             {
                 var redirectMethod = redirectorInfo.RedirectMethod;
-                var redirectTarget = redirectorInfo.RedirectTarget;
+                var component = redirectorInfo.Component;
 
-                // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
+                // Gather (expected) managed types from the redirector method.
+                // With component-based redirectors, the method signature matches the
+                // function parameters directly (no artificial 'self' param).
                 var argTypes = redirectMethod
                     .GetParameters()
                     .Select(p => p.ParameterType)
-                    .Skip(funcObj.IsStatic ? 0 : 1)
                     .ToArray();
 
-                // Marshal args, add self as first arg if needed.
-                var args = stackPtr->ParamsToManaged(argTypes).ToList();
-                if (!funcObj.IsStatic)
-                {
-                    args.Insert(0, selfObj);
-                }
+                // Marshal args from the stack.
+                var args = stackPtr->ParamsToManaged(argTypes).ToArray();
 
-                var result = redirectMethod.Invoke(redirectTarget, args.ToArray());
+                // Invoke on the component instance.
+                var result = redirectMethod.Invoke(component, args);
 
                 if (result != null && redirectMethod.ReturnType != null)
                 {
                     // Marshal result back (if non-void).
-                    var returnType = redirectMethod.ReturnType;
                     MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
                 }
             }

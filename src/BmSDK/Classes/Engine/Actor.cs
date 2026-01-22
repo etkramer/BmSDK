@@ -20,8 +20,12 @@ public partial class Actor
 
     public static void DetachAllScriptComponents()
     {
-        // Run external OnDetach() of each component
-        s_scriptComponents.ForEach(component => component.OnDetach());
+        // Unregister redirectors and run OnDetach() for each component
+        s_scriptComponents.ForEach(component =>
+        {
+            component.UnregisterRedirectors();
+            component.OnDetach();
+        });
         // Remove all local copies of script components
         s_scriptComponents.ForEach(component =>
         {
@@ -43,6 +47,9 @@ public partial class Actor
         // Store new component
         s_scriptComponents.Add(newComponent);
         _scriptComponents.Add(newComponent);
+
+        // Register any [Redirector] methods on this component
+        newComponent.RegisterRedirectors();
 
         // Invoke attach callback
         newComponent.OnAttach();
@@ -67,6 +74,9 @@ public partial class Actor
     public void DetachScriptComponent(ScriptComponent component)
     {
         Guard.Require(component.Owner == this, "Component is not attached to this actor");
+
+        // Unregister any [Redirector] methods
+        component.UnregisterRedirectors();
 
         // Invoke detach callback
         component.OnDetach();

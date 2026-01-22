@@ -1,4 +1,5 @@
-﻿using BmSDK.Engine;
+using System.Reflection;
+using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
@@ -27,4 +28,57 @@ public abstract class ScriptComponent
     /// Called once every world tick.
     /// </summary>
     public virtual void OnTick() { }
+
+    /// <summary>
+    /// Registers all [Redirector] methods on this component for its owner.
+    /// Called internally when the component is attached.
+    /// </summary>
+    internal void RegisterRedirectors()
+    {
+        var componentType = GetType();
+        var methods = componentType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+        foreach (var method in methods)
+        {
+            var attr = method.GetCustomAttribute<RedirectorAttribute>();
+            if (attr == null)
+            {
+                continue;
+            }
+
+            // Resolve the function path (accounts for inheritance)
+            var targetClass = Class.FindByManagedType(attr.TargetClass);
+            var funcPath = RedirectManager.GetDeclaringFuncPath(targetClass, attr.TargetMethod);
+
+            // Register the redirector for this specific owner
+            RedirectManager.RegisterComponentRedirector(Owner, funcPath, this, method);
+        }
+    }
+
+    /// <summary>
+    /// Unregisters all redirectors associated with this component.
+    /// Called internally when the component is detached.
+    /// </summary>
+    internal void UnregisterRedirectors()
+    {
+        RedirectManager.UnregisterComponentRedirectors(this);
+    }
+
+    /// <summary>
+    /// Gets all [Redirector] attribute metadata from the given component type.
+    /// Used during auto-attach registration.
+    /// </summary>
+    internal static IEnumerable<RedirectorAttribute> GetRedirectorAttributes(Type componentType)
+    {
+        var methods = componentType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+
+        foreach (var method in methods)
+        {
+            var attr = method.GetCustomAttribute<RedirectorAttribute>();
+            if (attr != null)
+            {
+                yield return attr;
+            }
+        }
+    }
 }

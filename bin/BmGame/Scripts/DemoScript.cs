@@ -1,4 +1,4 @@
-﻿using BmSDK;
+using BmSDK;
 using BmSDK.BmGame;
 using BmSDK.BmScript;
 using BmSDK.Engine;
@@ -17,26 +17,6 @@ public class DemoScript : Script
         {
             gameInfo.MaxPlayers = 4;
         }
-
-        // Redirect PostBeginPlay() on RCinematicCustomActor
-        Game.SetFunctionRedirect(
-            typeof(RCinematicCustomActor),
-            nameof(RCinematicCustomActor.PostBeginPlay),
-            CustomPostBeginPlay
-        );
-
-        // Redirect BeginAnimControl() on RCinematicCustomActor
-        Game.SetFunctionRedirect(
-            typeof(RCinematicCustomActor),
-            nameof(RCinematicCustomActor.BeginAnimControl),
-            (RCinematicCustomActor self, InterpGroup inInterpGroup) =>
-            {
-                Debug.Log($"Hello from BeginAnimControl!");
-
-                // Calling the base implementation is optional.
-                self.BeginAnimControl(inInterpGroup);
-            }
-        );
     }
 
     public override void OnEnterMenu()
@@ -117,31 +97,51 @@ public class DemoScript : Script
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
     }
+}
 
-    static void CustomPostBeginPlay(RCinematicCustomActor self)
+/// <summary>
+/// Component that redirects cinematic actor behavior.
+/// Automatically attaches to RCinematicCustomActor instances.
+/// </summary>
+public class CinematicActorComponent : ScriptComponent
+{
+    // Access the target actor via Owner, cast to the specific type
+    RCinematicCustomActor Target => (RCinematicCustomActor)Owner;
+
+    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.PostBeginPlay))]
+    public void CustomPostBeginPlay()
     {
         // Load package with Robin's meshes
         Game.LoadPackage("Playable_Robin_Std_SF");
 
         // Replace cinematic Batman (head/body)
-        if (self.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
+        if (Target.SkeletalMeshComponent.SkeletalMesh.Name.ToString() == "Batman_Head_Skin")
         {
             var newHeadMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Head_Skin");
             var newBodyMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Staff_V2");
-            self.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
-            self.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
+            Target.SkeletalMeshComponent.SetSkeletalMesh(newHeadMesh);
+            Target.ExtraSkeletalMeshComponent1.SetSkeletalMesh(newBodyMesh);
             Debug.Log("Using Robin's head/body");
         }
 
         // Replace cinematic Batman (cape)
-        if (self.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
+        if (Target.SkeletalMeshComponent.SkeletalMesh?.Name.ToString() == "Cape_Mesh")
         {
             var newCapeMesh = Game.FindObject<SkeletalMesh>("Robin.Mesh.Robin_Cape_V2");
-            self.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
+            Target.SkeletalMeshComponent.SetSkeletalMesh(newCapeMesh);
             Debug.Log("Using Robin's cape");
         }
 
         // Calling the base implementation is optional.
-        self.PostBeginPlay();
+        Target.PostBeginPlay();
+    }
+
+    [Redirector(typeof(RCinematicCustomActor), nameof(RCinematicCustomActor.BeginAnimControl))]
+    public void CustomBeginAnimControl(InterpGroup inInterpGroup)
+    {
+        Debug.Log($"Hello from BeginAnimControl!");
+
+        // Calling the base implementation is optional.
+        Target.BeginAnimControl(inInterpGroup);
     }
 }
