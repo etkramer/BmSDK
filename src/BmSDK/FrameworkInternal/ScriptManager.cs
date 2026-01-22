@@ -123,6 +123,9 @@ static class ScriptManager
             if (s_isInitialized)
             {
                 s_scripts.ForEach(script => script.OnLoad());
+
+                // Auto-attach components to existing actors (for hot reload)
+                AttachAutoAttachToExistingActors();
             }
         },
         state: null);
@@ -404,6 +407,23 @@ static class ScriptManager
                     skipSender: true
                 );
             }
+        }
+    }
+
+    /// <summary>
+    /// Attaches auto-attach components to all existing actors.
+    /// Called on hot reload to ensure existing actors get new components.
+    /// </summary>
+    static void AttachAutoAttachToExistingActors()
+    {
+        if (!RedirectManager.HasAutoAttachTypes())
+        {
+            return;
+        }
+
+        foreach (var actor in GameObject.FindObjectsSlow<Actor>())
+        {
+            TryAutoAttachComponents(actor);
         }
     }
 
