@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
 
 namespace BmSDK.Framework;
 
@@ -73,6 +74,41 @@ public static class RedirectManager
             // NOTE: We've got an approach for solving this described in Loader.cs.
             throw new InvalidOperationException($"{targetFuncPath} has already been redirected!");
         }
+    }
+
+    internal static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    {
+        if (!TryGetRedirector(selfObj, funcObj, out var redirInfo))
+        {
+            return false;
+        }
+
+        var redirTarget = redirInfo.RedirectTarget;
+        var redirMethod = redirInfo.RedirectMethod;
+
+        // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
+        var argTypes = redirMethod
+            .GetParameters()
+            .Select(param => param.ParameterType)
+            .Skip(funcObj.IsStatic ? 0 : 1)
+            .ToArray();
+
+        // Marshal args, add self as first arg if needed.
+        var args = stackPtr->ParamsToManaged(argTypes).ToList();
+        if (!funcObj.IsStatic)
+        {
+            args.Insert(0, selfObj);
+        }
+
+        var result = redirMethod.Invoke(redirTarget, args.ToArray());
+
+        // Marshal result back (if non-void)
+        if (result != null && redirMethod.ReturnType != null)
+        {
+            MarshalUtil.ToUnmanaged(result, Result, redirMethod.ReturnType);
+        }
+
+        return true;
     }
 
     /// <summary>

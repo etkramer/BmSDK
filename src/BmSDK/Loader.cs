@@ -160,46 +160,16 @@ static class Loader
             // Don't run the same redirector twice in a row - in that case, we assume the user is attempting to call the base implementation.
             // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
             // TODO: Instead of falling back to the base impl, we can support multiple redirectors on the same function by having subsequent calls fall back to the next redirector instead (until we run out).
-            bool shouldIgnoreRedirects = s_lastFuncForRedirects == funcObj;
+            var shouldRunRedirectors = funcObj != s_lastFuncForRedirects;
             s_lastFuncForRedirects = funcObj;
 
-            // Do we have any redirections to run?
-            if (
-                !shouldIgnoreRedirects
-                && RedirectManager.TryGetRedirector(selfObj, funcObj, out var redirectorInfo)
-            )
+            if (shouldRunRedirectors && RedirectManager.ExecuteRedirector(selfObj, funcObj, stackPtr, Result))
             {
-                var redirectMethod = redirectorInfo.RedirectMethod;
-                var redirectTarget = redirectorInfo.RedirectTarget;
-
-                // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
-                var argTypes = redirectMethod
-                    .GetParameters()
-                    .Select(p => p.ParameterType)
-                    .Skip(funcObj.IsStatic ? 0 : 1)
-                    .ToArray();
-
-                // Marshal args, add self as first arg if needed.
-                var args = stackPtr->ParamsToManaged(argTypes).ToList();
-                if (!funcObj.IsStatic)
-                {
-                    args.Insert(0, selfObj);
-                }
-
-                var result = redirectMethod.Invoke(redirectTarget, args.ToArray());
-
-                if (result != null && redirectMethod.ReturnType != null)
-                {
-                    // Marshal result back (if non-void).
-                    var returnType = redirectMethod.ReturnType;
-                    MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
-                }
+                return;
             }
-            else
-            {
-                // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
-                _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
-            }
+
+            // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
+            _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
         });
     }
 
