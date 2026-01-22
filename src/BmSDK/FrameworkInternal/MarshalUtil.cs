@@ -63,6 +63,7 @@ static unsafe class MarshalUtil
             {
                 obj = HandleNewObject(objPtr);
             }
+
             return (TManaged)(object)Guard.NotNull(obj);
         }
 

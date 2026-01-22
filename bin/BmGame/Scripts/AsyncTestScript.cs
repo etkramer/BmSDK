@@ -22,7 +22,9 @@ public class AsyncTestScript : Script
             PrintCurrentThread();   // IsMainThread: true
             var rpc = Game.GetPlayerController();
             if (!rpc.IsValid())
+            {
                 return;
+            }
             // Toggle detective vision
             rpc.bInvestigateMode ^= true;
         },
@@ -40,7 +42,10 @@ public class AsyncTestScript : Script
     public override void OnKeyDown(Keys key)
     {
         if (key != Keys.M)
+        {
             return;
+        }
+
         s_delayTimer.Change(DelayMillis, 0);
     }
 }
