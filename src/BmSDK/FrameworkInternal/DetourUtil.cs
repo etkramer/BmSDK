@@ -6,7 +6,7 @@ namespace BmSDK.Framework;
 static class DetourUtil
 {
     // Keep delegates in memory to avoid GC
-    static readonly List<Delegate> _detourDelegateRefs = [];
+    static readonly List<Delegate> s_detourDelegateRefs = [];
 
     // Creates a detour and returns the original function
     public static unsafe T NewDetour<T>(IntPtr funcOffset, T detourFunc)
@@ -15,7 +15,7 @@ static class DetourUtil
         void* origFuncPtr = MemUtil.GetPointer(funcOffset);
 
         // Get a pointer to the managed detour method
-        _detourDelegateRefs.Add(detourFunc);
+        s_detourDelegateRefs.Add(detourFunc);
         void* managedDetourFuncPtr = Marshal.GetFunctionPointerForDelegate(detourFunc).ToPointer();
 
         PInvokeDetours.DetourRestoreAfterWith();

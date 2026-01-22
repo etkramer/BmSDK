@@ -6,7 +6,7 @@ namespace BmSDK.Framework;
 
 static class GameWindow
 {
-    static HWND gameHwnd = default;
+    static HWND s_gameHwnd = default;
     static WNDPROC? s_wndProc;
     static WNDPROC? s_wndProcBase;
 
@@ -28,15 +28,15 @@ static class GameWindow
     internal static void Tick()
     {
         // Do we know which window is ours?
-        if (gameHwnd == default)
+        if (s_gameHwnd == default)
         {
             // If not, keep trying to find it.
-            if (TryFindGameWindow(out gameHwnd))
+            if (TryFindGameWindow(out s_gameHwnd))
             {
                 // Subclass the window procedure
                 s_wndProc = CustomWndProc;
                 var originalWndProc = PInvoke.SetWindowLong(
-                    gameHwnd,
+                    s_gameHwnd,
                     WINDOW_LONG_PTR_INDEX.GWL_WNDPROC,
                     (int)Marshal.GetFunctionPointerForDelegate(s_wndProc)
                 );
