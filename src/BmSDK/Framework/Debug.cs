@@ -1,12 +1,12 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace BmSDK.Framework;
 
 public static class Debug
 {
-    private static readonly Stack<string> s_senderStack = new();
-    private static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
+    static readonly Stack<string> s_senderStack = new();
+    static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
 
     public static void Log(
         object? msg,

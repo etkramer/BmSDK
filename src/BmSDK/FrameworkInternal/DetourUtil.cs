@@ -3,7 +3,7 @@ using PInvokeDetours = Microsoft.Detours.PInvoke;
 
 namespace BmSDK.Framework;
 
-internal static class DetourUtil
+static class DetourUtil
 {
     // Keep delegates in memory to avoid GC
     static readonly List<Delegate> _detourDelegateRefs = [];

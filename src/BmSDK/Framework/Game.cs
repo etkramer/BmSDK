@@ -1,4 +1,4 @@
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using BmSDK.BmGame;
 using BmSDK.Engine;
 
@@ -175,10 +175,10 @@ public static partial class Game
     /// <summary>
     /// Loads a package into memory given its .upk file name.
     /// </summary>
-    public static unsafe Package? LoadPackage(string Filename)
+    public static unsafe Package? LoadPackage(string filename)
     {
         // Get TCHAR* from string
-        fixed (char* filenamePtr = Filename)
+        fixed (char* filenamePtr = filename)
         {
             // Call native func
             var result = GameFunctions.LoadPackage(0, (IntPtr)filenamePtr, 0);

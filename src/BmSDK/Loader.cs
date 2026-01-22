@@ -1,14 +1,14 @@
 ﻿global using System.Runtime.InteropServices;
+using System.Diagnostics.CodeAnalysis;
 using BmSDK.Engine;
 using MoreLinq;
-using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
 [assembly: SuppressMessage("Usage", "IDE0130:Namespace does not match folder structure")]
 
 namespace BmSDK.Framework;
 
-internal static class Loader
+static class Loader
 {
     static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
@@ -26,7 +26,7 @@ internal static class Loader
         Debug.PopSender();
     }
 
-    private static void DllMain()
+    static void DllMain()
     {
         EngineSynchronizationContext.InitOnThread();
 
@@ -57,14 +57,14 @@ internal static class Loader
                 ConditionalDestroyDetour);
     }
 
-    private static IntPtr EngineTickDetour(IntPtr self)
+    static IntPtr EngineTickDetour(IntPtr self)
     {
         // Run the scheduled callbacks
         EngineSynchronizationContext.Instance.ExecutePending();
         return _EngineTickDetourBase!.Invoke(self);
     }
 
-    private static void OnGameInit()
+    static void OnGameInit()
     {
         // Call Main() for scripts
         ScriptManager.Scripts.ForEach(script =>
@@ -81,7 +81,7 @@ internal static class Loader
     static Function? lastFuncForRedirects = null;
 
     // Detour for UObject::ProcessInternal()
-    private static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
+    static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
         RunGuarded(() =>
         {
@@ -204,7 +204,7 @@ internal static class Loader
     }
 
     // Detour for UObject::ConditionalDestroy()
-    private static void ConditionalDestroyDetour(IntPtr self)
+    static void ConditionalDestroyDetour(IntPtr self)
     {
         // Destroy this object's managed instance
         RunGuarded(() => MarshalUtil.DestroyManagedWrapper(self));
@@ -213,7 +213,7 @@ internal static class Loader
         _ConditionalDestroyDetourBase!.Invoke(self);
     }
 
-    private static void RunGuarded(Action action)
+    static void RunGuarded(Action action)
     {
         try
         {

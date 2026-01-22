@@ -1,4 +1,4 @@
-using BmSDK;
+﻿using BmSDK;
 using BmSDK.Engine;
 
 [Script]

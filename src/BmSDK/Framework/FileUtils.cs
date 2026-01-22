@@ -1,4 +1,4 @@
-namespace BmSDK.Framework;
+﻿namespace BmSDK.Framework;
 
 public static class FileUtils
 {

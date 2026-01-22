@@ -1,4 +1,4 @@
-using BmSDK;
+﻿using BmSDK;
 
 [Script]
 public class MinimalScript : Script
