@@ -10,6 +10,11 @@ namespace BmSDK.Framework;
 
 static class Loader
 {
+    const string InitFuncName = "Engine.GameInfo:InitGame";
+    const string TickFuncName = "BmGame.RGameInfo:Tick";
+    const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
+    const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
+
     static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
@@ -20,11 +25,7 @@ static class Loader
     /// </summary>
     [UnmanagedCallersOnly]
     public static void GuardedDllMain()
-    {
-        Debug.PushSender("Loader");
-        RunGuarded(DllMain);
-        Debug.PopSender();
-    }
+        => Debug.RunWithSender("Loader", () => RunGuarded(DllMain));
 
     static void DllMain()
     {
@@ -64,17 +65,6 @@ static class Loader
         return _EngineTickDetourBase!.Invoke(self);
     }
 
-    static void OnGameInit()
-    {
-        // Call Main() for scripts
-        ScriptManager.Scripts.ForEach(script =>
-        {
-            Debug.PushSender(script.Name);
-            script.Main();
-            Debug.PopSender();
-        });
-    }
-
     static bool s_hasGameStarted = false;
     static bool s_hasGameInited = false;
 
@@ -87,72 +77,48 @@ static class Loader
         {
             IntPtr selfPtr = self;
             FFrame* stackPtr = (FFrame*)Stack.ToPointer();
-
             var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
             var funcObj = MarshalUtil.ToManaged<Function>(&stackPtr->Node);
-
             var funcName = funcObj.GetPathName();
-            var funcNameForInit = "Engine.GameInfo:InitGame";
-            var funcNameForTick = "BmGame.RGameInfo:Tick";
-            var funcNameForEnterMenu = "GFxUI.GFxMoviePlayer:Init";
-            var funcNameForEnterGame = "BmGame.RPlayerController:ClientReady";
 
             // Notify scripts of game init
-            if (!s_hasGameInited && funcName == funcNameForInit)
+            if (!s_hasGameInited && funcName == InitFuncName)
             {
-                OnGameInit();
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.Main));
                 s_hasGameInited = true;
             }
 
             // Notify scripts of game start
-            if (!s_hasGameStarted && funcName == funcNameForEnterMenu)
+            if (!s_hasGameStarted && funcName == EnterMenuFuncName)
             {
-                // Call OnEnterMenu() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.OnEnterMenu();
-                    Debug.PopSender();
-                });
-
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterMenu));
                 s_hasGameStarted = true;
             }
 
             // Notify scripts of game begin play
-            if (funcName == funcNameForEnterGame)
+            if (funcName == EnterGameFuncName)
             {
-                // Call OnEnterGame() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.OnEnterGame();
-                    Debug.PopSender();
-                });
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterGame));
             }
 
             // Notify scripts of game tick
-            if (funcName == funcNameForTick)
+            if (funcName == TickFuncName)
             {
                 // Tick framework stuff
-                InputManager.Tick(ScriptManager.Scripts);
+                InputManager.Tick();
                 GameWindow.Tick();
 
                 // Call OnTick() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.OnTick();
-                    Debug.PopSender();
-                });
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnTick));
 
                 // Call OnTick() for script components
                 if (Actor.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in Actor.AllScriptComponents)
                     {
-                        Debug.PushSender(scriptComponent.GetType().Name);
-                        scriptComponent.OnTick();
-                        Debug.PopSender();
+                        Debug.RunWithSender(
+                            scriptComponent.GetType().Name,
+                            scriptComponent.OnTick);
                     }
                 }
             }
