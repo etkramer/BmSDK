@@ -196,7 +196,7 @@ public static partial class Game
         Delegate newDelegate
     ) =>
         RedirectManager.RegisterRedirector(
-            Class.FindByManagedType(targetClass),
+            targetClass,
             targetMethodName,
             newDelegate
         );

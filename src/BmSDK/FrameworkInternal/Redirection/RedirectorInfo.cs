@@ -2,4 +2,4 @@
 
 namespace BmSDK.Framework.Redirection;
 
-record RedirectorInfo(Class TargetClass, MethodInfo RedirectMethod, object? RedirectTarget);
+record RedirectorInfo(Type TargetClass, MethodInfo RedirectMethod, object? RedirectTarget);

@@ -6,6 +6,7 @@ namespace BmSDK.Framework.Redirection;
 static class RedirectManager
 {
     static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    const BindingFlags FuncSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public;
 
     internal static void UnregisterAllRedirectors()
         => s_redirectorDict.Clear();
@@ -14,25 +15,26 @@ static class RedirectManager
     /// Registers a delegate as a redirector for the given script function.
     /// </summary>
     internal static void RegisterRedirector(
-        Class targetClass,
+        Type targetClass,
         string targetMethodName,
         Delegate newDelegate
     )
     {
-        // To replace a method on a non-declaring subclass, we need to find the actual
-        // declaring class name. So we enumerate all supers until we find the first class that declares our function.
-        var declaringClass = Guard.NotNull(
-            targetClass
-                .EnumerateSupersAndSelf()
-                .OfType<Class>()
-                .FirstOrDefault(super =>
-                    super
-                        .EnumerateFields()
-                        .Any(field => field.Name.ToString() == targetMethodName)),
+        // Prevent creation of invalid redirects
+        if (!targetClass.IsSubclassOf(typeof(GameObject)))
+        {
+            throw new ArgumentException("Only methods of UClasses may be redirected!");
+        }
+
+        // To replace a method on a non-declaring subclass, we need to find the actual declaring class name.
+        // So we enumerate all supers until we find the first class that declares our function.
+        var declaringClass = Guard.NotNull(Class
+            .EnumerateSupersAndSelf(targetClass)
+            .FirstOrDefault(super => super.GetMethod(targetMethodName, FuncSearchFlags) != null),
             $"Couldn't find declaring class for method {targetMethodName}!");
 
         // Get the full path of the function (as originally declared).
-        var targetFuncPath = $"{declaringClass.GetPathName()}:{targetMethodName}";
+        var targetFuncPath = $"{StaticInit.GetClassPathForManagedType(declaringClass)}:{targetMethodName}";
 
         // Get the delegate's MethodInfo.
         MethodInfo newMethodInfo;
@@ -111,7 +113,7 @@ static class RedirectManager
             return false;
         }
 
-        if (!obj.Class.EnumerateSupersAndSelf().Contains(info.TargetClass))
+        if (!Class.EnumerateSupersAndSelf(obj.GetType()).Contains(info.TargetClass))
         {
             return false;
         }

@@ -36,4 +36,12 @@ public partial class Class
             false
         );
     }
+
+    public static IEnumerable<Type> EnumerateSupersAndSelf(Type type)
+    {
+        for (var cur = type; cur != null; cur = cur.BaseType)
+        {
+            yield return cur;
+        }
+    }
 }
