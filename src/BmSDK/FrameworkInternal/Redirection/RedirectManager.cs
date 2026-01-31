@@ -1,21 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
-using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
 
-namespace BmSDK.Framework;
+namespace BmSDK.Framework.Redirection;
 
-public static class RedirectManager
+static class RedirectManager
 {
     static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
-
-    public readonly record struct RedirectorInfo
-    {
-        public Class TargetClass { get; init; }
-
-        public MethodInfo RedirectMethod { get; init; }
-
-        public object? RedirectTarget { get; init; }
-    }
 
     internal static void UnregisterAllRedirectors()
         => s_redirectorDict.Clear();
@@ -61,12 +51,10 @@ public static class RedirectManager
         }
 
         // Store the redirect for later use.
-        var redirInfo = new RedirectorInfo()
-        {
-            TargetClass = targetClass,
-            RedirectMethod = newMethodInfo,
-            RedirectTarget = newMethodInfo.IsStatic ? null : newDelegate.Target,
-        };
+        var redirInfo = new RedirectorInfo(
+            targetClass,
+            newMethodInfo,
+            newMethodInfo.IsStatic ? null : newDelegate.Target);
 
         if (!s_redirectorDict.TryAdd(targetFuncPath, redirInfo))
         {
