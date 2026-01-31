@@ -19,22 +19,17 @@ static class RedirectManager
         Delegate newDelegate
     )
     {
-        Class declaringClass = targetClass;
-        {
-            // To replace a method on a non-declaring subclass, we need to find the actual
-            // declaring class name. So we enumerate all supers until we find the first class that declares our function.
-            declaringClass = Guard.NotNull(
-                targetClass
-                    .EnumerateSupersAndSelf()
-                    .OfType<Class>()
-                    .FirstOrDefault(super =>
-                        super
-                            .EnumerateFields()
-                            .Any(field => field.Name.ToString() == targetMethodName)
-                    ),
-                $"Couldn't find declaring class for method {targetMethodName}!"
-            );
-        }
+        // To replace a method on a non-declaring subclass, we need to find the actual
+        // declaring class name. So we enumerate all supers until we find the first class that declares our function.
+        var declaringClass = Guard.NotNull(
+            targetClass
+                .EnumerateSupersAndSelf()
+                .OfType<Class>()
+                .FirstOrDefault(super =>
+                    super
+                        .EnumerateFields()
+                        .Any(field => field.Name.ToString() == targetMethodName)),
+            $"Couldn't find declaring class for method {targetMethodName}!");
 
         // Get the full path of the function (as originally declared).
         var targetFuncPath = $"{declaringClass.GetPathName()}:{targetMethodName}";
