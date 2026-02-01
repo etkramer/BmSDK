@@ -12,9 +12,10 @@ namespace BmSDK.Framework;
 static class Loader
 {
     const string InitFuncName = "Engine.GameInfo:InitGame";
-    const string TickFuncName = "BmGame.RGameInfo:Tick";
     const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
     const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
+    const string PostBeginPlayFuncName = ":PostBeginPlay";
+    const string TickFuncName = "BmGame.RGameInfo:Tick";
 
     static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
@@ -100,6 +101,12 @@ static class Loader
             if (funcName == EnterGameFuncName)
             {
                 ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterGame));
+            }
+
+            // Auto-attach script components to newly spawned actors
+            if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
+            {
+                ScriptComponentManager.TryAutoAttachComponents(actor);
             }
 
             // Notify scripts of game tick

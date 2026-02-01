@@ -8,8 +8,7 @@ static class RedirectManager
     static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
     const BindingFlags FuncSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public;
 
-    internal static void UnregisterAllRedirectors()
-        => s_redirectorDict.Clear();
+    internal static void UnregisterAll() => s_redirectorDict.Clear();
 
     /// <summary>
     /// Registers a delegate as a redirector for the given script function.
