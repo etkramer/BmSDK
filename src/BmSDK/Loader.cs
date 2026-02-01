@@ -104,9 +104,12 @@ static class Loader
             }
 
             // Auto-attach script components to newly spawned actors
-            if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
+            if (ScriptComponentManager.HasAutoAttachTypes())
             {
-                ScriptComponentManager.TryAutoAttachComponents(actor);
+                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
+                {
+                    ScriptComponentManager.TryAutoAttachComponents(actor);
+                }
             }
 
             // Notify scripts of game tick

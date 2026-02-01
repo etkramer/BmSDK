@@ -122,11 +122,6 @@ static class ScriptComponentManager
     /// <param name="actor">The actor to which script components will be auto-attached. Cannot be null.</param>
     public static void TryAutoAttachComponents(Actor actor)
     {
-        if (!HasAutoAttachTypes())
-        {
-            return;
-        }
-
         var componentTypes = GetAutoAttachTypesByActor(actor);
 
         foreach (var componentType in componentTypes)
@@ -164,6 +159,11 @@ static class ScriptComponentManager
         foreach (var actor in GameObject.FindObjectsSlow<Actor>())
         {
             if (!actor.IsValid())
+            {
+                continue;
+            }
+
+            if (actor == actor.Class.DefaultObject)
             {
                 continue;
             }
