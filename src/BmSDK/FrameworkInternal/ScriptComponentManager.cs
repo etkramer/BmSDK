@@ -8,7 +8,7 @@ static class ScriptComponentManager
     static readonly Dictionary<string, List<Type>> s_autoAttachTypes = [];
 
     /// <summary>
-    /// Unregisters all script components and clears all auto-attachment type registrations.
+    /// Unregisters all <see cref="ScriptComponent"/>s and clears all auto-attachment type registrations.
     /// </summary>
     /// <remarks>This method detaches all registered script components and removes their associations both
     /// in the static and non-static lists. After calling this method, no script components remain registered,
@@ -26,11 +26,15 @@ static class ScriptComponentManager
         Actor.s_scriptComponents.Clear();
     }
 
+    /// <summary>
+    /// Determines whether any auto-attach <see cref="ScriptComponent"/> are currently registered.
+    /// </summary>
+    /// <returns><see langword="true"/> if one or more auto-attach types are registered; otherwise, <see langword="false"/>.</returns>
     public static bool HasAutoAttachTypes() => s_autoAttachTypes.Count > 0;
 
     /// <summary>
-    /// Registers a script component type to be automatically attached to instances of a specified actor class,
-    /// when they are created.
+    /// Registers a <see cref="ScriptComponent"/> type to be automatically attached to
+    /// instances of a specified actor class, when they are created.
     /// </summary>
     /// <param name="componentType">The type of the script component to register for automatic attachment. Must derive from ScriptComponent.</param>
     /// <param name="targetClass">The actor class type which the component will be automatically attached to. Must derive from Actor.</param>
@@ -49,6 +53,15 @@ static class ScriptComponentManager
         }
     }
 
+    /// <summary>
+    /// Registers all <see cref="ScriptComponent"/>s in the specified assembly that are marked with
+    /// a ScriptComponentAttribute and have AutoAttach enabled for automatic attachment.
+    /// </summary>
+    /// <remarks>Only types that inherit from ScriptComponent, are not abstract, and are decorated with a
+    /// ScriptComponentAttribute with AutoAttach set to <see langword="true"/> will be registered. This method is
+    /// used when scripts are (re-)loaded to retrieve auto-attach components.
+    /// metadata.</remarks>
+    /// <param name="asm">The assembly to scan for types eligible for automatic attachment. Cannot be null.</param>
     public static void RegisterAutoAttachTypes(Assembly asm)
     {
         var componentTypes = asm.GetTypes()
@@ -68,7 +81,7 @@ static class ScriptComponentManager
     }
 
     /// <summary>
-    /// Retrieves all component types that are automatically attached to the specified actor class and its base classes.
+    /// Retrieves all <see cref="ScriptComponent"/> types that are automatically attached to the specified actor class and its base classes.
     /// </summary>
     /// <param name="actorClass">The type of the actor for which to retrieve auto-attached component types. Must derive from <see cref="Actor"/>.</param>
     /// <returns>An enumerable collection of <see cref="Type"/> objects representing the component types that are automatically
@@ -94,9 +107,19 @@ static class ScriptComponentManager
         }
     }
 
+    /// <inheritdoc cref="GetAutoAttachTypesByActor(Type)"/>
+    /// <param name="actor">The object of whose class to scan for auto-attach components.</param>
     public static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor)
         => GetAutoAttachTypesByActor(actor.GetType());
 
+    /// <summary>
+    /// Attempts to automatically attach predefined script components to the specified actor if they are not already
+    /// present.
+    /// </summary>
+    /// <remarks>This method checks for component types that are configured for automatic attachment and adds
+    /// them to the actor if they are not already attached. If a component cannot be instantiated or attached, an error
+    /// is logged and the method continues processing remaining components.</remarks>
+    /// <param name="actor">The actor to which script components will be auto-attached. Cannot be null.</param>
     public static void TryAutoAttachComponents(Actor actor)
     {
         if (!HasAutoAttachTypes())
@@ -128,6 +151,9 @@ static class ScriptComponentManager
         }
     }
 
+    /// <summary>
+    /// Automatically attaches eligible component types to all existing actors in the world.
+    /// </summary>
     public static void AutoAttachTypesToExistingActors()
     {
         if (!HasAutoAttachTypes())
