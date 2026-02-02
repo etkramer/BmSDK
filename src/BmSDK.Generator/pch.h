@@ -20,7 +20,7 @@ namespace fs = std::filesystem;
 // FIELD() macro. Used to declare a field with a specific offset.
 #define FIELD(TYPE, NAME)                                                                          \
 public:                                                                                            \
-	TYPE NAME;                                                                                     \
+    TYPE NAME;                                                                                     \
                                                                                                    \
 private:
 
@@ -29,15 +29,15 @@ private:
 
 // CHECK_CLASS() macro. Used to enforce a class matches its expected size.
 #define CHECK_CLASS(TYPE, ...)                                                                     \
-	static_assert(sizeof(TYPE##__VA_ARGS__) == SIZE_##TYPE, #TYPE " doesn't match declared size");
+    static_assert(sizeof(TYPE##__VA_ARGS__) == SIZE_##TYPE, #TYPE " doesn't match declared size");
 
 // STATIC_CLASS() macro. Used declare a StaticClass() helper.
 #define STATIC_CLASS(PATH, ...)                                                                    \
-	static class UClass* StaticClass()                                                             \
-	{                                                                                              \
-		static UClass* classObj = nullptr;                                                         \
-		return classObj ? classObj : classObj = UObject::FindClass("Class "##PATH);                \
-	}
+    static class UClass* StaticClass()                                                             \
+    {                                                                                              \
+        static UClass* classObj = nullptr;                                                         \
+        return classObj ? classObj : classObj = UObject::FindClass("Class "##PATH);                \
+    }
 
 // Framework
 #include "Framework/Debug.h"
