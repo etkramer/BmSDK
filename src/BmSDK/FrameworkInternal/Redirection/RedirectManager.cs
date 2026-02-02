@@ -68,6 +68,8 @@ static class RedirectManager
     {
         foreach (var type in asm.GetTypes())
         {
+            bool? isScriptComponent = null;
+
             foreach (var func in type.GetMethods(GlobalRedirSearchFlags))
             {
                 var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
@@ -76,12 +78,29 @@ static class RedirectManager
                     continue;
                 }
 
+                isScriptComponent ??= ScriptComponentManager.IsTypeAScriptComponent(type, out var attr, out var actorType);
+
                 if (redirAttr.TargetType == null)
                 {
+                    if (isScriptComponent == true)
+                    {
+                        throw new ArgumentException(
+                            $"{type.FullName}:{func.Name} is a static member" +
+                            $"and cannot use the ScriptComponent's target type implicitly!");
+                    }
+
+                    throw new ArgumentException(
+                        $"The redirect definition {type.FullName}:{func.Name} is " +
+                        $"outside of a ScriptComponent and therefore requires an explicit type definition!");
+                }
+
+                if (isScriptComponent == true)
+                {
                     Debug.LogWarning(
-                        "Redirect definitions outside of ScriptComponents require an explicit type definition!",
+                        $"{type.FullName}:{func.Name} is a static member " +
+                        $"and is interpreted as a global redirect! " +
+                        $"The redirect applies even when the ScriptComponent is not attached.",
                         skipSender: true);
-                    continue;
                 }
 
                 RegisterRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
