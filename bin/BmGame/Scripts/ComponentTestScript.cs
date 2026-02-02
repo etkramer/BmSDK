@@ -1,4 +1,4 @@
-﻿using BmSDK.Engine;
+using BmSDK.Engine;
 
 /// <summary>
 /// This is a script component that is automatically attached to Actors when they spawn.

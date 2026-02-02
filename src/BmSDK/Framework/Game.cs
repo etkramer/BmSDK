@@ -1,4 +1,4 @@
-﻿using BmSDK.BmGame;
+using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
 
