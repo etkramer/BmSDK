@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using BmSDK.Engine;
 
 namespace BmSDK.Framework;

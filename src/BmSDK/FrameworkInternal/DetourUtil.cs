@@ -1,4 +1,4 @@
-﻿using Windows.Win32;
+using Windows.Win32;
 using PInvokeDetours = Microsoft.Detours.PInvoke;
 
 namespace BmSDK.Framework;

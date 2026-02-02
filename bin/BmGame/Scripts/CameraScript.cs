@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using BmSDK.BmGame;
 using FRotator = BmSDK.GameObject.FRotator;
 using FVector = BmSDK.GameObject.FVector;

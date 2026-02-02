@@ -1,4 +1,4 @@
-﻿namespace BmSDK;
+namespace BmSDK;
 
 /// <summary>
 /// Dummy class for objects that don't have managed types. If these were missed by the generator,

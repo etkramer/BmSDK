@@ -1,4 +1,4 @@
-﻿[Script]
+[Script]
 public class AsyncTestScript : Script
 {
     static readonly Timer s_delayTimer = new(DelayTimerCallback);
