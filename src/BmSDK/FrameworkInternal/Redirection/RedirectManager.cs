@@ -15,7 +15,8 @@ static class RedirectManager
     internal static void RegisterRedirector(
         Type targetClass,
         string targetMethodName,
-        Delegate newDelegate
+        MethodInfo redirectMi,
+        object? target = null
     )
     {
         // Prevent creation of invalid redirects
@@ -27,22 +28,11 @@ static class RedirectManager
         // Get the full path of the function (as originally declared).
         var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetClass, targetMethodName);
 
-        // Get the delegate's MethodInfo.
-        MethodInfo newMethodInfo;
-        try
-        {
-            newMethodInfo = newDelegate.Method;
-        }
-        catch (Exception e)
-        {
-            throw new InvalidOperationException("Redirected delegate is not a method!", e);
-        }
-
         // Store the redirect for later use.
         var redirInfo = new RedirectorInfo(
             targetClass,
-            newMethodInfo,
-            newMethodInfo.IsStatic ? null : newDelegate.Target);
+            redirectMi,
+            redirectMi.IsStatic ? null : target);
 
         if (!s_redirectorDict.TryAdd(targetFuncPath, redirInfo))
         {
@@ -50,6 +40,25 @@ static class RedirectManager
             // NOTE: We've got an approach for solving this described in Loader.cs.
             throw new InvalidOperationException($"{targetFuncPath} has already been redirected!");
         }
+    }
+
+    public static void RegisterRedirector(
+        Type targetClass,
+        string targetMethodName,
+        Delegate newDelegate
+    )
+    {
+        MethodInfo mi;
+        try
+        {
+            mi = newDelegate.Method;
+        }
+        catch (Exception e)
+        {
+            throw new InvalidOperationException("Redirected delegate is not a method!", e);
+        }
+
+        RegisterRedirector(targetClass, targetMethodName, mi, newDelegate.Target);
     }
 
     internal static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
