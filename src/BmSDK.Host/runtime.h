@@ -1,5 +1,5 @@
 #pragma once
 
 namespace runtime {
-	void load_dll();
+    void load_dll();
 }

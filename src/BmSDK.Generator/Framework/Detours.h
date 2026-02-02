@@ -5,19 +5,19 @@
 class Detours
 {
 private:
-	Detours() = delete;
+    Detours() = delete;
 
 public:
-	template <typename TFunc>
-	static bool DetourFunction(uintptr_t pOrig, TFunc* pOrigRef, TFunc pDetour)
-	{
-		*pOrigRef = (TFunc)(void*)pOrig;
+    template <typename TFunc>
+    static bool DetourFunction(uintptr_t pOrig, TFunc* pOrigRef, TFunc pDetour)
+    {
+        *pOrigRef = (TFunc)(void*)pOrig;
 
-		DetourTransactionBegin();
-		DetourAttach(&(PVOID&)*pOrigRef, pDetour);
+        DetourTransactionBegin();
+        DetourAttach(&(PVOID&)*pOrigRef, pDetour);
 
-		return DetourTransactionCommit() == NO_ERROR;
-	}
+        return DetourTransactionCommit() == NO_ERROR;
+    }
 };
 
 #define DECLARE_DETOUR(NAME, RETURN, CONV, ...)     \

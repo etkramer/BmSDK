@@ -10,10 +10,10 @@ static map<UField*, FieldInfo*> fieldInfoMap = {};
 
 FieldInfo* UField::GetInfo()
 {
-	if (fieldInfoMap.find(this) == fieldInfoMap.end())
-	{
-		fieldInfoMap[this] = new FieldInfo(this);
-	}
+    if (fieldInfoMap.find(this) == fieldInfoMap.end())
+    {
+        fieldInfoMap[this] = new FieldInfo(this);
+    }
 
-	return fieldInfoMap[this];
+    return fieldInfoMap[this];
 }

@@ -10,21 +10,21 @@ class FNameEntry;
 class Runtime
 {
 private:
-	Runtime() = delete;
+    Runtime() = delete;
 
 public:
-	static void OnAttach();
-	static void LoadClassesIntoMemory();
-	static void GenerateSDK();
+    static void OnAttach();
+    static void LoadClassesIntoMemory();
+    static void GenerateSDK();
 
 private:
-	static void DetourProcessEvent();
+    static void DetourProcessEvent();
 
 public:
-	static uintptr_t BaseAddress;
-	static DWORD MainThreadId;
+    static uintptr_t BaseAddress;
+    static DWORD MainThreadId;
 
-	static TArray<UObject*>* GObjects;
-	static TArray<FNameEntry*>* GNames;
-	static LoadPackageFn LoadPackage;
+    static TArray<UObject*>* GObjects;
+    static TArray<FNameEntry*>* GNames;
+    static LoadPackageFn LoadPackage;
 };

@@ -10,46 +10,46 @@ constexpr INT NAME_INDEX_SHIFT = 1;
 class FNameEntry
 {
 #if BATMAN2
-	QWORD Flags;
+    QWORD Flags;
 #elif BATMAN3
-	DWORD Flags;
+    DWORD Flags;
 #endif
-	INT Index;
-	FNameEntry* HashNext;
+    INT Index;
+    FNameEntry* HashNext;
 
-	union
-	{
-		char AnsiName[128];
-		wchar_t UniName[128];
-	};
+    union
+    {
+        char AnsiName[128];
+        wchar_t UniName[128];
+    };
 
 public:
-	string ToString() const
-	{
-		if (IsUnicode())
-		{
-			wstring wstr = wstring(UniName);
-			return string(wstr.begin(), wstr.end());
-		}
-		else
-		{
-			return string(AnsiName);
-		}
-	}
+    string ToString() const
+    {
+        if (IsUnicode())
+        {
+            wstring wstr = wstring(UniName);
+            return string(wstr.begin(), wstr.end());
+        }
+        else
+        {
+            return string(AnsiName);
+        }
+    }
 
-	BOOL IsUnicode() const { return (Index & NAME_UNICODE_MASK); }
+    BOOL IsUnicode() const { return (Index & NAME_UNICODE_MASK); }
 };
 
 CLASS(FName, 8)
 class FName
 {
-	FIELD(INT, Index)
-	FIELD(INT, Number)
+    FIELD(INT, Index)
+        FIELD(INT, Number)
 
 public:
-	string ToString() const { return GetNameEntry()->ToString(); }
+    string ToString() const { return GetNameEntry()->ToString(); }
 
-	const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
+    const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
 };
 
 CHECK_CLASS(FName)

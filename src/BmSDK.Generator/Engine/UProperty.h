@@ -4,70 +4,70 @@
 
 enum class EPropertyFlags : DWORD
 {
-	CPF_Parm = 0x8,
-	CPF_OptionalParm = 0x10,
-	CPF_OutParm = 0x20,
-	CPF_ReturnParm = 0x80
+    CPF_Parm = 0x8,
+    CPF_OptionalParm = 0x10,
+    CPF_OutParm = 0x20,
+    CPF_ReturnParm = 0x80
 };
 
 CLASS(UProperty, 88)
 class UProperty : public UField
 {
-	INT ArrayDim;
-	FIELD(EPropertyFlags, PropertyFlags)
-	BYTE UNK1[4];
-	WORD ElementSize;
-	FIELD(WORD, Offset)
-	BYTE UNK2[24];
+    INT ArrayDim;
+    FIELD(EPropertyFlags, PropertyFlags)
+        BYTE UNK1[4];
+    WORD ElementSize;
+    FIELD(WORD, Offset)
+        BYTE UNK2[24];
 
 public:
-	string GetInnerTypeNameManaged() const;
-	STATIC_CLASS("Core.Property")
+    string GetInnerTypeNameManaged() const;
+    STATIC_CLASS("Core.Property")
 };
 
 CLASS(UStructProperty, 92)
 class UStructProperty : public UProperty
 {
-	FIELD(class UScriptStruct*, Struct)
+    FIELD(class UScriptStruct*, Struct)
 
 public:
-	STATIC_CLASS("Core.StructProperty")
+    STATIC_CLASS("Core.StructProperty")
 };
 
 CLASS(UObjectProperty, 92)
 class UObjectProperty : public UProperty
 {
-	FIELD(class UClass*, PropertyClass)
+    FIELD(class UClass*, PropertyClass)
 
 public:
-	STATIC_CLASS("Core.ObjectProperty")
+    STATIC_CLASS("Core.ObjectProperty")
 };
 
 CLASS(UByteProperty, 92)
 class UByteProperty : public UProperty
 {
-	FIELD(class UEnum*, Enum)
+    FIELD(class UEnum*, Enum)
 
 public:
-	STATIC_CLASS("Core.ByteProperty")
+    STATIC_CLASS("Core.ByteProperty")
 };
 
 CLASS(UArrayProperty, 92)
 class UArrayProperty : public UProperty
 {
-	FIELD(class UProperty*, Inner)
+    FIELD(class UProperty*, Inner)
 
 public:
-	STATIC_CLASS("Core.ArrayProperty")
+    STATIC_CLASS("Core.ArrayProperty")
 };
 
 CLASS(UBoolProperty, 92)
 class UBoolProperty : public UProperty
 {
-	FIELD(INT, BitMask)
+    FIELD(INT, BitMask)
 
 public:
-	STATIC_CLASS("Core.BoolProperty")
+    STATIC_CLASS("Core.BoolProperty")
 };
 
 CHECK_CLASS(UProperty)
