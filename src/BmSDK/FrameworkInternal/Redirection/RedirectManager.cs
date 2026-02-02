@@ -6,6 +6,7 @@ namespace BmSDK.Framework.Redirection;
 static class RedirectManager
 {
     static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    const BindingFlags RedirAttrSearchFlags = BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     internal static void UnregisterAll() => s_redirectorDict.Clear();
 
@@ -59,6 +60,31 @@ static class RedirectManager
         }
 
         RegisterRedirector(targetClass, targetMethodName, mi, newDelegate.Target);
+    }
+
+    public static void RegisterRedirectors(Assembly asm)
+    {
+        foreach (var type in asm.GetTypes())
+        {
+            foreach (var func in type.GetMethods(RedirAttrSearchFlags))
+            {
+                var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
+                if (redirAttr == null)
+                {
+                    continue;
+                }
+
+                if (redirAttr.TargetType == null)
+                {
+                    Debug.LogWarning(
+                        "Redirect definitions outside of ScriptComponents require an explicit type definition!",
+                        skipSender: true);
+                    continue;
+                }
+
+                RegisterRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
+            }
+        }
     }
 
     internal static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
