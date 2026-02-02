@@ -258,7 +258,7 @@ static class ScriptManager
         if (s_analyzers.Length > 0)
         {
             var compilationWithAnalyzers = compilation.WithAnalyzers(s_analyzers);
-            var allDiagnostics = compilationWithAnalyzers.GetAllDiagnosticsAsync().Result;
+            var allDiagnostics = compilationWithAnalyzers.GetAllDiagnosticsAsync().GetAwaiter().GetResult();
             
             // Check for analyzer errors
             var analyzerErrors = allDiagnostics
@@ -268,7 +268,7 @@ static class ScriptManager
             if (analyzerErrors.Length > 0)
             {
                 // Print analyzer errors
-                PrintAnalyzerErrors(analyzerErrors, scriptDir);
+                PrintDiagnostics(analyzerErrors, scriptDir);
                 return null;
             }
         }
@@ -295,17 +295,17 @@ static class ScriptManager
     }
 
     /// <summary>
-    /// Prints analyzer errors grouped by source file to the debug log.
+    /// Prints diagnostics grouped by source file to the debug log.
     /// </summary>
-    /// <param name="errors">The analyzer diagnostics to be reported.</param>
+    /// <param name="diagnostics">The diagnostics to be reported.</param>
     /// <param name="scriptsDir">The root directory used to display relative file paths for error reporting.</param>
-    static void PrintAnalyzerErrors(Diagnostic[] errors, string scriptsDir)
+    static void PrintDiagnostics(Diagnostic[] diagnostics, string scriptsDir)
     {
-        var errorsByFilePath = errors
+        var errorsByFilePath = diagnostics
             .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
             .ToDictionary(group => group.Key, group => group.ToArray());
 
-        // Print analyzer errors by file.
+        // Print errors by file.
         foreach (var filePath in errorsByFilePath.Keys)
         {
             var shortPath = Path.GetRelativePath(scriptsDir, filePath);
@@ -353,45 +353,7 @@ static class ScriptManager
     {
         // Retrieve errors from the emit result.
         var errors = GetErrors(emitResult);
-        var errorsByFilePath = errors
-            .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
-            .ToDictionary(group => group.Key, group => group.ToArray());
-
-        // Print compilation errors by file.
-        foreach (var filePath in errorsByFilePath.Keys)
-        {
-            var shortPath = Path.GetRelativePath(scriptsDir, filePath);
-            Debug.LogError(
-                $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
-                skipSender: true);
-
-            foreach (var error in errorsByFilePath[filePath])
-            {
-                // Grab error location for printing.
-                var lineSpan = error.Location.GetLineSpan();
-                var mappedLineSpan = error.Location.GetMappedLineSpan();
-                if (mappedLineSpan.HasMappedPath)
-                {
-                    lineSpan = mappedLineSpan;
-                }
-
-                // Print error location.
-                var locationText = "";
-                if (lineSpan.IsValid)
-                {
-                    var pos = lineSpan.StartLinePosition;
-                    locationText = $"({pos.Line + 1}) ";
-                }
-
-                // Print error.
-                Debug.LogError(
-                    $"  {locationText}{error.Id}: {error.GetMessage()}",
-                    skipSender: true);
-            }
-        }
-
-        // Print failed message.
-        Debug.LogError($"Compilation failed!");
+        PrintDiagnostics(errors, scriptsDir);
     }
 
     /// <summary>
