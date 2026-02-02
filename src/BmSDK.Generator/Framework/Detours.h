@@ -21,5 +21,5 @@ public:
 };
 
 #define DECLARE_DETOUR(NAME, RETURN, CONV, ...)     \
-	typedef RETURN(CONV*##NAME##Func)(__VA_ARGS__); \
-	##NAME##Func NAME = nullptr;
+    typedef RETURN(CONV*##NAME##Func)(__VA_ARGS__); \
+    ##NAME##Func NAME = nullptr;
