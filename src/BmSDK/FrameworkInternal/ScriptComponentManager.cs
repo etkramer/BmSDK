@@ -104,7 +104,7 @@ static class ScriptComponentManager
     /// are defined.</returns>
     public static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
     {
-        foreach (var super in Class.EnumerateSupersAndSelf(actorClass))
+        foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
         {
             var className = StaticInit.GetClassPathForManagedType(super);
             if (s_autoAttachTypes.TryGetValue(className, out var types))

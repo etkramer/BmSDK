@@ -24,10 +24,8 @@ static class RedirectManager
             throw new ArgumentException("Only methods of UClasses may be redirected!");
         }
 
-        var declaringClass = Class.GetDeclaringTypeForMethod(targetClass, targetMethodName);
-
         // Get the full path of the function (as originally declared).
-        var targetFuncPath = $"{StaticInit.GetClassPathForManagedType(declaringClass)}:{targetMethodName}";
+        var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetClass, targetMethodName);
 
         // Get the delegate's MethodInfo.
         MethodInfo newMethodInfo;
@@ -106,7 +104,7 @@ static class RedirectManager
             return false;
         }
 
-        if (!Class.EnumerateSupersAndSelf(obj.GetType()).Contains(info.TargetClass))
+        if (!StaticInit.EnumerateSelfAndSupers(obj.GetType()).Contains(info.TargetClass))
         {
             return false;
         }
