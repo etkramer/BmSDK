@@ -38,4 +38,12 @@
   <ItemGroup>
     <ProjectReference Include="..\BmSDK.Analyzers\BmSDK.Analyzers.csproj" PrivateAssets="all" />
   </ItemGroup>
+
+  <!-- Copy the analyzer DLL to the output directory so ScriptManager can load it at runtime -->
+  <Target Name="CopyAnalyzer" AfterTargets="Build">
+    <Copy SourceFiles="$(SolutionDir)src\BmSDK.Analyzers\bin\$(Configuration)\netstandard2.0\BmSDK.Analyzers.dll"
+          DestinationFolder="$(OutputPath)"
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(SolutionDir)src\BmSDK.Analyzers\bin\$(Configuration)\netstandard2.0\BmSDK.Analyzers.dll')" />
+  </Target>
 </Project>
