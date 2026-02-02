@@ -7,8 +7,8 @@ using BmSDK.Engine;
 ///     By default, every actor is allowed. Here we set SkeletalMeshActor and it's children.
 /// The second parameter specifies whether BmSDK should  
 /// </summary>
-[ScriptComponent(typeof(SkeletalMeshActor), autoAttach: true)]
-public class SpinningComponent : ScriptComponent
+[ScriptComponent(autoAttach: true)]
+public class SpinningComponent : ScriptComponent<SkeletalMeshActor>
 {
     const int RuuToRotate = 65536;  // = 2PI
 

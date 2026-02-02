@@ -1,4 +1,3 @@
-using System.Reflection;
 using BmSDK.Framework;
 
 namespace BmSDK.Engine;
@@ -8,31 +7,23 @@ public partial class Actor
     /// <summary>
     /// Collection of all script components attached to this actor.
     /// </summary>
-    public static IReadOnlyCollection<ScriptComponent> AllScriptComponents => s_scriptComponents;
+    public static IReadOnlyCollection<IScriptComponent> AllScriptComponents => s_scriptComponents;
 
-    internal static readonly List<ScriptComponent> s_scriptComponents = [];
+    internal static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
     /// Collection of all script components attached to this actor.
     /// </summary>
-    public IReadOnlyCollection<ScriptComponent> ScriptComponents => _scriptComponents;
+    public IReadOnlyCollection<IScriptComponent> ScriptComponents => _scriptComponents;
 
-    internal readonly List<ScriptComponent> _scriptComponents = [];
+    internal readonly List<IScriptComponent> _scriptComponents = [];
 
     /// <summary>
     /// Attaches an existing script component to this actor.
     /// </summary>
-    public void AttachScriptComponent(ScriptComponent newComponent)
+    public void AttachScriptComponent(IScriptComponent newComponent)
     {
         Guard.Require(newComponent.Owner == null, "Component is already attached to an actor");
-
-        var attribute = newComponent.GetType().GetCustomAttribute<ScriptComponentAttribute>();
-        if (attribute != null)
-        {
-            Guard.Require(
-                attribute.TargetType.IsAssignableFrom(this.GetType()),
-                "Component doesn't attach to this Actor type!");
-        }
 
         newComponent.Owner = this;
 
@@ -47,11 +38,12 @@ public partial class Actor
     /// <summary>
     /// Attaches a new script component of the given type to this actor.
     /// </summary>
-    public T AttachScriptComponent<T>()
-        where T : ScriptComponent, new()
+    public TComponent AttachScriptComponent<TComponent, TActor>()
+        where TComponent : ScriptComponent<TActor>, new()
+        where TActor : Actor
     {
         // Create/attach new component
-        var newComponent = new T();
+        var newComponent = new TComponent();
         AttachScriptComponent(newComponent);
 
         return newComponent;
@@ -60,9 +52,9 @@ public partial class Actor
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>
-    public void DetachScriptComponent(ScriptComponent component)
+    public void DetachScriptComponent(IScriptComponent component)
     {
-        Guard.Require(component.Owner == this, "Component is not attached to this actor");
+        Guard.Require(component.IsOwner(this), "Component is not attached to this actor");
 
         // Invoke detach callback
         component.OnDetach();
@@ -70,12 +62,9 @@ public partial class Actor
         // Remove from storage
         _scriptComponents.Remove(component);
         s_scriptComponents.Remove(component);
-        component.Owner = null!;
+        component.RemoveOwnership();
     }
 
     /// <inheritdoc cref="GameObject.Clone"/>
-    public new Actor Clone()
-    {
-        return Game.SpawnActor(Class, Location, Rotation, this, Owner);
-    }
+    public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);
 }

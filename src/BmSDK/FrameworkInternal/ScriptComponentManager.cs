@@ -64,19 +64,34 @@ static class ScriptComponentManager
     /// <param name="asm">The assembly to scan for types eligible for automatic attachment. Cannot be null.</param>
     public static void RegisterAutoAttachTypes(Assembly asm)
     {
-        var componentTypes = asm.GetTypes()
-            .Where(t => !t.IsAbstract)
-            .Where(t => typeof(ScriptComponent).IsAssignableFrom(t));
-
-        foreach (var componentType in componentTypes)
+        foreach (var type in asm.GetTypes())
         {
-            var attribute = componentType.GetCustomAttribute<ScriptComponentAttribute>();
+            if (!type.IsClass || type.IsGenericType || type.IsAbstract)
+            {
+                continue;
+            }
+
+            var attribute = type.GetCustomAttribute<ScriptComponentAttribute>();
             if (attribute == null || !attribute.AutoAttach)
             {
                 continue;
             }
 
-            RegisterAutoAttachType(componentType, attribute.TargetType);
+            for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
+            {
+                if (!cur.IsGenericType)
+                {
+                    continue;
+                }
+
+                if (cur.GetGenericTypeDefinition() != typeof(ScriptComponent<>))
+                {
+                    continue;
+                }
+
+                var actorType = cur.GetGenericArguments()[0];
+                RegisterAutoAttachType(type, actorType);
+            }
         }
     }
 
@@ -134,7 +149,7 @@ static class ScriptComponentManager
 
             try
             {
-                var component = (ScriptComponent)Guard.NotNull(Activator.CreateInstance(componentType));
+                var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(componentType));
                 actor.AttachScriptComponent(component);
             }
             catch (Exception e)
