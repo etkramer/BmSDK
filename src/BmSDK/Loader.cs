@@ -1,4 +1,4 @@
-﻿global using System.Runtime.InteropServices;
+global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;

@@ -1,4 +1,4 @@
-﻿using BmSDK.Engine;
+using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 

@@ -1,4 +1,4 @@
-﻿namespace BmSDK;
+namespace BmSDK;
 
 public partial class Package
 {

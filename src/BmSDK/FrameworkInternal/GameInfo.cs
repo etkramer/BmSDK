@@ -1,4 +1,4 @@
-﻿namespace BmSDK.Framework;
+namespace BmSDK.Framework;
 
 static class GameInfo
 {
