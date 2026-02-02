@@ -119,9 +119,9 @@ static class ScriptManager
         {
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
-            RedirectManager.RegisterRedirectors(asm);
+            RedirectManager.RegisterGlobalRedirectors(asm);
             s_scripts.AddRange(CreateScriptInstances(asm));
-            ScriptComponentManager.RegisterAutoAttachTypes(asm);
+            ScriptComponentManager.RegisterTypes(asm);
             if (s_isInitialized)
             {
                 s_scripts.ForEach(script => script.OnLoad());

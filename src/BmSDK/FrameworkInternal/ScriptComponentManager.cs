@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Runtime.ConstrainedExecution;
 using BmSDK.Engine;
 
 namespace BmSDK.Framework;
@@ -56,43 +57,87 @@ static class ScriptComponentManager
     /// <summary>
     /// Registers all <see cref="ScriptComponent"/>s in the specified assembly that are marked with
     /// a ScriptComponentAttribute and have AutoAttach enabled for automatic attachment.
+    /// It also stores the redirectors defined in the types.
     /// </summary>
-    /// <remarks>Only types that inherit from ScriptComponent, are not abstract, and are decorated with a
-    /// ScriptComponentAttribute with AutoAttach set to <see langword="true"/> will be registered. This method is
-    /// used when scripts are (re-)loaded to retrieve auto-attach components.
-    /// metadata.</remarks>
     /// <param name="asm">The assembly to scan for types eligible for automatic attachment. Cannot be null.</param>
-    public static void RegisterAutoAttachTypes(Assembly asm)
+    public static void RegisterTypes(Assembly asm)
     {
         foreach (var type in asm.GetTypes())
         {
-            if (!type.IsClass || type.IsGenericType || type.IsAbstract)
+            if (!IsTypeAScriptComponent(type, out var attribute, out var actorType))
             {
                 continue;
             }
 
-            var attribute = type.GetCustomAttribute<ScriptComponentAttribute>();
-            if (attribute == null || !attribute.AutoAttach)
+            if (attribute!.AutoAttach)
             {
-                continue;
-            }
-
-            for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
-            {
-                if (!cur.IsGenericType)
-                {
-                    continue;
-                }
-
-                if (cur.GetGenericTypeDefinition() != typeof(ScriptComponent<>))
-                {
-                    continue;
-                }
-
-                var actorType = cur.GetGenericArguments()[0];
-                RegisterAutoAttachType(type, actorType);
+                RegisterAutoAttachType(type, actorType!);
             }
         }
+    }
+
+    /// <summary>
+    /// Determines whether the specified type represents a valid script component and retrieves its associated attribute
+    /// and actor type if available.
+    /// </summary>
+    /// <remarks>This method checks for the presence of the <see cref="ScriptComponentAttribute"/> and a valid
+    /// actor type on the specified type. The type must be a concrete, non-generic class to be considered a script
+    /// component.</remarks>
+    /// <param name="type">The type to evaluate for script component eligibility.</param>
+    /// <param name="attribute">When this method returns, contains the <see cref="ScriptComponentAttribute"/> applied to the type if it is a
+    /// script component; otherwise, <see langword="null"/>.</param>
+    /// <param name="actorType">When this method returns, contains the actor type associated with the script component if available; otherwise,
+    /// <see langword="null"/>.</param>
+    /// <returns>true if the specified type is a valid script component and both the attribute and actor type are found;
+    /// otherwise, false.</returns>
+    public static bool IsTypeAScriptComponent(Type type, out ScriptComponentAttribute? attribute, out Type? actorType)
+    {
+        attribute = null;
+        actorType = null;
+
+        if (!type.IsClass || type.IsGenericType || type.IsAbstract)
+        {
+            return false;
+        }
+
+        attribute = type.GetCustomAttribute<ScriptComponentAttribute>();
+        if (attribute == null)
+        {
+            return false;
+        }
+
+        actorType = TryGetComponentActorType(type);
+        if (actorType == null)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Retrieves the type argument used for the <see cref="ScriptComponent{TActor}"/> base class of the given type.
+    /// </summary>
+    /// <param name="type">The type whose inheritance hierarchy is searched for a ScriptComponent base class.</param>
+    /// <returns>The type argument of the nearest ScriptComponent base class if found; otherwise, null.</returns>
+    public static Type? TryGetComponentActorType(Type type)
+    {
+        for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
+        {
+            if (!cur.IsGenericType)
+            {
+                continue;
+            }
+
+            if (cur.GetGenericTypeDefinition() != typeof(ScriptComponent<>))
+            {
+                continue;
+            }
+
+            return cur.GetGenericArguments()[0];
+        }
+
+        return null;
     }
 
     /// <summary>
