@@ -1,6 +1,6 @@
 using System.Reflection;
-using System.Runtime.ConstrainedExecution;
 using BmSDK.Engine;
+using BmSDK.Framework.Redirection;
 
 namespace BmSDK.Framework;
 
@@ -68,6 +68,8 @@ static class ScriptComponentManager
             {
                 continue;
             }
+
+            RedirectManager.RegisterLocalRedirectors(type, actorType!);
 
             if (attribute!.AutoAttach)
             {

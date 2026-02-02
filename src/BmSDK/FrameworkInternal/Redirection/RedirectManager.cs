@@ -6,7 +6,9 @@ namespace BmSDK.Framework.Redirection;
 static class RedirectManager
 {
     static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
-    const BindingFlags RedirAttrSearchFlags = BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
+    const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
+    const BindingFlags GlobalRedirSearchFlags = BindingFlags.Static | GenericRedirSearchFlags;
+    const BindingFlags LocalRedirSearchFlags = BindingFlags.Instance | GenericRedirSearchFlags;
 
     internal static void UnregisterAll() => s_redirectorDict.Clear();
 
@@ -62,11 +64,11 @@ static class RedirectManager
         RegisterRedirector(targetClass, targetMethodName, mi, newDelegate.Target);
     }
 
-    public static void RegisterRedirectors(Assembly asm)
+    public static void RegisterGlobalRedirectors(Assembly asm)
     {
         foreach (var type in asm.GetTypes())
         {
-            foreach (var func in type.GetMethods(RedirAttrSearchFlags))
+            foreach (var func in type.GetMethods(GlobalRedirSearchFlags))
             {
                 var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
                 if (redirAttr == null)
@@ -84,6 +86,47 @@ static class RedirectManager
 
                 RegisterRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
             }
+        }
+    }
+
+    /// <summary>
+    /// Stores local redirector methods defined on the specified ScriptComponent for use with the given target type.
+    /// </summary>
+    /// <remarks>If a redirector method's RedirectAttribute specifies a TargetType that is compatible with the
+    /// targetType, a warning is logged indicating that TargetType is unnecessary and can be inferred. Only methods with
+    /// RedirectAttribute are processed; others are ignored.</remarks>
+    /// <param name="componentType">The type that contains methods to be registered as local redirectors.
+    /// Should define methods annotated with RedirectAttribute.</param>
+    /// <param name="targetType">The target type for which redirector methods are being registered.</param>
+    /// <exception cref="ArgumentException">Thrown if the TargetType specified in a RedirectAttribute cannot be assigned from the provided targetType.</exception>
+    public static void RegisterLocalRedirectors(Type componentType, Type targetType)
+    {
+        foreach (var func in componentType.GetMethods(LocalRedirSearchFlags))
+        {
+            var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
+            if (redirAttr == null)
+            {
+                continue;
+            }
+
+            if (redirAttr.TargetType != null)
+            {
+                if (redirAttr.TargetType.IsAssignableFrom(targetType))
+                {
+                    Debug.LogWarning(
+                        $"{componentType.FullName}:{func.Name} defines TargetType in RedirectAttribute unnecessarily! " +
+                        $"TargetType can be infered from ScriptComponent.",
+                        skipSender: true);
+                }
+                else
+                {
+                    throw new ArgumentException(
+                        $"{redirAttr.TargetType.Name} cannot be casted to {targetType.Name} " +
+                        $"in {componentType.FullName}:{func.Name}!");
+                }
+            }
+
+            // TODO: Implement registration
         }
     }
 
