@@ -21,6 +21,12 @@
   <ItemGroup>
     <Reference Include="BmSDK" HintPath="..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\BmSDK.Analyzers\BmSDK.Analyzers.csproj" 
+                      OutputItemType="Analyzer" 
+                      ReferenceOutputAssembly="false" />
+  </ItemGroup>
    
   <ItemGroup>
     <Compile Include="..\Scripts\**\*.cs*" />

@@ -5,6 +5,7 @@ using System.Runtime.Loader;
 using BmSDK.Engine;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Emit;
 using ReferenceAssemblies = Basic.Reference.Assemblies;
 
@@ -47,6 +48,8 @@ static class ScriptManager
         platform: Platform.X86,
         allowUnsafe: true);
     public const string TargetName = "Scripts.dll";
+
+    static ImmutableArray<DiagnosticAnalyzer> s_analyzers = ImmutableArray<DiagnosticAnalyzer>.Empty;
 
     static readonly FileSystemWatcher s_watcher = new(FileUtils.GetScriptsPath())
     {
@@ -92,6 +95,37 @@ static class ScriptManager
                 .CurrentDomain.GetAssemblies()
                 .ToList()
                 .FirstOrDefault(asm => asm.GetName().ToString() == e.Name);
+
+        // Load analyzers
+        LoadAnalyzers();
+    }
+
+    static void LoadAnalyzers()
+    {
+        try
+        {
+            // Try to load the analyzer assembly from the SDK directory
+            var sdkPath = Path.GetDirectoryName(typeof(GameObject).Assembly.Location);
+            var analyzerPath = Path.Combine(sdkPath!, "BmSDK.Analyzers.dll");
+            
+            if (File.Exists(analyzerPath))
+            {
+                var analyzerAssembly = Assembly.LoadFrom(analyzerPath);
+                var analyzerTypes = analyzerAssembly.GetTypes()
+                    .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)) && !t.IsAbstract);
+
+                var analyzers = analyzerTypes
+                    .Select(type => (DiagnosticAnalyzer)Activator.CreateInstance(type)!)
+                    .ToImmutableArray();
+
+                s_analyzers = analyzers;
+                Debug.Log($"Loaded {analyzers.Length} analyzer(s) from BmSDK.Analyzers");
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Failed to load analyzers: {ex.Message}");
+        }
     }
 
     /// <summary>
@@ -220,6 +254,25 @@ static class ScriptManager
             .AddReferences(MetadataReferences)
             .AddSyntaxTrees(syntaxTrees);
 
+        // Run analyzers if available and check for errors before emitting
+        if (s_analyzers.Length > 0)
+        {
+            var compilationWithAnalyzers = compilation.WithAnalyzers(s_analyzers);
+            var allDiagnostics = compilationWithAnalyzers.GetAllDiagnosticsAsync().Result;
+            
+            // Check for analyzer errors
+            var analyzerErrors = allDiagnostics
+                .Where(d => d.Severity == DiagnosticSeverity.Error)
+                .ToArray();
+            
+            if (analyzerErrors.Length > 0)
+            {
+                // Print analyzer errors
+                PrintAnalyzerErrors(analyzerErrors, scriptDir);
+                return null;
+            }
+        }
+
         // Emit assembly in-memory.
         var emitStream = new MemoryStream();
         var emitResult = compilation.Emit(emitStream);
@@ -239,6 +292,54 @@ static class ScriptManager
 
         emitStream.Position = 0;
         return emitStream;
+    }
+
+    /// <summary>
+    /// Prints analyzer errors grouped by source file to the debug log.
+    /// </summary>
+    /// <param name="errors">The analyzer diagnostics to be reported.</param>
+    /// <param name="scriptsDir">The root directory used to display relative file paths for error reporting.</param>
+    static void PrintAnalyzerErrors(Diagnostic[] errors, string scriptsDir)
+    {
+        var errorsByFilePath = errors
+            .GroupBy(error => error.Location.SourceTree?.FilePath ?? "(no file)")
+            .ToDictionary(group => group.Key, group => group.ToArray());
+
+        // Print analyzer errors by file.
+        foreach (var filePath in errorsByFilePath.Keys)
+        {
+            var shortPath = Path.GetRelativePath(scriptsDir, filePath);
+            Debug.LogError(
+                $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
+                skipSender: true);
+
+            foreach (var error in errorsByFilePath[filePath])
+            {
+                // Grab error location for printing.
+                var lineSpan = error.Location.GetLineSpan();
+                var mappedLineSpan = error.Location.GetMappedLineSpan();
+                if (mappedLineSpan.HasMappedPath)
+                {
+                    lineSpan = mappedLineSpan;
+                }
+
+                // Print error location.
+                var locationText = "";
+                if (lineSpan.IsValid)
+                {
+                    var pos = lineSpan.StartLinePosition;
+                    locationText = $"({pos.Line + 1}) ";
+                }
+
+                // Print error.
+                Debug.LogError(
+                    $"  {locationText}{error.Id}: {error.GetMessage()}",
+                    skipSender: true);
+            }
+        }
+
+        // Print failed message.
+        Debug.LogError($"Compilation failed!");
     }
 
     /// <summary>
