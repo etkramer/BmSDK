@@ -1,21 +1,76 @@
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using BmSDK.Engine;
+using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
 
 namespace BmSDK.Framework.Redirection;
 
 static class RedirectManager
 {
-    static readonly Dictionary<string, RedirectorInfo> s_redirectorDict = [];
+    static readonly Dictionary<string, GlobalRedirectorInfo> s_globalRedirsDict = [];
+    static readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> s_localRedirsDict = [];
+    static readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> s_componentRedirsDict = [];
+
     const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
     const BindingFlags GlobalRedirSearchFlags = BindingFlags.Static | GenericRedirSearchFlags;
     const BindingFlags LocalRedirSearchFlags = BindingFlags.Instance | GenericRedirSearchFlags;
 
-    internal static void UnregisterAll() => s_redirectorDict.Clear();
+    internal static void UnregisterAll()
+    {
+        s_globalRedirsDict.Clear();
+        s_localRedirsDict.Clear();
+        s_componentRedirsDict.Clear();
+    }
+
+    public static void UnregisterCoponentRedirectors(IScriptComponent component)
+    {
+        if (!s_componentRedirsDict.TryGetValue(component, out var keys))
+        {
+            return;
+        }
+
+        foreach (var key in keys)
+        {
+            s_localRedirsDict.Remove(key);
+        }
+
+        s_componentRedirsDict.Remove(component);
+    }
+
+    public static void RegisterLocalRedirector(
+        Actor obj,
+        string funcPath,
+        IScriptComponent component,
+        MethodInfo redirMethod
+    )
+    {
+        var key = (obj.Ptr, funcPath);
+
+        var info = new LocalRedirectorInfo(component, redirMethod);
+
+        // Track redirs per actor object
+        if (!s_localRedirsDict.TryAdd(key, info))
+        {
+            throw new InvalidOperationException(
+                $"A redirector for {funcPath} " +
+                $"is already registerd for {obj.GetFullName()}");
+        }
+
+        // Track redirs per ScriptComponent instance
+        if (!s_componentRedirsDict.TryGetValue(component, out var keys))
+        {
+            keys = [];
+            s_componentRedirsDict[component] = keys;
+        }
+
+        keys.Add(key);
+    }
 
     /// <summary>
     /// Registers a delegate as a redirector for the given script function.
     /// </summary>
-    internal static void RegisterRedirector(
+    internal static void RegisterGlobalRedirector(
         Type targetClass,
         string targetMethodName,
         MethodInfo redirectMi,
@@ -32,12 +87,12 @@ static class RedirectManager
         var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetClass, targetMethodName);
 
         // Store the redirect for later use.
-        var redirInfo = new RedirectorInfo(
+        var redirInfo = new GlobalRedirectorInfo(
             targetClass,
             redirectMi,
             redirectMi.IsStatic ? null : target);
 
-        if (!s_redirectorDict.TryAdd(targetFuncPath, redirInfo))
+        if (!s_globalRedirsDict.TryAdd(targetFuncPath, redirInfo))
         {
             // Disallow multiple redirectors on the same function.
             // NOTE: We've got an approach for solving this described in Loader.cs.
@@ -45,7 +100,7 @@ static class RedirectManager
         }
     }
 
-    public static void RegisterRedirector(
+    public static void RegisterGlobalRedirector(
         Type targetClass,
         string targetMethodName,
         Delegate newDelegate
@@ -61,7 +116,7 @@ static class RedirectManager
             throw new InvalidOperationException("Redirected delegate is not a method!", e);
         }
 
-        RegisterRedirector(targetClass, targetMethodName, mi, newDelegate.Target);
+        RegisterGlobalRedirector(targetClass, targetMethodName, mi, newDelegate.Target);
     }
 
     public static void RegisterGlobalRedirectors(Assembly asm)
@@ -103,7 +158,7 @@ static class RedirectManager
                         skipSender: true);
                 }
 
-                RegisterRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
+                RegisterGlobalRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
             }
         }
     }
@@ -180,6 +235,22 @@ static class RedirectManager
         {
             MarshalUtil.ToUnmanaged(result, Result, redirMethod.ReturnType);
         }
+    }
+
+    public static bool TryGetLocalRedirector(
+        GameObject obj,
+        string funcPath,
+        [MaybeNullWhen(false)] out LocalRedirectorInfo redirInfo
+    )
+    {
+        redirInfo = null;
+
+        var key = (obj.Ptr, funcPath);
+
+        if (!s_localRedirsDict.TryGetValue(key, out var info))
+        {
+            return false;
+        }
 
         return true;
     }
@@ -187,16 +258,15 @@ static class RedirectManager
     /// <summary>
     /// Gets any redirections for the given function object, or returns false if none exist.
     /// </summary>
-    internal static bool TryGetRedirector(
+    public static bool TryGetGlobalRedirector(
         GameObject obj,
-        Function func,
-        [MaybeNullWhen(false)] out RedirectorInfo redirectorInfo
+        string funcPath,
+        [MaybeNullWhen(false)] out GlobalRedirectorInfo redirectorInfo
     )
     {
         redirectorInfo = default;
 
-        var funcPath = func.GetPathName();
-        if (!s_redirectorDict.TryGetValue(funcPath, out var info))
+        if (!s_globalRedirsDict.TryGetValue(funcPath, out var info))
         {
             return false;
         }

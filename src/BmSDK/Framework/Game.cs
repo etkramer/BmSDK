@@ -195,7 +195,7 @@ public static partial class Game
         string targetMethodName,
         Delegate newDelegate
     ) =>
-        RedirectManager.RegisterRedirector(
+        RedirectManager.RegisterGlobalRedirector(
             targetClass,
             targetMethodName,
             newDelegate
