@@ -206,11 +206,46 @@ static class RedirectManager
 
     internal static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        if (!TryGetRedirector(selfObj, funcObj, out var redirInfo))
+        var funcPath = funcObj.GetPathName();
+
+        if (TryGetLocalRedirector(selfObj, funcPath, out var localRedirInfo))
+        {
+            ExecuteLocalRedirector(localRedirInfo, selfObj, funcObj, stackPtr, Result);
+            return true;
+        }
+        else if (TryGetGlobalRedirector(selfObj, funcPath, out var globalRedirInfo))
+        {
+            ExecuteGlobalRedirector(globalRedirInfo, selfObj, funcObj, stackPtr, Result);
+            return true;
+        }
+        else
         {
             return false;
         }
+    }
 
+    static unsafe void ExecuteLocalRedirector(LocalRedirectorInfo localRedirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    {
+        var redirectMethod = localRedirInfo.RedirectMethod;
+        var component = localRedirInfo.Component;
+
+        var argTypes = redirectMethod
+            .GetParameters()
+            .Select(p => p.ParameterType)
+            .ToArray();
+
+        var args = stackPtr->ParamsToManaged(argTypes).ToArray();
+
+        var result = redirectMethod.Invoke(component, args);
+
+        if (result != null && redirectMethod != null)
+        {
+            MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
+        }
+    }
+
+    static unsafe void ExecuteGlobalRedirector(GlobalRedirectorInfo redirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    {
         var redirTarget = redirInfo.RedirectTarget;
         var redirMethod = redirInfo.RedirectMethod;
 
@@ -252,6 +287,7 @@ static class RedirectManager
             return false;
         }
 
+        redirInfo = info;
         return true;
     }
 
