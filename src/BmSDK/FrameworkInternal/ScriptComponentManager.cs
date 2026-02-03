@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
@@ -69,11 +70,11 @@ static class ScriptComponentManager
                 continue;
             }
 
-            RedirectManager.RegisterLocalRedirectors(type, actorType!);
+            RedirectManager.RegisterLocalRedirectors(type, actorType);
 
-            if (attribute!.AutoAttach)
+            if (attribute.AutoAttach)
             {
-                RegisterAutoAttachType(type, actorType!);
+                RegisterAutoAttachType(type, actorType);
             }
         }
     }
@@ -92,7 +93,11 @@ static class ScriptComponentManager
     /// <see langword="null"/>.</param>
     /// <returns>true if the specified type is a valid script component and both the attribute and actor type are found;
     /// otherwise, false.</returns>
-    public static bool IsTypeAScriptComponent(Type type, out ScriptComponentAttribute? attribute, out Type? actorType)
+    public static bool IsTypeAScriptComponent(
+        Type type,
+        [MaybeNullWhen(false)] out ScriptComponentAttribute attribute,
+        [MaybeNullWhen(false)] out Type actorType
+    )
     {
         attribute = null;
         actorType = null;
