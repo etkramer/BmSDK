@@ -1,4 +1,4 @@
-﻿namespace BmSDK;
+namespace BmSDK;
 
 public unsafe class TMap<TKey, TValue>
 {

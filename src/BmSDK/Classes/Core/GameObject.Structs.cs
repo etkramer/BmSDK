@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using BmSDK.Framework;
+using System.Numerics;
 
 namespace BmSDK;
 
