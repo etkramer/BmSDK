@@ -1,4 +1,5 @@
 using BmSDK.Framework;
+using BmSDK.Framework.Redirection;
 
 namespace BmSDK.Engine;
 
@@ -31,6 +32,9 @@ public partial class Actor
         s_scriptComponents.Add(newComponent);
         _scriptComponents.Add(newComponent);
 
+        // Register any [Redirect] methods on this component
+        RedirectManager.RegisterLocalRedirectors(newComponent);
+
         // Invoke attach callback
         newComponent.OnAttach();
     }
@@ -58,6 +62,9 @@ public partial class Actor
 
         // Invoke detach callback
         component.OnDetach();
+
+        // Unregister any [Redirect] methods
+        RedirectManager.UnregisterComponentRedirectors(component);
 
         // Remove from storage
         _scriptComponents.Remove(component);

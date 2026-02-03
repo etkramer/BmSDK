@@ -10,3 +10,18 @@ public static class GlobalRedirects
         self.ExperienceAwarded(xp / 10, teethXp / 10);
     }
 }
+
+[ScriptComponent(AutoAttach = true)]
+public sealed class XRayActivatorComponent : ScriptComponent<RPawnPlayer>
+{
+    public override void OnAttach() => Debug.Log("XRayActivatorComponent attached to player pawn!");
+
+    public override void OnDetach() => Debug.Log("XRayActivatorComponent attached to player pawn!");
+
+    [Redirect(nameof(RPawnPlayer.ExperienceAwarded))]
+    public void ExperienceAwardedRedirect(int xp, int teethXp)
+    {
+        Owner.PlayerController.bInvestigateMode = true;
+        Owner.ExperienceAwarded(xp * 10, teethXp * 10);
+    }
+}

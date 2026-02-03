@@ -1,14 +1,14 @@
-using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.Engine;
-using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
 
 namespace BmSDK.Framework.Redirection;
 
 static class RedirectManager
 {
     static readonly Dictionary<string, GlobalRedirectorInfo> s_globalRedirsDict = [];
+
+    static readonly Dictionary<Type, List<CachedLocalRedirector>> s_cachedLocalRedirDefinitionDict = [];
     static readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> s_localRedirsDict = [];
     static readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> s_componentRedirsDict = [];
 
@@ -19,11 +19,13 @@ static class RedirectManager
     internal static void UnregisterAll()
     {
         s_globalRedirsDict.Clear();
+
+        s_cachedLocalRedirDefinitionDict.Clear();
         s_localRedirsDict.Clear();
         s_componentRedirsDict.Clear();
     }
 
-    public static void UnregisterCoponentRedirectors(IScriptComponent component)
+    public static void UnregisterComponentRedirectors(IScriptComponent component)
     {
         if (!s_componentRedirsDict.TryGetValue(component, out var keys))
         {
@@ -173,8 +175,10 @@ static class RedirectManager
     /// Should define methods annotated with RedirectAttribute.</param>
     /// <param name="targetType">The target type for which redirector methods are being registered.</param>
     /// <exception cref="ArgumentException">Thrown if the TargetType specified in a RedirectAttribute cannot be assigned from the provided targetType.</exception>
-    public static void RegisterLocalRedirectors(Type componentType, Type targetType)
+    public static void CacheLocalRedirectors(Type componentType, Type targetType)
     {
+        List<CachedLocalRedirector> redirectors = [];
+
         foreach (var func in componentType.GetMethods(LocalRedirSearchFlags))
         {
             var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
@@ -200,7 +204,26 @@ static class RedirectManager
                 }
             }
 
-            // TODO: Implement registration
+            redirectors.Add(new(targetType, redirAttr.TargetMethod, func));
+        }
+    }
+
+    public static void RegisterLocalRedirectors(IScriptComponent component)
+    {
+        // Skip registration if no redirects defined
+        if (!s_cachedLocalRedirDefinitionDict.TryGetValue(component.GetType(), out var redirs))
+        {
+            return;
+        }
+
+        foreach (var redir in redirs)
+        {
+            RegisterLocalRedirector(
+                component.Owner,
+                redir.FuncPath,
+                component,
+                redir.Redirector
+            );
         }
     }
 
