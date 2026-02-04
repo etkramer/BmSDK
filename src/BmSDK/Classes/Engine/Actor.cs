@@ -20,6 +20,25 @@ public partial class Actor
     internal readonly List<IScriptComponent> _scriptComponents = [];
 
     /// <summary>
+    /// Checks if the Actor has a ScriptComponent of a specific type attached.
+    /// </summary>
+    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
+    /// <returns>True, if the given component type is present in the Actor;
+    /// false, if not.</returns>
+    public bool HasScriptComponentType<TComponent>()
+        where TComponent : IScriptComponent
+        => _scriptComponents.OfType<TComponent>().Any();
+
+    /// <summary>
+    /// Checks if the Actor has a specific ScriptComponent instance attached to itself.
+    /// </summary>
+    /// <param name="component">The component to check for attachment</param>
+    /// <returns>True, if the current Actor is the Owner of the ScriptComponent object;
+    /// false if not.</returns>
+    public bool HasScriptComponent(IScriptComponent component)
+        => component.Owner == this;
+
+    /// <summary>
     /// Attaches an existing script component to this actor.
     /// </summary>
     public void AttachScriptComponent(IScriptComponent newComponent)
@@ -42,9 +61,8 @@ public partial class Actor
     /// <summary>
     /// Attaches a new script component of the given type to this actor.
     /// </summary>
-    public TComponent AttachScriptComponent<TComponent, TActor>()
-        where TComponent : ScriptComponent<TActor>, new()
-        where TActor : Actor
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : IScriptComponent, new()
     {
         // Create/attach new component
         var newComponent = new TComponent();
@@ -70,6 +88,15 @@ public partial class Actor
         _scriptComponents.Remove(component);
         s_scriptComponents.Remove(component);
         component.RemoveOwnership();
+    }
+
+    public void DetachScriptComponent<TComponent>()
+        where TComponent : IScriptComponent
+    {
+        foreach (var component in _scriptComponents.OfType<TComponent>())
+        {
+            DetachScriptComponent(component);
+        }
     }
 
     /// <inheritdoc cref="GameObject.Clone"/>
