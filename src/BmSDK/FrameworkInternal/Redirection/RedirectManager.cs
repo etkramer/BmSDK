@@ -162,7 +162,19 @@ static class RedirectManager
                 continue;
             }
 
-            redirectors.Add(new(targetType, redirAttr.TargetMethod, func));
+            var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
+
+            redirectors.Add(new(targetType, targetFuncPath, func));
+        }
+
+        if (redirectors.Count == 0)
+        {
+            return;
+        }
+
+        if (!s_cachedLocalRedirDefinitionDict.TryAdd(componentType, redirectors))
+        {
+            throw new InvalidOperationException("Tried to cache a ScriptComponent type's redirectors twice!");
         }
     }
 
