@@ -42,6 +42,13 @@ static class ScriptComponentManager
     /// <param name="targetClass">The actor class type which the component will be automatically attached to. Must derive from Actor.</param>
     public static void RegisterAutoAttachType(Type componentType, Type targetClass)
     {
+        if (componentType.IsGenericType)
+        {
+            throw new ArgumentException(
+                $"ScriptComponents with generic type parameters " +
+                $"cannot use AutoAttach: {componentType.FullName}");
+        }
+
         var className = StaticInit.GetClassPathForManagedType(targetClass);
         if (!s_autoAttachTypes.TryGetValue(className, out var types))
         {
@@ -102,7 +109,7 @@ static class ScriptComponentManager
         attribute = null;
         actorType = null;
 
-        if (!type.IsClass || type.IsGenericType || type.IsAbstract)
+        if (!type.IsClass || type.IsAbstract)
         {
             return false;
         }
