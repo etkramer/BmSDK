@@ -18,7 +18,7 @@ public sealed class XRayActivatorComponent : ScriptComponent<RPawnPlayer>
 
     public override void OnDetach() => Debug.Log("XRayActivatorComponent attached to player pawn!");
 
-    [Redirect(nameof(RPawnPlayer.ExperienceAwarded))]
+    [ComponentRedirect(nameof(RPawnPlayer.ExperienceAwarded))]
     public void ExperienceAwardedRedirect(int xp, int teethXp)
     {
         Owner.PlayerController.bInvestigateMode = true;

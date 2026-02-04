@@ -12,9 +12,9 @@ static class RedirectManager
     static readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> s_localRedirsDict = [];
     static readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> s_componentRedirsDict = [];
 
-    const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
-    const BindingFlags GlobalRedirSearchFlags = BindingFlags.Static | GenericRedirSearchFlags;
+    const BindingFlags GenericRedirSearchFlags = BindingFlags.Public | BindingFlags.NonPublic;
     const BindingFlags LocalRedirSearchFlags = BindingFlags.Instance | GenericRedirSearchFlags;
+    const BindingFlags GlobalRedirSearchFlags = BindingFlags.Static | BindingFlags.DeclaredOnly | GenericRedirSearchFlags;
 
     internal static void UnregisterAll()
     {
@@ -80,9 +80,11 @@ static class RedirectManager
     )
     {
         // Prevent creation of invalid redirects
-        if (!targetClass.IsSubclassOf(typeof(GameObject)))
+        if (!targetClass.IsAssignableTo(typeof(GameObject)))
         {
-            throw new ArgumentException("Only methods of UClasses may be redirected!");
+            throw new ArgumentException(
+                $"{targetClass.FullName}:{targetMethodName} does not " +
+                $"inherit from GameObject and cannot be redirected!");
         }
 
         // Get the full path of the function (as originally declared).
@@ -125,39 +127,12 @@ static class RedirectManager
     {
         foreach (var type in asm.GetTypes())
         {
-            bool? isScriptComponent = null;
-
             foreach (var func in type.GetMethods(GlobalRedirSearchFlags))
             {
                 var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
                 if (redirAttr == null)
                 {
                     continue;
-                }
-
-                isScriptComponent ??= ScriptComponentManager.IsTypeAScriptComponent(type, out var attr, out var actorType);
-
-                if (redirAttr.TargetType == null)
-                {
-                    if (isScriptComponent == true)
-                    {
-                        throw new ArgumentException(
-                            $"{type.FullName}:{func.Name} is a static member" +
-                            $"and cannot use the ScriptComponent's target type implicitly!");
-                    }
-
-                    throw new ArgumentException(
-                        $"The redirect definition {type.FullName}:{func.Name} is " +
-                        $"outside of a ScriptComponent and therefore requires an explicit type definition!");
-                }
-
-                if (isScriptComponent == true)
-                {
-                    Debug.LogWarning(
-                        $"{type.FullName}:{func.Name} is a static member " +
-                        $"and is interpreted as a global redirect! " +
-                        $"The redirect applies even when the ScriptComponent is not attached.",
-                        skipSender: true);
                 }
 
                 RegisterGlobalRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
@@ -181,27 +156,10 @@ static class RedirectManager
 
         foreach (var func in componentType.GetMethods(LocalRedirSearchFlags))
         {
-            var redirAttr = func.GetCustomAttribute<RedirectAttribute>();
+            var redirAttr = func.GetCustomAttribute<ComponentRedirectAttribute>();
             if (redirAttr == null)
             {
                 continue;
-            }
-
-            if (redirAttr.TargetType != null)
-            {
-                if (redirAttr.TargetType.IsAssignableFrom(targetType))
-                {
-                    Debug.LogWarning(
-                        $"{componentType.FullName}:{func.Name} defines TargetType in RedirectAttribute unnecessarily! " +
-                        $"TargetType can be infered from ScriptComponent.",
-                        skipSender: true);
-                }
-                else
-                {
-                    throw new ArgumentException(
-                        $"{redirAttr.TargetType.Name} cannot be casted to {targetType.Name} " +
-                        $"in {componentType.FullName}:{func.Name}!");
-                }
             }
 
             redirectors.Add(new(targetType, redirAttr.TargetMethod, func));
