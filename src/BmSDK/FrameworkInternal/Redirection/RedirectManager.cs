@@ -13,7 +13,14 @@ static class RedirectManager
 
     const BindingFlags GenericRedirSearchFlags = BindingFlags.Public | BindingFlags.NonPublic;
 
-    static Function? s_lastRedirectedFunc = null;
+    /// <summary>
+    /// Stack of UFunction objects storing the currently running redirect targets.
+    /// <see cref="ExecuteRedirector(GameObject, Function, FFrame*, nint)"/> pushes a
+    /// function on entry and pops it on exit and if the same function is found at the
+    /// top of the stack, a reentry is detected and the redirect is prevented.
+    /// This avoids infinite recursion.
+    /// </summary>
+    static readonly Stack<Function> s_redirectCalls = [];
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
@@ -21,31 +28,42 @@ static class RedirectManager
     /// If there is none, the function searches for a global redirect for the given target function and executes it.
     /// If there is no local or global redirect, we return false. 
     /// </summary>
-    /// <returns>True, if any redirector (local or global) was found; false if not.</returns>
+    /// <returns>True, if any redirector (local or global) was found; false if not.
+    /// As a consequence, the original is called from Loader if false is returned.</returns>
     public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        var shouldRunRedirect = funcObj != s_lastRedirectedFunc;
-        s_lastRedirectedFunc = funcObj;
-        if (!shouldRunRedirect)
+        // Prevent infinite recursion: if top of stack is the function object, treat as reentry
+        if (s_redirectCalls.Count > 0 && s_redirectCalls.Peek() == funcObj)
         {
             return false;
         }
 
-        var funcPath = funcObj.GetPathName();
+        // Push this func to mark it as active for the duration of this invocation
+        s_redirectCalls.Push(funcObj);
 
-        if (Local.TryGetRedirector(selfObj, funcPath, out var localRedirInfo))
+        try
         {
-            Local.ExecuteRedirector(localRedirInfo, selfObj, funcObj, stackPtr, Result);
-            return true;
+            var funcPath = funcObj.GetPathName();
+
+            if (Local.TryGetRedirector(selfObj, funcPath, out var localRedirInfo))
+            {
+                Local.ExecuteRedirector(localRedirInfo, selfObj, funcObj, stackPtr, Result);
+                return true;
+            }
+            else if (Global.TryGetRedirector(selfObj, funcPath, out var globalRedirInfo))
+            {
+                Global.ExecuteRedirector(globalRedirInfo, selfObj, funcObj, stackPtr, Result);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        else if (Global.TryGetRedirector(selfObj, funcPath, out var globalRedirInfo))
+        finally
         {
-            Global.ExecuteRedirector(globalRedirInfo, selfObj, funcObj, stackPtr, Result);
-            return true;
-        }
-        else
-        {
-            return false;
+            // Pop the function off the stack when the invocation is over
+            s_redirectCalls.Pop();
         }
     }
 
