@@ -42,6 +42,17 @@ public abstract class ScriptComponent<TActor> : IScriptComponent
     public void RemoveOwnership() => Owner = null!;
 
     /// <inheritdoc/>
+    public void Detach()
+    {
+        if (Owner == null)
+        {
+            throw new InvalidOperationException("Cannot detach ScriptComponent that is not attached to any Actor");
+        }
+
+        Owner.DetachScriptComponent(this);
+    }
+
+    /// <inheritdoc/>
     public virtual void OnAttach() { }
     /// <inheritdoc/>
     public virtual void OnDetach() { }

@@ -26,6 +26,11 @@ public interface IScriptComponent
     internal void RemoveOwnership();
 
     /// <summary>
+    /// Detaches the component from the Owner
+    /// </summary>
+    void Detach();
+
+    /// <summary>
     /// Called when this component is attached to an actor.
     /// </summary>
     void OnAttach();

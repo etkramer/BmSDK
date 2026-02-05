@@ -10,7 +10,7 @@ public partial class Actor
     /// </summary>
     public static IReadOnlyCollection<IScriptComponent> AllScriptComponents => s_scriptComponents;
 
-    internal static readonly List<IScriptComponent> s_scriptComponents = [];
+    static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
     /// Collection of all unique ScriptComponent types attached to this actor.
@@ -22,7 +22,7 @@ public partial class Actor
     /// </summary>
     public IReadOnlyCollection<IScriptComponent> ScriptComponents => _scriptComponents.Values;
 
-    internal readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
+    readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
 
     /// <summary>
     /// Checks if the Actor has a ScriptComponent of a specific type attached.

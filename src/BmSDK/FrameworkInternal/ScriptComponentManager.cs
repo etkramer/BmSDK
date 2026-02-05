@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
+using MoreLinq;
 
 namespace BmSDK.Framework;
 
@@ -20,12 +21,8 @@ static class ScriptComponentManager
         // Stop auto attchment of script components
         s_autoAttachTypes.Clear();
 
-        // Run detach code in advance
-        Actor.s_scriptComponents.ForEach(component => component.OnDetach());
-        // Unregister components locally
-        Actor.s_scriptComponents.ForEach(component => component.Owner._scriptComponents.Clear());
-        // Unregister components globally
-        Actor.s_scriptComponents.Clear();
+        // Detach all existing script components and local redirectors
+        Actor.AllScriptComponents.ToArray().ForEach(component => component.Detach());
     }
 
     /// <summary>

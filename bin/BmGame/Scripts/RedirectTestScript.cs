@@ -10,7 +10,7 @@ public static class GlobalRedirects
         self.PlayerController.HudMovieNew.GeneralMovie.SetInfoText(
             "Default regeneration",
             (int) RGFxMovieHudExtendable.JustifyText.JT_Center,
-            0x00FF00
+            TextColour: 0x00FF00
         );
     }
 }
@@ -31,7 +31,7 @@ public sealed class RegenReductionComponent : ScriptComponent<RPawnPlayer>
         Owner.PlayerController.HudMovieNew.GeneralMovie.SetInfoText(
             "Reduced regeneration",
             (int) RGFxMovieHudExtendable.JustifyText.JT_Center,
-            0xFF0000
+            TextColour: 0xFF0000
         );
     }
 }
