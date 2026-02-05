@@ -20,7 +20,10 @@ static partial class StaticInit
     public static string GetClassPathForManagedType(Type type)
     {
         _managedTypeToClassPathMap.TryGetValue(type, out var res);
-        return Guard.NotNull(res);
+        return Guard.NotNull(
+            res,
+            $"{type.FullName} is not a managed type for any in-game unmanaged type."
+        );
     }
 
     /// <summary>
@@ -47,9 +50,12 @@ static partial class StaticInit
     /// <returns>The declaring type</returns>
     /// <exception cref="ArgumentException">If the method couldn't be found.</exception>
     public static Type GetDeclaringTypeForMethod(Type type, string methodName)
-        => Guard.NotNull(EnumerateSelfAndSupers(type)
-            .FirstOrDefault(super => super.GetMethod(methodName, FuncSearchFlags) != null),
-            $"Couldn't find declaring class for method {methodName}!");
+        => Guard.NotNull(
+                EnumerateSelfAndSupers(type)
+                    .FirstOrDefault(super =>
+                        super.GetMethod(methodName, FuncSearchFlags) != null),
+            $"{type.Name} and its supers have no declaration of the method '{methodName}'."
+        );
 
     /// <summary>
     /// Gets the fully qualified path of the method definition for the given type in the UE3 format.

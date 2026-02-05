@@ -119,7 +119,7 @@ static class ScriptManager
         {
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
-            RedirectManager.RegisterGlobalRedirectors(asm);
+            RedirectManager.Global.RegisterRedirectors(asm);
             s_scripts.AddRange(CreateScriptInstances(asm));
             ScriptComponentManager.RegisterTypes(asm);
             if (s_isInitialized)

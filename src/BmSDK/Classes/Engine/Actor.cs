@@ -61,7 +61,7 @@ public partial class Actor
         s_scriptComponents.Add(newComponent);
 
         // Register any [Redirect] methods on this component
-        RedirectManager.RegisterLocalRedirectors(newComponent);
+        RedirectManager.Local.RegisterComponentRedirectors(newComponent);
 
         // Invoke attach callback
         newComponent.OnAttach();
@@ -95,7 +95,7 @@ public partial class Actor
         component.OnDetach();
 
         // Unregister any [Redirect] methods
-        RedirectManager.UnregisterComponentRedirectors(component);
+        RedirectManager.Local.UnregisterComponentRedirectors(component);
 
         // Remove from storage
         _scriptComponents.Remove(component.GetType());

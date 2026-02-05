@@ -77,7 +77,7 @@ static class ScriptComponentManager
                 continue;
             }
 
-            RedirectManager.CacheLocalRedirectors(type, actorType);
+            RedirectManager.Local.CacheRedirectors(type, actorType);
 
             if (attribute.AutoAttach)
             {
