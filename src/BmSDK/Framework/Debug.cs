@@ -62,4 +62,17 @@ public static class Debug
     {
         s_senderStack.Pop();
     }
+
+    internal static void RunWithSender(string sender, Action action)
+    {
+        s_senderStack.Push(sender);
+        try
+        {
+            action();
+        }
+        finally
+        {
+            s_senderStack.Pop();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 using BmSDK.BmGame;
 using BmSDK.Engine;
+using BmSDK.Framework.Redirection;
 
 namespace BmSDK.Framework;
 
@@ -194,9 +195,10 @@ public static partial class Game
         string targetMethodName,
         Delegate newDelegate
     ) =>
-        RedirectManager.RegisterRedirector(
-            Class.FindByManagedType(targetClass),
+        RedirectManager.Global.RegisterRedirector(
+            targetClass,
             targetMethodName,
-            newDelegate
+            newDelegate.Method,
+            newDelegate.Target
         );
 }

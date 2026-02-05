@@ -1,6 +1,7 @@
 global using System.Runtime.InteropServices;
 using System.Diagnostics.CodeAnalysis;
 using BmSDK.Engine;
+using BmSDK.Framework.Redirection;
 using MoreLinq;
 
 [assembly: SuppressMessage("Usage", "IDE1006:Naming rule violation")]
@@ -10,6 +11,12 @@ namespace BmSDK.Framework;
 
 static class Loader
 {
+    const string InitFuncName = "Engine.GameInfo:InitGame";
+    const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
+    const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
+    const string PostBeginPlayFuncName = ":PostBeginPlay";
+    const string TickFuncName = "BmGame.RGameInfo:Tick";
+
     static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
@@ -20,11 +27,7 @@ static class Loader
     /// </summary>
     [UnmanagedCallersOnly]
     public static void GuardedDllMain()
-    {
-        Debug.PushSender("Loader");
-        RunGuarded(DllMain);
-        Debug.PopSender();
-    }
+        => Debug.RunWithSender("Loader", () => RunGuarded(DllMain));
 
     static void DllMain()
     {
@@ -64,21 +67,8 @@ static class Loader
         return _EngineTickDetourBase!.Invoke(self);
     }
 
-    static void OnGameInit()
-    {
-        // Call Main() for scripts
-        ScriptManager.Scripts.ForEach(script =>
-        {
-            Debug.PushSender(script.Name);
-            script.Main();
-            Debug.PopSender();
-        });
-    }
-
     static bool s_hasGameStarted = false;
     static bool s_hasGameInited = false;
-
-    static Function? s_lastFuncForRedirects = null;
 
     // Detour for UObject::ProcessInternal()
     static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
@@ -87,119 +77,69 @@ static class Loader
         {
             IntPtr selfPtr = self;
             FFrame* stackPtr = (FFrame*)Stack.ToPointer();
-
             var selfObj = MarshalUtil.ToManaged<GameObject>(&selfPtr);
             var funcObj = MarshalUtil.ToManaged<Function>(&stackPtr->Node);
-
             var funcName = funcObj.GetPathName();
-            var funcNameForInit = "Engine.GameInfo:InitGame";
-            var funcNameForTick = "BmGame.RGameInfo:Tick";
-            var funcNameForEnterMenu = "GFxUI.GFxMoviePlayer:Init";
-            var funcNameForEnterGame = "BmGame.RPlayerController:ClientReady";
 
             // Notify scripts of game init
-            if (!s_hasGameInited && funcName == funcNameForInit)
+            if (!s_hasGameInited && funcName == InitFuncName)
             {
-                OnGameInit();
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.Main));
                 s_hasGameInited = true;
             }
 
             // Notify scripts of game start
-            if (!s_hasGameStarted && funcName == funcNameForEnterMenu)
+            if (!s_hasGameStarted && funcName == EnterMenuFuncName)
             {
-                // Call OnEnterMenu() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.OnEnterMenu();
-                    Debug.PopSender();
-                });
-
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterMenu));
                 s_hasGameStarted = true;
             }
 
             // Notify scripts of game begin play
-            if (funcName == funcNameForEnterGame)
+            if (funcName == EnterGameFuncName)
             {
-                // Call OnEnterGame() for scripts
-                ScriptManager.Scripts.ForEach(script =>
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterGame));
+            }
+
+            // Auto-attach script components to newly spawned actors
+            if (ScriptComponentManager.HasAutoAttachTypes())
+            {
+                if (funcName.EndsWith(PostBeginPlayFuncName) && selfObj is Actor actor)
                 {
-                    Debug.PushSender(script.Name);
-                    script.OnEnterGame();
-                    Debug.PopSender();
-                });
+                    ScriptComponentManager.TryAutoAttachComponents(actor);
+                }
             }
 
             // Notify scripts of game tick
-            if (funcName == funcNameForTick)
+            if (funcName == TickFuncName)
             {
                 // Tick framework stuff
-                InputManager.Tick(ScriptManager.Scripts);
+                InputManager.Tick();
                 GameWindow.Tick();
 
                 // Call OnTick() for scripts
-                ScriptManager.Scripts.ForEach(script =>
-                {
-                    Debug.PushSender(script.Name);
-                    script.OnTick();
-                    Debug.PopSender();
-                });
+                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnTick));
 
                 // Call OnTick() for script components
                 if (Actor.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
+                    foreach (var scriptComponent in Actor.AllScriptComponents)
                     {
-                        Debug.PushSender(scriptComponent.GetType().Name);
-                        scriptComponent.OnTick();
-                        Debug.PopSender();
+                        Debug.RunWithSender(
+                            scriptComponent.GetType().Name,
+                            scriptComponent.OnTick);
                     }
                 }
             }
 
-            // Don't run the same redirector twice in a row - in that case, we assume the user is attempting to call the base implementation.
-            // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
-            // TODO: Instead of falling back to the base impl, we can support multiple redirectors on the same function by having subsequent calls fall back to the next redirector instead (until we run out).
-            bool shouldIgnoreRedirects = s_lastFuncForRedirects == funcObj;
-            s_lastFuncForRedirects = funcObj;
-
-            // Do we have any redirections to run?
-            if (
-                !shouldIgnoreRedirects
-                && RedirectManager.TryGetRedirector(selfObj, funcObj, out var redirectorInfo)
-            )
+            // Run redirect and skip base implementation if applicable to this function
+            if (RedirectManager.ExecuteRedirector(selfObj, funcObj, stackPtr, Result))
             {
-                var redirectMethod = redirectorInfo.RedirectMethod;
-                var redirectTarget = redirectorInfo.RedirectTarget;
-
-                // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
-                var argTypes = redirectMethod
-                    .GetParameters()
-                    .Select(p => p.ParameterType)
-                    .Skip(funcObj.IsStatic ? 0 : 1)
-                    .ToArray();
-
-                // Marshal args, add self as first arg if needed.
-                var args = stackPtr->ParamsToManaged(argTypes).ToList();
-                if (!funcObj.IsStatic)
-                {
-                    args.Insert(0, selfObj);
-                }
-
-                var result = redirectMethod.Invoke(redirectTarget, args.ToArray());
-
-                if (result != null && redirectMethod.ReturnType != null)
-                {
-                    // Marshal result back (if non-void).
-                    var returnType = redirectMethod.ReturnType;
-                    MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
-                }
+                return;
             }
-            else
-            {
-                // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
-                _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
-            }
+
+            // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
+            _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
         });
     }
 
