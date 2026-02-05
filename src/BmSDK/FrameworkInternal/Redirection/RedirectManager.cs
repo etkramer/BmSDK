@@ -13,6 +13,8 @@ static class RedirectManager
 
     const BindingFlags GenericRedirSearchFlags = BindingFlags.Public | BindingFlags.NonPublic;
 
+    static Function? s_lastRedirectedFunc = null;
+
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
     /// It first searches for a local redirect for the given function and executes it.
@@ -22,6 +24,13 @@ static class RedirectManager
     /// <returns>True, if any redirector (local or global) was found; false if not.</returns>
     public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
+        var shouldRunRedirect = funcObj != s_lastRedirectedFunc;
+        s_lastRedirectedFunc = funcObj;
+        if (!shouldRunRedirect)
+        {
+            return false;
+        }
+
         var funcPath = funcObj.GetPathName();
 
         if (Local.TryGetRedirector(selfObj, funcPath, out var localRedirInfo))

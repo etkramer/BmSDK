@@ -70,8 +70,6 @@ static class Loader
     static bool s_hasGameStarted = false;
     static bool s_hasGameInited = false;
 
-    static Function? s_lastFuncForRedirects = null;
-
     // Detour for UObject::ProcessInternal()
     static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
@@ -134,13 +132,8 @@ static class Loader
                 }
             }
 
-            // Don't run the same redirector twice in a row - in that case, we assume the user is attempting to call the base implementation.
-            // Obviously this will have side effects, but it *should* be good enough for now as the cases where it breaks should be extremely rare.
-            // TODO: Instead of falling back to the base impl, we can support multiple redirectors on the same function by having subsequent calls fall back to the next redirector instead (until we run out).
-            var shouldRunRedirectors = funcObj != s_lastFuncForRedirects;
-            s_lastFuncForRedirects = funcObj;
-
-            if (shouldRunRedirectors && RedirectManager.ExecuteRedirector(selfObj, funcObj, stackPtr, Result))
+            // Run redirect and skip base implementation if applicable to this function
+            if (RedirectManager.ExecuteRedirector(selfObj, funcObj, stackPtr, Result))
             {
                 return;
             }
