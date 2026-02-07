@@ -10,14 +10,15 @@ namespace BmSDK.Framework;
 /// <remarks>Extend this class to create script components that require access to a specific actor type. The <see
 /// cref="Owner"/> property exposes the actor instance as the specified type, enabling type-safe interactions within the
 /// component.
-/// This is especially useful if you only apply the ScriptComponent to one specific child class of Actor
-/// and want to use <see cref="ScriptComponentAttribute.AutoAttach"/>.</remarks>
+/// This is especially useful if you want to use <see cref="ScriptComponentAttribute.AutoAttach"/>
+/// to apply the ScriptComponent to one specific child class of Actor only.
+/// </remarks>
 /// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
 /// <seealso cref="ScriptComponentAttribute"/>
 public abstract class ScriptComponent<TActor> : IScriptComponent
     where TActor : Actor
 {
-    /// <inheritdoc/>
+    /// <inheritdoc cref="IScriptComponent.Owner"/>
     public TActor Owner { get; internal set; } = null!;
     /// <inheritdoc/>
     Actor IScriptComponent.Owner
@@ -25,30 +26,13 @@ public abstract class ScriptComponent<TActor> : IScriptComponent
         get => Owner;
         set
         {
-            if (value is not TActor actor)
+            if (value is not null and not TActor)
             {
-                throw new InvalidCastException($"{value.GetType()} is incompatible with {GetType().Name}");
+                throw new InvalidCastException($"{value.GetType().Name} is incompatible with {GetType().Name}");
             }
 
-            Owner = actor;
+            Owner = (TActor?)value!;
         }
-    }
-
-    /// <inheritdoc/>
-    public bool IsOwner(Actor actor) => actor == Owner;
-
-    /// <inheritdoc/>
-    public void RemoveOwnership() => Owner = null!;
-
-    /// <inheritdoc/>
-    public void Detach()
-    {
-        if (Owner == null)
-        {
-            throw new InvalidOperationException("Cannot detach ScriptComponent that is not attached to any Actor");
-        }
-
-        Owner.DetachScriptComponent(this);
     }
 
     /// <inheritdoc/>

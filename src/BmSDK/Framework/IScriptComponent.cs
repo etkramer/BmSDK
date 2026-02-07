@@ -18,17 +18,25 @@ public interface IScriptComponent
     /// </summary>
     /// <param name="actor">The actor to check for ownership.</param>
     /// <returns>true if the specified actor is the owner; otherwise, false.</returns>
-    bool IsOwner(Actor actor);
+    bool IsOwner(Actor actor) => actor == Owner;
 
     /// <summary>
     /// Sets the backing Owner field to null.
     /// </summary>
-    internal void RemoveOwnership();
+    internal void RemoveOwnership() => Owner = null!;
 
     /// <summary>
     /// Detaches the component from the Owner
     /// </summary>
-    void Detach();
+    void Detach()
+    {
+        if (Owner == null)
+        {
+            throw new InvalidOperationException("Cannot detach ScriptComponent that is not attached to any Actor");
+        }
+
+        Owner.DetachScriptComponent(this);
+    }
 
     /// <summary>
     /// Called when this component is attached to an actor.
