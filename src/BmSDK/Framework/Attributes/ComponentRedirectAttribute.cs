@@ -30,7 +30,7 @@ namespace BmSDK.Framework;
 /// </example>
 /// <param name="targetMethod">The name of the original method to detour.
 /// Use <see langword="nameof"/> to get it safely.</param>
-[AttributeUsage(AttributeTargets.Method)]
+[AttributeUsage(AttributeTargets.Method, Inherited = false)]
 public sealed class ComponentRedirectAttribute(string targetMethod) : Attribute
 {
     public string TargetMethod { get; } = targetMethod;

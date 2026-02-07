@@ -5,8 +5,9 @@ namespace BmSDK.Framework;
 /// <summary>
 /// Marks a class as a ScriptComponent that can be attached to Actors.
 /// Required for components that use auto-attach and local redirectors.
+/// The class being marked must inherit <see cref="ScriptComponent{TActor}"/>.
 /// </summary>
-[AttributeUsage(AttributeTargets.Class)]
+[AttributeUsage(AttributeTargets.Class, Inherited = false)]
 public sealed class ScriptComponentAttribute : Attribute
 {
     /// <summary>

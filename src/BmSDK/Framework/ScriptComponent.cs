@@ -14,7 +14,6 @@ namespace BmSDK.Framework;
 /// and want to use <see cref="ScriptComponentAttribute.AutoAttach"/>.</remarks>
 /// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
 /// <seealso cref="ScriptComponentAttribute"/>
-[ScriptComponent]
 public abstract class ScriptComponent<TActor> : IScriptComponent
     where TActor : Actor
 {
