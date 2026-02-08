@@ -10,6 +10,14 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
+    /// <summary>
+    /// Record storing data of a currently registered global redirect necessary to execute it.
+    /// </summary>
+    /// <param name="TargetType">Type that the redirect applies to</param>
+    /// <param name="RedirectMethod">Method to call on redirect</param>
+    /// <param name="RedirectTarget">Object to call <see cref="RedirectMethod"/> on</param>
+    public record GlobalRedirectorInfo(Type TargetType, MethodInfo RedirectMethod, object? RedirectTarget);
+
     readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | BindingFlags.DeclaredOnly | genericRedirSearchFlags;
 
     /// <summary>
@@ -107,7 +115,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         }
 
         // Checks if the object inherits the function to redirect without overriding it
-        if (!StaticInit.EnumerateSelfAndSupers(obj.GetType()).Contains(info.TargetClass))
+        if (!StaticInit.EnumerateSelfAndSupers(obj.GetType()).Contains(info.TargetType))
         {
             return false;
         }

@@ -11,6 +11,21 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
+    /// <summary>
+    /// Record storing data necessary to register local redirects when a ScriptComponent is attached.
+    /// </summary>
+    /// <param name="TargetType">Type that the redirect applies to</param>
+    /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
+    /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
+    /// <param name="RedirectMethod">Method to call on redirect</param>
+    public record CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod);
+    /// <summary>
+    /// Record storing data of a currently registered local redirect necessary to execute it.
+    /// </summary>
+    /// <param name="Component">The ScriptComponent that declares the redirect</param>
+    /// <param name="RedirectMethod">Method to call on redirect</param>
+    public record LocalRedirectorInfo(IScriptComponent Component, MethodInfo RedirectMethod);
+
     readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
 
     /// <summary>
@@ -124,7 +139,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
                 component.Owner,
                 redir.FuncPath,
                 component,
-                redir.Redirector
+                redir.RedirectMethod
             );
         }
     }
