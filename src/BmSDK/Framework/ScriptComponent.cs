@@ -15,7 +15,7 @@ namespace BmSDK.Framework;
 /// </remarks>
 /// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
 /// <seealso cref="ScriptComponentAttribute"/>
-public abstract class ScriptComponent<TActor> : IScriptComponent
+public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
     where TActor : Actor
 {
     /// <inheritdoc cref="IScriptComponent.Owner"/>

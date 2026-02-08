@@ -53,3 +53,7 @@ public interface IScriptComponent
     /// </summary>
     void OnTick();
 }
+
+/// <inheritdoc/>
+/// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
+public interface IScriptComponent<in TActor> : IScriptComponent where TActor : Actor;
