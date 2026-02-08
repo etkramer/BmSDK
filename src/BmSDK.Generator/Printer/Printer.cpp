@@ -111,6 +111,15 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         }
         out << endl;
 
+        for (UStruct* super = _class; super; super = super->SuperStruct)
+        {
+            if (super->GetPathName() == "Engine.Actor")
+            {
+                Printer::PrintScHelpers(_class, out);
+                break;
+            }
+        }
+
         // Print fields
         UField* fieldLink = _class->Children;
         for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
@@ -162,6 +171,41 @@ void Printer::PrintClass(UClass* _class, ostream& out)
     }
     Printer::PopIndent();
     Printer::Indent(out) << "}" << endl;
+}
+
+void Printer::PrintScHelpers(class UClass* _class, ostream& out)
+{
+    auto type = _class->GetNameManaged();
+    Printer::PrintScHelper("void", "AttachScriptComponent", false, false, type, out);
+    Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", false, false, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", true, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", false, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, type, out);
+}
+
+void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, string type, ostream& out)
+{
+    if (generic)
+    {
+        Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
+        Printer::PushIndent();
+        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" <<
+            (ctor ? ", new()" : "") << endl;
+        Printer::Indent(out) << "=> " << helper << "Base<TComponent>();" << endl;
+        Printer::PopIndent();
+        out << endl;
+    }
+    else
+    {
+        Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
+        Printer::PushIndent();
+        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" << endl;
+        Printer::Indent(out) << "=> " << helper << "Base(component);" << endl;
+        Printer::PopIndent();
+        out << endl;
+    }
+    
 }
 
 void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)

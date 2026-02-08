@@ -26,7 +26,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> _localRedirsDict = [];
     /// <summary>
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
-    /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>  
+    /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponentBase(IScriptComponent)"/>  
     /// </summary>
     readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> _componentRedirsDict = [];
 

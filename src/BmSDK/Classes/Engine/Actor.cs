@@ -25,28 +25,9 @@ public partial class Actor
     readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
 
     /// <summary>
-    /// Checks if the Actor has a ScriptComponent of a specific type attached.
-    /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
-    /// <returns>True, if the given component type is present in the Actor;
-    /// false, if not.</returns>
-    public bool HasScriptComponent<TComponent>()
-        where TComponent : IScriptComponent
-        => _scriptComponents.ContainsKey(typeof(TComponent));
-
-    /// <summary>
-    /// Checks if the Actor has a specific ScriptComponent instance attached to itself.
-    /// </summary>
-    /// <param name="component">The component to check for attachment</param>
-    /// <returns>True, if the current Actor is the Owner of the ScriptComponent object;
-    /// false if not.</returns>
-    public bool HasScriptComponent(IScriptComponent component)
-        => component.Owner == this;
-
-    /// <summary>
     /// Attaches an existing script component to this actor.
     /// </summary>
-    public void AttachScriptComponent(IScriptComponent newComponent)
+    internal void AttachScriptComponentBase(IScriptComponent newComponent)
     {
         Guard.Require(newComponent.Owner == null, "Component is already attached to an actor");
 
@@ -72,22 +53,41 @@ public partial class Actor
     /// </summary>
     /// <typeparam name="TComponent">The ScriptComponent type to instantiate</typeparam>
     /// <returns>The newly created and attached ScriptComponent</returns>
-    public TComponent AttachScriptComponent<TComponent>()
+    internal TComponent AttachScriptComponentBase<TComponent>()
         where TComponent : IScriptComponent, new()
     {
         // Create/attach new component
         var newComponent = new TComponent();
-        AttachScriptComponent(newComponent);
+        AttachScriptComponentBase(newComponent);
 
         return newComponent;
     }
+
+    /// <summary>
+    /// Checks if the Actor has a specific ScriptComponent instance attached to itself.
+    /// </summary>
+    /// <param name="component">The component to check for attachment</param>
+    /// <returns>True, if the current Actor is the Owner of the ScriptComponent object;
+    /// false if not.</returns>
+    internal bool HasScriptComponentBase(IScriptComponent component)
+        => component.Owner == this;
+
+    /// <summary>
+    /// Checks if the Actor has a ScriptComponent of a specific type attached.
+    /// </summary>
+    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
+    /// <returns>True, if the given component type is present in the Actor;
+    /// false, if not.</returns>
+    internal bool HasScriptComponentBase<TComponent>()
+        where TComponent : IScriptComponent
+        => _scriptComponents.ContainsKey(typeof(TComponent));
 
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>
     /// <param name="component">The component to detach</param>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
-    public void DetachScriptComponent(IScriptComponent component)
+    internal void DetachScriptComponentBase(IScriptComponent component)
     {
         Guard.Require(component.IsOwner(this), "Component is not attached to this actor");
 
@@ -108,7 +108,7 @@ public partial class Actor
     /// </summary>
     /// <typeparam name="TComponent">The ScriptComponent type to detach</typeparam>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
-    public void DetachScriptComponent<TComponent>()
+    internal void DetachScriptComponentBase<TComponent>()
         where TComponent : IScriptComponent
     {
         if (!_scriptComponents.TryGetValue(typeof(TComponent), out var component))
@@ -116,7 +116,7 @@ public partial class Actor
             throw new ArgumentException($"No instance of {nameof(TComponent)} is attached to this actor");
         }
 
-        DetachScriptComponent(component);
+        DetachScriptComponentBase(component);
     }
 
     /// <inheritdoc cref="GameObject.Clone"/>

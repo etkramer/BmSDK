@@ -206,7 +206,7 @@ static unsafe class MarshalUtil
             {
                 foreach (var scriptComponent in actor.ScriptComponents.ToArray())
                 {
-                    actor.DetachScriptComponent(scriptComponent);
+                    actor.DetachScriptComponentBase(scriptComponent);
                 }
             }
         }
