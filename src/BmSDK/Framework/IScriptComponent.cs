@@ -14,6 +14,12 @@ public interface IScriptComponent
     Actor Owner { get; internal set; }
 
     /// <summary>
+    /// Determines whether the component is attached to any actor.
+    /// </summary>
+    /// <returns>True, if Owner not null; false otherwise</returns>
+    bool HasOwner() => Owner != null;
+
+    /// <summary>
     /// Determines whether the specified actor stores the component.
     /// </summary>
     /// <param name="actor">The actor to check for ownership.</param>

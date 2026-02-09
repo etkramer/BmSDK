@@ -11,7 +11,7 @@ static class RedirectManager
     public static readonly GlobalRedirectManager Global = new(GenericRedirSearchFlags);
     public static readonly LocalRedirectManager Local = new(GenericRedirSearchFlags);
 
-    const BindingFlags GenericRedirSearchFlags = BindingFlags.Public | BindingFlags.NonPublic;
+    const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.

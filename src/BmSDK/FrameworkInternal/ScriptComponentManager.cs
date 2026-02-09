@@ -6,9 +6,18 @@ using MoreLinq;
 
 namespace BmSDK.Framework;
 
+/// <summary>
+/// Manages the registration of auto-attach types and the mass unloading of ScriptComponents.
+/// </summary>
+/// <seealso cref="Actor"/>
 static class ScriptComponentManager
 {
-    static readonly Dictionary<string, List<Type>> s_autoAttachTypes = [];
+    /// <summary>
+    /// Maps Actor types to Lists of ScriptComponents that will
+    /// auto-attach. Populated by <see cref="RegisterAutoAttachType(Type, Type)"/> and used by
+    /// <see cref="TryAutoAttachComponents(Actor)"/> and <see cref="AutoAttachTypesToExistingActors"/>
+    /// </summary>
+    static readonly Dictionary<Type, List<Type>> s_autoAttachTypes = [];
 
     /// <summary>
     /// Unregisters all <see cref="ScriptComponent"/>s and clears all auto-attachment type registrations.
@@ -39,6 +48,7 @@ static class ScriptComponentManager
     /// <param name="targetClass">The actor class type which the component will be automatically attached to. Must derive from Actor.</param>
     public static void RegisterAutoAttachType(Type componentType, Type targetClass)
     {
+        // We need a default constructor so we can't auto instantiate generic types
         if (componentType.IsGenericType)
         {
             throw new ArgumentException(
@@ -46,11 +56,19 @@ static class ScriptComponentManager
                 $"cannot use AutoAttach: {componentType.FullName}");
         }
 
-        var className = StaticInit.GetClassPathForManagedType(targetClass);
-        if (!s_autoAttachTypes.TryGetValue(className, out var types))
+        if (componentType.IsAssignableTo(typeof(ScriptComponent)))
+        {
+            Debug.LogWarning(
+                $"{componentType.FullName} enables AutoAttach and inherits ScriptComponent.\n" +
+                $"This means implicitly that the component will auto-attach to ALL actors.\n" +
+                $"Extend ScriptComponent<Actor> to hide this warning if this behavior is intended!",
+                skipSender: true);
+        }
+
+        if (!s_autoAttachTypes.TryGetValue(targetClass, out var types))
         {
             types = [];
-            s_autoAttachTypes[className] = types;
+            s_autoAttachTypes[targetClass] = types;
         }
 
         if (!types.Contains(componentType))
@@ -61,8 +79,8 @@ static class ScriptComponentManager
 
     /// <summary>
     /// Registers all <see cref="ScriptComponent"/>s in the specified assembly that are marked with
-    /// a ScriptComponentAttribute and have AutoAttach enabled for automatic attachment.
-    /// It also stores the redirectors defined in the types.
+    /// a ScriptComponentAttribute: This means that local redirectors are created and auto-attachment
+    /// is registered if enabled.
     /// </summary>
     /// <param name="asm">The assembly to scan for types eligible for automatic attachment. Cannot be null.</param>
     public static void RegisterTypes(Assembly asm)
@@ -162,8 +180,7 @@ static class ScriptComponentManager
     {
         foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
         {
-            var className = StaticInit.GetClassPathForManagedType(super);
-            if (s_autoAttachTypes.TryGetValue(className, out var types))
+            if (s_autoAttachTypes.TryGetValue(super, out var types))
             {
                 foreach (var type in types)
                 {
@@ -197,8 +214,7 @@ static class ScriptComponentManager
 
         foreach (var componentType in componentTypes)
         {
-            var alreadyAttached = actor.ScriptComponents.Any(c => c.GetType() == componentType);
-            if (alreadyAttached)
+            if (actor.HasScriptComponent(componentType))
             {
                 continue;
             }
@@ -211,7 +227,7 @@ static class ScriptComponentManager
             catch (Exception e)
             {
                 Debug.LogError(
-                    $"Failed to auto-attach {componentType.Name} to '{actor.GetFullName()}': {e.Message}",
+                    $"Failed to auto-attach {componentType.Name} to '{actor.GetFullName()}': \n{e.Message}",
                     skipSender: true);
             }
         }

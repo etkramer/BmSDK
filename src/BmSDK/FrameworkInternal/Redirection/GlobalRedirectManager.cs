@@ -18,7 +18,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="RedirectTarget">Object to call <see cref="RedirectMethod"/> on</param>
     public record GlobalRedirectorInfo(Type TargetType, MethodInfo RedirectMethod, object? RedirectTarget);
 
-    readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | BindingFlags.DeclaredOnly | genericRedirSearchFlags;
+    readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps declaring function paths to GlobalRedirectorInfo objects which contain
@@ -32,7 +32,8 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="targetType">The type of the in-game class to override</param>
     /// <param name="targetMethodName">The name of the target method to override.</param>
     /// <param name="redirectMi">The MethodInfo of the custom detour.</param>
-    /// <param name="target">The object to call the custom delegate on. May be null.</param>
+    /// <param name="target">The object to call the custom delegate on.
+    /// May be null if the redirect is static.</param>
     /// <exception cref="ArgumentException">Thrown if the target class does not inherit GameObject.
     /// Only methods of in-game classes may be overriden.</exception>
     /// <exception cref="InvalidOperationException">Thrown if the specific declaring function path

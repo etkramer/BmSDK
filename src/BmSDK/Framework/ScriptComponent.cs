@@ -19,7 +19,7 @@ public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
     where TActor : Actor
 {
     /// <inheritdoc cref="IScriptComponent.Owner"/>
-    public TActor Owner { get; internal set; } = null!;
+    public TActor Owner { get; private set; } = null!;
     /// <inheritdoc/>
     Actor IScriptComponent.Owner
     {

@@ -13,6 +13,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
     /// <summary>
     /// Record storing data necessary to register local redirects when a ScriptComponent is attached.
+    /// This is used to avoid unnecessary repeated reflection.
     /// </summary>
     /// <param name="TargetType">Type that the redirect applies to</param>
     /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
@@ -99,7 +100,6 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     )
     {
         var key = (obj.Ptr, funcPath);
-
         var info = new LocalRedirectorInfo(component, redirMethod);
 
         // Track redirs per actor object
@@ -158,7 +158,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         [MaybeNullWhen(false)] out LocalRedirectorInfo redirInfo
     )
     {
-        redirInfo = null;
+        redirInfo = default;
 
         var key = (obj.Ptr, funcPath);
 
@@ -179,16 +179,16 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var redirectMethod = localRedirInfo.RedirectMethod;
         var component = localRedirInfo.Component;
 
-        var argTypes = redirectMethod
+        var paramTypes = redirectMethod
             .GetParameters()
-            .Select(p => p.ParameterType)
+            .Select(param => param.ParameterType)
             .ToArray();
 
-        var args = stackPtr->ParamsToManaged(argTypes).ToArray();
+        var args = stackPtr->ParamsToManaged(paramTypes).ToArray();
 
         var result = redirectMethod.Invoke(component, args);
 
-        if (result != null && redirectMethod != null)
+        if (result != null && redirectMethod.ReturnType != null)
         {
             MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
         }

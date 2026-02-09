@@ -80,7 +80,10 @@ public partial class Actor
     /// false, if not.</returns>
     internal bool HasScriptComponentBase<TComponent>()
         where TComponent : IScriptComponent
-        => _scriptComponents.ContainsKey(typeof(TComponent));
+        => HasScriptComponent(typeof(TComponent));
+
+    internal bool HasScriptComponent(Type type)
+        => _scriptComponents.ContainsKey(type);
 
     /// <summary>
     /// Detaches the given script component from this actor.

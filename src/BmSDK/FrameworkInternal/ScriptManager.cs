@@ -120,12 +120,12 @@ static class ScriptManager
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
             RedirectManager.Global.RegisterRedirectors(asm);
-            s_scripts.AddRange(CreateScriptInstances(asm));
             ScriptComponentManager.RegisterTypes(asm);
+            s_scripts.AddRange(CreateScriptInstances(asm));
             if (s_isInitialized)
             {
-                s_scripts.ForEach(script => script.OnLoad());
                 ScriptComponentManager.AutoAttachTypesToExistingActors();
+                s_scripts.ForEach(script => script.OnLoad());
             }
         },
         state: null);
