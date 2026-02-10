@@ -2,7 +2,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Loader;
-using BmSDK.Engine;
+using BmSDK.Framework.Redirection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -119,9 +119,12 @@ static class ScriptManager
         {
             RemoveOldScripts();
             s_scriptsAlc = scriptsAlc;
+            RedirectManager.Global.RegisterRedirectors(asm);
+            ScriptComponentManager.RegisterTypes(asm);
             s_scripts.AddRange(CreateScriptInstances(asm));
             if (s_isInitialized)
             {
+                ScriptComponentManager.AutoAttachTypesToExistingActors();
                 s_scripts.ForEach(script => script.OnLoad());
             }
         },
@@ -146,13 +149,13 @@ static class ScriptManager
         // TODO: Kill threads by mods when async support is added
 
         // Clear scripts attached to in-game actors
-        Actor.DetachAllScriptComponents();
+        ScriptComponentManager.UnregisterAll();
 
         // Clear mods
         UnloadScripts();
 
         // Clear function redirects of scripts
-        RedirectManager.UnregisterAllRedirectors();
+        RedirectManager.UnregisterAll();
 
         // Initiaite closure of AssemblyLoadContext
         s_scriptsAlc.Unload();
@@ -315,8 +318,9 @@ static class ScriptManager
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
-            .Where(type => type.GetCustomAttribute<ScriptAttribute>() is not null)
-            .Where(type => type.IsAssignableTo(typeof(Script)));
+            .Where(t => !t.IsAbstract)
+            .Where(t => t.GetCustomAttribute<ScriptAttribute>() != null)
+            .Where(t => t.IsAssignableTo(typeof(Script)));
 
         var scripts = new List<Script>();
         foreach (var scriptType in scriptTypes)

@@ -5,7 +5,7 @@ static class InputManager
     static readonly bool[] s_keyStates = new bool[255];
     static readonly bool[] s_keyStatesPrev = new bool[255];
 
-    public static void Tick(IEnumerable<Script> scripts)
+    public static void Tick()
     {
         // Check for any new key presses.
         for (var i = 0; i < 255; i++)
@@ -13,11 +13,9 @@ static class InputManager
             if (s_keyStates[i] && !s_keyStatesPrev[i])
             {
                 // Let scripts know about the key press.
-                foreach (var script in scripts)
+                foreach (var script in ScriptManager.Scripts)
                 {
-                    Debug.PushSender(script.Name);
-                    script.OnKeyDown((Keys)i);
-                    Debug.PopSender();
+                    Debug.RunWithSender(script.Name, () => script.OnKeyDown((Keys)i));
                 }
             }
         }

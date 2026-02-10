@@ -79,8 +79,7 @@ static unsafe class MarshalUtil
             typeof(MarshalUtil)
                 .GetMethods(BindingFlags.Public | BindingFlags.Static)
                 .Where(m => m.Name == nameof(ToUnmanaged) && m.IsGenericMethodDefinition)
-                .Where(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
-                .FirstOrDefault()
+                .FirstOrDefault(m => m.GetParameters()[1].ParameterType == typeof(IntPtr))
         );
 
         var genericMethod = Guard.NotNull(method.MakeGenericMethod(managedType));
@@ -207,7 +206,7 @@ static unsafe class MarshalUtil
             {
                 foreach (var scriptComponent in actor.ScriptComponents.ToArray())
                 {
-                    actor.DetachScriptComponent(scriptComponent);
+                    actor.DetachScriptComponentBase(scriptComponent);
                 }
             }
         }
