@@ -13,10 +13,6 @@ public partial class Actor
     static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
-    /// Collection of all unique ScriptComponent types attached to this actor.
-    /// </summary>
-    public IReadOnlyCollection<Type> ScriptComponentTypes => _scriptComponents.Keys;
-    /// <summary>
     /// Collection of all ScriptComponent instances attached to this actor.
     /// There's one instance per unique ScriptComponent type.
     /// </summary>
