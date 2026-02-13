@@ -5,7 +5,7 @@ namespace BmSDK.Framework;
 
 static unsafe class MarshalUtil
 {
-    public static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
+    private static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
     public static object? ToManaged(IntPtr data, Type managedType)
