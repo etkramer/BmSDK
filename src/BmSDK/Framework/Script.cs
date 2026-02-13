@@ -46,7 +46,7 @@ public abstract class Script
 
     /// <summary>
     /// Called only when the hot reloading system installs
-    /// the new verison of the scripts class
+    /// the new version of the scripts class
     /// </summary>
     public virtual void OnLoad() { }
 }
