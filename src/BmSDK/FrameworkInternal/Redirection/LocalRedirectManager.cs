@@ -107,7 +107,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         {
             throw new InvalidOperationException(
                 $"A redirector for {funcPath} " +
-                $"is already registerd for {obj.GetFullName()}");
+                $"is already registered for {obj.GetFullName()}");
         }
 
         // Track redirs per ScriptComponent instance for cleanup
