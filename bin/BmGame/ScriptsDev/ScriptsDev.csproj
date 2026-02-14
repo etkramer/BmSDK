@@ -16,6 +16,11 @@
   </PropertyGroup>
   <!-- Dependencies -->
   <ItemGroup>
+    <!-- MoreLINQ -->
+    <Reference Include="MoreLINQ">
+      <HintPath>.\..\..\Binaries\Win32\sdk\MoreLinq.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <!-- BmSDK -->
     <Reference Include="BmSDK">
       <HintPath>.\..\..\Binaries\Win32\sdk\BmSDK.dll</HintPath>
