@@ -1,29 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+  <!-- Compiler options -->
   <PropertyGroup>
     <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <Configurations>Debug</Configurations>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+  <!-- Language features -->
+  <PropertyGroup>
+    <LangVersion>14</LangVersion>
+    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Configurations>Debug</Configurations>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
+  <!-- Dependencies -->
+  <ItemGroup>
+    <Reference Include="BmSDK" HintPath=".\..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native" />
+  </ItemGroup>
+  <!-- Global imports-->
   <ItemGroup>
     <Using Include="BmSDK.Framework" />
   </ItemGroup>
-
+  <!-- Importing scripts -->
   <ItemGroup>
-    <Reference Include="BmSDK" HintPath="..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native" />
+    <Compile Include=".\..\Scripts\**\*.cs" />
   </ItemGroup>
-   
-  <ItemGroup>
-    <Compile Include="..\Scripts\**\*.cs*" />
-  </ItemGroup>
-
 </Project>
