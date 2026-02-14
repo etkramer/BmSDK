@@ -16,7 +16,11 @@
   </PropertyGroup>
   <!-- Dependencies -->
   <ItemGroup>
-    <Reference Include="BmSDK" HintPath=".\..\..\Binaries\Win32\sdk\BmSDK.dll" Private="false" ExcludeAssets="runtime;native" />
+    <!-- BmSDK -->
+    <Reference Include="BmSDK">
+      <HintPath>.\..\..\Binaries\Win32\sdk\BmSDK.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
   <!-- Global imports-->
   <ItemGroup>
