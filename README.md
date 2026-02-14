@@ -34,7 +34,6 @@ Follow these steps to set up the development environment so you can build, run, 
 
 ### 💡 Common development issues and their solutions
 - Sometimes the game window never shows up. In that case try **Alt + Tab** to focus it. If that doesn't work, press **Ctrl + Shift + F5** _(Restart debugging)_ in Visual Studio.
-- If the game doesn't start because the game's executable can't be found, open `...\ScriptsDev\Properties\launchSettings.json` and replace "**executablePath**" with the absolute path to `%GameDir%\Binaries\Win32\BatmanAC.exe` and "**workingDirectory**" with the absolute path to `%GameDir%\Binaries\Win32` (Don't forget to escape the backslashes).
 
 ## 🛠️ Preparing to Extend BmSDK Itself
 To set up your development environment so you can modify, build and execute the BmSDK repository, follow the wiki page: [Building BmSDK](../../wiki/Building-BmSDK)

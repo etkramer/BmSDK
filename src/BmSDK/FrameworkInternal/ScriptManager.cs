@@ -26,6 +26,8 @@ static class ScriptManager
     public static readonly ImmutableList<MetadataReference> MetadataReferences =
         [
             .. DotNetAssemblies,
+            // MoreLINQ.dll
+            MetadataReference.CreateFromFile(typeof(MoreLinq.MoreEnumerable).Assembly.Location),
             // BmSDK.dll
             MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
         ];
