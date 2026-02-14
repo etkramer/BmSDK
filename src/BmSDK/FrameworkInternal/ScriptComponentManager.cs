@@ -239,8 +239,7 @@ static class ScriptComponentManager
 
             try
             {
-                var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(componentType));
-                actor.AttachScriptComponentBase(component);
+                actor.AttachScriptComponent(componentType);
             }
             catch (Exception e)
             {

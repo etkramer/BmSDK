@@ -47,8 +47,41 @@ public partial class Actor
     /// <summary>
     /// Attaches a new script component of the given type to this actor.
     /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to instantiate</typeparam>
+    /// <param name="type">The ScriptComponent type to instantiate</param>
     /// <returns>The newly created and attached ScriptComponent</returns>
+    /// <exception cref="ArgumentException">Thrown if the given type is not a
+    /// non-generic, non-abstract class with a parameterless constructor that
+    /// extends <see cref="ScriptComponent{TActor}"/>.</exception>
+    internal IScriptComponent AttachScriptComponent(Type type)
+    {
+        if (!type.IsClass || type.IsAbstract || type.ContainsGenericParameters)
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: ScriptComponents that are attached " +
+                $"by their types must be non-genric, non-abstract classes.");
+        }
+
+        if (type.GetConstructor(Type.EmptyTypes) == null)
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: ScriptComponents that are attached by" +
+                $"their types must contain a public, parameterless constructor");
+        }
+
+        if (!type.IsAssignableTo(typeof(IScriptComponent)))
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: A class you want to attach as a " +
+                $"ScriptComponent must inherit from ScriptComponent<TActor>.");
+        }
+
+        var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(type));
+        AttachScriptComponentBase(component);
+        return component;
+    }
+
+    /// <inheritdoc cref="AttachScriptComponent(Type)"/>
+    /// <typeparam name="TComponent">The ScriptComponent type to instantiate</typeparam>
     internal TComponent AttachScriptComponentBase<TComponent>()
         where TComponent : IScriptComponent, new()
     {
@@ -71,15 +104,17 @@ public partial class Actor
     /// <summary>
     /// Checks if the Actor has a ScriptComponent of a specific type attached.
     /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
+    /// <param name="type">The ScriptComponent type to look for</param>
     /// <returns>True, if the given component type is present in the Actor;
     /// false, if not.</returns>
+    internal bool HasScriptComponent(Type type)
+        => _scriptComponents.ContainsKey(type);
+
+    /// <inheritdoc cref="HasScriptComponent(Type)"/>
+    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
     internal bool HasScriptComponentBase<TComponent>()
         where TComponent : IScriptComponent
         => HasScriptComponent(typeof(TComponent));
-
-    internal bool HasScriptComponent(Type type)
-        => _scriptComponents.ContainsKey(type);
 
     /// <summary>
     /// Detaches the given script component from this actor.
