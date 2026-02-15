@@ -1,4 +1,5 @@
 using System.Reflection;
+using MoreLinq.Extensions;
 
 namespace BmSDK.Framework.Redirection;
 
@@ -8,6 +9,11 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 static class RedirectManager
 {
+    public interface IGenericRedirect
+    {
+        unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result);
+    }
+
     public static readonly GlobalRedirectManager Global = new(GenericRedirSearchFlags);
     public static readonly LocalRedirectManager Local = new(GenericRedirSearchFlags);
 
@@ -20,7 +26,7 @@ static class RedirectManager
     /// top of the stack, a reentry is detected and the redirect is prevented.
     /// This avoids infinite recursion.
     /// </summary>
-    static readonly Stack<Function> s_redirectCalls = [];
+    static readonly Stack<(Function func, Queue<IGenericRedirect> redirs)> s_redirectCalls = [];
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
@@ -33,32 +39,36 @@ static class RedirectManager
     public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
-        if (s_redirectCalls.Count > 0 && s_redirectCalls.Peek() == funcObj)
+        if (s_redirectCalls.TryPeek(out var lastCall))
+        {
+            if (lastCall.func == funcObj)
+            {
+                if (lastCall.redirs.TryDequeue(out var redir))
+                {
+                    redir.Run(selfObj, funcObj, stackPtr, Result);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        // Push this func to mark it as active for the duration of this invocation
+        var funcPath = funcObj.GetPathName();
+        var redirs = new Queue<IGenericRedirect>(AquireRedirects(selfObj, funcPath));
+        if (redirs.Count == 0)
         {
             return false;
         }
 
-        // Push this func to mark it as active for the duration of this invocation
-        s_redirectCalls.Push(funcObj);
+        s_redirectCalls.Push((funcObj, redirs));
 
         try
         {
-            var funcPath = funcObj.GetPathName();
-
-            if (Local.TryGetRedirector(selfObj, funcPath, out var localRedirInfo))
-            {
-                Local.ExecuteRedirector(localRedirInfo, selfObj, funcObj, stackPtr, Result);
-                return true;
-            }
-            else if (Global.TryGetRedirector(selfObj, funcPath, out var globalRedirInfo))
-            {
-                Global.ExecuteRedirector(globalRedirInfo, selfObj, funcObj, stackPtr, Result);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            redirs.Dequeue().Run(selfObj, funcObj, stackPtr, Result);
+            return true;
         }
         finally
         {
@@ -66,6 +76,11 @@ static class RedirectManager
             s_redirectCalls.Pop();
         }
     }
+
+    static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
+        => Local.GetRedirectors(selfObj, funcPath)
+            .Cast<IGenericRedirect>()
+            .Concat(Global.GetRedirectors(selfObj, funcPath));
 
     /// <summary>
     /// Clears the backing redirector dictionaries, therefore, uninstalling all local and global redirects.

@@ -16,7 +16,14 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="TargetType">Type that the redirect applies to</param>
     /// <param name="RedirectMethod">Method to call on redirect</param>
     /// <param name="RedirectTarget">Object to call <see cref="RedirectMethod"/> on</param>
-    public record GlobalRedirectorInfo(Type TargetType, MethodInfo RedirectMethod, object? RedirectTarget);
+    public record GlobalRedirectorInfo(
+        Type TargetType,
+        MethodInfo RedirectMethod,
+        object? RedirectTarget) : RedirectManager.IGenericRedirect
+    {
+        public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
+            => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+    }
 
     readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
 
@@ -24,7 +31,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Maps declaring function paths to GlobalRedirectorInfo objects which contain
     /// the target class and the delegate of the detour.
     /// </summary>
-    readonly Dictionary<string, GlobalRedirectorInfo> _globalRedirsDict = [];
+    readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
 
     /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
@@ -64,13 +71,21 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             redirectMi.IsStatic ? null : target
         );
 
-        if (!_globalRedirsDict.TryAdd(declaringFuncPath, redirInfo))
+        // Add new redirect to the target function's redirect list
+        if (!_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
-            // Disallow multiple global redirectors on the same function.
-            throw new InvalidOperationException(
-                $"{declaringFuncPath} has been redirected already. " +
-                $"Cannot register {redirectMi.Name}.");
+            redirects = [];
+            _globalRedirsDict[declaringFuncPath] = redirects;
         }
+
+        if (redirects.Contains(redirInfo))
+        {
+            throw new InvalidOperationException(
+                $"{redirInfo} has already been registered once" +
+                $"on {declaringFuncPath}!");
+        }
+
+        redirects.Add(redirInfo);
     }
 
     /// <summary>
@@ -99,30 +114,23 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="obj">The object to scan for redirect application.</param>
     /// <param name="funcPath">The declaring path to look for.</param>
-    /// <param name="redirInfo">The object representing the registered global redirect.</param>
-    /// <returns>True, if a redirector has been assigned to that declaring path
-    /// and it applies to the given object; False, otherwise.</returns>
-    public bool TryGetRedirector(
-        GameObject obj,
-        string funcPath,
-        [MaybeNullWhen(false)] out GlobalRedirectorInfo redirInfo
-    )
+    /// <returns>Objects representing the registered global redirects.
+    /// The collection may be empty if there are no redircts.</returns>
+    public IEnumerable<GlobalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
     {
-        redirInfo = default;
-
-        if (!_globalRedirsDict.TryGetValue(funcPath, out var info))
+        if (!_globalRedirsDict.TryGetValue(funcPath, out var infos) || infos.Count == 0)
         {
-            return false;
+            return [];
         }
 
-        // Checks if the object inherits the function to redirect without overriding it
-        if (!StaticInit.EnumerateSelfAndSupers(obj.GetType()).Contains(info.TargetType))
+        var targetTypes = StaticInit.EnumerateSelfAndSupers(obj.GetType());
+        var result = infos.Where(info => targetTypes.Contains(info.TargetType));
+        if (!result.Any())
         {
-            return false;
+            return [];
         }
 
-        redirInfo = info;
-        return true;
+        return result;
     }
 
     /// <summary>

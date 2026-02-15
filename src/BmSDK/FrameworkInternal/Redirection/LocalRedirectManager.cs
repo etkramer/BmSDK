@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.Engine;
 
@@ -25,7 +24,14 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="Component">The ScriptComponent that declares the redirect</param>
     /// <param name="RedirectMethod">Method to call on redirect</param>
-    public record LocalRedirectorInfo(IScriptComponent Component, MethodInfo RedirectMethod);
+    public record LocalRedirectorInfo(
+        IScriptComponent Component,
+        MethodInfo RedirectMethod
+    ) : RedirectManager.IGenericRedirect
+    {
+        public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
+            => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+    }
 
     readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
 
@@ -39,7 +45,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Maps pointers to target Actors and declaring function paths of redirected functions
     /// to LocalRedirectorInfo instances. This allows for per Actor/ScriptComponent function redirects.
     /// </summary>
-    readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> _localRedirsDict = [];
+    readonly Dictionary<(IntPtr ObjPtr, string FuncPath), List<LocalRedirectorInfo>> _localRedirsDict = [];
     /// <summary>
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
     /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponentBase(IScriptComponent)"/>  
@@ -102,13 +108,13 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var key = (obj.Ptr, funcPath);
         var info = new LocalRedirectorInfo(component, redirMethod);
 
-        // Track redirs per actor object
-        if (!_localRedirsDict.TryAdd(key, info))
+        if (!_localRedirsDict.TryGetValue(key, out var infos))
         {
-            throw new InvalidOperationException(
-                $"A redirector for {funcPath} " +
-                $"is already registered for {obj.GetFullName()}");
+            infos = [];
+            _localRedirsDict[key] = infos;
         }
+
+        infos.Add(info);
 
         // Track redirs per ScriptComponent instance for cleanup
         if (!_componentRedirsDict.TryGetValue(component, out var keys))
@@ -149,26 +155,18 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="obj">Object to scan for redirect application</param>
     /// <param name="funcPath">The declaring path to look for</param>
-    /// <param name="redirInfo">Object representing the registered local redirect</param>
-    /// <returns>True, if a redirector has been assigned to that declaring path
-    /// and it applies to the given object; false, otherwise</returns>
-    public bool TryGetRedirector(
-        GameObject obj,
-        string funcPath,
-        [MaybeNullWhen(false)] out LocalRedirectorInfo redirInfo
-    )
+    /// <returns>List of object representing the registered local redirect.
+    /// The collection is empty if there are non</returns>
+    public IEnumerable<LocalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
     {
-        redirInfo = default;
-
         var key = (obj.Ptr, funcPath);
 
-        if (!_localRedirsDict.TryGetValue(key, out var info))
+        if (_localRedirsDict.TryGetValue(key, out var infos))
         {
-            return false;
+            return infos;
         }
 
-        redirInfo = info;
-        return true;
+        return [];
     }
 
     /// <summary>
@@ -208,7 +206,15 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         foreach (var key in keys)
         {
-            _localRedirsDict.Remove(key);
+            var redirects = _localRedirsDict[key].Where(redir => redir.Component != component);
+            if (redirects.Any())
+            {
+                _localRedirsDict[key] = redirects.ToList();
+            }
+            else
+            {
+                _localRedirsDict.Remove(key);
+            }
         }
 
         _componentRedirsDict.Remove(component);
