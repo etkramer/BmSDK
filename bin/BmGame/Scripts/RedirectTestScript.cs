@@ -6,12 +6,8 @@ public static class GlobalRedirects
     [Redirect(typeof(RPawnPlayer), nameof(RPawnPlayer.ExperienceAwarded))]
     public static void ExperienceAwardedRedirect(RPawnPlayer self, int xp, int teethXp)
     {
+        Debug.Log($"Global: xp={xp}, teethXp={teethXp}");
         self.ExperienceAwarded(xp, teethXp);
-        self.PlayerController.HudMovieNew.GeneralMovie.SetInfoText(
-            "Default regeneration",
-            (int) RGFxMovieHudExtendable.JustifyText.JT_Center,
-            TextColour: 0x00FF00
-        );
     }
 }
 
@@ -27,12 +23,8 @@ public sealed class RegenReductionComponent : ScriptComponent<RPawnPlayer>
     [ComponentRedirect(nameof(RPawnPlayer.ExperienceAwarded))]
     public void ExperienceAwardedRedirect(int xp, int teethXp)
     {
+        Debug.Log($"Component: xp={xp}, teethXp={teethXp}");
         Owner.ExperienceAwarded(xp / 10, teethXp / 10);
-        Owner.PlayerController.HudMovieNew.GeneralMovie.SetInfoText(
-            "Reduced regeneration",
-            (int) RGFxMovieHudExtendable.JustifyText.JT_Center,
-            TextColour: 0xFF0000
-        );
     }
 }
 
