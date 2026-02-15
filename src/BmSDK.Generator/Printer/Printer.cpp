@@ -188,9 +188,10 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
 {
     if (generic)
     {
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "Base{TComponent}()\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" <<
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" <<
             (ctor ? ", new()" : "") << endl;
         Printer::Indent(out) << "=> " << helper << "Base<TComponent>();" << endl;
         Printer::PopIndent();
@@ -198,9 +199,10 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
     }
     else
     {
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "Base(Framework.IScriptComponent)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" << endl;
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
         Printer::Indent(out) << "=> " << helper << "Base(component);" << endl;
         Printer::PopIndent();
         out << endl;
