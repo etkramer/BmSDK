@@ -13,11 +13,20 @@ namespace BmSDK.Framework;
 static class ScriptComponentManager
 {
     /// <summary>
-    /// Maps Actor types to Lists of ScriptComponents that will
-    /// auto-attach. Populated by <see cref="RegisterAutoAttachType(Type, Type)"/> and used by
+    /// Stores data about a ScriptComponent type that should be attached when an
+    /// actor of a target type runs it's <see cref="Actor.PostBeginPlay"/>.
+    /// </summary>
+    /// <param name="Component">The component type to auto-atach</param>
+    /// <param name="AllowSubtypes">Whether the component should be attached to children
+    /// of the target class or only the exact class</param>
+    readonly record struct CachedAutoAttachComponent(Type Component, bool AllowSubtypes);
+
+    /// <summary>
+    /// Maps Actor types to Lists of ScriptComponents that will auto-attach.
+    /// Populated by <see cref="RegisterAutoAttachType(Type, Type, bool)"/> and used by
     /// <see cref="TryAutoAttachComponents(Actor)"/> and <see cref="AutoAttachTypesToExistingActors"/>
     /// </summary>
-    static readonly Dictionary<Type, List<Type>> s_autoAttachTypes = [];
+    static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes = [];
 
     /// <summary>
     /// Unregisters all <see cref="ScriptComponent"/>s and clears all auto-attachment type registrations.
@@ -46,7 +55,9 @@ static class ScriptComponentManager
     /// </summary>
     /// <param name="componentType">The type of the script component to register for automatic attachment. Must derive from ScriptComponent.</param>
     /// <param name="targetClass">The actor class type which the component will be automatically attached to. Must derive from Actor.</param>
-    public static void RegisterAutoAttachType(Type componentType, Type targetClass)
+    /// <param name="allowSubtypes">Flag whether the component should auto-attach to
+    /// subtypes of <paramref name="targetClass"/>.</param>
+    public static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
     {
         // We need a default constructor so we can't auto instantiate generic types
         if (componentType.IsGenericType)
@@ -71,9 +82,11 @@ static class ScriptComponentManager
             s_autoAttachTypes[targetClass] = types;
         }
 
-        if (!types.Contains(componentType))
+        var cachedComponent = new CachedAutoAttachComponent(componentType, allowSubtypes);
+
+        if (!types.Contains(cachedComponent))
         {
-            types.Add(componentType);
+            types.Add(cachedComponent);
         }
     }
 
@@ -96,7 +109,7 @@ static class ScriptComponentManager
 
             if (attribute.AutoAttach)
             {
-                RegisterAutoAttachType(type, actorType);
+                RegisterAutoAttachType(type, actorType, attribute.AllowSubtypes);
             }
         }
     }
@@ -180,11 +193,16 @@ static class ScriptComponentManager
     {
         foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
         {
-            if (s_autoAttachTypes.TryGetValue(super, out var types))
+            if (s_autoAttachTypes.TryGetValue(super, out var cachedTypes))
             {
-                foreach (var type in types)
+                foreach (var type in cachedTypes)
                 {
-                    yield return type;
+                    if (!type.AllowSubtypes && super != actorClass)
+                    {
+                        continue;
+                    }
+
+                    yield return type.Component;
                 }
             }
 
@@ -221,8 +239,7 @@ static class ScriptComponentManager
 
             try
             {
-                var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(componentType));
-                actor.AttachScriptComponentBase(component);
+                actor.AttachScriptComponent(componentType);
             }
             catch (Exception e)
             {

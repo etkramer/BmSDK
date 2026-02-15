@@ -41,7 +41,7 @@ public interface IScriptComponent
             throw new InvalidOperationException("Cannot detach ScriptComponent that is not attached to any Actor");
         }
 
-        Owner.DetachScriptComponentBase(this);
+        Owner.DetachScriptComponent(this);
     }
 
     /// <summary>

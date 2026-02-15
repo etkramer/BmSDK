@@ -176,32 +176,36 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 void Printer::PrintScHelpers(class UClass* _class, ostream& out)
 {
     auto type = _class->GetNameManaged();
-    Printer::PrintScHelper("void", "AttachScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, type, out);
-    Printer::PrintScHelper("bool", "HasScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("bool", "HasScriptComponent", true, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, type, out);
+    Printer::PrintScHelper("void", "AttachScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, true, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", true, false, false, type, out);
+    Printer::PrintScHelper("TComponent", "GetScriptComponent", true, false, true, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, false, type, out);
 }
 
-void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, string type, ostream& out)
+void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out)
 {
     if (generic)
     {
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Type)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" <<
-            (ctor ? ", new()" : "") << endl;
-        Printer::Indent(out) << "=> " << helper << "Base<TComponent>();" << endl;
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">"
+            << (ctor ? ", new()" : "") << endl;
+        Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "")
+            << "((Engine.Actor)this)." << helper << "(typeof(TComponent));" << endl;
         Printer::PopIndent();
         out << endl;
     }
     else
     {
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Framework.IScriptComponent)\"/>" << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : BmSDK.Framework.IScriptComponent<" << type << ">" << endl;
-        Printer::Indent(out) << "=> " << helper << "Base(component);" << endl;
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
+        Printer::Indent(out) << "=> ((Engine.Actor)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
         Printer::PopIndent();
         out << endl;
     }

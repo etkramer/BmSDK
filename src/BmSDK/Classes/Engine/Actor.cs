@@ -13,10 +13,6 @@ public partial class Actor
     static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
-    /// Collection of all unique ScriptComponent types attached to this actor.
-    /// </summary>
-    public IReadOnlyCollection<Type> ScriptComponentTypes => _scriptComponents.Keys;
-    /// <summary>
     /// Collection of all ScriptComponent instances attached to this actor.
     /// There's one instance per unique ScriptComponent type.
     /// </summary>
@@ -27,40 +23,61 @@ public partial class Actor
     /// <summary>
     /// Attaches an existing script component to this actor.
     /// </summary>
-    internal void AttachScriptComponentBase(IScriptComponent newComponent)
+    internal void AttachScriptComponent(IScriptComponent component)
     {
-        Guard.Require(newComponent.Owner == null, "Component is already attached to an actor");
+        Guard.Require(!component.HasOwner(), "Component is already attached to an actor");
 
         // Store new component
-        if (!_scriptComponents.TryAdd(newComponent.GetType(), newComponent))
+        if (!_scriptComponents.TryAdd(component.GetType(), component))
         {
             throw new ArgumentException("This actor already contains a ScriptComponent of this type");
         }
 
-        newComponent.Owner = this;
-
-        s_scriptComponents.Add(newComponent);
+        s_scriptComponents.Add(component);
+        
+        component.Owner = this;
 
         // Register any [Redirect] methods on this component
-        RedirectManager.Local.RegisterComponentRedirectors(newComponent);
+        RedirectManager.Local.RegisterComponentRedirectors(component);
 
         // Invoke attach callback
-        newComponent.OnAttach();
+        component.OnAttach();
     }
 
     /// <summary>
     /// Attaches a new script component of the given type to this actor.
     /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to instantiate</typeparam>
+    /// <param name="type">The ScriptComponent type to instantiate</param>
     /// <returns>The newly created and attached ScriptComponent</returns>
-    internal TComponent AttachScriptComponentBase<TComponent>()
-        where TComponent : IScriptComponent, new()
+    /// <exception cref="ArgumentException">Thrown if the given type is not a
+    /// non-generic, non-abstract class with a parameterless constructor that
+    /// extends <see cref="ScriptComponent{TActor}"/>.</exception>
+    internal IScriptComponent AttachScriptComponent(Type type)
     {
-        // Create/attach new component
-        var newComponent = new TComponent();
-        AttachScriptComponentBase(newComponent);
+        if (!type.IsClass || type.IsAbstract || type.ContainsGenericParameters)
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: ScriptComponents that are attached " +
+                $"by their types must be non-genric, non-abstract classes.");
+        }
 
-        return newComponent;
+        if (type.GetConstructor(Type.EmptyTypes) == null)
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: ScriptComponents that are attached by" +
+                $"their types must contain a public, parameterless constructor");
+        }
+
+        if (!type.IsAssignableTo(typeof(IScriptComponent)))
+        {
+            throw new ArgumentException(
+                $"{type.FullName}: A class you want to attach as a " +
+                $"ScriptComponent must inherit from ScriptComponent<TActor>.");
+        }
+
+        var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(type));
+        AttachScriptComponent(component);
+        return component;
     }
 
     /// <summary>
@@ -69,28 +86,38 @@ public partial class Actor
     /// <param name="component">The component to check for attachment</param>
     /// <returns>True, if the current Actor is the Owner of the ScriptComponent object;
     /// false if not.</returns>
-    internal bool HasScriptComponentBase(IScriptComponent component)
+    internal bool HasScriptComponent(IScriptComponent component)
         => component.Owner == this;
 
     /// <summary>
     /// Checks if the Actor has a ScriptComponent of a specific type attached.
     /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to look for</typeparam>
+    /// <param name="type">The ScriptComponent type to look for</param>
     /// <returns>True, if the given component type is present in the Actor;
     /// false, if not.</returns>
-    internal bool HasScriptComponentBase<TComponent>()
-        where TComponent : IScriptComponent
-        => HasScriptComponent(typeof(TComponent));
-
     internal bool HasScriptComponent(Type type)
         => _scriptComponents.ContainsKey(type);
+
+    internal IScriptComponent GetScriptComponent(Type type)
+    {
+        if (_scriptComponents.TryGetValue(type, out var result))
+        {
+            return result;
+        }
+
+        throw new KeyNotFoundException($"No script component of {type} is attached to this actor");
+    }
+
+    /*public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, IScriptComponent<Actor>
+        => (TComponent)GetScriptComponent(typeof(TComponent));*/
 
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>
     /// <param name="component">The component to detach</param>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
-    internal void DetachScriptComponentBase(IScriptComponent component)
+    internal void DetachScriptComponent(IScriptComponent component)
     {
         Guard.Require(component.IsOwner(this), "Component is not attached to this actor");
 
@@ -109,17 +136,16 @@ public partial class Actor
     /// <summary>
     /// Detaches a ScriptComponent by its type from this actor.
     /// </summary>
-    /// <typeparam name="TComponent">The ScriptComponent type to detach</typeparam>
+    /// <param name="type">The ScriptComponent type to detach</param>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
-    internal void DetachScriptComponentBase<TComponent>()
-        where TComponent : IScriptComponent
+    internal void DetachScriptComponent(Type type)
     {
-        if (!_scriptComponents.TryGetValue(typeof(TComponent), out var component))
+        if (!_scriptComponents.TryGetValue(type, out var component))
         {
-            throw new ArgumentException($"No instance of {nameof(TComponent)} is attached to this actor");
+            throw new ArgumentException($"No instance of {type} is attached to this actor");
         }
 
-        DetachScriptComponentBase(component);
+        DetachScriptComponent(component);
     }
 
     /// <inheritdoc cref="GameObject.Clone"/>

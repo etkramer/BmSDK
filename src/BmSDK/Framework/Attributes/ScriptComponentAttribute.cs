@@ -16,4 +16,12 @@ public sealed class ScriptComponentAttribute : Attribute
     /// can be used to constraint the Actor types to apply the component to.
     /// </summary>
     public bool AutoAttach { get; init; } = false;
+    /// <summary>
+    /// Indicates whether the script component should automatically attach to actors of the
+    /// <c>TActor</c> type and its derived types, or only to the exact <c>TActor</c> type.
+    /// This behavior is similar to C#'s <see langword="sealed"/> keyword. Irrelevant when the
+    /// <see cref="ScriptComponent"/> is attached manually. Therefore, <see cref="AutoAttach"/>
+    /// must be set for this option to take effect.
+    /// </summary>
+    public bool AllowSubtypes { get; init; } = true;
 }
