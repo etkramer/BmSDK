@@ -98,6 +98,20 @@ public partial class Actor
     internal bool HasScriptComponent(Type type)
         => _scriptComponents.ContainsKey(type);
 
+    internal IScriptComponent GetScriptComponent(Type type)
+    {
+        if (_scriptComponents.TryGetValue(type, out var result))
+        {
+            return result;
+        }
+
+        throw new KeyNotFoundException($"No script component of {type} is attached to this actor");
+    }
+
+    /*public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, IScriptComponent<Actor>
+        => (TComponent)GetScriptComponent(typeof(TComponent));*/
+
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>

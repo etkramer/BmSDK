@@ -10,7 +10,7 @@ public:
 private:
 	static void PrintClass(class UClass* _class, ostream& out);
 	static void PrintScHelpers(class UClass* _class, ostream& out);
-	static void PrintScHelper(string returnType, string helper, bool generic, bool ctor, string type, ostream& out);
+	static void PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out);
 	static void PrintStruct(class UScriptStruct* _struct, ostream& out);
 	static void PrintEnum(class UEnum* _enum, ostream& out);
 	static void PrintProperty(class UProperty* prop, ostream& out);

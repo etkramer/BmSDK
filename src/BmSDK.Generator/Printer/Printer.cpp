@@ -176,15 +176,16 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 void Printer::PrintScHelpers(class UClass* _class, ostream& out)
 {
     auto type = _class->GetNameManaged();
-    Printer::PrintScHelper("void", "AttachScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, type, out);
-    Printer::PrintScHelper("bool", "HasScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("bool", "HasScriptComponent", true, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", false, false, type, out);
-    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, type, out);
+    Printer::PrintScHelper("void", "AttachScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, true, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("bool", "HasScriptComponent", true, false, false, type, out);
+    Printer::PrintScHelper("TComponent", "GetScriptComponent", true, false, true, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", false, false, false, type, out);
+    Printer::PrintScHelper("void", "DetachScriptComponent", true, false, false, type, out);
 }
 
-void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, string type, ostream& out)
+void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out)
 {
     if (generic)
     {
@@ -193,7 +194,7 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
         Printer::PushIndent();
         Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">"
             << (ctor ? ", new()" : "") << endl;
-        Printer::Indent(out) << "=> " << (ctor ? "(TComponent)" : "")
+        Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "")
             << "((Engine.Actor)this)." << helper << "(typeof(TComponent));" << endl;
         Printer::PopIndent();
         out << endl;
