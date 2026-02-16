@@ -52,3 +52,12 @@ record LocalRedirectorInfo(
 /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
 readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod);
+
+/// <summary>
+/// Record storing the data necessary to call multiple redirectors recursively.
+/// Used in <see cref="RedirectManager.ExecuteRedirector(GameObject, Function, FFrame*, nint)"/>.
+/// </summary>
+/// <param name="TargetFunc">Function being redirected</param>
+/// <param name="Redirs">Each redirect that still exists for the
+/// particular call of <paramref name="TargetFunc"/></param>
+readonly record struct RedirectCall(Function TargetFunc, Queue<IGenericRedirect> Redirs);

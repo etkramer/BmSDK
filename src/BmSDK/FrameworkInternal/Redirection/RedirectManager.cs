@@ -20,7 +20,7 @@ static class RedirectManager
     /// top of the stack, a reentry is detected and the redirect is prevented.
     /// This avoids infinite recursion.
     /// </summary>
-    static readonly Stack<(Function func, Queue<IGenericRedirect> redirs)> s_redirectCalls = [];
+    static readonly Stack<RedirectCall> s_redirectCalls = [];
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
@@ -35,9 +35,9 @@ static class RedirectManager
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
         if (s_redirectCalls.TryPeek(out var lastCall))
         {
-            if (lastCall.func == funcObj)
+            if (lastCall.TargetFunc == funcObj)
             {
-                if (lastCall.redirs.TryDequeue(out var redir))
+                if (lastCall.Redirs.TryDequeue(out var redir))
                 {
                     redir.Run(selfObj, funcObj, stackPtr, Result);
                     return true;
@@ -57,7 +57,7 @@ static class RedirectManager
             return false;
         }
 
-        s_redirectCalls.Push((funcObj, redirs));
+        s_redirectCalls.Push(new RedirectCall(funcObj, redirs));
 
         try
         {
