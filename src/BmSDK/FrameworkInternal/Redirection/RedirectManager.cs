@@ -35,7 +35,7 @@ static class RedirectManager
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
         if (s_redirectCalls.TryPeek(out var lastCall))
         {
-            if (lastCall.TargetFunc == funcObj)
+            if (lastCall.TargetObj == selfObj && lastCall.TargetFunc == funcObj)
             {
                 if (lastCall.Redirs.TryDequeue(out var redir))
                 {
@@ -57,7 +57,7 @@ static class RedirectManager
             return false;
         }
 
-        s_redirectCalls.Push(new RedirectCall(funcObj, redirs));
+        s_redirectCalls.Push(new RedirectCall(selfObj, funcObj, redirs));
 
         try
         {
