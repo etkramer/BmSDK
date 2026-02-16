@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace BmSDK.Framework.Redirection;
@@ -10,21 +9,6 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    /// <summary>
-    /// Record storing data of a currently registered global redirect necessary to execute it.
-    /// </summary>
-    /// <param name="TargetType">Type that the redirect applies to</param>
-    /// <param name="RedirectMethod">Method to call on redirect</param>
-    /// <param name="RedirectTarget">Object to call <see cref="RedirectMethod"/> on</param>
-    public record GlobalRedirectorInfo(
-        Type TargetType,
-        MethodInfo RedirectMethod,
-        object? RedirectTarget) : RedirectManager.IGenericRedirect
-    {
-        public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
-            => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
-    }
-
     readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
 
     /// <summary>

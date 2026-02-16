@@ -1,0 +1,54 @@
+using System.Reflection;
+
+namespace BmSDK.Framework.Redirection;
+
+/// <summary>
+/// Defines the API contract for any kind of redirect no matter the backing implementation.
+/// This is used to generalize global and local redirects when queuing them in
+/// <see cref="RedirectManager.AquireRedirects(GameObject, string)"/>.
+/// </summary>
+interface IGenericRedirect
+{
+    /// <summary>
+    /// Function called from within the UObject::ProcessInternal() context to execute the redirect.
+    /// </summary>
+    unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result);
+}
+
+/// <summary>
+/// Record storing data of a currently registered global redirect necessary to execute it.
+/// </summary>
+/// <param name="TargetType">Type that the redirect applies to</param>
+/// <param name="RedirectMethod">Method to call on redirect</param>
+/// <param name="RedirectTarget">Object to call <paramref name="RedirectMethod"/> on</param>
+record GlobalRedirectorInfo(
+    Type TargetType,
+    MethodInfo RedirectMethod,
+    object? RedirectTarget) : IGenericRedirect
+{
+    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
+        => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+}
+
+/// <summary>
+/// Record storing data of a currently registered local redirect necessary to execute it.
+/// </summary>
+/// <param name="Component">The ScriptComponent that declares the redirect</param>
+/// <param name="RedirectMethod">Method to call on redirect</param>
+record LocalRedirectorInfo(
+    IScriptComponent Component,
+    MethodInfo RedirectMethod) : IGenericRedirect
+{
+    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
+        => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+}
+
+/// <summary>
+/// Record storing data necessary to register local redirects when a ScriptComponent is attached.
+/// This is used to avoid unnecessary repeated reflection.
+/// </summary>
+/// <param name="TargetType">Type that the redirect applies to</param>
+/// <param name="FuncPath">The UE3 declaration path of the method to redirect.
+/// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
+/// <param name="RedirectMethod">Method to call on redirect</param>
+readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod);

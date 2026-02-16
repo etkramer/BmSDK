@@ -1,5 +1,4 @@
 using System.Reflection;
-using MoreLinq.Extensions;
 
 namespace BmSDK.Framework.Redirection;
 
@@ -9,11 +8,6 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 static class RedirectManager
 {
-    public interface IGenericRedirect
-    {
-        unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result);
-    }
-
     public static readonly GlobalRedirectManager Global = new(GenericRedirSearchFlags);
     public static readonly LocalRedirectManager Local = new(GenericRedirSearchFlags);
 
