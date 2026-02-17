@@ -10,6 +10,11 @@ namespace BmSDK.Framework.Redirection;
 interface IGenericRedirect
 {
     /// <summary>
+    /// Invoker to the actual custom implementation of the redirected function.
+    /// </summary>
+    MethodInvoker Invoker { get; }
+
+    /// <summary>
     /// Function called from within the UObject::ProcessInternal() context to execute the redirect.
     /// </summary>
     unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result);
@@ -26,6 +31,8 @@ record GlobalRedirectorInfo(
     MethodInfo RedirectMethod,
     object? RedirectTarget) : IGenericRedirect
 {
+    public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
+
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
@@ -39,6 +46,8 @@ record LocalRedirectorInfo(
     IScriptComponent Component,
     MethodInfo RedirectMethod) : IGenericRedirect
 {
+    public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
+
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }

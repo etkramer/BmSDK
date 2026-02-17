@@ -151,21 +151,26 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     public unsafe void ExecuteRedirector(LocalRedirectorInfo localRedirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        var redirectMethod = localRedirInfo.RedirectMethod;
-        var component = localRedirInfo.Component;
+        var redirFunc = localRedirInfo.RedirectMethod;
 
-        var paramTypes = redirectMethod
+        // Gather (expected) managed types using the redirector
+        var paramTypes = redirFunc
             .GetParameters()
             .Select(param => param.ParameterType)
             .ToArray();
 
+        // Marshal args
         var args = stackPtr->ParamsToManaged(paramTypes).ToArray();
 
-        var result = redirectMethod.Invoke(component, args);
+        // Execute detour
+        var result = localRedirInfo.Invoker.Invoke(
+            localRedirInfo.Component,
+            args);
 
-        if (result != null && redirectMethod.ReturnType != null)
+        // Marshal result back (if non-void)
+        if (result != null && redirFunc.ReturnType != null)
         {
-            MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
+            MarshalUtil.ToUnmanaged(result, Result, redirFunc.ReturnType);
         }
     }
 

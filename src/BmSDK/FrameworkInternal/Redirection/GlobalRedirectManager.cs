@@ -122,7 +122,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     public unsafe void ExecuteRedirector(GlobalRedirectorInfo redirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        var redirTarget = redirInfo.RedirectTarget;
         var redirMethod = redirInfo.RedirectMethod;
 
         // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
@@ -140,7 +139,9 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         }
 
         // Execute detour
-        var result = redirMethod.Invoke(redirTarget, args.ToArray());
+        var result = redirInfo.Invoker.Invoke(
+            redirInfo.RedirectTarget,
+            args.ToArray());
 
         // Marshal result back (if non-void)
         if (result != null && redirMethod.ReturnType != null)
