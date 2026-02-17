@@ -144,7 +144,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             args.ToArray());
 
         // Marshal result back (if non-void)
-        if (result != null && redirMethod.ReturnType != null)
+        if (result != null && redirMethod.ReturnType != typeof(void))
         {
             MarshalUtil.ToUnmanaged(result, Result, redirMethod.ReturnType);
         }

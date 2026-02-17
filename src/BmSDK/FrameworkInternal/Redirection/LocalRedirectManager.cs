@@ -168,7 +168,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
             args);
 
         // Marshal result back (if non-void)
-        if (result != null && redirFunc.ReturnType != null)
+        if (result != null && redirFunc.ReturnType != typeof(void))
         {
             MarshalUtil.ToUnmanaged(result, Result, redirFunc.ReturnType);
         }
