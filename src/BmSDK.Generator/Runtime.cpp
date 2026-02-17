@@ -4,6 +4,7 @@
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
 #include "Printer\Printer.h"
+#include "Documentation\DocProvider.h"
 
 #include <cstdint>
 #include <fstream>
@@ -102,6 +103,13 @@ void Runtime::LoadClassesIntoMemory() {
 void Runtime::GenerateSDK()
 {
     TRACE("Preparing SDK generation");
+
+    // Initialize documentation provider
+    std::string docPath = "..\\..\\..\\src\\api-reference.json";
+    if (!DocProvider::Initialize(docPath))
+    {
+        TRACE("Warning: Documentation not loaded, comments will be minimal");
+    }
 
     LoadClassesIntoMemory();
 

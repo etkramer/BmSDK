@@ -8,6 +8,8 @@
     <ClCompile Include="Printer\Printer.cpp" />
     <ClCompile Include="Framework\Debug.cpp" />
     <ClCompile Include="Framework\FieldInfo.cpp" />
+    <ClCompile Include="Documentation\DocProvider.cpp" />
+    <ClCompile Include="Documentation\XmlCommentHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Detours.h" />
@@ -21,6 +23,8 @@
     <ClInclude Include="Engine\TArray.h" />
     <ClInclude Include="Engine\GameOffsets.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Documentation\DocProvider.h" />
+    <ClInclude Include="Documentation\XmlCommentHelper.h" />
   </ItemGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
