@@ -10,6 +10,9 @@ typedef unsigned __int64 QWORD;
 #include <cstdlib>
 #include <format>
 #include <iostream>
+#include <map>
+#include <optional>
+#include <sstream>
 #include <string>
 #include <vector>
 using namespace std;

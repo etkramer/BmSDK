@@ -4,6 +4,8 @@
 #include "Engine/UProperty.h"
 #include "Engine/UEnum.h"
 #include "Engine/UFunction.h"
+#include "Documentation/DocProvider.h"
+#include "Documentation/XmlCommentHelper.h"
 
 #include <map>
 
@@ -27,16 +29,25 @@ void Printer::PrintFile(UClass* _class, ostream& out)
 void Printer::PrintClass(UClass* _class, ostream& out)
 {
     // Print class comment
+    auto classComment = DocProvider::GetClassComment(_class->GetPackageName(), _class->GetName());
+
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// ";
-    if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract)
+    if (classComment)
     {
-        out << "ABSTRACT ";
+        XmlCommentHelper::PrintSummaryLines(*classComment, out, IndentLevel);
     }
-    Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
-    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
-    Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
+    else
+    {
+        // Fallback to minimal comment
+        Printer::Indent(out) << "/// ";
+        if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract)
+        {
+            out << "ABSTRACT ";
+        }
+        out << "Class: " << _class->GetNameManaged() << endl;
+    }
     Printer::Indent(out) << "/// </summary>" << endl;
+    Printer::Indent(out) << "/// <remarks>Size: " << _class->PropertiesSize << "</remarks>" << endl;
 
     // Print class declaration
     Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
@@ -214,9 +225,24 @@ void Printer::PrintScHelper(string returnType, string helper, bool generic, bool
 
 void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
 {
-    // Print struct comment
+    // Print struct comment - structs are nested in classes, so we need to find the parent class
+    std::optional<std::string> structComment;
+    UObject* classOuter = _struct->Outer;
+    if (classOuter && classOuter->IsA(UClass::StaticClass()))
+    {
+        structComment = DocProvider::GetStructComment(_struct->GetPackageName(), classOuter->GetName(),
+                                                      _struct->GetName());
+    }
+
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << endl;
+    if (structComment)
+    {
+        XmlCommentHelper::PrintSummaryLines(*structComment, out, IndentLevel);
+    }
+    else
+    {
+        Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << endl;
+    }
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print struct declaration
@@ -295,9 +321,36 @@ void Printer::PrintEnum(UEnum* _enum, ostream& out)
 
 void Printer::PrintProperty(UProperty* prop, ostream& out)
 {
-    // Print prop comment
+    // Print prop comment - look up documentation based on whether this is a class or struct property
+    std::optional<std::string> propComment;
+    std::string packageName = prop->GetPackageName();
+    std::string propName = prop->GetName();
+
+    if (prop->Outer->IsA(UClass::StaticClass()))
+    {
+        // Property directly on a class
+        propComment = DocProvider::GetPropertyComment(packageName, prop->Outer->GetName(), propName);
+    }
+    else if (prop->Outer->IsA(UScriptStruct::StaticClass()))
+    {
+        // Property on a struct - need to find the parent class
+        UObject* classOuter = prop->Outer->Outer;
+        if (classOuter && classOuter->IsA(UClass::StaticClass()))
+        {
+            propComment = DocProvider::GetStructPropertyComment(packageName, classOuter->GetName(),
+                                                                prop->Outer->GetName(), propName);
+        }
+    }
+
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
+    if (propComment)
+    {
+        XmlCommentHelper::PrintSummaryLines(*propComment, out, IndentLevel);
+    }
+    else
+    {
+        Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
+    }
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print prop declaration
@@ -433,9 +486,31 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
     }
 
     // Print func comment
+    auto funcDoc = DocProvider::GetFunctionDoc(func->GetPackageName(), func->Outer->GetName(), func->GetName());
+
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Function: " << func->GetName() << endl;
+    if (funcDoc && !funcDoc->comment.empty())
+    {
+        XmlCommentHelper::PrintSummaryLines(funcDoc->comment, out, IndentLevel);
+    }
+    else
+    {
+        Printer::Indent(out) << "/// Function: " << func->GetName() << endl;
+    }
     Printer::Indent(out) << "/// </summary>" << endl;
+
+    // Print param documentation if available
+    if (funcDoc)
+    {
+        for (auto& param : params)
+        {
+            auto paramIt = funcDoc->params.find(param->GetName());
+            if (paramIt != funcDoc->params.end() && !paramIt->second.empty())
+            {
+                XmlCommentHelper::PrintParam(param->GetNameManaged(), paramIt->second, out, IndentLevel);
+            }
+        }
+    }
 
     // Print func declaration
     Printer::Indent(out) << "public unsafe ";
