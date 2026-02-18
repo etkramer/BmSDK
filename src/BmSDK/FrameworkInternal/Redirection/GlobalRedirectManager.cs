@@ -55,17 +55,19 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             redirectMi.IsStatic ? null : target);
 
         // Add new redirect to the target function's redirect list
-        if (!_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
+        if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
+        {
+            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
+            {
+                throw new InvalidOperationException(
+                    $"{redirInfo} has already been registered once" +
+                    $"on {declaringFuncPath}!");
+            }
+        }
+        else
         {
             redirects = [];
             _globalRedirsDict[declaringFuncPath] = redirects;
-        }
-
-        if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
-        {
-            throw new InvalidOperationException(
-                $"{redirInfo} has already been registered once" +
-                $"on {declaringFuncPath}!");
         }
 
         redirects.Add(redirInfo);
@@ -101,19 +103,14 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// The collection may be empty if there are no redircts.</returns>
     public IEnumerable<GlobalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
     {
-        if (!_globalRedirsDict.TryGetValue(funcPath, out var infos) || infos.Count == 0)
+        if (!_globalRedirsDict.TryGetValue(funcPath, out var infos))
         {
             return [];
         }
 
         var targetTypes = StaticInit.EnumerateSelfAndSupers(obj.GetType());
-        var result = infos.Where(info => targetTypes.Contains(info.TargetType));
-        if (!result.Any())
-        {
-            return [];
-        }
 
-        return result;
+        return infos.Where(info => targetTypes.Contains(info.TargetType));
     }
 
     /// <summary>

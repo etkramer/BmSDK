@@ -52,7 +52,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
             var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
-            redirectors.Add(new(targetType, targetFuncPath, func));
+            redirectors.Add(new CachedLocalRedirector(targetType, targetFuncPath, func));
         }
 
         if (redirectors.Count == 0)
@@ -83,6 +83,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var key = (obj.Ptr, funcPath);
         var info = new LocalRedirectorInfo(component, redirMethod);
 
+        // Track redirs per object for easy searches in ProcessInternal
         if (!_localRedirsDict.TryGetValue(key, out var infos))
         {
             infos = [];
@@ -103,6 +104,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
     /// <summary>
     /// Registers every redirect defined in the given ScriptComponent to its Owner.
+    /// ENSURE THE COMPONENT IS NOT ALREADY ATTACHED AT THE CALL SITE!
     /// </summary>
     /// <param name="component">The ScriptComponent of which to register the
     /// local redirectors from.</param>
