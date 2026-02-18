@@ -64,7 +64,7 @@ readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, M
 
 /// <summary>
 /// Record storing the data necessary to call multiple redirectors recursively.
-/// Used in <see cref="RedirectManager.ExecuteRedirector(GameObject, Function, FFrame*, nint)"/>.
+/// Used in <see cref="RedirectManager.ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/>.
 /// </summary>
 /// <param name="TargetObj">Object the method is run on</param>
 /// <param name="TargetFunc">Method being redirected</param>

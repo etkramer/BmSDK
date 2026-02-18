@@ -15,7 +15,7 @@ static class RedirectManager
 
     /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.
-    /// <see cref="ExecuteRedirector(GameObject, Function, FFrame*, nint)"/> pushes a
+    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/> pushes a
     /// function on entry and pops it on exit and if the same function is found at the
     /// top of the stack, a reentry is detected and the redirect is prevented.
     /// This avoids infinite recursion.
@@ -30,7 +30,7 @@ static class RedirectManager
     /// </summary>
     /// <returns>True, if any redirector (local or global) was found; false if not.
     /// As a consequence, the original is called from Loader if false is returned.</returns>
-    public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, string funcPath, FFrame* stackPtr, IntPtr Result)
     {
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
         if (s_redirectCalls.TryPeek(out var lastCall))
@@ -49,26 +49,28 @@ static class RedirectManager
             }
         }
 
-        // Push this func to mark it as active for the duration of this invocation
-        var funcPath = funcObj.GetPathName();
-        var redirs = new Queue<IGenericRedirect>(AquireRedirects(selfObj, funcPath));
-        if (redirs.Count == 0)
+        // Get redirects applicable to current function
+        var redirs = AquireRedirects(selfObj, funcPath);
+        if (!redirs.Any())
         {
             return false;
         }
 
-        s_redirectCalls.Push(new RedirectCall(selfObj, funcObj, redirs));
+        // Push this func to mark it as being actively redirected during this invocation
+        var redirsQueue = new Queue<IGenericRedirect>(redirs);
+        s_redirectCalls.Push(new RedirectCall(selfObj, funcObj, redirsQueue));
 
         try
         {
-            redirs.Dequeue().Run(selfObj, funcObj, stackPtr, Result);
-            return true;
+            redirsQueue.Dequeue().Run(selfObj, funcObj, stackPtr, Result);
         }
         finally
         {
             // Pop the function off the stack when the invocation is over
             s_redirectCalls.Pop();
         }
+
+        return true;
     }
 
     static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
