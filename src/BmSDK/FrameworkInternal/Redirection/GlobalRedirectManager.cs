@@ -52,8 +52,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         var redirInfo = new GlobalRedirectorInfo(
             targetType,
             redirectMi,
-            redirectMi.IsStatic ? null : target
-        );
+            redirectMi.IsStatic ? null : target);
 
         // Add new redirect to the target function's redirect list
         if (!_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
@@ -62,7 +61,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             _globalRedirsDict[declaringFuncPath] = redirects;
         }
 
-        if (redirects.Contains(redirInfo))
+        if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
         {
             throw new InvalidOperationException(
                 $"{redirInfo} has already been registered once" +

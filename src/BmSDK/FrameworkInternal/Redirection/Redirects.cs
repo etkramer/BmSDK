@@ -26,7 +26,7 @@ interface IGenericRedirect
 /// <param name="TargetType">Type that the redirect applies to</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
 /// <param name="RedirectTarget">Object to call <paramref name="RedirectMethod"/> on</param>
-record GlobalRedirectorInfo(
+sealed record GlobalRedirectorInfo(
     Type TargetType,
     MethodInfo RedirectMethod,
     object? RedirectTarget) : IGenericRedirect
@@ -42,7 +42,7 @@ record GlobalRedirectorInfo(
 /// </summary>
 /// <param name="Component">The ScriptComponent that declares the redirect</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-record LocalRedirectorInfo(
+sealed record LocalRedirectorInfo(
     IScriptComponent Component,
     MethodInfo RedirectMethod) : IGenericRedirect
 {

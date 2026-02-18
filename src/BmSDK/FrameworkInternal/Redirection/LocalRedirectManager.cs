@@ -73,8 +73,6 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="funcPath">Path to the target declaring function</param>
     /// <param name="component">ScriptComponent that adds the redirectors to the Actor</param>
     /// <param name="redirMethod">MethodInfo of the detour function</param>
-    /// <exception cref="InvalidOperationException">Thrown if the target Actor already contains
-    /// a redirector for the declaring function path</exception>
     void RegisterRedirector(
         Actor obj,
         string funcPath,
