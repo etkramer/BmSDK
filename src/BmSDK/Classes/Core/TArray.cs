@@ -43,7 +43,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
     public void Pop(int numItems = 1)
     {
         // Don't allow removing more items than actually exist.
-        var newCount = Math.Min(Data.Num - numItems, 0);
+        var newCount = Math.Max(Data.Num - numItems, 0);
         Resize(newCount);
     }
 
