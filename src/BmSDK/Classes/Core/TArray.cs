@@ -42,7 +42,13 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
     /// </summary>
     public void Pop(int numItems = 1)
     {
+        if (numItems == 0)
+        {
+            return;
+        }
+
         // Don't allow removing more items than actually exist.
+        Guard.Require(numItems > 0, "Cannot pop a negative number of items");
         var newCount = Math.Max(Data.Num - numItems, 0);
         Resize(newCount);
     }
