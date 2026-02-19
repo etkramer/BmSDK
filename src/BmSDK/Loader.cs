@@ -133,7 +133,7 @@ static class Loader
             }
 
             // Run redirect and skip base implementation if applicable to this function
-            if (RedirectManager.ExecuteRedirector(selfObj, funcObj, stackPtr, Result))
+            if (RedirectManager.ExecuteRedirector(selfObj, funcObj, funcName, stackPtr, Result))
             {
                 return;
             }

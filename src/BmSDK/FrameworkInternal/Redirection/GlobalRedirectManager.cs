@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace BmSDK.Framework.Redirection;
@@ -10,21 +9,13 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    /// <summary>
-    /// Record storing data of a currently registered global redirect necessary to execute it.
-    /// </summary>
-    /// <param name="TargetType">Type that the redirect applies to</param>
-    /// <param name="RedirectMethod">Method to call on redirect</param>
-    /// <param name="RedirectTarget">Object to call <see cref="RedirectMethod"/> on</param>
-    public record GlobalRedirectorInfo(Type TargetType, MethodInfo RedirectMethod, object? RedirectTarget);
-
     readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps declaring function paths to GlobalRedirectorInfo objects which contain
     /// the target class and the delegate of the detour.
     /// </summary>
-    readonly Dictionary<string, GlobalRedirectorInfo> _globalRedirsDict = [];
+    readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
 
     /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
@@ -61,16 +52,25 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         var redirInfo = new GlobalRedirectorInfo(
             targetType,
             redirectMi,
-            redirectMi.IsStatic ? null : target
-        );
+            redirectMi.IsStatic ? null : target);
 
-        if (!_globalRedirsDict.TryAdd(declaringFuncPath, redirInfo))
+        // Add new redirect to the target function's redirect list
+        if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
         {
-            // Disallow multiple global redirectors on the same function.
-            throw new InvalidOperationException(
-                $"{declaringFuncPath} has been redirected already. " +
-                $"Cannot register {redirectMi.Name}.");
+            if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
+            {
+                throw new InvalidOperationException(
+                    $"{redirInfo} has already been registered once" +
+                    $"on {declaringFuncPath}!");
+            }
         }
+        else
+        {
+            redirects = [];
+            _globalRedirsDict[declaringFuncPath] = redirects;
+        }
+
+        redirects.Add(redirInfo);
     }
 
     /// <summary>
@@ -99,30 +99,18 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="obj">The object to scan for redirect application.</param>
     /// <param name="funcPath">The declaring path to look for.</param>
-    /// <param name="redirInfo">The object representing the registered global redirect.</param>
-    /// <returns>True, if a redirector has been assigned to that declaring path
-    /// and it applies to the given object; False, otherwise.</returns>
-    public bool TryGetRedirector(
-        GameObject obj,
-        string funcPath,
-        [MaybeNullWhen(false)] out GlobalRedirectorInfo redirInfo
-    )
+    /// <returns>Objects representing the registered global redirects.
+    /// The collection may be empty if there are no redircts.</returns>
+    public IEnumerable<GlobalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
     {
-        redirInfo = default;
-
-        if (!_globalRedirsDict.TryGetValue(funcPath, out var info))
+        if (!_globalRedirsDict.TryGetValue(funcPath, out var infos))
         {
-            return false;
+            return [];
         }
 
-        // Checks if the object inherits the function to redirect without overriding it
-        if (!StaticInit.EnumerateSelfAndSupers(obj.GetType()).Contains(info.TargetType))
-        {
-            return false;
-        }
+        var targetTypes = StaticInit.EnumerateSelfAndSupers(obj.GetType());
 
-        redirInfo = info;
-        return true;
+        return infos.Where(info => targetTypes.Contains(info.TargetType));
     }
 
     /// <summary>
@@ -130,7 +118,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     public unsafe void ExecuteRedirector(GlobalRedirectorInfo redirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        var redirTarget = redirInfo.RedirectTarget;
         var redirMethod = redirInfo.RedirectMethod;
 
         // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
@@ -148,10 +135,12 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         }
 
         // Execute detour
-        var result = redirMethod.Invoke(redirTarget, args.ToArray());
+        var result = redirInfo.Invoker.Invoke(
+            redirInfo.RedirectTarget,
+            args.ToArray());
 
         // Marshal result back (if non-void)
-        if (result != null && redirMethod.ReturnType != null)
+        if (result != null && redirMethod.ReturnType != typeof(void))
         {
             MarshalUtil.ToUnmanaged(result, Result, redirMethod.ReturnType);
         }

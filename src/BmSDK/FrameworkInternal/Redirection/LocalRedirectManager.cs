@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using BmSDK.Engine;
 
@@ -11,22 +10,6 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    /// <summary>
-    /// Record storing data necessary to register local redirects when a ScriptComponent is attached.
-    /// This is used to avoid unnecessary repeated reflection.
-    /// </summary>
-    /// <param name="TargetType">Type that the redirect applies to</param>
-    /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
-    /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
-    /// <param name="RedirectMethod">Method to call on redirect</param>
-    public record CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod);
-    /// <summary>
-    /// Record storing data of a currently registered local redirect necessary to execute it.
-    /// </summary>
-    /// <param name="Component">The ScriptComponent that declares the redirect</param>
-    /// <param name="RedirectMethod">Method to call on redirect</param>
-    public record LocalRedirectorInfo(IScriptComponent Component, MethodInfo RedirectMethod);
-
     readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
 
     /// <summary>
@@ -39,7 +22,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Maps pointers to target Actors and declaring function paths of redirected functions
     /// to LocalRedirectorInfo instances. This allows for per Actor/ScriptComponent function redirects.
     /// </summary>
-    readonly Dictionary<(IntPtr ObjPtr, string FuncPath), LocalRedirectorInfo> _localRedirsDict = [];
+    readonly Dictionary<(IntPtr ObjPtr, string FuncPath), List<LocalRedirectorInfo>> _localRedirsDict = [];
     /// <summary>
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
     /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>  
@@ -69,7 +52,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
             var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
-            redirectors.Add(new(targetType, targetFuncPath, func));
+            redirectors.Add(new CachedLocalRedirector(targetType, targetFuncPath, func));
         }
 
         if (redirectors.Count == 0)
@@ -90,8 +73,6 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="funcPath">Path to the target declaring function</param>
     /// <param name="component">ScriptComponent that adds the redirectors to the Actor</param>
     /// <param name="redirMethod">MethodInfo of the detour function</param>
-    /// <exception cref="InvalidOperationException">Thrown if the target Actor already contains
-    /// a redirector for the declaring function path</exception>
     void RegisterRedirector(
         Actor obj,
         string funcPath,
@@ -102,13 +83,14 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var key = (obj.Ptr, funcPath);
         var info = new LocalRedirectorInfo(component, redirMethod);
 
-        // Track redirs per actor object
-        if (!_localRedirsDict.TryAdd(key, info))
+        // Track redirs per object for easy searches in ProcessInternal
+        if (!_localRedirsDict.TryGetValue(key, out var infos))
         {
-            throw new InvalidOperationException(
-                $"A redirector for {funcPath} " +
-                $"is already registered for {obj.GetFullName()}");
+            infos = [];
+            _localRedirsDict[key] = infos;
         }
+
+        infos.Add(info);
 
         // Track redirs per ScriptComponent instance for cleanup
         if (!_componentRedirsDict.TryGetValue(component, out var keys))
@@ -122,6 +104,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
     /// <summary>
     /// Registers every redirect defined in the given ScriptComponent to its Owner.
+    /// ENSURE THE COMPONENT IS NOT ALREADY ATTACHED AT THE CALL SITE!
     /// </summary>
     /// <param name="component">The ScriptComponent of which to register the
     /// local redirectors from.</param>
@@ -149,26 +132,18 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="obj">Object to scan for redirect application</param>
     /// <param name="funcPath">The declaring path to look for</param>
-    /// <param name="redirInfo">Object representing the registered local redirect</param>
-    /// <returns>True, if a redirector has been assigned to that declaring path
-    /// and it applies to the given object; false, otherwise</returns>
-    public bool TryGetRedirector(
-        GameObject obj,
-        string funcPath,
-        [MaybeNullWhen(false)] out LocalRedirectorInfo redirInfo
-    )
+    /// <returns>List of object representing the registered local redirect.
+    /// The collection is empty if there are non</returns>
+    public IEnumerable<LocalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
     {
-        redirInfo = default;
-
         var key = (obj.Ptr, funcPath);
 
-        if (!_localRedirsDict.TryGetValue(key, out var info))
+        if (_localRedirsDict.TryGetValue(key, out var infos))
         {
-            return false;
+            return infos;
         }
 
-        redirInfo = info;
-        return true;
+        return [];
     }
 
     /// <summary>
@@ -176,21 +151,26 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     public unsafe void ExecuteRedirector(LocalRedirectorInfo localRedirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
     {
-        var redirectMethod = localRedirInfo.RedirectMethod;
-        var component = localRedirInfo.Component;
+        var redirFunc = localRedirInfo.RedirectMethod;
 
-        var paramTypes = redirectMethod
+        // Gather (expected) managed types using the redirector
+        var paramTypes = redirFunc
             .GetParameters()
             .Select(param => param.ParameterType)
             .ToArray();
 
+        // Marshal args
         var args = stackPtr->ParamsToManaged(paramTypes).ToArray();
 
-        var result = redirectMethod.Invoke(component, args);
+        // Execute detour
+        var result = localRedirInfo.Invoker.Invoke(
+            localRedirInfo.Component,
+            args);
 
-        if (result != null && redirectMethod.ReturnType != null)
+        // Marshal result back (if non-void)
+        if (result != null && redirFunc.ReturnType != typeof(void))
         {
-            MarshalUtil.ToUnmanaged(result, Result, redirectMethod.ReturnType);
+            MarshalUtil.ToUnmanaged(result, Result, redirFunc.ReturnType);
         }
     }
 
@@ -208,7 +188,15 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         foreach (var key in keys)
         {
-            _localRedirsDict.Remove(key);
+            var redirects = _localRedirsDict[key].Where(redir => redir.Component != component);
+            if (redirects.Any())
+            {
+                _localRedirsDict[key] = redirects.ToList();
+            }
+            else
+            {
+                _localRedirsDict.Remove(key);
+            }
         }
 
         _componentRedirsDict.Remove(component);
