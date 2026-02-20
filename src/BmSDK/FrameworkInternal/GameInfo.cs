@@ -34,6 +34,7 @@ static class GameInfo
         public const IntPtr AddObject = 0x8E0A0;
         public const IntPtr ConditionalDestroy = 0x8C6C0;
         public const IntPtr FindFunction = 0x8A980;
+        public const IntPtr ConditionalPostLoad = 0x9A110;
 
         // UClass (local)
         public const IntPtr GetDefaultObject = 0x4C8E0;

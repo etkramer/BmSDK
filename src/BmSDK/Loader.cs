@@ -19,6 +19,7 @@ static class Loader
 
     static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
     static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
     static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
     /// <summary>
@@ -53,6 +54,11 @@ static class Loader
             DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
                 GameInfo.FuncOffsets.EngineTick,
                 EngineTickDetour);
+        
+        _ConditionalPostLoadDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
+                GameInfo.FuncOffsets.ConditionalPostLoad,
+                ConditionalPostLoadDetour);
 
         _ConditionalDestroyDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
@@ -140,6 +146,25 @@ static class Loader
 
             // Call base impl. Redirected implementations are expected to reach this by calling "themselves" a second time.
             _ProcessInternalDetourBase!.Invoke(self, Stack, Result);
+        });
+    }
+
+    // Detour for UObject::ConditionalPostLoad()
+    static void ConditionalPostLoadDetour(IntPtr self)
+    {
+        // Call base impl to set default func flags first
+        _ConditionalPostLoadDetourBase!.Invoke(self);
+
+        // Configure redirected functions
+        RunGuarded(() =>
+        {
+            var obj = MarshalUtil.GetOrCreateWrapper(self);
+            if (obj is not Function func)
+            {
+                return;
+            }
+
+            RedirectManager.TryConfiureFunction(func, func.GetPathName());
         });
     }
 

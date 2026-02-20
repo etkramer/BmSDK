@@ -104,6 +104,10 @@ static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr EngineTickDelegate(IntPtr self);
 
+    // UObject::ConditionalPostLoad()
+    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
+    public delegate void ConditionalPostLoadDelegate(IntPtr self);
+
     static StaticConstructObjectDelegate? _StaticConstructObject = null;
     static StaticFindObjectDelegate? _StaticFindObject = null;
     static LoadPackageDelegate? _LoadPackage = null;

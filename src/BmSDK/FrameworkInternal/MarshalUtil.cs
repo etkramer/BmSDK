@@ -5,7 +5,7 @@ namespace BmSDK.Framework;
 
 static unsafe class MarshalUtil
 {
-    private static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
+    static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
     public static object? ToManaged(IntPtr data, Type managedType)
@@ -57,14 +57,8 @@ static unsafe class MarshalUtil
                 return (TManaged)(object)null!;
             }
 
-            // We should create wrappers in edge cases even though
-            // we are supposed to have one managed equivalent of each objects.
-            if (!s_managedObjects.TryGetValue(objPtr, out var obj))
-            {
-                obj = HandleNewObject(objPtr);
-            }
-
-            return (TManaged)(object)Guard.NotNull(obj);
+            // Get or create a managed wrapper for the UObject
+            return (TManaged)(object)Guard.NotNull(GetOrCreateWrapper(objPtr));
         }
 
         throw new NotImplementedException(
@@ -146,10 +140,9 @@ static unsafe class MarshalUtil
         );
     }
 
-    public static unsafe string GetClassPath(IntPtr objPtr)
+    public static string GetClassPath(IntPtr classPtr)
     {
         // Fetch class name.
-        var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
         var className = *(FName*)(classPtr + GameInfo.MemberOffsets.Object__Name).ToPointer();
 
         // Fetch outer name.
@@ -160,8 +153,13 @@ static unsafe class MarshalUtil
         return $"{classOuterName}.{className}";
     }
 
-    public static GameObject? HandleNewObject(IntPtr objPtr)
+    public static GameObject GetOrCreateWrapper(IntPtr objPtr)
     {
+        if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
+        {
+            return existingObj;
+        }
+
         var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
         var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
 
@@ -173,21 +171,15 @@ static unsafe class MarshalUtil
         }
 
         // Match native classes to managed types
-        var classPath = GetClassPath(objPtr);
+        var classPath = GetClassPath(classPtr);
 
         // Wrap this object in a managed instance
         var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
         return CreateManagedWrapper(objPtr, managedType);
     }
 
-    public static GameObject? CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    static GameObject CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
-        // Warn in case of duplicate objects
-        if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
-        {
-            Debug.LogWarning($"Object 0x{objPtr:X} already has managed wrapper {existingObj}!");
-        }
-
         // Create a new managed object
         var newObj = s_managedObjects[objPtr] = Guard.NotNull(
             (GameObject?)Activator.CreateInstance(managedType, true),
