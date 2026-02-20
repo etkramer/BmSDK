@@ -24,9 +24,8 @@ static class RedirectManager
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
-    /// It first searches for a local redirect for the given function and executes it.
-    /// If there is none, the function searches for a global redirect for the given target function and executes it.
-    /// If there is no local or global redirect, we return false. 
+    /// This is done by queuing the local redirects first and then the global ones.
+    /// After the initial setup, the next redirect is dequeued on re-entry.
     /// </summary>
     /// <returns>True, if any redirector (local or global) was found; false if not.
     /// As a consequence, the original is called from Loader if false is returned.</returns>
@@ -73,6 +72,13 @@ static class RedirectManager
         return true;
     }
 
+    /// <summary>
+    /// Creates a collection of all redirects that apply to a specific object method.
+    /// </summary>
+    /// <param name="selfObj">Object to check for local redirects</param>
+    /// <param name="funcPath">Function to check for local and gloal redirects</param>
+    /// <returns>Collection of all local redirects first,
+    /// then all the global redirects.</returns>
     static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
