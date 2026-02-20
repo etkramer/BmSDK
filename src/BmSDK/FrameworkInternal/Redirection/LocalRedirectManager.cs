@@ -52,6 +52,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
             var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
+            RedirectManager.QueueConfigureFunction(targetFuncPath);
             redirectors.Add(new CachedLocalRedirector(targetType, targetFuncPath, func));
         }
 

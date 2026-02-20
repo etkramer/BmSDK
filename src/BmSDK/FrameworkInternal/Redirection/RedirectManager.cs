@@ -1,4 +1,5 @@
 using System.Reflection;
+using MoreLinq;
 
 namespace BmSDK.Framework.Redirection;
 
@@ -14,13 +15,53 @@ static class RedirectManager
     const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>
+    /// A unique set of all function paths that have been redirected.
+    /// This is used to setup UFunction objects for redirection.
+    /// </summary>
+    static readonly HashSet<string> s_funcsToConfigure = [];
+
+    /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.
-    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/> pushes a
-    /// function on entry and pops it on exit and if the same function is found at the
-    /// top of the stack, a reentry is detected and the redirect is prevented.
-    /// This avoids infinite recursion.
+    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/>
+    /// uses it to avoid infinite recursion.
     /// </summary>
     static readonly Stack<RedirectCall> s_redirectCalls = [];
+
+    /// <summary>
+    /// Queues a function path to be configured for redirections after
+    /// the UFunction object is created. This should be run during mod initialization.
+    /// </summary>
+    /// <param name="funcPath">The path name of the UFunction to schedule</param>
+    public static void QueueConfigureFunction(string funcPath) => s_funcsToConfigure.Add(funcPath);
+
+    /// <summary>
+    /// Configures the given UFunction object for redirects if it has been queued.
+    /// This should be run after UFunction serialization.
+    /// </summary>
+    /// <param name="func">UFunction to configure</param>
+    /// <param name="funcPath">Path of the <paramref name="func"/></param>
+    /// <returns>True, if the function was registered for redirection;
+    /// false, otherwise</returns>
+    public static bool TryConfiureFunction(Function func, string funcPath)
+    {
+        if (s_funcsToConfigure.Remove(funcPath))
+        {
+            func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Configures every current UFunction object for redirection.
+    /// This should be called after all redirects have been registered on mod reload.
+    /// </summary>
+    public static void ConfigureAllRedirectedFunctions() =>
+        GameObject.FindObjectsSlow<Function>()
+            .Where(func => func.IsValid())
+            .Where(func => func != func.Class.DefaultObject)
+            .ForEach(func => TryConfiureFunction(func, func.GetPathName()));
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
@@ -91,5 +132,6 @@ static class RedirectManager
     {
         Global.UnregisterAll();
         Local.UnregisterAll();
+        s_funcsToConfigure.Clear();
     }
 }

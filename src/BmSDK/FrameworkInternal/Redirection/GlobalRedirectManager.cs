@@ -70,6 +70,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             _globalRedirsDict[declaringFuncPath] = redirects;
         }
 
+        RedirectManager.QueueConfigureFunction(declaringFuncPath);
         redirects.Add(redirInfo);
     }
 
