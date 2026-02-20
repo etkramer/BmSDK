@@ -16,9 +16,9 @@ static class RedirectManager
 
     /// <summary>
     /// A unique set of all function paths that have been redirected.
-    /// This is used to setup UFunction objects for redirection.
+    /// This is used to set up UFunction objects for redirection.
     /// </summary>
-    static readonly HashSet<string> s_funcsToConfigure = [];
+    static readonly HashSet<string> s_redirectFuncs = [];
 
     /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.
@@ -32,19 +32,18 @@ static class RedirectManager
     /// the UFunction object is created. This should be run during mod initialization.
     /// </summary>
     /// <param name="funcPath">The path name of the UFunction to schedule</param>
-    public static void QueueConfigureFunction(string funcPath) => s_funcsToConfigure.Add(funcPath);
+    public static void QueueConfigureFunction(string funcPath) => s_redirectFuncs.Add(funcPath);
 
     /// <summary>
     /// Configures the given UFunction object for redirects if it has been queued.
     /// This should be run after UFunction serialization.
     /// </summary>
     /// <param name="func">UFunction to configure</param>
-    /// <param name="funcPath">Path of the <paramref name="func"/></param>
     /// <returns>True, if the function was registered for redirection;
     /// false, otherwise</returns>
-    public static bool TryConfiureFunction(Function func, string funcPath)
+    public static bool TryConfiureFunction(Function func)
     {
-        if (s_funcsToConfigure.Remove(funcPath))
+        if (s_redirectFuncs.Contains(func.GetPathName()))
         {
             func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
             return true;
@@ -61,7 +60,7 @@ static class RedirectManager
         GameObject.FindObjectsSlow<Function>()
             .Where(func => func.IsValid())
             .Where(func => func != func.Class.DefaultObject)
-            .ForEach(func => TryConfiureFunction(func, func.GetPathName()));
+            .ForEach(func => TryConfiureFunction(func));
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
@@ -132,6 +131,6 @@ static class RedirectManager
     {
         Global.UnregisterAll();
         Local.UnregisterAll();
-        s_funcsToConfigure.Clear();
+        s_redirectFuncs.Clear();
     }
 }

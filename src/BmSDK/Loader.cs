@@ -164,7 +164,7 @@ static class Loader
                 return;
             }
 
-            RedirectManager.TryConfiureFunction(func, func.GetPathName());
+            RedirectManager.TryConfiureFunction(func);
         });
     }
 
