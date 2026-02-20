@@ -42,12 +42,12 @@ sealed record GlobalRedirectorInfo(
 /// </summary>
 /// <param name="Component">The ScriptComponent that declares the redirect</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
+/// <param name="Invoker">The cached invoker of the redirect method</param>
 sealed record LocalRedirectorInfo(
     IScriptComponent Component,
-    MethodInfo RedirectMethod) : IGenericRedirect
+    MethodInfo RedirectMethod,
+    MethodInvoker Invoker) : IGenericRedirect
 {
-    public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
-
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
@@ -60,7 +60,10 @@ sealed record LocalRedirectorInfo(
 /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
 /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod);
+readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod)
+{
+    public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
+}
 
 /// <summary>
 /// Record storing the data necessary to call multiple redirectors recursively.

@@ -52,6 +52,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
             var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
+            RedirectManager.QueueConfigureFunction(targetFuncPath);
             redirectors.Add(new CachedLocalRedirector(targetType, targetFuncPath, func));
         }
 
@@ -69,19 +70,20 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Registers one detoured function for a specific Actor.
     /// </summary>
-    /// <param name="obj">The Actor to register the redirect for</param>
-    /// <param name="funcPath">Path to the target declaring function</param>
-    /// <param name="component">ScriptComponent that adds the redirectors to the Actor</param>
-    /// <param name="redirMethod">MethodInfo of the detour function</param>
+    /// <param name="component">ScriptComponent that adds the redirectors to the Actor.
+    /// The script component must already be attached!</param>
+    /// <param name="cachedRedir">The redirect to register</param>
     void RegisterRedirector(
-        Actor obj,
-        string funcPath,
         IScriptComponent component,
-        MethodInfo redirMethod
+        CachedLocalRedirector cachedRedir
     )
     {
-        var key = (obj.Ptr, funcPath);
-        var info = new LocalRedirectorInfo(component, redirMethod);
+        var key = (component.Owner.Ptr, cachedRedir.FuncPath);
+
+        var info = new LocalRedirectorInfo(
+            component,
+            cachedRedir.RedirectMethod,
+            cachedRedir.Invoker);
 
         // Track redirs per object for easy searches in ProcessInternal
         if (!_localRedirsDict.TryGetValue(key, out var infos))
@@ -118,12 +120,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         foreach (var redir in redirs)
         {
-            RegisterRedirector(
-                component.Owner,
-                redir.FuncPath,
-                component,
-                redir.RedirectMethod
-            );
+            RegisterRedirector(component, redir);
         }
     }
 

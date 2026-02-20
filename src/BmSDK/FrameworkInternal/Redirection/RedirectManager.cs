@@ -1,4 +1,5 @@
 using System.Reflection;
+using MoreLinq;
 
 namespace BmSDK.Framework.Redirection;
 
@@ -14,19 +15,57 @@ static class RedirectManager
     const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>
+    /// A unique set of all function paths that have been redirected.
+    /// This is used to set up UFunction objects for redirection.
+    /// </summary>
+    static readonly HashSet<string> s_redirectFuncs = [];
+
+    /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.
-    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/> pushes a
-    /// function on entry and pops it on exit and if the same function is found at the
-    /// top of the stack, a reentry is detected and the redirect is prevented.
-    /// This avoids infinite recursion.
+    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/>
+    /// uses it to avoid infinite recursion.
     /// </summary>
     static readonly Stack<RedirectCall> s_redirectCalls = [];
 
     /// <summary>
+    /// Queues a function path to be configured for redirections after
+    /// the UFunction object is created. This should be run during mod initialization.
+    /// </summary>
+    /// <param name="funcPath">The path name of the UFunction to schedule</param>
+    public static void QueueConfigureFunction(string funcPath) => s_redirectFuncs.Add(funcPath);
+
+    /// <summary>
+    /// Configures the given UFunction object for redirects if it has been queued.
+    /// This should be run after UFunction serialization.
+    /// </summary>
+    /// <param name="func">UFunction to configure</param>
+    /// <returns>True, if the function was registered for redirection;
+    /// false, otherwise</returns>
+    public static bool TryConfiureFunction(Function func)
+    {
+        if (s_redirectFuncs.Contains(func.GetPathName()))
+        {
+            func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Configures every current UFunction object for redirection.
+    /// This should be called after all redirects have been registered on mod reload.
+    /// </summary>
+    public static void ConfigureAllRedirectedFunctions() =>
+        GameObject.FindObjectsSlow<Function>()
+            .Where(func => func.IsValid())
+            .Where(func => func != func.Class.DefaultObject)
+            .ForEach(func => TryConfiureFunction(func));
+
+    /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.
-    /// It first searches for a local redirect for the given function and executes it.
-    /// If there is none, the function searches for a global redirect for the given target function and executes it.
-    /// If there is no local or global redirect, we return false. 
+    /// This is done by queuing the local redirects first and then the global ones.
+    /// After the initial setup, the next redirect is dequeued on re-entry.
     /// </summary>
     /// <returns>True, if any redirector (local or global) was found; false if not.
     /// As a consequence, the original is called from Loader if false is returned.</returns>
@@ -73,6 +112,13 @@ static class RedirectManager
         return true;
     }
 
+    /// <summary>
+    /// Creates a collection of all redirects that apply to a specific object method.
+    /// </summary>
+    /// <param name="selfObj">Object to check for local redirects</param>
+    /// <param name="funcPath">Function to check for local and gloal redirects</param>
+    /// <returns>Collection of all local redirects first,
+    /// then all the global redirects.</returns>
     static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
@@ -85,5 +131,6 @@ static class RedirectManager
     {
         Global.UnregisterAll();
         Local.UnregisterAll();
+        s_redirectFuncs.Clear();
     }
 }
