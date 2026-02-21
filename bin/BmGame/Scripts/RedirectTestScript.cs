@@ -1,6 +1,6 @@
 using BmSDK.BmGame;
 
-public static class GlobalRedirects
+public static partial class GlobalRedirects
 {
     // Global redirect which works no matter the script components attached
     [Redirect(typeof(RPawnPlayer), nameof(RPawnPlayer.ExperienceAwarded))]

@@ -186,27 +186,4 @@ public static partial class Game
             return MarshalUtil.ToManaged<Package>(&result);
         }
     }
-
-    /// <summary>
-    /// Redirects an UnrealScript function to run your own C# code instead of the original.
-    /// </summary>
-    public static void SetFunctionRedirect(
-        Type targetClass,
-        string targetMethodName,
-        Delegate newDelegate)
-    {
-        // Register redirect
-        var redir = RedirectManager.Global.RegisterRedirector(
-            targetClass,
-            targetMethodName,
-            newDelegate.Method,
-            newDelegate.Target);
-
-        // Configure UFunction object if already loaded
-        var func = FindObject<Function>(redir.funcPath);
-        if (func != null)
-        {
-            RedirectManager.ConfigureFunction(func);
-        }
-    }
 }
