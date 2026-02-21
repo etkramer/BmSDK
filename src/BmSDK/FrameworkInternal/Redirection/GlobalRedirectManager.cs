@@ -25,12 +25,12 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="redirectMi">The MethodInfo of the custom detour.</param>
     /// <param name="target">The object to call the custom delegate on.
     /// May be null if the redirect is static.</param>
+    /// <returns>Declaring function path and the created redirector</returns>
     /// <exception cref="ArgumentException">Thrown if the target class does not inherit GameObject.
     /// Only methods of in-game classes may be overriden.</exception>
-    /// <exception cref="InvalidOperationException">Thrown if the specific declaring function path
-    /// already contains a redirect. You may have multiple redirects of the same method name
-    /// as long as they're different definitions.</exception>
-    public void RegisterRedirector(
+    /// <exception cref="InvalidOperationException">Thrown if the exact redirect method,
+    /// has been attached to the same function path again.</exception>
+    public (string funcPath, GlobalRedirectorInfo redir) RegisterRedirector(
         Type targetType,
         string targetMethodName,
         MethodInfo redirectMi,
@@ -72,6 +72,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         RedirectManager.QueueConfigureFunction(declaringFuncPath);
         redirects.Add(redirInfo);
+        return (declaringFuncPath, redirInfo);
     }
 
     /// <summary>
