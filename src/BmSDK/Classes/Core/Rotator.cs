@@ -3,9 +3,7 @@ using System.Numerics;
 namespace BmSDK;
 
 /// <summary>
-/// A rotation representation that blits directly to/from FRotator.
-/// Internally stores rotation as RUU (Rotational Unreal Units) integers,
-/// but exposes float properties in degrees for convenience.
+/// Represents a 3D rotation with pitch, yaw, and roll components in degrees.
 /// </summary>
 public struct Rotator
 {
@@ -29,7 +27,6 @@ public struct Rotator
     /// </summary>
     public const float RadiansToRuuFactor = 32768f / MathF.PI;
 
-    // Backing fields matching FRotator memory layout (3 ints: Pitch, Yaw, Roll)
     private int _pitch;
     private int _yaw;
     private int _roll;
