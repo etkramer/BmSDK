@@ -5,7 +5,7 @@ namespace BmSDK;
 /// <summary>
 /// Represents a 3D rotation with pitch, yaw, and roll components in degrees.
 /// </summary>
-public struct Rotator
+public record struct Rotator
 {
     /// <summary>
     /// Factor used to convert Rotational Unreal Units (RUUs) to degrees.
