@@ -37,7 +37,7 @@ public struct Rotator
     public float Pitch
     {
         readonly get => _pitch * RuuToDegreesFactor;
-        set => _pitch = (int)(value * DegreesToRuuFactor);
+        set => _pitch = (int)MathF.Round(value * DegreesToRuuFactor);
     }
 
     /// <summary>
@@ -46,7 +46,7 @@ public struct Rotator
     public float Yaw
     {
         readonly get => _yaw * RuuToDegreesFactor;
-        set => _yaw = (int)(value * DegreesToRuuFactor);
+        set => _yaw = (int)MathF.Round(value * DegreesToRuuFactor);
     }
 
     /// <summary>
@@ -55,7 +55,7 @@ public struct Rotator
     public float Roll
     {
         readonly get => _roll * RuuToDegreesFactor;
-        set => _roll = (int)(value * DegreesToRuuFactor);
+        set => _roll = (int)MathF.Round(value * DegreesToRuuFactor);
     }
 
     /// <summary>
@@ -63,9 +63,9 @@ public struct Rotator
     /// </summary>
     public Rotator(float pitch, float yaw, float roll)
     {
-        _pitch = (int)(pitch * DegreesToRuuFactor);
-        _yaw = (int)(yaw * DegreesToRuuFactor);
-        _roll = (int)(roll * DegreesToRuuFactor);
+        _pitch = (int)MathF.Round(pitch * DegreesToRuuFactor);
+        _yaw = (int)MathF.Round(yaw * DegreesToRuuFactor);
+        _roll = (int)MathF.Round(roll * DegreesToRuuFactor);
     }
 
     /// <summary>
@@ -118,8 +118,8 @@ public struct Rotator
     public static Rotator FromDirection(Vector3 direction)
     {
         float length = MathF.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
-        int pitch = (int)(MathF.Atan2(direction.Z, length) * RadiansToRuuFactor);
-        int yaw = (int)(MathF.Atan2(direction.Y, direction.X) * RadiansToRuuFactor);
+        int pitch = (int)MathF.Round(MathF.Atan2(direction.Z, length) * RadiansToRuuFactor);
+        int yaw = (int)MathF.Round(MathF.Atan2(direction.Y, direction.X) * RadiansToRuuFactor);
 
         return FromRuu(pitch, yaw, 0);
     }
