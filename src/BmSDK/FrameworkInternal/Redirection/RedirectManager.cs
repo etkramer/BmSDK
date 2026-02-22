@@ -45,7 +45,7 @@ static class RedirectManager
     {
         if (s_redirectFuncs.Contains(func.GetPathName()))
         {
-            func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
+            ConfigureFunction(func);
             return true;
         }
 
@@ -53,14 +53,23 @@ static class RedirectManager
     }
 
     /// <summary>
+    /// Configures any given UFunction for redirects. Should only be run
+    /// when sure that the function is actually redirected and after the
+    /// function has been serialized.
+    /// </summary>
+    /// <param name="func">UFunction to configure</param>
+    public static void ConfigureFunction(Function func)
+        => func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
+
+    /// <summary>
     /// Configures every current UFunction object for redirection.
     /// This should be called after all redirects have been registered on mod reload.
     /// </summary>
     public static void ConfigureAllRedirectedFunctions() =>
-        GameObject.FindObjectsSlow<Function>()
-            .Where(func => func.IsValid())
-            .Where(func => func != func.Class.DefaultObject)
-            .ForEach(func => TryConfiureFunction(func));
+        s_redirectFuncs
+            .Select(Game.FindObject<Function>)
+            .OfType<Function>()
+            .ForEach(ConfigureFunction);
 
     /// <summary>
     /// Executes the redirects from the UObject::ProcessInternal() context.

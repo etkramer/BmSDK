@@ -126,6 +126,7 @@ static class ScriptManager
             s_scripts.AddRange(CreateScriptInstances(asm));
             if (s_isInitialized)
             {
+                RedirectManager.ConfigureAllRedirectedFunctions();
                 ScriptComponentManager.AutoAttachTypesToExistingActors();
                 s_scripts.ForEach(script => script.OnLoad());
             }

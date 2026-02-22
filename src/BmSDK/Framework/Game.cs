@@ -102,7 +102,7 @@ public static partial class Game
     /// <summary>
     /// Finds and returns the object with the given path. Will be null if the object hasn't been loaded yet (see <see cref="LoadPackage"/> ).
     /// </summary>
-    public static unsafe T? FindObject<T>(string pathName)
+    public static T? FindObject<T>(string pathName)
         where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
 
     /// <summary>
@@ -186,19 +186,4 @@ public static partial class Game
             return MarshalUtil.ToManaged<Package>(&result);
         }
     }
-
-    /// <summary>
-    /// Redirects an UnrealScript function to run your own C# code instead of the original.
-    /// </summary>
-    public static void SetFunctionRedirect(
-        Type targetClass,
-        string targetMethodName,
-        Delegate newDelegate
-    ) =>
-        RedirectManager.Global.RegisterRedirector(
-            targetClass,
-            targetMethodName,
-            newDelegate.Method,
-            newDelegate.Target
-        );
 }

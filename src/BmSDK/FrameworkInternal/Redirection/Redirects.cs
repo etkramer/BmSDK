@@ -25,11 +25,10 @@ interface IGenericRedirect
 /// </summary>
 /// <param name="TargetType">Type that the redirect applies to</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-/// <param name="RedirectTarget">Object to call <paramref name="RedirectMethod"/> on</param>
 sealed record GlobalRedirectorInfo(
     Type TargetType,
-    MethodInfo RedirectMethod,
-    object? RedirectTarget) : IGenericRedirect
+    MethodInfo RedirectMethod
+) : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 
@@ -46,7 +45,8 @@ sealed record GlobalRedirectorInfo(
 sealed record LocalRedirectorInfo(
     IScriptComponent Component,
     MethodInfo RedirectMethod,
-    MethodInvoker Invoker) : IGenericRedirect
+    MethodInvoker Invoker
+) : IGenericRedirect
 {
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
