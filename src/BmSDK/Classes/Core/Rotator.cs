@@ -123,6 +123,4 @@ public struct Rotator
 
         return FromRuu(pitch, yaw, 0);
     }
-
-    public override readonly string ToString() => $"Rotator(Pitch={Pitch:F1}, Yaw={Yaw:F1}, Roll={Roll:F1})";
 }
