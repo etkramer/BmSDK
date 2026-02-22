@@ -2,6 +2,7 @@
  * A script demonstrating the basic workflow with scripts and common BmSDK APIs.
  */
 
+using System.Numerics;
 using BmSDK;
 using BmSDK.BmGame;
 using BmSDK.BmScript;
@@ -80,14 +81,18 @@ public class DemoScript : Script
         // Load package we need for RCharacter_Joker
         Game.LoadPackage("FunFair");
 
+        // Create location 1m behind player
+        var playerDir = playerPawn.Rotation.ToDirection() with { Z = 0 };
+        var charoffset = playerDir * (-1) * 100;
+
         // Spawn in a pawn
         var newCharacter = Game.SpawnCharacter<RPawnVillainThug, RCharacter_Joker>(
-            playerPawn.Location with
-            {
-                Y = playerPawn.Location.Y + 100,
-            },
+            playerPawn.Location,
             playerPawn.Rotation
         );
+
+        // Move new pawn behind player
+        newCharacter?.Move(charoffset);
 
         Debug.Log($"Spawned character {newCharacter?.ToString() ?? "NULL"}");
     }

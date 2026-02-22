@@ -1,12 +1,11 @@
 using System.Numerics;
+using BmSDK;
 using BmSDK.BmGame;
-using FRotator = BmSDK.GameObject.FRotator;
-using FVector = BmSDK.GameObject.FVector;
 
 [Script]
 public class CameraScript : Script
 {
-    CameraController _cameraController = null;
+    CameraController? _cameraController = null;
 
     public override void OnKeyDown(Keys key)
     {
@@ -69,8 +68,8 @@ class CameraController(RPlayerControllerCombat controller0, RPlayerControllerCom
         Controller0.SetViewTarget(Controller0.MultiTargetCamera);
 
         // Compute new camera position
-        var pos0 = Controller0.Pawn.Location.ToVector();
-        var pos1 = Controller1.Pawn.Location.ToVector();
+        var pos0 = Controller0.Pawn.Location;
+        var pos1 = Controller1.Pawn.Location;
         var newPosFlat = Vector2.Lerp(pos0.GetXY(), pos1.GetXY(), 0.5f);
         var newPos = new Vector3(newPosFlat.X, newPosFlat.Y, 0);
 
@@ -110,13 +109,13 @@ class CameraController(RPlayerControllerCombat controller0, RPlayerControllerCom
         }
 
         // Smoothly lerp camera position
-        var oldPos = Controller0.MultiTargetCamera.Location.ToVector();
+        var oldPos = Controller0.MultiTargetCamera.Location;
         newPos = Vector3.Lerp(oldPos, newPos, CameraSpeed * Game.GetDeltaTime());
 
         // Hijhack MultiTargetCamera with custom values
-        Controller0.MultiTargetCamera.SetLocation(newPos.ToFVector());
+        Controller0.MultiTargetCamera.SetLocation(newPos);
         Controller0.MultiTargetCamera.SetRotation(
-            new FRotator
+            new()
             {
                 Pitch = -90 * 180,
                 Yaw = 0 * 180,
@@ -134,23 +133,5 @@ class CameraController(RPlayerControllerCombat controller0, RPlayerControllerCom
 
 static class CameraScriptExtensions
 {
-    public static Vector2 GetXY(this Vector3 vec)
-    {
-        return new Vector2(vec.X, vec.Y);
-    }
-
-    public static Vector3 ToVector(this FVector vec)
-    {
-        return new Vector3(vec.X, vec.Y, vec.Z);
-    }
-
-    public static FVector ToFVector(this Vector3 vec)
-    {
-        return new FVector
-        {
-            X = vec.X,
-            Y = vec.Y,
-            Z = vec.Z,
-        };
-    }
+    public static Vector2 GetXY(this Vector3 vec) => new(vec.X, vec.Y);
 }

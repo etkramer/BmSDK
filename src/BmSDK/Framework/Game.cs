@@ -1,3 +1,4 @@
+using System.Numerics;
 using BmSDK.BmGame;
 using BmSDK.Engine;
 using BmSDK.Framework.Redirection;
@@ -110,8 +111,8 @@ public static partial class Game
     /// </summary>
     public static unsafe Actor SpawnActor(
         Class Class,
-        GameObject.FVector Location = default,
-        GameObject.FRotator Rotation = default,
+        Vector3 Location = default,
+        Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
         GameObject? Instigator = null
@@ -139,9 +140,9 @@ public static partial class Game
     }
 
     /// <inheritdoc cref="SpawnActor"/>
-    public static unsafe T? SpawnActor<T>(
-        GameObject.FVector Location = default,
-        GameObject.FRotator Rotation = default,
+    public static T? SpawnActor<T>(
+        Vector3 Location = default,
+        Rotator Rotation = default,
         Actor? Template = null,
         GameObject? Owner = null,
         GameObject? Instigator = null
@@ -152,9 +153,9 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
     /// </summary>
-    public static unsafe TPawn? SpawnCharacter<TPawn, TCharacter>(
-        GameObject.FVector Position,
-        GameObject.FRotator Rotation
+    public static TPawn? SpawnCharacter<TPawn, TCharacter>(
+        Vector3 Position,
+        Rotator Rotation
     )
         where TPawn : RBMPawnAI, IGameObject
         where TCharacter : RCharacter, IGameObject

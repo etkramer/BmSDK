@@ -59,6 +59,22 @@ string UProperty::GetInnerTypeNameManaged() const
         {
             return "ulong";
         }
+        else if (_struct->GetName() == "Vector")
+        {
+            return "System.Numerics.Vector3";
+        }
+        else if (_struct->GetName() == "Vector4")
+        {
+            return "System.Numerics.Vector4";
+        }
+        else if (_struct->GetName() == "Vector2D")
+        {
+            return "System.Numerics.Vector2";
+        }
+        else if (_struct->GetName() == "Rotator")
+        {
+            return "BmSDK.Rotator";
+        }
 
         return _struct->GetPathNameManaged();
     }
