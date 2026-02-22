@@ -27,9 +27,9 @@ public record struct Rotator
     /// </summary>
     public const float RadiansToRuuFactor = 32768f / MathF.PI;
 
-    private int _pitch;
-    private int _yaw;
-    private int _roll;
+    int _pitch;
+    int _yaw;
+    int _roll;
 
     /// <summary>
     /// Pitch rotation in degrees.
@@ -63,21 +63,36 @@ public record struct Rotator
     /// </summary>
     public Rotator(float pitch, float yaw, float roll)
     {
-        _pitch = (int)MathF.Round(pitch * DegreesToRuuFactor);
-        _yaw = (int)MathF.Round(yaw * DegreesToRuuFactor);
-        _roll = (int)MathF.Round(roll * DegreesToRuuFactor);
+        Pitch = pitch;
+        Yaw = yaw;
+        Roll = roll;
     }
 
     /// <summary>
     /// Creates a new Rotator from raw RUU values.
     /// </summary>
-    public static Rotator FromRuu(int pitch, int yaw, int roll)
+    public static Rotator FromRuu(int pitch, int yaw, int roll) => new()
     {
-        Rotator r = default;
-        r._pitch = pitch;
-        r._yaw = yaw;
-        r._roll = roll;
-        return r;
+        _pitch = pitch,
+        _yaw = yaw,
+        _roll = roll,
+    };
+
+    /// <summary>
+    /// Creates a Rotator from a direction vector.
+    /// The resulting Rotator has Roll set to 0.
+    /// </summary>
+    public static Rotator FromDirection(Vector3 direction)
+    {
+        float length = MathF.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
+        float pitch = MathF.Atan2(direction.Z, length);
+        float yaw = MathF.Atan2(direction.Y, direction.X);
+
+        return FromRuu(
+            (int)MathF.Round(pitch * RadiansToRuuFactor),
+            (int)MathF.Round(yaw * RadiansToRuuFactor),
+            roll: 0
+        );
     }
 
     /// <summary>
@@ -93,19 +108,6 @@ public record struct Rotator
         float cosYaw = MathF.Cos(yawRad);
         float sinYaw = MathF.Sin(yawRad);
 
-        return new Vector3(cosPitch * cosYaw, cosPitch * sinYaw, sinPitch);
-    }
-
-    /// <summary>
-    /// Creates a Rotator from a direction vector.
-    /// The resulting Rotator has Roll set to 0.
-    /// </summary>
-    public static Rotator FromDirection(Vector3 direction)
-    {
-        float length = MathF.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
-        int pitch = (int)MathF.Round(MathF.Atan2(direction.Z, length) * RadiansToRuuFactor);
-        int yaw = (int)MathF.Round(MathF.Atan2(direction.Y, direction.X) * RadiansToRuuFactor);
-
-        return FromRuu(pitch, yaw, 0);
+        return new(x: cosPitch * cosYaw, y: cosPitch * sinYaw, z: sinPitch);
     }
 }
