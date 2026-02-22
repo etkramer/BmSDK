@@ -5,6 +5,7 @@ namespace BmSDK;
 /// <summary>
 /// Represents a 3D rotation with pitch, yaw, and roll components in degrees.
 /// </summary>
+[StructLayout(LayoutKind.Sequential)]
 public record struct Rotator
 {
     /// <summary>
