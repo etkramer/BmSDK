@@ -63,6 +63,14 @@ string UProperty::GetInnerTypeNameManaged() const
         {
             return "System.Numerics.Vector3";
         }
+        else if (_struct->GetName() == "Vector4")
+        {
+            return "System.Numerics.Vector4";
+        }
+        else if (_struct->GetName() == "Vector2D")
+        {
+            return "System.Numerics.Vector2";
+        }
         else if (_struct->GetName() == "Rotator")
         {
             return "BmSDK.Rotator";
