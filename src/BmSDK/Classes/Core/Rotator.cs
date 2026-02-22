@@ -81,21 +81,6 @@ public record struct Rotator
     }
 
     /// <summary>
-    /// Gets the pitch in raw RUU format.
-    /// </summary>
-    public readonly int PitchRuu => _pitch;
-
-    /// <summary>
-    /// Gets the yaw in raw RUU format.
-    /// </summary>
-    public readonly int YawRuu => _yaw;
-
-    /// <summary>
-    /// Gets the roll in raw RUU format.
-    /// </summary>
-    public readonly int RollRuu => _roll;
-
-    /// <summary>
     /// Converts the current pitch and yaw angles to a normalized direction vector.
     /// </summary>
     public readonly Vector3 ToDirection()
