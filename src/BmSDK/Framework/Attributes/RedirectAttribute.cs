@@ -3,8 +3,6 @@ namespace BmSDK.Framework;
 /// <summary>
 /// Marks a static function as a global detour to a target method on a specified type.
 /// The detour applies globally and unconditionally to every instance of the target type.
-/// Do NOT register the function separately using
-/// <see cref="Game.SetFunctionRedirect(Type, string, Delegate)"/>;
 /// BmSDK performs registration automatically when this attribute is present.
 /// </summary>
 /// <remarks>The method being marked must be static and take an artificial self parameter
