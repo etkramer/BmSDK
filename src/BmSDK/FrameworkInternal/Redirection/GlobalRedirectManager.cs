@@ -23,8 +23,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="targetType">The type of the in-game class to override</param>
     /// <param name="targetMethodName">The name of the target method to override.</param>
     /// <param name="redirectMi">The MethodInfo of the custom detour.</param>
-    /// <param name="target">The object to call the custom delegate on.
-    /// May be null if the redirect is static.</param>
     /// <exception cref="ArgumentException">Thrown if the target class does not inherit GameObject.
     /// Only methods of in-game classes may be overriden.</exception>
     /// <exception cref="InvalidOperationException">Thrown if the exact redirect method,
@@ -32,8 +30,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     public void RegisterRedirector(
         Type targetType,
         string targetMethodName,
-        MethodInfo redirectMi,
-        object? target = null
+        MethodInfo redirectMi
     )
     {
         // Prevent creation of invalid redirects
@@ -50,8 +47,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         // Store the redirect for later use.
         var redirInfo = new GlobalRedirectorInfo(
             targetType,
-            redirectMi,
-            redirectMi.IsStatic ? null : target);
+            redirectMi);
 
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
@@ -136,8 +132,8 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         // Execute detour
         var result = redirInfo.Invoker.Invoke(
-            redirInfo.RedirectTarget,
-            args.ToArray());
+            obj: null,
+            arguments: args.ToArray());
 
         // Marshal result back (if non-void)
         if (result != null && redirMethod.ReturnType != typeof(void))
