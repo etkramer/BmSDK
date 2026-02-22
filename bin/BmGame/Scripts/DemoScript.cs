@@ -1,3 +1,7 @@
+/*
+ * A script demonstrating the basic workflow with scripts and common BmSDK APIs.
+ */
+
 using BmSDK;
 using BmSDK.BmGame;
 using BmSDK.BmScript;
@@ -6,9 +10,13 @@ using BmSDK.Engine;
 [Script]
 public class DemoScript : Script
 {
+    /// <summary>
+    /// Called called once when the engine first becomes ready.
+    /// Do basic set up here.
+    /// </summary>
     public override void Main()
     {
-        // Boost snow intensity
+        // Boost snow intensity on CDO (template object)
         var defaultRainComponent = RRainComponent.StaticClass().DefaultObject as RRainComponent;
         defaultRainComponent?.ParticleCount *= 5;
 
@@ -19,12 +27,19 @@ public class DemoScript : Script
         }
     }
 
+    /// <summary>
+    /// Called when you enter the main menu
+    /// (game start up or when exiting session).
+    /// </summary>
     public override void OnEnterMenu()
     {
         // Enable info display
         Game.GetGameViewportClient().bShowSessionDebug = true;
     }
 
+    /// <summary>
+    /// Called when entering the game world.
+    /// </summary>
     public override void OnEnterGame()
     {
         // Enable 1-hit counters
@@ -34,27 +49,27 @@ public class DemoScript : Script
         }
     }
 
+    /// <summary>
+    /// Called when a key is pressed during gameplay
+    /// (not in pause screen).
+    /// </summary>
     public override void OnKeyDown(Keys key)
     {
         // Debug actions based on key press.
-        if (key == Keys.Enter)
+        switch (key)
         {
-            Debug.Log("Entering game");
-            DebugLoadGame();
-        }
-        else if (key == Keys.T)
-        {
-            Debug.Log("Spawning P2");
-            DebugAddSplitScreenPlayer();
-        }
-        else if (key == Keys.V)
-        {
-            Debug.Log("Toggling ghost");
-            DebugToggleGhost();
-        }
-        else if (key == Keys.R)
-        {
-            TestSpawnActor();
+            case Keys.Enter:
+                DebugLoadGame();
+                break;
+            case Keys.T:
+                DebugAddSplitScreenPlayer();
+                break;
+            case Keys.V:
+                DebugToggleGhost();
+                break;
+            case Keys.R:
+                TestSpawnActor();
+                break;
         }
     }
 
@@ -79,20 +94,30 @@ public class DemoScript : Script
 
     static void DebugLoadGame()
     {
+        Debug.Log("Entering game");
+
         var console = Game.GetConsole();
         console.ConsoleCommand(
-            "start batentry?Players=Playable_Batman?Area=OW,OW_A9,OW_A6,OW_A7,OW_A8,OW_R1,OW_R2,OW_E3,OW_E4,OW_A1_Static_LOD,OW_A2,OW_A3_Static_LOD,OW_A4_Static_LOD,OW_A5_Static_LOD,OW_R3,OW_E2_Static_LOD,OW_E6_Static_LOD,OW_E5_Static_LOD,OW_RE1_Static_LOD?Flags=Vertical_Slice,Demo_Riddler_Door_Switch,Map_TriggeredCityStories,Batman_ResonatorCodes,Teleport_Church_To_Museum,Demo_Ryder_Bully,Demo_Courthouse_Lock,Public_Demo?Chapters=1,1b,2,2a,Z1,V1?Start=BeginVS?"
+            "start batentry?Players=Playable_Batman?" +
+            "Area=OW,OW_A9,OW_A6,OW_A7,OW_A8,OW_R1,OW_R2,OW_E3,OW_E4,OW_A1_Static_LOD,OW_A2,OW_A3_Static_LOD,OW_A4_Static_LOD,OW_A5_Static_LOD,OW_R3,OW_E2_Static_LOD,OW_E6_Static_LOD,OW_E5_Static_LOD,OW_RE1_Static_LOD?" +
+            "Flags=Vertical_Slice,Demo_Riddler_Door_Switch,Map_TriggeredCityStories,Batman_ResonatorCodes,Teleport_Church_To_Museum,Demo_Ryder_Bully,Demo_Courthouse_Lock,Public_Demo?" +
+            "Chapters=1,1b,2,2a,Z1,V1?" +
+            "Start=BeginVS?"
         );
     }
 
     static void DebugToggleGhost()
     {
+        Debug.Log("Toggling ghost");
+
         var cheatManager = Game.GetCheatManager();
         cheatManager.ToggleGhost();
     }
 
     static void DebugAddSplitScreenPlayer()
     {
+        Debug.Log("Spawning P2");
+
         var gameViewport = Game.GetGameViewportClient();
         gameViewport.DesiredSplitscreenType = GameViewportClient.ESplitScreenType.eSST_2P_VERTICAL;
         gameViewport.CreatePlayer(1, out _, true);
@@ -103,7 +128,7 @@ public class DemoScript : Script
 public class MenuActorReplacerComponent : ScriptComponent<RCinematicCustomActor>
 {
     [ComponentRedirect(nameof(RCinematicCustomActor.BeginAnimControl))]
-    void BeginAnimControlRedirect(InterpGroup inInterpGroup)
+    void BeginAnimControl(InterpGroup inInterpGroup)
     {
         Debug.Log("Hello from BeginAnimControl!");
 
@@ -112,7 +137,7 @@ public class MenuActorReplacerComponent : ScriptComponent<RCinematicCustomActor>
     }
 
     [ComponentRedirect(nameof(RCinematicCustomActor.PostBeginPlay))]
-    void RobinInMenuPostBeginPlay()
+    void PostBeginPlay()
     {
         // Load package with Robin's meshes
         Game.LoadPackage("Playable_Robin_Std_SF");
