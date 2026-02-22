@@ -1,10 +1,10 @@
 using BmSDK.BmGame;
 
-public static partial class GlobalRedirects
+public static class GlobalRedirects
 {
     // Global redirect which works no matter the script components attached
     [Redirect(typeof(RPawnPlayer), nameof(RPawnPlayer.ExperienceAwarded))]
-    public static void ExperienceAwardedRedirect(RPawnPlayer self, int xp, int teethXp)
+    static void ExperienceAwardedRedirect(RPawnPlayer self, int xp, int teethXp)
     {
         Debug.Log($"Global: [xp={xp}, teethXp={teethXp}]");
         self.ExperienceAwarded(xp, teethXp);
@@ -21,7 +21,7 @@ public sealed class RegenReductionComponent : ScriptComponent<RPawnPlayer>
     // Local redirect which only applies to actors with the script component attached
     // Overrides the global redirect
     [ComponentRedirect(nameof(RPawnPlayer.ExperienceAwarded))]
-    public void ExperienceAwardedRedirect(int xp, int teethXp)
+    void ExperienceAwardedRedirect(int xp, int teethXp)
     {
         Debug.Log($"Local : [xp={xp}, teethXp={teethXp}]");
         Owner.ExperienceAwarded(xp / 10, teethXp / 10);
