@@ -63,6 +63,10 @@ string UProperty::GetInnerTypeNameManaged() const
         {
             return "System.Numerics.Vector3";
         }
+        else if (_struct->GetName() == "Rotator")
+        {
+            return "BmSDK.Rotator";
+        }
 
         return _struct->GetPathNameManaged();
     }
