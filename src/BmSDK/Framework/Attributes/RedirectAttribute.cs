@@ -5,9 +5,9 @@ namespace BmSDK.Framework;
 /// The detour applies globally and unconditionally to every instance of the target type.
 /// BmSDK performs registration automatically when this attribute is present.
 /// </summary>
-/// <remarks>The method being marked must be static and take an artificial self parameter
-/// of the <see cref="TargetType"/> as the first argument. The return type and the
-/// parameter types that follow (the function signature) must match the actual method exactly
+/// <remarks>The method being marked must be static. If the target UFunction is not static
+/// the detour must take an artificial self parameter  of the <see cref="TargetType"/> as the first argument.
+/// The return type and the parameter types that follow (the function signature) must match the actual method exactly
 /// (both types and order). Names and the method's access modifier are irrelevant.</remarks>
 /// <example>
 /// [Redirect(typeof(RPawnPlayer), nameof(RPawnPlayer.ExperienceAwarded))]

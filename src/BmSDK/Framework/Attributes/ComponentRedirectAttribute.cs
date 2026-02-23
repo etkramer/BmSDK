@@ -8,11 +8,11 @@ namespace BmSDK.Framework;
 /// </summary>
 /// <remarks>
 /// You may only redirect methods that are declared on the ScriptComponent's target
-/// actor type or its base types.
+/// actor type or its base types. The target UFunction cannot be static.
 /// The method being marked CANNOT be static because the target instance is only exposed
 /// via <see cref="ScriptComponent{TActor}.Owner"/>. Therefore, the artificial
-/// <code>self</code> object MUST NOT be declared as a method parameter unlike the global
-/// <see cref="RedirectAttribute"/>. Use <code>Owner</code> instead.
+/// <c>self</c> object MUST NOT be declared as a method parameter unlike the global
+/// <see cref="RedirectAttribute"/>. Use <c>Owner</c> instead.
 /// The redirect's function signature must match the original's one-to-one:
 /// Return type, parameter types and parameter order must remain.
 /// Names and the access modifier are both irrelevant.</remarks>
