@@ -32,9 +32,6 @@ Follow these steps to set up your environment for building, running, and debuggi
 6. Test your code by pressing **F5** in Visual Studio (this runs the BatmanAC debug profile).
 7. Follow the [wiki](../../wiki/Creating-your-first-mod) to write your first script.
 
-### 💡 Common development issues and their solutions
-- Sometimes the game window doesn't appear. Try **Alt + Tab** to focus it. If that doesn't work, press **Ctrl + Shift + F5** (Restart Debugging) in Visual Studio.
-
 ## 🛠️ Preparing to Extend BmSDK Itself
 To set up your environment for modifying and building BmSDK itself, see the wiki: [Building BmSDK](../../wiki/Building-BmSDK)
 
