@@ -35,6 +35,18 @@ sealed record GlobalRedirectorInfo(
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 
+    Type[]? _paramTypes;
+
+    public Type[] GetParamTypes(Function func)
+    {
+        _paramTypes ??= RedirectMethod.GetParameters()
+                .Select(param => param.ParameterType)
+                .Skip(func.IsStatic ? 0 : 1)
+                .ToArray();
+
+        return _paramTypes;
+    }
+
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }

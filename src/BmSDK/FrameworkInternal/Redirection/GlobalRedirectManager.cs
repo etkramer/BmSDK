@@ -119,15 +119,8 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     {
         var redirMethod = redirInfo.RedirectMethod;
 
-        // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
-        var paramTypes = redirMethod
-            .GetParameters()
-            .Select(param => param.ParameterType)
-            .Skip(funcObj.IsStatic ? 0 : 1)
-            .ToArray();
-
         // Marshal args, add self as first arg if needed.
-        var args = stackPtr->ParamsToManaged(paramTypes);
+        var args = stackPtr->ParamsToManaged(redirInfo.GetParamTypes(funcObj));
         if (!funcObj.IsStatic)
         {
             args = args.Prepend(selfObj);
