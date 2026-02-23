@@ -28,8 +28,8 @@ Follow these steps to set up your environment for building, running, and debuggi
 2. In the Visual Studio Installer, select "**.NET desktop development**" from the _Workloads_ tab.
 3. Follow all the steps in the [user setup](#-getting-started-for-users), except you can skip the .NET SDK since it's included with Visual Studio.
 4. Start Visual Studio and open the solution in `%GameDir%\BmGame\ScriptsDev`.
-5. Write your code in `MinimalScript.cs` or any other C# source file in `%GameDir%\BmGame\Scripts`.
-6. Test your code by pressing **F5** in Visual Studio (this runs the BatmanAC debug profile).
+5. Write your code in any C# source file in `%GameDir%\BmGame\Scripts`.
+6. Run your code by pressing **F5** in Visual Studio.
 7. Follow the [wiki](../../wiki/Creating-your-first-mod) to write your first script.
 
 ## 🛠️ Preparing to Extend BmSDK Itself
