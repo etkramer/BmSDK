@@ -13,7 +13,7 @@ using BmSDK.Engine;
 [ScriptComponent(AutoAttach = true)]
 public class SpinningComponent : ScriptComponent<SkeletalMeshActor>
 {
-    const int RuuToRotate = 65536;  // = 2PI
+    const int DegreesToRotate = 360;
 
     public override void OnAttach()
         => Debug.Log($"SpinningComponent attached to {Owner}");
@@ -27,7 +27,7 @@ public class SpinningComponent : ScriptComponent<SkeletalMeshActor>
         Owner.Rotation = Owner.Rotation with
         {
             // 1 complete rotation around the Z-axis per second
-            Yaw = (int)MathF.Round(Owner.Rotation.Yaw + RuuToRotate * Game.GetDeltaTime()),
+            Yaw = (int)MathF.Round(Owner.Rotation.Yaw + DegreesToRotate * Game.GetDeltaTime()),
         };
     }
 }
