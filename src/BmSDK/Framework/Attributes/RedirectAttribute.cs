@@ -26,4 +26,11 @@ public sealed class RedirectAttribute(Type targetType, string targetMethod) : At
 {
     public Type TargetType { get; } = targetType;
     public string TargetMethod { get; } = targetMethod;
+    /// <summary>
+    /// Whether the redirect should apply to <see cref="TargetType"/> only or its children too.
+    /// It's important to note that a redirect overrides a specific definition of a UFunction.
+    /// If the child class overrides the target function, this option has no effect on that
+    /// particular child type.
+    /// </summary>
+    public bool AllowSubtypes { get; init; } = true;
 }

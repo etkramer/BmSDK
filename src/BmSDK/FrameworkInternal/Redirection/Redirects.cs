@@ -24,9 +24,12 @@ interface IGenericRedirect
 /// Record storing data of a currently registered global redirect necessary to execute it.
 /// </summary>
 /// <param name="TargetType">Type that the redirect applies to</param>
+/// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
+/// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
 sealed record GlobalRedirectorInfo(
     Type TargetType,
+    bool AllowSubtypes,
     MethodInfo RedirectMethod
 ) : IGenericRedirect
 {
