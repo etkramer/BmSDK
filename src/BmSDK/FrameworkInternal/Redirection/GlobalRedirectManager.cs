@@ -70,7 +70,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
     /// </summary>
-    /// <param name="asm">The assembly to scan.</param>
     public void RegisterRedirectors(Assembly asm)
     {
         foreach (var type in asm.GetTypes())
@@ -91,8 +90,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Gets any redirections for the given function path if it applies to the given GameObject.
     /// </summary>
-    /// <param name="obj">The object to scan for redirect application.</param>
-    /// <param name="funcPath">The declaring path to look for.</param>
     /// <returns>Objects representing the registered global redirects.
     /// The collection may be empty if there are no redircts.</returns>
     public IEnumerable<GlobalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)

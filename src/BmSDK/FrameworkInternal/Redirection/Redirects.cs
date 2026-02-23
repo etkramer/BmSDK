@@ -87,8 +87,8 @@ readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, M
 /// particular call of <paramref name="TargetFunc"/></param>
 record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
 {
-    int currIndex = 0;
+    int _currIndex = 0;
 
     public IGenericRedirect? NextRedirect()
-        => currIndex < Redirs.Length ? Redirs[currIndex++] : null;
+        => _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
 }

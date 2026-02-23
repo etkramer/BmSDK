@@ -21,7 +21,7 @@ static class RedirectManager
     static readonly HashSet<string> s_redirectFuncs = [];
 
     /// <summary>
-    /// Stack of UFunction objects storing the currently running redirect targets.
+    /// Stack storing the currently running redirect targets.
     /// Used to avoid infinite recursion and allow multiple redirects.
     /// </summary>
     static readonly Stack<RedirectCall> s_redirectCalls = [];
@@ -121,8 +121,6 @@ static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    /// <returns>Collection of all local redirects first,
-    /// then all the global redirects.</returns>
     static IGenericRedirect[] AquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
