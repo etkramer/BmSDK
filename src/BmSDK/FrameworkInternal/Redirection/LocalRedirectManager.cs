@@ -150,14 +150,8 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     {
         var redirFunc = localRedirInfo.RedirectMethod;
 
-        // Gather (expected) managed types using the redirector
-        var paramTypes = redirFunc
-            .GetParameters()
-            .Select(param => param.ParameterType)
-            .ToArray();
-
         // Marshal args
-        var args = stackPtr->ParamsToManaged(paramTypes).ToArray();
+        var args = stackPtr->ParamsToManaged(localRedirInfo.ParamTypes).ToArray();
 
         // Execute detour
         var result = localRedirInfo.Invoker.Invoke(

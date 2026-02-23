@@ -51,6 +51,15 @@ sealed record LocalRedirectorInfo(
     MethodInvoker Invoker
 ) : IGenericRedirect
 {
+    /// <summary>
+    /// Gathers managed parameter types using the redirector
+    /// </summary>
+    public Type[] ParamTypes { get; } =
+        RedirectMethod
+            .GetParameters()
+            .Select(param => param.ParameterType)
+            .ToArray();
+
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
