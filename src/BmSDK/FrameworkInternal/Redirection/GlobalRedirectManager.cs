@@ -130,10 +130,10 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             .ToArray();
 
         // Marshal args, add self as first arg if needed.
-        var args = stackPtr->ParamsToManaged(paramTypes).ToList();
+        var args = stackPtr->ParamsToManaged(paramTypes);
         if (!funcObj.IsStatic)
         {
-            args.Insert(0, selfObj);
+            args = args.Prepend(selfObj);
         }
 
         // Execute detour
