@@ -24,13 +24,28 @@ interface IGenericRedirect
 /// Record storing data of a currently registered global redirect necessary to execute it.
 /// </summary>
 /// <param name="TargetType">Type that the redirect applies to</param>
+/// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
+/// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
 sealed record GlobalRedirectorInfo(
     Type TargetType,
+    bool AllowSubtypes,
     MethodInfo RedirectMethod
 ) : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
+
+    Type[]? _paramTypes;
+
+    public Type[] GetParamTypes(Function func)
+    {
+        _paramTypes ??= RedirectMethod.GetParameters()
+                .Select(param => param.ParameterType)
+                .Skip(func.IsStatic ? 0 : 1)
+                .ToArray();
+
+        return _paramTypes;
+    }
 
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
@@ -48,6 +63,15 @@ sealed record LocalRedirectorInfo(
     MethodInvoker Invoker
 ) : IGenericRedirect
 {
+    /// <summary>
+    /// Gathers managed parameter types using the redirector
+    /// </summary>
+    public Type[] ParamTypes { get; } =
+        RedirectMethod
+            .GetParameters()
+            .Select(param => param.ParameterType)
+            .ToArray();
+
     public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
         => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
@@ -73,4 +97,10 @@ readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, M
 /// <param name="TargetFunc">Method being redirected</param>
 /// <param name="Redirs">Each redirect that still exists for the
 /// particular call of <paramref name="TargetFunc"/></param>
-readonly record struct RedirectCall(GameObject TargetObj, Function TargetFunc, Queue<IGenericRedirect> Redirs);
+record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
+{
+    int _currIndex = 0;
+
+    public IGenericRedirect? NextRedirect()
+        => _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
+}

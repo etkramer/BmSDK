@@ -20,19 +20,16 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
     /// </summary>
-    /// <param name="targetType">The type of the in-game class to override</param>
-    /// <param name="targetMethodName">The name of the target method to override.</param>
-    /// <param name="redirectMi">The MethodInfo of the custom detour.</param>
+    /// <param name="redirAttr">Attribute containing metadata for registration</param>
+    /// <param name="redirectMi">The MethodInfo of the custom detour</param>
     /// <exception cref="ArgumentException">Thrown if the target class does not inherit GameObject.
     /// Only methods of in-game classes may be overriden.</exception>
     /// <exception cref="InvalidOperationException">Thrown if the exact redirect method,
     /// has been attached to the same function path again.</exception>
-    public void RegisterRedirector(
-        Type targetType,
-        string targetMethodName,
-        MethodInfo redirectMi
-    )
+    public void RegisterRedirector(RedirectAttribute redirAttr, MethodInfo redirectMi)
     {
+        var targetType = redirAttr.TargetType;
+
         // Prevent creation of invalid redirects
         if (!targetType.IsAssignableTo(typeof(GameObject)))
         {
@@ -42,11 +39,12 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         }
 
         // Get the full path of the function (as originally declared).
-        var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, targetMethodName);
+        var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
         // Store the redirect for later use.
         var redirInfo = new GlobalRedirectorInfo(
             targetType,
+            redirAttr.AllowSubtypes,
             redirectMi);
 
         // Add new redirect to the target function's redirect list
@@ -72,7 +70,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Registers all functions marked with a <see cref="RedirectAttribute"/> in a given assembly.
     /// </summary>
-    /// <param name="asm">The assembly to scan.</param>
     public void RegisterRedirectors(Assembly asm)
     {
         foreach (var type in asm.GetTypes())
@@ -85,7 +82,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
                     continue;
                 }
 
-                RegisterRedirector(redirAttr.TargetType, redirAttr.TargetMethod, func);
+                RegisterRedirector(redirAttr, func);
             }
         }
     }
@@ -93,8 +90,6 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Gets any redirections for the given function path if it applies to the given GameObject.
     /// </summary>
-    /// <param name="obj">The object to scan for redirect application.</param>
-    /// <param name="funcPath">The declaring path to look for.</param>
     /// <returns>Objects representing the registered global redirects.
     /// The collection may be empty if there are no redircts.</returns>
     public IEnumerable<GlobalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
@@ -104,9 +99,17 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             return [];
         }
 
-        var targetTypes = StaticInit.EnumerateSelfAndSupers(obj.GetType());
+        var objType = obj.GetType();
 
-        return infos.Where(info => targetTypes.Contains(info.TargetType));
+        return infos.Where(info =>
+        {
+            if (info.AllowSubtypes)
+            {
+                return objType.IsAssignableTo(info.TargetType);
+            }
+            
+            return objType == info.TargetType;
+        });
     }
 
     /// <summary>
@@ -116,18 +119,11 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     {
         var redirMethod = redirInfo.RedirectMethod;
 
-        // Gather (expected) managed types using the redirector, noting the artificial 'self' param.
-        var paramTypes = redirMethod
-            .GetParameters()
-            .Select(param => param.ParameterType)
-            .Skip(funcObj.IsStatic ? 0 : 1)
-            .ToArray();
-
         // Marshal args, add self as first arg if needed.
-        var args = stackPtr->ParamsToManaged(paramTypes).ToList();
+        var args = stackPtr->ParamsToManaged(redirInfo.GetParamTypes(funcObj));
         if (!funcObj.IsStatic)
         {
-            args.Insert(0, selfObj);
+            args = args.Prepend(selfObj);
         }
 
         // Execute detour

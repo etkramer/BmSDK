@@ -90,8 +90,8 @@ public record struct Rotator
         float yaw = MathF.Atan2(direction.Y, direction.X);
 
         return FromRuu(
-            (int)MathF.Round(pitch * RadiansToRuuFactor),
-            (int)MathF.Round(yaw * RadiansToRuuFactor),
+            pitch: (int)MathF.Round(pitch * RadiansToRuuFactor),
+            yaw: (int)MathF.Round(yaw * RadiansToRuuFactor),
             roll: 0
         );
     }

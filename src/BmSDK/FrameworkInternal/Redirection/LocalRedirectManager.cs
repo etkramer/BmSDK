@@ -36,7 +36,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// </summary>
     /// <param name="componentType">The type that contains methods to be registered as local redirectors.
     /// The function doesn't check if the type inherits ScriptComponent. One must do it on the call site.</param>
-    /// <param name="targetType">The target type for which redirector methods are being registered.</param>
+    /// <param name="targetType">The target in-game type for which redirector methods are being registered.</param>
     /// <exception cref="InvalidOperationException">Thrown if the same ScriptComponent is cached twice.</exception>
     public void CacheRedirectors(Type componentType, Type targetType)
     {
@@ -50,6 +50,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
                 continue;
             }
 
+            // Get actual path that will be called by UE3
             var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
             RedirectManager.QueueConfigureFunction(targetFuncPath);
@@ -68,15 +69,12 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     }
 
     /// <summary>
-    /// Registers one detoured function for a specific Actor.
+    /// Registers one function detour for a specific Actor.
     /// </summary>
     /// <param name="component">ScriptComponent that adds the redirectors to the Actor.
     /// The script component must already be attached!</param>
     /// <param name="cachedRedir">The redirect to register</param>
-    void RegisterRedirector(
-        IScriptComponent component,
-        CachedLocalRedirector cachedRedir
-    )
+    void RegisterRedirector(IScriptComponent component, CachedLocalRedirector cachedRedir)
     {
         var key = (component.Owner.Ptr, cachedRedir.FuncPath);
 
@@ -106,10 +104,10 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
     /// <summary>
     /// Registers every redirect defined in the given ScriptComponent to its Owner.
-    /// ENSURE THE COMPONENT IS NOT ALREADY ATTACHED AT THE CALL SITE!
+    /// ENSURE THAT The COMPONENT IS ONLY ATTACHED ONCE AT THE CALL SITE.
     /// </summary>
     /// <param name="component">The ScriptComponent of which to register the
-    /// local redirectors from.</param>
+    /// local redirectors from. It should already be attached.</param>
     public void RegisterComponentRedirectors(IScriptComponent component)
     {
         // Skip registration if no redirects defined
@@ -127,8 +125,6 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Gets any redirections for the given function path if it applies to the given GameObject.
     /// </summary>
-    /// <param name="obj">Object to scan for redirect application</param>
-    /// <param name="funcPath">The declaring path to look for</param>
     /// <returns>List of object representing the registered local redirect.
     /// The collection is empty if there are non</returns>
     public IEnumerable<LocalRedirectorInfo> GetRedirectors(GameObject obj, string funcPath)
@@ -150,14 +146,8 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     {
         var redirFunc = localRedirInfo.RedirectMethod;
 
-        // Gather (expected) managed types using the redirector
-        var paramTypes = redirFunc
-            .GetParameters()
-            .Select(param => param.ParameterType)
-            .ToArray();
-
         // Marshal args
-        var args = stackPtr->ParamsToManaged(paramTypes).ToArray();
+        var args = stackPtr->ParamsToManaged(localRedirInfo.ParamTypes).ToArray();
 
         // Execute detour
         var result = localRedirInfo.Invoker.Invoke(
@@ -175,7 +165,6 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Unregisteres all redirects associated with a ScriptComponent and it's Owner.
     /// Used when ScriptComponents are detached.
     /// </summary>
-    /// <param name="component">The ScriptComponent to unregister</param>
     public void UnregisterComponentRedirectors(IScriptComponent component)
     {
         if (!_componentRedirsDict.TryGetValue(component, out var keys))
