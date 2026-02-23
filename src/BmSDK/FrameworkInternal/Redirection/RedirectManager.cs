@@ -22,8 +22,7 @@ static class RedirectManager
 
     /// <summary>
     /// Stack of UFunction objects storing the currently running redirect targets.
-    /// <see cref="ExecuteRedirector(GameObject, Function, string, FFrame*, nint)"/>
-    /// uses it to avoid infinite recursion.
+    /// Used to avoid infinite recursion and allow multiple redirects.
     /// </summary>
     static readonly Stack<RedirectCall> s_redirectCalls = [];
 
@@ -31,15 +30,13 @@ static class RedirectManager
     /// Queues a function path to be configured for redirections after
     /// the UFunction object is created. This should be run during mod initialization.
     /// </summary>
-    /// <param name="funcPath">The path name of the UFunction to schedule</param>
     public static void QueueConfigureFunction(string funcPath) => s_redirectFuncs.Add(funcPath);
 
     /// <summary>
     /// Configures the given UFunction object for redirects if it has been queued.
     /// This should be run after UFunction serialization.
     /// </summary>
-    /// <param name="func">UFunction to configure</param>
-    /// <returns>True, if the function was registered for redirection;
+    /// <returns>True, if the function had been registered for redirection;
     /// false, otherwise</returns>
     public static bool TryConfiureFunction(Function func)
     {
@@ -53,16 +50,14 @@ static class RedirectManager
     }
 
     /// <summary>
-    /// Configures any given UFunction for redirects. Should only be run
-    /// when sure that the function is actually redirected and after the
-    /// function has been serialized.
+    /// Configures any given UFunction for redirects. Should only be run, when sure that
+    /// the function is actually redirected and after the function has been serialized.
     /// </summary>
-    /// <param name="func">UFunction to configure</param>
     public static void ConfigureFunction(Function func)
         => func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
 
     /// <summary>
-    /// Configures every current UFunction object for redirection.
+    /// Configures every registered UFunction object for redirection.
     /// This should be called after all redirects have been registered on mod reload.
     /// </summary>
     public static void ConfigureAllRedirectedFunctions() =>
@@ -76,8 +71,9 @@ static class RedirectManager
     /// This is done by queuing the local redirects first and then the global ones.
     /// After the initial setup, the next redirect is dequeued on re-entry.
     /// </summary>
-    /// <returns>True, if any redirector (local or global) was found; false if not.
-    /// As a consequence, the original is called from Loader if false is returned.</returns>
+    /// <returns>True, if any redirector was found and executed; false if not.
+    /// As a consequence, the original should be called if false is returned.</returns>
+    /// <see cref="Loader.ProcessInternalDetour(nint, nint, nint)"/>
     public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, string funcPath, FFrame* stackPtr, IntPtr Result)
     {
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
@@ -85,7 +81,8 @@ static class RedirectManager
         {
             if (lastCall.TargetObj == selfObj && lastCall.TargetFunc == funcObj)
             {
-                if (lastCall.Redirs.TryDequeue(out var redir))
+                var redir = lastCall.NextRedirect();
+                if (redir != null)
                 {
                     redir.Run(selfObj, funcObj, stackPtr, Result);
                     return true;
@@ -99,18 +96,18 @@ static class RedirectManager
 
         // Get redirects applicable to current function
         var redirs = AquireRedirects(selfObj, funcPath);
-        if (!redirs.Any())
+        if (redirs.Length == 0)
         {
             return false;
         }
 
         // Push this func to mark it as being actively redirected during this invocation
-        var redirsQueue = new Queue<IGenericRedirect>(redirs);
-        s_redirectCalls.Push(new RedirectCall(selfObj, funcObj, redirsQueue));
+        var newCall = new RedirectCall(selfObj, funcObj, redirs);
+        s_redirectCalls.Push(newCall);
 
         try
         {
-            redirsQueue.Dequeue().Run(selfObj, funcObj, stackPtr, Result);
+            newCall.NextRedirect()!.Run(selfObj, funcObj, stackPtr, Result);
         }
         finally
         {
@@ -122,19 +119,18 @@ static class RedirectManager
     }
 
     /// <summary>
-    /// Creates a collection of all redirects that apply to a specific object method.
+    /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    /// <param name="selfObj">Object to check for local redirects</param>
-    /// <param name="funcPath">Function to check for local and gloal redirects</param>
     /// <returns>Collection of all local redirects first,
     /// then all the global redirects.</returns>
-    static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
+    static IGenericRedirect[] AquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
-            .Concat(Global.GetRedirectors(selfObj, funcPath));
+            .Concat(Global.GetRedirectors(selfObj, funcPath))
+            .ToArray();
 
     /// <summary>
-    /// Clears the backing redirector dictionaries, therefore, uninstalling all local and global redirects.
+    /// Clears the backing redirector dictionaries, therefore, uninstalling all redirects.
     /// </summary>
     public static void UnregisterAll()
     {
