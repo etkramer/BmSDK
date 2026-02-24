@@ -26,7 +26,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Only methods of in-game classes may be overriden.</exception>
     /// <exception cref="InvalidOperationException">Thrown if the exact redirect method,
     /// has been attached to the same function path again.</exception>
-    public void RegisterRedirector(RedirectAttribute redirAttr, MethodInfo redirectMi)
+    void RegisterRedirector(RedirectAttribute redirAttr, MethodInfo redirectMi)
     {
         var targetType = redirAttr.TargetType;
 

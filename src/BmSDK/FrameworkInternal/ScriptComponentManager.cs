@@ -61,7 +61,7 @@ static class ScriptComponentManager
     /// <param name="actorType">Actor type the ScriptComponent applies to.
     /// <see langword="null"/> if the type is not a ScriptComponent.</param>
     /// <returns>Whether <paramref name="type"/> is a valid ScriptComponent</returns>
-    public static bool IsTypeAScriptComponent(
+    static bool IsTypeAScriptComponent(
         Type type,
         [MaybeNullWhen(false)] out ScriptComponentAttribute attribute,
         [MaybeNullWhen(false)] out Type actorType
@@ -95,7 +95,7 @@ static class ScriptComponentManager
     /// </summary>
     /// <param name="type">The type whose inheritance hierarchy is searched for a ScriptComponent base class.</param>
     /// <returns>The type argument of the nearest ScriptComponent base class if found; otherwise, null.</returns>
-    public static Type? TryGetComponentActorType(Type type)
+    static Type? TryGetComponentActorType(Type type)
     {
         for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
         {
@@ -125,7 +125,7 @@ static class ScriptComponentManager
     /// Must derive from Actor.</param>
     /// <param name="allowSubtypes">Flag whether the component should auto-attach to
     /// child classes of <paramref name="targetClass"/>.</param>
-    public static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
+    static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
     {
         // We can't auto instantiate generic types
         if (componentType.IsGenericType)
@@ -178,7 +178,7 @@ static class ScriptComponentManager
     /// </summary>
     /// <param name="actorClass">The type for which to retrieve auto-attached component types.
     /// Should derive from <see cref="Actor"/>.</param>
-    public static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
+    static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
     {
         foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
         {
@@ -204,7 +204,7 @@ static class ScriptComponentManager
 
     /// <inheritdoc cref="GetAutoAttachTypesByActor(Type)"/>
     /// <param name="actor">The object of whose class to scan for auto-attach components.</param>
-    public static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor)
+    static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor)
         => GetAutoAttachTypesByActor(actor.GetType());
 
     /// <summary>
