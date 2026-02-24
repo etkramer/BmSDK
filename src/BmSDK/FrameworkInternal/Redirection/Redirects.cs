@@ -97,7 +97,7 @@ readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, M
 /// <param name="TargetFunc">Method being redirected</param>
 /// <param name="Redirs">Each redirect that still exists for the
 /// particular call of <paramref name="TargetFunc"/></param>
-record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
+sealed record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
 {
     int _currIndex = 0;
 

@@ -12,17 +12,14 @@ public record struct Rotator
     /// Factor used to convert Rotational Unreal Units (RUUs) to degrees.
     /// </summary>
     public const float RuuToDegreesFactor = 360f / 65536f;
-
     /// <summary>
     /// Factor used to convert degrees to Rotational Unreal Units (RUUs).
     /// </summary>
     public const float DegreesToRuuFactor = 65536f / 360f;
-
     /// <summary>
     /// Factor used to convert Rotational Unreal Units (RUUs) to radians.
     /// </summary>
     public const float RuuToRadiansFactor = MathF.PI / 32768f;
-
     /// <summary>
     /// Factor used to convert radians to Rotational Unreal Units (RUUs).
     /// </summary>
