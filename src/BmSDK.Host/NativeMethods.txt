@@ -1,0 +1,11 @@
+GetModuleHandle
+GetModuleFileName
+GetCurrentThread
+LoadLibrary
+GetProcAddress
+
+DetourRestoreAfterWith
+DetourUpdateThread
+DetourAttach
+DetourTransactionBegin
+DetourTransactionCommit
