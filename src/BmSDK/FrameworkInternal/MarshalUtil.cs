@@ -191,19 +191,16 @@ static unsafe class MarshalUtil
 
     public static void DestroyManagedWrapper(IntPtr objPtr)
     {
-        if (s_managedObjects.TryGetValue(objPtr, out var obj) && obj is Actor actor)
+        if (s_managedObjects.TryGetValue(objPtr, out var obj))
         {
             // Detach all script components
-            if (actor.ScriptComponents.Count > 0)
+            if (obj is Actor actor && actor.ScriptComponents.Count > 0)
             {
-                foreach (var scriptComponent in actor.ScriptComponents.ToArray())
-                {
-                    actor.DetachScriptComponent(scriptComponent);
-                }
+                actor.DetachAllScriptComponents();
             }
-        }
 
-        // Remove managed wrapper from storage
-        s_managedObjects.Remove(objPtr);
+            // Remove managed wrapper from storage
+            s_managedObjects.Remove(objPtr);
+        }
     }
 }

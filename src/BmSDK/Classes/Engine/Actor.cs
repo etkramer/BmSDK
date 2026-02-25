@@ -1,5 +1,6 @@
 using BmSDK.Framework;
 using BmSDK.Framework.Redirection;
+using MoreLinq;
 
 namespace BmSDK.Engine;
 
@@ -108,10 +109,6 @@ public partial class Actor
         throw new KeyNotFoundException($"No script component of {type} is attached to this actor");
     }
 
-    /*public TComponent GetScriptComponent<TComponent>()
-        where TComponent : class, IScriptComponent<Actor>
-        => (TComponent)GetScriptComponent(typeof(TComponent));*/
-
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>
@@ -147,6 +144,12 @@ public partial class Actor
 
         DetachScriptComponent(component);
     }
+
+    /// <summary>
+    /// Unregisters all script components attached to the actor.
+    /// </summary>
+    internal void DetachAllScriptComponents()
+        => ScriptComponents.ToArray().ForEach(DetachScriptComponent);
 
     /// <inheritdoc cref="GameObject.Clone"/>
     public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);
