@@ -121,30 +121,25 @@ function Invoke-Clean {
 function Invoke-Publish {
     Write-Host "Publishing BmSDK..." -ForegroundColor Green
 
-    # Set up Visual Studio environment
-    if (-not (Install-VSEnvironment "Release")) {
-        return $false
-    }
-
-    # Build BmSDK in Release mode
-    Write-Host "Building BmSDK, BmSDK.Host in Release mode..." -ForegroundColor Yellow
-    $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") "Release"
-    if ($ExitCode -ne 0) {
-        Write-Error "Failed to build BmSDK"
-        return $false
-    }
-
-    # Publish BmSDK to populate publish directory
-    Write-Host "Publishing BmSDK project..." -ForegroundColor Yellow
-    $PublishPath = Join-Path (Get-Location) "publish\Binaries\Win32\sdk"
-    $PublishOutput = & dotnet publish "src/BmSDK/BmSDK.csproj" --configuration Release --output $PublishPath --verbosity minimal 2>&1
+    # Publish BmSDK (managed SDK library)
+    Write-Host "Publishing BmSDK..." -ForegroundColor Yellow
+    $SdkPublishPath = Join-Path (Get-Location) "publish\Binaries\Win32\sdk"
+    $PublishOutput = & dotnet publish "src/BmSDK/BmSDK.csproj" --configuration Release --output $SdkPublishPath --verbosity minimal 2>&1
     $ExitCode = $LASTEXITCODE
-    
-    # Display publish output
     $PublishOutput | ForEach-Object { Write-Host $_ }
-    
     if ($ExitCode -ne 0) {
-        Write-Error "Failed to publish BmSDK project"
+        Write-Error "Failed to publish BmSDK"
+        return $false
+    }
+
+    # Publish BmSDK.Host (NativeAOT native DLL)
+    Write-Host "Publishing BmSDK.Host (NativeAOT)..." -ForegroundColor Yellow
+    $HostPublishPath = Join-Path (Get-Location) "publish\Binaries\Win32\plugins"
+    $PublishOutput = & dotnet publish "src/BmSDK.Host/BmSDK.Host.csproj" --configuration Release --runtime win-x86 --output $HostPublishPath --verbosity minimal 2>&1
+    $ExitCode = $LASTEXITCODE
+    $PublishOutput | ForEach-Object { Write-Host $_ }
+    if ($ExitCode -ne 0) {
+        Write-Error "Failed to publish BmSDK.Host"
         return $false
     }
 
@@ -311,12 +306,27 @@ switch ($Task) {
     }
     
     "Build" {
-        if (-not (Install-VSEnvironment $Configuration)) {
-            exit 1
+        # Build BmSDK (managed library)
+        Write-Host "Building BmSDK..." -ForegroundColor Yellow
+        $Output = & dotnet build "src/BmSDK/BmSDK.csproj" --configuration $Configuration --verbosity minimal 2>&1
+        $Output | ForEach-Object { Write-Host $_ }
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "BmSDK build failed" -ForegroundColor Red
+            exit $LASTEXITCODE
         }
-        
-        $ExitCode = Invoke-MSBuild $SolutionFile @("BmSDK", "BmSDK_Host") $Configuration
-        exit $ExitCode
+
+        # Publish BmSDK.Host (NativeAOT requires publish for native output)
+        Write-Host "Publishing BmSDK.Host (NativeAOT)..." -ForegroundColor Yellow
+        $HostPublishPath = Join-Path (Get-Location) "bin\Binaries\Win32\plugins"
+        $Output = & dotnet publish "src/BmSDK.Host/BmSDK.Host.csproj" --configuration $Configuration --runtime win-x86 --output $HostPublishPath --verbosity minimal 2>&1
+        $Output | ForEach-Object { Write-Host $_ }
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "BmSDK.Host publish failed" -ForegroundColor Red
+            exit $LASTEXITCODE
+        }
+
+        Write-Host "Build successful!" -ForegroundColor Green
+        exit 0
     }
     
     "Publish" {
