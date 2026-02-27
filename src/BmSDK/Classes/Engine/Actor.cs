@@ -1,5 +1,6 @@
 using BmSDK.Framework;
 using BmSDK.Framework.Redirection;
+using MoreLinq;
 
 namespace BmSDK.Engine;
 
@@ -21,8 +22,10 @@ public partial class Actor
     readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
 
     /// <summary>
-    /// Attaches an existing script component to this actor.
+    /// Attaches an existing script component instance to this actor.
     /// </summary>
+    /// <param name="component">ScriptComponent to attach;
+    /// cannot have an Owner when trying to attach it.</param>
     internal void AttachScriptComponent(IScriptComponent component)
     {
         Guard.Require(!component.HasOwner(), "Component is already attached to an actor");
@@ -37,7 +40,7 @@ public partial class Actor
         
         component.Owner = this;
 
-        // Register any [Redirect] methods on this component
+        // Register any [ComponentRedirect] methods on this component
         RedirectManager.Local.RegisterComponentRedirectors(component);
 
         // Invoke attach callback
@@ -81,23 +84,22 @@ public partial class Actor
     }
 
     /// <summary>
-    /// Checks if the Actor has a specific ScriptComponent instance attached to itself.
+    /// Checks if the Actor has the specified ScriptComponent instance attached to itself.
     /// </summary>
-    /// <param name="component">The component to check for attachment</param>
-    /// <returns>True, if the current Actor is the Owner of the ScriptComponent object;
-    /// false if not.</returns>
     internal bool HasScriptComponent(IScriptComponent component)
         => component.Owner == this;
 
     /// <summary>
     /// Checks if the Actor has a ScriptComponent of a specific type attached.
     /// </summary>
-    /// <param name="type">The ScriptComponent type to look for</param>
-    /// <returns>True, if the given component type is present in the Actor;
-    /// false, if not.</returns>
     internal bool HasScriptComponent(Type type)
         => _scriptComponents.ContainsKey(type);
 
+    /// <summary>
+    /// Gets an attached ScriptComponent instance by its type.
+    /// </summary>
+    /// <exception cref="KeyNotFoundException">Thrown if the component type
+    /// has not been attached</exception>
     internal IScriptComponent GetScriptComponent(Type type)
     {
         if (_scriptComponents.TryGetValue(type, out var result))
@@ -108,14 +110,9 @@ public partial class Actor
         throw new KeyNotFoundException($"No script component of {type} is attached to this actor");
     }
 
-    /*public TComponent GetScriptComponent<TComponent>()
-        where TComponent : class, IScriptComponent<Actor>
-        => (TComponent)GetScriptComponent(typeof(TComponent));*/
-
     /// <summary>
     /// Detaches the given script component from this actor.
     /// </summary>
-    /// <param name="component">The component to detach</param>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
     internal void DetachScriptComponent(IScriptComponent component)
     {
@@ -124,7 +121,7 @@ public partial class Actor
         // Invoke detach callback
         component.OnDetach();
 
-        // Unregister any [Redirect] methods
+        // Unregister any [ComponentRedirect] methods
         RedirectManager.Local.UnregisterComponentRedirectors(component);
 
         // Remove from storage
@@ -136,7 +133,6 @@ public partial class Actor
     /// <summary>
     /// Detaches a ScriptComponent by its type from this actor.
     /// </summary>
-    /// <param name="type">The ScriptComponent type to detach</param>
     /// <exception cref="ArgumentException">Thrown if the component isn't attached to the actor</exception>
     internal void DetachScriptComponent(Type type)
     {
@@ -147,6 +143,12 @@ public partial class Actor
 
         DetachScriptComponent(component);
     }
+
+    /// <summary>
+    /// Unregisters all script components attached to the actor.
+    /// </summary>
+    internal void DetachAllScriptComponents()
+        => ScriptComponents.ToArray().ForEach(DetachScriptComponent);
 
     /// <inheritdoc cref="GameObject.Clone"/>
     public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);

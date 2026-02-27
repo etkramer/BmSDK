@@ -96,13 +96,13 @@ static class RedirectManager
 
         // Get redirects applicable to current function
         var redirs = AquireRedirects(selfObj, funcPath);
-        if (redirs.Length == 0)
+        if (!redirs.Any())
         {
             return false;
         }
 
         // Push this func to mark it as being actively redirected during this invocation
-        var newCall = new RedirectCall(selfObj, funcObj, redirs);
+        var newCall = new RedirectCall(selfObj, funcObj, redirs.ToArray());
         s_redirectCalls.Push(newCall);
 
         try
@@ -121,11 +121,10 @@ static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    static IGenericRedirect[] AquireRedirects(GameObject selfObj, string funcPath)
+    static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
-            .Concat(Global.GetRedirectors(selfObj, funcPath))
-            .ToArray();
+            .Concat(Global.GetRedirectors(selfObj, funcPath));
 
     /// <summary>
     /// Clears the backing redirector dictionaries, therefore, uninstalling all redirects.
