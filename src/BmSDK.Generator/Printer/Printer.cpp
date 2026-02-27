@@ -20,8 +20,75 @@ void Printer::PrintFile(UClass* _class, ostream& out)
     Printer::Indent(out) << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
     out << endl;
 
-    // Print class declaration
-    Printer::PrintClass(_class, out);
+    // Print type
+    if (_class->Class->GetPathName() == "Core.Interface")
+    {
+        // Print interface declaration
+        Printer::PrintInterface(_class, out);
+    }
+    else
+    {
+        // Print class declaration
+        Printer::PrintClass(_class, out);
+    }
+}
+
+void Printer::PrintInterface(class UClass* _class, ostream& out)
+{
+    // Print interface comment
+    Printer::Indent(out) << "/// <summary>" << endl;
+    Printer::Indent(out) << "/// Interface: " << _class->GetNameManaged() << "<br/>" << endl;
+    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
+    Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
+    Printer::Indent(out) << "/// </summary>" << endl;
+
+    // Print interface declaration
+    Printer::Indent(out) << "public partial interface " << _class->GetNameManaged();
+    if (_class->SuperStruct)
+    {
+        out << " : " << _class->SuperStruct->GetPathNameManaged();
+    }
+    out << endl;
+
+    // Print interface body
+    Printer::Indent(out) << "{" << endl;
+    Printer::PushIndent();
+    {
+        // Print fields
+        UField* fieldLink = _class->Children;
+        for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+        {
+            if (fieldLink->IsA(UEnum::StaticClass()))
+            {
+                Printer::PrintEnum((UEnum*)fieldLink, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+            else if (fieldLink->IsA(UScriptStruct::StaticClass()))
+            {
+                Printer::PrintStruct((UScriptStruct*)fieldLink, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+            else if (fieldLink->IsA(UFunction::StaticClass()))
+            {
+                Printer::PrintFunction((UFunction*)fieldLink, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+        }
+    }
+    Printer::PopIndent();
+    Printer::Indent(out) << "}" << endl;
 }
 
 void Printer::PrintClass(UClass* _class, ostream& out)

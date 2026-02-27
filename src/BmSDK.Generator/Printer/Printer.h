@@ -8,6 +8,7 @@ public:
 	static void PrintStaticInit(vector<UClass*>& classes, ostream& out);
 
 private:
+	static void PrintInterface(class UClass* _class, ostream& out);
 	static void PrintClass(class UClass* _class, ostream& out);
 	static void PrintScHelpers(class UClass* _class, ostream& out);
 	static void PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out);
