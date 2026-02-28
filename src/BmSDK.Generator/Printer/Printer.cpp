@@ -48,10 +48,7 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
     // Workaround to prevent Core.Interface from trying to inherit GameObject
     if (_class->GetPathName() != "Core.Interface" && _class->SuperStruct)
     {
-        if (_class->SuperStruct->GetPathName() != "Core.Interface")
-        {
-            out << " : " << _class->SuperStruct->GetPathNameManaged();
-        }
+        out << " : " << _class->SuperStruct->GetPathNameManaged();
     }
     out << endl;
 
