@@ -47,7 +47,10 @@ static unsafe class MarshalUtil
             instance.Ptr = (IntPtr)data;
             return (TManaged)instance;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        else if (
+            typeof(TManaged).IsAssignableTo(typeof(GameObject))
+            || typeof(TManaged).IsAssignableTo(typeof(Interface))
+        )
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -104,7 +107,10 @@ static unsafe class MarshalUtil
                 return;
             }
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        else if (
+            typeof(TManaged).IsAssignableTo(typeof(GameObject))
+            || typeof(TManaged).IsAssignableTo(typeof(Interface))
+        )
         {
             // Handle null object references.
             if (value is null)
