@@ -4,6 +4,23 @@ namespace BmSDK;
 
 public partial class Class
 {
+    [Flags]
+    public enum EClassFlags
+    {
+        CLASS_Interface = 0x4000,
+    }
+
+    public bool IsInterface => ClassFlags.HasFlag(EClassFlags.CLASS_Interface);
+
+    /// <summary>
+    /// Property: FunctionFlags
+    /// </summary>
+    public unsafe EClassFlags ClassFlags
+    {
+        get => MarshalUtil.ToManaged<EClassFlags>(Ptr + 180);
+        set => MarshalUtil.ToUnmanaged(value, (Ptr + 180).ToPointer());
+    }
+
     /// <summary>
     /// Gets the default object for this class.
     /// </summary>

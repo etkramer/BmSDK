@@ -134,6 +134,10 @@ static unsafe class MarshalUtil
         {
             return sizeof(IntPtr);
         }
+        else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
+        {
+            return sizeof(IntPtr);
+        }
 
         throw new NotImplementedException(
             $"Marshaling not (fully) implemented for type {typeof(TManaged).Name}"
@@ -155,13 +159,16 @@ static unsafe class MarshalUtil
 
     public static GameObject GetOrCreateWrapper(IntPtr objPtr)
     {
+        // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
         {
             return existingObj;
         }
 
+        // Calculate memory address of the object's class
         var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
         var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
+        var classFlagsPtr = classPtr + GameInfo.MemberOffsets.Class__ClassFlags;
 
         // Not clear yet why this happens, but maybe we don't need to worry about it.
         var classIndex = *(int*)classIndexPtr.ToPointer();
@@ -170,11 +177,15 @@ static unsafe class MarshalUtil
             return CreateManagedWrapper(objPtr, typeof(Class));
         }
 
-        // Match native classes to managed types
-        var classPath = GetClassPath(classPtr);
+        // Get managed representation of the object's class
+        var classFlags = *(Class.EClassFlags*)classFlagsPtr.ToPointer();
+
+        // Get the managed type through the class object
+        var managedType = !classFlags.HasFlag(Class.EClassFlags.CLASS_Interface)
+            ? StaticInit.GetManagedTypeForClassPath(GetClassPath(classPtr))
+            : typeof(GameObject);   // Wrap CDOs of interfaces as GameObject
 
         // Wrap this object in a managed instance
-        var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
         return CreateManagedWrapper(objPtr, managedType);
     }
 

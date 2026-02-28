@@ -6,8 +6,8 @@
 enum class EClassFlags : DWORD
 {
     CLASS_Abstract = 0x1,
+    CLASS_Interface = 0x4000,
     CLASS_Intrinsic = 0x10000000,
-    CLASS_Interface = 0x00004000,
 };
 
 struct FImplementedInterface
