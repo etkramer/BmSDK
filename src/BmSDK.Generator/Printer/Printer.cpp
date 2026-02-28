@@ -44,9 +44,14 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
 
     // Print interface declaration
     Printer::Indent(out) << "public partial interface " << _class->GetNameManaged();
-    if (_class->SuperStruct &&  _class->SuperStruct->GetPathName() != "Core.Interface")
+
+    // Workaround to prevent Core.Interface from trying to inherit GameObject
+    if (_class->GetPathName() != "Core.Interface" && _class->SuperStruct)
     {
-        out << " : " << _class->SuperStruct->GetPathNameManaged();
+        if (_class->SuperStruct->GetPathName() != "Core.Interface")
+        {
+            out << " : " << _class->SuperStruct->GetPathNameManaged();
+        }
     }
     out << endl;
 
