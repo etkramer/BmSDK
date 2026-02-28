@@ -10,7 +10,7 @@ BmSDK is a **C# scripting system** for Batman: Arkham City that lets you create 
 
 ## 🚀 Getting started (for users)
 If you just want to run script mods (not create them), getting started is simple:
-1. Download and install the [.NET 10 Runtime (x86)](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
+1. Download and install [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
 2. Download the latest release from [releases](../../releases/latest) and open the .zip file.
 3. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both into your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). Your game folder should already contain folders with these names.
 4. Done, BmSDK is installed! Now to install script mods, simply drop any .cs files into your `BmGame\Scripts` folder.
@@ -26,7 +26,7 @@ If you have a Steam or GOG copy of the game, you'll need to install a compatibil
 Follow these steps to set up your environment for building, running, and debugging mods:
 1. Go to [visualstudio.microsoft.com/downloads](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable) and run the Visual Studio Installer.
 2. In the Visual Studio Installer, select "**.NET desktop development**" from the _Workloads_ tab.
-3. Follow all the steps in the [user setup](#-getting-started-for-users), except you can skip the .NET Runtime since it's included with Visual Studio.
+3. Follow all the steps in the [user setup](#-getting-started-for-users), except you can skip installing .NET because it's already included with Visual Studio.
 4. Start Visual Studio and open the solution in `%GameDir%\BmGame\ScriptsDev`.
 5. Write your code in any C# source file in `%GameDir%\BmGame\Scripts`.
 6. Run your code by pressing **F5** in Visual Studio.
