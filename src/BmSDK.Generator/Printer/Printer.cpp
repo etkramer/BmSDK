@@ -9,40 +9,46 @@
 
 int Printer::IndentLevel = 0;
 
-void Printer::PrintFile(UClass* _class, ostream& out)
+void Printer::PrintFile(ClassNode* classNode, ostream& out, ClassGraph* graph)
 {
     // Print preprocessor directives
     Printer::Indent(out) << "#pragma warning disable CS0108" << endl;
     Printer::Indent(out) << "#pragma warning disable CS1591" << endl;
     out << endl;
 
-    // Print namespace declaration
-    Printer::Indent(out) << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
+    // Print namespace declaration (using pre-computed value)
+    Printer::Indent(out) << "namespace " << classNode->packageNameManaged << ";" << endl;
     out << endl;
 
     // Print class declaration
-    Printer::PrintClass(_class, out);
+    Printer::PrintClass(classNode, out, graph);
 }
 
-void Printer::PrintClass(UClass* _class, ostream& out)
+void Printer::PrintClass(ClassNode* classNode, ostream& out, ClassGraph* graph)
 {
+    auto _class = reinterpret_cast<UClass*>(classNode->ptr);
+
     // Print class comment
     Printer::Indent(out) << "/// <summary>" << endl;
     Printer::Indent(out) << "/// ";
-    if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract)
+    if (classNode->isAbstract)
     {
         out << "ABSTRACT ";
     }
-    Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
+    Printer::Indent(out) << "Class: " << classNode->managedName << "<br/>" << endl;
     Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
     Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
-    // Print class declaration
-    Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
+    // Print class declaration (using pre-computed values)
+    Printer::Indent(out) << "public partial class " << classNode->managedName << " : ";
     if (_class->SuperStruct)
     {
-        out << _class->SuperStruct->GetPathNameManaged() << ", ";
+        auto superNode = graph->GetStructNode(_class->SuperStruct);
+        if (superNode)
+        {
+            out << superNode->managedPathName << ", ";
+        }
     }
     out << "BmSDK.IGameObject" << endl;
 
@@ -60,9 +66,10 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             Printer::Indent(out) << "{" << endl;
             Printer::PushIndent();
             {
+                // Use pre-computed pathName
                 Printer::Indent(out)
                     << "s_staticClass = StaticFindObjectChecked<Class>(null, null, \""
-                    << _class->GetPathName() << "\", false);" << endl;
+                    << classNode->pathName << "\", false);" << endl;
                 Printer::Indent(out) << "s_staticClass.AddToRoot();" << endl;
             }
             Printer::PopIndent();
@@ -76,21 +83,21 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         out << endl;
 
         // Print internal ctor
-        Printer::Indent(out) << "internal " << _class->GetNameManaged() << "() { }" << endl << endl;
+        Printer::Indent(out) << "internal " << classNode->managedName << "() { }" << endl << endl;
 
         // Print main ctor (unless abstract)
-        if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
+        if (!classNode->isAbstract)
         {
             Printer::Indent(out) << "/// <summary>" << endl;
-            Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;
+            Printer::Indent(out) << "/// Constructs a new " << classNode->managedName << endl;
             Printer::Indent(out) << "/// </summary>" << endl;
             Printer::Indent(out)
-                << "public " << _class->GetNameManaged()
+                << "public " << classNode->managedName
                 << "(BmSDK.GameObject Outer, string Name = null, "
-                "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
-                << _class->GetNameManaged()
+                   "BmSDK.GameObject.EObjectFlags SetFlags = 0, "
+                << classNode->managedName
                 << " Template = null) : base(ConstructObjectInternal(StaticClass(), "
-                "Outer, Name, SetFlags, Template)) { }"
+                   "Outer, Name, SetFlags, Template)) { }"
                 << endl
                 << endl;
         }
@@ -100,7 +107,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         Printer::Indent(out)
             << "/// Constructs a new wrapper instance from the given object pointer." << endl;
         Printer::Indent(out) << "/// </summary>" << endl;
-        Printer::Indent(out) << "protected " << _class->GetNameManaged() << "(nint ptr)";
+        Printer::Indent(out) << "protected " << classNode->managedName << "(nint ptr)";
         if (_class->GetName() == "Object")
         {
             out << " { Ptr = ptr; }" << endl;
@@ -111,59 +118,42 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         }
         out << endl;
 
-        for (UStruct* super = _class; super; super = super->SuperStruct)
+        // Use pre-computed derivesFromActor instead of walking SuperStruct
+        if (classNode->derivesFromActor)
         {
-            if (super->GetPathName() == "Engine.Actor")
-            {
-                Printer::PrintScHelpers(_class, out);
-                break;
-            }
+            Printer::PrintScHelpers(classNode, out);
         }
 
-        // Print fields
-        UField* fieldLink = _class->Children;
-        for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+        // Print fields using pre-computed children vector
+        for (auto childNode : classNode->children)
         {
-            // Don't print any members for intrinsic classes - they occasionally exist
-            // at runtime, but we just want their declaration so we can reference them.
-            if ((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Intrinsic)
+            // Don't print any members for intrinsic classes
+            if (classNode->isIntrinsic)
             {
                 break;
             }
 
-            if (fieldLink->IsA(UProperty::StaticClass()))
+            if (auto propNode = dynamic_cast<PropertyNode*>(childNode))
             {
-                Printer::PrintProperty((UProperty*)fieldLink, out);
-
-                if (fieldLink->Next)
+                Printer::PrintProperty(propNode, out, graph);
+                out << endl;
+            }
+            else if (auto enumNode = dynamic_cast<EnumNode*>(childNode))
+            {
+                Printer::PrintEnum(enumNode, out);
+                out << endl;
+            }
+            else if (auto structNode = dynamic_cast<StructNode*>(childNode))
+            {
+                auto field = reinterpret_cast<UField*>(childNode->ptr);
+                if (field->IsA(UScriptStruct::StaticClass()))
                 {
+                    Printer::PrintStruct(structNode, out, graph);
                     out << endl;
                 }
-            }
-            else if (fieldLink->IsA(UEnum::StaticClass()))
-            {
-                Printer::PrintEnum((UEnum*)fieldLink, out);
-
-                if (fieldLink->Next)
+                else if (field->IsA(UFunction::StaticClass()))
                 {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UScriptStruct::StaticClass()))
-            {
-                Printer::PrintStruct((UScriptStruct*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
-            }
-            else if (fieldLink->IsA(UFunction::StaticClass()))
-            {
-                Printer::PrintFunction((UFunction*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
+                    Printer::PrintFunction(structNode, out, graph);
                     out << endl;
                 }
             }
@@ -173,9 +163,9 @@ void Printer::PrintClass(UClass* _class, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintScHelpers(class UClass* _class, ostream& out)
+void Printer::PrintScHelpers(ClassNode* classNode, ostream& out)
 {
-    auto type = _class->GetNameManaged();
+    auto type = classNode->managedName;
     Printer::PrintScHelper("void", "AttachScriptComponent", false, false, false, type, out);
     Printer::PrintScHelper("TComponent", "AttachScriptComponent", true, true, true, type, out);
     Printer::PrintScHelper("bool", "HasScriptComponent", false, false, false, type, out);
@@ -185,124 +175,111 @@ void Printer::PrintScHelpers(class UClass* _class, ostream& out)
     Printer::PrintScHelper("void", "DetachScriptComponent", true, false, false, type, out);
 }
 
-void Printer::PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out)
+void Printer::PrintScHelper(
+    string returnType,
+    string helper,
+    bool generic,
+    bool ctor,
+    bool cast,
+    string type,
+    ostream& out)
 {
     if (generic)
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Type)\"/>" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Type)\"/>"
+                            << endl;
         Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>()" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">"
-            << (ctor ? ", new()" : "") << endl;
-        Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "")
-            << "((Engine.Actor)this)." << helper << "(typeof(TComponent));" << endl;
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type
+                            << ">" << (ctor ? ", new()" : "") << endl;
+        Printer::Indent(out) << "=> " << (cast ? "(TComponent)" : "") << "((Engine.Actor)this)."
+                            << helper << "(typeof(TComponent));" << endl;
         Printer::PopIndent();
         out << endl;
     }
     else
     {
-        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper << "(Framework.IScriptComponent)\"/>" << endl;
-        Printer::Indent(out) << "public " << returnType << " " << helper << "<TComponent>(TComponent component)" << endl;
+        Printer::Indent(out) << "/// <inheritdoc cref=\"Engine.Actor." << helper
+                            << "(Framework.IScriptComponent)\"/>" << endl;
+        Printer::Indent(out) << "public " << returnType << " " << helper
+                            << "<TComponent>(TComponent component)" << endl;
         Printer::PushIndent();
-        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type << ">" << endl;
-        Printer::Indent(out) << "=> ((Engine.Actor)this)." << helper << "((Framework.IScriptComponent)component);" << endl;
+        Printer::Indent(out) << "where TComponent : class, Framework.IScriptComponent<" << type
+                            << ">" << endl;
+        Printer::Indent(out) << "=> ((Engine.Actor)this)." << helper
+                            << "((Framework.IScriptComponent)component);" << endl;
         Printer::PopIndent();
         out << endl;
     }
-    
 }
 
-void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
+void Printer::PrintStruct(StructNode* structNode, ostream& out, ClassGraph* graph)
 {
+    auto _struct = reinterpret_cast<UScriptStruct*>(structNode->ptr);
+
     // Print struct comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Struct: " << _struct->GetNameManaged() << endl;
+    Printer::Indent(out) << "/// Struct: " << structNode->managedName << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print struct declaration
     Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
-        << ")]" << endl;
-    Printer::Indent(out) << "public partial record struct " << _struct->GetNameManaged() << endl;
+                        << ")]" << endl;
+    Printer::Indent(out) << "public partial record struct " << structNode->managedName << endl;
 
     // Print struct body
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        UField* fieldLink = _struct->Children;
-        while (fieldLink)
+        // Use pre-computed children vector
+        for (auto childNode : structNode->children)
         {
-            if (fieldLink->IsA(UProperty::StaticClass()))
+            if (auto propNode = dynamic_cast<PropertyNode*>(childNode))
             {
-                Printer::PrintProperty((UProperty*)fieldLink, out);
-
-                if (fieldLink->Next)
-                {
-                    out << endl;
-                }
+                Printer::PrintProperty(propNode, out, graph);
+                out << endl;
             }
-
-            fieldLink = fieldLink->Next;
         }
     }
     Printer::PopIndent();
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintEnum(UEnum* _enum, ostream& out)
+void Printer::PrintEnum(EnumNode* enumNode, ostream& out)
 {
-    // De-duplicate enum names
-    map<string, int> enumNameFreqs;
-    vector<string> enumNames;
-    for (auto i = 0; i < _enum->Names.Num; i++)
-    {
-        auto nameStr = _enum->Names.ElementAt(i).ToString();
-        if (enumNameFreqs.find(nameStr) == enumNameFreqs.end())
-        {
-            enumNameFreqs[nameStr] = 1;
-            enumNames.push_back(nameStr);
-        }
-        else
-        {
-            enumNameFreqs[nameStr]++;
-        }
-
-        if (enumNameFreqs[nameStr] > 1)
-        {
-            enumNames.push_back(nameStr + "_" + to_string(enumNameFreqs[nameStr]));
-        }
-    }
-
-    // Print prop comment
+    // Print enum comment
     Printer::Indent(out) << "/// <summary>" << endl;
-    Printer::Indent(out) << "/// Enum: " << _enum->GetName() << endl;
+    Printer::Indent(out) << "/// Enum: " << enumNode->ptr->GetName() << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
-    // Print prop declaration
-    Printer::Indent(out) << "public enum " << _enum->GetNameManaged() << endl;
+    // Print enum declaration
+    Printer::Indent(out) << "public enum " << enumNode->managedName << endl;
 
-    // Print prop body
+    // Print enum body using pre-computed resolved names
     Printer::Indent(out) << "{" << endl;
     Printer::PushIndent();
     {
-        for (auto i = 0u; i < enumNames.size(); i++)
+        for (auto i = 0u; i < enumNode->resolvedNames.size(); i++)
         {
-            Printer::Indent(out) << enumNames.at(i) << " = " << i << "," << endl;
+            Printer::Indent(out) << enumNode->resolvedNames.at(i) << " = " << i << "," << endl;
         }
     }
     Printer::PopIndent();
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintProperty(UProperty* prop, ostream& out)
+void Printer::PrintProperty(PropertyNode* propNode, ostream& out, ClassGraph* graph)
 {
+    auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
+
     // Print prop comment
     Printer::Indent(out) << "/// <summary>" << endl;
     Printer::Indent(out) << "/// " << prop->Class->GetName() << ": " << prop->GetName() << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
-    // Print prop declaration
-    Printer::Indent(out) << "public unsafe " << prop->GetInnerTypeNameManaged() << " "
-        << prop->GetNameManaged() << endl;
+    // Print prop declaration (using pre-computed innerTypeName and managedName)
+    Printer::Indent(out) << "public unsafe " << propNode->innerTypeName << " " << propNode->managedName
+                        << endl;
 
     // Print prop body
     Printer::Indent(out) << "{" << endl;
@@ -320,16 +297,15 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
             }
 
             // Booleans (stored as bitmasks) need special handling
-            if (prop->IsA(UBoolProperty::StaticClass()))
+            if (propNode->kind == PropertyKind::Bool)
             {
-                UBoolProperty* boolProp = (UBoolProperty*)prop;
                 out << "return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + " << prop->Offset
-                    << ") & " << boolProp->BitMask << ") != 0;";
+                    << ") & " << propNode->bitMask << ") != 0;";
             }
             else
             {
-                out << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                    << prop->GetInnerTypeNameManaged() << ">(Ptr + " << prop->Offset << ");";
+                out << "return BmSDK.Framework.MarshalUtil.ToManaged<" << propNode->innerTypeName
+                    << ">(Ptr + " << prop->Offset << ");";
             }
 
             if (isInStruct)
@@ -351,21 +327,19 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
             }
 
             // Booleans (stored as bitmasks) need special handling
-            if (prop->IsA(UBoolProperty::StaticClass()))
+            if (propNode->kind == PropertyKind::Bool)
             {
-                UBoolProperty* boolProp = (UBoolProperty*)prop;
                 out << "var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + "
                     << prop->Offset << ");";
-                out << " var newMask = value ? (currentMask | " << boolProp->BitMask
-                    << ") : (currentMask & ~" << boolProp->BitMask << ");";
+                out << " var newMask = value ? (currentMask | " << propNode->bitMask
+                    << ") : (currentMask & ~" << propNode->bitMask << ");";
 
-                out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + "
-                    << prop->Offset << ");";
+                out << " BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + " << prop->Offset
+                    << ");";
             }
             else
             {
-                out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << prop->Offset
-                    << ");";
+                out << "BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + " << prop->Offset << ");";
             }
 
             if (isInStruct)
@@ -379,10 +353,12 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintFunction(class UFunction* func, ostream& out)
+void Printer::PrintFunction(StructNode* funcNode, ostream& out, ClassGraph* graph)
 {
-    vector<UProperty*> params = {};
-    UProperty* returnParam = nullptr;
+    auto func = reinterpret_cast<UFunction*>(funcNode->ptr);
+
+    vector<PropertyNode*> params;
+    PropertyNode* returnParam = nullptr;
 
     // Skip operator and iterator functions
     if (((DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Operator) ||
@@ -396,34 +372,29 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
     bool funcIsNative = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Native;
     bool funcIsEvent = (DWORD)func->FunctionFlags & (DWORD)EFunctionFlags::FUNC_Event;
 
-    // Gather func params
-    UField* fieldLink = func->Children;
-    while (fieldLink)
+    // Gather func params from pre-computed children
+    for (auto childNode : funcNode->children)
     {
-        if (fieldLink->IsA(UProperty::StaticClass()))
+        if (auto propNode = dynamic_cast<PropertyNode*>(childNode))
         {
-            auto prop = (UProperty*)fieldLink;
+            auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
             if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_ReturnParm)
             {
-                returnParam = prop;
+                returnParam = propNode;
             }
             else if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_Parm)
             {
-                params.push_back(prop);
+                params.push_back(propNode);
             }
         }
-
-        fieldLink = fieldLink->Next;
     }
 
     bool shouldSuppressOptional = false;
-    for (auto i = 0u; i < params.size(); i++)
+    for (auto propNode : params)
     {
-        auto prop = params[i];
+        auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
 
-        // C# doesn't support optional out params. To avoid reordering and to avoid making
-        // any functional changes, let's just force everything to be non-optional when we encounter
-        // one.
+        // C# doesn't support optional out params
         if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
             ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm))
         {
@@ -443,11 +414,12 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
     {
         out << "static ";
     }
-    out << (returnParam ? returnParam->GetInnerTypeNameManaged() : "void") << " ";
-    out << func->GetNameManaged() << "(";
+    out << (returnParam ? returnParam->innerTypeName : "void") << " ";
+    out << funcNode->managedName << "(";
     for (auto i = 0u; i < params.size(); i++)
     {
-        auto prop = params[i];
+        auto propNode = params[i];
+        auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
 
         // "out" keyword for out params
         if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
@@ -456,7 +428,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
         }
 
         // Print param declaration
-        out << prop->GetInnerTypeNameManaged() << " " << prop->GetNameManaged();
+        out << propNode->innerTypeName << " " << propNode->managedName;
         if (((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OptionalParm) &&
             !shouldSuppressOptional)
         {
@@ -477,26 +449,25 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
         string ptrText = funcIsStatic ? "StaticClass().DefaultObject.Ptr" : "Ptr";
 
         Printer::Indent(out) << "var funcManaged = "
-            "BmSDK.GameObject.StaticFindObjectChecked<BmSDK."
-            "Function>(BmSDK.Function.StaticClass(), null, \""
-            << func->GetPathName() << "\", true);" << endl;
+                               "BmSDK.GameObject.StaticFindObjectChecked<BmSDK."
+                               "Function>(BmSDK.Function.StaticClass(), null, \""
+                            << funcNode->pathName << "\", true);" << endl;
 
         Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
-            << endl;
-        for (auto i = 0u; i < params.size(); i++)
+                            << endl;
+        for (auto propNode : params)
         {
-            auto param = params[i];
+            auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
 
             // Don't marshal in 'out' params
-            if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+            if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
             {
                 continue;
             }
 
             // Print
-            Printer::Indent(out) << "BmSDK.Framework.MarshalUtil.ToUnmanaged("
-                << param->GetNameManaged() << ", paramsPtr + " << param->Offset
-                << ");" << endl;
+            Printer::Indent(out) << "BmSDK.Framework.MarshalUtil.ToUnmanaged(" << propNode->managedName
+                                << ", paramsPtr + " << prop->Offset << ");" << endl;
         }
 
         if (funcIsNative)
@@ -504,16 +475,14 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
             Printer::Indent(out) << "var oldFlags = funcManaged.FunctionFlags;" << endl;
             Printer::Indent(out) << "var oldNative = funcManaged.iNative;" << endl;
             Printer::Indent(out)
-                << "funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;"
-                << endl;
+                << "funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;" << endl;
             Printer::Indent(out)
-                << "funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;"
-                << endl;
+                << "funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;" << endl;
             Printer::Indent(out) << "funcManaged.iNative = 0;" << endl;
         }
 
         Printer::Indent(out) << "BmSDK.Framework.GameFunctions.ProcessEvent(" << ptrText
-            << ", funcManaged.Ptr, (nint)paramsPtr, 0);" << endl;
+                            << ", funcManaged.Ptr, (nint)paramsPtr, 0);" << endl;
 
         if (funcIsNative)
         {
@@ -522,25 +491,26 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
         }
 
         // Marshal/assign out params
-        for (auto i = 0u; i < params.size(); i++)
+        for (auto propNode : params)
         {
-            auto param = params[i];
+            auto prop = reinterpret_cast<UProperty*>(propNode->ptr);
 
-            if ((QWORD)param->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
+            if ((QWORD)prop->PropertyFlags & (QWORD)EPropertyFlags::CPF_OutParm)
             {
-                Printer::Indent(out)
-                    << param->GetNameManaged() << " = BmSDK.Framework.MarshalUtil.ToManaged<"
-                    << param->GetInnerTypeNameManaged() << ">(paramsPtr + " << param->Offset << ");"
-                    << endl;
+                Printer::Indent(out) << propNode->managedName
+                                    << " = BmSDK.Framework.MarshalUtil.ToManaged<"
+                                    << propNode->innerTypeName << ">(paramsPtr + " << prop->Offset
+                                    << ");" << endl;
             }
         }
 
         if (returnParam != nullptr)
         {
+            auto prop = reinterpret_cast<UProperty*>(returnParam->ptr);
             // Print return param declaration
             Printer::Indent(out) << "return BmSDK.Framework.MarshalUtil.ToManaged<"
-                << returnParam->GetInnerTypeNameManaged() << ">(paramsPtr + "
-                << returnParam->Offset << ");" << endl;
+                                << returnParam->innerTypeName << ">(paramsPtr + " << prop->Offset
+                                << ");" << endl;
         }
         else
         {
@@ -551,7 +521,7 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
+void Printer::PrintStaticInit(const vector<ClassNode*>& classes, ostream& out, ClassGraph* graph)
 {
     // Print usings
     Printer::Indent(out) << "using System.Collections.Generic;" << endl;
@@ -566,9 +536,9 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
     {
         // Print props
         Printer::Indent(out) << "static Dictionary<string, Type> _classPathToManagedTypeMap = [];"
-            << endl;
+                            << endl;
         Printer::Indent(out) << "static Dictionary<Type, string> _managedTypeToClassPathMap = [];"
-            << endl;
+                            << endl;
         out << endl;
 
         // Print StaticInitClasses()
@@ -576,15 +546,15 @@ void Printer::PrintStaticInit(vector<UClass*>& classes, ostream& out)
         Printer::Indent(out) << "{" << endl;
         Printer::PushIndent();
         {
-            for (auto _class : classes)
+            for (auto classNode : classes)
             {
-                auto classPath = _class->GetPathName();
-                auto managedPath = _class->GetPathNameManaged();
-                Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << classPath
-                    << "\"] = typeof(" << managedPath << ");" << endl;
+                // Use pre-computed values
+                Printer::Indent(out) << "_classPathToManagedTypeMap[\"" << classNode->pathName
+                                    << "\"] = typeof(" << classNode->managedPathName << ");" << endl;
 
-                Printer::Indent(out) << "_managedTypeToClassPathMap[typeof(" << managedPath
-                    << ")] = \"" << classPath << "\";" << endl;
+                Printer::Indent(out) << "_managedTypeToClassPathMap[typeof("
+                                    << classNode->managedPathName << ")] = \"" << classNode->pathName
+                                    << "\";" << endl;
             }
         }
         Printer::PopIndent();

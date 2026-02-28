@@ -3,6 +3,7 @@
 #include "Engine\UClass.h"
 #include "Engine\UProperty.h"
 #include "Engine\GameOffsets.h"
+#include "Framework\ClassGraph.h"
 #include "Printer\Printer.h"
 
 #include <cstdint>
@@ -105,41 +106,24 @@ void Runtime::GenerateSDK()
 
     LoadClassesIntoMemory();
 
-    TRACE("Scanning {} objects for classes", Runtime::GObjects->Num);
+    // Build class graph upfront (single pass over GObjects)
+    TRACE("Building class graph from {} objects", Runtime::GObjects->Num);
+    auto graph = ClassGraph::Build();
 
-    // Enumerate objects
-    vector<UClass*> classObjects;
-    for (INT i = 0; i < Runtime::GObjects->Num; i++)
-    {
-        auto obj = Runtime::GObjects->ElementAt(i);
-
-        bool isValid = obj != nullptr && (Runtime::GObjects->ElementAt(obj->Index) == obj);
-        if (!isValid)
-        {
-            TRACE("Skipping invalid object {} ({})", obj->GetName(), obj->Index);
-            continue;
-        }
-
-        // Collect class objects (but not the CDO)
-        if (obj->IsA(UClass::StaticClass()) && obj->GetName() != "Default__Class")
-        {
-            classObjects.push_back((UClass*)obj);
-        }
-    }
+    const auto& classNodes = graph->GetAllClasses();
+    TRACE("Found {} classes, preparing to print", classNodes.size());
 
     // Clear output directory
     // TODO: Un-hardcode this
-    TRACE("Found {} classes, preparing to print", classObjects.size());
     fs::path outDir = "..\\..\\..\\src\\BmSDK\\Generated\\";
     fs::remove_all(outDir);
     fs::create_directory(outDir);
 
-    // Print some classes
-    for (auto i = 0u; i < classObjects.size(); i++)
+    // Print classes using graph nodes
+    for (auto classNode : classNodes)
     {
-        auto classObj = classObjects.at(i);
         auto classFilePath =
-            outDir / classObj->GetPackageName() / (classObj->GetNameManaged() + ".g.cs");
+            outDir / classNode->packageName / (classNode->managedName + ".g.cs");
 
         if (!fs::exists(classFilePath.parent_path()) &&
             fs::exists(classFilePath.parent_path().parent_path()))
@@ -155,14 +139,17 @@ void Runtime::GenerateSDK()
             continue;
         }
 
-        Printer::PrintFile(classObj, classFileStream);
+        Printer::PrintFile(classNode, classFileStream, graph);
     }
 
     // Print StaticInit file
     ofstream staticInitFileStream(outDir / "StaticInit.g.cs", ios::trunc);
-    Printer::PrintStaticInit(classObjects, staticInitFileStream);
+    Printer::PrintStaticInit(classNodes, staticInitFileStream, graph);
 
-    TRACE("Done writing {} classes to disk", classObjects.size());
+    TRACE("Done writing {} classes to disk", classNodes.size());
+
+    // Cleanup
+    delete graph;
 
     // Exit game early
     exit(0);

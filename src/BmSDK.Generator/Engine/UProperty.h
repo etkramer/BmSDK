@@ -21,7 +21,6 @@ class UProperty : public UField
         BYTE UNK2[24];
 
 public:
-    string GetInnerTypeNameManaged() const;
     STATIC_CLASS("Core.Property")
 };
 
