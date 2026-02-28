@@ -15,7 +15,7 @@ private:
 	static void PrintStruct(class UScriptStruct* _struct, ostream& out);
 	static void PrintEnum(class UEnum* _enum, ostream& out);
 	static void PrintProperty(class UProperty* prop, ostream& out);
-	static void PrintFunction(class UFunction* func, ostream& out);
+	static void PrintFunction(class UFunction* func, bool shouldPrintBody, ostream& out);
 
 	static void PushIndent() { IndentLevel++; };
 	static void PopIndent() { IndentLevel--; };

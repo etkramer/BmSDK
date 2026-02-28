@@ -78,7 +78,7 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
             }
             else if (fieldLink->IsA(UFunction::StaticClass()))
             {
-                Printer::PrintFunction((UFunction*)fieldLink, out);
+                Printer::PrintFunction((UFunction*)fieldLink, false, out);
 
                 if (fieldLink->Next)
                 {
@@ -227,7 +227,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             }
             else if (fieldLink->IsA(UFunction::StaticClass()))
             {
-                Printer::PrintFunction((UFunction*)fieldLink, out);
+                Printer::PrintFunction((UFunction*)fieldLink, true, out);
 
                 if (fieldLink->Next)
                 {
@@ -446,7 +446,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintFunction(class UFunction* func, ostream& out)
+void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream& out)
 {
     vector<UProperty*> params = {};
     UProperty* returnParam = nullptr;
@@ -535,7 +535,15 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
             out << ", ";
         }
     }
-    out << ")" << endl;
+    out << ")";
+
+    if (!shouldPrintBody) {
+        out << ";" << endl;
+        return;
+    }
+    else {
+        out << endl;
+    }
 
     // Print func body
     Printer::Indent(out) << "{" << endl;
