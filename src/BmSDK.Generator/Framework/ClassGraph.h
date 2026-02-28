@@ -69,13 +69,13 @@ struct FieldNode : ObjectNode
 struct StructNode : FieldNode
 {
     // Pre-computed inheritance (eliminates SuperStruct walks)
-    vector<StructNode*> inheritanceChain; // [self, parent, grandparent, ...]
+    vector<StructNode*> superChain; // [self, parent, grandparent, ...]
 
     // All ancestors as set for fast IsA checks
-    unordered_set<UStruct*> ancestors;
+    unordered_set<UStruct*> supers;
 
     // Pre-computed type checks (O(1) instead of O(depth))
-    bool derivesFromActor = false; // Cached Engine.Actor check
+    bool isActor = false; // Cached Engine.Actor check
 };
 
 // Extended node for UClass types

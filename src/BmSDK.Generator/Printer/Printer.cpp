@@ -118,8 +118,8 @@ void Printer::PrintClass(ClassNode* classNode, ostream& out, ClassGraph* graph)
         }
         out << endl;
 
-        // Use pre-computed derivesFromActor instead of walking SuperStruct
-        if (classNode->derivesFromActor)
+        // Use pre-computed isActor instead of walking SuperStruct
+        if (classNode->isActor)
         {
             Printer::PrintScHelpers(classNode, out);
         }

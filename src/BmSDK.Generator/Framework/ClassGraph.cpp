@@ -222,16 +222,16 @@ void ClassGraph::ComputeInheritanceForNode(StructNode* node)
         auto superNode = dynamic_cast<StructNode*>(GetNode(current));
         if (superNode)
         {
-            node->inheritanceChain.push_back(superNode);
+            node->superChain.push_back(superNode);
         }
-        node->ancestors.insert(current);
+        node->supers.insert(current);
         current = current->SuperStruct;
     }
 
     // Pre-compute Actor derivation
     if (actorClass)
     {
-        node->derivesFromActor = node->ancestors.contains(reinterpret_cast<UStruct*>(actorClass));
+        node->isActor = node->supers.contains(reinterpret_cast<UStruct*>(actorClass));
     }
 }
 
