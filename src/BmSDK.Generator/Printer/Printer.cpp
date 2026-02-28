@@ -107,9 +107,18 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
     // Print class declaration
     Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
+    // Print base class
     if (_class->SuperStruct)
     {
         out << _class->SuperStruct->GetPathNameManaged() << ", ";
+    }
+    // Print implemented interfaces
+    if (_class->Interfaces.Num > 0)
+    {
+        for (int i = 0; i < _class->Interfaces.Num; i++)
+        {
+            out << _class->Interfaces.ElementAt(i).Class->GetPathNameManaged() << ", "; 
+        }
     }
     out << "BmSDK.IGameObject" << endl;
 

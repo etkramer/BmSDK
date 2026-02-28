@@ -20,7 +20,7 @@ class UClass : public UState
 {
     // TODO
     FIELD(EClassFlags, ClassFlags)
-    BYTE UNK[196];
+    BYTE UNK[200];
     FIELD(TArray<FImplementedInterface>, Interfaces)
 
 public:
