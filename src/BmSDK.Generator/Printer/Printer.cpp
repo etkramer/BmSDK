@@ -44,7 +44,7 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
 
     // Print interface declaration
     Printer::Indent(out) << "public partial interface " << _class->GetNameManaged();
-    if (_class->SuperStruct)
+    if (_class->SuperStruct &&  _class->SuperStruct->GetPathName() != "Core.Interface")
     {
         out << " : " << _class->SuperStruct->GetPathNameManaged();
     }
