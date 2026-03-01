@@ -5,6 +5,13 @@ namespace BmSDK.Framework;
 
 static unsafe class MarshalUtil
 {
+    [StructLayout(LayoutKind.Sequential)]
+    struct FScriptInterface
+    {
+        public IntPtr ObjectPointer;
+        public IntPtr InterfacePointer;
+    }
+
     static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
@@ -47,7 +54,10 @@ static unsafe class MarshalUtil
             instance.Ptr = (IntPtr)data;
             return (TManaged)instance;
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        else if (
+            typeof(TManaged).IsAssignableTo(typeof(GameObject))
+            || typeof(TManaged).IsAssignableTo(typeof(Interface))
+        )
         {
             var objPtr = MemUtil.Blit<IntPtr>(data);
 
@@ -130,6 +140,12 @@ static unsafe class MarshalUtil
         {
             return Marshal.SizeOf<TManaged>();
         }
+        // Return UE3 internal interface wrapper size
+        else if (typeof(TManaged).IsInterface)
+        {
+            return sizeof(FScriptInterface);
+        }
+        // Return size of UObject pointer
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             return sizeof(IntPtr);
@@ -155,13 +171,16 @@ static unsafe class MarshalUtil
 
     public static GameObject GetOrCreateWrapper(IntPtr objPtr)
     {
+        // Get cached object wrapepr
         if (s_managedObjects.TryGetValue(objPtr, out var existingObj))
         {
             return existingObj;
         }
 
+        // Calculate memory address of the object's class
         var classPtr = *(IntPtr*)(objPtr + GameInfo.MemberOffsets.Object__Class).ToPointer();
         var classIndexPtr = classPtr + GameInfo.MemberOffsets.Object__ObjectInternalInteger;
+        var classFlagsPtr = classPtr + GameInfo.MemberOffsets.Class__ClassFlags;
 
         // Not clear yet why this happens, but maybe we don't need to worry about it.
         var classIndex = *(int*)classIndexPtr.ToPointer();
@@ -170,11 +189,15 @@ static unsafe class MarshalUtil
             return CreateManagedWrapper(objPtr, typeof(Class));
         }
 
-        // Match native classes to managed types
-        var classPath = GetClassPath(classPtr);
+        // Get managed representation of the object's class
+        var classFlags = *(Class.EClassFlags*)classFlagsPtr.ToPointer();
+
+        // Get the managed type through the class object
+        var managedType = !classFlags.HasFlag(Class.EClassFlags.CLASS_Interface)
+            ? StaticInit.GetManagedTypeForClassPath(GetClassPath(classPtr))
+            : typeof(GameObject);   // Wrap CDOs of interfaces as GameObject
 
         // Wrap this object in a managed instance
-        var managedType = StaticInit.GetManagedTypeForClassPath(classPath);
         return CreateManagedWrapper(objPtr, managedType);
     }
 

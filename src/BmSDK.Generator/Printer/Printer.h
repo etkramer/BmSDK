@@ -8,13 +8,14 @@ public:
 	static void PrintStaticInit(vector<UClass*>& classes, ostream& out);
 
 private:
+	static void PrintInterface(class UClass* _class, ostream& out);
 	static void PrintClass(class UClass* _class, ostream& out);
 	static void PrintScHelpers(class UClass* _class, ostream& out);
 	static void PrintScHelper(string returnType, string helper, bool generic, bool ctor, bool cast, string type, ostream& out);
 	static void PrintStruct(class UScriptStruct* _struct, ostream& out);
 	static void PrintEnum(class UEnum* _enum, ostream& out);
 	static void PrintProperty(class UProperty* prop, ostream& out);
-	static void PrintFunction(class UFunction* func, ostream& out);
+	static void PrintFunction(class UFunction* func, bool shouldPrintBody, ostream& out);
 
 	static void PushIndent() { IndentLevel++; };
 	static void PopIndent() { IndentLevel--; };

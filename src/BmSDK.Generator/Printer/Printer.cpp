@@ -20,8 +20,77 @@ void Printer::PrintFile(UClass* _class, ostream& out)
     Printer::Indent(out) << "namespace " << _class->GetPackageNameManaged() << ";" << endl;
     out << endl;
 
-    // Print class declaration
-    Printer::PrintClass(_class, out);
+    // Print type
+    if (((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Interface) != 0)
+    {
+        // Print interface declaration
+        Printer::PrintInterface(_class, out);
+    }
+    else
+    {
+        // Print class declaration
+        Printer::PrintClass(_class, out);
+    }
+}
+
+void Printer::PrintInterface(class UClass* _class, ostream& out)
+{
+    // Print interface comment
+    Printer::Indent(out) << "/// <summary>" << endl;
+    Printer::Indent(out) << "/// Interface: " << _class->GetNameManaged() << "<br/>" << endl;
+    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
+    Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
+    Printer::Indent(out) << "/// </summary>" << endl;
+
+    // Print interface declaration
+    Printer::Indent(out) << "public partial interface " << _class->GetNameManaged();
+
+    // Workaround to prevent Core.Interface from trying to inherit GameObject
+    if (_class->GetPathName() != "Core.Interface" && _class->SuperStruct)
+    {
+        out << " : " << _class->SuperStruct->GetPathNameManaged();
+    }
+    out << endl;
+
+    // Print interface body
+    Printer::Indent(out) << "{" << endl;
+    Printer::PushIndent();
+    {
+        // Print fields
+        UField* fieldLink = _class->Children;
+        for (UField* fieldLink = _class->Children; fieldLink; fieldLink = fieldLink->Next)
+        {
+            if (fieldLink->IsA(UEnum::StaticClass()))
+            {
+                Printer::PrintEnum((UEnum*)fieldLink, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+            else if (fieldLink->IsA(UScriptStruct::StaticClass()))
+            {
+                Printer::PrintStruct((UScriptStruct*)fieldLink, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+            else if (fieldLink->IsA(UFunction::StaticClass()))
+            {
+                Printer::PrintFunction((UFunction*)fieldLink, false, out);
+
+                if (fieldLink->Next)
+                {
+                    out << endl;
+                }
+            }
+        }
+    }
+    Printer::PopIndent();
+    Printer::Indent(out) << "}" << endl;
 }
 
 void Printer::PrintClass(UClass* _class, ostream& out)
@@ -40,9 +109,18 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
     // Print class declaration
     Printer::Indent(out) << "public partial class " << _class->GetNameManaged() << " : ";
+    // Print base class
     if (_class->SuperStruct)
     {
         out << _class->SuperStruct->GetPathNameManaged() << ", ";
+    }
+    // Print implemented interfaces
+    if (_class->Interfaces.Num > 0)
+    {
+        for (int i = 0; i < _class->Interfaces.Num; i++)
+        {
+            out << _class->Interfaces.ElementAt(i).Class->GetPathNameManaged() << ", "; 
+        }
     }
     out << "BmSDK.IGameObject" << endl;
 
@@ -160,7 +238,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
             }
             else if (fieldLink->IsA(UFunction::StaticClass()))
             {
-                Printer::PrintFunction((UFunction*)fieldLink, out);
+                Printer::PrintFunction((UFunction*)fieldLink, true, out);
 
                 if (fieldLink->Next)
                 {
@@ -379,7 +457,7 @@ void Printer::PrintProperty(UProperty* prop, ostream& out)
     Printer::Indent(out) << "}" << endl;
 }
 
-void Printer::PrintFunction(class UFunction* func, ostream& out)
+void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream& out)
 {
     vector<UProperty*> params = {};
     UProperty* returnParam = nullptr;
@@ -468,7 +546,15 @@ void Printer::PrintFunction(class UFunction* func, ostream& out)
             out << ", ";
         }
     }
-    out << ")" << endl;
+    out << ")";
+
+    if (!shouldPrintBody) {
+        out << ";" << endl;
+        return;
+    }
+    else {
+        out << endl;
+    }
 
     // Print func body
     Printer::Indent(out) << "{" << endl;
