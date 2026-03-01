@@ -1,7 +1,15 @@
 using System.Reflection;
+using System.Runtime.InteropServices;
 using BmSDK.Engine;
 
 namespace BmSDK.Framework;
+
+[StructLayout(LayoutKind.Sequential)]
+struct FScriptInterface
+{
+    public IntPtr ObjectPointer;
+    public IntPtr InterfacePointer;
+}
 
 static unsafe class MarshalUtil
 {
@@ -107,10 +115,7 @@ static unsafe class MarshalUtil
                 return;
             }
         }
-        else if (
-            typeof(TManaged).IsAssignableTo(typeof(GameObject))
-            || typeof(TManaged).IsAssignableTo(typeof(Interface))
-        )
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
             if (value is null)
@@ -121,6 +126,13 @@ static unsafe class MarshalUtil
 
             // We already have a pointer to this object's native instance, so just assign it.
             ToUnmanaged(((GameObject)(object)value!).Ptr, data);
+            return;
+        }
+        else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
+        {
+            // For non-native (UnrealScript) interfaces, both pointers are the same.
+            var objPtr = value is null ? IntPtr.Zero : ((GameObject)(object)value!).Ptr;
+            MemUtil.Blit(new FScriptInterface { ObjectPointer = objPtr, InterfacePointer = objPtr }, data);
             return;
         }
 
@@ -142,7 +154,7 @@ static unsafe class MarshalUtil
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
         {
-            return sizeof(IntPtr);
+            return sizeof(FScriptInterface);
         }
 
         throw new NotImplementedException(
