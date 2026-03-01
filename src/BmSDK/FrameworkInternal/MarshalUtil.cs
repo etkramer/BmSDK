@@ -25,6 +25,12 @@ static unsafe class MarshalUtil
     public static TManaged ToManaged<TManaged>(IntPtr data) =>
         ToManaged<TManaged>(data.ToPointer());
 
+    /// <summary>
+    /// Returns a ref to unmanaged data at the specified address.
+    /// </summary>
+    public static ref T AsRef<T>(IntPtr data) where T : unmanaged
+        => ref *(T*)data.ToPointer();
+
     // Marshals unmanaged data to managed, then returns it.
     public static TManaged ToManaged<TManaged>(void* data)
     {

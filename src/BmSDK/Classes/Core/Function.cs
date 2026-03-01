@@ -20,20 +20,12 @@ public partial class Function
     /// <summary>
     /// Property: FunctionFlags
     /// </summary>
-    public unsafe EFunctionFlags FunctionFlags
-    {
-        get => MarshalUtil.ToManaged<EFunctionFlags>(Ptr + 108);
-        set => MarshalUtil.ToUnmanaged(value, (Ptr + 108).ToPointer());
-    }
+    public unsafe ref EFunctionFlags FunctionFlags => ref MarshalUtil.AsRef<EFunctionFlags>(Ptr + 108);
 
     /// <summary>
     /// Property: iNative
     /// </summary>
-    public unsafe ushort iNative
-    {
-        get => MarshalUtil.ToManaged<ushort>(Ptr + 112);
-        set => MarshalUtil.ToUnmanaged(value, (Ptr + 112).ToPointer());
-    }
+    public unsafe ref ushort iNative => ref MarshalUtil.AsRef<ushort>(Ptr + 112);
 
     public IEnumerable<Property> EnumerateParams()
     {

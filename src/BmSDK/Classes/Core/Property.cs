@@ -16,32 +16,20 @@ public partial class Property
     /// <summary>
     /// Property: ArrayDim
     /// </summary>
-    public unsafe int ArrayDim
-    {
-        get => MarshalUtil.ToManaged<int>(Ptr + 48);
-    }
+    public unsafe ref int ArrayDim => ref MarshalUtil.AsRef<int>(Ptr + 48);
 
     /// <summary>
     /// Property: PropertyFlags
     /// </summary>
-    public unsafe EPropertyFlags PropertyFlags
-    {
-        get => MarshalUtil.ToManaged<EPropertyFlags>(Ptr + 52);
-    }
+    public unsafe ref EPropertyFlags PropertyFlags => ref MarshalUtil.AsRef<EPropertyFlags>(Ptr + 52);
 
     /// <summary>
     /// Property: ElementSize
     /// </summary>
-    public ushort ElementSize
-    {
-        get => MarshalUtil.ToManaged<ushort>(Ptr + 52 + 4 + 4);
-    }
+    public unsafe ref ushort ElementSize => ref MarshalUtil.AsRef<ushort>(Ptr + 52 + 4 + 4);
 
     /// <summary>
     /// Property: Offset
     /// </summary>
-    public ushort Offset
-    {
-        get => MarshalUtil.ToManaged<ushort>(Ptr + 52 + 4 + 4 + 2);
-    }
+    public unsafe ref ushort Offset => ref MarshalUtil.AsRef<ushort>(Ptr + 52 + 4 + 4 + 2);
 }

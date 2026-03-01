@@ -23,10 +23,7 @@ public partial class Struct
     /// <summary>
     /// Property: PropertiesSize
     /// </summary>
-    public short PropertiesSize
-    {
-        get => MarshalUtil.ToManaged<short>(Ptr + 64);
-    }
+    public unsafe ref short PropertiesSize => ref MarshalUtil.AsRef<short>(Ptr + 64);
 
     public IEnumerable<Field> EnumerateFields()
     {
