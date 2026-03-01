@@ -1,8 +1,7 @@
-/*
- * A script demonstrating the basic workflow with scripts and common BmSDK APIs.
- */
+//
+// A script demonstrating the basic workflow with scripts and common BmSDK APIs.
+//
 
-using System.Numerics;
 using BmSDK;
 using BmSDK.BmGame;
 using BmSDK.BmScript;
@@ -101,6 +100,11 @@ public class DemoScript : Script
     {
         Debug.Log("Entering game");
 
+        // Prevent corrupting current save slot
+        var saveMan = Game.GetGameRI().SaveGameManager;
+        saveMan.SetActiveStorySlotID(RSaveGameManager.StorySlots.StorySlot_Temp);
+
+        // Enter demo world
         var console = Game.GetConsole();
         console.ConsoleCommand(
             "start batentry?Players=Playable_Batman?" +
