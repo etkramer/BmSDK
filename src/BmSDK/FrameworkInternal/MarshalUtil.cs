@@ -115,6 +115,13 @@ static unsafe class MarshalUtil
                 return;
             }
         }
+        else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
+        {
+            // For non-native (UnrealScript) interfaces, both pointers are the same.
+            var objPtr = value is null ? IntPtr.Zero : ((GameObject)(object)value!).Ptr;
+            MemUtil.Blit(new FScriptInterface { ObjectPointer = objPtr, InterfacePointer = objPtr }, data);
+            return;
+        }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
@@ -126,13 +133,6 @@ static unsafe class MarshalUtil
 
             // We already have a pointer to this object's native instance, so just assign it.
             ToUnmanaged(((GameObject)(object)value!).Ptr, data);
-            return;
-        }
-        else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
-        {
-            // For non-native (UnrealScript) interfaces, both pointers are the same.
-            var objPtr = value is null ? IntPtr.Zero : ((GameObject)(object)value!).Ptr;
-            MemUtil.Blit(new FScriptInterface { ObjectPointer = objPtr, InterfacePointer = objPtr }, data);
             return;
         }
 
