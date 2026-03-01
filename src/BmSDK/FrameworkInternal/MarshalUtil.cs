@@ -6,7 +6,11 @@ namespace BmSDK.Framework;
 static unsafe class MarshalUtil
 {
     [StructLayout(LayoutKind.Sequential)]
-    readonly record struct FScriptInterface(IntPtr ObjectPointer, IntPtr InterfacePointer);
+    struct FScriptInterface
+    {
+        public IntPtr ObjectPointer;
+        public IntPtr InterfacePointer;
+    }
 
     static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
@@ -96,12 +100,6 @@ static unsafe class MarshalUtil
         if (typeof(TManaged).IsValueType)
         {
             MemUtil.Blit(value, data);
-            return;
-        }
-        else if (typeof(TManaged).IsInterface)
-        {
-            var objPtr = value is null ? IntPtr.Zero : ((GameObject)(object)value).Ptr;
-            MemUtil.Blit(new FScriptInterface(objPtr, objPtr), data);
             return;
         }
         else if (

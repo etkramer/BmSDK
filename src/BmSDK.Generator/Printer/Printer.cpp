@@ -21,7 +21,7 @@ void Printer::PrintFile(UClass* _class, ostream& out)
     out << endl;
 
     // Print type
-    if (((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Interface) == (DWORD)EClassFlags::CLASS_Interface)
+    if (((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Interface) != 0)
     {
         // Print interface declaration
         Printer::PrintInterface(_class, out);
