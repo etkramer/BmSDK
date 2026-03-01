@@ -5,6 +5,9 @@ namespace BmSDK.Framework;
 
 static unsafe class MarshalUtil
 {
+    [StructLayout(LayoutKind.Sequential)]
+    readonly record struct FScriptInterface(IntPtr ObjectPointer, IntPtr InterfacePointer);
+
     static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
@@ -95,6 +98,12 @@ static unsafe class MarshalUtil
             MemUtil.Blit(value, data);
             return;
         }
+        else if (typeof(TManaged).IsInterface)
+        {
+            var objPtr = value is null ? IntPtr.Zero : ((GameObject)(object)value).Ptr;
+            MemUtil.Blit(new FScriptInterface(objPtr, objPtr), data);
+            return;
+        }
         else if (
             typeof(TManaged).IsGenericType
             && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
@@ -107,10 +116,7 @@ static unsafe class MarshalUtil
                 return;
             }
         }
-        else if (
-            typeof(TManaged).IsAssignableTo(typeof(GameObject))
-            || typeof(TManaged).IsAssignableTo(typeof(Interface))
-        )
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             // Handle null object references.
             if (value is null)
@@ -136,11 +142,13 @@ static unsafe class MarshalUtil
         {
             return Marshal.SizeOf<TManaged>();
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
+        // Return UE3 internal interface wrapper size
+        else if (typeof(TManaged).IsInterface)
         {
-            return sizeof(IntPtr);
+            return sizeof(FScriptInterface);
         }
-        else if (typeof(TManaged).IsAssignableTo(typeof(Interface)))
+        // Return size of UObject pointer
+        else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {
             return sizeof(IntPtr);
         }
