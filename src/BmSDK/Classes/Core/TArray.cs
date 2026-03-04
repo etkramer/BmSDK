@@ -99,19 +99,12 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         // Grow array (beyond capacity): reallocate array
         if (newNum > Data.Num)
         {
-            // TODO: This doesn't seem right. Isn't AllocatorInstance[0] the first element?
-            // Disable it all for now.
-            throw new NotImplementedException("Array reallocation is not yet implemented!");
-
-            /*var dataPtr = (IntPtr*)Data.AllocatorInstance.ToPointer();
+            // Calculate new capacity (next multiple of current capacity)
             var newMax = ((newNum / Data.Max) + 1) * Data.Max;
-            *dataPtr = GameFunctions.AppRealloc(*dataPtr, newMax * Stride, 8);
-
-            Debug.Log($"Reallocating: {Data.Max} to {newMax}");
-
+            
+            Data.AllocatorInstance = GameFunctions.AppRealloc(Data.AllocatorInstance, newMax * Stride, 8);
             Data.Num = newNum;
             Data.Max = newMax;
-            return;*/
         }
     }
 
