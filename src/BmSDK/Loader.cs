@@ -129,7 +129,7 @@ static class Loader
                 // Call OnTick() for script components
                 if (Actor.AllScriptComponents.Count > 0)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents)
+                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
                     {
                         Debug.RunWithSender(
                             scriptComponent.GetType().Name,
