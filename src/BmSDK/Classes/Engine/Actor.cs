@@ -9,7 +9,7 @@ public partial class Actor
     /// <summary>
     /// Collection of all ScriptComponent instances attached to every actor.
     /// </summary>
-    public static IReadOnlyList<IScriptComponent> AllScriptComponents => s_scriptComponents;
+    public static IReadOnlyCollection<IScriptComponent> AllScriptComponents => s_scriptComponents;
 
     static readonly List<IScriptComponent> s_scriptComponents = [];
 
