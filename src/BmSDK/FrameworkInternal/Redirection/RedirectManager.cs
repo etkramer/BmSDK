@@ -38,7 +38,7 @@ static class RedirectManager
     /// </summary>
     /// <returns>True, if the function had been registered for redirection;
     /// false, otherwise</returns>
-    public static bool TryConfiureFunction(Function func)
+    public static bool TryConfigureFunction(Function func)
     {
         if (s_redirectFuncs.Contains(func.GetPathName()))
         {
@@ -95,7 +95,7 @@ static class RedirectManager
         }
 
         // Get redirects applicable to current function
-        var redirs = AquireRedirects(selfObj, funcPath);
+        var redirs = AcquireRedirects(selfObj, funcPath);
         if (!redirs.Any())
         {
             return false;
@@ -121,7 +121,7 @@ static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    static IEnumerable<IGenericRedirect> AquireRedirects(GameObject selfObj, string funcPath)
+    static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath)
         => Local.GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
             .Concat(Global.GetRedirectors(selfObj, funcPath));

@@ -54,7 +54,7 @@ static class Loader
             DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
                 GameInfo.FuncOffsets.EngineTick,
                 EngineTickDetour);
-        
+
         _ConditionalPostLoadDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
                 GameInfo.FuncOffsets.ConditionalPostLoad,
@@ -164,7 +164,7 @@ static class Loader
                 return;
             }
 
-            RedirectManager.TryConfiureFunction(func);
+            RedirectManager.TryConfigureFunction(func);
         });
     }
 

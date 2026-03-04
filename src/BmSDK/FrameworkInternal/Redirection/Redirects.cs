@@ -5,7 +5,7 @@ namespace BmSDK.Framework.Redirection;
 /// <summary>
 /// Defines the API contract for any kind of redirect no matter the backing implementation.
 /// This is used to generalize global and local redirects when queuing them in
-/// <see cref="RedirectManager.AquireRedirects(GameObject, string)"/>.
+/// <see cref="RedirectManager.AcquireRedirects(GameObject, string)"/>.
 /// </summary>
 interface IGenericRedirect
 {
