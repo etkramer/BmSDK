@@ -127,14 +127,13 @@ static class Loader
                 ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnTick));
 
                 // Call OnTick() for script components
-                if (Actor.AllScriptComponents.Count > 0)
+                var scriptComponents = Actor.AllScriptComponents;
+                for (var i = scriptComponents.Count - 1; i >= 0; i--)
                 {
-                    foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
-                    {
-                        Debug.RunWithSender(
-                            scriptComponent.GetType().Name,
-                            scriptComponent.OnTick);
-                    }
+                    Debug.RunWithSender(
+                        scriptComponents[i].GetType().Name,
+                        scriptComponents[i].OnTick
+                    );
                 }
             }
 
