@@ -311,7 +311,7 @@ static class ScriptManager
     }
 
     /// <summary>
-    /// Instatiates all Scripts in the specified assembly.
+    /// Instantiates all Scripts in the specified assembly.
     /// </summary>
     /// <param name="asm">The assembly to search for script types. Only types that inherit from Script and are decorated with
     /// ScriptAttribute are considered.</param>
