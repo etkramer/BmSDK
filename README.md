@@ -4,7 +4,7 @@
 <img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
 
 ## 📖 About
-BmSDK is a scripting platform for Batman: Arkham City, allowing you to extend the game with C# scripts for custom gameplay and logic.
+BmSDK is a scripting platform for Batman: Arkham City, allowing you to extend the game with C# code for custom gameplay and logic.
 
 It provides a full game-mapped API _(RPlayerController, WorldInfo, RGameRI, etc.)_ along with utilities for interacting with the game world. It also provides **lifecycle and input events** (script start, enter menu/game, tick, button press, etc.). Check out the [wiki](../../wiki) for more info!
 
