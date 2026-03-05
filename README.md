@@ -10,7 +10,7 @@ It provides a full game-mapped API _(RPlayerController, WorldInfo, RGameRI, etc.
 
 ---
 
-## 🚀 Getting started (for users)
+## 🚀 Getting started
 If you just want to run script mods (not create them), getting started is simple:
 1. Download and install the [.NET 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
 2. Download the latest release from [releases](../../releases/latest) and open the .zip file.
@@ -25,7 +25,7 @@ If you have a Steam or GOG copy of the game, you'll have to install a compatibil
 ---
 
 ## 🧩 Setting Up for Mod Development
-Follow these steps to set up your environment for building, running, and debugging mods:
+Follow these steps to set up your environment for building, running, and debugging script mods:
 1. Go to [visualstudio.microsoft.com/downloads](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Stable) and run the Visual Studio Installer.
 2. In the Visual Studio Installer, select "**.NET desktop development**" from the _Workloads_ tab.
 3. Follow all the steps in the [user setup](#-getting-started-for-users), except you can skip installing .NET because it's already included with Visual Studio.
