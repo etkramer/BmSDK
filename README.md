@@ -1,24 +1,26 @@
 # BmSDK
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 
-## 📖 About
 <img height="656" alt="Screenshot 2025-08-23 at 5 05 46 PM" src="https://github.com/user-attachments/assets/75e1de77-5805-4bde-b25c-ddc9481c49d3" />
 
-BmSDK is a **C# scripting system** for Batman: Arkham City that lets you create mods with custom gameplay and logic. It provides a full game-mapped API _(RPlayerController, WorldInfo, RGameRI, etc.)_ along with utilities for interacting with the game world. It also provides **lifecycle and input events** (script start, enter menu/game, tick, button press, etc.). Check out the [wiki](../../wiki) for more info!
+## 📖 About
+BmSDK is a scripting platform for Batman: Arkham City, allowing you to extend the game with C# scripts providing custom gameplay and logic.
+
+It provides a full game-mapped API _(RPlayerController, WorldInfo, RGameRI, etc.)_ along with utilities for interacting with the game world. It also provides **lifecycle and input events** (script start, enter menu/game, tick, button press, etc.). Check out the [wiki](../../wiki) for more info!
 
 ---
 
 ## 🚀 Getting started (for users)
 If you just want to run script mods (not create them), getting started is simple:
-1. Download and install [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
+1. Download and install the [.NET 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.3-windows-x86-installer) if you haven't already. Make sure you get the 32-bit version (x86), even if you have a 64-bit computer.
 2. Download the latest release from [releases](../../releases/latest) and open the .zip file.
-3. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both into your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). Your game folder should already contain folders with these names.
+3. Inside you'll see two folders: `Binaries` and `BmGame`. Copy both to your game folder (likely `C:\Program Files\Epic Games\BatmanArkhamCity`). There should already be 2 folders in there with the same names.
 4. Done, BmSDK is installed! Now to install script mods, simply drop any .cs files into your `BmGame\Scripts` folder.
 
 Keep in mind that script mods can potentially harm your computer. Make sure you only download and install scripts from trusted sources.
 
-### ⚠️ Notice for non-Epic Games Store users:
-If you have a Steam or GOG copy of the game, you'll need to install a compatibility patch. You can find it alongside the [latest release](../../releases/latest). Extract the ZIP and copy the `Binaries` folder into your game directory. When prompted, replace `BatmanAC.exe` — it's a good idea to back up the original first.
+### ⚠️ Notice for Steam or GOG users:
+If you have a Steam or GOG copy of the game, you'll have to install a compatibility patch. You can find it next to the [latest release](../../releases/latest), just replace the `BatmanAC.exe` from your game folder (see below) with the one provided. It's a good idea to make a backup first.
 
 ---
 
@@ -32,8 +34,8 @@ Follow these steps to set up your environment for building, running, and debuggi
 6. Run your code by pressing **F5** in Visual Studio.
 7. Follow the [wiki](../../wiki/Creating-your-first-mod) to write your first script.
 
-## 🛠️ Preparing to Extend BmSDK Itself
-To set up your environment for modifying and building BmSDK itself, see the wiki: [Building BmSDK](../../wiki/Building-BmSDK)
+## 🛠️ Contributing
+To get started contributing to BmSDK, see the wiki for instructions: [Building BmSDK](../../wiki/Building-BmSDK)
 
 ---
 
