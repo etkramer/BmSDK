@@ -20,7 +20,7 @@ static class DllMain
         return true;
     }
 
-    static void InitRuntime()
+    static unsafe void InitRuntime()
     {
         Offsets.BaseAddress = (nuint)PInvoke.GetModuleHandle(default(PCWSTR)).Value;
         PInvokeDetours.DetourRestoreAfterWith();
