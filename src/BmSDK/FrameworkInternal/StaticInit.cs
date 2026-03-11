@@ -14,7 +14,7 @@ static partial class StaticInit
         }
 
         // Debug.LogWarning($"Couldn't find managed type for class '{classPath}'");
-        return typeof(IntrinsicDummy);
+        return typeof(GameObject);
     }
 
     public static string GetClassPathForManagedType(Type type)
