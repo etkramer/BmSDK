@@ -12,14 +12,23 @@ public partial class Sequence
     public IEnumerable<TClass> FindSeqObjectsByClass<TClass>(bool recursive)
         where TClass : SequenceObject
     {
-        var seqObjs = SequenceObjects.OfType<TClass>();
+        foreach (var seqObj in SequenceObjects.OfType<TClass>())
+        {
+            yield return seqObj;
+        }
 
         if (!recursive || NestedSequences.Count == 0)
         {
-            return seqObjs;
+            yield break;
         }
 
-        return seqObjs.Concat(NestedSequences.SelectMany(s => s.FindSeqObjectsByClass<TClass>(true)));
+        foreach (var subSeq in NestedSequences)
+        {
+            foreach (var seqObj in subSeq.FindSeqObjectsByClass<TClass>(true))
+            {
+                yield return seqObj;
+            }
+        }
     }
 
     /// <summary>
@@ -33,13 +42,22 @@ public partial class Sequence
     public IEnumerable<TClass> FindActiveSeqOpsByClass<TClass>(bool recursive)
         where TClass : SequenceOp
     {
-        var seqOps = ActiveSequenceOps.OfType<TClass>();
+        foreach (var seqOp in ActiveSequenceOps.OfType<TClass>())
+        {
+            yield return seqOp;
+        }
 
         if (!recursive || NestedSequences.Count == 0)
         {
-            return seqOps;
+            yield break;
         }
 
-        return seqOps.Concat(NestedSequences.SelectMany(s => s.FindActiveSeqOpsByClass<TClass>(true)));
+        foreach (var subSeq in NestedSequences)
+        {
+            foreach (var seqOp in subSeq.FindActiveSeqOpsByClass<TClass>(true))
+            {
+                yield return seqOp;
+            }
+        }
     }
 }
