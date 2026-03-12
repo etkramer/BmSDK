@@ -13,7 +13,7 @@ static partial class StaticInit
             return res;
         }
 
-        // Debug.LogWarning($"Couldn't find managed type for class '{classPath}'");
+        Debug.LogWarning($"Couldn't find managed type for class '{classPath}'");
         return typeof(GameObject);
     }
 
