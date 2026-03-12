@@ -81,7 +81,7 @@ void Runtime::LoadClassesIntoMemory() {
         // match if these are present anywhere
         L"ShaderCache|"
         // match if these are at the start
-        L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery"
+        L"^Anim_|^Bio_|^CS_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery"
         L")",
         regex_constants::icase);
 
