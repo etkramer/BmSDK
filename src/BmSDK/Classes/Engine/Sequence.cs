@@ -7,9 +7,9 @@ public partial class Sequence
     /// and optionally its nested sequences as well.
     /// </summary>
     /// <typeparam name="TClass">SequenceObject type to filter for</typeparam>
-    /// <param name="recursive">Whether to search nested sequences too</param>
+    /// <param name="isRecursive">Whether to search nested sequences too</param>
     /// <returns>Collection of sequence objects of the specified type in the sequence</returns>
-    public IEnumerable<TClass> FindSeqObjectsByClass<TClass>(bool recursive)
+    public IEnumerable<TClass> FindSeqObjectsByClass<TClass>(bool isRecursive)
         where TClass : SequenceObject
     {
         foreach (var seqObj in SequenceObjects.OfType<TClass>())
@@ -17,7 +17,7 @@ public partial class Sequence
             yield return seqObj;
         }
 
-        if (!recursive || NestedSequences.Count == 0)
+        if (!isRecursive || NestedSequences.Count == 0)
         {
             yield break;
         }
@@ -37,9 +37,9 @@ public partial class Sequence
     /// This is useful when searching for currently active SeqActs.
     /// </summary>
     /// <typeparam name="TClass">SequenceOp type to filter for</typeparam>
-    /// <param name="recursive">Whether to search nested sequences too</param>
+    /// <param name="isRecursive">Whether to search nested sequences too</param>
     /// <returns>Collection of sequence ops of the specified type in the sequence</returns>
-    public IEnumerable<TClass> FindActiveSeqOpsByClass<TClass>(bool recursive)
+    public IEnumerable<TClass> FindActiveSeqOpsByClass<TClass>(bool isRecursive)
         where TClass : SequenceOp
     {
         foreach (var seqOp in ActiveSequenceOps.OfType<TClass>())
@@ -47,7 +47,7 @@ public partial class Sequence
             yield return seqOp;
         }
 
-        if (!recursive || NestedSequences.Count == 0)
+        if (!isRecursive || NestedSequences.Count == 0)
         {
             yield break;
         }
