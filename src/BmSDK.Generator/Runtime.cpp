@@ -73,16 +73,16 @@ void Runtime::LoadClassesIntoMemory() {
     TRACE("Loading all UPKs into memory");
 
     const wregex packageFilter(
+        L"(?:"
+        // These packages are always loaded
         // exact match these names
-        // these packages are always loaded
-        L"(?:^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
-        // match if Playable_ is NOT present, but _SF is
-        // SeekFree packages don't contain classes
-        L"^(?!Playable_).*_SF$|"
+        L"^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
+        // These packages never contain classes
         // match if these are present anywhere
-        L"_Lights|_CLights|_Audio|_LOD|_Px|ShaderCache|"
+        L"ShaderCache|"
         // match if these are at the start
-        L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery)",
+        L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery"
+        L")",
         regex_constants::icase);
 
     const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
