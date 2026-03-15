@@ -1,0 +1,100 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// Class: Path_WithinDistanceEnvelope<br/>
+/// (size = 80)
+/// (flags = 134217874)
+/// </summary>
+public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.Path_WithinDistanceEnvelope", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal Path_WithinDistanceEnvelope() { }
+
+    /// <summary>
+    /// Constructs a new Path_WithinDistanceEnvelope
+    /// </summary>
+    public Path_WithinDistanceEnvelope(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Path_WithinDistanceEnvelope Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected Path_WithinDistanceEnvelope(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// Function: Recycle
+    /// </summary>
+    public unsafe void Recycle()
+    {
+        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_WithinDistanceEnvelope.Recycle", true);
+        byte* paramsPtr = stackalloc byte[0];
+        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
+        return;
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxDistance
+    /// </summary>
+    public unsafe float MaxDistance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinDistance
+    /// </summary>
+    public unsafe float MinDistance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSoft
+    /// </summary>
+    public unsafe bool bSoft
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 1) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bOnlyThrowOutNodesThatLeaveEnvelope
+    /// </summary>
+    public unsafe bool bOnlyThrowOutNodesThatLeaveEnvelope
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 2) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SoftStartPenalty
+    /// </summary>
+    public unsafe float SoftStartPenalty
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+
+    /// <summary>
+    /// StructProperty: EnvelopeTestPoint
+    /// </summary>
+    public unsafe System.Numerics.Vector3 EnvelopeTestPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+}

@@ -1,0 +1,31 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// ABSTRACT Class: SeqAct_SetSequenceVariable<br/>
+/// (size = 204)
+/// (flags = 134226067)
+/// </summary>
+public partial class SeqAct_SetSequenceVariable : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.SeqAct_SetSequenceVariable", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal SeqAct_SetSequenceVariable() { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected SeqAct_SetSequenceVariable(nint ptr) : base(ptr) { }
+
+}

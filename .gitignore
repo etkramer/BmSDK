@@ -19,9 +19,6 @@
 # Mono auto generated files
 mono_crash.*
 
-# Generated SDK files
-/src/BmSDK/Generated/*
-
 # Non-SDK game files
 /bin/*
 !bin/BmGame/

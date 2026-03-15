@@ -1,0 +1,36 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RDmgType_KillZone<br/>
+/// (size = 120)
+/// (flags = 18)
+/// </summary>
+public partial class RDmgType_KillZone : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RDmgType_KillZone", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RDmgType_KillZone() { }
+
+    /// <summary>
+    /// Constructs a new RDmgType_KillZone
+    /// </summary>
+    public RDmgType_KillZone(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDmgType_KillZone Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RDmgType_KillZone(nint ptr) : base(ptr) { }
+
+}

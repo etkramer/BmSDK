@@ -1,0 +1,116 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// Class: LandscapeHeightfieldCollisionComponent<br/>
+/// (size = 520)
+/// (flags = 2290090130)
+/// </summary>
+public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.LandscapeHeightfieldCollisionComponent", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal LandscapeHeightfieldCollisionComponent() { }
+
+    /// <summary>
+    /// Constructs a new LandscapeHeightfieldCollisionComponent
+    /// </summary>
+    public LandscapeHeightfieldCollisionComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, LandscapeHeightfieldCollisionComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected LandscapeHeightfieldCollisionComponent(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// StructProperty: CollisionHeightData
+    /// </summary>
+    public unsafe BmSDK.GameObject.FUntypedBulkData_Mirror CollisionHeightData
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FUntypedBulkData_Mirror>(Ptr + 404); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+    }
+
+    /// <summary>
+    /// IntProperty: SectionBaseX
+    /// </summary>
+    public unsafe int SectionBaseX
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+
+    /// <summary>
+    /// IntProperty: SectionBaseY
+    /// </summary>
+    public unsafe int SectionBaseY
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
+
+    /// <summary>
+    /// IntProperty: CollisionSizeQuads
+    /// </summary>
+    public unsafe int CollisionSizeQuads
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CollisionScale
+    /// </summary>
+    public unsafe float CollisionScale
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: CollisionQuadFlags
+    /// </summary>
+    public unsafe BmSDK.TArray<byte> CollisionQuadFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: PhysicalMaterials
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.Engine.PhysicalMaterial> PhysicalMaterials
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.PhysicalMaterial>>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
+
+    /// <summary>
+    /// StructProperty: RBHeightfield
+    /// </summary>
+    public unsafe System.IntPtr RBHeightfield
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+    }
+
+    /// <summary>
+    /// StructProperty: CachedBoxSphereBounds
+    /// </summary>
+    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 492); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+    }
+}

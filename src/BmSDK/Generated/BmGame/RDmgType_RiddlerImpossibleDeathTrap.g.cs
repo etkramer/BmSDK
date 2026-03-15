@@ -1,0 +1,36 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RDmgType_RiddlerImpossibleDeathTrap<br/>
+/// (size = 120)
+/// (flags = 18)
+/// </summary>
+public partial class RDmgType_RiddlerImpossibleDeathTrap : BmSDK.BmGame.RDmgType_ElectricFloor, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RDmgType_RiddlerImpossibleDeathTrap", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RDmgType_RiddlerImpossibleDeathTrap() { }
+
+    /// <summary>
+    /// Constructs a new RDmgType_RiddlerImpossibleDeathTrap
+    /// </summary>
+    public RDmgType_RiddlerImpossibleDeathTrap(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDmgType_RiddlerImpossibleDeathTrap Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RDmgType_RiddlerImpossibleDeathTrap(nint ptr) : base(ptr) { }
+
+}

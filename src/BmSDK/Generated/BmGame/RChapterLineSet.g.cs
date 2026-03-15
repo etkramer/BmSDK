@@ -1,0 +1,93 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RChapterLineSet<br/>
+/// (size = 56)
+/// (flags = 134230162)
+/// </summary>
+public partial class RChapterLineSet : BmSDK.GameObject, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RChapterLineSet", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RChapterLineSet() { }
+
+    /// <summary>
+    /// Constructs a new RChapterLineSet
+    /// </summary>
+    public RChapterLineSet(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RChapterLineSet Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RChapterLineSet(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ArrayProperty: ChapterLines
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RChapterLineSet.FChapterLineDefinition> ChapterLines
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RChapterLineSet.FChapterLineDefinition>>(Ptr + 44); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
+
+    /// <summary>
+    /// Struct: FChapterLineDefinition
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 12)]
+    public partial record struct FChapterLineDefinition
+    {
+        /// <summary>
+        /// FloatProperty: Weight
+        /// </summary>
+        public unsafe float Weight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// ObjectProperty: ChapterDialogueLine
+        /// </summary>
+        public unsafe BmSDK.Engine.RDialogueLine ChapterDialogueLine
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDialogueLine>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: UseWeight
+        /// </summary>
+        public unsafe float UseWeight
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+
+    /// <summary>
+    /// Enum: EFaction
+    /// </summary>
+    public enum EFaction
+    {
+        FACTION_None = 0,
+        FACTION_All = 1,
+        FACTION_Joker = 2,
+        FACTION_Penguin = 3,
+        FACTION_TwoFace = 4,
+        FACTION_Tyger = 5,
+        FACTION_Outcast = 6,
+        FACTION_MAX = 7,
+    }
+}
