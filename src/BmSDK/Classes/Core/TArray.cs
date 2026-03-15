@@ -8,7 +8,7 @@ namespace BmSDK;
 
 internal interface IArray
 {
-    IntPtr Ptr { get; set; }
+    IntPtr Ptr { get; }
 }
 
 public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
@@ -23,7 +23,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     internal ref NativeData Data => ref *(NativeData*)Ptr.ToPointer();
 
-    public IntPtr Ptr { get; set; } = IntPtr.Zero;
+    public IntPtr Ptr { get; private set; } = IntPtr.Zero;
 
     readonly bool _ownsMemory;
 
