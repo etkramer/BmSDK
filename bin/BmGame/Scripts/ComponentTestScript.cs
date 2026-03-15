@@ -14,13 +14,7 @@ using BmSDK.Engine;
 public class SpinningComponent : ScriptComponent<SkeletalMeshActor>
 {
     const int DegreesToRotate = 360;
-
-    public override void OnAttach()
-        => Debug.Log($"SpinningComponent attached to {Owner}");
-
-    public override void OnDetach()
-        => Debug.Log($"SpinningComponent detached from {Owner}");
-
+    
     public override void OnTick()
     {
         // Rotate the actor a bit every tick

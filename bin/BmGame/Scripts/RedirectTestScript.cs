@@ -14,10 +14,6 @@ public static class GlobalRedirects
 [ScriptComponent]
 public sealed class RegenReductionComponent : ScriptComponent<RPawnPlayer>
 {
-    public override void OnAttach() => Debug.Log("RegenReductionComponent attached to player pawn!");
-
-    public override void OnDetach() => Debug.Log("RegenReductionComponent detached to player pawn!");
-
     // Local redirect which only applies to actors with the script component attached
     // Overrides the global redirect
     [ComponentRedirect(nameof(RPawnPlayer.ExperienceAwarded))]
