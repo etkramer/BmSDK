@@ -195,7 +195,7 @@ static unsafe class MarshalUtil
         // Get the managed type through the class object
         var managedType = !classFlags.HasFlag(Class.EClassFlags.CLASS_Interface)
             ? StaticInit.GetManagedTypeForClassPath(GetClassPath(classPtr))
-            : typeof(GameObject);   // Wrap CDOs of interfaces as GameObject
+            : typeof(GameObject); // Wrap CDOs of interfaces as GameObject
 
         // Wrap this object in a managed instance
         return CreateManagedWrapper(objPtr, managedType);

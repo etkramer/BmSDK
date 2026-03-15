@@ -21,42 +21,48 @@ namespace BmSDK.Framework;
 static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp14;
-    public static readonly CSharpParseOptions ParseOptions = CSharpParseOptions.Default.WithLanguageVersion(LangVer);
-    public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies = ReferenceAssemblies.Net100.References.All;
+    public static readonly CSharpParseOptions ParseOptions =
+        CSharpParseOptions.Default.WithLanguageVersion(LangVer);
+    public static readonly ImmutableArray<PortableExecutableReference> DotNetAssemblies =
+        ReferenceAssemblies.Net100.References.All;
     public static readonly ImmutableList<MetadataReference> MetadataReferences =
-        [
-            .. DotNetAssemblies,
-            // MoreLINQ.dll
-            MetadataReference.CreateFromFile(typeof(MoreLinq.MoreEnumerable).Assembly.Location),
-            // BmSDK.dll
-            MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
-        ];
+    [
+        .. DotNetAssemblies,
+        // MoreLINQ.dll
+        MetadataReference.CreateFromFile(typeof(MoreLinq.MoreEnumerable).Assembly.Location),
+        // BmSDK.dll
+        MetadataReference.CreateFromFile(typeof(GameObject).Assembly.Location),
+    ];
     public const string GlobalUsings = """
-                global using global::System;
-                global using global::System.Collections.Generic;
-                global using global::System.IO;
-                global using global::System.Linq;
-                global using global::System.Net.Http;
-                global using global::System.Threading;
-                global using global::System.Threading.Tasks;
+        global using global::System;
+        global using global::System.Collections.Generic;
+        global using global::System.IO;
+        global using global::System.Linq;
+        global using global::System.Net.Http;
+        global using global::System.Threading;
+        global using global::System.Threading.Tasks;
 
-                global using global::BmSDK.Framework;
-                """;
+        global using global::BmSDK.Framework;
+        """;
     public const string GlobalUsingsPath = "Scripts.GlobalUsings.g.cs";
-    public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(GlobalUsings, ParseOptions, GlobalUsingsPath);
+    public static readonly SyntaxTree GlobalUsingsTree = CSharpSyntaxTree.ParseText(
+        GlobalUsings,
+        ParseOptions,
+        GlobalUsingsPath
+    );
     public static readonly CSharpCompilationOptions CompilerOptions = new(
         OutputKind.DynamicallyLinkedLibrary,
         platform: Platform.X86,
-        allowUnsafe: true);
+        allowUnsafe: true
+    );
     public const string TargetName = "Scripts.dll";
 
     static readonly FileSystemWatcher s_watcher = new(FileUtils.GetScriptsPath())
     {
         Filter = "*.cs",
         IncludeSubdirectories = true,
-        NotifyFilter = NotifyFilters.LastWrite
-                                 | NotifyFilters.FileName
-                                 | NotifyFilters.DirectoryName
+        NotifyFilter =
+            NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
     };
     const int DebounceMillis = 500;
     static readonly Timer s_debounceTimer = new(ApplyScriptChangesCallback);
@@ -117,21 +123,23 @@ static class ScriptManager
         var asm = scriptsAlc.LoadFromStream(emitStream);
 
         // Register scripts on main thread
-        EngineSynchronizationContext.Instance.Post(_ =>
-        {
-            RemoveOldScripts();
-            s_scriptsAlc = scriptsAlc;
-            RedirectManager.Global.RegisterRedirectors(asm);
-            ScriptComponentManager.RegisterTypes(asm);
-            s_scripts.AddRange(CreateScriptInstances(asm));
-            if (s_isInitialized)
+        EngineSynchronizationContext.Instance.Post(
+            _ =>
             {
-                RedirectManager.ConfigureAllRedirectedFunctions();
-                ScriptComponentManager.AutoAttachTypesToExistingActors();
-                s_scripts.ForEach(script => script.OnLoad());
-            }
-        },
-        state: null);
+                RemoveOldScripts();
+                s_scriptsAlc = scriptsAlc;
+                RedirectManager.Global.RegisterRedirectors(asm);
+                ScriptComponentManager.RegisterTypes(asm);
+                s_scripts.AddRange(CreateScriptInstances(asm));
+                if (s_isInitialized)
+                {
+                    RedirectManager.ConfigureAllRedirectedFunctions();
+                    ScriptComponentManager.AutoAttachTypesToExistingActors();
+                    s_scripts.ForEach(script => script.OnLoad());
+                }
+            },
+            state: null
+        );
 
         return true;
     }
@@ -197,20 +205,21 @@ static class ScriptManager
         // If no scripts found, return false
         if (sourceFilePaths.Count == 0)
         {
-            Debug.LogWarning($"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}");
+            Debug.LogWarning(
+                $"No script files found in .\\{Path.GetRelativePath(baseDir, scriptDir)}"
+            );
             return null;
         }
 
         // Parse C# sources with Roslyn
         var syntaxTrees = sourceFilePaths
-            .Select(filePath => CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath))
+            .Select(filePath =>
+                CSharpSyntaxTree.ParseText(File.ReadAllText(filePath), ParseOptions, filePath)
+            )
             .ToList();
 
         // Parse generated sources (for global usings, etc.)
-        syntaxTrees.Insert(
-            index: 0,
-            GlobalUsingsTree
-        );
+        syntaxTrees.Insert(index: 0, GlobalUsingsTree);
 
         Debug.Log(
             $"Compiling {sourceFilePaths.Count} {CommonUtils.FormatPlural(sourceFilePaths.Count, "script")}"
@@ -268,7 +277,8 @@ static class ScriptManager
             var shortPath = Path.GetRelativePath(scriptsDir, filePath);
             Debug.LogError(
                 $"{shortPath}: {errorsByFilePath[filePath].Length} errors:",
-                skipSender: true);
+                skipSender: true
+            );
 
             foreach (var error in errorsByFilePath[filePath])
             {
@@ -291,7 +301,8 @@ static class ScriptManager
                 // Print error.
                 Debug.LogError(
                     $"  {locationText}{error.Id}: {error.GetMessage()}",
-                    skipSender: true);
+                    skipSender: true
+                );
             }
         }
 
@@ -361,8 +372,8 @@ static class ScriptManager
         s_watcher.EnableRaisingEvents = true;
     }
 
-    static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e)
-        => s_debounceTimer.Change(DebounceMillis, Timeout.Infinite);
+    static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e) =>
+        s_debounceTimer.Change(DebounceMillis, Timeout.Infinite);
 
     static void ApplyScriptChangesCallback(object? state)
     {

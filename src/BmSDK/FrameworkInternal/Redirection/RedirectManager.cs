@@ -12,7 +12,8 @@ static class RedirectManager
     public static readonly GlobalRedirectManager Global = new(GenericRedirSearchFlags);
     public static readonly LocalRedirectManager Local = new(GenericRedirSearchFlags);
 
-    const BindingFlags GenericRedirSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
+    const BindingFlags GenericRedirSearchFlags =
+        BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>
     /// A unique set of all function paths that have been redirected.
@@ -53,8 +54,8 @@ static class RedirectManager
     /// Configures any given UFunction for redirects. Should only be run, when sure that
     /// the function is actually redirected and after the function has been serialized.
     /// </summary>
-    public static void ConfigureFunction(Function func)
-        => func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
+    public static void ConfigureFunction(Function func) =>
+        func.FunctionFlags |= Function.EFunctionFlags.FUNC_Defined;
 
     /// <summary>
     /// Configures every registered UFunction object for redirection.
@@ -74,7 +75,13 @@ static class RedirectManager
     /// <returns>True, if any redirector was found and executed; false if not.
     /// As a consequence, the original should be called if false is returned.</returns>
     /// <see cref="Loader.ProcessInternalDetour(nint, nint, nint)"/>
-    public static unsafe bool ExecuteRedirector(GameObject selfObj, Function funcObj, string funcPath, FFrame* stackPtr, IntPtr Result)
+    public static unsafe bool ExecuteRedirector(
+        GameObject selfObj,
+        Function funcObj,
+        string funcPath,
+        FFrame* stackPtr,
+        IntPtr Result
+    )
     {
         // Prevent infinite recursion: if top of stack is the function object, treat as reentry
         if (s_redirectCalls.TryPeek(out var lastCall))
@@ -121,8 +128,9 @@ static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath)
-        => Local.GetRedirectors(selfObj, funcPath)
+    static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath) =>
+        Local
+            .GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()
             .Concat(Global.GetRedirectors(selfObj, funcPath));
 

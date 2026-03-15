@@ -153,10 +153,7 @@ public static partial class Game
     /// <summary>
     /// Spawns a new actor of the given pawn and character types.
     /// </summary>
-    public static TPawn? SpawnCharacter<TPawn, TCharacter>(
-        Vector3 Position,
-        Rotator Rotation
-    )
+    public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
         where TPawn : RBMPawnAI, IGameObject
         where TCharacter : RCharacter, IGameObject
     {

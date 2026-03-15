@@ -197,5 +197,6 @@ static class GameFunctions
 
     public static EngineTickDelegate EngineTick =>
         _EngineTick ??= Marshal.GetDelegateForFunctionPointer<EngineTickDelegate>(
-            MemUtil.GetIntPointer(GameInfo.FuncOffsets.EngineTick));
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.EngineTick)
+        );
 }

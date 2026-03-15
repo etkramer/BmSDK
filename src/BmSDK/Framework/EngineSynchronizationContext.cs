@@ -15,6 +15,7 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
     /// from other threads as the current SynchronizationContext is thread-dependent.
     /// </summary>
     public static readonly EngineSynchronizationContext Instance = new();
+
     internal static void InitOnThread() => SetSynchronizationContext(Instance);
 
     /// <summary>
@@ -63,22 +64,24 @@ public sealed class EngineSynchronizationContext : SynchronizationContext
         ExceptionDispatchInfo? capturedException = null;
 
         // Passthrough callback to main thread
-        Post(_ =>
-        {
-            try
+        Post(
+            _ =>
             {
-                d(state);
-            }
-            catch (Exception exception)
-            {
-                capturedException = ExceptionDispatchInfo.Capture(exception);
-            }
-            finally
-            {
-                done.Set();
-            }
-        },
-        state: null);
+                try
+                {
+                    d(state);
+                }
+                catch (Exception exception)
+                {
+                    capturedException = ExceptionDispatchInfo.Capture(exception);
+                }
+                finally
+                {
+                    done.Set();
+                }
+            },
+            state: null
+        );
 
         // Block the calling thread until main thread finished
         done.Wait();

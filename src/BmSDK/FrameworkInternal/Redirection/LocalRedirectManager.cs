@@ -18,14 +18,19 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// This is done to reduce reflection on ScriptComponent attach.
     /// </summary>
     readonly Dictionary<Type, List<CachedLocalRedirector>> _cachedLocalRedirDefinitionDict = [];
+
     /// <summary>
     /// Maps pointers to target Actors and declaring function paths of redirected functions
     /// to LocalRedirectorInfo instances. This allows for per Actor/ScriptComponent function redirects.
     /// </summary>
-    readonly Dictionary<(IntPtr ObjPtr, string FuncPath), List<LocalRedirectorInfo>> _localRedirsDict = [];
+    readonly Dictionary<
+        (IntPtr ObjPtr, string FuncPath),
+        List<LocalRedirectorInfo>
+    > _localRedirsDict = [];
+
     /// <summary>
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
-    /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>  
+    /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>
     /// </summary>
     readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> _componentRedirsDict = [];
 
@@ -51,7 +56,10 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
             }
 
             // Get actual path that will be called by UE3
-            var targetFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
+            var targetFuncPath = StaticInit.GetDeclaringFuncPath(
+                targetType,
+                redirAttr.TargetMethod
+            );
 
             RedirectManager.QueueConfigureFunction(targetFuncPath);
             redirectors.Add(new CachedLocalRedirector(targetType, targetFuncPath, func));
@@ -64,7 +72,9 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 
         if (!_cachedLocalRedirDefinitionDict.TryAdd(componentType, redirectors))
         {
-            throw new InvalidOperationException("Tried to cache a ScriptComponent type's redirectors twice.");
+            throw new InvalidOperationException(
+                "Tried to cache a ScriptComponent type's redirectors twice."
+            );
         }
     }
 
@@ -81,7 +91,8 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var info = new LocalRedirectorInfo(
             component,
             cachedRedir.RedirectMethod,
-            cachedRedir.Invoker);
+            cachedRedir.Invoker
+        );
 
         // Track redirs per object for easy searches in ProcessInternal
         if (!_localRedirsDict.TryGetValue(key, out var infos))
@@ -142,7 +153,13 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Executes a local redirect from its record instance and the data available in UObject::ProcessInternal().
     /// </summary>
-    public unsafe void ExecuteRedirector(LocalRedirectorInfo localRedirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    public unsafe void ExecuteRedirector(
+        LocalRedirectorInfo localRedirInfo,
+        GameObject selfObj,
+        Function funcObj,
+        FFrame* stackPtr,
+        IntPtr Result
+    )
     {
         var redirFunc = localRedirInfo.RedirectMethod;
 
@@ -150,9 +167,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
         var args = stackPtr->ParamsToManaged(localRedirInfo.ParamTypes).ToArray();
 
         // Execute detour
-        var result = localRedirInfo.Invoker.Invoke(
-            obj: localRedirInfo.Component,
-            arguments: args);
+        var result = localRedirInfo.Invoker.Invoke(obj: localRedirInfo.Component, arguments: args);
 
         // Marshal result back (if non-void)
         if (result != null && redirFunc.ReturnType != typeof(void))

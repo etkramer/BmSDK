@@ -4,7 +4,6 @@ namespace BmSDK;
 
 public partial class GameObject
 {
-
     /// <summary>
     /// Returns a reference to the global objects array. Should not be used directly - see <see cref="FindObjectsSlow"/> instead.
     /// </summary>

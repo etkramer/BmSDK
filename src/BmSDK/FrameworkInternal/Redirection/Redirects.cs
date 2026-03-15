@@ -27,11 +27,8 @@ interface IGenericRedirect
 /// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
 /// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-sealed record GlobalRedirectorInfo(
-    Type TargetType,
-    bool AllowSubtypes,
-    MethodInfo RedirectMethod
-) : IGenericRedirect
+sealed record GlobalRedirectorInfo(Type TargetType, bool AllowSubtypes, MethodInfo RedirectMethod)
+    : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 
@@ -39,16 +36,17 @@ sealed record GlobalRedirectorInfo(
 
     public Type[] GetParamTypes(Function func)
     {
-        _paramTypes ??= RedirectMethod.GetParameters()
-                .Select(param => param.ParameterType)
-                .Skip(func.IsStatic ? 0 : 1)
-                .ToArray();
+        _paramTypes ??= RedirectMethod
+            .GetParameters()
+            .Select(param => param.ParameterType)
+            .Skip(func.IsStatic ? 0 : 1)
+            .ToArray();
 
         return _paramTypes;
     }
 
-    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
-        => RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result) =>
+        RedirectManager.Global.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
 
 /// <summary>
@@ -67,13 +65,10 @@ sealed record LocalRedirectorInfo(
     /// Gathers managed parameter types using the redirector
     /// </summary>
     public Type[] ParamTypes { get; } =
-        RedirectMethod
-            .GetParameters()
-            .Select(param => param.ParameterType)
-            .ToArray();
+        RedirectMethod.GetParameters().Select(param => param.ParameterType).ToArray();
 
-    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result)
-        => RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
+    public unsafe void Run(GameObject selfObj, Function funcObj, FFrame* stackPtr, nint Result) =>
+        RedirectManager.Local.ExecuteRedirector(this, selfObj, funcObj, stackPtr, Result);
 }
 
 /// <summary>
@@ -84,7 +79,11 @@ sealed record LocalRedirectorInfo(
 /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
 /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-readonly record struct CachedLocalRedirector(Type TargetType, string FuncPath, MethodInfo RedirectMethod)
+readonly record struct CachedLocalRedirector(
+    Type TargetType,
+    string FuncPath,
+    MethodInfo RedirectMethod
+)
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 }
@@ -101,6 +100,6 @@ sealed record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRe
 {
     int _currIndex = 0;
 
-    public IGenericRedirect? NextRedirect()
-        => _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
+    public IGenericRedirect? NextRedirect() =>
+        _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;
 }

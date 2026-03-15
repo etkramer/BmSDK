@@ -27,8 +27,7 @@ static class Loader
     /// This is done when FEngineLoop::PreInit() is executed.
     /// </summary>
     [UnmanagedCallersOnly]
-    public static void GuardedDllMain()
-        => Debug.RunWithSender("Loader", () => RunGuarded(DllMain));
+    public static void GuardedDllMain() => Debug.RunWithSender("Loader", () => RunGuarded(DllMain));
 
     static void DllMain()
     {
@@ -45,25 +44,27 @@ static class Loader
         ScriptManager.Init();
 
         // Create function detours
-        _ProcessInternalDetourBase =
-            DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
-                GameInfo.FuncOffsets.ProcessInternal,
-                ProcessInternalDetour);
+        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+            GameInfo.FuncOffsets.ProcessInternal,
+            ProcessInternalDetour
+        );
 
-        _EngineTickDetourBase =
-            DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-                GameInfo.FuncOffsets.EngineTick,
-                EngineTickDetour);
+        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+            GameInfo.FuncOffsets.EngineTick,
+            EngineTickDetour
+        );
 
         _ConditionalPostLoadDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
                 GameInfo.FuncOffsets.ConditionalPostLoad,
-                ConditionalPostLoadDetour);
+                ConditionalPostLoadDetour
+            );
 
         _ConditionalDestroyDetourBase =
             DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
                 GameInfo.FuncOffsets.ConditionalDestroy,
-                ConditionalDestroyDetour);
+                ConditionalDestroyDetour
+            );
     }
 
     static IntPtr EngineTickDetour(IntPtr self)
@@ -90,21 +91,27 @@ static class Loader
             // Notify scripts of game init
             if (!s_hasGameInited && funcName == InitFuncName)
             {
-                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.Main));
+                ScriptManager.Scripts.ForEach(script =>
+                    Debug.RunWithSender(script.Name, script.Main)
+                );
                 s_hasGameInited = true;
             }
 
             // Notify scripts of game start
             if (!s_hasGameStarted && funcName == EnterMenuFuncName)
             {
-                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterMenu));
+                ScriptManager.Scripts.ForEach(script =>
+                    Debug.RunWithSender(script.Name, script.OnEnterMenu)
+                );
                 s_hasGameStarted = true;
             }
 
             // Notify scripts of game begin play
             if (funcName == EnterGameFuncName)
             {
-                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnEnterGame));
+                ScriptManager.Scripts.ForEach(script =>
+                    Debug.RunWithSender(script.Name, script.OnEnterGame)
+                );
             }
 
             // Auto-attach script components to newly spawned actors
@@ -124,16 +131,16 @@ static class Loader
                 GameWindow.Tick();
 
                 // Call OnTick() for scripts
-                ScriptManager.Scripts.ForEach(script => Debug.RunWithSender(script.Name, script.OnTick));
+                ScriptManager.Scripts.ForEach(script =>
+                    Debug.RunWithSender(script.Name, script.OnTick)
+                );
 
                 // Call OnTick() for script components
                 if (Actor.AllScriptComponents.Count > 0)
                 {
                     foreach (var scriptComponent in Actor.AllScriptComponents.ToArray())
                     {
-                        Debug.RunWithSender(
-                            scriptComponent.GetType().Name,
-                            scriptComponent.OnTick);
+                        Debug.RunWithSender(scriptComponent.GetType().Name, scriptComponent.OnTick);
                     }
                 }
             }
