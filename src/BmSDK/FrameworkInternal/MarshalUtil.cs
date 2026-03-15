@@ -49,15 +49,14 @@ internal static unsafe class MarshalUtil
             var elementType = typeof(TManaged).GetGenericArguments()[0];
             var arrayType = typeof(TArray<>).MakeGenericType(elementType);
 
-            var ctor = arrayType.GetConstructor(
-                BindingFlags.Instance | BindingFlags.NonPublic,
-                null,
-                [typeof(IntPtr)],
-                null
-            );
-
             var instance = Guard.NotNull(
-                ctor?.Invoke([(IntPtr)data]),
+                Activator.CreateInstance(
+                    arrayType,
+                    BindingFlags.Instance | BindingFlags.NonPublic,
+                    null,
+                    [(IntPtr)data],
+                    null
+                ),
                 $"Couldn't create an instance of array 0x{new IntPtr(data):X}"
             );
 
