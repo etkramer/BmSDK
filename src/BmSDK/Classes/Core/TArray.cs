@@ -101,8 +101,12 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         {
             // Calculate new capacity (next multiple of current capacity)
             var newMax = ((newNum / Data.Max) + 1) * Data.Max;
-            
-            Data.AllocatorInstance = GameFunctions.AppRealloc(Data.AllocatorInstance, newMax * Stride, 8);
+
+            Data.AllocatorInstance = GameFunctions.AppRealloc(
+                Data.AllocatorInstance,
+                newMax * Stride,
+                8
+            );
             Data.Num = newNum;
             Data.Max = newMax;
         }
