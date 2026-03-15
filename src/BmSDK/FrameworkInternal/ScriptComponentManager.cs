@@ -131,26 +131,29 @@ static class ScriptComponentManager
         if (componentType.IsGenericType)
         {
             throw new ArgumentException(
-                $"ScriptComponents with generic type parameters " +
-                $"cannot use AutoAttach: {componentType.FullName}");
+                $"ScriptComponents with generic type parameters "
+                    + $"cannot use AutoAttach: {componentType.FullName}"
+            );
         }
 
         // We need a default constructor to auto instantiate
         if (componentType.GetConstructor(Type.EmptyTypes) == null)
         {
             throw new ArgumentException(
-                $"ScriptComponents without a public, parameterless constructor " +
-                $"cannot use AutoAttach: {componentType.FullName}");
+                $"ScriptComponents without a public, parameterless constructor "
+                    + $"cannot use AutoAttach: {componentType.FullName}"
+            );
         }
 
         // Warning for backwards compatibility
         if (componentType.IsAssignableTo(typeof(ScriptComponent)))
         {
             Debug.LogWarning(
-                $"{componentType.FullName} enables AutoAttach and inherits ScriptComponent.\n" +
-                $"This means implicitly that the component will auto-attach to ALL actors.\n" +
-                $"Extend ScriptComponent<Actor> to hide this warning if this behavior is intended!",
-                skipSender: true);
+                $"{componentType.FullName} enables AutoAttach and inherits ScriptComponent.\n"
+                    + $"This means implicitly that the component will auto-attach to ALL actors.\n"
+                    + $"Extend ScriptComponent<Actor> to hide this warning if this behavior is intended!",
+                skipSender: true
+            );
         }
 
         if (!s_autoAttachTypes.TryGetValue(targetClass, out var types))
@@ -204,8 +207,8 @@ static class ScriptComponentManager
 
     /// <inheritdoc cref="GetAutoAttachTypesByActor(Type)"/>
     /// <param name="actor">The object of whose class to scan for auto-attach components.</param>
-    static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor)
-        => GetAutoAttachTypesByActor(actor.GetType());
+    static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor) =>
+        GetAutoAttachTypesByActor(actor.GetType());
 
     /// <summary>
     /// Attempts to auto-attach eligible script components to the specified actor
@@ -227,7 +230,8 @@ static class ScriptComponentManager
                 {
                     Debug.LogError(
                         $"Failed to auto-attach {componentType.Name} to '{actor.GetFullName()}': \n{e.Message}",
-                        skipSender: true);
+                        skipSender: true
+                    );
                 }
             }
         }

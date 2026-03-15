@@ -4,7 +4,8 @@ namespace BmSDK.Framework;
 
 static partial class StaticInit
 {
-    const BindingFlags FuncSearchFlags = BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public;
+    const BindingFlags FuncSearchFlags =
+        BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public;
 
     public static Type GetManagedTypeForClassPath(string classPath)
     {
@@ -49,11 +50,10 @@ static partial class StaticInit
     /// <param name="methodName">The name of the method to seach for</param>
     /// <returns>The declaring type</returns>
     /// <exception cref="ArgumentException">If the method couldn't be found.</exception>
-    public static Type GetDeclaringTypeForMethod(Type type, string methodName)
-        => Guard.NotNull(
-                EnumerateSelfAndSupers(type)
-                    .FirstOrDefault(super =>
-                        super.GetMethod(methodName, FuncSearchFlags) != null),
+    public static Type GetDeclaringTypeForMethod(Type type, string methodName) =>
+        Guard.NotNull(
+            EnumerateSelfAndSupers(type)
+                .FirstOrDefault(super => super.GetMethod(methodName, FuncSearchFlags) != null),
             $"{type.Name} and its supers have no declaration of the method '{methodName}'."
         );
 

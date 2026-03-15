@@ -34,18 +34,16 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         if (!targetType.IsAssignableTo(typeof(GameObject)))
         {
             throw new ArgumentException(
-                $"{targetType.FullName} is not a managed type of" +
-                $"an in-game unmanaged type and cannot be redirected.");
+                $"{targetType.FullName} is not a managed type of"
+                    + $"an in-game unmanaged type and cannot be redirected."
+            );
         }
 
         // Get the full path of the function (as originally declared).
         var declaringFuncPath = StaticInit.GetDeclaringFuncPath(targetType, redirAttr.TargetMethod);
 
         // Store the redirect for later use.
-        var redirInfo = new GlobalRedirectorInfo(
-            targetType,
-            redirAttr.AllowSubtypes,
-            redirectMi);
+        var redirInfo = new GlobalRedirectorInfo(targetType, redirAttr.AllowSubtypes, redirectMi);
 
         // Add new redirect to the target function's redirect list
         if (_globalRedirsDict.TryGetValue(declaringFuncPath, out var redirects))
@@ -53,8 +51,8 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             if (redirects.Any(r => r.RedirectMethod == redirInfo.RedirectMethod))
             {
                 throw new InvalidOperationException(
-                    $"{redirInfo} has already been registered once" +
-                    $"on {declaringFuncPath}!");
+                    $"{redirInfo} has already been registered once" + $"on {declaringFuncPath}!"
+                );
             }
         }
         else
@@ -107,7 +105,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
             {
                 return objType.IsAssignableTo(info.TargetType);
             }
-            
+
             return objType == info.TargetType;
         });
     }
@@ -115,7 +113,13 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <summary>
     /// Executes a global redirect from its record instance and the data available in UObject::ProcessInternal().
     /// </summary>
-    public unsafe void ExecuteRedirector(GlobalRedirectorInfo redirInfo, GameObject selfObj, Function funcObj, FFrame* stackPtr, IntPtr Result)
+    public unsafe void ExecuteRedirector(
+        GlobalRedirectorInfo redirInfo,
+        GameObject selfObj,
+        Function funcObj,
+        FFrame* stackPtr,
+        IntPtr Result
+    )
     {
         var redirMethod = redirInfo.RedirectMethod;
 
@@ -127,9 +131,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
         }
 
         // Execute detour
-        var result = redirInfo.Invoker.Invoke(
-            obj: null,
-            arguments: args.ToArray());
+        var result = redirInfo.Invoker.Invoke(obj: null, arguments: args.ToArray());
 
         // Marshal result back (if non-void)
         if (result != null && redirMethod.ReturnType != typeof(void))

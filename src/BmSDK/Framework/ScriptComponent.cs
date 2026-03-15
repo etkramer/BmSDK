@@ -20,6 +20,7 @@ public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
 {
     /// <inheritdoc cref="IScriptComponent.Owner"/>
     public TActor Owner { get; private set; } = null!;
+
     /// <inheritdoc/>
     Actor IScriptComponent.Owner
     {
@@ -28,7 +29,9 @@ public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
         {
             if (value is not null and not TActor)
             {
-                throw new InvalidCastException($"{value.GetType().Name} is incompatible with {GetType().Name}");
+                throw new InvalidCastException(
+                    $"{value.GetType().Name} is incompatible with {GetType().Name}"
+                );
             }
 
             Owner = (TActor?)value!;
@@ -37,8 +40,10 @@ public abstract class ScriptComponent<TActor> : IScriptComponent<TActor>
 
     /// <inheritdoc/>
     public virtual void OnAttach() { }
+
     /// <inheritdoc/>
     public virtual void OnDetach() { }
+
     /// <inheritdoc/>
     public virtual void OnTick() { }
 }

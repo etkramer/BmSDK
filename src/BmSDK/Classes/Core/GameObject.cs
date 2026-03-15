@@ -4,7 +4,7 @@ namespace BmSDK;
 
 public interface IGameObject
 {
-    abstract static Class StaticClass();
+    static abstract Class StaticClass();
 }
 
 public partial class GameObject

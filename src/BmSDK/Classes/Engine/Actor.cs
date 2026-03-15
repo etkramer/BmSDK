@@ -33,11 +33,13 @@ public partial class Actor
         // Store new component
         if (!_scriptComponents.TryAdd(component.GetType(), component))
         {
-            throw new ArgumentException("This actor already contains a ScriptComponent of this type");
+            throw new ArgumentException(
+                "This actor already contains a ScriptComponent of this type"
+            );
         }
 
         s_scriptComponents.Add(component);
-        
+
         component.Owner = this;
 
         // Register any [ComponentRedirect] methods on this component
@@ -60,22 +62,25 @@ public partial class Actor
         if (!type.IsClass || type.IsAbstract || type.ContainsGenericParameters)
         {
             throw new ArgumentException(
-                $"{type.FullName}: ScriptComponents that are attached " +
-                $"by their types must be non-genric, non-abstract classes.");
+                $"{type.FullName}: ScriptComponents that are attached "
+                    + $"by their types must be non-genric, non-abstract classes."
+            );
         }
 
         if (type.GetConstructor(Type.EmptyTypes) == null)
         {
             throw new ArgumentException(
-                $"{type.FullName}: ScriptComponents that are attached by" +
-                $"their types must contain a public, parameterless constructor");
+                $"{type.FullName}: ScriptComponents that are attached by"
+                    + $"their types must contain a public, parameterless constructor"
+            );
         }
 
         if (!type.IsAssignableTo(typeof(IScriptComponent)))
         {
             throw new ArgumentException(
-                $"{type.FullName}: A class you want to attach as a " +
-                $"ScriptComponent must inherit from ScriptComponent<TActor>.");
+                $"{type.FullName}: A class you want to attach as a "
+                    + $"ScriptComponent must inherit from ScriptComponent<TActor>."
+            );
         }
 
         var component = (IScriptComponent)Guard.NotNull(Activator.CreateInstance(type));
@@ -86,14 +91,12 @@ public partial class Actor
     /// <summary>
     /// Checks if the Actor has the specified ScriptComponent instance attached to itself.
     /// </summary>
-    internal bool HasScriptComponent(IScriptComponent component)
-        => component.Owner == this;
+    internal bool HasScriptComponent(IScriptComponent component) => component.Owner == this;
 
     /// <summary>
     /// Checks if the Actor has a ScriptComponent of a specific type attached.
     /// </summary>
-    internal bool HasScriptComponent(Type type)
-        => _scriptComponents.ContainsKey(type);
+    internal bool HasScriptComponent(Type type) => _scriptComponents.ContainsKey(type);
 
     /// <summary>
     /// Gets an attached ScriptComponent instance by its type.
@@ -147,8 +150,8 @@ public partial class Actor
     /// <summary>
     /// Unregisters all script components attached to the actor.
     /// </summary>
-    internal void DetachAllScriptComponents()
-        => ScriptComponents.ToArray().ForEach(DetachScriptComponent);
+    internal void DetachAllScriptComponents() =>
+        ScriptComponents.ToArray().ForEach(DetachScriptComponent);
 
     /// <inheritdoc cref="GameObject.Clone"/>
     public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);

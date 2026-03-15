@@ -38,7 +38,9 @@ public interface IScriptComponent
     {
         if (Owner == null)
         {
-            throw new InvalidOperationException("Cannot detach ScriptComponent that is not attached to any Actor");
+            throw new InvalidOperationException(
+                "Cannot detach ScriptComponent that is not attached to any Actor"
+            );
         }
 
         Owner.DetachScriptComponent(this);
@@ -62,4 +64,5 @@ public interface IScriptComponent
 
 /// <inheritdoc/>
 /// <typeparam name="TActor">The type of actor this script component attaches to. Must inherit from <see cref="Actor"/>.</typeparam>
-public interface IScriptComponent<in TActor> : IScriptComponent where TActor : Actor;
+public interface IScriptComponent<in TActor> : IScriptComponent
+    where TActor : Actor;
