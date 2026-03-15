@@ -1,0 +1,36 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RSeqEvent_CombatTarget<br/>
+/// (size = 228)
+/// (flags = 18)
+/// </summary>
+public partial class RSeqEvent_CombatTarget : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RSeqEvent_CombatTarget", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RSeqEvent_CombatTarget() { }
+
+    /// <summary>
+    /// Constructs a new RSeqEvent_CombatTarget
+    /// </summary>
+    public RSeqEvent_CombatTarget(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqEvent_CombatTarget Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RSeqEvent_CombatTarget(nint ptr) : base(ptr) { }
+
+}

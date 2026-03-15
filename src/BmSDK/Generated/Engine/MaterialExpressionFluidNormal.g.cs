@@ -1,0 +1,36 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// Class: MaterialExpressionFluidNormal<br/>
+/// (size = 92)
+/// (flags = 134226066)
+/// </summary>
+public partial class MaterialExpressionFluidNormal : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.MaterialExpressionFluidNormal", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal MaterialExpressionFluidNormal() { }
+
+    /// <summary>
+    /// Constructs a new MaterialExpressionFluidNormal
+    /// </summary>
+    public MaterialExpressionFluidNormal(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MaterialExpressionFluidNormal Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected MaterialExpressionFluidNormal(nint ptr) : base(ptr) { }
+
+}
