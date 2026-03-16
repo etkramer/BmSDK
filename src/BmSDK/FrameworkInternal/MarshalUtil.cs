@@ -222,6 +222,9 @@ internal static unsafe class MarshalUtil
                 actor.DetachAllScriptComponents();
             }
 
+            // Mark managed wrapper as invalid
+            obj.Ptr = IntPtr.Zero;
+
             // Remove managed wrapper from storage
             s_managedObjects.Remove(objPtr);
         }

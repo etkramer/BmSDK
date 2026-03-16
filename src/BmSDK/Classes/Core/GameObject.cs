@@ -19,25 +19,9 @@ public partial class GameObject
 
     /// <summary>
     /// Returns true if this object is "alive", false if it has been destroyed or garbage collected on the UE3 side.
+    /// If false, this object is unsafe to access or call any methods on.
     /// </summary>
-    public bool IsValid()
-    {
-        // Behavior ported from UObject::IsValid().
-        if (Ptr == IntPtr.Zero)
-        {
-            return false;
-        }
-        else if (ObjectInternalInteger >= GObjects.Count || ObjectInternalInteger < 0)
-        {
-            return false;
-        }
-        else if (GObjects[(int)ObjectInternalInteger] != Ptr)
-        {
-            return false;
-        }
-
-        return true;
-    }
+    public bool IsValid => Ptr != IntPtr.Zero;
 
     /// <summary>
     /// Enumerates all objects in this object's outer chain.
