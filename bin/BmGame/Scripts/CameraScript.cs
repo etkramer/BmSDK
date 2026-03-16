@@ -59,7 +59,7 @@ class CameraController(RPlayerControllerCombat controller0, RPlayerControllerCom
 
     public void Tick()
     {
-        if (!Controller0.IsValid() || !Controller1.IsValid())
+        if (!Controller0.IsValid || !Controller1.IsValid)
         {
             return;
         }

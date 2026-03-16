@@ -255,7 +255,7 @@ internal static class ScriptComponentManager
         foreach (var actor in GameObject.FindObjectsSlow<Actor>())
         {
             // Skip GC'd actors
-            if (!actor.IsValid())
+            if (!actor.IsValid)
             {
                 continue;
             }

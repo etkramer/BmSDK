@@ -21,7 +21,7 @@ public class AsyncTestScript : Script
             // NOTE: Now we may manipulate the game
             PrintCurrentThread();   // IsMainThread: true
             var rpc = Game.GetPlayerController();
-            if (!rpc.IsValid())
+            if (!rpc.IsValid)
             {
                 return;
             }
