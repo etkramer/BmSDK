@@ -45,13 +45,10 @@ internal static unsafe class MarshalUtil
             && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
         )
         {
-            // Create TArray wrapper using internal constructor (non-owning)
-            var elementType = typeof(TManaged).GetGenericArguments()[0];
-            var arrayType = typeof(TArray<>).MakeGenericType(elementType);
-
+            // Create new TArray wrapper every time - duplicates will still refer to the same native object.
             var instance = Guard.NotNull(
                 Activator.CreateInstance(
-                    arrayType,
+                    typeof(TManaged),
                     BindingFlags.Instance | BindingFlags.NonPublic,
                     null,
                     [(IntPtr)data],
