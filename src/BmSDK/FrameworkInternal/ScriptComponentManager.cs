@@ -26,7 +26,8 @@ internal static class ScriptComponentManager
     /// Populated by <see cref="RegisterAutoAttachType(Type, Type, bool)"/> and used by
     /// <see cref="TryAutoAttachComponents(Actor)"/> and <see cref="AutoAttachTypesToExistingActors"/>
     /// </summary>
-    private static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes = [];
+    private static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes =
+    [];
 
     /// <summary>
     /// Registers all <see cref="ScriptComponent"/>s in the specified assembly that are marked with
@@ -125,7 +126,11 @@ internal static class ScriptComponentManager
     /// Must derive from Actor.</param>
     /// <param name="allowSubtypes">Flag whether the component should auto-attach to
     /// child classes of <paramref name="targetClass"/>.</param>
-    private static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
+    private static void RegisterAutoAttachType(
+        Type componentType,
+        Type targetClass,
+        bool allowSubtypes
+    )
     {
         // We can't auto instantiate generic types
         if (componentType.IsGenericType)

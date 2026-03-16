@@ -27,8 +27,11 @@ internal interface IGenericRedirect
 /// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
 /// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-internal sealed record GlobalRedirectorInfo(Type TargetType, bool AllowSubtypes, MethodInfo RedirectMethod)
-    : IGenericRedirect
+internal sealed record GlobalRedirectorInfo(
+    Type TargetType,
+    bool AllowSubtypes,
+    MethodInfo RedirectMethod
+) : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 
@@ -96,7 +99,11 @@ internal readonly record struct CachedLocalRedirector(
 /// <param name="TargetFunc">Method being redirected</param>
 /// <param name="Redirs">Each redirect that still exists for the
 /// particular call of <paramref name="TargetFunc"/></param>
-internal sealed record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
+internal sealed record RedirectCall(
+    GameObject TargetObj,
+    Function TargetFunc,
+    IGenericRedirect[] Redirs
+)
 {
     private int _currIndex = 0;
 

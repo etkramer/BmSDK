@@ -10,14 +10,18 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    private readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
+    private readonly BindingFlags _localRedirSearchFlags =
+        BindingFlags.Instance | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps ScriptComponent types to Lists of CachedLocalRedirector instances.
     /// One object is created per method marked with <see cref="ComponentRedirectAttribute"/>.
     /// This is done to reduce reflection on ScriptComponent attach.
     /// </summary>
-    private readonly Dictionary<Type, List<CachedLocalRedirector>> _cachedLocalRedirDefinitionDict = [];
+    private readonly Dictionary<
+        Type,
+        List<CachedLocalRedirector>
+    > _cachedLocalRedirDefinitionDict = [];
 
     /// <summary>
     /// Maps pointers to target Actors and declaring function paths of redirected functions

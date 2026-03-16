@@ -128,7 +128,10 @@ internal static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    private static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath) =>
+    private static IEnumerable<IGenericRedirect> AcquireRedirects(
+        GameObject selfObj,
+        string funcPath
+    ) =>
         Local
             .GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()

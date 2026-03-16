@@ -9,7 +9,8 @@ namespace BmSDK.Framework.Redirection;
 /// </summary>
 internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    private readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
+    private readonly BindingFlags _globalRedirSearchFlags =
+        BindingFlags.Static | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps declaring function paths to GlobalRedirectorInfo objects which contain
