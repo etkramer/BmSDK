@@ -2,9 +2,9 @@ using System.Reflection;
 
 namespace BmSDK.Framework;
 
-static partial class StaticInit
+internal static partial class StaticInit
 {
-    const BindingFlags FuncSearchFlags =
+    private const BindingFlags FuncSearchFlags =
         BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public;
 
     public static Type GetManagedTypeForClassPath(string classPath)

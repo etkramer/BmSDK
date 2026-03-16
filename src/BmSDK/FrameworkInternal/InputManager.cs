@@ -1,9 +1,9 @@
 namespace BmSDK.Framework;
 
-static class InputManager
+internal static class InputManager
 {
-    static readonly bool[] s_keyStates = new bool[255];
-    static readonly bool[] s_keyStatesPrev = new bool[255];
+    private static readonly bool[] s_keyStates = new bool[255];
+    private static readonly bool[] s_keyStatesPrev = new bool[255];
 
     public static void Tick()
     {
@@ -40,7 +40,7 @@ static class InputManager
         }
     }
 
-    static bool IsValidKey(Keys key)
+    private static bool IsValidKey(Keys key)
     {
         return (int)key >= 0 && (int)key <= 255;
     }

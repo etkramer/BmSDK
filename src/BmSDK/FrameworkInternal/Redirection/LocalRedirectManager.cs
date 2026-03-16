@@ -8,22 +8,22 @@ namespace BmSDK.Framework.Redirection;
 /// which only apply to Actors with specific <see cref="ScriptComponent{TActor}"/>s attached.
 /// DO NOT INSTANTIATE! USE <see cref="RedirectManager.Local"/> INSTEAD.
 /// </summary>
-sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
+internal sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
+    private readonly BindingFlags _localRedirSearchFlags = BindingFlags.Instance | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps ScriptComponent types to Lists of CachedLocalRedirector instances.
     /// One object is created per method marked with <see cref="ComponentRedirectAttribute"/>.
     /// This is done to reduce reflection on ScriptComponent attach.
     /// </summary>
-    readonly Dictionary<Type, List<CachedLocalRedirector>> _cachedLocalRedirDefinitionDict = [];
+    private readonly Dictionary<Type, List<CachedLocalRedirector>> _cachedLocalRedirDefinitionDict = [];
 
     /// <summary>
     /// Maps pointers to target Actors and declaring function paths of redirected functions
     /// to LocalRedirectorInfo instances. This allows for per Actor/ScriptComponent function redirects.
     /// </summary>
-    readonly Dictionary<
+    private readonly Dictionary<
         (IntPtr ObjPtr, string FuncPath),
         List<LocalRedirectorInfo>
     > _localRedirsDict = [];
@@ -32,7 +32,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Maps ScriptComponents to Lists of keys for <see cref="_localRedirsDict"/>.
     /// This is used for cleanup inside of <see cref="Actor.DetachScriptComponent(IScriptComponent)"/>
     /// </summary>
-    readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> _componentRedirsDict = [];
+    private readonly Dictionary<IScriptComponent, List<(IntPtr, string)>> _componentRedirsDict = [];
 
     /// <summary>
     /// Finds and stores component redirector methods defined on the specified ScriptComponent type.
@@ -84,7 +84,7 @@ sealed class LocalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// <param name="component">ScriptComponent that adds the redirectors to the Actor.
     /// The script component must already be attached!</param>
     /// <param name="cachedRedir">The redirect to register</param>
-    void RegisterRedirector(IScriptComponent component, CachedLocalRedirector cachedRedir)
+    private void RegisterRedirector(IScriptComponent component, CachedLocalRedirector cachedRedir)
     {
         var key = (component.Owner.Ptr, cachedRedir.FuncPath);
 

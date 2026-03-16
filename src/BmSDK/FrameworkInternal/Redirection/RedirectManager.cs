@@ -7,25 +7,25 @@ namespace BmSDK.Framework.Redirection;
 /// A class managing the registered detours of all mods.
 /// It stores the registered <see cref="GlobalRedirectManager"/> and <see cref="LocalRedirectManager"/>.
 /// </summary>
-static class RedirectManager
+internal static class RedirectManager
 {
     public static readonly GlobalRedirectManager Global = new(GenericRedirSearchFlags);
     public static readonly LocalRedirectManager Local = new(GenericRedirSearchFlags);
 
-    const BindingFlags GenericRedirSearchFlags =
+    private const BindingFlags GenericRedirSearchFlags =
         BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.NonPublic;
 
     /// <summary>
     /// A unique set of all function paths that have been redirected.
     /// This is used to set up UFunction objects for redirection.
     /// </summary>
-    static readonly HashSet<string> s_redirectFuncs = [];
+    private static readonly HashSet<string> s_redirectFuncs = [];
 
     /// <summary>
     /// Stack storing the currently running redirect targets.
     /// Used to avoid infinite recursion and allow multiple redirects.
     /// </summary>
-    static readonly Stack<RedirectCall> s_redirectCalls = [];
+    private static readonly Stack<RedirectCall> s_redirectCalls = [];
 
     /// <summary>
     /// Queues a function path to be configured for redirections after
@@ -128,7 +128,7 @@ static class RedirectManager
     /// <summary>
     /// Creates a collection of all redirects that apply to a specific object and method.
     /// </summary>
-    static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath) =>
+    private static IEnumerable<IGenericRedirect> AcquireRedirects(GameObject selfObj, string funcPath) =>
         Local
             .GetRedirectors(selfObj, funcPath)
             .Cast<IGenericRedirect>()

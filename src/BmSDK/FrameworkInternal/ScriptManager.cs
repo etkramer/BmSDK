@@ -18,7 +18,7 @@ namespace BmSDK.Framework;
 /// loaded scripts and exposes options and configuration relevant to script compilation. This class is intended for
 /// internal use and is not thread-safe. Scripts are loaded into a collectible AssemblyLoadContext, allowing for
 /// complete unloading and reloading of scripts without restarting the application.</remarks>
-static class ScriptManager
+internal static class ScriptManager
 {
     public const LanguageVersion LangVer = LanguageVersion.CSharp14;
     public static readonly CSharpParseOptions ParseOptions =
@@ -57,22 +57,22 @@ static class ScriptManager
     );
     public const string TargetName = "Scripts.dll";
 
-    static readonly FileSystemWatcher s_watcher = new(FileUtils.GetScriptsPath())
+    private static readonly FileSystemWatcher s_watcher = new(FileUtils.GetScriptsPath())
     {
         Filter = "*.cs",
         IncludeSubdirectories = true,
         NotifyFilter =
             NotifyFilters.LastWrite | NotifyFilters.FileName | NotifyFilters.DirectoryName,
     };
-    const int DebounceMillis = 500;
-    static readonly Timer s_debounceTimer = new(ApplyScriptChangesCallback);
-    static readonly Lock s_lockObj = new();
+    private const int DebounceMillis = 500;
+    private static readonly Timer s_debounceTimer = new(ApplyScriptChangesCallback);
+    private static readonly Lock s_lockObj = new();
 
-    static AssemblyLoadContext? s_scriptsAlc;
-    static readonly List<Script> s_scripts = [];
+    private static AssemblyLoadContext? s_scriptsAlc;
+    private static readonly List<Script> s_scripts = [];
     public static IEnumerable<Script> Scripts => s_scripts;
 
-    static bool s_isInitialized = false;
+    private static bool s_isInitialized = false;
 
     /// <summary>
     /// Initializes the script system and begins monitoring for script changes.
@@ -91,7 +91,7 @@ static class ScriptManager
         s_isInitialized = true;
     }
 
-    static void PrepareCompilation()
+    private static void PrepareCompilation()
     {
         // Set custom AssemblyResolve so we don't try to load things we already have loaded.
         // TODO: Move to custom AssemblyDependencyResolver for s_scriptsAlc
@@ -109,7 +109,7 @@ static class ScriptManager
     /// script types. Previously loaded scripts are removed before new scripts are loaded. If script compilation fails,
     /// no scripts are loaded and the method returns false.</remarks>
     /// <returns>true if the scripts were successfully compiled and loaded; otherwise, false.</returns>
-    static bool LoadScripts()
+    private static bool LoadScripts()
     {
         // Compile new scripts
         var emitStream = CompileScripts();
@@ -150,7 +150,7 @@ static class ScriptManager
     /// <remarks>This method should be called when scripts need to be fully unloaded and detached from in-game
     /// actors, such as during a reload operation. After execution, the script assembly context is released
     /// and cannot be reused until reinitialized using <see cref="LoadScripts"/>.</remarks>
-    static void RemoveOldScripts()
+    private static void RemoveOldScripts()
     {
         if (s_scriptsAlc == null)
         {
@@ -175,7 +175,7 @@ static class ScriptManager
         GC.WaitForPendingFinalizers();
     }
 
-    static void UnloadScripts()
+    private static void UnloadScripts()
     {
         s_scripts.ForEach(script => script.OnUnload());
         s_scripts.Clear();
@@ -190,7 +190,7 @@ static class ScriptManager
     /// thread (yet).</remarks>
     /// <returns>A <see cref="MemoryStream"/> containing the compiled assembly if compilation succeeds; otherwise, <see
     /// langword="null"/> if no scripts are found or compilation fails.</returns>
-    static MemoryStream? CompileScripts()
+    private static MemoryStream? CompileScripts()
     {
         // Find directories (note we're relative to the host asi)
         var baseDir = FileUtils.GetBasePath();
@@ -263,7 +263,7 @@ static class ScriptManager
     /// by file, and file paths are shown relative to the specified scripts directory to improve readability.</remarks>
     /// <param name="emitResult">The result of the compilation process containing diagnostics to be reported.</param>
     /// <param name="scriptsDir">The root directory used to display relative file paths for error reporting.</param>
-    static void PrintErrors(EmitResult emitResult, string scriptsDir)
+    private static void PrintErrors(EmitResult emitResult, string scriptsDir)
     {
         // Retrieve errors from the emit result.
         var errors = GetErrors(emitResult);
@@ -313,7 +313,7 @@ static class ScriptManager
     /// <summary>
     /// Retrieves all diagnostics from the specified emit result that represent errors or warnings treated as errors.
     /// </summary>
-    static Diagnostic[] GetErrors(EmitResult emitResult)
+    private static Diagnostic[] GetErrors(EmitResult emitResult)
     {
         var diags = emitResult.Diagnostics;
         return diags
@@ -328,7 +328,7 @@ static class ScriptManager
     /// ScriptAttribute are considered.</param>
     /// <returns>A list of Script instances created from the eligible types found in the assembly. The list will be empty if no
     /// matching types are found.</returns>
-    static List<Script> CreateScriptInstances(Assembly asm)
+    private static List<Script> CreateScriptInstances(Assembly asm)
     {
         // Scripts must both extend Script and be marked with [Script].
         var scriptTypes = asm.GetTypes()
@@ -362,7 +362,7 @@ static class ScriptManager
         return scripts;
     }
 
-    static void WatchForScriptChanges()
+    private static void WatchForScriptChanges()
     {
         s_watcher.Changed += OnScriptChangedDebounced;
         s_watcher.Created += OnScriptChangedDebounced;
@@ -372,10 +372,10 @@ static class ScriptManager
         s_watcher.EnableRaisingEvents = true;
     }
 
-    static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e) =>
+    private static void OnScriptChangedDebounced(object sender, FileSystemEventArgs e) =>
         s_debounceTimer.Change(DebounceMillis, Timeout.Infinite);
 
-    static void ApplyScriptChangesCallback(object? state)
+    private static void ApplyScriptChangesCallback(object? state)
     {
         lock (s_lockObj)
         {

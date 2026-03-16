@@ -10,7 +10,7 @@ namespace BmSDK.Framework;
 /// Manages the registration of auto-attach types and the mass unloading of ScriptComponents.
 /// </summary>
 /// <seealso cref="Actor"/>
-static class ScriptComponentManager
+internal static class ScriptComponentManager
 {
     /// <summary>
     /// Stores data about a ScriptComponent type that should be attached when an
@@ -19,14 +19,14 @@ static class ScriptComponentManager
     /// <param name="Component">The component type to auto-atach</param>
     /// <param name="AllowSubtypes">Whether the component should be attached to children
     /// of the target class or only the exact class</param>
-    readonly record struct CachedAutoAttachComponent(Type Component, bool AllowSubtypes);
+    private readonly record struct CachedAutoAttachComponent(Type Component, bool AllowSubtypes);
 
     /// <summary>
     /// Maps Actor types to Lists of ScriptComponents that will auto-attach.
     /// Populated by <see cref="RegisterAutoAttachType(Type, Type, bool)"/> and used by
     /// <see cref="TryAutoAttachComponents(Actor)"/> and <see cref="AutoAttachTypesToExistingActors"/>
     /// </summary>
-    static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes = [];
+    private static readonly Dictionary<Type, List<CachedAutoAttachComponent>> s_autoAttachTypes = [];
 
     /// <summary>
     /// Registers all <see cref="ScriptComponent"/>s in the specified assembly that are marked with
@@ -61,7 +61,7 @@ static class ScriptComponentManager
     /// <param name="actorType">Actor type the ScriptComponent applies to.
     /// <see langword="null"/> if the type is not a ScriptComponent.</param>
     /// <returns>Whether <paramref name="type"/> is a valid ScriptComponent</returns>
-    static bool IsTypeAScriptComponent(
+    private static bool IsTypeAScriptComponent(
         Type type,
         [MaybeNullWhen(false)] out ScriptComponentAttribute attribute,
         [MaybeNullWhen(false)] out Type actorType
@@ -95,7 +95,7 @@ static class ScriptComponentManager
     /// </summary>
     /// <param name="type">The type whose inheritance hierarchy is searched for a ScriptComponent base class.</param>
     /// <returns>The type argument of the nearest ScriptComponent base class if found; otherwise, null.</returns>
-    static Type? TryGetComponentActorType(Type type)
+    private static Type? TryGetComponentActorType(Type type)
     {
         for (var cur = type.BaseType; cur != null; cur = cur.BaseType)
         {
@@ -125,7 +125,7 @@ static class ScriptComponentManager
     /// Must derive from Actor.</param>
     /// <param name="allowSubtypes">Flag whether the component should auto-attach to
     /// child classes of <paramref name="targetClass"/>.</param>
-    static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
+    private static void RegisterAutoAttachType(Type componentType, Type targetClass, bool allowSubtypes)
     {
         // We can't auto instantiate generic types
         if (componentType.IsGenericType)
@@ -181,7 +181,7 @@ static class ScriptComponentManager
     /// </summary>
     /// <param name="actorClass">The type for which to retrieve auto-attached component types.
     /// Should derive from <see cref="Actor"/>.</param>
-    static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
+    private static IEnumerable<Type> GetAutoAttachTypesByActor(Type actorClass)
     {
         foreach (var super in StaticInit.EnumerateSelfAndSupers(actorClass))
         {
@@ -207,7 +207,7 @@ static class ScriptComponentManager
 
     /// <inheritdoc cref="GetAutoAttachTypesByActor(Type)"/>
     /// <param name="actor">The object of whose class to scan for auto-attach components.</param>
-    static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor) =>
+    private static IEnumerable<Type> GetAutoAttachTypesByActor(Actor actor) =>
         GetAutoAttachTypesByActor(actor.GetType());
 
     /// <summary>

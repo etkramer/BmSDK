@@ -1,6 +1,6 @@
 namespace BmSDK.Framework;
 
-static class GameFunctions
+internal static class GameFunctions
 {
     // UObject::StaticConstructObject()
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -108,21 +108,21 @@ static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ConditionalPostLoadDelegate(IntPtr self);
 
-    static StaticConstructObjectDelegate? _StaticConstructObject = null;
-    static StaticFindObjectDelegate? _StaticFindObject = null;
-    static LoadPackageDelegate? _LoadPackage = null;
-    static ProcessEventDelegate? _ProcessEvent = null;
-    static ProcessInternalDelegate? _ProcessInternal = null;
-    static CallFunctionDelegate? _CallFunction = null;
-    static AddObjectDelegate? _AddObject = null;
-    static ConditionalDestroyDelegate? _ConditionalDestroy = null;
-    static FindFunctionDelegate? _FindFunction = null;
-    static GetDefaultObjectDelegate? _GetDefaultObject = null;
-    static SpawnActorDelegate? _SpawnActor = null;
-    static NameInitDelegate? _NameInit = null;
-    static StringCtorDelegate? _StringCtor = null;
-    static AppReallocDelegate? _AppRealloc = null;
-    static EngineTickDelegate? _EngineTick = null;
+    private static StaticConstructObjectDelegate? _StaticConstructObject = null;
+    private static StaticFindObjectDelegate? _StaticFindObject = null;
+    private static LoadPackageDelegate? _LoadPackage = null;
+    private static ProcessEventDelegate? _ProcessEvent = null;
+    private static ProcessInternalDelegate? _ProcessInternal = null;
+    private static CallFunctionDelegate? _CallFunction = null;
+    private static AddObjectDelegate? _AddObject = null;
+    private static ConditionalDestroyDelegate? _ConditionalDestroy = null;
+    private static FindFunctionDelegate? _FindFunction = null;
+    private static GetDefaultObjectDelegate? _GetDefaultObject = null;
+    private static SpawnActorDelegate? _SpawnActor = null;
+    private static NameInitDelegate? _NameInit = null;
+    private static StringCtorDelegate? _StringCtor = null;
+    private static AppReallocDelegate? _AppRealloc = null;
+    private static EngineTickDelegate? _EngineTick = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
         _StaticConstructObject ??=

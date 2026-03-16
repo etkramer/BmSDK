@@ -7,7 +7,7 @@ namespace BmSDK.Framework.Redirection;
 /// This is used to generalize global and local redirects when queuing them in
 /// <see cref="RedirectManager.AcquireRedirects(GameObject, string)"/>.
 /// </summary>
-interface IGenericRedirect
+internal interface IGenericRedirect
 {
     /// <summary>
     /// Invoker to the actual custom implementation of the redirected function.
@@ -27,12 +27,12 @@ interface IGenericRedirect
 /// <param name="AllowSubtypes">Whether child classes of <paramref name="TargetType"/>
 /// should be redirected too</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-sealed record GlobalRedirectorInfo(Type TargetType, bool AllowSubtypes, MethodInfo RedirectMethod)
+internal sealed record GlobalRedirectorInfo(Type TargetType, bool AllowSubtypes, MethodInfo RedirectMethod)
     : IGenericRedirect
 {
     public MethodInvoker Invoker { get; } = MethodInvoker.Create(RedirectMethod);
 
-    Type[]? _paramTypes;
+    private Type[]? _paramTypes;
 
     public Type[] GetParamTypes(Function func)
     {
@@ -55,7 +55,7 @@ sealed record GlobalRedirectorInfo(Type TargetType, bool AllowSubtypes, MethodIn
 /// <param name="Component">The ScriptComponent that declares the redirect</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
 /// <param name="Invoker">The cached invoker of the redirect method</param>
-sealed record LocalRedirectorInfo(
+internal sealed record LocalRedirectorInfo(
     IScriptComponent Component,
     MethodInfo RedirectMethod,
     MethodInvoker Invoker
@@ -79,7 +79,7 @@ sealed record LocalRedirectorInfo(
 /// <param name="FuncPath">The UE3 declaration path of the method to redirect.
 /// If the method is not defined in <see cref="TargetType"/>, path could lead to super.</param>
 /// <param name="RedirectMethod">Method to call on redirect</param>
-readonly record struct CachedLocalRedirector(
+internal readonly record struct CachedLocalRedirector(
     Type TargetType,
     string FuncPath,
     MethodInfo RedirectMethod
@@ -96,9 +96,9 @@ readonly record struct CachedLocalRedirector(
 /// <param name="TargetFunc">Method being redirected</param>
 /// <param name="Redirs">Each redirect that still exists for the
 /// particular call of <paramref name="TargetFunc"/></param>
-sealed record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
+internal sealed record RedirectCall(GameObject TargetObj, Function TargetFunc, IGenericRedirect[] Redirs)
 {
-    int _currIndex = 0;
+    private int _currIndex = 0;
 
     public IGenericRedirect? NextRedirect() =>
         _currIndex < Redirs.Length ? Redirs[_currIndex++] : null;

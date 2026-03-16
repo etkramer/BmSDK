@@ -4,13 +4,13 @@ using Windows.Win32.UI.WindowsAndMessaging;
 
 namespace BmSDK.Framework;
 
-static class GameWindow
+internal static class GameWindow
 {
-    static HWND s_gameHwnd = default;
-    static WNDPROC? s_wndProc;
-    static WNDPROC? s_wndProcBase;
+    private static HWND s_gameHwnd = default;
+    private static WNDPROC? s_wndProc;
+    private static WNDPROC? s_wndProcBase;
 
-    static LRESULT CustomWndProc(HWND hWnd, uint msg, WPARAM wParam, LPARAM lParam)
+    private static LRESULT CustomWndProc(HWND hWnd, uint msg, WPARAM wParam, LPARAM lParam)
     {
         switch (msg)
         {
@@ -46,7 +46,7 @@ static class GameWindow
         }
     }
 
-    static bool TryFindGameWindow(out HWND result)
+    private static bool TryFindGameWindow(out HWND result)
     {
         var foundHwnd = default(HWND);
         var processId = Environment.ProcessId;

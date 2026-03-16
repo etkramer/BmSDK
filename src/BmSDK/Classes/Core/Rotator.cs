@@ -28,9 +28,9 @@ public record struct Rotator
     /// </summary>
     public const float RadiansToRuuFactor = 32768f / MathF.PI;
 
-    int _pitch;
-    int _yaw;
-    int _roll;
+    private int _pitch;
+    private int _yaw;
+    private int _roll;
 
     /// <summary>
     /// Pitch rotation in degrees.

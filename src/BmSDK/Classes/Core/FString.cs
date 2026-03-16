@@ -7,9 +7,9 @@ namespace BmSDK;
 
 public unsafe struct FString
 {
-    IntPtr AllocatorInstance;
-    int Num;
-    int Max;
+    private IntPtr AllocatorInstance;
+    private int Num;
+    private int Max;
 
     /// <summary>
     /// Creates a new FString from the given managed string.

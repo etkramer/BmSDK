@@ -11,7 +11,7 @@ public partial class Actor
     /// </summary>
     public static IReadOnlyCollection<IScriptComponent> AllScriptComponents => s_scriptComponents;
 
-    static readonly List<IScriptComponent> s_scriptComponents = [];
+    private static readonly List<IScriptComponent> s_scriptComponents = [];
 
     /// <summary>
     /// Collection of all ScriptComponent instances attached to this actor.
@@ -19,7 +19,7 @@ public partial class Actor
     /// </summary>
     public IReadOnlyCollection<IScriptComponent> ScriptComponents => _scriptComponents.Values;
 
-    readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
+    private readonly Dictionary<Type, IScriptComponent> _scriptComponents = [];
 
     /// <summary>
     /// Attaches an existing script component instance to this actor.

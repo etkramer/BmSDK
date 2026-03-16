@@ -3,10 +3,10 @@ using PInvokeDetours = Microsoft.Detours.PInvoke;
 
 namespace BmSDK.Framework;
 
-static class DetourUtil
+internal static class DetourUtil
 {
     // Keep delegates in memory to avoid GC
-    static readonly List<Delegate> s_detourDelegateRefs = [];
+    private static readonly List<Delegate> s_detourDelegateRefs = [];
 
     // Creates a detour and returns the original function
     public static unsafe T NewDetour<T>(IntPtr funcOffset, T detourFunc)
