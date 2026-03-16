@@ -169,10 +169,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-    public void Clear()
-    {
-        Resize(0);
-    }
+    public void Clear() => Resize(0);
 
     public bool Contains(TManaged item)
     {
@@ -255,15 +252,9 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     public void CopyTo(TManaged[] array, int arrayIndex)
     {
-        if (array == null)
-        {
-            throw new ArgumentNullException(nameof(array));
-        }
+        ArgumentNullException.ThrowIfNull(array);
 
-        if (arrayIndex < 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(arrayIndex));
-        }
+        ArgumentOutOfRangeException.ThrowIfNegative(arrayIndex);
 
         if (array.Length - arrayIndex < Count)
         {
