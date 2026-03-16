@@ -197,10 +197,10 @@ function Invoke-Publish {
     }
     
     # Create output directory
-    $TempDir = "releases/$GitTag-BmSDK"
-    $ZipPath = "releases/$GitTag-BmSDK.zip"
-    $TempDirSteam = "releases/$GitTag-SteamPatch"
-    $ZipPathSteam = "releases/$GitTag-SteamPatch.zip"
+    $TempDir = "releases/BmSDK-$GitTag"
+    $ZipPath = "releases/BmSDK-$GitTag.zip"
+    $TempDirSteam = "releases/CompatibilityPatch-$GitTag"
+    $ZipPathSteam = "releases/CompatibilityPatch-$GitTag.zip"
 
     if (Test-Path $TempDir) {
         Remove-Item $TempDir -Recurse -Force
