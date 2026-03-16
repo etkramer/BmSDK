@@ -117,7 +117,7 @@ internal static unsafe class MarshalUtil
             if (value is null || data == null)
             {
                 // Clear native struct memory
-                new Span<byte>(data, dataSize).Clear();
+                NativeMemory.Clear(data, (nuint)dataSize);
                 return;
             }
 
