@@ -6,7 +6,7 @@ namespace BmSDK.Framework;
 
 public static class CommonUtils
 {
-    static readonly JsonSerializerOptions s_opts = new()
+    private static readonly JsonSerializerOptions s_opts = new()
     {
         WriteIndented = true,
         IncludeFields = false,

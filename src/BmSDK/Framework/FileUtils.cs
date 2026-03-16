@@ -2,7 +2,7 @@ namespace BmSDK.Framework;
 
 public static class FileUtils
 {
-    static string s_exeDir = "";
+    private static string s_exeDir = "";
 
     internal static void Init()
     {

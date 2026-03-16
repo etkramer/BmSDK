@@ -56,7 +56,7 @@ public struct FName
     }
 
 #pragma warning disable CS0649
-    unsafe struct FNameEntry
+    private unsafe struct FNameEntry
     {
 #if BATMAN2
         public ulong Flags;

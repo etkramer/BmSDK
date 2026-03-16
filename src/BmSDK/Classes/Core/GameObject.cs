@@ -70,7 +70,7 @@ public partial class GameObject
         return res;
     }
 
-    void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
+    private void GetPathNameRecursive(GameObject? StopOuter, ref string ResultString)
     {
         if (this != StopOuter)
         {

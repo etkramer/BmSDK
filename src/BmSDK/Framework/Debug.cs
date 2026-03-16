@@ -5,8 +5,8 @@ namespace BmSDK.Framework;
 
 public static class Debug
 {
-    static readonly Stack<string> s_senderStack = new();
-    static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
+    private static readonly Stack<string> s_senderStack = new();
+    private static readonly ConsoleColor s_defaultColor = Console.ForegroundColor;
 
     public static void Log(
         object? msg,

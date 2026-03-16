@@ -3,16 +3,16 @@ using BmSDK.Engine;
 
 namespace BmSDK.Framework;
 
-static unsafe class MarshalUtil
+internal static unsafe class MarshalUtil
 {
     [StructLayout(LayoutKind.Sequential)]
-    struct FScriptInterface
+    private struct FScriptInterface
     {
         public IntPtr ObjectPointer;
         public IntPtr InterfacePointer;
     }
 
-    static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
+    private static readonly Dictionary<IntPtr, GameObject> s_managedObjects = [];
 
     // Temp-ish hack. Let's see about refactoring this later.
     public static object? ToManaged(IntPtr data, Type managedType)
@@ -201,7 +201,7 @@ static unsafe class MarshalUtil
         return CreateManagedWrapper(objPtr, managedType);
     }
 
-    static GameObject CreateManagedWrapper(IntPtr objPtr, Type managedType)
+    private static GameObject CreateManagedWrapper(IntPtr objPtr, Type managedType)
     {
         // Create a new managed object
         var newObj = s_managedObjects[objPtr] = Guard.NotNull(

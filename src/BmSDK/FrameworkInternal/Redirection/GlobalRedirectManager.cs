@@ -7,15 +7,16 @@ namespace BmSDK.Framework.Redirection;
 /// The redirectors apply globally and unconditionally to all instances.
 /// DO NOT INSTANTIATE! USE <see cref="RedirectManager.Global"/> INSTEAD.
 /// </summary>
-sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
+internal sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
 {
-    readonly BindingFlags _globalRedirSearchFlags = BindingFlags.Static | genericRedirSearchFlags;
+    private readonly BindingFlags _globalRedirSearchFlags =
+        BindingFlags.Static | genericRedirSearchFlags;
 
     /// <summary>
     /// Maps declaring function paths to GlobalRedirectorInfo objects which contain
     /// the target class and the delegate of the detour.
     /// </summary>
-    readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
+    private readonly Dictionary<string, List<GlobalRedirectorInfo>> _globalRedirsDict = [];
 
     /// <summary>
     /// Registers a delegate as a redirector for the given in-game function.
@@ -26,7 +27,7 @@ sealed class GlobalRedirectManager(BindingFlags genericRedirSearchFlags)
     /// Only methods of in-game classes may be overriden.</exception>
     /// <exception cref="InvalidOperationException">Thrown if the exact redirect method,
     /// has been attached to the same function path again.</exception>
-    void RegisterRedirector(RedirectAttribute redirAttr, MethodInfo redirectMi)
+    private void RegisterRedirector(RedirectAttribute redirAttr, MethodInfo redirectMi)
     {
         var targetType = redirAttr.TargetType;
 

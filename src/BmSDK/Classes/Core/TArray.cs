@@ -6,7 +6,7 @@ using BmSDK.Framework;
 
 namespace BmSDK;
 
-interface IArray
+internal interface IArray
 {
     IntPtr Ptr { set; }
 }
@@ -74,7 +74,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
     /// <summary>
     /// Resizes the array to the specified count, reallocating if necessary and filling empty values with zeroes.
     /// </summary>
-    void Resize(int newNum)
+    private void Resize(int newNum)
     {
         // Nothing to resize
         if (newNum == Data.Num)

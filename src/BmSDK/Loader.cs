@@ -9,18 +9,18 @@ using MoreLinq;
 
 namespace BmSDK.Framework;
 
-static class Loader
+internal static class Loader
 {
-    const string InitFuncName = "Engine.GameInfo:InitGame";
-    const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
-    const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
-    const string PostBeginPlayFuncName = ":PostBeginPlay";
-    const string TickFuncName = "BmGame.RGameInfo:Tick";
+    private const string InitFuncName = "Engine.GameInfo:InitGame";
+    private const string EnterMenuFuncName = "GFxUI.GFxMoviePlayer:Init";
+    private const string EnterGameFuncName = "BmGame.RPlayerController:ClientReady";
+    private const string PostBeginPlayFuncName = ":PostBeginPlay";
+    private const string TickFuncName = "BmGame.RGameInfo:Tick";
 
-    static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
-    static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
-    static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
-    static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
+    private static GameFunctions.EngineTickDelegate? _EngineTickDetourBase = null;
+    private static GameFunctions.ProcessInternalDelegate? _ProcessInternalDetourBase = null;
+    private static GameFunctions.ConditionalPostLoadDelegate? _ConditionalPostLoadDetourBase = null;
+    private static GameFunctions.ConditionalDestroyDelegate? _ConditionalDestroyDetourBase = null;
 
     /// <summary>
     /// Main .NET entry point, called from BmSDK.Host.
@@ -29,7 +29,7 @@ static class Loader
     [UnmanagedCallersOnly]
     public static void GuardedDllMain() => Debug.RunWithSender("Loader", () => RunGuarded(DllMain));
 
-    static void DllMain()
+    private static void DllMain()
     {
         EngineSynchronizationContext.InitOnThread();
 
@@ -67,18 +67,18 @@ static class Loader
             );
     }
 
-    static IntPtr EngineTickDetour(IntPtr self)
+    private static IntPtr EngineTickDetour(IntPtr self)
     {
         // Run the scheduled callbacks
         EngineSynchronizationContext.Instance.ExecutePending();
         return _EngineTickDetourBase!.Invoke(self);
     }
 
-    static bool s_hasGameStarted = false;
-    static bool s_hasGameInited = false;
+    private static bool s_hasGameStarted = false;
+    private static bool s_hasGameInited = false;
 
     // Detour for UObject::ProcessInternal()
-    static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
+    private static unsafe void ProcessInternalDetour(IntPtr self, IntPtr Stack, IntPtr Result)
     {
         RunGuarded(() =>
         {
@@ -157,7 +157,7 @@ static class Loader
     }
 
     // Detour for UObject::ConditionalPostLoad()
-    static void ConditionalPostLoadDetour(IntPtr self)
+    private static void ConditionalPostLoadDetour(IntPtr self)
     {
         // Call base impl to set default func flags first
         _ConditionalPostLoadDetourBase!.Invoke(self);
@@ -176,7 +176,7 @@ static class Loader
     }
 
     // Detour for UObject::ConditionalDestroy()
-    static void ConditionalDestroyDetour(IntPtr self)
+    private static void ConditionalDestroyDetour(IntPtr self)
     {
         // Destroy this object's managed instance
         RunGuarded(() => MarshalUtil.DestroyManagedWrapper(self));
@@ -185,7 +185,7 @@ static class Loader
         _ConditionalDestroyDetourBase!.Invoke(self);
     }
 
-    static void RunGuarded(Action action)
+    private static void RunGuarded(Action action)
     {
         try
         {

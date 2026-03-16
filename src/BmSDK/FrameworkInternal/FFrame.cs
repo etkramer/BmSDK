@@ -3,7 +3,7 @@ using BmSDK.Framework;
 namespace BmSDK;
 
 [StructLayout(LayoutKind.Explicit)]
-unsafe record struct FFrame
+internal unsafe record struct FFrame
 {
     [FieldOffset(0x8)]
     public IntPtr Node;

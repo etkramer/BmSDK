@@ -4,9 +4,9 @@ using System.Diagnostics;
 
 namespace BmSDK.Framework;
 
-static class MemUtil
+internal static class MemUtil
 {
-    static IntPtr s_baseAddress = 0;
+    private static IntPtr s_baseAddress = 0;
 
     public static IntPtr GetBaseAddress()
     {
