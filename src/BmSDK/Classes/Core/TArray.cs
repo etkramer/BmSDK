@@ -11,6 +11,10 @@ internal interface IArray
     IntPtr Ptr { get; }
 }
 
+/// <summary>
+/// A resizable array of objects. Similar to <see cref="List{T}"/>, but can be used directly by the game. 
+/// </summary>
+/// <typeparam name="TManaged">The type of elements in the array.</typeparam>
 public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 {
     [StructLayout(LayoutKind.Sequential)]
@@ -25,7 +29,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     public IntPtr Ptr { get; private set; } = IntPtr.Zero;
 
-    readonly bool _ownsMemory;
+    private readonly bool _ownsMemory;
 
     public int Count => Data.Num;
     public int Capacity => Data.Max;
