@@ -14,7 +14,8 @@ internal interface IArray
 /// <summary>
 /// A resizable array of objects. Similar to <see cref="List{T}"/>, but can be used directly by the game. 
 /// </summary>
-/// <typeparam name="TManaged">The type of elements in the array.</typeparam>
+/// <typeparam name="TManaged">The type of elements in the array.
+/// Should be either a managed primitive or a managed type.</typeparam>
 public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 {
     [StructLayout(LayoutKind.Sequential)]
