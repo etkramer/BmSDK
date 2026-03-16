@@ -112,16 +112,18 @@ internal static unsafe class MarshalUtil
             && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
         )
         {
+            var dataSize = sizeof(TArray<TManaged>.NativeData);
+            
             if (value is null || data == null)
             {
-                // Zero out the NativeData struct (12 bytes: IntPtr + int + int)
-                new Span<byte>(data, 12).Clear();
+                // Clear native struct memory
+                new Span<byte>(data, dataSize).Clear();
                 return;
             }
 
-            // Copy the NativeData struct from source TArray to destination
+            // Copy native struct memory
             var sourcePtr = ((IArray)value).Ptr;
-            Buffer.MemoryCopy(sourcePtr.ToPointer(), data, 12, 12);
+            Buffer.MemoryCopy(sourcePtr.ToPointer(), data, dataSize, dataSize);
             return;
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
