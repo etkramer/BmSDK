@@ -133,8 +133,9 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
         // Grow array (beyond capacity): reallocate array
         if (newNum > Data.Num)
         {
-            // Calculate new capacity (next multiple of current capacity)
-            var newMax = ((newNum / Data.Max) + 1) * Data.Max;
+            // Calculate new capacity (next multiple of current capacity, or initial capacity of 4)
+            var baseMax = Data.Max == 0 ? 4 : Data.Max;
+            var newMax = ((newNum / baseMax) + 1) * baseMax;
 
             Data.AllocatorInstance = GameFunctions.AppRealloc(
                 Data.AllocatorInstance,
