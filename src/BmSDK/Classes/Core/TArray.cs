@@ -33,7 +33,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 
     public int Count => Data.Num;
     public int Capacity => Data.Max;
-    public int Stride => MarshalUtil.GetSizeUnmanaged<TManaged>();
+    public int Stride { get; } = MarshalUtil.GetSizeUnmanaged<TManaged>();
 
     public bool IsReadOnly => false;
 
