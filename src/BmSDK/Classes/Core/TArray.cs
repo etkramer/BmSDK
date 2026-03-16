@@ -8,10 +8,15 @@ namespace BmSDK;
 
 internal interface IArray
 {
-    IntPtr Ptr { set; }
+    IntPtr Ptr { get; }
 }
 
-public unsafe class TArray<TManaged> : IArray, IList<TManaged>
+/// <summary>
+/// A resizable array of objects. Similar to <see cref="List{T}"/>, but can be used directly by the game. 
+/// </summary>
+/// <typeparam name="TManaged">The type of elements in the array.
+/// Should be either a managed primitive or a managed type.</typeparam>
+public unsafe class TArray<TManaged> : IArray, IList<TManaged>, IDisposable
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct NativeData
@@ -23,13 +28,42 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
 
     internal ref NativeData Data => ref *(NativeData*)Ptr.ToPointer();
 
-    public IntPtr Ptr { get; set; } = IntPtr.Zero;
+    public IntPtr Ptr { get; private set; } = IntPtr.Zero;
+
+    private readonly bool _ownsMemory;
 
     public int Count => Data.Num;
     public int Capacity => Data.Max;
-    public int Stride => MarshalUtil.GetSizeUnmanaged<TManaged>();
+    public int Stride { get; } = MarshalUtil.GetSizeUnmanaged<TManaged>();
 
     public bool IsReadOnly => false;
+
+    /// <summary>
+    /// Creates a new TArray with C#-owned memory.
+    /// </summary>
+    public TArray(int capacity = 4)
+    {
+        Guard.Require(capacity >= 0, "Capacity cannot be negative");
+
+        Ptr = Marshal.AllocHGlobal(sizeof(NativeData));
+        _ownsMemory = true;
+
+        Data.Num = 0;
+        Data.Max = capacity;
+        Data.AllocatorInstance =
+            capacity > 0
+                ? GameFunctions.AppRealloc(IntPtr.Zero, capacity * Stride, 8)
+                : IntPtr.Zero;
+    }
+
+    /// <summary>
+    /// Creates a managed wrapper around an existing native TArray.
+    /// </summary>
+    internal TArray(IntPtr ptr)
+    {
+        Ptr = ptr;
+        _ownsMemory = false;
+    }
 
     public TManaged this[int idx]
     {
@@ -112,7 +146,21 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         }
     }
 
-    public unsafe IEnumerator<TManaged> GetEnumerator()
+    public void Dispose()
+    {
+        if (_ownsMemory && Ptr != IntPtr.Zero)
+        {
+            if (Data.AllocatorInstance != IntPtr.Zero)
+            {
+                GameFunctions.AppFree(Data.AllocatorInstance);
+            }
+
+            Marshal.FreeHGlobal(Ptr);
+            Ptr = IntPtr.Zero;
+        }
+    }
+
+    public IEnumerator<TManaged> GetEnumerator()
     {
         for (var i = 0; i < Count; i++)
         {
@@ -122,10 +170,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-    public void Clear()
-    {
-        Resize(0);
-    }
+    public void Clear() => Resize(0);
 
     public bool Contains(TManaged item)
     {
@@ -140,10 +185,7 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
         return false;
     }
 
-    public void Add(TManaged item)
-    {
-        Push(item);
-    }
+    public void Add(TManaged item) => Push(item);
 
     public int IndexOf(TManaged item)
     {
@@ -211,15 +253,9 @@ public unsafe class TArray<TManaged> : IArray, IList<TManaged>
 
     public void CopyTo(TManaged[] array, int arrayIndex)
     {
-        if (array == null)
-        {
-            throw new ArgumentNullException(nameof(array));
-        }
+        ArgumentNullException.ThrowIfNull(array);
 
-        if (arrayIndex < 0)
-        {
-            throw new ArgumentOutOfRangeException(nameof(arrayIndex));
-        }
+        ArgumentOutOfRangeException.ThrowIfNegative(arrayIndex);
 
         if (array.Length - arrayIndex < Count)
         {

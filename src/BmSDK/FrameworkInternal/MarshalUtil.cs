@@ -45,13 +45,18 @@ internal static unsafe class MarshalUtil
             && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
         )
         {
-            // Create new TArray instance - duplicates will still refer to the same native object.
+            // Create new TArray wrapper every time - duplicates will still refer to the same native object.
             var instance = Guard.NotNull(
-                Activator.CreateInstance<TManaged>() as IArray,
+                Activator.CreateInstance(
+                    typeof(TManaged),
+                    BindingFlags.Instance | BindingFlags.NonPublic,
+                    null,
+                    [(IntPtr)data],
+                    null
+                ),
                 $"Couldn't create an instance of array 0x{new IntPtr(data):X}"
             );
 
-            instance.Ptr = (IntPtr)data;
             return (TManaged)instance;
         }
         else if (
@@ -107,12 +112,19 @@ internal static unsafe class MarshalUtil
             && typeof(TManaged).GetGenericTypeDefinition() == typeof(TArray<>)
         )
         {
-            // TODO: Fully handle two-way array marshaling.
-            if (data == null)
+            var dataSize = sizeof(TArray<TManaged>.NativeData);
+            
+            if (value is null || data == null)
             {
-                // Do nothing (leave zeroed) and return.
+                // Clear native struct memory
+                NativeMemory.Clear(data, (nuint)dataSize);
                 return;
             }
+
+            // Copy native struct memory
+            var sourcePtr = ((IArray)value).Ptr;
+            Buffer.MemoryCopy(sourcePtr.ToPointer(), data, dataSize, dataSize);
+            return;
         }
         else if (typeof(TManaged).IsAssignableTo(typeof(GameObject)))
         {

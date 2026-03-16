@@ -100,6 +100,10 @@ internal static class GameFunctions
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate IntPtr AppReallocDelegate(IntPtr Original, int Count, int Alignment);
 
+    // appFree()
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+    public delegate void AppFreeDelegate(IntPtr Original);
+
     // FEngineLoop::Tick()
     [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate IntPtr EngineTickDelegate(IntPtr self);
@@ -122,6 +126,7 @@ internal static class GameFunctions
     private static NameInitDelegate? _NameInit = null;
     private static StringCtorDelegate? _StringCtor = null;
     private static AppReallocDelegate? _AppRealloc = null;
+    private static AppFreeDelegate? _AppFree = null;
     private static EngineTickDelegate? _EngineTick = null;
 
     public static StaticConstructObjectDelegate StaticConstructObject =>
@@ -193,6 +198,11 @@ internal static class GameFunctions
     public static AppReallocDelegate AppRealloc =>
         _AppRealloc ??= Marshal.GetDelegateForFunctionPointer<AppReallocDelegate>(
             MemUtil.GetIntPointer(GameInfo.FuncOffsets.AppRealloc)
+        );
+
+    public static AppFreeDelegate AppFree =>
+        _AppFree ??= Marshal.GetDelegateForFunctionPointer<AppFreeDelegate>(
+            MemUtil.GetIntPointer(GameInfo.FuncOffsets.AppFree)
         );
 
     public static EngineTickDelegate EngineTick =>

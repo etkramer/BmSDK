@@ -20,6 +20,7 @@ internal static class GameInfo
 #if BATMAN2
         // app (global)
         public const IntPtr AppRealloc = 0x1EC10;
+        public const IntPtr AppFree = 0x1EC30;
         public const IntPtr EngineTick = 0x7D8980;
 
         // UObject (static)
