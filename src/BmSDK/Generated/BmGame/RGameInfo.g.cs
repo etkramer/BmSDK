@@ -3065,10 +3065,226 @@ public partial class RGameInfo : BmSDK.BmGame.RGameInfoBase, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: FloorTakedownChallengeAction
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 960); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 961); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 961); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 962); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 962); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 963); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 963); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 964); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 965); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 965); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 966); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 966); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 967); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 967); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 968); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 969); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 969); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 970); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 970); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 971); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 971); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_12
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 972); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_13
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 973); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 973); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_14
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 974); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 974); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_15
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 975); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 975); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_16
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 976); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_17
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 977); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 977); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_18
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 978); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 978); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_19
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 979); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 979); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_20
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 980); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_21
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 981); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 981); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_22
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 982); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 982); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_23
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 983); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 983); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_24
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 984); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_25
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 985); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 985); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_26
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 986); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 986); }
+    }
+    /// <summary>
+    /// ByteProperty: FloorTakedownChallengeAction
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction FloorTakedownChallengeAction_27
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 987); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 987); }
     }
 
     /// <summary>

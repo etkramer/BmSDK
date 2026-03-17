@@ -81,9 +81,25 @@ public partial class DistributionVectorUniform : BmSDK.DistributionVector, BmSDK
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 93); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 93); }
+    }
+    /// <summary>
+    /// ByteProperty: MirrorFlags
+    /// </summary>
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 94); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 94); }
+    }
+    /// <summary>
+    /// ByteProperty: MirrorFlags
+    /// </summary>
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 95); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 95); }
     }
 }

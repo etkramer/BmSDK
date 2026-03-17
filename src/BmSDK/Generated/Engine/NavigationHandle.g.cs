@@ -1195,10 +1195,82 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: Breadcrumbs
     /// </summary>
-    public unsafe System.Numerics.Vector3 Breadcrumbs
+    public unsafe System.Numerics.Vector3 Breadcrumbs_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
+    }
+    /// <summary>
+    /// StructProperty: Breadcrumbs
+    /// </summary>
+    public unsafe System.Numerics.Vector3 Breadcrumbs_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
     /// <summary>

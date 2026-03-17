@@ -36,10 +36,98 @@ public partial class RDirectionalAnimConfig : BmSDK.BmGame.RConfig, BmSDK.IGameO
     /// <summary>
     /// NameProperty: Directions
     /// </summary>
-    public unsafe BmSDK.FName Directions
+    public unsafe BmSDK.FName Directions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 44); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+    }
+    /// <summary>
+    /// NameProperty: Directions
+    /// </summary>
+    public unsafe BmSDK.FName Directions_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
 }

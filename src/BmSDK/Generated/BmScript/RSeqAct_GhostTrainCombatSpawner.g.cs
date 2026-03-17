@@ -314,10 +314,34 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// ObjectProperty: TrainList
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain TrainList
+    public unsafe BmSDK.BmGame.RPawnVillain TrainList_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 284); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
+    /// <summary>
+    /// ObjectProperty: TrainList
+    /// </summary>
+    public unsafe BmSDK.BmGame.RPawnVillain TrainList_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
+    }
+    /// <summary>
+    /// ObjectProperty: TrainList
+    /// </summary>
+    public unsafe BmSDK.BmGame.RPawnVillain TrainList_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
+    }
+    /// <summary>
+    /// ObjectProperty: TrainList
+    /// </summary>
+    public unsafe BmSDK.BmGame.RPawnVillain TrainList_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillain>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>
@@ -341,19 +365,35 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// ObjectProperty: Train1Cars
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshActor Train1Cars
+    public unsafe BmSDK.Engine.SkeletalMeshActor Train1Cars_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshActor>(Ptr + 308); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
+    }
+    /// <summary>
+    /// ObjectProperty: Train1Cars
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshActor Train1Cars_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshActor>(Ptr + 312); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
     /// <summary>
     /// ObjectProperty: Train2Cars
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshActor Train2Cars
+    public unsafe BmSDK.Engine.SkeletalMeshActor Train2Cars_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshActor>(Ptr + 316); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+    }
+    /// <summary>
+    /// ObjectProperty: Train2Cars
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshActor Train2Cars_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshActor>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>

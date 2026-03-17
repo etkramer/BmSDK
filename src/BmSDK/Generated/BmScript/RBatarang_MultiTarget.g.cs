@@ -296,10 +296,18 @@ public partial class RBatarang_MultiTarget : BmSDK.BmScript.RBatarangBm, BmSDK.I
     /// <summary>
     /// ComponentProperty: ExtraBatarangMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ExtraBatarangMeshes
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ExtraBatarangMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1356); }
+    }
+    /// <summary>
+    /// ComponentProperty: ExtraBatarangMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ExtraBatarangMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 1360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1360); }
     }
 
     /// <summary>

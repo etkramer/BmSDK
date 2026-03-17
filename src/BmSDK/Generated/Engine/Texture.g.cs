@@ -211,19 +211,67 @@ public partial class Texture : BmSDK.Engine.Surface, BmSDK.IGameObject
     /// <summary>
     /// FloatProperty: UnpackMin
     /// </summary>
-    public unsafe float UnpackMin
+    public unsafe float UnpackMin_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMin
+    /// </summary>
+    public unsafe float UnpackMin_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMin
+    /// </summary>
+    public unsafe float UnpackMin_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMin
+    /// </summary>
+    public unsafe float UnpackMin_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
     }
 
     /// <summary>
     /// FloatProperty: UnpackMax
     /// </summary>
-    public unsafe float UnpackMax
+    public unsafe float UnpackMax_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMax
+    /// </summary>
+    public unsafe float UnpackMax_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMax
+    /// </summary>
+    public unsafe float UnpackMax_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
+    /// <summary>
+    /// FloatProperty: UnpackMax
+    /// </summary>
+    public unsafe float UnpackMax_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
     }
 
     /// <summary>

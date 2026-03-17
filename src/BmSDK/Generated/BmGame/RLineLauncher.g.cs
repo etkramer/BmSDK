@@ -702,19 +702,35 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// ObjectProperty: Projectile
     /// </summary>
-    public unsafe BmSDK.BmGame.RProjectileWithRope Projectile
+    public unsafe BmSDK.BmGame.RProjectileWithRope Projectile_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectileWithRope>(Ptr + 1068); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
+    }
+    /// <summary>
+    /// ObjectProperty: Projectile
+    /// </summary>
+    public unsafe BmSDK.BmGame.RProjectileWithRope Projectile_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RProjectileWithRope>(Ptr + 1072); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
     /// ComponentProperty: ProjectileRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RSimpleRopeComponent ProjectileRope
+    public unsafe BmSDK.BmGame.RSimpleRopeComponent ProjectileRope_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 1076); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
+    }
+    /// <summary>
+    /// ComponentProperty: ProjectileRope
+    /// </summary>
+    public unsafe BmSDK.BmGame.RSimpleRopeComponent ProjectileRope_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 1080); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
     }
 
     /// <summary>

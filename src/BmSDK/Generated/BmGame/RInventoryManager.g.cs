@@ -299,19 +299,67 @@ public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IG
     /// <summary>
     /// StructProperty: AvailableGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 476); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
+    /// <summary>
+    /// StructProperty: AvailableGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+    }
+    /// <summary>
+    /// StructProperty: AvailableGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 500); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+    }
+    /// <summary>
+    /// StructProperty: AvailableGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection AvailableGadgets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 512); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
 
     /// <summary>
     /// StructProperty: BatarangGadgets
     /// </summary>
-    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+    }
+    /// <summary>
+    /// StructProperty: BatarangGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
+    /// <summary>
+    /// StructProperty: BatarangGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+    }
+    /// <summary>
+    /// StructProperty: BatarangGadgets
+    /// </summary>
+    public unsafe BmSDK.BmGame.RInventoryManager.FGadgetDirection BatarangGadgets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RInventoryManager.FGadgetDirection>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
     /// <summary>

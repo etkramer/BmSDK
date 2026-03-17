@@ -1316,10 +1316,34 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
         /// <summary>
         /// FloatProperty: DirectionDistance
         /// </summary>
-        public unsafe float DirectionDistance
+        public unsafe float DirectionDistance_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// FloatProperty: DirectionDistance
+        /// </summary>
+        public unsafe float DirectionDistance_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// FloatProperty: DirectionDistance
+        /// </summary>
+        public unsafe float DirectionDistance_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+        /// <summary>
+        /// FloatProperty: DirectionDistance
+        /// </summary>
+        public unsafe float DirectionDistance_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
     }
 
@@ -5550,10 +5574,82 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CameraSmoothingBuffer
     /// </summary>
-    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12300); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12316); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12332); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12348); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12364); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12364); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12380); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12396); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12412); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12412); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12428); }
+    }
+    /// <summary>
+    /// StructProperty: CameraSmoothingBuffer
+    /// </summary>
+    public unsafe BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime CameraSmoothingBuffer_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.R3rdPersonCamera.FVector3WithTime>(Ptr + 12444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12444); }
     }
 
     /// <summary>
@@ -5676,28 +5772,220 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// FloatProperty: ZoomPoints
     /// </summary>
-    public unsafe float ZoomPoints
+    public unsafe float ZoomPoints_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12528); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12532); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12532); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12536); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12540); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12544); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12548); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12552); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12556); }
+    }
+    /// <summary>
+    /// FloatProperty: ZoomPoints
+    /// </summary>
+    public unsafe float ZoomPoints_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12560); }
     }
 
     /// <summary>
     /// StructProperty: ZoomPointDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 ZoomPointDir
+    public unsafe System.Numerics.Vector3 ZoomPointDir_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12564); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12576); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12588); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12588); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12600); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12612); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12612); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12624); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12636); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12648); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12648); }
+    }
+    /// <summary>
+    /// StructProperty: ZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 ZoomPointDir_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12660); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12660); }
     }
 
     /// <summary>
     /// StructProperty: TightZoomPointDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 TightZoomPointDir
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12672); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12672); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12684); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12696); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12708); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12720); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12732); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12744); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12756); }
+    }
+    /// <summary>
+    /// StructProperty: TightZoomPointDir
+    /// </summary>
+    public unsafe System.Numerics.Vector3 TightZoomPointDir_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 12768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12768); }
     }
 
     /// <summary>

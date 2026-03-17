@@ -618,28 +618,76 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// ComponentProperty: MuzzleFlashFx
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashFx
+    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashFx_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 704); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+    /// <summary>
+    /// ComponentProperty: MuzzleFlashFx
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashFx_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+    /// <summary>
+    /// ComponentProperty: MuzzleFlashFx
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent MuzzleFlashFx_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
     /// ComponentProperty: BulletTrailFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 716); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+    /// <summary>
+    /// ComponentProperty: BulletTrailFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+    /// <summary>
+    /// ComponentProperty: BulletTrailFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent BulletTrailFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
     /// <summary>
     /// ComponentProperty: ImpactFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 728); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+    }
+    /// <summary>
+    /// ComponentProperty: ImpactFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+    }
+    /// <summary>
+    /// ComponentProperty: ImpactFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
     /// <summary>
@@ -762,19 +810,51 @@ public partial class RTurret : BmSDK.BmScript.RTrackingSecurityCamera, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: XrayMats
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface XrayMats
+    public unsafe BmSDK.Engine.MaterialInterface XrayMats_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 808); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
+    }
+    /// <summary>
+    /// ObjectProperty: XrayMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface XrayMats_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 812); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+    }
+    /// <summary>
+    /// ObjectProperty: XrayMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface XrayMats_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
     /// <summary>
     /// ComponentProperty: allMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent allMeshes
+    public unsafe BmSDK.Engine.SkeletalMeshComponent allMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 820); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
+    }
+    /// <summary>
+    /// ComponentProperty: allMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent allMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 824); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
+    }
+    /// <summary>
+    /// ComponentProperty: allMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent allMeshes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 828); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
     }
 
     /// <summary>

@@ -396,9 +396,33 @@ public partial class UIInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: AxisInputEmulation
     /// </summary>
-    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation
+    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 256); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+    }
+    /// <summary>
+    /// StructProperty: AxisInputEmulation
+    /// </summary>
+    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
+    }
+    /// <summary>
+    /// StructProperty: AxisInputEmulation
+    /// </summary>
+    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+    /// <summary>
+    /// StructProperty: AxisInputEmulation
+    /// </summary>
+    public unsafe BmSDK.Engine.UIInteraction.FUIAxisEmulationData AxisInputEmulation_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIInteraction.FUIAxisEmulationData>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 }

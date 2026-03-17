@@ -435,9 +435,25 @@ public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// IntProperty: GridPosition
     /// </summary>
-    public unsafe int GridPosition
+    public unsafe int GridPosition_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
+    /// <summary>
+    /// IntProperty: GridPosition
+    /// </summary>
+    public unsafe int GridPosition_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+    }
+    /// <summary>
+    /// IntProperty: GridPosition
+    /// </summary>
+    public unsafe int GridPosition_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

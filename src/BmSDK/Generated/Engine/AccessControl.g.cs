@@ -351,19 +351,51 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StrProperty: ACDisplayText
     /// </summary>
-    public unsafe BmSDK.FString ACDisplayText
+    public unsafe BmSDK.FString ACDisplayText_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
+    }
+    /// <summary>
+    /// StrProperty: ACDisplayText
+    /// </summary>
+    public unsafe BmSDK.FString ACDisplayText_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// StrProperty: ACDisplayText
+    /// </summary>
+    public unsafe BmSDK.FString ACDisplayText_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 588); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// StrProperty: ACDescText
     /// </summary>
-    public unsafe BmSDK.FString ACDescText
+    public unsafe BmSDK.FString ACDescText_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 600); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+    /// <summary>
+    /// StrProperty: ACDescText
+    /// </summary>
+    public unsafe BmSDK.FString ACDescText_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 612); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
+    }
+    /// <summary>
+    /// StrProperty: ACDescText
+    /// </summary>
+    public unsafe BmSDK.FString ACDescText_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>

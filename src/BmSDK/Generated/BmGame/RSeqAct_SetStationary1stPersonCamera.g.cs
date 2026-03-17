@@ -456,37 +456,149 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// FloatProperty: BreakoutTimesLeft
     /// </summary>
-    public unsafe float BreakoutTimesLeft
+    public unsafe float BreakoutTimesLeft_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 276); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesLeft
+    /// </summary>
+    public unsafe float BreakoutTimesLeft_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesLeft
+    /// </summary>
+    public unsafe float BreakoutTimesLeft_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesLeft
+    /// </summary>
+    public unsafe float BreakoutTimesLeft_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
     /// <summary>
     /// FloatProperty: BreakoutTimesRight
     /// </summary>
-    public unsafe float BreakoutTimesRight
+    public unsafe float BreakoutTimesRight_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 292); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesRight
+    /// </summary>
+    public unsafe float BreakoutTimesRight_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesRight
+    /// </summary>
+    public unsafe float BreakoutTimesRight_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 300); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesRight
+    /// </summary>
+    public unsafe float BreakoutTimesRight_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutTimesRight
+    /// </summary>
+    public unsafe float BreakoutTimesRight_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
     }
 
     /// <summary>
     /// FloatProperty: BreakoutValuesLeft
     /// </summary>
-    public unsafe float BreakoutValuesLeft
+    public unsafe float BreakoutValuesLeft_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 312); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesLeft
+    /// </summary>
+    public unsafe float BreakoutValuesLeft_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesLeft
+    /// </summary>
+    public unsafe float BreakoutValuesLeft_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesLeft
+    /// </summary>
+    public unsafe float BreakoutValuesLeft_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
     /// FloatProperty: BreakoutValuesRight
     /// </summary>
-    public unsafe float BreakoutValuesRight
+    public unsafe float BreakoutValuesRight_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesRight
+    /// </summary>
+    public unsafe float BreakoutValuesRight_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesRight
+    /// </summary>
+    public unsafe float BreakoutValuesRight_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesRight
+    /// </summary>
+    public unsafe float BreakoutValuesRight_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
+    }
+    /// <summary>
+    /// FloatProperty: BreakoutValuesRight
+    /// </summary>
+    public unsafe float BreakoutValuesRight_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
     }
 
     /// <summary>

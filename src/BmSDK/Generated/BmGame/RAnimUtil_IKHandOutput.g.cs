@@ -51,10 +51,18 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Hands
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState Hands_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandState>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
         }
     }
 
@@ -172,10 +180,18 @@ public partial class RAnimUtil_IKHandOutput : BmSDK.GameObject, BmSDK.IGameObjec
         /// <summary>
         /// StructProperty: Hands
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Hands
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies Hands_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_IKHandOutput.FIKHand_PerHandNotifies>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
         }
     }
 

@@ -42,10 +42,18 @@ public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGa
         /// <summary>
         /// StructProperty: Phases
         /// </summary>
-        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Phases
+        /// </summary>
+        public unsafe BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances Phases_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RSkeletalMeshComponent_Export.FStretchPhaseInstances>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 

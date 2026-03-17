@@ -63,10 +63,66 @@ public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// NameProperty: BoneNames
     /// </summary>
-    public unsafe BmSDK.FName BoneNames
+    public unsafe BmSDK.FName BoneNames_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 88); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+    }
+    /// <summary>
+    /// NameProperty: BoneNames
+    /// </summary>
+    public unsafe BmSDK.FName BoneNames_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
 }

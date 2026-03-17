@@ -762,10 +762,66 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// ByteProperty: LanNonce
     /// </summary>
-    public unsafe byte LanNonce
+    public unsafe byte LanNonce_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 58); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 58); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 59); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 59); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 61); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 61); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 62); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 62); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 63); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 63); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+    /// <summary>
+    /// ByteProperty: LanNonce
+    /// </summary>
+    public unsafe byte LanNonce_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 65); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 65); }
     }
 
     /// <summary>

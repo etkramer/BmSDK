@@ -207,37 +207,101 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// ByteProperty: ActualChallengeActions
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ActualChallengeActions
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ActualChallengeActions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 268); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+    }
+    /// <summary>
+    /// ByteProperty: ActualChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ActualChallengeActions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 269); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 269); }
+    }
+    /// <summary>
+    /// ByteProperty: ActualChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ActualChallengeActions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 270); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 270); }
     }
 
     /// <summary>
     /// ByteProperty: ChallengeActions
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 271); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 271); }
+    }
+    /// <summary>
+    /// ByteProperty: ChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+    }
+    /// <summary>
+    /// ByteProperty: ChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 273); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 273); }
     }
 
     /// <summary>
     /// ByteProperty: CWChallengeActions
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CWChallengeActions
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CWChallengeActions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 274); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 274); }
+    }
+    /// <summary>
+    /// ByteProperty: CWChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CWChallengeActions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 275); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 275); }
+    }
+    /// <summary>
+    /// ByteProperty: CWChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CWChallengeActions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// ByteProperty: CoopChallengeActions
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CoopChallengeActions
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CoopChallengeActions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 277); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 277); }
+    }
+    /// <summary>
+    /// ByteProperty: CoopChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CoopChallengeActions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 278); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 278); }
+    }
+    /// <summary>
+    /// ByteProperty: CoopChallengeActions
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EGameAction CoopChallengeActions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 279); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 279); }
     }
 
     /// <summary>

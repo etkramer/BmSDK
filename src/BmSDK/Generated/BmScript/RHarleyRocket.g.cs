@@ -285,10 +285,18 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     /// <summary>
     /// ComponentProperty: ExplosionFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent ExplosionFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ExplosionFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+    }
+    /// <summary>
+    /// ComponentProperty: ExplosionFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ExplosionFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 492); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
     }
 
     /// <summary>
@@ -303,10 +311,18 @@ public partial class RHarleyRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGam
     /// <summary>
     /// FloatProperty: dmgRadius
     /// </summary>
-    public unsafe float dmgRadius
+    public unsafe float dmgRadius_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+    }
+    /// <summary>
+    /// FloatProperty: dmgRadius
+    /// </summary>
+    public unsafe float dmgRadius_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 504); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
 
     /// <summary>

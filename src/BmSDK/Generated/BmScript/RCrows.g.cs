@@ -249,46 +249,126 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: AnimNodes
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence AnimNodes
+    public unsafe BmSDK.Engine.AnimNodeSequence AnimNodes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 480); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimNodes
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence AnimNodes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 484); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimNodes
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence AnimNodes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
     /// <summary>
     /// StructProperty: startingLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 startingLoc
+    public unsafe System.Numerics.Vector3 startingLoc_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+    }
+    /// <summary>
+    /// StructProperty: startingLoc
+    /// </summary>
+    public unsafe System.Numerics.Vector3 startingLoc_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 504); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+    }
+    /// <summary>
+    /// StructProperty: startingLoc
+    /// </summary>
+    public unsafe System.Numerics.Vector3 startingLoc_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
     }
 
     /// <summary>
     /// StructProperty: startingRot
     /// </summary>
-    public unsafe BmSDK.Rotator startingRot
+    public unsafe BmSDK.Rotator startingRot_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 528); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+    }
+    /// <summary>
+    /// StructProperty: startingRot
+    /// </summary>
+    public unsafe BmSDK.Rotator startingRot_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+    /// <summary>
+    /// StructProperty: startingRot
+    /// </summary>
+    public unsafe BmSDK.Rotator startingRot_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
     /// <summary>
     /// IntProperty: bReadyForTakeoff
     /// </summary>
-    public unsafe int bReadyForTakeoff
+    public unsafe int bReadyForTakeoff_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
+    }
+    /// <summary>
+    /// IntProperty: bReadyForTakeoff
+    /// </summary>
+    public unsafe int bReadyForTakeoff_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
+    /// <summary>
+    /// IntProperty: bReadyForTakeoff
+    /// </summary>
+    public unsafe int bReadyForTakeoff_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
     }
 
     /// <summary>
     /// IntProperty: bFinishedTakeOff
     /// </summary>
-    public unsafe int bFinishedTakeOff
+    public unsafe int bFinishedTakeOff_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// IntProperty: bFinishedTakeOff
+    /// </summary>
+    public unsafe int bFinishedTakeOff_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+    }
+    /// <summary>
+    /// IntProperty: bFinishedTakeOff
+    /// </summary>
+    public unsafe int bFinishedTakeOff_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
 
     /// <summary>
@@ -321,10 +401,26 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: trueFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 trueFlightVelocity
+    public unsafe System.Numerics.Vector3 trueFlightVelocity_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+    }
+    /// <summary>
+    /// StructProperty: trueFlightVelocity
+    /// </summary>
+    public unsafe System.Numerics.Vector3 trueFlightVelocity_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 628); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+    }
+    /// <summary>
+    /// StructProperty: trueFlightVelocity
+    /// </summary>
+    public unsafe System.Numerics.Vector3 trueFlightVelocity_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 640); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
     }
 
     /// <summary>
@@ -339,10 +435,26 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: MaterialConstants
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialConstants
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialConstants_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 664); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
+    }
+    /// <summary>
+    /// ObjectProperty: MaterialConstants
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialConstants_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+    /// <summary>
+    /// ObjectProperty: MaterialConstants
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialConstants_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
     /// <summary>

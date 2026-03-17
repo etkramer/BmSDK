@@ -673,10 +673,18 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         /// <summary>
         /// ObjectProperty: Phones
         /// </summary>
-        public unsafe BmSDK.BmScript.RZsaszPhone Phones
+        public unsafe BmSDK.BmScript.RZsaszPhone Phones_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RZsaszPhone>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: Phones
+        /// </summary>
+        public unsafe BmSDK.BmScript.RZsaszPhone Phones_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RZsaszPhone>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
 
         /// <summary>
@@ -700,10 +708,18 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
         /// <summary>
         /// FloatProperty: lastRejectionTime
         /// </summary>
-        public unsafe float lastRejectionTime
+        public unsafe float lastRejectionTime_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 16); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// FloatProperty: lastRejectionTime
+        /// </summary>
+        public unsafe float lastRejectionTime_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }
 
@@ -719,10 +735,66 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// StructProperty: phoneRaces
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 224); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
+    }
+    /// <summary>
+    /// StructProperty: phoneRaces
+    /// </summary>
+    public unsafe BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace phoneRaces_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_ZsaszPhoneManager.FPhoneRace>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
     /// <summary>
@@ -1106,10 +1178,66 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// FloatProperty: difficultyTimeModifiers_Normal
     /// </summary>
-    public unsafe float difficultyTimeModifiers_Normal
+    public unsafe float difficultyTimeModifiers_Normal_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 536); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
+    }
+    /// <summary>
+    /// FloatProperty: difficultyTimeModifiers_Normal
+    /// </summary>
+    public unsafe float difficultyTimeModifiers_Normal_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 564); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
     }
 
     /// <summary>

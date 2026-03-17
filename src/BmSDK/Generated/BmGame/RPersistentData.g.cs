@@ -1303,19 +1303,419 @@ public partial class RPersistentData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: CurrentSideChapter
     /// </summary>
-    public unsafe byte CurrentSideChapter
+    public unsafe byte CurrentSideChapter_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 232); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 233); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 233); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 234); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 234); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 235); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 235); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 237); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 237); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 238); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 238); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 239); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 239); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 241); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 241); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 242); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 242); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 243); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 243); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_12
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_13
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 245); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 245); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_14
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 246); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 246); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_15
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 247); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 247); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_16
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_17
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 249); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 249); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_18
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 250); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 250); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_19
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 251); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 251); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_20
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 252); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_21
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 253); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 253); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_22
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 254); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 254); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_23
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 255); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 255); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_24
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideChapter
+    /// </summary>
+    public unsafe byte CurrentSideChapter_25
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 257); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 257); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentSideSubChapter
     /// </summary>
-    public unsafe byte CurrentSideSubChapter
+    public unsafe byte CurrentSideSubChapter_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 258); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 258); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 259); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 259); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 261); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 261); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 262); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 262); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 263); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 263); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 265); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 265); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 266); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 266); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 267); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 267); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 269); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 269); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_12
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 270); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 270); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_13
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 271); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 271); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_14
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_15
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 273); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 273); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_16
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 274); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 274); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_17
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 275); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 275); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_18
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_19
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 277); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 277); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_20
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 278); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 278); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_21
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 279); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 279); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_22
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_23
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 281); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 281); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_24
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 282); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 282); }
+    }
+    /// <summary>
+    /// ByteProperty: CurrentSideSubChapter
+    /// </summary>
+    public unsafe byte CurrentSideSubChapter_25
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 283); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 283); }
     }
 
     /// <summary>

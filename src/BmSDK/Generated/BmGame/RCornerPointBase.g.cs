@@ -259,10 +259,34 @@ public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: WallPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RCornerWallMarkerBase WallPoint
+    public unsafe BmSDK.BmGame.RCornerWallMarkerBase WallPoint_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCornerWallMarkerBase>(Ptr + 428); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
+    /// <summary>
+    /// ObjectProperty: WallPoint
+    /// </summary>
+    public unsafe BmSDK.BmGame.RCornerWallMarkerBase WallPoint_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCornerWallMarkerBase>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+    /// <summary>
+    /// ObjectProperty: WallPoint
+    /// </summary>
+    public unsafe BmSDK.BmGame.RCornerWallMarkerBase WallPoint_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCornerWallMarkerBase>(Ptr + 436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+    }
+    /// <summary>
+    /// ObjectProperty: WallPoint
+    /// </summary>
+    public unsafe BmSDK.BmGame.RCornerWallMarkerBase WallPoint_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCornerWallMarkerBase>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
     /// <summary>

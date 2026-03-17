@@ -13,12 +13,12 @@ enum class EPropertyFlags : DWORD
 CLASS(UProperty, 88)
 class UProperty : public UField
 {
-    INT ArrayDim;
+    FIELD(INT, ArrayDim)
     FIELD(EPropertyFlags, PropertyFlags)
-        BYTE UNK1[4];
-    WORD ElementSize;
+    BYTE UNK1[4];
+    FIELD(WORD, ElementSize)
     FIELD(WORD, Offset)
-        BYTE UNK2[24];
+    BYTE UNK2[24];
 
 public:
     string GetInnerTypeNameManaged() const;

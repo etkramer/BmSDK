@@ -380,10 +380,18 @@ public partial class RPenguinRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: ImpactRumble
     /// </summary>
-    public unsafe BmSDK.Engine.ForceFeedbackWaveform ImpactRumble
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform ImpactRumble_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
+    /// <summary>
+    /// ObjectProperty: ImpactRumble
+    /// </summary>
+    public unsafe BmSDK.Engine.ForceFeedbackWaveform ImpactRumble_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>

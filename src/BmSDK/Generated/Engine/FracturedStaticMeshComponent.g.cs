@@ -385,9 +385,81 @@ public partial class FracturedStaticMeshComponent : BmSDK.Engine.FracturedBaseCo
     /// <summary>
     /// ObjectProperty: OldMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface OldMaterial
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 580); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 588); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 604); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+    }
+    /// <summary>
+    /// ObjectProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface OldMaterial_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 612); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 }

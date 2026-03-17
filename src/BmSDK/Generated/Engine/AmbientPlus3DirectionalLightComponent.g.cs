@@ -45,19 +45,51 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections
+    public unsafe System.Numerics.Vector3 LightDirections_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+    }
+    /// <summary>
+    /// StructProperty: LightDirections
+    /// </summary>
+    public unsafe System.Numerics.Vector3 LightDirections_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
+    }
+    /// <summary>
+    /// StructProperty: LightDirections
+    /// </summary>
+    public unsafe System.Numerics.Vector3 LightDirections_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
     }
 
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours
+    public unsafe System.Numerics.Vector3 LightColours_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+    /// <summary>
+    /// StructProperty: LightColours
+    /// </summary>
+    public unsafe System.Numerics.Vector3 LightColours_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+    /// <summary>
+    /// StructProperty: LightColours
+    /// </summary>
+    public unsafe System.Numerics.Vector3 LightColours_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
     /// <summary>

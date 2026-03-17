@@ -133,10 +133,26 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: ImpactShieldFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactShieldFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactShieldFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 840); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
+    }
+    /// <summary>
+    /// ComponentProperty: ImpactShieldFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactShieldFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 844); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
+    }
+    /// <summary>
+    /// ComponentProperty: ImpactShieldFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ImpactShieldFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 848); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
     }
 
     /// <summary>

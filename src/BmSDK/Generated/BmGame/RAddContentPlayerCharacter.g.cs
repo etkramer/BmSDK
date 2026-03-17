@@ -108,28 +108,228 @@ public partial class RAddContentPlayerCharacter : BmSDK.BmGame.RAdditionalConten
     /// <summary>
     /// NameProperty: GadgetsConsoleInner
     /// </summary>
-    public unsafe BmSDK.FName GadgetsConsoleInner
+    public unsafe BmSDK.FName GadgetsConsoleInner_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 80); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleInner
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleInner_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
     /// NameProperty: GadgetsConsoleOuter
     /// </summary>
-    public unsafe BmSDK.FName GadgetsConsoleOuter
+    public unsafe BmSDK.FName GadgetsConsoleOuter_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsConsoleOuter
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsConsoleOuter_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
     /// <summary>
     /// NameProperty: GadgetsPC
     /// </summary>
-    public unsafe BmSDK.FName GadgetsPC
+    public unsafe BmSDK.FName GadgetsPC_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
+    }
+    /// <summary>
+    /// NameProperty: GadgetsPC
+    /// </summary>
+    public unsafe BmSDK.FName GadgetsPC_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>

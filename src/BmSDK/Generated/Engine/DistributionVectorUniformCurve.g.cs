@@ -72,18 +72,42 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes
+    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+    /// <summary>
+    /// ByteProperty: LockedAxes
+    /// </summary>
+    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 85); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 86); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 86); }
+    }
+    /// <summary>
+    /// ByteProperty: MirrorFlags
+    /// </summary>
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 87); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 87); }
+    }
+    /// <summary>
+    /// ByteProperty: MirrorFlags
+    /// </summary>
+    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

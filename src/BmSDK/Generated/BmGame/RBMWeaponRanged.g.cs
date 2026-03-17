@@ -436,10 +436,26 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     /// <summary>
     /// FloatProperty: ShotDamage
     /// </summary>
-    public unsafe float ShotDamage
+    public unsafe float ShotDamage_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
+    }
+    /// <summary>
+    /// FloatProperty: ShotDamage
+    /// </summary>
+    public unsafe float ShotDamage_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 968); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
+    }
+    /// <summary>
+    /// FloatProperty: ShotDamage
+    /// </summary>
+    public unsafe float ShotDamage_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 972); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 
     /// <summary>

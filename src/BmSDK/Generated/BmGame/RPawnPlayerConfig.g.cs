@@ -252,10 +252,66 @@ public partial class RPawnPlayerConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SpecialMoveAnimsets
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 168); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+    }
+    /// <summary>
+    /// ObjectProperty: SpecialMoveAnimsets
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimSet SpecialMoveAnimsets_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
     /// <summary>

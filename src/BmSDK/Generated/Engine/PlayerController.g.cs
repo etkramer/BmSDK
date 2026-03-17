@@ -5304,10 +5304,34 @@ public partial class PlayerController : BmSDK.Engine.Controller, BmSDK.IGameObje
     /// <summary>
     /// StrProperty: LastBroadcastString
     /// </summary>
-    public unsafe BmSDK.FString LastBroadcastString
+    public unsafe BmSDK.FString LastBroadcastString_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1248); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
+    }
+    /// <summary>
+    /// StrProperty: LastBroadcastString
+    /// </summary>
+    public unsafe BmSDK.FString LastBroadcastString_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
+    }
+    /// <summary>
+    /// StrProperty: LastBroadcastString
+    /// </summary>
+    public unsafe BmSDK.FString LastBroadcastString_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1272); }
+    }
+    /// <summary>
+    /// StrProperty: LastBroadcastString
+    /// </summary>
+    public unsafe BmSDK.FString LastBroadcastString_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
     }
 
     /// <summary>

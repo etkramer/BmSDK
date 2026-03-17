@@ -106,10 +106,18 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: SlideDirection
     /// </summary>
-    public unsafe BmSDK.BmGame.RDummyTarget SlideDirection
+    public unsafe BmSDK.BmGame.RDummyTarget SlideDirection_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDummyTarget>(Ptr + 484); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+    }
+    /// <summary>
+    /// ObjectProperty: SlideDirection
+    /// </summary>
+    public unsafe BmSDK.BmGame.RDummyTarget SlideDirection_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDummyTarget>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
     /// <summary>

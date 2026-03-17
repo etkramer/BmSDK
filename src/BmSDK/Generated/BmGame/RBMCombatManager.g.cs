@@ -2753,10 +2753,170 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: WeaponConfigs
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 636); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 644); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 652); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 660); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_12
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_13
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_14
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_15
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_16
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_17
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_18
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 780); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_19
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
+    }
+    /// <summary>
+    /// StructProperty: WeaponConfigs
+    /// </summary>
+    public unsafe BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef WeaponConfigs_20
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMCombatManager.FWeaponConfigRef>(Ptr + 796); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
@@ -3113,10 +3273,18 @@ public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: VenomAttackHistory
     /// </summary>
-    public unsafe BmSDK.Class VenomAttackHistory
+    public unsafe BmSDK.Class VenomAttackHistory_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1024); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
+    }
+    /// <summary>
+    /// ClassProperty: VenomAttackHistory
+    /// </summary>
+    public unsafe BmSDK.Class VenomAttackHistory_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 1028); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
 
     /// <summary>

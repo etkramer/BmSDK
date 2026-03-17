@@ -2224,10 +2224,66 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// ByteProperty: ActiveModifiers
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 513); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 513); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 514); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 514); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 515); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 515); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 517); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 517); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 518); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 518); }
+    }
+    /// <summary>
+    /// ByteProperty: ActiveModifiers
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameInfo.EChallengeModifierType ActiveModifiers_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EChallengeModifierType>(Ptr + 519); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 519); }
     }
 
     /// <summary>
@@ -3097,10 +3153,66 @@ public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: PlayerCharacters
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1100); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1208); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1280); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1316); }
+    }
+    /// <summary>
+    /// StructProperty: PlayerCharacters
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter PlayerCharacters_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameRI.FLoadedPlayerCharacter>(Ptr + 1352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
     }
 
     /// <summary>

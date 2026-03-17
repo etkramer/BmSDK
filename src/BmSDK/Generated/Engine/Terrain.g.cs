@@ -294,10 +294,18 @@ public partial class Terrain : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: CachedTerrainMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials
+    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 556); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+    /// <summary>
+    /// StructProperty: CachedTerrainMaterials
+    /// </summary>
+    public unsafe BmSDK.Engine.Terrain.FCachedTerrainMaterialArray CachedTerrainMaterials_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain.FCachedTerrainMaterialArray>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
     }
 
     /// <summary>

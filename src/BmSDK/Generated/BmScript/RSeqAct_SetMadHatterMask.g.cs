@@ -78,10 +78,74 @@ public partial class RSeqAct_SetMadHatterMask : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// ObjectProperty: maskMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 208); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+    }
+    /// <summary>
+    /// ObjectProperty: maskMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMesh maskMeshes_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>

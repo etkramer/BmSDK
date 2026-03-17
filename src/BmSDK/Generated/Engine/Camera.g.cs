@@ -1104,10 +1104,66 @@ public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: AnimInstPool
     /// </summary>
-    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1172); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1188); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1192); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
+    }
+    /// <summary>
+    /// ObjectProperty: AnimInstPool
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraAnimInst AnimInstPool_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnimInst>(Ptr + 1200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
     }
 
     /// <summary>
