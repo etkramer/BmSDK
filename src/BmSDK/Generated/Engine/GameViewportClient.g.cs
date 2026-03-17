@@ -1070,10 +1070,18 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StrProperty: ProgressMessage
     /// </summary>
-    public unsafe BmSDK.FString ProgressMessage
+    public unsafe BmSDK.FString ProgressMessage_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
+    }
+    /// <summary>
+    /// StrProperty: ProgressMessage
+    /// </summary>
+    public unsafe BmSDK.FString ProgressMessage_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
     /// <summary>

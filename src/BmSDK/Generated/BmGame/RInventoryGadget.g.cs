@@ -1101,19 +1101,163 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.BmGame.RXr
     /// <summary>
     /// NameProperty: ThrowEquipBoneNameOverride
     /// </summary>
-    public unsafe BmSDK.FName ThrowEquipBoneNameOverride
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneNameOverride
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneNameOverride_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
     /// <summary>
     /// NameProperty: ThrowEquipBoneName2Override
     /// </summary>
-    public unsafe BmSDK.FName ThrowEquipBoneName2Override
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 640); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 648); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 656); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+    /// <summary>
+    /// NameProperty: ThrowEquipBoneName2Override
+    /// </summary>
+    public unsafe BmSDK.FName ThrowEquipBoneName2Override_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>

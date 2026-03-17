@@ -36,10 +36,42 @@ public partial class RFlaps_ConstraintSetupPlane : BmSDK.Engine.RFlaps_Constrain
     /// <summary>
     /// StructProperty: ConstrainedParticles
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+    /// <summary>
+    /// StructProperty: ConstrainedParticles
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 80); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+    }
+    /// <summary>
+    /// StructProperty: ConstrainedParticles
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+    /// <summary>
+    /// StructProperty: ConstrainedParticles
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+    }
+    /// <summary>
+    /// StructProperty: ConstrainedParticles
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticles_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>

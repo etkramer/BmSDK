@@ -233,19 +233,163 @@ public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObjec
     /// <summary>
     /// ObjectProperty: Points
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint Points
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 520); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 524); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 528); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 532); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+    /// <summary>
+    /// ObjectProperty: Points
+    /// </summary>
+    public unsafe BmSDK.BmGame.RGrapplePoint Points_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGrapplePoint>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
     /// <summary>
     /// ByteProperty: PointsCrossLevel
     /// </summary>
-    public unsafe byte PointsCrossLevel
+    public unsafe byte PointsCrossLevel_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 553); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 553); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 554); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 554); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 555); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 555); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 557); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 557); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 558); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 558); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 559); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 559); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
+    }
+    /// <summary>
+    /// ByteProperty: PointsCrossLevel
+    /// </summary>
+    public unsafe byte PointsCrossLevel_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 561); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 561); }
     }
 
     /// <summary>

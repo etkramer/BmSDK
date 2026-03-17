@@ -1061,19 +1061,67 @@ public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObje
     /// <summary>
     /// ComponentProperty: Bolts
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent Bolts
+    public unsafe BmSDK.Engine.StaticMeshComponent Bolts_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 576); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// ComponentProperty: Bolts
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMeshComponent Bolts_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 580); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+    }
+    /// <summary>
+    /// ComponentProperty: Bolts
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMeshComponent Bolts_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
+    /// <summary>
+    /// ComponentProperty: Bolts
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMeshComponent Bolts_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 588); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
     }
 
     /// <summary>
     /// NameProperty: BoltSockets
     /// </summary>
-    public unsafe BmSDK.FName BoltSockets
+    public unsafe BmSDK.FName BoltSockets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
+    /// <summary>
+    /// NameProperty: BoltSockets
+    /// </summary>
+    public unsafe BmSDK.FName BoltSockets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+    /// <summary>
+    /// NameProperty: BoltSockets
+    /// </summary>
+    public unsafe BmSDK.FName BoltSockets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+    }
+    /// <summary>
+    /// NameProperty: BoltSockets
+    /// </summary>
+    public unsafe BmSDK.FName BoltSockets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
     /// <summary>

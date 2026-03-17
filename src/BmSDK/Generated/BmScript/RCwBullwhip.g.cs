@@ -866,10 +866,82 @@ public partial class RCwBullwhip : BmSDK.BmGame.RWhipBase, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: ThrowDirectionTypes
     /// </summary>
-    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1088); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1112); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+    }
+    /// <summary>
+    /// StructProperty: ThrowDirectionTypes
+    /// </summary>
+    public unsafe BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer ThrowDirectionTypes_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RCwBullwhip.FBatarangThrowDirectionsContainer>(Ptr + 1196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
     }
 
     /// <summary>

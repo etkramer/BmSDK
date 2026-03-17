@@ -89,10 +89,26 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// IntProperty: Subdivisions
     /// </summary>
-    public unsafe int Subdivisions
+    public unsafe int Subdivisions_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 488); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+    }
+    /// <summary>
+    /// IntProperty: Subdivisions
+    /// </summary>
+    public unsafe int Subdivisions_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 492); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+    }
+    /// <summary>
+    /// IntProperty: Subdivisions
+    /// </summary>
+    public unsafe int Subdivisions_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 
     /// <summary>

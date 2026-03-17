@@ -169,10 +169,26 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: crowMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+    /// <summary>
+    /// ComponentProperty: crowMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+    }
+    /// <summary>
+    /// ComponentProperty: crowMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent crowMeshes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
     /// <summary>
@@ -232,10 +248,18 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: editorLines
     /// </summary>
-    public unsafe BmSDK.Engine.DrawConeComponent editorLines
+    public unsafe BmSDK.Engine.DrawConeComponent editorLines_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawConeComponent>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
+    /// <summary>
+    /// ComponentProperty: editorLines
+    /// </summary>
+    public unsafe BmSDK.Engine.DrawConeComponent editorLines_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawConeComponent>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 
 }

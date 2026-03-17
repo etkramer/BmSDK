@@ -327,9 +327,65 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// <summary>
     /// ComponentProperty: Neighbors
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 620); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 628); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 640); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
+    }
+    /// <summary>
+    /// ComponentProperty: Neighbors
+    /// </summary>
+    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 644); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
     }
 }

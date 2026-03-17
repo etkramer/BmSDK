@@ -175,28 +175,244 @@ public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// NameProperty: AIGroupNames
     /// </summary>
-    public unsafe BmSDK.FName AIGroupNames
+    public unsafe BmSDK.FName AIGroupNames_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 484); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 492); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 500); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 508); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
+    }
+    /// <summary>
+    /// NameProperty: AIGroupNames
+    /// </summary>
+    public unsafe BmSDK.FName AIGroupNames_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
     }
 
     /// <summary>
     /// ObjectProperty: AIGroupPawns
     /// </summary>
-    public unsafe BmSDK.Engine.Pawn AIGroupPawns
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 524); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 528); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 532); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+    /// <summary>
+    /// ObjectProperty: AIGroupPawns
+    /// </summary>
+    public unsafe BmSDK.Engine.Pawn AIGroupPawns_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Pawn>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
     /// <summary>
     /// IntProperty: AIGroupInitStage
     /// </summary>
-    public unsafe int AIGroupInitStage
+    public unsafe int AIGroupInitStage_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 564); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 588); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 588); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
+    }
+    /// <summary>
+    /// IntProperty: AIGroupInitStage
+    /// </summary>
+    public unsafe int AIGroupInitStage_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
     /// <summary>

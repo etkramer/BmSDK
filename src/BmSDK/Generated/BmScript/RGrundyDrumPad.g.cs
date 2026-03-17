@@ -375,10 +375,34 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor LightColours
+    public unsafe BmSDK.GameObject.FLinearColor LightColours_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 544); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+    /// <summary>
+    /// StructProperty: LightColours
+    /// </summary>
+    public unsafe BmSDK.GameObject.FLinearColor LightColours_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
+    }
+    /// <summary>
+    /// StructProperty: LightColours
+    /// </summary>
+    public unsafe BmSDK.GameObject.FLinearColor LightColours_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+    }
+    /// <summary>
+    /// StructProperty: LightColours
+    /// </summary>
+    public unsafe BmSDK.GameObject.FLinearColor LightColours_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
     }
 
     /// <summary>
@@ -393,10 +417,34 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// FloatProperty: ballGlowValues
     /// </summary>
-    public unsafe float ballGlowValues
+    public unsafe float ballGlowValues_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 624); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
+    }
+    /// <summary>
+    /// FloatProperty: ballGlowValues
+    /// </summary>
+    public unsafe float ballGlowValues_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 628); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+    }
+    /// <summary>
+    /// FloatProperty: ballGlowValues
+    /// </summary>
+    public unsafe float ballGlowValues_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+    }
+    /// <summary>
+    /// FloatProperty: ballGlowValues
+    /// </summary>
+    public unsafe float ballGlowValues_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
     }
 
     /// <summary>
@@ -420,28 +468,68 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// ComponentProperty: damageStateMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent damageStateMeshes
+    public unsafe BmSDK.Engine.SkeletalMeshComponent damageStateMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 648); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
+    }
+    /// <summary>
+    /// ComponentProperty: damageStateMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent damageStateMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 652); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
+    }
+    /// <summary>
+    /// ComponentProperty: damageStateMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent damageStateMeshes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 656); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
     }
 
     /// <summary>
     /// ObjectProperty: damageStateUnderMeshes
     /// </summary>
-    public unsafe BmSDK.BmGame.RStaticMeshToggleable damageStateUnderMeshes
+    public unsafe BmSDK.BmGame.RStaticMeshToggleable damageStateUnderMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStaticMeshToggleable>(Ptr + 660); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
+    }
+    /// <summary>
+    /// ObjectProperty: damageStateUnderMeshes
+    /// </summary>
+    public unsafe BmSDK.BmGame.RStaticMeshToggleable damageStateUnderMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RStaticMeshToggleable>(Ptr + 664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
     /// <summary>
     /// StructProperty: damageStateAnimNames
     /// </summary>
-    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames
+    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 668); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+    /// <summary>
+    /// StructProperty: damageStateAnimNames
+    /// </summary>
+    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+    /// <summary>
+    /// StructProperty: damageStateAnimNames
+    /// </summary>
+    public unsafe BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet damageStateAnimNames_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGrundyDrumPad.FdamageStateAnimNamesSet>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
@@ -465,10 +553,26 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// ComponentProperty: SmokeFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent SmokeFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent SmokeFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+    }
+    /// <summary>
+    /// ComponentProperty: SmokeFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent SmokeFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+    /// <summary>
+    /// ComponentProperty: SmokeFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent SmokeFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
@@ -519,10 +623,18 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: ballMaterials
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant ballMaterials
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ballMaterials_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 740); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+    }
+    /// <summary>
+    /// ObjectProperty: ballMaterials
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInstanceConstant ballMaterials_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>

@@ -619,37 +619,133 @@ public partial class RFloatingRaft : BmSDK.BmGame.RFloatingProp, BmSDK.IGameObje
     /// <summary>
     /// StructProperty: WakeOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 WakeOffsets
+    public unsafe System.Numerics.Vector3 WakeOffsets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1096); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
+    }
+    /// <summary>
+    /// StructProperty: WakeOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WakeOffsets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
+    }
+    /// <summary>
+    /// StructProperty: WakeOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WakeOffsets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1120); }
+    }
+    /// <summary>
+    /// StructProperty: WakeOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WakeOffsets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 1132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
 
     /// <summary>
     /// FloatProperty: WakeScales
     /// </summary>
-    public unsafe float WakeScales
+    public unsafe float WakeScales_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1144); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
+    }
+    /// <summary>
+    /// FloatProperty: WakeScales
+    /// </summary>
+    public unsafe float WakeScales_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
+    }
+    /// <summary>
+    /// FloatProperty: WakeScales
+    /// </summary>
+    public unsafe float WakeScales_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }
+    }
+    /// <summary>
+    /// FloatProperty: WakeScales
+    /// </summary>
+    public unsafe float WakeScales_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1156); }
     }
 
     /// <summary>
     /// IntProperty: WakeEmitterTypes
     /// </summary>
-    public unsafe int WakeEmitterTypes
+    public unsafe int WakeEmitterTypes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1160); }
+    }
+    /// <summary>
+    /// IntProperty: WakeEmitterTypes
+    /// </summary>
+    public unsafe int WakeEmitterTypes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
+    }
+    /// <summary>
+    /// IntProperty: WakeEmitterTypes
+    /// </summary>
+    public unsafe int WakeEmitterTypes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1168); }
+    }
+    /// <summary>
+    /// IntProperty: WakeEmitterTypes
+    /// </summary>
+    public unsafe int WakeEmitterTypes_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1172); }
     }
 
     /// <summary>
     /// ObjectProperty: WakeEmitters
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter WakeEmitters
+    public unsafe BmSDK.Engine.Emitter WakeEmitters_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 1176); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1176); }
+    }
+    /// <summary>
+    /// ObjectProperty: WakeEmitters
+    /// </summary>
+    public unsafe BmSDK.Engine.Emitter WakeEmitters_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 1180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
+    }
+    /// <summary>
+    /// ObjectProperty: WakeEmitters
+    /// </summary>
+    public unsafe BmSDK.Engine.Emitter WakeEmitters_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 1184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+    }
+    /// <summary>
+    /// ObjectProperty: WakeEmitters
+    /// </summary>
+    public unsafe BmSDK.Engine.Emitter WakeEmitters_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 1188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1188); }
     }
 
     /// <summary>

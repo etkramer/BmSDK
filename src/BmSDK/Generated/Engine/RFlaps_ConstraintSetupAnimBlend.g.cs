@@ -54,10 +54,42 @@ public partial class RFlaps_ConstraintSetupAnimBlend : BmSDK.Engine.RFlaps_Const
     /// <summary>
     /// StructProperty: BlendDatas
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+    /// <summary>
+    /// StructProperty: BlendDatas
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+    /// <summary>
+    /// StructProperty: BlendDatas
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+    /// <summary>
+    /// StructProperty: BlendDatas
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+    }
+    /// <summary>
+    /// StructProperty: BlendDatas
+    /// </summary>
+    public unsafe BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData BlendDatas_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetupAnimBlend.FRBlendBoneData>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>

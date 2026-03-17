@@ -612,19 +612,51 @@ public partial class AnimNodeSequence : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: RootBoneOption
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis>(Ptr + 280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+    /// <summary>
+    /// ByteProperty: RootBoneOption
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis>(Ptr + 281); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 281); }
+    }
+    /// <summary>
+    /// ByteProperty: RootBoneOption
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootBoneAxis RootBoneOption_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootBoneAxis>(Ptr + 282); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 282); }
     }
 
     /// <summary>
     /// ByteProperty: RootRotationOption
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence.ERootRotationOption RootRotationOption
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootRotationOption RootRotationOption_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootRotationOption>(Ptr + 283); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 283); }
+    }
+    /// <summary>
+    /// ByteProperty: RootRotationOption
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootRotationOption RootRotationOption_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootRotationOption>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
+    /// <summary>
+    /// ByteProperty: RootRotationOption
+    /// </summary>
+    public unsafe BmSDK.Engine.AnimNodeSequence.ERootRotationOption RootRotationOption_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence.ERootRotationOption>(Ptr + 285); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 285); }
     }
 
     /// <summary>

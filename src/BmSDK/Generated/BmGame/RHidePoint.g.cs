@@ -1189,19 +1189,99 @@ public partial class RHidePoint : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.B
     /// <summary>
     /// ObjectProperty: LinkedHidePointsSameLevel
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 744); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+    }
+    /// <summary>
+    /// ObjectProperty: LinkedHidePointsSameLevel
+    /// </summary>
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
+    }
+    /// <summary>
+    /// ObjectProperty: LinkedHidePointsSameLevel
+    /// </summary>
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
+    }
+    /// <summary>
+    /// ObjectProperty: LinkedHidePointsSameLevel
+    /// </summary>
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
+    }
+    /// <summary>
+    /// ObjectProperty: LinkedHidePointsSameLevel
+    /// </summary>
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
+    }
+    /// <summary>
+    /// ObjectProperty: LinkedHidePointsSameLevel
+    /// </summary>
+    public unsafe BmSDK.BmGame.RHidePoint LinkedHidePointsSameLevel_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
     /// <summary>
     /// ByteProperty: HidePointCrossLevel
     /// </summary>
-    public unsafe byte HidePointCrossLevel
+    public unsafe byte HidePointCrossLevel_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 768); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
+    }
+    /// <summary>
+    /// ByteProperty: HidePointCrossLevel
+    /// </summary>
+    public unsafe byte HidePointCrossLevel_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 769); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 769); }
+    }
+    /// <summary>
+    /// ByteProperty: HidePointCrossLevel
+    /// </summary>
+    public unsafe byte HidePointCrossLevel_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 770); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 770); }
+    }
+    /// <summary>
+    /// ByteProperty: HidePointCrossLevel
+    /// </summary>
+    public unsafe byte HidePointCrossLevel_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 771); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 771); }
+    }
+    /// <summary>
+    /// ByteProperty: HidePointCrossLevel
+    /// </summary>
+    public unsafe byte HidePointCrossLevel_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
+    }
+    /// <summary>
+    /// ByteProperty: HidePointCrossLevel
+    /// </summary>
+    public unsafe byte HidePointCrossLevel_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 773); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 773); }
     }
 
     /// <summary>

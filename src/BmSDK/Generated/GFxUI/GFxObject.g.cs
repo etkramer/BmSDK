@@ -1592,10 +1592,98 @@ public partial class GFxObject : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// IntProperty: Value
     /// </summary>
-    public unsafe int Value
+    public unsafe int Value_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 64); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+    /// <summary>
+    /// IntProperty: Value
+    /// </summary>
+    public unsafe int Value_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>

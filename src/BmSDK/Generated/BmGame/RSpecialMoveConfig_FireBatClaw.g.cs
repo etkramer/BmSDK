@@ -36,19 +36,67 @@ public partial class RSpecialMoveConfig_FireBatClaw : BmSDK.BmGame.RSpecialMoveC
     /// <summary>
     /// NameProperty: FireAnim
     /// </summary>
-    public unsafe BmSDK.FName FireAnim
+    public unsafe BmSDK.FName FireAnim_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+    /// <summary>
+    /// NameProperty: FireAnim
+    /// </summary>
+    public unsafe BmSDK.FName FireAnim_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
+    /// <summary>
+    /// NameProperty: FireAnim
+    /// </summary>
+    public unsafe BmSDK.FName FireAnim_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 312); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
+    }
+    /// <summary>
+    /// NameProperty: FireAnim
+    /// </summary>
+    public unsafe BmSDK.FName FireAnim_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// NameProperty: FireIdle
     /// </summary>
-    public unsafe BmSDK.FName FireIdle
+    public unsafe BmSDK.FName FireIdle_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
+    /// <summary>
+    /// NameProperty: FireIdle
+    /// </summary>
+    public unsafe BmSDK.FName FireIdle_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+    }
+    /// <summary>
+    /// NameProperty: FireIdle
+    /// </summary>
+    public unsafe BmSDK.FName FireIdle_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+    }
+    /// <summary>
+    /// NameProperty: FireIdle
+    /// </summary>
+    public unsafe BmSDK.FName FireIdle_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>

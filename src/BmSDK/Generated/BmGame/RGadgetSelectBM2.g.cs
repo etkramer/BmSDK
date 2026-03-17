@@ -265,10 +265,66 @@ public partial class RGadgetSelectBM2 : BmSDK.BmGame.RGadgetSelect, BmSDK.IGameO
     /// <summary>
     /// NameProperty: CurrentGadgets
     /// </summary>
-    public unsafe BmSDK.FName CurrentGadgets
+    public unsafe BmSDK.FName CurrentGadgets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+    /// <summary>
+    /// NameProperty: CurrentGadgets
+    /// </summary>
+    public unsafe BmSDK.FName CurrentGadgets_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>

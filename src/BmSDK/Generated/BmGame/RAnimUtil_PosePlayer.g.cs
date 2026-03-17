@@ -845,10 +845,34 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: States
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState States
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState States_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: States
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState States_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+        /// <summary>
+        /// StructProperty: States
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState States_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// StructProperty: States
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState States_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAdditiveState>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
         }
 
         /// <summary>
@@ -945,10 +969,34 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Anims
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim Anims
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim Anims_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Anims
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim Anims_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim>(Ptr + 368); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }; }
+        }
+        /// <summary>
+        /// StructProperty: Anims
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim Anims_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim>(Ptr + 736); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }; }
+        }
+        /// <summary>
+        /// StructProperty: Anims
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim Anims_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FResolvedMovementAnim>(Ptr + 1104); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }; }
         }
     }
 
@@ -1119,10 +1167,50 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 168); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 224); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition Data_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FMoveToTransition>(Ptr + 280); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }; }
         }
 
         /// <summary>
@@ -1481,10 +1569,66 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 48); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_6
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 96); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample Data_7
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_PosePlayer.FAimAtSample>(Ptr + 112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }; }
         }
 
         /// <summary>

@@ -819,10 +819,26 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// FloatProperty: BetweenShotTime
     /// </summary>
-    public unsafe float BetweenShotTime
+    public unsafe float BetweenShotTime_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 492); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+    }
+    /// <summary>
+    /// FloatProperty: BetweenShotTime
+    /// </summary>
+    public unsafe float BetweenShotTime_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 496); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+    }
+    /// <summary>
+    /// FloatProperty: BetweenShotTime
+    /// </summary>
+    public unsafe float BetweenShotTime_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 500); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
     }
 
     /// <summary>

@@ -889,10 +889,66 @@ public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: LocalMessages
     /// </summary>
-    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 496); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 880); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
+    }
+    /// <summary>
+    /// StructProperty: LocalMessages
+    /// </summary>
+    public unsafe BmSDK.Engine.HUD.FHudLocalizedMessage LocalMessages_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.HUD.FHudLocalizedMessage>(Ptr + 944); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 
     /// <summary>

@@ -502,28 +502,100 @@ public partial class RDisruptableControlBox : BmSDK.BmGame.RDisruptableObjectBas
     /// <summary>
     /// ObjectProperty: ScreenMats
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface ScreenMats
+    public unsafe BmSDK.Engine.MaterialInterface ScreenMats_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 680); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+    /// <summary>
+    /// ObjectProperty: ScreenMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface ScreenMats_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+    /// <summary>
+    /// ObjectProperty: ScreenMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface ScreenMats_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+    }
+    /// <summary>
+    /// ObjectProperty: ScreenMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface ScreenMats_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
     /// ObjectProperty: BoxMats
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface BoxMats
+    public unsafe BmSDK.Engine.MaterialInterface BoxMats_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 696); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface BoxMats_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface BoxMats_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMats
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialInterface BoxMats_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
     /// <summary>
     /// ObjectProperty: BoxMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh BoxMesh
+    public unsafe BmSDK.Engine.StaticMesh BoxMesh_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 712); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMesh BoxMesh_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMesh BoxMesh_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+    /// <summary>
+    /// ObjectProperty: BoxMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.StaticMesh BoxMesh_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
     /// <summary>

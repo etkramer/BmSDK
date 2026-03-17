@@ -214,10 +214,18 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
         /// <summary>
         /// NameProperty: InputKeyToEmulate
         /// </summary>
-        public unsafe BmSDK.FName InputKeyToEmulate
+        public unsafe BmSDK.FName InputKeyToEmulate_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+        /// <summary>
+        /// NameProperty: InputKeyToEmulate
+        /// </summary>
+        public unsafe BmSDK.FName InputKeyToEmulate_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
         }
     }
 

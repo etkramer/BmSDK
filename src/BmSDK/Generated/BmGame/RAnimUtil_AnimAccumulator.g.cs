@@ -37,10 +37,50 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: RemainingPoseWeight
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: RemainingPoseWeight
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+        /// <summary>
+        /// StructProperty: RemainingPoseWeight
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 56); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }; }
+        }
+        /// <summary>
+        /// StructProperty: RemainingPoseWeight
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
+        }
+        /// <summary>
+        /// StructProperty: RemainingPoseWeight
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }; }
+        }
+        /// <summary>
+        /// StructProperty: RemainingPoseWeight
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil.FBodyWeight RemainingPoseWeight_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.FBodyWeight>(Ptr + 140); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }; }
         }
 
         /// <summary>
@@ -89,10 +129,130 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 64); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 128); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 192); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 256); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 320); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_6
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 384); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_7
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 448); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_8
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 512); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_9
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 576); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_10
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 640); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_11
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 704); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_12
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 768); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_13
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 832); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_14
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 896); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample Data_15
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAdditiveAnimSample>(Ptr + 960); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }; }
         }
 
         /// <summary>
@@ -218,10 +378,194 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 96); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 192); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 288); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 384); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 480); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_6
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 576); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_7
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 672); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_8
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 768); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_9
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 864); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_10
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 960); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_11
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1056); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_12
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1152); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1152); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_13
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1248); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_14
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1344); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_15
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1440); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1440); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_16
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1536); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1536); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_17
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1632); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1632); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_18
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1728); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1728); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_19
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1824); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1824); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_20
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 1920); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1920); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_21
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 2016); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2016); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_22
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 2112); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample Data_23
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_AnimAccumulator.FWeightedAnimSample>(Ptr + 2208); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }; }
         }
 
         /// <summary>

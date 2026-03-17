@@ -1039,10 +1039,42 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: List
         /// </summary>
-        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List
+        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator List_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathGoalEvaluator>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }
 
@@ -1064,10 +1096,42 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: List
         /// </summary>
-        public unsafe BmSDK.Engine.NavMeshPathConstraint List
+        public unsafe BmSDK.Engine.NavMeshPathConstraint List_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathConstraint List_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathConstraint List_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathConstraint List_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: List
+        /// </summary>
+        public unsafe BmSDK.Engine.NavMeshPathConstraint List_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavMeshPathConstraint>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }
 
@@ -2135,19 +2199,163 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: BookMarks
     /// </summary>
-    public unsafe BmSDK.Engine.BookMark BookMarks
+    public unsafe BmSDK.Engine.BookMark BookMarks_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 924); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 928); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 928); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 932); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 932); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 936); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 940); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 944); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 948); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 948); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 952); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 956); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 956); }
+    }
+    /// <summary>
+    /// ObjectProperty: BookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.BookMark BookMarks_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.BookMark>(Ptr + 960); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
     /// <summary>
     /// ObjectProperty: KismetBookMarks
     /// </summary>
-    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 964); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 964); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 968); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 972); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 976); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 980); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 980); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 984); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 988); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 988); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 992); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 992); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 996); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
+    }
+    /// <summary>
+    /// ObjectProperty: KismetBookMarks
+    /// </summary>
+    public unsafe BmSDK.Engine.KismetBookMark KismetBookMarks_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.KismetBookMark>(Ptr + 1000); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 
     /// <summary>

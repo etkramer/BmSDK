@@ -168,19 +168,51 @@ public partial class RChallengeGoalDefinitions : BmSDK.Engine.Actor, BmSDK.IGame
         /// <summary>
         /// IntProperty: ChallengeScores
         /// </summary>
-        public unsafe int ChallengeScores
+        public unsafe int ChallengeScores_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+        /// <summary>
+        /// IntProperty: ChallengeScores
+        /// </summary>
+        public unsafe int ChallengeScores_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// IntProperty: ChallengeScores
+        /// </summary>
+        public unsafe int ChallengeScores_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
         /// ByteProperty: ChallengeActions
         /// </summary>
-        public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions
+        public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+        /// <summary>
+        /// ByteProperty: ChallengeActions
+        /// </summary>
+        public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 21); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 21); }; }
+        }
+        /// <summary>
+        /// ByteProperty: ChallengeActions
+        /// </summary>
+        public unsafe BmSDK.BmGame.RGameInfo.EGameAction ChallengeActions_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EGameAction>(Ptr + 22); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 22); }; }
         }
     }
 }

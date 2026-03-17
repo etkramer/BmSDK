@@ -411,10 +411,130 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// StrProperty: History
     /// </summary>
-    public unsafe BmSDK.FString History
+    public unsafe BmSDK.FString History_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 160); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_8
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_9
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_10
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_11
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_12
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_13
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_14
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
+    /// <summary>
+    /// StrProperty: History
+    /// </summary>
+    public unsafe BmSDK.FString History_15
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>

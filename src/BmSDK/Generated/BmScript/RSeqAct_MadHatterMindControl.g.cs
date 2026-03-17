@@ -938,10 +938,34 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// FloatProperty: scoreThresholds
     /// </summary>
-    public unsafe float scoreThresholds
+    public unsafe float scoreThresholds_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 468); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
+    /// <summary>
+    /// FloatProperty: scoreThresholds
+    /// </summary>
+    public unsafe float scoreThresholds_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+    }
+    /// <summary>
+    /// FloatProperty: scoreThresholds
+    /// </summary>
+    public unsafe float scoreThresholds_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
+    /// <summary>
+    /// FloatProperty: scoreThresholds
+    /// </summary>
+    public unsafe float scoreThresholds_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>

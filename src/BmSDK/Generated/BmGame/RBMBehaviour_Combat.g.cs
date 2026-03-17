@@ -872,10 +872,34 @@ public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled,
     /// <summary>
     /// StructProperty: WallForces
     /// </summary>
-    public unsafe System.Numerics.Vector3 WallForces
+    public unsafe System.Numerics.Vector3 WallForces_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 444); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+    }
+    /// <summary>
+    /// StructProperty: WallForces
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WallForces_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+    }
+    /// <summary>
+    /// StructProperty: WallForces
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WallForces_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
+    /// <summary>
+    /// StructProperty: WallForces
+    /// </summary>
+    public unsafe System.Numerics.Vector3 WallForces_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 480); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>

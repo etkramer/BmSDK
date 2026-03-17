@@ -1798,10 +1798,26 @@ public partial class RPawnBossClayfaceCoup : BmSDK.BmGame.RPawnBossClayfaceBase,
         /// <summary>
         /// FloatProperty: SwipeDamage
         /// </summary>
-        public unsafe float SwipeDamage
+        public unsafe float SwipeDamage_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// FloatProperty: SwipeDamage
+        /// </summary>
+        public unsafe float SwipeDamage_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// FloatProperty: SwipeDamage
+        /// </summary>
+        public unsafe float SwipeDamage_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
@@ -1832,37 +1848,101 @@ public partial class RPawnBossClayfaceCoup : BmSDK.BmGame.RPawnBossClayfaceBase,
         /// <summary>
         /// IntProperty: MaxSmallDronesAttacking
         /// </summary>
-        public unsafe int MaxSmallDronesAttacking
+        public unsafe int MaxSmallDronesAttacking_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// IntProperty: MaxSmallDronesAttacking
+        /// </summary>
+        public unsafe int MaxSmallDronesAttacking_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// IntProperty: MaxSmallDronesAttacking
+        /// </summary>
+        public unsafe int MaxSmallDronesAttacking_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// FloatProperty: KillDroneDamageToClayface
         /// </summary>
-        public unsafe float KillDroneDamageToClayface
+        public unsafe float KillDroneDamageToClayface_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// FloatProperty: KillDroneDamageToClayface
+        /// </summary>
+        public unsafe float KillDroneDamageToClayface_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// FloatProperty: KillDroneDamageToClayface
+        /// </summary>
+        public unsafe float KillDroneDamageToClayface_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
 
         /// <summary>
         /// FloatProperty: KillLargeDroneDamageToClayface
         /// </summary>
-        public unsafe float KillLargeDroneDamageToClayface
+        public unsafe float KillLargeDroneDamageToClayface_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+        /// <summary>
+        /// FloatProperty: KillLargeDroneDamageToClayface
+        /// </summary>
+        public unsafe float KillLargeDroneDamageToClayface_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+        /// <summary>
+        /// FloatProperty: KillLargeDroneDamageToClayface
+        /// </summary>
+        public unsafe float KillLargeDroneDamageToClayface_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
 
         /// <summary>
         /// IntProperty: NumDrones
         /// </summary>
-        public unsafe int NumDrones
+        public unsafe int NumDrones_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+        /// <summary>
+        /// IntProperty: NumDrones
+        /// </summary>
+        public unsafe int NumDrones_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+        /// <summary>
+        /// IntProperty: NumDrones
+        /// </summary>
+        public unsafe int NumDrones_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
         }
 
         /// <summary>
@@ -1884,28 +1964,76 @@ public partial class RPawnBossClayfaceCoup : BmSDK.BmGame.RPawnBossClayfaceBase,
         /// <summary>
         /// FloatProperty: VomitSpeed
         /// </summary>
-        public unsafe float VomitSpeed
+        public unsafe float VomitSpeed_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+        /// <summary>
+        /// FloatProperty: VomitSpeed
+        /// </summary>
+        public unsafe float VomitSpeed_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// FloatProperty: VomitSpeed
+        /// </summary>
+        public unsafe float VomitSpeed_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
 
         /// <summary>
         /// FloatProperty: VomitDamage
         /// </summary>
-        public unsafe float VomitDamage
+        public unsafe float VomitDamage_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+        /// <summary>
+        /// FloatProperty: VomitDamage
+        /// </summary>
+        public unsafe float VomitDamage_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+        /// <summary>
+        /// FloatProperty: VomitDamage
+        /// </summary>
+        public unsafe float VomitDamage_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
 
         /// <summary>
         /// FloatProperty: MouthOpenTime
         /// </summary>
-        public unsafe float MouthOpenTime
+        public unsafe float MouthOpenTime_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+        /// <summary>
+        /// FloatProperty: MouthOpenTime
+        /// </summary>
+        public unsafe float MouthOpenTime_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+        /// <summary>
+        /// FloatProperty: MouthOpenTime
+        /// </summary>
+        public unsafe float MouthOpenTime_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
 
         /// <summary>

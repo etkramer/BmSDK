@@ -395,10 +395,26 @@ public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// FloatProperty: BetweenShotTime
     /// </summary>
-    public unsafe float BetweenShotTime
+    public unsafe float BetweenShotTime_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 616); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+    }
+    /// <summary>
+    /// FloatProperty: BetweenShotTime
+    /// </summary>
+    public unsafe float BetweenShotTime_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 620); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
+    }
+    /// <summary>
+    /// FloatProperty: BetweenShotTime
+    /// </summary>
+    public unsafe float BetweenShotTime_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>

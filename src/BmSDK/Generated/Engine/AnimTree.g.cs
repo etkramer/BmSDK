@@ -350,10 +350,26 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
         /// <summary>
         /// ObjectProperty: PreviewExtraSkelMeshes
         /// </summary>
-        public unsafe BmSDK.Engine.SkeletalMesh PreviewExtraSkelMeshes
+        public unsafe BmSDK.Engine.SkeletalMesh PreviewExtraSkelMeshes_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 24); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: PreviewExtraSkelMeshes
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh PreviewExtraSkelMeshes_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 28); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
+        }
+        /// <summary>
+        /// ObjectProperty: PreviewExtraSkelMeshes
+        /// </summary>
+        public unsafe BmSDK.Engine.SkeletalMesh PreviewExtraSkelMeshes_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
         }
     }
 

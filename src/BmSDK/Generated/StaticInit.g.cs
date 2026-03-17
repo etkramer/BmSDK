@@ -6361,14 +6361,14 @@ static partial class StaticInit
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RCinematicRiddler)] = "BmScript.RCinematicRiddler";
         _classPathToManagedTypeMap["BmScript.RAudioHornSpeakerPoint"] = typeof(BmSDK.BmScript.RAudioHornSpeakerPoint);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RAudioHornSpeakerPoint)] = "BmScript.RAudioHornSpeakerPoint";
+        _classPathToManagedTypeMap["BmScript.RLevelTransitionDoubleDoors"] = typeof(BmSDK.BmScript.RLevelTransitionDoubleDoors);
+        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLevelTransitionDoubleDoors)] = "BmScript.RLevelTransitionDoubleDoors";
         _classPathToManagedTypeMap["BmScript.RGFxMovieUI_CharacterViewer"] = typeof(BmSDK.BmScript.RGFxMovieUI_CharacterViewer);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RGFxMovieUI_CharacterViewer)] = "BmScript.RGFxMovieUI_CharacterViewer";
         _classPathToManagedTypeMap["BmScript.RHidePoint_OWGargoyle"] = typeof(BmSDK.BmScript.RHidePoint_OWGargoyle);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RHidePoint_OWGargoyle)] = "BmScript.RHidePoint_OWGargoyle";
         _classPathToManagedTypeMap["BmScript.RCinematicHarley"] = typeof(BmSDK.BmScript.RCinematicHarley);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RCinematicHarley)] = "BmScript.RCinematicHarley";
-        _classPathToManagedTypeMap["BmScript.RLevelTransitionDoubleDoors"] = typeof(BmSDK.BmScript.RLevelTransitionDoubleDoors);
-        _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RLevelTransitionDoubleDoors)] = "BmScript.RLevelTransitionDoubleDoors";
         _classPathToManagedTypeMap["BmScript.RBMBehaviour_Bane"] = typeof(BmSDK.BmScript.RBMBehaviour_Bane);
         _managedTypeToClassPathMap[typeof(BmSDK.BmScript.RBMBehaviour_Bane)] = "BmScript.RBMBehaviour_Bane";
         _classPathToManagedTypeMap["BmScript.RPawnVillainBane"] = typeof(BmSDK.BmScript.RPawnVillainBane);

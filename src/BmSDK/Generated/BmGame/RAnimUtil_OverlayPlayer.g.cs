@@ -159,10 +159,50 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 72); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 140); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 208); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_4
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 276); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay Data_5
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingAdditiveOverlay>(Ptr + 344); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }; }
         }
     }
 
@@ -288,10 +328,34 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
         /// <summary>
         /// StructProperty: Data
         /// </summary>
-        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay Data
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay Data_0
         {
             get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay Data_1
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay Data_2
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay>(Ptr + 164); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }; }
+        }
+        /// <summary>
+        /// StructProperty: Data
+        /// </summary>
+        public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay Data_3
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil_OverlayPlayer.FPlayingOverlay>(Ptr + 244); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }; }
         }
     }
 

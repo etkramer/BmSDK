@@ -899,19 +899,67 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// ObjectProperty: clockSoundStartEvents
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent clockSoundStartEvents
+    public unsafe BmSDK.Engine.AkEvent clockSoundStartEvents_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 432); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStartEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStartEvents_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStartEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStartEvents_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStartEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStartEvents_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
     }
 
     /// <summary>
     /// ObjectProperty: clockSoundStopEvents
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent clockSoundStopEvents
+    public unsafe BmSDK.Engine.AkEvent clockSoundStopEvents_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 448); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStopEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStopEvents_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStopEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStopEvents_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+    }
+    /// <summary>
+    /// ObjectProperty: clockSoundStopEvents
+    /// </summary>
+    public unsafe BmSDK.Engine.AkEvent clockSoundStopEvents_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 
     /// <summary>

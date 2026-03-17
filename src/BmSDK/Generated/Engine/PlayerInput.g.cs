@@ -654,19 +654,35 @@ public partial class PlayerInput : BmSDK.Engine.Input, BmSDK.IGameObject
     /// <summary>
     /// FloatProperty: ZeroTime
     /// </summary>
-    public unsafe float ZeroTime
+    public unsafe float ZeroTime_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 328); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
+    /// <summary>
+    /// FloatProperty: ZeroTime
+    /// </summary>
+    public unsafe float ZeroTime_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 
     /// <summary>
     /// FloatProperty: SmoothedMouse
     /// </summary>
-    public unsafe float SmoothedMouse
+    public unsafe float SmoothedMouse_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 336); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+    }
+    /// <summary>
+    /// FloatProperty: SmoothedMouse
+    /// </summary>
+    public unsafe float SmoothedMouse_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>

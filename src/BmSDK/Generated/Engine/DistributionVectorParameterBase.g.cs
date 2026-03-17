@@ -76,9 +76,25 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
     /// <summary>
     /// ByteProperty: ParamModes
     /// </summary>
-    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
+    /// <summary>
+    /// ByteProperty: ParamModes
+    /// </summary>
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 141); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 141); }
+    }
+    /// <summary>
+    /// ByteProperty: ParamModes
+    /// </summary>
+    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamModes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 142); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 142); }
     }
 }

@@ -2635,10 +2635,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ComponentProperty: GrundyMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent GrundyMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent GrundyMesh_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7124); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7124); }
+    }
+    /// <summary>
+    /// ComponentProperty: GrundyMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent GrundyMesh_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7128); }
     }
 
     /// <summary>
@@ -2662,37 +2670,85 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ComponentProperty: ChestMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ChestMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ChestMesh_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7140); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7140); }
+    }
+    /// <summary>
+    /// ComponentProperty: ChestMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent ChestMesh_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7144); }
     }
 
     /// <summary>
     /// ComponentProperty: HeartMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartMesh_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7148); }
+    }
+    /// <summary>
+    /// ComponentProperty: HeartMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartMesh_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7152); }
     }
 
     /// <summary>
     /// ComponentProperty: HeartDettachedMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartDettachedMesh
+    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartDettachedMesh_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7156); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7156); }
+    }
+    /// <summary>
+    /// ComponentProperty: HeartDettachedMesh
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent HeartDettachedMesh_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7160); }
     }
 
     /// <summary>
     /// ComponentProperty: RibsMeshes
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent RibsMeshes
+    public unsafe BmSDK.Engine.SkeletalMeshComponent RibsMeshes_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7164); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7164); }
+    }
+    /// <summary>
+    /// ComponentProperty: RibsMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent RibsMeshes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7168); }
+    }
+    /// <summary>
+    /// ComponentProperty: RibsMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent RibsMeshes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7172); }
+    }
+    /// <summary>
+    /// ComponentProperty: RibsMeshes
+    /// </summary>
+    public unsafe BmSDK.Engine.SkeletalMeshComponent RibsMeshes_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 7176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7176); }
     }
 
     /// <summary>
@@ -2833,10 +2889,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: chainExtraLength
     /// </summary>
-    public unsafe float chainExtraLength
+    public unsafe float chainExtraLength_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7240); }
+    }
+    /// <summary>
+    /// FloatProperty: chainExtraLength
+    /// </summary>
+    public unsafe float chainExtraLength_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7244); }
     }
 
     /// <summary>
@@ -3346,10 +3410,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ObjectProperty: TetherPoints
     /// </summary>
-    public unsafe BmSDK.Engine.Actor TetherPoints
+    public unsafe BmSDK.Engine.Actor TetherPoints_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 7300); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7300); }
+    }
+    /// <summary>
+    /// ObjectProperty: TetherPoints
+    /// </summary>
+    public unsafe BmSDK.Engine.Actor TetherPoints_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 7304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7304); }
     }
 
     /// <summary>
@@ -3445,19 +3517,35 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ComponentProperty: FireOnBallsPFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent FireOnBallsPFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent FireOnBallsPFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7356); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7356); }
+    }
+    /// <summary>
+    /// ComponentProperty: FireOnBallsPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FireOnBallsPFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7360); }
     }
 
     /// <summary>
     /// ComponentProperty: ElectricityOnBallsPFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent ElectricityOnBallsPFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent ElectricityOnBallsPFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7364); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7364); }
+    }
+    /// <summary>
+    /// ComponentProperty: ElectricityOnBallsPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent ElectricityOnBallsPFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7368); }
     }
 
     /// <summary>
@@ -3490,10 +3578,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// NameProperty: ChainWrapBoneNames
     /// </summary>
-    public unsafe BmSDK.FName ChainWrapBoneNames
+    public unsafe BmSDK.FName ChainWrapBoneNames_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 7532); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7532); }
+    }
+    /// <summary>
+    /// NameProperty: ChainWrapBoneNames
+    /// </summary>
+    public unsafe BmSDK.FName ChainWrapBoneNames_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 7540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7540); }
     }
 
     /// <summary>
@@ -3508,10 +3604,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// NameProperty: GeneratorHitReacts
     /// </summary>
-    public unsafe BmSDK.FName GeneratorHitReacts
+    public unsafe BmSDK.FName GeneratorHitReacts_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 7552); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7552); }
+    }
+    /// <summary>
+    /// NameProperty: GeneratorHitReacts
+    /// </summary>
+    public unsafe BmSDK.FName GeneratorHitReacts_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 7560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7560); }
     }
 
     /// <summary>
@@ -3571,10 +3675,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: floorRingSpeed
     /// </summary>
-    public unsafe float floorRingSpeed
+    public unsafe float floorRingSpeed_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7592); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7592); }
+    }
+    /// <summary>
+    /// FloatProperty: floorRingSpeed
+    /// </summary>
+    public unsafe float floorRingSpeed_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7596); }
+    }
+    /// <summary>
+    /// FloatProperty: floorRingSpeed
+    /// </summary>
+    public unsafe float floorRingSpeed_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7600); }
     }
 
     /// <summary>
@@ -3742,10 +3862,66 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ComponentProperty: FloorRingPFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7676); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7676); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7680); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7684); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7688); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7692); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7696); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7700); }
+    }
+    /// <summary>
+    /// ComponentProperty: FloorRingPFX
+    /// </summary>
+    public unsafe BmSDK.Engine.ParticleSystemComponent FloorRingPFX_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 7704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7704); }
     }
 
     /// <summary>
@@ -3832,10 +4008,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: crushDPS
     /// </summary>
-    public unsafe float crushDPS
+    public unsafe float crushDPS_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7760); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7760); }
+    }
+    /// <summary>
+    /// FloatProperty: crushDPS
+    /// </summary>
+    public unsafe float crushDPS_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7764); }
+    }
+    /// <summary>
+    /// FloatProperty: crushDPS
+    /// </summary>
+    public unsafe float crushDPS_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7768); }
     }
 
     /// <summary>
@@ -4174,10 +4366,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: swingSpeedPadModifier
     /// </summary>
-    public unsafe float swingSpeedPadModifier
+    public unsafe float swingSpeedPadModifier_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7936); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7936); }
+    }
+    /// <summary>
+    /// FloatProperty: swingSpeedPadModifier
+    /// </summary>
+    public unsafe float swingSpeedPadModifier_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7940); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7940); }
+    }
+    /// <summary>
+    /// FloatProperty: swingSpeedPadModifier
+    /// </summary>
+    public unsafe float swingSpeedPadModifier_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 7944); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7944); }
     }
 
     /// <summary>
@@ -4246,10 +4454,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: electricPillars
     /// </summary>
-    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars
+    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 7976); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 7976); }
+    }
+    /// <summary>
+    /// StructProperty: electricPillars
+    /// </summary>
+    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8028); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8028); }
+    }
+    /// <summary>
+    /// StructProperty: electricPillars
+    /// </summary>
+    public unsafe BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX electricPillars_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RPawnBossGrundy.FElectricPillarPFX>(Ptr + 8080); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8080); }
     }
 
     /// <summary>
@@ -4381,10 +4605,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: conductorCurrentRotationRate
     /// </summary>
-    public unsafe float conductorCurrentRotationRate
+    public unsafe float conductorCurrentRotationRate_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8196); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8196); }
+    }
+    /// <summary>
+    /// FloatProperty: conductorCurrentRotationRate
+    /// </summary>
+    public unsafe float conductorCurrentRotationRate_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8200); }
+    }
+    /// <summary>
+    /// FloatProperty: conductorCurrentRotationRate
+    /// </summary>
+    public unsafe float conductorCurrentRotationRate_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8204); }
     }
 
     /// <summary>
@@ -4453,10 +4693,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// FloatProperty: stage3PillarOffTime
     /// </summary>
-    public unsafe float stage3PillarOffTime
+    public unsafe float stage3PillarOffTime_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8236); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8236); }
+    }
+    /// <summary>
+    /// FloatProperty: stage3PillarOffTime
+    /// </summary>
+    public unsafe float stage3PillarOffTime_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8240); }
+    }
+    /// <summary>
+    /// FloatProperty: stage3PillarOffTime
+    /// </summary>
+    public unsafe float stage3PillarOffTime_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8244); }
     }
 
     /// <summary>
@@ -4516,10 +4772,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// IntProperty: bPadCogsOn
     /// </summary>
-    public unsafe int bPadCogsOn
+    public unsafe int bPadCogsOn_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8280); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8280); }
+    }
+    /// <summary>
+    /// IntProperty: bPadCogsOn
+    /// </summary>
+    public unsafe int bPadCogsOn_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8284); }
+    }
+    /// <summary>
+    /// IntProperty: bPadCogsOn
+    /// </summary>
+    public unsafe int bPadCogsOn_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8288); }
     }
 
     /// <summary>
@@ -4633,10 +4905,26 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// ObjectProperty: OverloadExplodeFX
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter OverloadExplodeFX
+    public unsafe BmSDK.Engine.Emitter OverloadExplodeFX_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 8340); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8340); }
+    }
+    /// <summary>
+    /// ObjectProperty: OverloadExplodeFX
+    /// </summary>
+    public unsafe BmSDK.Engine.Emitter OverloadExplodeFX_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 8344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8344); }
+    }
+    /// <summary>
+    /// ObjectProperty: OverloadExplodeFX
+    /// </summary>
+    public unsafe BmSDK.Engine.Emitter OverloadExplodeFX_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Emitter>(Ptr + 8348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8348); }
     }
 
     /// <summary>
@@ -4948,19 +5236,67 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: deathVolOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 deathVolOffsets
+    public unsafe System.Numerics.Vector3 deathVolOffsets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8512); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8512); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 deathVolOffsets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8524); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8524); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 deathVolOffsets_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8536); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 deathVolOffsets_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8548); }
     }
 
     /// <summary>
     /// StructProperty: deathVolOffsetRots
     /// </summary>
-    public unsafe BmSDK.Rotator deathVolOffsetRots
+    public unsafe BmSDK.Rotator deathVolOffsetRots_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8560); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8560); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsetRots
+    /// </summary>
+    public unsafe BmSDK.Rotator deathVolOffsetRots_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8572); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8572); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsetRots
+    /// </summary>
+    public unsafe BmSDK.Rotator deathVolOffsetRots_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8584); }
+    }
+    /// <summary>
+    /// StructProperty: deathVolOffsetRots
+    /// </summary>
+    public unsafe BmSDK.Rotator deathVolOffsetRots_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 8596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8596); }
     }
 
     /// <summary>
@@ -5155,10 +5491,18 @@ public partial class RPawnBossGrundy : BmSDK.BmGame.RPawnBossGrundyBase, BmSDK.I
     /// <summary>
     /// StructProperty: hardCodedSmashReturnOffsets
     /// </summary>
-    public unsafe System.Numerics.Vector3 hardCodedSmashReturnOffsets
+    public unsafe System.Numerics.Vector3 hardCodedSmashReturnOffsets_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8708); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8708); }
+    }
+    /// <summary>
+    /// StructProperty: hardCodedSmashReturnOffsets
+    /// </summary>
+    public unsafe System.Numerics.Vector3 hardCodedSmashReturnOffsets_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 8720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8720); }
     }
 
     /// <summary>

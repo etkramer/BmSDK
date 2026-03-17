@@ -1981,10 +1981,34 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// ObjectProperty: GoalList
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GoalList
+    public unsafe BmSDK.Engine.Actor GoalList_0
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 596); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
+    }
+    /// <summary>
+    /// ObjectProperty: GoalList
+    /// </summary>
+    public unsafe BmSDK.Engine.Actor GoalList_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+    /// <summary>
+    /// ObjectProperty: GoalList
+    /// </summary>
+    public unsafe BmSDK.Engine.Actor GoalList_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 604); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
+    }
+    /// <summary>
+    /// ObjectProperty: GoalList
+    /// </summary>
+    public unsafe BmSDK.Engine.Actor GoalList_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
