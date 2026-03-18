@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanQuickStrike : BmSDK.BmGame.RCombatMove_Ba
     /// <summary>
     /// Function: ProcessDamageResult
     /// </summary>
-    public unsafe void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanQuickStrike.ProcessDamageResult", true);
         byte* paramsPtr = stackalloc byte[8];

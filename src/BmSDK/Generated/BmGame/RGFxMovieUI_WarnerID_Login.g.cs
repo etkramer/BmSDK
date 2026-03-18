@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: LaunchedFromMainMenu
     /// </summary>
-    public unsafe bool LaunchedFromMainMenu()
+    public unsafe virtual bool LaunchedFromMainMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.LaunchedFromMainMenu", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AllDone
     /// </summary>
-    public unsafe void AllDone()
+    public unsafe virtual void AllDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AllDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.Init", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: ExtraEvent
     /// </summary>
-    public unsafe void ExtraEvent(BmSDK.FString Arguments)
+    public unsafe virtual void ExtraEvent(BmSDK.FString Arguments)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.ExtraEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: PrivacyTextCallback
     /// </summary>
-    public unsafe void PrivacyTextCallback(BmSDK.FString PrivacyText)
+    public unsafe virtual void PrivacyTextCallback(BmSDK.FString PrivacyText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.PrivacyTextCallback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: WBIDCallback
     /// </summary>
-    public unsafe void WBIDCallback(bool bWasSuccessful)
+    public unsafe virtual void WBIDCallback(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.WBIDCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: ExtraFunction
     /// </summary>
-    public unsafe bool ExtraFunction(BmSDK.FString Arguments)
+    public unsafe virtual bool ExtraFunction(BmSDK.FString Arguments)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.ExtraFunction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -136,7 +136,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AttemptWBIDGetEntitlements
     /// </summary>
-    public unsafe bool AttemptWBIDGetEntitlements()
+    public unsafe virtual bool AttemptWBIDGetEntitlements()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AttemptWBIDGetEntitlements", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: RequestLegalsText
     /// </summary>
-    public unsafe bool RequestLegalsText()
+    public unsafe virtual bool RequestLegalsText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.RequestLegalsText", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AttemptWBIDResetPassword
     /// </summary>
-    public unsafe bool AttemptWBIDResetPassword()
+    public unsafe virtual bool AttemptWBIDResetPassword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AttemptWBIDResetPassword", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -190,7 +190,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AttemptCreateNewWBID
     /// </summary>
-    public unsafe bool AttemptCreateNewWBID()
+    public unsafe virtual bool AttemptCreateNewWBID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AttemptCreateNewWBID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AttemptWBIDLogin
     /// </summary>
-    public unsafe bool AttemptWBIDLogin()
+    public unsafe virtual bool AttemptWBIDLogin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AttemptWBIDLogin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: AttemptWBIDAutoLogin
     /// </summary>
-    public unsafe bool AttemptWBIDAutoLogin()
+    public unsafe virtual bool AttemptWBIDAutoLogin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.AttemptWBIDAutoLogin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -244,7 +244,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: CheckAlreadyLoggedIn
     /// </summary>
-    public unsafe bool CheckAlreadyLoggedIn()
+    public unsafe virtual bool CheckAlreadyLoggedIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.CheckAlreadyLoggedIn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: TerminateWBIDSystem
     /// </summary>
-    public unsafe bool TerminateWBIDSystem()
+    public unsafe virtual bool TerminateWBIDSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.TerminateWBIDSystem", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -280,7 +280,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: GetIsWBIDInitialized
     /// </summary>
-    public unsafe bool GetIsWBIDInitialized()
+    public unsafe virtual bool GetIsWBIDInitialized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.GetIsWBIDInitialized", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -298,7 +298,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: GetIsInitializingWBID
     /// </summary>
-    public unsafe bool GetIsInitializingWBID()
+    public unsafe virtual bool GetIsInitializingWBID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.GetIsInitializingWBID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -316,7 +316,7 @@ public partial class RGFxMovieUI_WarnerID_Login : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// <summary>
     /// Function: InitWBIDSystem
     /// </summary>
-    public unsafe bool InitWBIDSystem()
+    public unsafe virtual bool InitWBIDSystem()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_WarnerID_Login.InitWBIDSystem", true);
         byte* paramsPtr = stackalloc byte[4];

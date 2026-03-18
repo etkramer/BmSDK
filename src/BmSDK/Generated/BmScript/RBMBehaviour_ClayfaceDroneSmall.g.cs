@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: HurtBatman
     /// </summary>
-    public unsafe void HurtBatman()
+    public unsafe virtual void HurtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDroneSmall.HurtBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDroneSmall.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDroneSmall.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_ClayfaceDroneSmall : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDroneSmall.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

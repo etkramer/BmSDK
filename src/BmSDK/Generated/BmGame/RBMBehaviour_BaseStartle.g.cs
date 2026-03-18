@@ -31,7 +31,7 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: SetThreatLocation
     /// </summary>
-    public unsafe void SetThreatLocation(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetThreatLocation(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BaseStartle.SetThreatLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -43,7 +43,7 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: GetStartleName
     /// </summary>
-    public unsafe BmSDK.FName GetStartleName()
+    public unsafe virtual BmSDK.FName GetStartleName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BaseStartle.GetStartleName", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -54,7 +54,7 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BaseStartle.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -66,7 +66,7 @@ public partial class RBMBehaviour_BaseStartle : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BaseStartle.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];

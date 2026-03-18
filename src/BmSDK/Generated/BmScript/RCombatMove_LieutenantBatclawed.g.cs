@@ -71,7 +71,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: GetHitPS
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetHitPS()
+    public unsafe virtual BmSDK.Engine.ParticleSystem GetHitPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.GetHitPS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: GetHitPSLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHitPSLocation()
+    public unsafe virtual System.Numerics.Vector3 GetHitPSLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.GetHitPSLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: PlayHitFX
     /// </summary>
-    public unsafe void PlayHitFX()
+    public unsafe virtual void PlayHitFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.PlayHitFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -129,7 +129,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: CombatAnimHitEnd
     /// </summary>
-    public unsafe void CombatAnimHitEnd()
+    public unsafe virtual void CombatAnimHitEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.CombatAnimHitEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe virtual void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RCombatMove_LieutenantBatclawed : BmSDK.BmGame.RCombatMove,
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_LieutenantBatclawed.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

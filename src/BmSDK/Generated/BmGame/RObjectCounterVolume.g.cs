@@ -71,7 +71,7 @@ public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectCounterVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectCounterVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -98,7 +98,7 @@ public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: GetCurrentCount
     /// </summary>
-    public unsafe int GetCurrentCount()
+    public unsafe virtual int GetCurrentCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectCounterVolume.GetCurrentCount", true);
         byte* paramsPtr = stackalloc byte[12];

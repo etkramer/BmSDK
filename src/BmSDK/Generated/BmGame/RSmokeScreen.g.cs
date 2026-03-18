@@ -66,7 +66,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: PathBlockedBySmoke
     /// </summary>
-    public unsafe void PathBlockedBySmoke(BmSDK.BmGame.RBMPawnAI User)
+    public unsafe virtual void PathBlockedBySmoke(BmSDK.BmGame.RBMPawnAI User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PathBlockedBySmoke", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: PathCutBySmoke
     /// </summary>
-    public unsafe void PathCutBySmoke(BmSDK.BmGame.RBMPawnAI User)
+    public unsafe virtual void PathCutBySmoke(BmSDK.BmGame.RBMPawnAI User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PathCutBySmoke", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -101,7 +101,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -123,7 +123,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: SmokeNoticedBy
     /// </summary>
-    public unsafe void SmokeNoticedBy(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual void SmokeNoticedBy(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.SmokeNoticedBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: SmokeScreenOver
     /// </summary>
-    public unsafe void SmokeScreenOver()
+    public unsafe virtual void SmokeScreenOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.SmokeScreenOver", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: AIReactionFinished
     /// </summary>
-    public unsafe void AIReactionFinished()
+    public unsafe virtual void AIReactionFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.AIReactionFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: StartPredReaction
     /// </summary>
-    public unsafe void StartPredReaction(bool bIsExtinguisher)
+    public unsafe virtual void StartPredReaction(bool bIsExtinguisher)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.StartPredReaction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: InitSmoke
     /// </summary>
-    public unsafe void InitSmoke(bool bHitWall, bool bSmokePellet)
+    public unsafe virtual void InitSmoke(bool bHitWall, bool bSmokePellet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.InitSmoke", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -218,7 +218,7 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RMagneticObjectForceField : BmSDK.Engine.NxRadialForceField
     /// <summary>
     /// Function: SetFieldProperties
     /// </summary>
-    public unsafe void SetFieldProperties(float Radius, float Strength)
+    public unsafe virtual void SetFieldProperties(float Radius, float Strength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticObjectForceField.SetFieldProperties", true);
         byte* paramsPtr = stackalloc byte[8];

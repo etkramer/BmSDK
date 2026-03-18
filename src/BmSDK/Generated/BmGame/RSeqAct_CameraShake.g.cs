@@ -47,7 +47,7 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CameraShake.Activated", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: SetPreMadeVals
     /// </summary>
-    public unsafe void SetPreMadeVals()
+    public unsafe virtual void SetPreMadeVals()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CameraShake.SetPreMadeVals", true);
         byte* paramsPtr = stackalloc byte[0];

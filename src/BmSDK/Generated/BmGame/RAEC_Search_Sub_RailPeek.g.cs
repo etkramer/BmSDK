@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: HandOverFenceLock
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
+    public unsafe virtual BmSDK.BmGame.RBMPathNode_FenceJumpProxy HandOverFenceLock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RailPeek.HandOverFenceLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RBMPathNode_FenceJump FenceCentreNode, System.Numerics.Vector3 StartPoint)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RBMPathNode_FenceJump FenceCentreNode, System.Numerics.Vector3 StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RailPeek.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -97,7 +97,7 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RailPeek.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RAEC_Search_Sub_RailPeek : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_RailPeek.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

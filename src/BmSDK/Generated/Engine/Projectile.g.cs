@@ -66,7 +66,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyFluidSurfaceImpact
     /// </summary>
-    public unsafe void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
+    public unsafe override void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.ApplyFluidSurfaceImpact", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -79,7 +79,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FellOutOfWorld
     /// </summary>
-    public unsafe void FellOutOfWorld(BmSDK.Class dmgType)
+    public unsafe override void FellOutOfWorld(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.FellOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -91,7 +91,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.Explode", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EncroachedBy
     /// </summary>
-    public unsafe void EncroachedBy(BmSDK.Engine.Actor Other)
+    public unsafe override void EncroachedBy(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.EncroachedBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -130,7 +130,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessTouch
     /// </summary>
-    public unsafe void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.ProcessTouch", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -144,7 +144,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -159,7 +159,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HurtRadius
     /// </summary>
-    public unsafe bool HurtRadius(float DamageAmount, float InDamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, BmSDK.Engine.Actor IgnoredActor = default, BmSDK.Engine.Controller InstigatedByController = default, bool bDoFullDamage = default)
+    public unsafe override bool HurtRadius(float DamageAmount, float InDamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, BmSDK.Engine.Actor IgnoredActor = default, BmSDK.Engine.Controller InstigatedByController = default, bool bDoFullDamage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.HurtRadius", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -178,7 +178,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ProjectileHurtRadius
     /// </summary>
-    public unsafe bool ProjectileHurtRadius(System.Numerics.Vector3 HurtOrigin, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool ProjectileHurtRadius(System.Numerics.Vector3 HurtOrigin, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.ProjectileHurtRadius", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -191,7 +191,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSplash
     /// </summary>
-    public unsafe bool CanSplash()
+    public unsafe override bool CanSplash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.CanSplash", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTeamNum
     /// </summary>
-    public unsafe byte GetTeamNum()
+    public unsafe override byte GetTeamNum()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.GetTeamNum", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -231,7 +231,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 Direction)
+    public unsafe virtual void Init(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.Init", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -243,7 +243,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -265,7 +265,7 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EncroachingOn
     /// </summary>
-    public unsafe bool EncroachingOn(BmSDK.Engine.Actor Other)
+    public unsafe override bool EncroachingOn(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Projectile.EncroachingOn", true);
         byte* paramsPtr = stackalloc byte[8];

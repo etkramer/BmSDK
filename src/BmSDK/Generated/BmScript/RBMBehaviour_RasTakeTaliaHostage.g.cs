@@ -36,7 +36,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: DrawBat
     /// </summary>
-    public unsafe void DrawBat()
+    public unsafe virtual void DrawBat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.DrawBat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: BringInCinematicBatarang
     /// </summary>
-    public unsafe void BringInCinematicBatarang()
+    public unsafe virtual void BringInCinematicBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.BringInCinematicBatarang", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: PlayCameraAnim
     /// </summary>
-    public unsafe void PlayCameraAnim(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet)
+    public unsafe virtual void PlayCameraAnim(BmSDK.BmGame.RPlayerController PC, System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.PlayCameraAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -85,7 +85,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: DestroyThrownBatarang
     /// </summary>
-    public unsafe void DestroyThrownBatarang()
+    public unsafe virtual void DestroyThrownBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.DestroyThrownBatarang", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: BatarangHit
     /// </summary>
-    public unsafe void BatarangHit()
+    public unsafe virtual void BatarangHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.BatarangHit", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: DestroyCinematicBatarang
     /// </summary>
-    public unsafe void DestroyCinematicBatarang()
+    public unsafe virtual void DestroyCinematicBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.DestroyCinematicBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: DestroyDagger
     /// </summary>
-    public unsafe void DestroyDagger()
+    public unsafe virtual void DestroyDagger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.DestroyDagger", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: InTheFace
     /// </summary>
-    public unsafe void InTheFace()
+    public unsafe virtual void InTheFace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.InTheFace", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -140,7 +140,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: FinalSlowmo
     /// </summary>
-    public unsafe void FinalSlowmo()
+    public unsafe virtual void FinalSlowmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.FinalSlowmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: NormalSpeed
     /// </summary>
-    public unsafe void NormalSpeed()
+    public unsafe virtual void NormalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.NormalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: SlowMo
     /// </summary>
-    public unsafe void SlowMo()
+    public unsafe virtual void SlowMo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.SlowMo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: SpawnDagger
     /// </summary>
-    public unsafe void SpawnDagger()
+    public unsafe virtual void SpawnDagger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.SpawnDagger", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: SpeechStart
     /// </summary>
-    public unsafe void SpeechStart()
+    public unsafe virtual void SpeechStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.SpeechStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RBMBehaviour_RasTakeTaliaHostage : BmSDK.BmGame.RBMBehaviou
     /// <summary>
     /// Function: Killed
     /// </summary>
-    public unsafe void Killed()
+    public unsafe virtual void Killed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasTakeTaliaHostage.Killed", true);
         byte* paramsPtr = stackalloc byte[0];

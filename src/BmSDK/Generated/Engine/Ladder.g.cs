@@ -71,7 +71,7 @@ public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Function: SuggestMovePreparation
     /// </summary>
-    public unsafe bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
+    public unsafe override bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Ladder.SuggestMovePreparation", true);
         byte* paramsPtr = stackalloc byte[8];

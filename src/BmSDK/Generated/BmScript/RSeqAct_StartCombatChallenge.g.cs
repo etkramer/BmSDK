@@ -47,7 +47,7 @@ public partial class RSeqAct_StartCombatChallenge : BmSDK.BmScript.RSeqAct_Start
     /// <summary>
     /// Function: IntroDoneCallback
     /// </summary>
-    public unsafe void IntroDoneCallback()
+    public unsafe virtual void IntroDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallenge.IntroDoneCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_StartCombatChallenge : BmSDK.BmScript.RSeqAct_Start
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallenge.Update", true);
         byte* paramsPtr = stackalloc byte[20];

@@ -71,7 +71,7 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// Function: TouchedPawn
     /// </summary>
-    public unsafe void TouchedPawn(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer Other, bool CauseSplash = default)
+    public unsafe override void TouchedPawn(BmSDK.BmGame.RPlayerController PC, BmSDK.BmGame.RPawnPlayer Other, bool CauseSplash = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSharkPoolRescueVolumeBase.TouchedPawn", true);
         byte* paramsPtr = stackalloc byte[140];
@@ -85,7 +85,7 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// Function: CheckForRaftInWay
     /// </summary>
-    public unsafe void CheckForRaftInWay()
+    public unsafe virtual void CheckForRaftInWay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSharkPoolRescueVolumeBase.CheckForRaftInWay", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// Function: PlayInstantDeath
     /// </summary>
-    public unsafe void PlayInstantDeath()
+    public unsafe virtual void PlayInstantDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSharkPoolRescueVolumeBase.PlayInstantDeath", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -107,7 +107,7 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSharkPoolRescueVolumeBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RSharkPoolRescueVolumeBase : BmSDK.BmGame.RWaterVolumeBase,
     /// <summary>
     /// Function: PlayStruggle
     /// </summary>
-    public unsafe void PlayStruggle(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe virtual void PlayStruggle(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSharkPoolRescueVolumeBase.PlayStruggle", true);
         byte* paramsPtr = stackalloc byte[112];

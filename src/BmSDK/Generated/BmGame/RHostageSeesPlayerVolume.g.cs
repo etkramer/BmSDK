@@ -71,7 +71,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: GetSeqEventForPlayerDir
     /// </summary>
-    public unsafe BmSDK.Class GetSeqEventForPlayerDir()
+    public unsafe virtual BmSDK.Class GetSeqEventForPlayerDir()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.GetSeqEventForPlayerDir", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -109,7 +109,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.Tick", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -121,7 +121,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: IsInBox
     /// </summary>
-    public unsafe bool IsInBox(System.Numerics.Vector3 TestPoint, BmSDK.GameObject.FBox TestBox)
+    public unsafe virtual bool IsInBox(System.Numerics.Vector3 TestPoint, BmSDK.GameObject.FBox TestBox)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.IsInBox", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -134,7 +134,7 @@ public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHostageSeesPlayerVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

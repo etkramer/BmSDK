@@ -47,7 +47,7 @@ public partial class RSeqEvent_EvidenceFound : BmSDK.Engine.SequenceEvent, BmSDK
     /// <summary>
     /// Function: Handle
     /// </summary>
-    public unsafe bool Handle(BmSDK.Engine.Actor InOriginator, int typeNo)
+    public unsafe virtual bool Handle(BmSDK.Engine.Actor InOriginator, int typeNo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_EvidenceFound.Handle", true);
         byte* paramsPtr = stackalloc byte[20];

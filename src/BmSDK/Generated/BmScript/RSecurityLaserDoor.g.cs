@@ -71,7 +71,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe virtual void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: Open
     /// </summary>
-    public unsafe void Open()
+    public unsafe virtual void Open()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.Open", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: LockDoor
     /// </summary>
-    public unsafe void LockDoor(bool bLocked)
+    public unsafe virtual void LockDoor(bool bLocked)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.LockDoor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RSecurityLaserDoor : BmSDK.BmGame.RSecurityLaserDoorBase, B
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(BmSDK.FName AnimName = default)
+    public unsafe virtual bool IsPlayingAnim(BmSDK.FName AnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSecurityLaserDoor.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[16];

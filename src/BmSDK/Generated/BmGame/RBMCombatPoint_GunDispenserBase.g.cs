@@ -66,7 +66,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: GetObstacleBoudingShape
     /// </summary>
-    public unsafe bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
+    public unsafe virtual bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.GetObstacleBoudingShape", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -78,7 +78,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CheckForWeaponLoad
     /// </summary>
-    public unsafe void CheckForWeaponLoad()
+    public unsafe virtual void CheckForWeaponLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CheckForWeaponLoad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -158,7 +158,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: CancelWeaponLoading
     /// </summary>
-    public unsafe void CancelWeaponLoading()
+    public unsafe virtual void CancelWeaponLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.CancelWeaponLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     /// <summary>
     /// Function: LoadWeapon
     /// </summary>
-    public unsafe bool LoadWeapon(BmSDK.FString WeaponPackageString)
+    public unsafe virtual bool LoadWeapon(BmSDK.FString WeaponPackageString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatPoint_GunDispenserBase.LoadWeapon", true);
         byte* paramsPtr = stackalloc byte[16];

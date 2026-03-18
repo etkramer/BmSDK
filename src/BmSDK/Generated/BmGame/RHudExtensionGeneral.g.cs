@@ -36,7 +36,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowCredits
     /// </summary>
-    public unsafe void ShowCredits(float Delay, BmSDK.TArray<BmSDK.FString> CreditList)
+    public unsafe virtual void ShowCredits(float Delay, BmSDK.TArray<BmSDK.FString> CreditList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ShowCredits", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -49,7 +49,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowCreditsAS
     /// </summary>
-    public unsafe void ShowCreditsAS(float Delay)
+    public unsafe virtual void ShowCreditsAS(float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ShowCreditsAS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -61,7 +61,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowRiddle
     /// </summary>
-    public unsafe void ShowRiddle(bool bShow, BmSDK.FString RiddleText)
+    public unsafe virtual void ShowRiddle(bool bShow, BmSDK.FString RiddleText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ShowRiddle", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -74,7 +74,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetZoomMode
     /// </summary>
-    public unsafe void SetZoomMode(bool bEnabled, float HeadAngle)
+    public unsafe virtual void SetZoomMode(bool bEnabled, float HeadAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetZoomMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -87,7 +87,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetInfoText
     /// </summary>
-    public unsafe void SetInfoText(BmSDK.FString Label, int Justification, int TextColour)
+    public unsafe virtual void SetInfoText(BmSDK.FString Label, int Justification, int TextColour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetInfoText", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -101,7 +101,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetClockTimer
     /// </summary>
-    public unsafe void SetClockTimer(BmSDK.FString Text, bool bVisible, bool bWarning)
+    public unsafe virtual void SetClockTimer(BmSDK.FString Text, bool bVisible, bool bWarning)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetClockTimer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -115,7 +115,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetMainPromptAtY
     /// </summary>
-    public unsafe void SetMainPromptAtY(float atY)
+    public unsafe virtual void SetMainPromptAtY(float atY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetMainPromptAtY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ReFetchAndBuildPrompts
     /// </summary>
-    public unsafe void ReFetchAndBuildPrompts()
+    public unsafe virtual void ReFetchAndBuildPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ReFetchAndBuildPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: RebuildPrompts
     /// </summary>
-    public unsafe void RebuildPrompts()
+    public unsafe virtual void RebuildPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.RebuildPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetMainPrompt
     /// </summary>
-    public unsafe void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha, float TextAlpha)
+    public unsafe virtual void SetMainPrompt(int Id, BmSDK.FString Label, float Alpha, float TextAlpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetMainPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -164,7 +164,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetPrompt
     /// </summary>
-    public unsafe void SetPrompt(int Id, BmSDK.FString Label, float Alpha, float TextAlpha)
+    public unsafe virtual void SetPrompt(int Id, BmSDK.FString Label, float Alpha, float TextAlpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.SetPrompt", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -179,7 +179,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ReLayoutPrompts
     /// </summary>
-    public unsafe void ReLayoutPrompts()
+    public unsafe virtual void ReLayoutPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ReLayoutPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ClearPrompts
     /// </summary>
-    public unsafe void ClearPrompts()
+    public unsafe virtual void ClearPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.ClearPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -201,7 +201,7 @@ public partial class RHudExtensionGeneral : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGeneral.Init", true);
         byte* paramsPtr = stackalloc byte[32];

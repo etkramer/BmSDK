@@ -71,7 +71,7 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseAndLookAround.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: StartPause
     /// </summary>
-    public unsafe void StartPause()
+    public unsafe virtual void StartPause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseAndLookAround.StartPause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseAndLookAround.OnActivate", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_PauseAndLookAround : BmSDK.BmGame.RBMAIAction, 
     /// <summary>
     /// Function: SetLookLocation
     /// </summary>
-    public unsafe void SetLookLocation(System.Numerics.Vector3 NewLoc)
+    public unsafe virtual void SetLookLocation(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PauseAndLookAround.SetLookLocation", true);
         byte* paramsPtr = stackalloc byte[12];

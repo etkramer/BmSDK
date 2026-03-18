@@ -47,7 +47,7 @@ public partial class RSeqAct_PDLC1_Calc_Episode1_Stats : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PDLC1_Calc_Episode1_Stats.Activated", true);
         byte* paramsPtr = stackalloc byte[32];

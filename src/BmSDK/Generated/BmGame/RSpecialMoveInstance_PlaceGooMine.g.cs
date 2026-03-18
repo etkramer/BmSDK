@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: SafeToCancel
     /// </summary>
-    public unsafe void SafeToCancel()
+    public unsafe virtual void SafeToCancel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.SafeToCancel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: SwitchToExtraCam
     /// </summary>
-    public unsafe void SwitchToExtraCam()
+    public unsafe virtual void SwitchToExtraCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.SwitchToExtraCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: FallTimeOut
     /// </summary>
-    public unsafe void FallTimeOut()
+    public unsafe override void FallTimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.FallTimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: StartGelSound
     /// </summary>
-    public unsafe void StartGelSound()
+    public unsafe virtual void StartGelSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.StartGelSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerGooActivateEvent
     /// </summary>
-    public unsafe void TriggerGooActivateEvent(int Output, BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void TriggerGooActivateEvent(int Output, BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.TriggerGooActivateEvent", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -140,7 +140,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: AnimationStarted
     /// </summary>
-    public unsafe void AnimationStarted()
+    public unsafe override void AnimationStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.AnimationStarted", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -151,7 +151,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: PlaceActor
     /// </summary>
-    public unsafe void PlaceActor()
+    public unsafe override void PlaceActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.PlaceActor", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -173,7 +173,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: CanDoCombat
     /// </summary>
-    public unsafe bool CanDoCombat(bool CheckForEvade = default)
+    public unsafe override bool CanDoCombat(bool CheckForEvade = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.CanDoCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -185,7 +185,7 @@ public partial class RSpecialMoveInstance_PlaceGooMine : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceGooMine.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];

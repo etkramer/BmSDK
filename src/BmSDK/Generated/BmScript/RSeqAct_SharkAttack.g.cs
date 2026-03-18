@@ -47,7 +47,7 @@ public partial class RSeqAct_SharkAttack : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SharkAttack.Update", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SharkAttack : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: BlendToIdle
     /// </summary>
-    public unsafe void BlendToIdle()
+    public unsafe virtual void BlendToIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SharkAttack.BlendToIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_SharkAttack : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SharkAttack.Activated", true);
         byte* paramsPtr = stackalloc byte[124];

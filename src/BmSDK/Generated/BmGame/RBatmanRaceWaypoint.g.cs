@@ -71,7 +71,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -86,7 +86,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSecondary
     /// </summary>
-    public unsafe void SetSecondary()
+    public unsafe virtual void SetSecondary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.SetSecondary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPrimary
     /// </summary>
-    public unsafe void SetPrimary()
+    public unsafe virtual void SetPrimary()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.SetPrimary", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: KillMe
     /// </summary>
-    public unsafe void KillMe()
+    public unsafe virtual void KillMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.KillMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PauseBatSymbol
     /// </summary>
-    public unsafe void PauseBatSymbol()
+    public unsafe virtual void PauseBatSymbol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.PauseBatSymbol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Pause
     /// </summary>
-    public unsafe void Pause()
+    public unsafe virtual void Pause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.Pause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeVisible
     /// </summary>
-    public unsafe void MakeVisible()
+    public unsafe virtual void MakeVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.MakeVisible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RBatmanRaceWaypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatmanRaceWaypoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

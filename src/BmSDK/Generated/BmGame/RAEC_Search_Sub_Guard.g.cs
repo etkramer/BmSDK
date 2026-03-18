@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ForceAttack
     /// </summary>
-    public unsafe void ForceAttack()
+    public unsafe virtual void ForceAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.ForceAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: FinishGadgetWatch
     /// </summary>
-    public unsafe void FinishGadgetWatch()
+    public unsafe virtual void FinishGadgetWatch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.FinishGadgetWatch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: StartleForImpact
     /// </summary>
-    public unsafe void StartleForImpact(System.Numerics.Vector3 NewPos, bool bTerrorShootStartle)
+    public unsafe virtual void StartleForImpact(System.Numerics.Vector3 NewPos, bool bTerrorShootStartle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.StartleForImpact", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: RespondToGadgetImpact
     /// </summary>
-    public unsafe void RespondToGadgetImpact(System.Numerics.Vector3 HitLoc, float HitAimTime, System.Numerics.Vector3 NewLaunchLoc)
+    public unsafe virtual void RespondToGadgetImpact(System.Numerics.Vector3 HitLoc, float HitAimTime, System.Numerics.Vector3 NewLaunchLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.RespondToGadgetImpact", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -120,7 +120,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe virtual bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyGunEmpty
     /// </summary>
-    public unsafe void NotifyGunEmpty()
+    public unsafe override void NotifyGunEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.NotifyGunEmpty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GuardPointStolen
     /// </summary>
-    public unsafe void GuardPointStolen()
+    public unsafe virtual void GuardPointStolen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.GuardPointStolen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: WillGlanceAtLowPriorityTarget
     /// </summary>
-    public unsafe bool WillGlanceAtLowPriorityTarget(BmSDK.Engine.Actor PotentialGlanceTarget)
+    public unsafe override bool WillGlanceAtLowPriorityTarget(BmSDK.Engine.Actor PotentialGlanceTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.WillGlanceAtLowPriorityTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -165,7 +165,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
+    public unsafe virtual void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -203,7 +203,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -217,7 +217,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -229,7 +229,7 @@ public partial class RAEC_Search_Sub_Guard : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Guard.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

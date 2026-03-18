@@ -71,7 +71,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: GadgetUsed
     /// </summary>
-    public unsafe void GadgetUsed()
+    public unsafe override void GadgetUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.GadgetUsed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetClassNameForHUD
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetClassNameForHUD()
+    public unsafe override BmSDK.FName GetGadgetClassNameForHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.GetGadgetClassNameForHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: StartPullMove
     /// </summary>
-    public unsafe void StartPullMove()
+    public unsafe override void StartPullMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.StartPullMove", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -126,7 +126,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -141,7 +141,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: CheckFreeLine
     /// </summary>
-    public unsafe bool CheckFreeLine(BmSDK.Engine.Actor Target)
+    public unsafe virtual bool CheckFreeLine(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.CheckFreeLine", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -153,7 +153,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: UpdateHarpoonTarget
     /// </summary>
-    public unsafe bool UpdateHarpoonTarget(bool bInFlight = default)
+    public unsafe override bool UpdateHarpoonTarget(bool bInFlight = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.UpdateHarpoonTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -165,7 +165,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -176,7 +176,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: UnTouchedZipKickTargetVolume
     /// </summary>
-    public unsafe void UnTouchedZipKickTargetVolume(BmSDK.BmScript.RZipKickTargetVolume V)
+    public unsafe virtual void UnTouchedZipKickTargetVolume(BmSDK.BmScript.RZipKickTargetVolume V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.UnTouchedZipKickTargetVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: TouchedZipKickTargetVolume
     /// </summary>
-    public unsafe void TouchedZipKickTargetVolume(BmSDK.BmScript.RZipKickTargetVolume V)
+    public unsafe virtual void TouchedZipKickTargetVolume(BmSDK.BmScript.RZipKickTargetVolume V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.TouchedZipKickTargetVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RRobinBatClawPDLC : BmSDK.BmScript.RRobinBatClaw, BmSDK.IGa
     /// <summary>
     /// Function: DoFireMove
     /// </summary>
-    public unsafe void DoFireMove()
+    public unsafe override void DoFireMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinBatClawPDLC.DoFireMove", true);
         byte* paramsPtr = stackalloc byte[120];

@@ -66,7 +66,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EndSequence
     /// </summary>
-    public unsafe void EndSequence()
+    public unsafe virtual void EndSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.EndSequence", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AgentAdvancedToStage
     /// </summary>
-    public unsafe void AgentAdvancedToStage(int NewStage)
+    public unsafe virtual void AgentAdvancedToStage(int NewStage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.AgentAdvancedToStage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -101,7 +101,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAttractors
     /// </summary>
-    public unsafe void UpdateAttractors(float DeltaTime)
+    public unsafe virtual void UpdateAttractors(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.UpdateAttractors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -113,7 +113,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateAttractors
     /// </summary>
-    public unsafe void CreateAttractors()
+    public unsafe virtual void CreateAttractors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.CreateAttractors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSpawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpawnLocation()
+    public unsafe virtual System.Numerics.Vector3 GetSpawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.GetSpawnLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -135,7 +135,7 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartSequence
     /// </summary>
-    public unsafe void StartSequence()
+    public unsafe virtual void StartSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSequence.StartSequence", true);
         byte* paramsPtr = stackalloc byte[0];

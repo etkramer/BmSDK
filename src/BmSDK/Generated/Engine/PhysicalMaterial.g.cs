@@ -36,7 +36,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFootstepPhysicalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterial GetFootstepPhysicalMaterial()
+    public unsafe virtual BmSDK.Engine.PhysicalMaterial GetFootstepPhysicalMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.GetFootstepPhysicalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPhysicalMaterialProperty
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterialPropertyBase GetPhysicalMaterialProperty(BmSDK.Class DesiredClass)
+    public unsafe virtual BmSDK.Engine.PhysicalMaterialPropertyBase GetPhysicalMaterialProperty(BmSDK.Class DesiredClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.GetPhysicalMaterialProperty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindFractureEffect
     /// </summary>
-    public unsafe void FindFractureEffect(out BmSDK.Engine.ParticleSystem OutEffectExplosion)
+    public unsafe virtual void FindFractureEffect(out BmSDK.Engine.ParticleSystem OutEffectExplosion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.FindFractureEffect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindFractureSounds
     /// </summary>
-    public unsafe void FindFractureSounds(out BmSDK.Engine.AkEvent OutSoundExplosion, out BmSDK.Engine.AkEvent OutSoundSingle)
+    public unsafe virtual void FindFractureSounds(out BmSDK.Engine.AkEvent OutSoundExplosion, out BmSDK.Engine.AkEvent OutSoundSingle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.FindFractureSounds", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CalculateSlideStrength
     /// </summary>
-    public unsafe float CalculateSlideStrength(float SlideSpeed)
+    public unsafe virtual float CalculateSlideStrength(float SlideSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.CalculateSlideStrength", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CalculateImpactStrength
     /// </summary>
-    public unsafe float CalculateImpactStrength(float ImpactSpeed)
+    public unsafe virtual float CalculateImpactStrength(float ImpactSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.CalculateImpactStrength", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPhysEffectInfo
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FPhysEffectInfo FindPhysEffectInfo(BmSDK.Engine.PhysicalMaterial.EPhysEffectType Type)
+    public unsafe virtual BmSDK.Engine.Actor.FPhysEffectInfo FindPhysEffectInfo(BmSDK.Engine.PhysicalMaterial.EPhysEffectType Type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PhysicalMaterial.FindPhysEffectInfo", true);
         byte* paramsPtr = stackalloc byte[28];

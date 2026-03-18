@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe override void OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsControls.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: IsControllerImageLoaded
     /// </summary>
-    public unsafe bool IsControllerImageLoaded()
+    public unsafe virtual bool IsControllerImageLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsControls.IsControllerImageLoaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: ControllerImageLoaded_CB
     /// </summary>
-    public unsafe void ControllerImageLoaded_CB()
+    public unsafe override void ControllerImageLoaded_CB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsControls.ControllerImageLoaded_CB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsControls.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RGFxMovieUI_PauseOptionsControls : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsControls.Init", true);
         byte* paramsPtr = stackalloc byte[16];

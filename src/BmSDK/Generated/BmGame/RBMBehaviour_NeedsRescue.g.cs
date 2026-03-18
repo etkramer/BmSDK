@@ -47,7 +47,7 @@ public partial class RBMBehaviour_NeedsRescue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_NeedsRescue.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_NeedsRescue : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_NeedsRescue.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

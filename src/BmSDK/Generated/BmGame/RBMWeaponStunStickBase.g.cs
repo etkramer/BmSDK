@@ -66,7 +66,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: GetBatClawPriority
     /// </summary>
-    public unsafe float GetBatClawPriority()
+    public unsafe override float GetBatClawPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.GetBatClawPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: GetRECPriority
     /// </summary>
-    public unsafe float GetRECPriority()
+    public unsafe override float GetRECPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.GetRECPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: GetRECFlailDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetRECFlailDamageType()
+    public unsafe override BmSDK.Class GetRECFlailDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.GetRECFlailDamageType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: HitTarget
     /// </summary>
-    public unsafe void HitTarget()
+    public unsafe virtual void HitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.HitTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     /// <summary>
     /// Function: IsOn
     /// </summary>
-    public unsafe bool IsOn()
+    public unsafe virtual bool IsOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponStunStickBase.IsOn", true);
         byte* paramsPtr = stackalloc byte[4];

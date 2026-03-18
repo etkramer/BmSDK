@@ -71,7 +71,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: PlaceMine
     /// </summary>
-    public unsafe void PlaceMine()
+    public unsafe virtual void PlaceMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.PlaceMine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: MineInHand
     /// </summary>
-    public unsafe void MineInHand()
+    public unsafe virtual void MineInHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.MineInHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: StartPlaceAnim
     /// </summary>
-    public unsafe void StartPlaceAnim(System.Numerics.Vector3 MineAnimPos, float MineAnimYaw)
+    public unsafe virtual void StartPlaceAnim(System.Numerics.Vector3 MineAnimPos, float MineAnimYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.StartPlaceAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_PlaceMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: SetupMinePoint
     /// </summary>
-    public unsafe void SetupMinePoint(BmSDK.BmGame.RThugMineablePointBase NewMinePoint)
+    public unsafe virtual void SetupMinePoint(BmSDK.BmGame.RThugMineablePointBase NewMinePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PlaceMine.SetupMinePoint", true);
         byte* paramsPtr = stackalloc byte[4];

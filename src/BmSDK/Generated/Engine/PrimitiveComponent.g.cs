@@ -31,7 +31,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: ClosestPointOnComponentToComponent
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.GJKResult ClosestPointOnComponentToComponent(out BmSDK.Engine.PrimitiveComponent OtherComponent, out System.Numerics.Vector3 PointOnComponentA, out System.Numerics.Vector3 PointOnComponentB)
+    public unsafe virtual BmSDK.Engine.PrimitiveComponent.GJKResult ClosestPointOnComponentToComponent(out BmSDK.Engine.PrimitiveComponent OtherComponent, out System.Numerics.Vector3 PointOnComponentA, out System.Numerics.Vector3 PointOnComponentB)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.ClosestPointOnComponentToComponent", true);
         byte* paramsPtr = stackalloc byte[29];
@@ -52,7 +52,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: ClosestPointOnComponentToPoint
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.GJKResult ClosestPointOnComponentToPoint(out System.Numerics.Vector3 POI, out System.Numerics.Vector3 Extent, out System.Numerics.Vector3 OutPointA, out System.Numerics.Vector3 OutPointB)
+    public unsafe virtual BmSDK.Engine.PrimitiveComponent.GJKResult ClosestPointOnComponentToPoint(out System.Numerics.Vector3 POI, out System.Numerics.Vector3 Extent, out System.Numerics.Vector3 OutPointA, out System.Numerics.Vector3 OutPointB)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.ClosestPointOnComponentToPoint", true);
         byte* paramsPtr = stackalloc byte[49];
@@ -74,7 +74,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetPhysicalMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial(int BodyIndex = default)
+    public unsafe virtual BmSDK.Engine.PhysicalMaterial GetPhysicalMaterial(int BodyIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetPhysicalMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetHasFallenOutOfWorld
     /// </summary>
-    public unsafe bool GetHasFallenOutOfWorld()
+    public unsafe virtual bool GetHasFallenOutOfWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetHasFallenOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetRotation()
+    public unsafe virtual BmSDK.Rotator GetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -140,7 +140,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetAbsolute
     /// </summary>
-    public unsafe void SetAbsolute(bool NewAbsoluteTranslation = default, bool NewAbsoluteRotation = default, bool NewAbsoluteScale = default)
+    public unsafe virtual void SetAbsolute(bool NewAbsoluteTranslation = default, bool NewAbsoluteRotation = default, bool NewAbsoluteScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetAbsolute", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -161,7 +161,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetScale3D
     /// </summary>
-    public unsafe void SetScale3D(System.Numerics.Vector3 NewScale3D)
+    public unsafe virtual void SetScale3D(System.Numerics.Vector3 NewScale3D)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetScale3D", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetScale
     /// </summary>
-    public unsafe void SetScale(float NewScale)
+    public unsafe virtual void SetScale(float NewScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRotation
     /// </summary>
-    public unsafe void SetRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -218,7 +218,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetTranslation
     /// </summary>
-    public unsafe void SetTranslation(System.Numerics.Vector3 NewTranslation)
+    public unsafe virtual void SetTranslation(System.Numerics.Vector3 NewTranslation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetTranslation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -237,7 +237,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetActorCollision
     /// </summary>
-    public unsafe void SetActorCollision(bool NewCollideActors, bool NewBlockActors, bool NewAlwaysCheckCollision = default)
+    public unsafe virtual void SetActorCollision(bool NewCollideActors, bool NewBlockActors, bool NewAlwaysCheckCollision = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetActorCollision", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -258,7 +258,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetTraceBlocking
     /// </summary>
-    public unsafe void SetTraceBlocking(bool NewBlockZeroExtent, bool NewBlockNonZeroExtent)
+    public unsafe virtual void SetTraceBlocking(bool NewBlockZeroExtent, bool NewBlockNonZeroExtent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetTraceBlocking", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -278,7 +278,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetDepthPriorityGroup
     /// </summary>
-    public unsafe void SetDepthPriorityGroup(BmSDK.Engine.Scene.ESceneDepthPriorityGroup NewDepthPriorityGroup)
+    public unsafe virtual void SetDepthPriorityGroup(BmSDK.Engine.Scene.ESceneDepthPriorityGroup NewDepthPriorityGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetDepthPriorityGroup", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -297,7 +297,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetLightingChannels
     /// </summary>
-    public unsafe void SetLightingChannels(BmSDK.Engine.LightComponent.FLightingChannelContainer NewLightingChannels)
+    public unsafe virtual void SetLightingChannels(BmSDK.Engine.LightComponent.FLightingChannelContainer NewLightingChannels)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetLightingChannels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -316,7 +316,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetCullDistance
     /// </summary>
-    public unsafe void SetCullDistance(float NewCullDistance)
+    public unsafe virtual void SetCullDistance(float NewCullDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetCullDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -335,7 +335,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetLightEnvironment
     /// </summary>
-    public unsafe void SetLightEnvironment(BmSDK.Engine.LightEnvironmentComponent NewLightEnvironment)
+    public unsafe virtual void SetLightEnvironment(BmSDK.Engine.LightEnvironmentComponent NewLightEnvironment)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetLightEnvironment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -354,7 +354,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetShadowParent
     /// </summary>
-    public unsafe void SetShadowParent(BmSDK.Engine.PrimitiveComponent NewShadowParent)
+    public unsafe virtual void SetShadowParent(BmSDK.Engine.PrimitiveComponent NewShadowParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetShadowParent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -373,7 +373,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetIgnoreOwnerHidden
     /// </summary>
-    public unsafe void SetIgnoreOwnerHidden(bool bNewIgnoreOwnerHidden)
+    public unsafe virtual void SetIgnoreOwnerHidden(bool bNewIgnoreOwnerHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetIgnoreOwnerHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -392,7 +392,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetLevelHidden
     /// </summary>
-    public unsafe void SetLevelHidden(bool bNewLevelHidden)
+    public unsafe virtual void SetLevelHidden(bool bNewLevelHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetLevelHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -411,7 +411,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHighlightThermalDepthPriorityGroupInThermal
     /// </summary>
-    public unsafe void SetHighlightThermalDepthPriorityGroupInThermal(bool bNewHighlightThermalDepthPriorityGroupInThermal)
+    public unsafe virtual void SetHighlightThermalDepthPriorityGroupInThermal(bool bNewHighlightThermalDepthPriorityGroupInThermal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHighlightThermalDepthPriorityGroupInThermal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -430,7 +430,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHighlightDepthPriorityGroupInThermal
     /// </summary>
-    public unsafe void SetHighlightDepthPriorityGroupInThermal(bool bNewHighlightDepthPriorityGroupInThermal)
+    public unsafe virtual void SetHighlightDepthPriorityGroupInThermal(bool bNewHighlightDepthPriorityGroupInThermal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHighlightDepthPriorityGroupInThermal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -449,7 +449,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHighlightXrayDepthPriorityGroupInXray
     /// </summary>
-    public unsafe void SetHighlightXrayDepthPriorityGroupInXray(bool bNewHighlightXrayDepthPriorityGroupInXray)
+    public unsafe virtual void SetHighlightXrayDepthPriorityGroupInXray(bool bNewHighlightXrayDepthPriorityGroupInXray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHighlightXrayDepthPriorityGroupInXray", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -468,7 +468,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHighlightDepthPriorityGroupInXray
     /// </summary>
-    public unsafe void SetHighlightDepthPriorityGroupInXray(bool bNewHighlightDepthPriorityGroupInXray)
+    public unsafe virtual void SetHighlightDepthPriorityGroupInXray(bool bNewHighlightDepthPriorityGroupInXray)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHighlightDepthPriorityGroupInXray", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -487,7 +487,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetDontDrawThisFrame
     /// </summary>
-    public unsafe void SetDontDrawThisFrame(bool bNewDontDrawThisFrame)
+    public unsafe virtual void SetDontDrawThisFrame(bool bNewDontDrawThisFrame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetDontDrawThisFrame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -506,7 +506,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetReflectionNoSee
     /// </summary>
-    public unsafe void SetReflectionNoSee(bool NewReflectionNoSee)
+    public unsafe virtual void SetReflectionNoSee(bool NewReflectionNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetReflectionNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -525,7 +525,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetOnlyThermalSee
     /// </summary>
-    public unsafe void SetOnlyThermalSee(bool bNewOnlyThermalSee)
+    public unsafe virtual void SetOnlyThermalSee(bool bNewOnlyThermalSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetOnlyThermalSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -544,7 +544,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetThermalNoSee
     /// </summary>
-    public unsafe void SetThermalNoSee(bool bNewThermalNoSee)
+    public unsafe virtual void SetThermalNoSee(bool bNewThermalNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetThermalNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -563,7 +563,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetOnlyScanModeSee
     /// </summary>
-    public unsafe void SetOnlyScanModeSee(bool bNewOnlyScanModeSee)
+    public unsafe virtual void SetOnlyScanModeSee(bool bNewOnlyScanModeSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetOnlyScanModeSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -582,7 +582,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetScanModeNoSee
     /// </summary>
-    public unsafe void SetScanModeNoSee(bool bNewScanModeNoSee)
+    public unsafe virtual void SetScanModeNoSee(bool bNewScanModeNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetScanModeNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -601,7 +601,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetOnlyXraySee
     /// </summary>
-    public unsafe void SetOnlyXraySee(bool bNewOnlyXraySee)
+    public unsafe virtual void SetOnlyXraySee(bool bNewOnlyXraySee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetOnlyXraySee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -620,7 +620,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetXrayNoSee
     /// </summary>
-    public unsafe void SetXrayNoSee(bool bNewXrayNoSee)
+    public unsafe virtual void SetXrayNoSee(bool bNewXrayNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetXrayNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -639,7 +639,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetOnlyOwnerSee
     /// </summary>
-    public unsafe void SetOnlyOwnerSee(bool bNewOnlyOwnerSee)
+    public unsafe virtual void SetOnlyOwnerSee(bool bNewOnlyOwnerSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetOnlyOwnerSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -658,7 +658,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetOwnerNoSee
     /// </summary>
-    public unsafe void SetOwnerNoSee(bool bNewOwnerNoSee)
+    public unsafe virtual void SetOwnerNoSee(bool bNewOwnerNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetOwnerNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -677,7 +677,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHiddenEditor
     /// </summary>
-    public unsafe void SetHiddenEditor(bool NewHidden)
+    public unsafe virtual void SetHiddenEditor(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHiddenEditor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -696,7 +696,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool NewHidden)
+    public unsafe virtual void SetHidden(bool NewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -715,7 +715,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: ShouldComponentAddToScene
     /// </summary>
-    public unsafe bool ShouldComponentAddToScene()
+    public unsafe virtual bool ShouldComponentAddToScene()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.ShouldComponentAddToScene", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -733,7 +733,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBDominanceGroup
     /// </summary>
-    public unsafe void SetRBDominanceGroup(byte InDomGroup)
+    public unsafe virtual void SetRBDominanceGroup(byte InDomGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBDominanceGroup", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -752,7 +752,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetRootBodyInstance
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetRootBodyInstance()
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetRootBodyInstance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetRootBodyInstance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -770,7 +770,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetPhysMaterialOverride
     /// </summary>
-    public unsafe void SetPhysMaterialOverride(BmSDK.Engine.PhysicalMaterial NewPhysMaterial)
+    public unsafe virtual void SetPhysMaterialOverride(BmSDK.Engine.PhysicalMaterial NewPhysMaterial)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetPhysMaterialOverride", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -789,7 +789,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: InitRBPhys
     /// </summary>
-    public unsafe void InitRBPhys()
+    public unsafe virtual void InitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.InitRBPhys", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -807,7 +807,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetContactModification
     /// </summary>
-    public unsafe void SetContactModification(bool isEnableContactModificationCallback)
+    public unsafe virtual void SetContactModification(bool isEnableContactModificationCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetContactModification", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -826,7 +826,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetNotifyRigidBodyCollision
     /// </summary>
-    public unsafe void SetNotifyRigidBodyCollision(bool bNewNotifyRigidBodyCollision)
+    public unsafe virtual void SetNotifyRigidBodyCollision(bool bNewNotifyRigidBodyCollision)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetNotifyRigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -845,7 +845,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBChannel
     /// </summary>
-    public unsafe void SetRBChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel)
+    public unsafe virtual void SetRBChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBChannel", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -864,7 +864,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBCollisionChannels
     /// </summary>
-    public unsafe void SetRBCollisionChannels(BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer Channels)
+    public unsafe virtual void SetRBCollisionChannels(BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer Channels)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBCollisionChannels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -883,7 +883,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBCollidesWithChannel
     /// </summary>
-    public unsafe void SetRBCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel, bool bNewCollides)
+    public unsafe virtual void SetRBCollidesWithChannel(BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel Channel, bool bNewCollides)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBCollidesWithChannel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -903,7 +903,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetBlockRigidBody
     /// </summary>
-    public unsafe void SetBlockRigidBody(bool bNewBlockRigidBody)
+    public unsafe virtual void SetBlockRigidBody(bool bNewBlockRigidBody)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetBlockRigidBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -922,7 +922,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: RigidBodyIsAwake
     /// </summary>
-    public unsafe bool RigidBodyIsAwake(BmSDK.FName BoneName = default)
+    public unsafe virtual bool RigidBodyIsAwake(BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.RigidBodyIsAwake", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -941,7 +941,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: RigidBodyIsFullyDynamic
     /// </summary>
-    public unsafe bool RigidBodyIsFullyDynamic(BmSDK.FName BoneName = default)
+    public unsafe virtual bool RigidBodyIsFullyDynamic(BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.RigidBodyIsFullyDynamic", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -960,7 +960,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: PutRigidBodyToSleep
     /// </summary>
-    public unsafe void PutRigidBodyToSleep(BmSDK.FName BoneName = default)
+    public unsafe virtual void PutRigidBodyToSleep(BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.PutRigidBodyToSleep", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -979,7 +979,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: WakeRigidBody
     /// </summary>
-    public unsafe void WakeRigidBody(BmSDK.FName BoneName = default)
+    public unsafe virtual void WakeRigidBody(BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.WakeRigidBody", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -998,7 +998,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBRotation
     /// </summary>
-    public unsafe void SetRBRotation(BmSDK.Rotator NewRot, BmSDK.FName BoneName = default)
+    public unsafe virtual void SetRBRotation(BmSDK.Rotator NewRot, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBRotation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1018,7 +1018,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBPosition
     /// </summary>
-    public unsafe void SetRBPosition(System.Numerics.Vector3 NewPos, BmSDK.FName BoneName = default)
+    public unsafe virtual void SetRBPosition(System.Numerics.Vector3 NewPos, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBPosition", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1038,7 +1038,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: RetardRBLinearVelocity
     /// </summary>
-    public unsafe void RetardRBLinearVelocity(System.Numerics.Vector3 RetardDir, float VelScale)
+    public unsafe virtual void RetardRBLinearVelocity(System.Numerics.Vector3 RetardDir, float VelScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.RetardRBLinearVelocity", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1058,7 +1058,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBAngularVelocity
     /// </summary>
-    public unsafe void SetRBAngularVelocity(System.Numerics.Vector3 NewAngVel, bool bAddToCurrent = default)
+    public unsafe virtual void SetRBAngularVelocity(System.Numerics.Vector3 NewAngVel, bool bAddToCurrent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBAngularVelocity", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1078,7 +1078,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetRBAngularVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRBAngularVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetRBAngularVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetRBAngularVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1096,7 +1096,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: GetRBLinearVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRBLinearVelocity()
+    public unsafe virtual System.Numerics.Vector3 GetRBLinearVelocity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.GetRBLinearVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1114,7 +1114,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetRBLinearVelocity
     /// </summary>
-    public unsafe void SetRBLinearVelocity(System.Numerics.Vector3 NewVel, bool bAddToCurrent = default)
+    public unsafe virtual void SetRBLinearVelocity(System.Numerics.Vector3 NewVel, bool bAddToCurrent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetRBLinearVelocity", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1134,7 +1134,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddTorqueImpulse
     /// </summary>
-    public unsafe void AddTorqueImpulse(System.Numerics.Vector3 Torgue, BmSDK.FName BoneName = default)
+    public unsafe virtual void AddTorqueImpulse(System.Numerics.Vector3 Torgue, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddTorqueImpulse", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1154,7 +1154,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddTorqueForce
     /// </summary>
-    public unsafe void AddTorqueForce(System.Numerics.Vector3 Torgue, BmSDK.FName BoneName = default)
+    public unsafe virtual void AddTorqueForce(System.Numerics.Vector3 Torgue, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddTorqueForce", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1174,7 +1174,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddTorque
     /// </summary>
-    public unsafe void AddTorque(System.Numerics.Vector3 Torque, BmSDK.FName BoneName = default)
+    public unsafe virtual void AddTorque(System.Numerics.Vector3 Torque, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddTorque", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1194,7 +1194,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddRadialForce
     /// </summary>
-    public unsafe void AddRadialForce(System.Numerics.Vector3 Origin, float Radius, float Strength, BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff Falloff)
+    public unsafe virtual void AddRadialForce(System.Numerics.Vector3 Origin, float Radius, float Strength, BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff Falloff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddRadialForce", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -1216,7 +1216,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddForce
     /// </summary>
-    public unsafe void AddForce(System.Numerics.Vector3 Force, System.Numerics.Vector3 Position = default, BmSDK.FName BoneName = default)
+    public unsafe virtual void AddForce(System.Numerics.Vector3 Force, System.Numerics.Vector3 Position = default, BmSDK.FName BoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddForce", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1237,7 +1237,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddRadialImpulse
     /// </summary>
-    public unsafe void AddRadialImpulse(System.Numerics.Vector3 Origin, float Radius, float Strength, BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff Falloff, bool bVelChange = default, float velLimit = default)
+    public unsafe virtual void AddRadialImpulse(System.Numerics.Vector3 Origin, float Radius, float Strength, BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff Falloff, bool bVelChange = default, float velLimit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddRadialImpulse", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -1261,7 +1261,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: AddImpulse
     /// </summary>
-    public unsafe void AddImpulse(System.Numerics.Vector3 Impulse, System.Numerics.Vector3 Position = default, BmSDK.FName BoneName = default, bool bVelChange = default)
+    public unsafe virtual void AddImpulse(System.Numerics.Vector3 Impulse, System.Numerics.Vector3 Position = default, BmSDK.FName BoneName = default, bool bVelChange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.AddImpulse", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1283,7 +1283,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: SetDisableAllRigidBody
     /// </summary>
-    public unsafe void SetDisableAllRigidBody(bool bNewDisableAllRigidBody)
+    public unsafe virtual void SetDisableAllRigidBody(bool bNewDisableAllRigidBody)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrimitiveComponent.SetDisableAllRigidBody", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -47,7 +47,7 @@ public partial class RSeqAct_SetRoomUnlocked : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Lock
     /// </summary>
-    public unsafe void Lock()
+    public unsafe virtual void Lock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetRoomUnlocked.Lock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetRoomUnlocked : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Unlock
     /// </summary>
-    public unsafe void Unlock()
+    public unsafe virtual void Unlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetRoomUnlocked.Unlock", true);
         byte* paramsPtr = stackalloc byte[4];

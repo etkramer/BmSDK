@@ -71,7 +71,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: ExplodeFx
     /// </summary>
-    public unsafe void ExplodeFx()
+    public unsafe override void ExplodeFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.ExplodeFx", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: BlowUp
     /// </summary>
-    public unsafe void BlowUp(bool bByJammerGadget = default)
+    public unsafe override void BlowUp(bool bByJammerGadget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.BlowUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: SetDangerEffects
     /// </summary>
-    public unsafe void SetDangerEffects(float NewSpeed)
+    public unsafe override void SetDangerEffects(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.SetDangerEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: StopTick
     /// </summary>
-    public unsafe void StopTick()
+    public unsafe override void StopTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.StopTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RRiddlerHostageMine : BmSDK.BmScript.RThugMine, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerHostageMine.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

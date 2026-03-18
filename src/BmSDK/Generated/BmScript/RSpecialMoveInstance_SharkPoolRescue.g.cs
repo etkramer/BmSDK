@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FailedStruggle
     /// </summary>
-    public unsafe void FailedStruggle()
+    public unsafe virtual void FailedStruggle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SharkPoolRescue.FailedStruggle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FadeIn
     /// </summary>
-    public unsafe void FadeIn()
+    public unsafe virtual void FadeIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SharkPoolRescue.FadeIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FadeOut
     /// </summary>
-    public unsafe void FadeOut()
+    public unsafe virtual void FadeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SharkPoolRescue.FadeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SharkPoolRescue.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_SharkPoolRescue : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SharkPoolRescue.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];

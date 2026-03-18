@@ -71,7 +71,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: PickupInterrupted
     /// </summary>
-    public unsafe void PickupInterrupted()
+    public unsafe virtual void PickupInterrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.PickupInterrupted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: WeaponSwitchCallback
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameRI.WeaponSwitchCallbackResult WeaponSwitchCallback(BmSDK.Engine.Inventory NewWeapon, BmSDK.Engine.Inventory OldWeapon)
+    public unsafe override BmSDK.BmGame.RGameRI.WeaponSwitchCallbackResult WeaponSwitchCallback(BmSDK.Engine.Inventory NewWeapon, BmSDK.Engine.Inventory OldWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.WeaponSwitchCallback", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -107,7 +107,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: StartPickup
     /// </summary>
-    public unsafe void StartPickup()
+    public unsafe virtual void StartPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.StartPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_PickupWeapon : BmSDK.BmGame.RBMAIAction_WeaponS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PickupWeapon.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

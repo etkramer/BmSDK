@@ -761,7 +761,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkMusicCallback
     /// </summary>
-    public unsafe void AkMusicCallback(int CallbackFlags, int MarkerID)
+    public unsafe virtual void AkMusicCallback(int CallbackFlags, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.AkMusicCallback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -792,7 +792,7 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AkSoundCallback
     /// </summary>
-    public unsafe void AkSoundCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
+    public unsafe virtual void AkSoundCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkWwise.AkSoundCallback", true);
         byte* paramsPtr = stackalloc byte[20];

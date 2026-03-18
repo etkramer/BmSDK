@@ -66,7 +66,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: GetJammerLocation
     /// </summary>
-    public unsafe bool GetJammerLocation(out System.Numerics.Vector3 JammerLocation)
+    public unsafe override bool GetJammerLocation(out System.Numerics.Vector3 JammerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.GetJammerLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -78,7 +78,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: GetParameterInterference
     /// </summary>
-    public unsafe BmSDK.Engine.AkParameterName GetParameterInterference()
+    public unsafe override BmSDK.Engine.AkParameterName GetParameterInterference()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.GetParameterInterference", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: GetParameterAngle
     /// </summary>
-    public unsafe BmSDK.Engine.AkParameterName GetParameterAngle()
+    public unsafe override BmSDK.Engine.AkParameterName GetParameterAngle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.GetParameterAngle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.Died", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -114,7 +114,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: AttachProps
     /// </summary>
-    public unsafe void AttachProps()
+    public unsafe override void AttachProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.AttachProps", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RPawnVillainGunJammerBase : BmSDK.BmScript.RPawnVillainGun,
     /// <summary>
     /// Function: RECDisableEquipment
     /// </summary>
-    public unsafe void RECDisableEquipment()
+    public unsafe override void RECDisableEquipment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunJammerBase.RECDisableEquipment", true);
         byte* paramsPtr = stackalloc byte[0];

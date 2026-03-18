@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_MadHatterDrink : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: HidePotion
     /// </summary>
-    public unsafe void HidePotion()
+    public unsafe virtual void HidePotion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterDrink.HidePotion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_MadHatterDrink : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: PickUpPotion
     /// </summary>
-    public unsafe void PickUpPotion()
+    public unsafe virtual void PickUpPotion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterDrink.PickUpPotion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_MadHatterDrink : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterDrink.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_MadHatterDrink : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterDrink.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[136];

@@ -66,7 +66,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -91,7 +91,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -103,7 +103,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: DeactivateCollision
     /// </summary>
-    public unsafe void DeactivateCollision()
+    public unsafe virtual void DeactivateCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.DeactivateCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: ActivateCollisionChest
     /// </summary>
-    public unsafe void ActivateCollisionChest()
+    public unsafe virtual void ActivateCollisionChest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.ActivateCollisionChest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: ActivateCollisionLeft
     /// </summary>
-    public unsafe void ActivateCollisionLeft()
+    public unsafe virtual void ActivateCollisionLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.ActivateCollisionLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RCombatMove_BaneAttack : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: ActivateCollisionRight
     /// </summary>
-    public unsafe void ActivateCollisionRight()
+    public unsafe virtual void ActivateCollisionRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneAttack.ActivateCollisionRight", true);
         byte* paramsPtr = stackalloc byte[0];

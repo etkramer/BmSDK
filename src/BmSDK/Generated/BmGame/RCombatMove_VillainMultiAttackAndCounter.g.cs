@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetHitPSLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHitPSLocation()
+    public unsafe override System.Numerics.Vector3 GetHitPSLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.GetHitPSLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: OverridenBySpecialMove
     /// </summary>
-    public unsafe void OverridenBySpecialMove(BmSDK.BmGame.RPawnVillain SpecialMoveTarget = default)
+    public unsafe virtual void OverridenBySpecialMove(BmSDK.BmGame.RPawnVillain SpecialMoveTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.OverridenBySpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPerformTakedownWithStun
     /// </summary>
-    public unsafe bool CanPerformTakedownWithStun()
+    public unsafe virtual bool CanPerformTakedownWithStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanPerformTakedownWithStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PreventedWalkingOverLedge
     /// </summary>
-    public unsafe void PreventedWalkingOverLedge(BmSDK.BmGame.RPawnCombat PawnAtLedge)
+    public unsafe override void PreventedWalkingOverLedge(BmSDK.BmGame.RPawnCombat PawnAtLedge)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PreventedWalkingOverLedge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPrepareToBlock
     /// </summary>
-    public unsafe bool CanPrepareToBlock()
+    public unsafe override bool CanPrepareToBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanPrepareToBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Disarm
     /// </summary>
-    public unsafe void Disarm()
+    public unsafe virtual void Disarm()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.Disarm", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -186,7 +186,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -199,7 +199,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayerIsCounteringProperly
     /// </summary>
-    public unsafe bool PlayerIsCounteringProperly()
+    public unsafe virtual bool PlayerIsCounteringProperly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PlayerIsCounteringProperly", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayerIsPullingAway
     /// </summary>
-    public unsafe bool PlayerIsPullingAway()
+    public unsafe virtual bool PlayerIsPullingAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PlayerIsPullingAway", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -243,7 +243,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayerCounterStarted
     /// </summary>
-    public unsafe void PlayerCounterStarted()
+    public unsafe virtual void PlayerCounterStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PlayerCounterStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: TeleportToPoint
     /// </summary>
-    public unsafe void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
+    public unsafe override void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.TeleportToPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -267,7 +267,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetTeleportReferenceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTeleportReferenceLocation()
+    public unsafe override System.Numerics.Vector3 GetTeleportReferenceLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.GetTeleportReferenceLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -278,7 +278,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetTeleportPawnList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
+    public unsafe override BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.GetTeleportPawnList", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -289,7 +289,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanTeleport
     /// </summary>
-    public unsafe bool CanTeleport()
+    public unsafe override bool CanTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -300,7 +300,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: StartNewAttackPhase
     /// </summary>
-    public unsafe void StartNewAttackPhase()
+    public unsafe virtual void StartNewAttackPhase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.StartNewAttackPhase", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -311,7 +311,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: SpawnExtremeSuccessCounter
     /// </summary>
-    public unsafe void SpawnExtremeSuccessCounter()
+    public unsafe virtual void SpawnExtremeSuccessCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.SpawnExtremeSuccessCounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -322,7 +322,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CounterHitBig
     /// </summary>
-    public unsafe void CounterHitBig()
+    public unsafe virtual void CounterHitBig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CounterHitBig", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -333,7 +333,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CounterHitSmall
     /// </summary>
-    public unsafe void CounterHitSmall()
+    public unsafe virtual void CounterHitSmall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CounterHitSmall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -344,7 +344,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CounterBlock
     /// </summary>
-    public unsafe void CounterBlock()
+    public unsafe virtual void CounterBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CounterBlock", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -355,7 +355,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: VillainPlayedFailure
     /// </summary>
-    public unsafe void VillainPlayedFailure(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId)
+    public unsafe virtual void VillainPlayedFailure(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.VillainPlayedFailure", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -367,7 +367,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: VillainPlayedSuccess
     /// </summary>
-    public unsafe void VillainPlayedSuccess(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId)
+    public unsafe virtual void VillainPlayedSuccess(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NewId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.VillainPlayedSuccess", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -379,7 +379,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayAttackAnim
     /// </summary>
-    public unsafe void PlayAttackAnim(bool bQueue, bool bCountered, bool bTargetOnly)
+    public unsafe virtual void PlayAttackAnim(bool bQueue, bool bCountered, bool bTargetOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PlayAttackAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -393,7 +393,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: NextStrikeStarted
     /// </summary>
-    public unsafe void NextStrikeStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual void NextStrikeStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.NextStrikeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -405,7 +405,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetCounterLimb
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe override BmSDK.BmGame.RPawnCombat.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.GetCounterLimb", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -417,7 +417,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanCounterStop
     /// </summary>
-    public unsafe void CanCounterStop()
+    public unsafe override void CanCounterStop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanCounterStop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -428,7 +428,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -442,7 +442,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PawnCanDodgeStrike
     /// </summary>
-    public unsafe bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override bool PawnCanDodgeStrike(BmSDK.BmGame.RPawnCombat Dodger, BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.PawnCanDodgeStrike", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -456,7 +456,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanBeStruckBy
     /// </summary>
-    public unsafe bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
+    public unsafe override bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.CanBeStruckBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -469,7 +469,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -480,7 +480,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ForceHitTarget
     /// </summary>
-    public unsafe void ForceHitTarget()
+    public unsafe virtual void ForceHitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.ForceHitTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -491,7 +491,7 @@ public partial class RCombatMove_VillainMultiAttackAndCounter : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainMultiAttackAndCounter.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];

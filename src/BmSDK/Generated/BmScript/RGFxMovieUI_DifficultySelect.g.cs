@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: ChangeCalibState
     /// </summary>
-    public unsafe void ChangeCalibState(bool bOn)
+    public unsafe virtual void ChangeCalibState(bool bOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.ChangeCalibState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: OnLostFocus
     /// </summary>
-    public unsafe void OnLostFocus(int Id)
+    public unsafe override void OnLostFocus(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.OnLostFocus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: OnFocus
     /// </summary>
-    public unsafe void OnFocus(int Id)
+    public unsafe override void OnFocus(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.OnFocus", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -72,7 +72,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: FadeTrigger
     /// </summary>
-    public unsafe void FadeTrigger(int Mode)
+    public unsafe virtual void FadeTrigger(int Mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.FadeTrigger", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe override void OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RGFxMovieUI_DifficultySelect : BmSDK.BmGame.RGFxMovieUI, Bm
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DifficultySelect.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];

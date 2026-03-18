@@ -47,7 +47,7 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AnimatedRopeHang.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AnimatedRopeHang.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AnimatedRopeHang.Update", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: HangingAnimStartedCallback
     /// </summary>
-    public unsafe void HangingAnimStartedCallback(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NextAnim)
+    public unsafe virtual void HangingAnimStartedCallback(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId NextAnim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AnimatedRopeHang.HangingAnimStartedCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_AnimatedRopeHang : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_AnimatedRopeHang.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

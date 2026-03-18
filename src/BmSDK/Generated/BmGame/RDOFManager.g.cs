@@ -36,7 +36,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime, out BmSDK.Engine.PostProcessVolume.FPostProcessSettings PP)
+    public unsafe virtual bool Update(float DeltaTime, out BmSDK.Engine.PostProcessVolume.FPostProcessSettings PP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.Update", true);
         byte* paramsPtr = stackalloc byte[436];
@@ -49,7 +49,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBlur
     /// </summary>
-    public unsafe bool UpdateBlur(float DeltaTime, out BmSDK.BmGame.RDOFManager.FBlurStruct Blur)
+    public unsafe virtual bool UpdateBlur(float DeltaTime, out BmSDK.BmGame.RDOFManager.FBlurStruct Blur)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.UpdateBlur", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -62,7 +62,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RevertToOldDof
     /// </summary>
-    public unsafe void RevertToOldDof()
+    public unsafe virtual void RevertToOldDof()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.RevertToOldDof", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeDof
     /// </summary>
-    public unsafe void ChangeDof(BmSDK.BmGame.RDOFManager.FDofStruct newDof)
+    public unsafe virtual void ChangeDof(BmSDK.BmGame.RDOFManager.FDofStruct newDof)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.ChangeDof", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -85,7 +85,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDof
     /// </summary>
-    public unsafe void SetDof(out BmSDK.Engine.PostProcessVolume.FPostProcessSettings PP)
+    public unsafe virtual void SetDof(out BmSDK.Engine.PostProcessVolume.FPostProcessSettings PP)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.SetDof", true);
         byte* paramsPtr = stackalloc byte[400];
@@ -104,7 +104,7 @@ public partial class RDOFManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetBlurs
     /// </summary>
-    public unsafe void ResetBlurs()
+    public unsafe virtual void ResetBlurs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDOFManager.ResetBlurs", true);
         byte* paramsPtr = stackalloc byte[0];

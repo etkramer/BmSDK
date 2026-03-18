@@ -36,7 +36,7 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOnKneesCounterPenguin.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: ForceLookDirection
     /// </summary>
-    public unsafe void ForceLookDirection(bool Force)
+    public unsafe virtual void ForceLookDirection(bool Force)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOnKneesCounterPenguin.ForceLookDirection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: ExitAction
     /// </summary>
-    public unsafe void ExitAction()
+    public unsafe virtual void ExitAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOnKneesCounterPenguin.ExitAction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: StopCamera
     /// </summary>
-    public unsafe void StopCamera()
+    public unsafe virtual void StopCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOnKneesCounterPenguin.StopCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSeqAct_BatmanOnKneesCounterPenguin : BmSDK.Engine.SeqAct_L
     /// <summary>
     /// Function: ActivateCamera
     /// </summary>
-    public unsafe void ActivateCamera()
+    public unsafe virtual void ActivateCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOnKneesCounterPenguin.ActivateCamera", true);
         byte* paramsPtr = stackalloc byte[0];

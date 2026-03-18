@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: KnockDownVillain
     /// </summary>
-    public unsafe void KnockDownVillain()
+    public unsafe virtual void KnockDownVillain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldCharge.KnockDownVillain", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: DisallowPlayerMove
     /// </summary>
-    public unsafe bool DisallowPlayerMove()
+    public unsafe override bool DisallowPlayerMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldCharge.DisallowPlayerMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldCharge.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldCharge.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_RobinShieldCharge : BmSDK.BmGame.RSpec
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldCharge.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];

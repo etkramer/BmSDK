@@ -47,7 +47,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: StopAll
     /// </summary>
-    public unsafe void StopAll()
+    public unsafe virtual void StopAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.StopAll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: StartIntro
     /// </summary>
-    public unsafe void StartIntro()
+    public unsafe virtual void StartIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.StartIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnAudioMarker
     /// </summary>
-    public unsafe void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
+    public unsafe virtual void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.OnAudioMarker", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: OnAudioMarkerIntro
     /// </summary>
-    public unsafe void OnAudioMarkerIntro(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
+    public unsafe virtual void OnAudioMarkerIntro(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.OnAudioMarkerIntro", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: UpdateKOCounter
     /// </summary>
-    public unsafe void UpdateKOCounter()
+    public unsafe virtual void UpdateKOCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.UpdateKOCounter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CheckForBMDead
     /// </summary>
-    public unsafe bool CheckForBMDead(float DeltaTime)
+    public unsafe virtual bool CheckForBMDead(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.CheckForBMDead", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.Update", true);
         byte* paramsPtr = stackalloc byte[8];

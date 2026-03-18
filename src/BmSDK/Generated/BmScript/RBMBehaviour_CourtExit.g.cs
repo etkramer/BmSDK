@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: FollowNavHandle
     /// </summary>
-    public unsafe void FollowNavHandle()
+    public unsafe virtual void FollowNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.FollowNavHandle", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: PathFoundFirstTime
     /// </summary>
-    public unsafe void PathFoundFirstTime()
+    public unsafe virtual void PathFoundFirstTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.PathFoundFirstTime", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: CreateScaredWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateScaredWeaponConfig(BmSDK.GameObject NewOwner, int RunID)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateScaredWeaponConfig(BmSDK.GameObject NewOwner, int RunID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.CreateScaredWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[368];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe override void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: AtGoalFinalise
     /// </summary>
-    public unsafe void AtGoalFinalise()
+    public unsafe override void AtGoalFinalise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.AtGoalFinalise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.OnActivate", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -171,7 +171,7 @@ public partial class RBMBehaviour_CourtExit : BmSDK.BmGame.RBMBehaviour_MoveTo, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CourtExit.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe virtual void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.Repath", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: GetTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.GetTargetLocation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CloseToTargetOrBatmanMoved
     /// </summary>
-    public unsafe void CloseToTargetOrBatmanMoved()
+    public unsafe virtual void CloseToTargetOrBatmanMoved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.CloseToTargetOrBatmanMoved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_HarleyWalkAroundBats : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyWalkAroundBats.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

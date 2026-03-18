@@ -36,7 +36,7 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe virtual void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStateObject.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// Function: PreProcessStream
     /// </summary>
-    public unsafe void PreProcessStream()
+    public unsafe override void PreProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameStateObject.PreProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];

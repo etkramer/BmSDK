@@ -71,7 +71,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: ScanDone
     /// </summary>
-    public unsafe void ScanDone()
+    public unsafe virtual void ScanDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.ScanDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TriggerScanFX
     /// </summary>
-    public unsafe void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
+    public unsafe override void TriggerScanFX(BmSDK.Engine.ParticleSystem ScanFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TriggerScanFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PlayerWalkedOn
     /// </summary>
-    public unsafe void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
+    public unsafe virtual void PlayerWalkedOn(BmSDK.BmGame.RPawnPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PlayerWalkedOn", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -117,7 +117,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: SmashDueToGunDamage
     /// </summary>
-    public unsafe void SmashDueToGunDamage()
+    public unsafe virtual void SmashDueToGunDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.SmashDueToGunDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: PartSmashDueToGunDamage
     /// </summary>
-    public unsafe void PartSmashDueToGunDamage()
+    public unsafe virtual void PartSmashDueToGunDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.PartSmashDueToGunDamage", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -150,7 +150,7 @@ public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObjec
     /// <summary>
     /// Function: TakeGunDamage
     /// </summary>
-    public unsafe void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn)
+    public unsafe override void TakeGunDamage(float DamageAmount, BmSDK.BmGame.RBMPawnAI AttackingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_Mesh.TakeGunDamage", true);
         byte* paramsPtr = stackalloc byte[12];

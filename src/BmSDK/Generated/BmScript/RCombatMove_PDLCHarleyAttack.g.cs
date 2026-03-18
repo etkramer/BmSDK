@@ -71,7 +71,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: PlayStrikeAnim
     /// </summary>
-    public unsafe void PlayStrikeAnim()
+    public unsafe override void PlayStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.PlayStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -105,7 +105,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe override void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ChooseAttack
     /// </summary>
-    public unsafe void ChooseAttack()
+    public unsafe override void ChooseAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.ChooseAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess = default)
+    public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RCombatMove_PDLCHarleyAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: SetRefPoint
     /// </summary>
-    public unsafe void SetRefPoint(System.Numerics.Vector3 inRefLoc, BmSDK.Rotator inRefRot)
+    public unsafe virtual void SetRefPoint(System.Numerics.Vector3 inRefLoc, BmSDK.Rotator inRefRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_PDLCHarleyAttack.SetRefPoint", true);
         byte* paramsPtr = stackalloc byte[24];

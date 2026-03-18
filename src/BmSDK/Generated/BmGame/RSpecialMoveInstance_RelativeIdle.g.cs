@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: GetFreeRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetFreeRotation()
+    public unsafe virtual BmSDK.Rotator GetFreeRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeIdle.GetFreeRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: AdjustCameraRot
     /// </summary>
-    public unsafe void AdjustCameraRot(float DeltaTime, bool bBlendOut)
+    public unsafe virtual void AdjustCameraRot(float DeltaTime, bool bBlendOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeIdle.AdjustCameraRot", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -95,7 +95,7 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeIdle.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeIdle.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RSpecialMoveInstance_RelativeIdle : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// Function: AnyInput
     /// </summary>
-    public unsafe bool AnyInput()
+    public unsafe virtual bool AnyInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_RelativeIdle.AnyInput", true);
         byte* paramsPtr = stackalloc byte[4];

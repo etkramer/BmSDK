@@ -47,7 +47,7 @@ public partial class RSeqAct_ShowObjectiveStyleMessage : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShowObjectiveStyleMessage.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ShowObjectiveStyleMessage : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: ExtraStuff
     /// </summary>
-    public unsafe void ExtraStuff(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void ExtraStuff(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShowObjectiveStyleMessage.ExtraStuff", true);
         byte* paramsPtr = stackalloc byte[4];

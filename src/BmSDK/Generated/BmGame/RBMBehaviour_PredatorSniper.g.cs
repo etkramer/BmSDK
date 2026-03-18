@@ -47,7 +47,7 @@ public partial class RBMBehaviour_PredatorSniper : BmSDK.BmGame.RBMBehaviour_Act
     /// <summary>
     /// Function: StartUseSniperPoint
     /// </summary>
-    public unsafe void StartUseSniperPoint()
+    public unsafe virtual void StartUseSniperPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredatorSniper.StartUseSniperPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_PredatorSniper : BmSDK.BmGame.RBMBehaviour_Act
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredatorSniper.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_PredatorSniper : BmSDK.BmGame.RBMBehaviour_Act
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredatorSniper.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_PredatorSniper : BmSDK.BmGame.RBMBehaviour_Act
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredatorSniper.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

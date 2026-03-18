@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -49,7 +49,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: NotifyLoginStatusChanged
     /// </summary>
-    public unsafe void NotifyLoginStatusChanged(byte LocalUserNum)
+    public unsafe virtual void NotifyLoginStatusChanged(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.NotifyLoginStatusChanged", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -61,7 +61,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: OnTick
     /// </summary>
-    public unsafe void OnTick()
+    public unsafe override void OnTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.OnTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.Init", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: AllDoneButNoLogin
     /// </summary>
-    public unsafe void AllDoneButNoLogin()
+    public unsafe virtual void AllDoneButNoLogin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.AllDoneButNoLogin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: AllDone
     /// </summary>
-    public unsafe void AllDone()
+    public unsafe virtual void AllDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.AllDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: CheckDLCScan
     /// </summary>
-    public unsafe void CheckDLCScan()
+    public unsafe virtual void CheckDLCScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.CheckDLCScan", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -128,7 +128,7 @@ public partial class RGFxMovieUI_Login : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Login.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];

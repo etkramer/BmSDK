@@ -71,7 +71,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisplayTutorial
     /// </summary>
-    public unsafe bool DisplayTutorial()
+    public unsafe override bool DisplayTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.DisplayTutorial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetTutorialText
     /// </summary>
-    public unsafe BmSDK.FString GetTutorialText()
+    public unsafe override BmSDK.FString GetTutorialText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.GetTutorialText", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: DrawTargets
     /// </summary>
-    public unsafe void DrawTargets(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawTargets(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.DrawTargets", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -150,7 +150,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: ThrowBatarangHand
     /// </summary>
-    public unsafe void ThrowBatarangHand(BmSDK.FName LaunchBone)
+    public unsafe override void ThrowBatarangHand(BmSDK.FName LaunchBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.ThrowBatarangHand", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -162,7 +162,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpgradeGadget
     /// </summary>
-    public unsafe void UpgradeGadget(int NewUpgradeLevel)
+    public unsafe override void UpgradeGadget(int NewUpgradeLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.UpgradeGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -185,7 +185,7 @@ public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatDistract.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

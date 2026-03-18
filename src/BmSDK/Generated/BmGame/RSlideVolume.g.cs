@@ -71,7 +71,7 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSlideVolume.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSlideVolume.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGa
     /// <summary>
     /// Function: CalculateSlideDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateSlideDirection()
+    public unsafe virtual System.Numerics.Vector3 CalculateSlideDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSlideVolume.CalculateSlideDirection", true);
         byte* paramsPtr = stackalloc byte[12];

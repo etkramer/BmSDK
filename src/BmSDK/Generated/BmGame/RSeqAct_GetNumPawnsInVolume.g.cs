@@ -36,7 +36,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: GetPawnFromActor
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCharacter GetPawnFromActor(BmSDK.Engine.Actor Act)
+    public unsafe virtual BmSDK.BmGame.RPawnCharacter GetPawnFromActor(BmSDK.Engine.Actor Act)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.GetPawnFromActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.Activated", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RSeqAct_GetNumPawnsInVolume : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: ShouldCheckPawn
     /// </summary>
-    public unsafe bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
+    public unsafe virtual bool ShouldCheckPawn(BmSDK.BmGame.RPawnCharacter TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GetNumPawnsInVolume.ShouldCheckPawn", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -47,7 +47,7 @@ public partial class RSeqAct_BatSpawner : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatSpawner.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

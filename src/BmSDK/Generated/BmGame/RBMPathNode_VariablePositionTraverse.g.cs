@@ -66,7 +66,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: TryUpwards
     /// </summary>
-    public unsafe float TryUpwards(float StartPoint)
+    public unsafe virtual float TryUpwards(float StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.TryUpwards", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -78,7 +78,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: TryDownwards
     /// </summary>
-    public unsafe float TryDownwards(float StartPoint)
+    public unsafe virtual float TryDownwards(float StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.TryDownwards", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -90,7 +90,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: IsFree
     /// </summary>
-    public unsafe bool IsFree(float TestPos)
+    public unsafe virtual bool IsFree(float TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.IsFree", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -102,7 +102,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: GetNearestEdgeUp
     /// </summary>
-    public unsafe float GetNearestEdgeUp(float TestPos)
+    public unsafe virtual float GetNearestEdgeUp(float TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.GetNearestEdgeUp", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -114,7 +114,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: GetNearestEdgeDown
     /// </summary>
-    public unsafe float GetNearestEdgeDown(float TestPos)
+    public unsafe virtual float GetNearestEdgeDown(float TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.GetNearestEdgeDown", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -126,7 +126,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: AttemptLockForProxy
     /// </summary>
-    public unsafe bool AttemptLockForProxy(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy, out System.Numerics.Vector3 SlotLocation)
+    public unsafe virtual bool AttemptLockForProxy(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy, out System.Numerics.Vector3 SlotLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.AttemptLockForProxy", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -141,7 +141,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: GetClosestPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClosestPoint(BmSDK.BmGame.RPawn User, BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy, out System.Numerics.Vector3 PreferredLocVect, out float DistAlongLine)
+    public unsafe virtual System.Numerics.Vector3 GetClosestPoint(BmSDK.BmGame.RPawn User, BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy Proxy, out System.Numerics.Vector3 PreferredLocVect, out float DistAlongLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.GetClosestPoint", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -156,7 +156,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: GetJumpLockLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetJumpLockLocation(BmSDK.BmGame.RPawn User)
+    public unsafe virtual System.Numerics.Vector3 GetJumpLockLocation(BmSDK.BmGame.RPawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.GetJumpLockLocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -168,7 +168,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: IsInJumpLockList
     /// </summary>
-    public unsafe bool IsInJumpLockList(BmSDK.BmGame.RPawn User)
+    public unsafe virtual bool IsInJumpLockList(BmSDK.BmGame.RPawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.IsInJumpLockList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: JumpUnlock
     /// </summary>
-    public unsafe void JumpUnlock(BmSDK.BmGame.RPawn User)
+    public unsafe virtual void JumpUnlock(BmSDK.BmGame.RPawn User)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.JumpUnlock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -192,7 +192,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: DrawDebugInfo
     /// </summary>
-    public unsafe void DrawDebugInfo()
+    public unsafe virtual void DrawDebugInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.DrawDebugInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -203,7 +203,7 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     /// <summary>
     /// Function: IsNaN
     /// </summary>
-    public unsafe bool IsNaN(System.Numerics.Vector3 TestVector)
+    public unsafe virtual bool IsNaN(System.Numerics.Vector3 TestVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverse.IsNaN", true);
         byte* paramsPtr = stackalloc byte[16];

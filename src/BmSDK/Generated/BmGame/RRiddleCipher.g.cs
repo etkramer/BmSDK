@@ -71,7 +71,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: RiddleReScanned
     /// </summary>
-    public unsafe void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.RiddleReScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: BringUpBio
     /// </summary>
-    public unsafe void BringUpBio()
+    public unsafe virtual void BringUpBio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.BringUpBio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: RiddleFound
     /// </summary>
-    public unsafe void RiddleFound(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleFound(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.RiddleFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: CheckVisibility
     /// </summary>
-    public unsafe bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RRiddleBase.FVisibilityResult ReasonItFailed)
+    public unsafe override bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RRiddleBase.FVisibilityResult ReasonItFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.CheckVisibility", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -130,7 +130,7 @@ public partial class RRiddleCipher : BmSDK.BmGame.RRiddleSolutionBase, BmSDK.IGa
     /// <summary>
     /// Function: GetObjectName
     /// </summary>
-    public unsafe BmSDK.FString GetObjectName()
+    public unsafe override BmSDK.FString GetObjectName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddleCipher.GetObjectName", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: AimAway
     /// </summary>
-    public unsafe void AimAway()
+    public unsafe virtual void AimAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.AimAway", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: AimNearby
     /// </summary>
-    public unsafe void AimNearby()
+    public unsafe virtual void AimNearby()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.AimNearby", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: ProcessAimTargets
     /// </summary>
-    public unsafe void ProcessAimTargets()
+    public unsafe virtual void ProcessAimTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.ProcessAimTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_LookAllDirections.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];

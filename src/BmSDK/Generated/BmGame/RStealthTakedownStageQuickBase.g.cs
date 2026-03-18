@@ -71,7 +71,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: CantCancelTakedown
     /// </summary>
-    public unsafe void CantCancelTakedown()
+    public unsafe virtual void CantCancelTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.CantCancelTakedown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: ResetStates
     /// </summary>
-    public unsafe void ResetStates()
+    public unsafe virtual void ResetStates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.ResetStates", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: CriticalPointEndTimer
     /// </summary>
-    public unsafe void CriticalPointEndTimer()
+    public unsafe virtual void CriticalPointEndTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.CriticalPointEndTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: CanPlayQuickFinishFromHere
     /// </summary>
-    public unsafe void CanPlayQuickFinishFromHere()
+    public unsafe virtual void CanPlayQuickFinishFromHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.CanPlayQuickFinishFromHere", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: CriticalPointStart
     /// </summary>
-    public unsafe void CriticalPointStart()
+    public unsafe virtual void CriticalPointStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.CriticalPointStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: ChanceToSucceed
     /// </summary>
-    public unsafe void ChanceToSucceed()
+    public unsafe virtual void ChanceToSucceed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.ChanceToSucceed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: CanTriggerQuickFinish
     /// </summary>
-    public unsafe bool CanTriggerQuickFinish()
+    public unsafe virtual bool CanTriggerQuickFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.CanTriggerQuickFinish", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RStealthTakedownStageQuickBase : BmSDK.BmGame.RStealthTakeD
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakedownStageQuickBase.Begin", true);
         byte* paramsPtr = stackalloc byte[4];

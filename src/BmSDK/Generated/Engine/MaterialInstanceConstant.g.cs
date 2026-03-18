@@ -36,7 +36,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: ShrinkParameterArrays
     /// </summary>
-    public unsafe void ShrinkParameterArrays()
+    public unsafe virtual void ShrinkParameterArrays()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.ShrinkParameterArrays", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: ClearParameterValues
     /// </summary>
-    public unsafe void ClearParameterValues()
+    public unsafe override void ClearParameterValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.ClearParameterValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: SetFontParameterValue
     /// </summary>
-    public unsafe void SetFontParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Font FontValue, int FontPage)
+    public unsafe override void SetFontParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Font FontValue, int FontPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.SetFontParameterValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: SetVectorParameterValue
     /// </summary>
-    public unsafe void SetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
+    public unsafe override void SetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.SetVectorParameterValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -113,7 +113,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: SetTextureParameterValue
     /// </summary>
-    public unsafe void SetTextureParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Texture Value)
+    public unsafe override void SetTextureParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Texture Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.SetTextureParameterValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: SetScalarParameterValue
     /// </summary>
-    public unsafe void SetScalarParameterValue(BmSDK.FName ParameterName, float Value)
+    public unsafe override void SetScalarParameterValue(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.SetScalarParameterValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Function: SetParent
     /// </summary>
-    public unsafe void SetParent(BmSDK.Engine.MaterialInterface NewParent)
+    public unsafe override void SetParent(BmSDK.Engine.MaterialInterface NewParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceConstant.SetParent", true);
         byte* paramsPtr = stackalloc byte[4];

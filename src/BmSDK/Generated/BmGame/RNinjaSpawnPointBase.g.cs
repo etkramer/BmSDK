@@ -66,7 +66,7 @@ public partial class RNinjaSpawnPointBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SpawnNinja
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI SpawnNinja()
+    public unsafe virtual BmSDK.BmGame.RBMPawnAI SpawnNinja()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNinjaSpawnPointBase.SpawnNinja", true);
         byte* paramsPtr = stackalloc byte[4];

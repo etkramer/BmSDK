@@ -71,7 +71,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.Destroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: HasLOS
     /// </summary>
-    public unsafe bool HasLOS(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual bool HasLOS(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.HasLOS", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -94,7 +94,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: IsBlocked
     /// </summary>
-    public unsafe bool IsBlocked(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override bool IsBlocked(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.IsBlocked", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -107,7 +107,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: CreateFeetFluff
     /// </summary>
-    public unsafe void CreateFeetFluff()
+    public unsafe virtual void CreateFeetFluff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.CreateFeetFluff", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -118,7 +118,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: SetYawOffsets
     /// </summary>
-    public unsafe void SetYawOffsets()
+    public unsafe virtual void SetYawOffsets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.SetYawOffsets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RShieldRas_StatueEasy : BmSDK.BmGame.RShieldRas_StatueBase,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShieldRas_StatueEasy.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

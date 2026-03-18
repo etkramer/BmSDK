@@ -36,7 +36,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: ModifyCamera
     /// </summary>
-    public unsafe bool ModifyCamera(BmSDK.Engine.Camera Camera, float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override bool ModifyCamera(BmSDK.Engine.Camera Camera, float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.ModifyCamera", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -57,7 +57,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: UpdateCameraShake
     /// </summary>
-    public unsafe void UpdateCameraShake(float DeltaTime, out BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance Shake, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe virtual void UpdateCameraShake(float DeltaTime, out BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance Shake, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.UpdateCameraShake", true);
         byte* paramsPtr = stackalloc byte[188];
@@ -78,7 +78,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: RemoveAllCameraShakes
     /// </summary>
-    public unsafe void RemoveAllCameraShakes()
+    public unsafe virtual void RemoveAllCameraShakes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.RemoveAllCameraShakes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -89,7 +89,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: RemoveCameraShake
     /// </summary>
-    public unsafe void RemoveCameraShake(BmSDK.Engine.CameraShake Shake)
+    public unsafe virtual void RemoveCameraShake(BmSDK.Engine.CameraShake Shake)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.RemoveCameraShake", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -101,7 +101,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: AddCameraShake
     /// </summary>
-    public unsafe void AddCameraShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace = default, BmSDK.Rotator UserPlaySpaceRot = default)
+    public unsafe virtual void AddCameraShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace = default, BmSDK.Rotator UserPlaySpaceRot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.AddCameraShake", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -116,7 +116,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: InitializeShake
     /// </summary>
-    public unsafe BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance InitializeShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace, BmSDK.Rotator UserPlaySpaceRot = default)
+    public unsafe virtual BmSDK.Engine.CameraModifier_CameraShake.FCameraShakeInstance InitializeShake(BmSDK.Engine.CameraShake NewShake, float Scale, BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace, BmSDK.Rotator UserPlaySpaceRot = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.InitializeShake", true);
         byte* paramsPtr = stackalloc byte[332];
@@ -131,7 +131,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Function: ReinitShake
     /// </summary>
-    public unsafe void ReinitShake(int ActiveShakeIdx, float Scale)
+    public unsafe virtual void ReinitShake(int ActiveShakeIdx, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CameraModifier_CameraShake.ReinitShake", true);
         byte* paramsPtr = stackalloc byte[24];

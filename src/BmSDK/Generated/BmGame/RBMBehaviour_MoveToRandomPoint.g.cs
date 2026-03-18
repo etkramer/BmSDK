@@ -47,7 +47,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: StartPathFinding
     /// </summary>
-    public unsafe void StartPathFinding()
+    public unsafe virtual void StartPathFinding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.StartPathFinding", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe virtual void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.Repath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: AtGoal
     /// </summary>
-    public unsafe void AtGoal(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void AtGoal(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.AtGoal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: PathNotFound
     /// </summary>
-    public unsafe void PathNotFound(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void PathNotFound(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.PathNotFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: PathFound
     /// </summary>
-    public unsafe void PathFound(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void PathFound(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.PathFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: SetMoveToSpeed
     /// </summary>
-    public unsafe void SetMoveToSpeed()
+    public unsafe virtual void SetMoveToSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.SetMoveToSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_MoveToRandomPoint : BmSDK.BmGame.RBMBehaviour,
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_MoveToRandomPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

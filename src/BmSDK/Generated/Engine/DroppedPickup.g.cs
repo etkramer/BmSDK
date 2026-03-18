@@ -71,7 +71,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RecheckValidTouch
     /// </summary>
-    public unsafe void RecheckValidTouch()
+    public unsafe virtual void RecheckValidTouch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.RecheckValidTouch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PickedUpBy
     /// </summary>
-    public unsafe void PickedUpBy(BmSDK.Engine.Pawn P)
+    public unsafe virtual void PickedUpBy(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.PickedUpBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GiveTo
     /// </summary>
-    public unsafe void GiveTo(BmSDK.Engine.Pawn P)
+    public unsafe virtual void GiveTo(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.GiveTo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Landed
     /// </summary>
-    public unsafe void Landed(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
+    public unsafe override void Landed(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.Landed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EncroachedBy
     /// </summary>
-    public unsafe void EncroachedBy(BmSDK.Engine.Actor Other)
+    public unsafe override void EncroachedBy(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.EncroachedBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPickupParticles
     /// </summary>
-    public unsafe void SetPickupParticles(BmSDK.Engine.ParticleSystemComponent PickupParticles)
+    public unsafe virtual void SetPickupParticles(BmSDK.Engine.ParticleSystemComponent PickupParticles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.SetPickupParticles", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPickupMesh
     /// </summary>
-    public unsafe void SetPickupMesh(BmSDK.Engine.PrimitiveComponent PickupMesh)
+    public unsafe virtual void SetPickupMesh(BmSDK.Engine.PrimitiveComponent PickupMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.SetPickupMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -189,7 +189,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveFromNavigation
     /// </summary>
-    public unsafe void RemoveFromNavigation()
+    public unsafe virtual void RemoveFromNavigation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.RemoveFromNavigation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddToNavigation
     /// </summary>
-    public unsafe void AddToNavigation()
+    public unsafe virtual void AddToNavigation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DroppedPickup.AddToNavigation", true);
         byte* paramsPtr = stackalloc byte[0];

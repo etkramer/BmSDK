@@ -71,7 +71,7 @@ public partial class RTapePlayer : BmSDK.BmGame.RRiddlePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: TickFromDialogueManager
     /// </summary>
-    public unsafe void TickFromDialogueManager()
+    public unsafe virtual void TickFromDialogueManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer.TickFromDialogueManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RTapePlayer : BmSDK.BmGame.RRiddlePlayer, BmSDK.IGameObject
     /// <summary>
     /// Function: FindValidConversation
     /// </summary>
-    public unsafe bool FindValidConversation(bool DoBanks, bool FromPackageLoad)
+    public unsafe override bool FindValidConversation(bool DoBanks, bool FromPackageLoad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTapePlayer.FindValidConversation", true);
         byte* paramsPtr = stackalloc byte[12];

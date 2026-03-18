@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: AssignGarg
     /// </summary>
-    public unsafe void AssignGarg(System.Numerics.Vector3 NewMovePos, System.Numerics.Vector3 NewAimPos)
+    public unsafe virtual void AssignGarg(System.Numerics.Vector3 NewMovePos, System.Numerics.Vector3 NewAimPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.AssignGarg", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -111,7 +111,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RAEC_Attack_Sub_CheckGarg : BmSDK.BmGame.RAlertEventCoordin
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_CheckGarg.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

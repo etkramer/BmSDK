@@ -36,7 +36,7 @@ public partial class RSeqAct_SetIsValidCombatant : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetIsValidCombatant.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

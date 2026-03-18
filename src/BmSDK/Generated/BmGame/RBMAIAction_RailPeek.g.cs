@@ -71,7 +71,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: GetCustomEyeLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCustomEyeLocation()
+    public unsafe override System.Numerics.Vector3 GetCustomEyeLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.GetCustomEyeLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: OnExitRequested
     /// </summary>
-    public unsafe void OnExitRequested()
+    public unsafe override void OnExitRequested()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.OnExitRequested", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: UnsetDangerous
     /// </summary>
-    public unsafe void UnsetDangerous()
+    public unsafe virtual void UnsetDangerous()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.UnsetDangerous", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: SetDangerous
     /// </summary>
-    public unsafe void SetDangerous()
+    public unsafe virtual void SetDangerous()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.SetDangerous", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -150,7 +150,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: SpecialCaseExitWithNoAnim
     /// </summary>
-    public unsafe void SpecialCaseExitWithNoAnim()
+    public unsafe virtual void SpecialCaseExitWithNoAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.SpecialCaseExitWithNoAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: StartStandardExit
     /// </summary>
-    public unsafe void StartStandardExit()
+    public unsafe virtual void StartStandardExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.StartStandardExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: StartPeekAnim
     /// </summary>
-    public unsafe void StartPeekAnim(BmSDK.BmGame.RBMPathNode_FenceJumpProxy RepFence, System.Numerics.Vector3 RepFencePoint)
+    public unsafe virtual void StartPeekAnim(BmSDK.BmGame.RBMPathNode_FenceJumpProxy RepFence, System.Numerics.Vector3 RepFencePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.StartPeekAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -185,7 +185,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: GetMostForwardAimTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMostForwardAimTarget()
+    public unsafe virtual System.Numerics.Vector3 GetMostForwardAimTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.GetMostForwardAimTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -196,7 +196,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: ProcessAimTargets
     /// </summary>
-    public unsafe void ProcessAimTargets()
+    public unsafe virtual void ProcessAimTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.ProcessAimTargets", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -207,7 +207,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: SetFenceProxy
     /// </summary>
-    public unsafe void SetFenceProxy(BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewFence)
+    public unsafe virtual void SetFenceProxy(BmSDK.BmGame.RBMPathNode_FenceJumpProxy NewFence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.SetFenceProxy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -241,7 +241,7 @@ public partial class RBMAIAction_RailPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGam
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RailPeek.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

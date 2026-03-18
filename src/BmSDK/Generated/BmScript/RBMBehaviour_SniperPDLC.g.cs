@@ -36,7 +36,7 @@ public partial class RBMBehaviour_SniperPDLC : BmSDK.BmGame.RBMBehaviour_Sniper,
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_SniperPDLC.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];

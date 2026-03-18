@@ -71,7 +71,7 @@ public partial class RDroneBomberBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     /// <summary>
     /// Function: DropBomb
     /// </summary>
-    public unsafe void DropBomb(bool LODBomb)
+    public unsafe virtual void DropBomb(bool LODBomb)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDroneBomberBase.DropBomb", true);
         byte* paramsPtr = stackalloc byte[4];

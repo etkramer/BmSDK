@@ -71,7 +71,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetNewCloseCamValues
     /// </summary>
-    public unsafe void SetNewCloseCamValues()
+    public unsafe virtual void SetNewCloseCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetNewCloseCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNewCloseBMCamValues
     /// </summary>
-    public unsafe void GetNewCloseBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetNewCloseBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetNewCloseBMCamValues", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -95,7 +95,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNewCloseCamValues
     /// </summary>
-    public unsafe void GetNewCloseCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetNewCloseCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetNewCloseCamValues", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -108,7 +108,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseNewCloseCam
     /// </summary>
-    public unsafe bool CanUseNewCloseCam()
+    public unsafe virtual bool CanUseNewCloseCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseNewCloseCam", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -119,7 +119,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetMaxGuardCamValues
     /// </summary>
-    public unsafe void SetMaxGuardCamValues()
+    public unsafe virtual void SetMaxGuardCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetMaxGuardCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetMaxGuardCamValues
     /// </summary>
-    public unsafe void GetMaxGuardCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetMaxGuardCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetMaxGuardCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -143,7 +143,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetMaxGuardBMCamValues
     /// </summary>
-    public unsafe void GetMaxGuardBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetMaxGuardBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetMaxGuardBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -156,7 +156,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetChairViewNoFovLeftDualCamValues
     /// </summary>
-    public unsafe void SetChairViewNoFovLeftDualCamValues()
+    public unsafe virtual void SetChairViewNoFovLeftDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetChairViewNoFovLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewNoFovLeftDualCamValues
     /// </summary>
-    public unsafe void GetChairViewNoFovLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewNoFovLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewNoFovLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -180,7 +180,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewNoFovLeftDualBMCamValues
     /// </summary>
-    public unsafe void GetChairViewNoFovLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewNoFovLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewNoFovLeftDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -193,7 +193,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseChairViewNoFovLeftDualCam
     /// </summary>
-    public unsafe bool CanUseChairViewNoFovLeftDualCam()
+    public unsafe virtual bool CanUseChairViewNoFovLeftDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseChairViewNoFovLeftDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -204,7 +204,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetChairViewNoFovRightDualCamValues
     /// </summary>
-    public unsafe void SetChairViewNoFovRightDualCamValues()
+    public unsafe virtual void SetChairViewNoFovRightDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetChairViewNoFovRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewNoFovRightDualCamValues
     /// </summary>
-    public unsafe void GetChairViewNoFovRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewNoFovRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewNoFovRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -228,7 +228,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewNoFovRightDualBMCamValues
     /// </summary>
-    public unsafe void GetChairViewNoFovRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewNoFovRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewNoFovRightDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -241,7 +241,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseChairViewNoFovRightDualCam
     /// </summary>
-    public unsafe bool CanUseChairViewNoFovRightDualCam()
+    public unsafe virtual bool CanUseChairViewNoFovRightDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseChairViewNoFovRightDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -252,7 +252,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetChairViewLeftDualCamValues
     /// </summary>
-    public unsafe void SetChairViewLeftDualCamValues()
+    public unsafe virtual void SetChairViewLeftDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetChairViewLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -263,7 +263,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewLeftDualCamValues
     /// </summary>
-    public unsafe void GetChairViewLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -276,7 +276,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewLeftDualBMCamValues
     /// </summary>
-    public unsafe void GetChairViewLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewLeftDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -289,7 +289,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseChairViewLeftDualCam
     /// </summary>
-    public unsafe bool CanUseChairViewLeftDualCam()
+    public unsafe virtual bool CanUseChairViewLeftDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseChairViewLeftDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -300,7 +300,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetChairViewRightDualCamValues
     /// </summary>
-    public unsafe void SetChairViewRightDualCamValues()
+    public unsafe virtual void SetChairViewRightDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetChairViewRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -311,7 +311,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewRightDualCamValues
     /// </summary>
-    public unsafe void GetChairViewRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -324,7 +324,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetChairViewRightDualBMCamValues
     /// </summary>
-    public unsafe void GetChairViewRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetChairViewRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetChairViewRightDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -337,7 +337,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseChairViewRightDualCam
     /// </summary>
-    public unsafe bool CanUseChairViewRightDualCam()
+    public unsafe virtual bool CanUseChairViewRightDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseChairViewRightDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -348,7 +348,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCloseLeftDualCamValues
     /// </summary>
-    public unsafe void SetCloseLeftDualCamValues()
+    public unsafe virtual void SetCloseLeftDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCloseLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -359,7 +359,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseLeftDualCamValues
     /// </summary>
-    public unsafe void GetCloseLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseLeftDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseLeftDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -372,7 +372,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseLeftDualBMCamValues
     /// </summary>
-    public unsafe void GetCloseLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseLeftDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseLeftDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -385,7 +385,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseCloseLeftDualCam
     /// </summary>
-    public unsafe bool CanUseCloseLeftDualCam()
+    public unsafe virtual bool CanUseCloseLeftDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseCloseLeftDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -396,7 +396,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCloseRightDualCamValues
     /// </summary>
-    public unsafe void SetCloseRightDualCamValues()
+    public unsafe virtual void SetCloseRightDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCloseRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -407,7 +407,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseRightDualBMCamValues
     /// </summary>
-    public unsafe void GetCloseRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseRightDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseRightDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -420,7 +420,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseRightDualCamValues
     /// </summary>
-    public unsafe void GetCloseRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseRightDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseRightDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -433,7 +433,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseCloseRightDualCam
     /// </summary>
-    public unsafe bool CanUseCloseRightDualCam()
+    public unsafe virtual bool CanUseCloseRightDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseCloseRightDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -444,7 +444,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetRightSideDualCamValues
     /// </summary>
-    public unsafe void SetRightSideDualCamValues()
+    public unsafe virtual void SetRightSideDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetRightSideDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -455,7 +455,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetRightSideDualCamValues
     /// </summary>
-    public unsafe void GetRightSideDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetRightSideDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetRightSideDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -468,7 +468,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetRightSideDualBMCamValues
     /// </summary>
-    public unsafe void GetRightSideDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetRightSideDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetRightSideDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -481,7 +481,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseRightSideDualCam
     /// </summary>
-    public unsafe bool CanUseRightSideDualCam()
+    public unsafe virtual bool CanUseRightSideDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseRightSideDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -492,7 +492,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetLeftSideDualCamValues
     /// </summary>
-    public unsafe void SetLeftSideDualCamValues()
+    public unsafe virtual void SetLeftSideDualCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetLeftSideDualCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -503,7 +503,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLeftSideDualBMCamValues
     /// </summary>
-    public unsafe void GetLeftSideDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetLeftSideDualBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetLeftSideDualBMCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -516,7 +516,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLeftSideDualCamValues
     /// </summary>
-    public unsafe void GetLeftSideDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetLeftSideDualCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetLeftSideDualCamValues", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -529,7 +529,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CanUseLeftSideDualCam
     /// </summary>
-    public unsafe bool CanUseLeftSideDualCam()
+    public unsafe virtual bool CanUseLeftSideDualCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CanUseLeftSideDualCam", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -540,7 +540,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetSideRightCamValues
     /// </summary>
-    public unsafe void SetSideRightCamValues()
+    public unsafe virtual void SetSideRightCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetSideRightCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -551,7 +551,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetSideRightCamValues
     /// </summary>
-    public unsafe void GetSideRightCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetSideRightCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetSideRightCamValues", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -564,7 +564,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetSideRightBMCamValues
     /// </summary>
-    public unsafe void GetSideRightBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetSideRightBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetSideRightBMCamValues", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -577,7 +577,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetSideLeftCamValues
     /// </summary>
-    public unsafe void SetSideLeftCamValues()
+    public unsafe virtual void SetSideLeftCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetSideLeftCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -588,7 +588,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetSideLeftBMCamValues
     /// </summary>
-    public unsafe void GetSideLeftBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetSideLeftBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetSideLeftBMCamValues", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -601,7 +601,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetSideLeftCamValues
     /// </summary>
-    public unsafe void GetSideLeftCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetSideLeftCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetSideLeftCamValues", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -614,7 +614,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCloseLeftCamValues
     /// </summary>
-    public unsafe void SetCloseLeftCamValues()
+    public unsafe virtual void SetCloseLeftCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCloseLeftCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -625,7 +625,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseLeftCamValues
     /// </summary>
-    public unsafe void GetCloseLeftCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseLeftCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseLeftCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -638,7 +638,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseLeftBMCamValues
     /// </summary>
-    public unsafe void GetCloseLeftBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseLeftBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseLeftBMCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -651,7 +651,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCloseRightCamValues
     /// </summary>
-    public unsafe void SetCloseRightCamValues()
+    public unsafe virtual void SetCloseRightCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCloseRightCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -662,7 +662,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseRightBMCamValues
     /// </summary>
-    public unsafe void GetCloseRightBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseRightBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseRightBMCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -675,7 +675,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCloseRightCamValues
     /// </summary>
-    public unsafe void GetCloseRightCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetCloseRightCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetCloseRightCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -688,7 +688,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetRightSideCamValues
     /// </summary>
-    public unsafe void SetRightSideCamValues()
+    public unsafe virtual void SetRightSideCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetRightSideCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -699,7 +699,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetRightSideCamValues
     /// </summary>
-    public unsafe void GetRightSideCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetRightSideCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetRightSideCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -712,7 +712,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetRightSideBMCamValues
     /// </summary>
-    public unsafe void GetRightSideBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetRightSideBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetRightSideBMCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -725,7 +725,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetLeftSideCamValues
     /// </summary>
-    public unsafe void SetLeftSideCamValues()
+    public unsafe virtual void SetLeftSideCamValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetLeftSideCamValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -736,7 +736,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLeftSideBMCamValues
     /// </summary>
-    public unsafe void GetLeftSideBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetLeftSideBMCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetLeftSideBMCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -749,7 +749,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetLeftSideCamValues
     /// </summary>
-    public unsafe void GetLeftSideCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
+    public unsafe virtual void GetLeftSideCamValues(out System.Numerics.Vector3 Loc, out System.Numerics.Vector3 Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.GetLeftSideCamValues", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -762,7 +762,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: LookAround
     /// </summary>
-    public unsafe void LookAround(float DeltaTime, BmSDK.Rotator LookInput)
+    public unsafe virtual void LookAround(float DeltaTime, BmSDK.Rotator LookInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.LookAround", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -775,7 +775,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -787,7 +787,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCamera
     /// </summary>
-    public unsafe void SetCamera()
+    public unsafe virtual void SetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCamera", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -798,7 +798,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetCameraValues
     /// </summary>
-    public unsafe void SetCameraValues(int AllowedCams, bool bNotAllowedToTouchUp)
+    public unsafe virtual void SetCameraValues(int AllowedCams, bool bNotAllowedToTouchUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.SetCameraValues", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -811,7 +811,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: PickDialogueCamera
     /// </summary>
-    public unsafe void PickDialogueCamera(bool IsBatmanTalking, bool OnlyShowtalker, bool bNotAllowedToTouchUp)
+    public unsafe virtual void PickDialogueCamera(bool IsBatmanTalking, bool OnlyShowtalker, bool bNotAllowedToTouchUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.PickDialogueCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -825,7 +825,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: IsNotShowcase
     /// </summary>
-    public unsafe bool IsNotShowcase()
+    public unsafe virtual bool IsNotShowcase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.IsNotShowcase", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -836,7 +836,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: TestMovement
     /// </summary>
-    public unsafe bool TestMovement(System.Numerics.Vector3 NewLoc, System.Numerics.Vector3 lookDest)
+    public unsafe virtual bool TestMovement(System.Numerics.Vector3 NewLoc, System.Numerics.Vector3 lookDest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.TestMovement", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -849,7 +849,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CameraAnimationTriggerCallback
     /// </summary>
-    public unsafe void CameraAnimationTriggerCallback(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, float Time)
+    public unsafe virtual void CameraAnimationTriggerCallback(BmSDK.FName TagName, BmSDK.TArray<BmSDK.FString> Params, float Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.CameraAnimationTriggerCallback", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -863,7 +863,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop(float timeToBlend)
+    public unsafe virtual void Stop(float timeToBlend)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.Stop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -875,7 +875,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawn Target)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawn Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -887,7 +887,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -901,7 +901,7 @@ public partial class RDialogueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: ForensicsDof
     /// </summary>
-    public unsafe void ForensicsDof(bool On)
+    public unsafe virtual void ForensicsDof(bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDialogueCamera.ForensicsDof", true);
         byte* paramsPtr = stackalloc byte[4];

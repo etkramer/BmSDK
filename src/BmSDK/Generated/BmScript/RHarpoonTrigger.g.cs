@@ -71,7 +71,7 @@ public partial class RHarpoonTrigger : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.I
     /// <summary>
     /// Function: CanBasePawn
     /// </summary>
-    public unsafe bool CanBasePawn(BmSDK.Engine.Pawn P)
+    public unsafe override bool CanBasePawn(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTrigger.CanBasePawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RHarpoonTrigger : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.I
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTrigger.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RHarpoonTrigger : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.I
     /// <summary>
     /// Function: StopPhysics
     /// </summary>
-    public unsafe void StopPhysics()
+    public unsafe virtual void StopPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTrigger.StopPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RHarpoonTrigger : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.I
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics()
+    public unsafe override void GoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTrigger.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(System.Numerics.Vector3 AimTarget, System.Numerics.Vector3 NewStandLoc, float NewDestTolerance = default)
+    public unsafe virtual void Init(System.Numerics.Vector3 AimTarget, System.Numerics.Vector3 NewStandLoc, float NewDestTolerance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.Init", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -85,7 +85,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -99,7 +99,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -112,7 +112,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -125,7 +125,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RAEC_Attack_Sub_WatchAndWait : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Sub_WatchAndWait.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

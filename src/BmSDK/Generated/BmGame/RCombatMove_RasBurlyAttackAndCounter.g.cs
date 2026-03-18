@@ -71,7 +71,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExtendCombo
     /// </summary>
-    public unsafe void ExtendCombo()
+    public unsafe virtual void ExtendCombo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.ExtendCombo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GotoAttack
     /// </summary>
-    public unsafe void GotoAttack()
+    public unsafe virtual void GotoAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.GotoAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: NormalSpeed
     /// </summary>
-    public unsafe void NormalSpeed()
+    public unsafe virtual void NormalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.NormalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetPawnCounterable
     /// </summary>
-    public unsafe void SetPawnCounterable(bool bCounterable, int I)
+    public unsafe virtual void SetPawnCounterable(bool bCounterable, int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.SetPawnCounterable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayImpactSound
     /// </summary>
-    public unsafe void PlayImpactSound()
+    public unsafe virtual void PlayImpactSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.PlayImpactSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.Explode", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -139,7 +139,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat PawnToExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -151,7 +151,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -164,7 +164,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.ExitMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -175,7 +175,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetBackawayAnim
     /// </summary>
-    public unsafe BmSDK.FName GetBackawayAnim()
+    public unsafe virtual BmSDK.FName GetBackawayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.GetBackawayAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -198,7 +198,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: HasCounteredAll
     /// </summary>
-    public unsafe bool HasCounteredAll()
+    public unsafe virtual bool HasCounteredAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.HasCounteredAll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -209,7 +209,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SwapCounteredAnim
     /// </summary>
-    public unsafe void SwapCounteredAnim(int I)
+    public unsafe virtual void SwapCounteredAnim(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.SwapCounteredAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -221,7 +221,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: UpdateNumCountered
     /// </summary>
-    public unsafe void UpdateNumCountered()
+    public unsafe virtual void UpdateNumCountered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.UpdateNumCountered", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CounterPressed
     /// </summary>
-    public unsafe void CounterPressed()
+    public unsafe virtual void CounterPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.CounterPressed", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -243,7 +243,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: StartMoveOnBatman
     /// </summary>
-    public unsafe void StartMoveOnBatman()
+    public unsafe virtual void StartMoveOnBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.StartMoveOnBatman", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -254,7 +254,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanCounter
     /// </summary>
-    public unsafe bool CanCounter()
+    public unsafe virtual bool CanCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.CanCounter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -265,7 +265,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayBatmanSuccess
     /// </summary>
-    public unsafe void PlayBatmanSuccess()
+    public unsafe virtual void PlayBatmanSuccess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.PlayBatmanSuccess", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: MoveSuccessfullyFinished
     /// </summary>
-    public unsafe void MoveSuccessfullyFinished()
+    public unsafe virtual void MoveSuccessfullyFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.MoveSuccessfullyFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -287,7 +287,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -300,7 +300,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe virtual void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -311,7 +311,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe virtual void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -322,7 +322,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: IsPawnVulnerableToPawn
     /// </summary>
-    public unsafe bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe override bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.IsPawnVulnerableToPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -335,7 +335,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -346,7 +346,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: OnTryBranch
     /// </summary>
-    public unsafe void OnTryBranch(BmSDK.BmGame.RPawnBossRasBase Ras)
+    public unsafe virtual void OnTryBranch(BmSDK.BmGame.RPawnBossRasBase Ras)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.OnTryBranch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -369,7 +369,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: HideDone
     /// </summary>
-    public unsafe void HideDone(BmSDK.BmGame.RPawnBossRasBase Ras)
+    public unsafe virtual void HideDone(BmSDK.BmGame.RPawnBossRasBase Ras)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.HideDone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -381,7 +381,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: BlockedByBatman
     /// </summary>
-    public unsafe void BlockedByBatman()
+    public unsafe virtual void BlockedByBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.BlockedByBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: OnSliced
     /// </summary>
-    public unsafe void OnSliced(BmSDK.BmGame.RPawnBossRasBase Ras)
+    public unsafe virtual void OnSliced(BmSDK.BmGame.RPawnBossRasBase Ras)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.OnSliced", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -404,7 +404,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SlowMo
     /// </summary>
-    public unsafe void SlowMo()
+    public unsafe virtual void SlowMo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.SlowMo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -415,7 +415,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ForceBatmanIntoMove
     /// </summary>
-    public unsafe void ForceBatmanIntoMove()
+    public unsafe virtual void ForceBatmanIntoMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.ForceBatmanIntoMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -426,7 +426,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayHide
     /// </summary>
-    public unsafe void PlayHide(int I)
+    public unsafe virtual void PlayHide(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.PlayHide", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -438,7 +438,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetCounteredInAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetCounteredInAnimName(int Idx)
+    public unsafe virtual BmSDK.FName GetCounteredInAnimName(int Idx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.GetCounteredInAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -450,7 +450,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetInAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetInAnimName(int Idx)
+    public unsafe virtual BmSDK.FName GetInAnimName(int Idx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.GetInAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -462,7 +462,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayBackaway
     /// </summary>
-    public unsafe void PlayBackaway(int I)
+    public unsafe virtual void PlayBackaway(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.PlayBackaway", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -474,7 +474,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayAttack
     /// </summary>
-    public unsafe void PlayAttack(int I)
+    public unsafe virtual void PlayAttack(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.PlayAttack", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -486,7 +486,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: AddAttacker
     /// </summary>
-    public unsafe void AddAttacker(BmSDK.BmGame.RPawnBossRasBase Ras)
+    public unsafe virtual void AddAttacker(BmSDK.BmGame.RPawnBossRasBase Ras)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.AddAttacker", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -498,7 +498,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanPlayerTeleportIfThisPawnTargetted
     /// </summary>
-    public unsafe bool CanPlayerTeleportIfThisPawnTargetted()
+    public unsafe override bool CanPlayerTeleportIfThisPawnTargetted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.CanPlayerTeleportIfThisPawnTargetted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -509,7 +509,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SetPawnOffsets
     /// </summary>
-    public unsafe void SetPawnOffsets()
+    public unsafe virtual void SetPawnOffsets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.SetPawnOffsets", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -520,7 +520,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: FillYawList
     /// </summary>
-    public unsafe void FillYawList(out BmSDK.TArray<int> YawList)
+    public unsafe virtual void FillYawList(out BmSDK.TArray<int> YawList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.FillYawList", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -532,7 +532,7 @@ public partial class RCombatMove_RasBurlyAttackAndCounter : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasBurlyAttackAndCounter.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];

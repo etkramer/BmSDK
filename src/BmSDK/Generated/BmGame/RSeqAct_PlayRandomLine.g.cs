@@ -47,7 +47,7 @@ public partial class RSeqAct_PlayRandomLine : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SetLineToPlay
     /// </summary>
-    public unsafe void SetLineToPlay(BmSDK.Engine.RDialogueLine Line)
+    public unsafe virtual void SetLineToPlay(BmSDK.Engine.RDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayRandomLine.SetLineToPlay", true);
         byte* paramsPtr = stackalloc byte[4];

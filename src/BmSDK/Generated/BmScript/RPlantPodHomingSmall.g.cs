@@ -71,7 +71,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -89,7 +89,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe virtual void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: DoDamage
     /// </summary>
-    public unsafe void DoDamage()
+    public unsafe virtual void DoDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.DoDamage", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -111,7 +111,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: GetChaseTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetChaseTarget()
+    public unsafe virtual System.Numerics.Vector3 GetChaseTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.GetChaseTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -122,7 +122,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -173,7 +173,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: CheckTimeout
     /// </summary>
-    public unsafe void CheckTimeout()
+    public unsafe virtual void CheckTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.CheckTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Die
     /// </summary>
-    public unsafe void Die()
+    public unsafe virtual void Die()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Die", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -218,7 +218,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: KillFX
     /// </summary>
-    public unsafe void KillFX()
+    public unsafe virtual void KillFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.KillFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -229,7 +229,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -240,7 +240,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Kill
     /// </summary>
-    public unsafe void Kill()
+    public unsafe override void Kill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Kill", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -251,7 +251,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.HitWall", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -265,7 +265,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Bump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -279,7 +279,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -294,7 +294,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: ApplyImpulseToMesh
     /// </summary>
-    public unsafe void ApplyImpulseToMesh(float DeltaTime)
+    public unsafe virtual void ApplyImpulseToMesh(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.ApplyImpulseToMesh", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -306,7 +306,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -320,7 +320,7 @@ public partial class RPlantPodHomingSmall : BmSDK.BmGame.RPlantPodHomingSmallBas
     /// <summary>
     /// Function: PlayDeathAnim
     /// </summary>
-    public unsafe void PlayDeathAnim()
+    public unsafe virtual void PlayDeathAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPlantPodHomingSmall.PlayDeathAnim", true);
         byte* paramsPtr = stackalloc byte[0];

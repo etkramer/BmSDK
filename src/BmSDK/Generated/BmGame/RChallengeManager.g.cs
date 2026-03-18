@@ -36,7 +36,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentInfo
     /// </summary>
-    public unsafe void GetCurrentInfo(out BmSDK.BmGame.RChallengeManager.EPlayableCharacters outCharacter, out int outChallengeID, out byte bOutPredator)
+    public unsafe virtual void GetCurrentInfo(out BmSDK.BmGame.RChallengeManager.EPlayableCharacters outCharacter, out int outChallengeID, out byte bOutPredator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetCurrentInfo", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -50,7 +50,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ToTimeString
     /// </summary>
-    public unsafe BmSDK.FString ToTimeString(int Value)
+    public unsafe virtual BmSDK.FString ToTimeString(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.ToTimeString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -69,7 +69,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayableCharactersNameToEnum
     /// </summary>
-    public unsafe BmSDK.BmGame.RChallengeManager.EPlayableCharacters PlayableCharactersNameToEnum(BmSDK.FString CharName)
+    public unsafe virtual BmSDK.BmGame.RChallengeManager.EPlayableCharacters PlayableCharactersNameToEnum(BmSDK.FString CharName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.PlayableCharactersNameToEnum", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -81,7 +81,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCharacter
     /// </summary>
-    public unsafe BmSDK.BmGame.RChallengeManager.EPlayableCharacters GetCharacter()
+    public unsafe virtual BmSDK.BmGame.RChallengeManager.EPlayableCharacters GetCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetCharacter", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -92,7 +92,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCharacter
     /// </summary>
-    public unsafe void SetCharacter(BmSDK.FString CharacterName, BmSDK.FString FullCharacterName)
+    public unsafe virtual void SetCharacter(BmSDK.FString CharacterName, BmSDK.FString FullCharacterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.SetCharacter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Dump
     /// </summary>
-    public unsafe void Dump()
+    public unsafe virtual void Dump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.Dump", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGoalTitles
     /// </summary>
-    public unsafe void GetGoalTitles(int Round, out BmSDK.TArray<BmSDK.FString> GoalTitles)
+    public unsafe virtual void GetGoalTitles(int Round, out BmSDK.TArray<BmSDK.FString> GoalTitles)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetGoalTitles", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -129,7 +129,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DecrementRetries
     /// </summary>
-    public unsafe void DecrementRetries()
+    public unsafe virtual void DecrementRetries()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.DecrementRetries", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRetriesLeft
     /// </summary>
-    public unsafe int GetRetriesLeft()
+    public unsafe virtual int GetRetriesLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetRetriesLeft", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentURL
     /// </summary>
-    public unsafe BmSDK.FString GetCurrentURL()
+    public unsafe virtual BmSDK.FString GetCurrentURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetCurrentURL", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -162,7 +162,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDLCMap
     /// </summary>
-    public unsafe bool IsDLCMap()
+    public unsafe virtual bool IsDLCMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsDLCMap", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRanked
     /// </summary>
-    public unsafe bool IsRanked()
+    public unsafe virtual bool IsRanked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsRanked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -184,7 +184,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsCampaign
     /// </summary>
-    public unsafe bool IsCampaign()
+    public unsafe virtual bool IsCampaign()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsCampaign", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -195,7 +195,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLastRound
     /// </summary>
-    public unsafe bool IsLastRound()
+    public unsafe virtual bool IsLastRound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsLastRound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurrentRound
     /// </summary>
-    public unsafe int GetCurrentRound()
+    public unsafe virtual int GetCurrentRound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetCurrentRound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetNextRound
     /// </summary>
-    public unsafe void SetNextRound()
+    public unsafe virtual void SetNextRound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.SetNextRound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsModifierActive
     /// </summary>
-    public unsafe bool IsModifierActive(BmSDK.BmGame.RGameInfo.EChallengeModifiers new_modifier)
+    public unsafe virtual bool IsModifierActive(BmSDK.BmGame.RGameInfo.EChallengeModifiers new_modifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsModifierActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -240,7 +240,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddModifierForCurrentRound
     /// </summary>
-    public unsafe void AddModifierForCurrentRound(BmSDK.BmGame.RGameInfo.EChallengeModifiers new_modifier)
+    public unsafe virtual void AddModifierForCurrentRound(BmSDK.BmGame.RGameInfo.EChallengeModifiers new_modifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.AddModifierForCurrentRound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -252,7 +252,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearCurrentRoundModifiers
     /// </summary>
-    public unsafe void ClearCurrentRoundModifiers()
+    public unsafe virtual void ClearCurrentRoundModifiers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.ClearCurrentRoundModifiers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -263,7 +263,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerUsesARetry
     /// </summary>
-    public unsafe void PlayerUsesARetry()
+    public unsafe virtual void PlayerUsesARetry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.PlayerUsesARetry", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerAcceptsCurrentRoundResults
     /// </summary>
-    public unsafe void PlayerAcceptsCurrentRoundResults()
+    public unsafe virtual void PlayerAcceptsCurrentRoundResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.PlayerAcceptsCurrentRoundResults", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -285,7 +285,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRoundMedalsEarned
     /// </summary>
-    public unsafe void SetRoundMedalsEarned(int Round, byte medals_earned)
+    public unsafe virtual void SetRoundMedalsEarned(int Round, byte medals_earned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.SetRoundMedalsEarned", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -298,7 +298,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActiveRound
     /// </summary>
-    public unsafe void SetActiveRound(int Round)
+    public unsafe virtual void SetActiveRound(int Round)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.SetActiveRound", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -310,7 +310,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPredatorStat
     /// </summary>
-    public unsafe void AddPredatorStat(BmSDK.FString event_name, float event_time)
+    public unsafe virtual void AddPredatorStat(BmSDK.FString event_name, float event_time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.AddPredatorStat", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -323,7 +323,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPredatorMedalAction
     /// </summary>
-    public unsafe void AddPredatorMedalAction(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual void AddPredatorMedalAction(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.AddPredatorMedalAction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -336,7 +336,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPredatorAction
     /// </summary>
-    public unsafe void AddPredatorAction(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual void AddPredatorAction(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.AddPredatorAction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -349,7 +349,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPredatorStats
     /// </summary>
-    public unsafe void ClearPredatorStats()
+    public unsafe virtual void ClearPredatorStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.ClearPredatorStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -360,7 +360,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BuildChallengeList
     /// </summary>
-    public unsafe void BuildChallengeList(int selected, bool bInRanked, BmSDK.BmGame.RChallengeGoalDefinitions GoalDefs)
+    public unsafe virtual void BuildChallengeList(int selected, bool bInRanked, BmSDK.BmGame.RChallengeGoalDefinitions GoalDefs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.BuildChallengeList", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -374,7 +374,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FilloutChallengeMatch
     /// </summary>
-    public unsafe BmSDK.BmGame.RChallengeManager.FChallengeMatch FilloutChallengeMatch(int inID, BmSDK.BmGame.RChallengeGoalDefinitions GoalDefs)
+    public unsafe virtual BmSDK.BmGame.RChallengeManager.FChallengeMatch FilloutChallengeMatch(int inID, BmSDK.BmGame.RChallengeGoalDefinitions GoalDefs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.FilloutChallengeMatch", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -387,7 +387,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDefaults
     /// </summary>
-    public unsafe void SetDefaults()
+    public unsafe virtual void SetDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.SetDefaults", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -398,7 +398,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPredatorMap
     /// </summary>
-    public unsafe bool IsPredatorMap(int Id)
+    public unsafe virtual bool IsPredatorMap(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsPredatorMap", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -410,7 +410,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFlagForModifier
     /// </summary>
-    public unsafe BmSDK.FString GetFlagForModifier(int test_mod)
+    public unsafe virtual BmSDK.FString GetFlagForModifier(int test_mod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetFlagForModifier", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -422,7 +422,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckModifierAvailability
     /// </summary>
-    public unsafe void CheckModifierAvailability()
+    public unsafe virtual void CheckModifierAvailability()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.CheckModifierAvailability", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -433,7 +433,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsModifierAvailableForCustom
     /// </summary>
-    public unsafe bool IsModifierAvailableForCustom(int test_mod)
+    public unsafe virtual bool IsModifierAvailableForCustom(int test_mod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.IsModifierAvailableForCustom", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -445,7 +445,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCampaignIDs
     /// </summary>
-    public unsafe BmSDK.TArray<int> GetCampaignIDs(int Id)
+    public unsafe virtual BmSDK.TArray<int> GetCampaignIDs(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetCampaignIDs", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -457,7 +457,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetChallengeMapIndex
     /// </summary>
-    public unsafe int GetChallengeMapIndex(int Id)
+    public unsafe virtual int GetChallengeMapIndex(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetChallengeMapIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -469,7 +469,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRGI
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo GetRGI()
+    public unsafe virtual BmSDK.BmGame.RGameInfo GetRGI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeManager.GetRGI", true);
         byte* paramsPtr = stackalloc byte[4];

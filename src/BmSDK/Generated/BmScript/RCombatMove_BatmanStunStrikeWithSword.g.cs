@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanStunStrikeWithSword : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: PlayCapeAnim
     /// </summary>
-    public unsafe void PlayCapeAnim()
+    public unsafe override void PlayCapeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStunStrikeWithSword.PlayCapeAnim", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanStunStrikeWithSword : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetStrikeAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetStrikeAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetStrikeAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStunStrikeWithSword.GetStrikeAnimSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_BatmanStunStrikeWithSword : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStunStrikeWithSword.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -66,7 +66,7 @@ public partial class RBMWeaponRiflePredBase : BmSDK.BmGame.RBMWeaponRanged, BmSD
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredBase.GetDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -89,7 +89,7 @@ public partial class RBMWeaponRiflePredBase : BmSDK.BmGame.RBMWeaponRanged, BmSD
     /// <summary>
     /// Function: GetRECHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredBase.GetRECHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RBMWeaponRiflePredBase : BmSDK.BmGame.RBMWeaponRanged, BmSD
     /// <summary>
     /// Function: CreateBasicGunWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default, BmSDK.Engine.AnimSet AnimSet4 = default)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateBasicGunWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3 = default, BmSDK.Engine.AnimSet AnimSet4 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeaponRiflePredBase.CreateBasicGunWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[6708];

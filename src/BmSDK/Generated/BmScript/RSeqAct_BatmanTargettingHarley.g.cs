@@ -47,7 +47,7 @@ public partial class RSeqAct_BatmanTargettingHarley : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanTargettingHarley.Update", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -59,7 +59,7 @@ public partial class RSeqAct_BatmanTargettingHarley : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanTargettingHarley.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

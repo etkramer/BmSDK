@@ -71,7 +71,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GenerateWire
     /// </summary>
-    public unsafe void GenerateWire(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float SlackAmount)
+    public unsafe virtual void GenerateWire(System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, float SlackAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GenerateWire", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -92,7 +92,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetPerfectConcealment
     /// </summary>
-    public unsafe bool GetPerfectConcealment()
+    public unsafe override bool GetPerfectConcealment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetPerfectConcealment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -117,7 +117,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetGrappleCameraRoot
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrappleCameraRoot(BmSDK.BmGame.RPawnPlayer Pawn)
+    public unsafe override System.Numerics.Vector3 GetGrappleCameraRoot(BmSDK.BmGame.RPawnPlayer Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetGrappleCameraRoot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -144,7 +144,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.Bump", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -158,7 +158,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: MovePawnTo
     /// </summary>
-    public unsafe void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
+    public unsafe override void MovePawnTo(BmSDK.Engine.Pawn PawnToMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.MovePawnTo", true);
         byte* paramsPtr = stackalloc byte[168];
@@ -170,7 +170,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: SetLightEnvironmentBounds
     /// </summary>
-    public unsafe void SetLightEnvironmentBounds(BmSDK.GameObject.FBoxSphereBounds Bounds)
+    public unsafe virtual void SetLightEnvironmentBounds(BmSDK.GameObject.FBoxSphereBounds Bounds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.SetLightEnvironmentBounds", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -182,7 +182,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: DistFromEnd
     /// </summary>
-    public unsafe float DistFromEnd(System.Numerics.Vector3 CheckLocation)
+    public unsafe virtual float DistFromEnd(System.Numerics.Vector3 CheckLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.DistFromEnd", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -201,7 +201,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: ProjectToRopePlane
     /// </summary>
-    public unsafe void ProjectToRopePlane(out System.Numerics.Vector3 ProjLocation)
+    public unsafe virtual void ProjectToRopePlane(out System.Numerics.Vector3 ProjLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.ProjectToRopePlane", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -220,7 +220,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetWireIKNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetWireIKNormal(System.Numerics.Vector3 CheckLocation)
+    public unsafe virtual System.Numerics.Vector3 GetWireIKNormal(System.Numerics.Vector3 CheckLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetWireIKNormal", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -239,7 +239,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetSettleRopePos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSettleRopePos(System.Numerics.Vector3 CheckLocation)
+    public unsafe virtual System.Numerics.Vector3 GetSettleRopePos(System.Numerics.Vector3 CheckLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetSettleRopePos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -258,7 +258,7 @@ public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     /// <summary>
     /// Function: GetGrapplePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
+    public unsafe override System.Numerics.Vector3 GetGrapplePosition(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_RopeBase.GetGrapplePosition", true);
         byte* paramsPtr = stackalloc byte[36];

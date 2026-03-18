@@ -71,7 +71,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: GetCombatAimingConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAimingConfig GetCombatAimingConfig()
+    public unsafe override BmSDK.BmGame.RAimingConfig GetCombatAimingConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.GetCombatAimingConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SpawnChopAttackBarrier
     /// </summary>
-    public unsafe void SpawnChopAttackBarrier(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot)
+    public unsafe override void SpawnChopAttackBarrier(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SpawnChopAttackBarrier", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -95,7 +95,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: DeactivateWaistBlendFX
     /// </summary>
-    public unsafe void DeactivateWaistBlendFX()
+    public unsafe override void DeactivateWaistBlendFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.DeactivateWaistBlendFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ActivateWaistBlendFX
     /// </summary>
-    public unsafe void ActivateWaistBlendFX()
+    public unsafe override void ActivateWaistBlendFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ActivateWaistBlendFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ClearShurikans
     /// </summary>
-    public unsafe void ClearShurikans()
+    public unsafe virtual void ClearShurikans()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ClearShurikans", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: CreateSpectralWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateSpectralWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateSpectralWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.CreateSpectralWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[900];
@@ -163,7 +163,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: Holster
     /// </summary>
-    public unsafe void Holster()
+    public unsafe virtual void Holster()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.Holster", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: GrabSword
     /// </summary>
-    public unsafe void GrabSword()
+    public unsafe virtual void GrabSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.GrabSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SetVisibilityFx
     /// </summary>
-    public unsafe void SetVisibilityFx(float Param)
+    public unsafe virtual void SetVisibilityFx(float Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SetVisibilityFx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: UpdateVisibilityFx
     /// </summary>
-    public unsafe void UpdateVisibilityFx(float DeltaTime)
+    public unsafe virtual void UpdateVisibilityFx(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.UpdateVisibilityFx", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -209,7 +209,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: StartDisappear
     /// </summary>
-    public unsafe void StartDisappear()
+    public unsafe virtual void StartDisappear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.StartDisappear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: UpdateFacing
     /// </summary>
-    public unsafe void UpdateFacing(float DeltaTime)
+    public unsafe virtual void UpdateFacing(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.UpdateFacing", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -232,7 +232,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: OpenEyes
     /// </summary>
-    public unsafe void OpenEyes()
+    public unsafe virtual void OpenEyes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.OpenEyes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -255,7 +255,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: TryDemonBlastAttack
     /// </summary>
-    public unsafe void TryDemonBlastAttack()
+    public unsafe virtual void TryDemonBlastAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.TryDemonBlastAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: TryChopAttack
     /// </summary>
-    public unsafe void TryChopAttack()
+    public unsafe virtual void TryChopAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.TryChopAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ThrowSFX
     /// </summary>
-    public unsafe void ThrowSFX()
+    public unsafe virtual void ThrowSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ThrowSFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ChopSFX
     /// </summary>
-    public unsafe void ChopSFX()
+    public unsafe virtual void ChopSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ChopSFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -299,7 +299,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SwordLift
     /// </summary>
-    public unsafe void SwordLift()
+    public unsafe virtual void SwordLift()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SwordLift", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -310,7 +310,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SwordContact
     /// </summary>
-    public unsafe void SwordContact()
+    public unsafe virtual void SwordContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SwordContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -321,7 +321,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ReleaseShurikanRight
     /// </summary>
-    public unsafe void ReleaseShurikanRight()
+    public unsafe virtual void ReleaseShurikanRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ReleaseShurikanRight", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -332,7 +332,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SpawnShurikanRight
     /// </summary>
-    public unsafe void SpawnShurikanRight()
+    public unsafe virtual void SpawnShurikanRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SpawnShurikanRight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -343,7 +343,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: ReleaseShurikanLeft
     /// </summary>
-    public unsafe void ReleaseShurikanLeft()
+    public unsafe virtual void ReleaseShurikanLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.ReleaseShurikanLeft", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -354,7 +354,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SpawnShurikanLeft
     /// </summary>
-    public unsafe void SpawnShurikanLeft()
+    public unsafe virtual void SpawnShurikanLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SpawnShurikanLeft", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -365,7 +365,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: TryQueueNextThrow
     /// </summary>
-    public unsafe void TryQueueNextThrow()
+    public unsafe virtual void TryQueueNextThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.TryQueueNextThrow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -376,7 +376,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: GetSwordRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetSwordRotation()
+    public unsafe override BmSDK.Rotator GetSwordRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.GetSwordRotation", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -387,7 +387,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: GetSwordLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSwordLocation()
+    public unsafe override System.Numerics.Vector3 GetSwordLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.GetSwordLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -398,7 +398,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: CreateSword
     /// </summary>
-    public unsafe void CreateSword()
+    public unsafe virtual void CreateSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.CreateSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -409,7 +409,7 @@ public partial class RPawnBossRasSpectral : BmSDK.BmScript.RPawnBossRasScriptBas
     /// <summary>
     /// Function: SetHealth
     /// </summary>
-    public unsafe void SetHealth()
+    public unsafe override void SetHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossRasSpectral.SetHealth", true);
         byte* paramsPtr = stackalloc byte[0];

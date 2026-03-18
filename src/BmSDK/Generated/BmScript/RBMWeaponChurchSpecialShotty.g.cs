@@ -71,7 +71,7 @@ public partial class RBMWeaponChurchSpecialShotty : BmSDK.BmScript.RBMWeaponChur
     /// <summary>
     /// Function: SetupWeaponAudio
     /// </summary>
-    public unsafe void SetupWeaponAudio()
+    public unsafe override void SetupWeaponAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChurchSpecialShotty.SetupWeaponAudio", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RBMWeaponChurchSpecialShotty : BmSDK.BmScript.RBMWeaponChur
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChurchSpecialShotty.GetDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMWeaponChurchSpecialShotty : BmSDK.BmScript.RBMWeaponChur
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
+    public unsafe override void DoShotFX(BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChurchSpecialShotty.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[180];
@@ -107,7 +107,7 @@ public partial class RBMWeaponChurchSpecialShotty : BmSDK.BmScript.RBMWeaponChur
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponChurchSpecialShotty.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -47,7 +47,7 @@ public partial class RSeqAct_ApplyForceToUnfixedBones : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ApplyForceToUnfixedBones.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ApplyForceToUnfixedBones : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ApplyForceToUnfixedBones.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

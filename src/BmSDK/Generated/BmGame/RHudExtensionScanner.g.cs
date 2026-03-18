@@ -36,7 +36,7 @@ public partial class RHudExtensionScanner : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: EvidenceScannedCompleted
     /// </summary>
-    public unsafe void EvidenceScannedCompleted()
+    public unsafe virtual void EvidenceScannedCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionScanner.EvidenceScannedCompleted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudExtensionScanner : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionScanner.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RHudExtensionScanner : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionScanner.Init", true);
         byte* paramsPtr = stackalloc byte[32];

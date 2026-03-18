@@ -71,7 +71,7 @@ public partial class RHangingAnimatedRope : BmSDK.BmGame.RSkeletalMeshActor, BmS
     /// <summary>
     /// Function: PlayAnimation
     /// </summary>
-    public unsafe void PlayAnimation(int AnimationNo)
+    public unsafe virtual void PlayAnimation(int AnimationNo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHangingAnimatedRope.PlayAnimation", true);
         byte* paramsPtr = stackalloc byte[4];

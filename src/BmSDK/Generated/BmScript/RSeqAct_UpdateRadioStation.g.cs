@@ -47,7 +47,7 @@ public partial class RSeqAct_UpdateRadioStation : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: ActivateForPlayer
     /// </summary>
-    public unsafe void ActivateForPlayer(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void ActivateForPlayer(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_UpdateRadioStation.ActivateForPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_UpdateRadioStation : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_UpdateRadioStation.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

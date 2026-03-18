@@ -36,7 +36,7 @@ public partial class RBMBehaviour_SetNoVantageEscapeTutorial : BmSDK.BmGame.RBMB
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_SetNoVantageEscapeTutorial.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RWeakIceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakFromDive
     /// </summary>
-    public unsafe void BreakFromDive()
+    public unsafe virtual void BreakFromDive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakIceBase.BreakFromDive", true);
         byte* paramsPtr = stackalloc byte[0];

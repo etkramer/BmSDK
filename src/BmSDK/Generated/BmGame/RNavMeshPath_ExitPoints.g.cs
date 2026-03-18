@@ -36,7 +36,7 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ExitPoints.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

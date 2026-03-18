@@ -71,7 +71,7 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     /// <summary>
     /// Function: GetMultiAttackAnimNames
     /// </summary>
-    public unsafe void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
+    public unsafe override void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaSword.GetMultiAttackAnimNames", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -87,7 +87,7 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     /// <summary>
     /// Function: GetRECPriority
     /// </summary>
-    public unsafe float GetRECPriority()
+    public unsafe override float GetRECPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaSword.GetRECPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -98,7 +98,7 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaSword.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -110,7 +110,7 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     /// <summary>
     /// Function: CreateCombatWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaSword.CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4792];
@@ -126,7 +126,7 @@ public partial class RBMWeaponNinjaSword : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe override void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaSword.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

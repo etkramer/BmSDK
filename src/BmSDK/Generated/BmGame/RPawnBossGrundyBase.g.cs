@@ -66,7 +66,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: HitByFreezeCluster
     /// </summary>
-    public unsafe void HitByFreezeCluster(System.Numerics.Vector3 ClusterLocation)
+    public unsafe virtual void HitByFreezeCluster(System.Numerics.Vector3 ClusterLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.HitByFreezeCluster", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -78,7 +78,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: HitByFreezeBlast
     /// </summary>
-    public unsafe void HitByFreezeBlast()
+    public unsafe virtual void HitByFreezeBlast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.HitByFreezeBlast", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetSmashDistToWall
     /// </summary>
-    public unsafe float GetSmashDistToWall()
+    public unsafe virtual float GetSmashDistToWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetSmashDistToWall", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetLandingNotifyTime
     /// </summary>
-    public unsafe bool GetLandingNotifyTime(BmSDK.Engine.AnimSequence inAnim, out float landingTime)
+    public unsafe virtual bool GetLandingNotifyTime(BmSDK.Engine.AnimSequence inAnim, out float landingTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetLandingNotifyTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetChainSmashNotifyTimes
     /// </summary>
-    public unsafe bool GetChainSmashNotifyTimes(BmSDK.BmGame.RAnimUtil.FNotifyAnim inAnim, out float beginExtendTime, out float endExtendTime, out float beginRetractTime, out float endRetractTime)
+    public unsafe virtual bool GetChainSmashNotifyTimes(BmSDK.BmGame.RAnimUtil.FNotifyAnim inAnim, out float beginExtendTime, out float endExtendTime, out float beginRetractTime, out float endRetractTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetChainSmashNotifyTimes", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -150,7 +150,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetWeightToHandDir
     /// </summary>
-    public unsafe void GetWeightToHandDir(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 Dir)
+    public unsafe virtual void GetWeightToHandDir(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 Dir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetWeightToHandDir", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -170,7 +170,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightLookAtHand
     /// </summary>
-    public unsafe void WeightLookAtHand(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void WeightLookAtHand(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightLookAtHand", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -189,7 +189,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetGrundyWeightAttachPos
     /// </summary>
-    public unsafe void GetGrundyWeightAttachPos(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 pos)
+    public unsafe virtual void GetGrundyWeightAttachPos(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 pos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetGrundyWeightAttachPos", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -209,7 +209,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: DisableWeightPhysics
     /// </summary>
-    public unsafe void DisableWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void DisableWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.DisableWeightPhysics", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -228,7 +228,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: EnableWeightPhysics
     /// </summary>
-    public unsafe void EnableWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void EnableWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.EnableWeightPhysics", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -247,7 +247,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetIsWeightPhysicsEnabled
     /// </summary>
-    public unsafe bool GetIsWeightPhysicsEnabled(byte applicationSide)
+    public unsafe virtual bool GetIsWeightPhysicsEnabled(byte applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetIsWeightPhysicsEnabled", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -266,7 +266,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: InitPhysics
     /// </summary>
-    public unsafe bool InitPhysics()
+    public unsafe virtual bool InitPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.InitPhysics", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -284,7 +284,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: SetDepthBiasValues
     /// </summary>
-    public unsafe void SetDepthBiasValues()
+    public unsafe virtual void SetDepthBiasValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.SetDepthBiasValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -302,7 +302,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdateWeightsBlockingActors
     /// </summary>
-    public unsafe void UpdateWeightsBlockingActors(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void UpdateWeightsBlockingActors(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdateWeightsBlockingActors", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -314,7 +314,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: SetWeightsBlockActors
     /// </summary>
-    public unsafe void SetWeightsBlockActors(bool BlockActors)
+    public unsafe virtual void SetWeightsBlockActors(bool BlockActors)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.SetWeightsBlockActors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -326,7 +326,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: SetWeightToPose
     /// </summary>
-    public unsafe void SetWeightToPose(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, System.Numerics.Vector3 NewTranslation, BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetWeightToPose(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, System.Numerics.Vector3 NewTranslation, BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.SetWeightToPose", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -340,7 +340,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: DetachWeightFromParent
     /// </summary>
-    public unsafe void DetachWeightFromParent(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void DetachWeightFromParent(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.DetachWeightFromParent", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -352,7 +352,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: AttachWeightToParent
     /// </summary>
-    public unsafe void AttachWeightToParent(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void AttachWeightToParent(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.AttachWeightToParent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -364,7 +364,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetAreBothWeightsInAnim
     /// </summary>
-    public unsafe bool GetAreBothWeightsInAnim()
+    public unsafe virtual bool GetAreBothWeightsInAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetAreBothWeightsInAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -375,7 +375,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsSetupTetheredArms
     /// </summary>
-    public unsafe void WeightsSetupTetheredArms()
+    public unsafe virtual void WeightsSetupTetheredArms()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsSetupTetheredArms", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -386,7 +386,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: TeleportBallForPhysics
     /// </summary>
-    public unsafe void TeleportBallForPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual void TeleportBallForPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.TeleportBallForPhysics", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -405,7 +405,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: ChangeAutoLengthLimits
     /// </summary>
-    public unsafe void ChangeAutoLengthLimits(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float MinLength, float MaxLength)
+    public unsafe virtual void ChangeAutoLengthLimits(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float MinLength, float MaxLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.ChangeAutoLengthLimits", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -426,7 +426,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdatePhysToAnimTransition
     /// </summary>
-    public unsafe void UpdatePhysToAnimTransition(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual void UpdatePhysToAnimTransition(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdatePhysToAnimTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -446,7 +446,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdateWeightPhysics
     /// </summary>
-    public unsafe void UpdateWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual void UpdateWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdateWeightPhysics", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -466,7 +466,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: ChangeWeightPhysics
     /// </summary>
-    public unsafe void ChangeWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual void ChangeWeightPhysics(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.ChangeWeightPhysics", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -486,7 +486,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdateWeightToTargetData
     /// </summary>
-    public unsafe bool UpdateWeightToTargetData(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual bool UpdateWeightToTargetData(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdateWeightToTargetData", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -506,7 +506,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdateWeight
     /// </summary>
-    public unsafe void UpdateWeight(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual void UpdateWeight(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdateWeight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -526,7 +526,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: MinDistToLineSeg2d
     /// </summary>
-    public unsafe float MinDistToLineSeg2d(System.Numerics.Vector3 LineStart, System.Numerics.Vector3 LineEnd, System.Numerics.Vector3 TestPoint)
+    public unsafe virtual float MinDistToLineSeg2d(System.Numerics.Vector3 LineStart, System.Numerics.Vector3 LineEnd, System.Numerics.Vector3 TestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.MinDistToLineSeg2d", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -547,7 +547,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: CalculateCurrWeightDistance
     /// </summary>
-    public unsafe float CalculateCurrWeightDistance(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
+    public unsafe virtual float CalculateCurrWeightDistance(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.CalculateCurrWeightDistance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -566,7 +566,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UpdateWeightTargetPose
     /// </summary>
-    public unsafe bool UpdateWeightTargetPose(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
+    public unsafe virtual bool UpdateWeightTargetPose(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UpdateWeightTargetPose", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -586,7 +586,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: ApplyWeightChange
     /// </summary>
-    public unsafe void ApplyWeightChange(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData NewTargetData)
+    public unsafe virtual void ApplyWeightChange(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, BmSDK.BmGame.RPawnBossGrundyBase.FGrundyWeightControlTargetData NewTargetData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.ApplyWeightChange", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -606,7 +606,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: MoveBM
     /// </summary>
-    public unsafe void MoveBM(System.Numerics.Vector3 Delta)
+    public unsafe virtual void MoveBM(System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.MoveBM", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -625,7 +625,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetWeightCoM
     /// </summary>
-    public unsafe void GetWeightCoM(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 CoM)
+    public unsafe virtual void GetWeightCoM(BmSDK.BmGame.RPawnBossGrundyBase.EGrundyWeightSide applicationSide, out System.Numerics.Vector3 CoM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetWeightCoM", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -645,7 +645,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsInstantPhysics
     /// </summary>
-    public unsafe void WeightsInstantPhysics()
+    public unsafe virtual void WeightsInstantPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsInstantPhysics", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -656,7 +656,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsPhysicsHoldingDanglePlus
     /// </summary>
-    public unsafe void WeightsPhysicsHoldingDanglePlus()
+    public unsafe virtual void WeightsPhysicsHoldingDanglePlus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsPhysicsHoldingDanglePlus", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -667,7 +667,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsPhysicsHoldingDangle
     /// </summary>
-    public unsafe void WeightsPhysicsHoldingDangle()
+    public unsafe virtual void WeightsPhysicsHoldingDangle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsPhysicsHoldingDangle", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -678,7 +678,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedVeryLongRopePlusPhysics
     /// </summary>
-    public unsafe void WeightsAnimatedVeryLongRopePlusPhysics()
+    public unsafe virtual void WeightsAnimatedVeryLongRopePlusPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedVeryLongRopePlusPhysics", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -689,7 +689,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedLongRopePlusPhysics
     /// </summary>
-    public unsafe void WeightsAnimatedLongRopePlusPhysics()
+    public unsafe virtual void WeightsAnimatedLongRopePlusPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedLongRopePlusPhysics", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -700,7 +700,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedCustomLengthRope
     /// </summary>
-    public unsafe void WeightsAnimatedCustomLengthRope()
+    public unsafe virtual void WeightsAnimatedCustomLengthRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedCustomLengthRope", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -711,7 +711,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedVeryLongRope
     /// </summary>
-    public unsafe void WeightsAnimatedVeryLongRope()
+    public unsafe virtual void WeightsAnimatedVeryLongRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedVeryLongRope", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -722,7 +722,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedLongRope
     /// </summary>
-    public unsafe void WeightsAnimatedLongRope()
+    public unsafe virtual void WeightsAnimatedLongRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedLongRope", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -733,7 +733,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAnimatedShortRope
     /// </summary>
-    public unsafe void WeightsAnimatedShortRope()
+    public unsafe virtual void WeightsAnimatedShortRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAnimatedShortRope", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -744,7 +744,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: WeightsAttachToGrundyHands
     /// </summary>
-    public unsafe void WeightsAttachToGrundyHands()
+    public unsafe virtual void WeightsAttachToGrundyHands()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.WeightsAttachToGrundyHands", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -755,7 +755,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: EnableForceApplication
     /// </summary>
-    public unsafe void EnableForceApplication()
+    public unsafe virtual void EnableForceApplication()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.EnableForceApplication", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -766,7 +766,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: DisableForceApplication
     /// </summary>
-    public unsafe void DisableForceApplication()
+    public unsafe virtual void DisableForceApplication()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.DisableForceApplication", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -777,7 +777,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetUppercutAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetUppercutAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetUppercutAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetUppercutAnimSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -788,7 +788,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetUppercutAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetUppercutAnimName()
+    public unsafe virtual BmSDK.FName GetUppercutAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetUppercutAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -799,7 +799,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: IntroCinematicFinished
     /// </summary>
-    public unsafe void IntroCinematicFinished()
+    public unsafe virtual void IntroCinematicFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.IntroCinematicFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -810,7 +810,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: ActionPerformed
     /// </summary>
-    public unsafe void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe virtual void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.ActionPerformed", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -822,7 +822,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: ShouldUseFastSlide
     /// </summary>
-    public unsafe bool ShouldUseFastSlide()
+    public unsafe virtual bool ShouldUseFastSlide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.ShouldUseFastSlide", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -833,7 +833,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -844,7 +844,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -856,7 +856,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -868,7 +868,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: CheckBossCounter
     /// </summary>
-    public unsafe bool CheckBossCounter(BmSDK.BmGame.RPawnVillain targ)
+    public unsafe override bool CheckBossCounter(BmSDK.BmGame.RPawnVillain targ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.CheckBossCounter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -880,7 +880,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -891,7 +891,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.Interact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -903,7 +903,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -914,7 +914,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -925,7 +925,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -936,7 +936,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -947,7 +947,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -959,7 +959,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -970,7 +970,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -981,7 +981,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -992,7 +992,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1003,7 +1003,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1014,7 +1014,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1025,7 +1025,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1037,7 +1037,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: dbgBlowPadsUp
     /// </summary>
-    public unsafe void dbgBlowPadsUp()
+    public unsafe virtual void dbgBlowPadsUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.dbgBlowPadsUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1048,7 +1048,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: SpawnSingleMaggot
     /// </summary>
-    public unsafe void SpawnSingleMaggot(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot)
+    public unsafe virtual void SpawnSingleMaggot(System.Numerics.Vector3 SpawnLoc, BmSDK.Rotator SpawnRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.SpawnSingleMaggot", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1061,7 +1061,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: Killed
     /// </summary>
-    public unsafe void Killed()
+    public unsafe virtual void Killed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.Killed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1072,7 +1072,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: Ignite
     /// </summary>
-    public unsafe void Ignite()
+    public unsafe virtual void Ignite()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.Ignite", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1083,7 +1083,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: AllowCamera
     /// </summary>
-    public unsafe bool AllowCamera(BmSDK.BmGame.RSpecialMoveConfig SpecialMove)
+    public unsafe virtual bool AllowCamera(BmSDK.BmGame.RSpecialMoveConfig SpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.AllowCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1095,7 +1095,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: StopMeleeCamera
     /// </summary>
-    public unsafe void StopMeleeCamera()
+    public unsafe virtual void StopMeleeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.StopMeleeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1106,7 +1106,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: StopAttackingFX
     /// </summary>
-    public unsafe void StopAttackingFX(bool bSuccessfullyCountered = default)
+    public unsafe override void StopAttackingFX(bool bSuccessfullyCountered = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.StopAttackingFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1118,7 +1118,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: StartAttackingFX
     /// </summary>
-    public unsafe void StartAttackingFX(int CTypeInt, BmSDK.BmGame.RPlayerController PC = default)
+    public unsafe override void StartAttackingFX(int CTypeInt, BmSDK.BmGame.RPlayerController PC = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.StartAttackingFX", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1131,7 +1131,7 @@ public partial class RPawnBossGrundyBase : BmSDK.BmGame.RPawnVillain, BmSDK.BmGa
     /// <summary>
     /// Function: DoRumble
     /// </summary>
-    public unsafe void DoRumble()
+    public unsafe virtual void DoRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossGrundyBase.DoRumble", true);
         byte* paramsPtr = stackalloc byte[0];

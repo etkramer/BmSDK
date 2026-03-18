@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: GetStickAngMag
     /// </summary>
-    public unsafe void GetStickAngMag(BmSDK.FString TargetBasePath)
+    public unsafe virtual void GetStickAngMag(BmSDK.FString TargetBasePath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.GetStickAngMag", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: GetCameraRotation
     /// </summary>
-    public unsafe float GetCameraRotation(int Axis)
+    public unsafe virtual float GetCameraRotation(int Axis)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.GetCameraRotation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: GetPlayerRotation
     /// </summary>
-    public unsafe float GetPlayerRotation(int Axis)
+    public unsafe virtual float GetPlayerRotation(int Axis)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.GetPlayerRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: GetPlayerRoomDescription
     /// </summary>
-    public unsafe BmSDK.FString GetPlayerRoomDescription()
+    public unsafe virtual BmSDK.FString GetPlayerRoomDescription()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.GetPlayerRoomDescription", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -83,7 +83,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: SetCustomWaypoint
     /// </summary>
-    public unsafe void SetCustomWaypoint(bool bEnabled, float atX, float atY, float atZ, BmSDK.FString WayPointName, BmSDK.FString WayPointTypeName, BmSDK.FString WayPointSubTypeName)
+    public unsafe virtual void SetCustomWaypoint(bool bEnabled, float atX, float atY, float atZ, BmSDK.FString WayPointName, BmSDK.FString WayPointTypeName, BmSDK.FString WayPointSubTypeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.SetCustomWaypoint", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -101,7 +101,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: RemoveMapObj
     /// </summary>
-    public unsafe void RemoveMapObj(BmSDK.FString ItemName)
+    public unsafe virtual void RemoveMapObj(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.RemoveMapObj", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -113,7 +113,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: RequestPMapIconData
     /// </summary>
-    public unsafe void RequestPMapIconData(BmSDK.FString MapName, BmSDK.FString TargetBasePath)
+    public unsafe virtual void RequestPMapIconData(BmSDK.FString MapName, BmSDK.FString TargetBasePath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.RequestPMapIconData", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -126,7 +126,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: RequestMapFlagData
     /// </summary>
-    public unsafe void RequestMapFlagData(BmSDK.FString TargetBasePath)
+    public unsafe virtual void RequestMapFlagData(BmSDK.FString TargetBasePath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.RequestMapFlagData", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -138,7 +138,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: RequestMapData
     /// </summary>
-    public unsafe void RequestMapData(BmSDK.FString TargetBasePath)
+    public unsafe virtual void RequestMapData(BmSDK.FString TargetBasePath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.RequestMapData", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -150,7 +150,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: RequestObjectiveData
     /// </summary>
-    public unsafe void RequestObjectiveData(BmSDK.FString TargetObjectiveNames)
+    public unsafe virtual void RequestObjectiveData(BmSDK.FString TargetObjectiveNames)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.RequestObjectiveData", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -162,7 +162,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: XI_FlashCallsCloseScreen
     /// </summary>
-    public unsafe void XI_FlashCallsCloseScreen()
+    public unsafe virtual void XI_FlashCallsCloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.XI_FlashCallsCloseScreen", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -173,7 +173,7 @@ public partial class RGFxMovieUI_PDLC1_Map : BmSDK.BmGame.RGFxMovieUI_CustomBack
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_PDLC1_Map.Init", true);
         byte* paramsPtr = stackalloc byte[4];

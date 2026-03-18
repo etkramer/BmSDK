@@ -71,7 +71,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetSuperStunHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetSuperStunHitReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetSuperStunHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetSuperStunHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: IsVulnerableToExplosion
     /// </summary>
-    public unsafe bool IsVulnerableToExplosion()
+    public unsafe override bool IsVulnerableToExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.IsVulnerableToExplosion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetThugThrowHitSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugThrowHitSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetThugThrowHitSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetThugThrowHitSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetPlayerThrowHitSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerThrowHitSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetPlayerThrowHitSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetPlayerThrowHitSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetThugChargedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugChargedSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetThugChargedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetThugChargedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetPlayerChargedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerChargedSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetPlayerChargedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetPlayerChargedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetThugPunchedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugPunchedSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetThugPunchedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetThugPunchedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetPlayerPunchedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerPunchedSoundCue()
+    public unsafe override BmSDK.Engine.AkEvent GetPlayerPunchedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetPlayerPunchedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -159,7 +159,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: ChargedIntoWall
     /// </summary>
-    public unsafe void ChargedIntoWall(bool bQuickBatarang)
+    public unsafe override void ChargedIntoWall(bool bQuickBatarang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.ChargedIntoWall", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -171,7 +171,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: IsHenchman
     /// </summary>
-    public unsafe bool IsHenchman()
+    public unsafe override bool IsHenchman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.IsHenchman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: CreateBatmansVenomWeaponConfig
     /// </summary>
-    public unsafe void CreateBatmansVenomWeaponConfig(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe override void CreateBatmansVenomWeaponConfig(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.CreateBatmansVenomWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4364];
@@ -194,7 +194,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: GetHeartBeatType
     /// </summary>
-    public unsafe int GetHeartBeatType()
+    public unsafe override int GetHeartBeatType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.GetHeartBeatType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class RPawnBossVenomHenchmen : BmSDK.BmScript.RPawnBossVenom, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossVenomHenchmen.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

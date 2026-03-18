@@ -36,7 +36,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnQosStatusChanged
     /// </summary>
-    public unsafe void OnQosStatusChanged(int NumComplete, int NumTotal)
+    public unsafe virtual void OnQosStatusChanged(int NumComplete, int NumTotal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnQosStatusChanged", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -49,7 +49,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: BindPlatformSpecificSessionToSearch
     /// </summary>
-    public unsafe bool BindPlatformSpecificSessionToSearch(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings, byte PlatformSpecificInfo)
+    public unsafe virtual bool BindPlatformSpecificSessionToSearch(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings, byte PlatformSpecificInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.BindPlatformSpecificSessionToSearch", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -70,7 +70,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ReadPlatformSpecificSessionInfo
     /// </summary>
-    public unsafe bool ReadPlatformSpecificSessionInfo(out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult DesiredGame, out byte PlatformSpecificInfo)
+    public unsafe virtual bool ReadPlatformSpecificSessionInfo(out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult DesiredGame, out byte PlatformSpecificInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ReadPlatformSpecificSessionInfo", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -90,7 +90,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnJoinMigratedOnlineGameComplete
     /// </summary>
-    public unsafe void OnJoinMigratedOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnJoinMigratedOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnJoinMigratedOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -103,7 +103,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnMigrateOnlineGameComplete
     /// </summary>
-    public unsafe void OnMigrateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnMigrateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnMigrateOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnRecalculateSkillRatingComplete
     /// </summary>
-    public unsafe void OnRecalculateSkillRatingComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnRecalculateSkillRatingComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnRecalculateSkillRatingComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AcceptGameInvite
     /// </summary>
-    public unsafe bool AcceptGameInvite(byte LocalUserNum, BmSDK.FName SessionName)
+    public unsafe virtual bool AcceptGameInvite(byte LocalUserNum, BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AcceptGameInvite", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -142,7 +142,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearGameInviteAcceptedDelegate
     /// </summary>
-    public unsafe void ClearGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate)
+    public unsafe virtual void ClearGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearGameInviteAcceptedDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -155,7 +155,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddGameInviteAcceptedDelegate
     /// </summary>
-    public unsafe void AddGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate)
+    public unsafe virtual void AddGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddGameInviteAcceptedDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -168,7 +168,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnGameInviteAccepted
     /// </summary>
-    public unsafe void OnGameInviteAccepted(out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult InviteResult)
+    public unsafe virtual void OnGameInviteAccepted(out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult InviteResult)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnGameInviteAccepted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -180,7 +180,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearArbitrationRegistrationCompleteDelegate
     /// </summary>
-    public unsafe void ClearArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate)
+    public unsafe virtual void ClearArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearArbitrationRegistrationCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -192,7 +192,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddArbitrationRegistrationCompleteDelegate
     /// </summary>
-    public unsafe void AddArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate)
+    public unsafe virtual void AddArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddArbitrationRegistrationCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -204,7 +204,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnArbitrationRegistrationComplete
     /// </summary>
-    public unsafe void OnArbitrationRegistrationComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnArbitrationRegistrationComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnArbitrationRegistrationComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -217,7 +217,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: RegisterForArbitration
     /// </summary>
-    public unsafe bool RegisterForArbitration(BmSDK.FName SessionName)
+    public unsafe virtual bool RegisterForArbitration(BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.RegisterForArbitration", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -229,7 +229,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearEndOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void ClearEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate)
+    public unsafe virtual void ClearEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearEndOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -241,7 +241,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddEndOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void AddEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate)
+    public unsafe virtual void AddEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddEndOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -253,7 +253,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnEndOnlineGameComplete
     /// </summary>
-    public unsafe void OnEndOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnEndOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnEndOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -266,7 +266,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: EndOnlineGame
     /// </summary>
-    public unsafe bool EndOnlineGame(BmSDK.FName SessionName)
+    public unsafe virtual bool EndOnlineGame(BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.EndOnlineGame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -285,7 +285,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearStartOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void ClearStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate)
+    public unsafe virtual void ClearStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearStartOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -297,7 +297,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddStartOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void AddStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate)
+    public unsafe virtual void AddStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddStartOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -309,7 +309,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnStartOnlineGameComplete
     /// </summary>
-    public unsafe void OnStartOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnStartOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnStartOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -322,7 +322,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: StartOnlineGame
     /// </summary>
-    public unsafe bool StartOnlineGame(BmSDK.FName SessionName)
+    public unsafe virtual bool StartOnlineGame(BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.StartOnlineGame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -341,7 +341,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnUnregisterPlayerComplete
     /// </summary>
-    public unsafe void OnUnregisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful)
+    public unsafe virtual void OnUnregisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnUnregisterPlayerComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -355,7 +355,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: UnregisterPlayer
     /// </summary>
-    public unsafe bool UnregisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
+    public unsafe virtual bool UnregisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.UnregisterPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -368,7 +368,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnRegisterPlayerComplete
     /// </summary>
-    public unsafe void OnRegisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful)
+    public unsafe virtual void OnRegisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnRegisterPlayerComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -382,7 +382,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: RegisterPlayer
     /// </summary>
-    public unsafe bool RegisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasInvited)
+    public unsafe virtual bool RegisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasInvited)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.RegisterPlayer", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -396,7 +396,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: GetResolvedConnectString
     /// </summary>
-    public unsafe bool GetResolvedConnectString(BmSDK.FName SessionName, out BmSDK.FString ConnectInfo)
+    public unsafe virtual bool GetResolvedConnectString(BmSDK.FName SessionName, out BmSDK.FString ConnectInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.GetResolvedConnectString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -416,7 +416,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearJoinOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void ClearJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate)
+    public unsafe virtual void ClearJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearJoinOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -428,7 +428,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddJoinOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void AddJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate)
+    public unsafe virtual void AddJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddJoinOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -440,7 +440,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnJoinOnlineGameComplete
     /// </summary>
-    public unsafe void OnJoinOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnJoinOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnJoinOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -453,7 +453,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: JoinOnlineGame
     /// </summary>
-    public unsafe bool JoinOnlineGame(byte PlayerNum, BmSDK.FName SessionName, out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult DesiredGame)
+    public unsafe virtual bool JoinOnlineGame(byte PlayerNum, BmSDK.FName SessionName, out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult DesiredGame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.JoinOnlineGame", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -474,7 +474,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: FreeSearchResults
     /// </summary>
-    public unsafe bool FreeSearchResults(BmSDK.Engine.OnlineGameSearch Search)
+    public unsafe virtual bool FreeSearchResults(BmSDK.Engine.OnlineGameSearch Search)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.FreeSearchResults", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -493,7 +493,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnCancelFindOnlineGamesComplete
     /// </summary>
-    public unsafe void OnCancelFindOnlineGamesComplete(bool bWasSuccessful)
+    public unsafe virtual void OnCancelFindOnlineGamesComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnCancelFindOnlineGamesComplete", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -505,7 +505,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: CancelFindOnlineGames
     /// </summary>
-    public unsafe bool CancelFindOnlineGames()
+    public unsafe virtual bool CancelFindOnlineGames()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.CancelFindOnlineGames", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -523,7 +523,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddFindOnlineGamesCompleteDelegate
     /// </summary>
-    public unsafe void AddFindOnlineGamesCompleteDelegate(System.IntPtr FindOnlineGamesCompleteDelegate)
+    public unsafe virtual void AddFindOnlineGamesCompleteDelegate(System.IntPtr FindOnlineGamesCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddFindOnlineGamesCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -535,7 +535,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: FindOnlineGames
     /// </summary>
-    public unsafe bool FindOnlineGames(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings)
+    public unsafe virtual bool FindOnlineGames(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.FindOnlineGames", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -555,7 +555,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearDestroyOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void ClearDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate)
+    public unsafe virtual void ClearDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearDestroyOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -567,7 +567,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddDestroyOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void AddDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate)
+    public unsafe virtual void AddDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddDestroyOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -579,7 +579,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnDestroyOnlineGameComplete
     /// </summary>
-    public unsafe void OnDestroyOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnDestroyOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnDestroyOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -592,7 +592,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: DestroyOnlineGame
     /// </summary>
-    public unsafe bool DestroyOnlineGame(BmSDK.FName SessionName)
+    public unsafe virtual bool DestroyOnlineGame(BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.DestroyOnlineGame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -611,7 +611,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnUpdateOnlineGameComplete
     /// </summary>
-    public unsafe void OnUpdateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnUpdateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnUpdateOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -624,7 +624,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: ClearCreateOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void ClearCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate)
+    public unsafe virtual void ClearCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.ClearCreateOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -636,7 +636,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: AddCreateOnlineGameCompleteDelegate
     /// </summary>
-    public unsafe void AddCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate)
+    public unsafe virtual void AddCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.AddCreateOnlineGameCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -648,7 +648,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnCreateOnlineGameComplete
     /// </summary>
-    public unsafe void OnCreateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
+    public unsafe virtual void OnCreateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnCreateOnlineGameComplete", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -661,7 +661,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: CreateOnlineGame
     /// </summary>
-    public unsafe bool CreateOnlineGame(byte HostingPlayerNum, BmSDK.FName SessionName, BmSDK.Engine.OnlineGameSettings NewGameSettings)
+    public unsafe virtual bool CreateOnlineGame(byte HostingPlayerNum, BmSDK.FName SessionName, BmSDK.Engine.OnlineGameSettings NewGameSettings)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.CreateOnlineGame", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -682,7 +682,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: GetGameSearch
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch GetGameSearch()
+    public unsafe virtual BmSDK.Engine.OnlineGameSearch GetGameSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.GetGameSearch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -693,7 +693,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: GetGameSettings
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSettings GetGameSettings(BmSDK.FName SessionName)
+    public unsafe virtual BmSDK.Engine.OnlineGameSettings GetGameSettings(BmSDK.FName SessionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.GetGameSettings", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -705,7 +705,7 @@ public partial class OnlineGameInterfaceImpl : BmSDK.GameObject, BmSDK.Engine.On
     /// <summary>
     /// Function: OnFindOnlineGamesComplete
     /// </summary>
-    public unsafe void OnFindOnlineGamesComplete(bool bWasSuccessful)
+    public unsafe virtual void OnFindOnlineGamesComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineGameInterfaceImpl.OnFindOnlineGamesComplete", true);
         byte* paramsPtr = stackalloc byte[4];

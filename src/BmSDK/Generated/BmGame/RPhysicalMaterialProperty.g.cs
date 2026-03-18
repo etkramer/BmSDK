@@ -50,7 +50,7 @@ public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPr
     /// <summary>
     /// Function: SpawnHitEffect
     /// </summary>
-    public unsafe void SpawnHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.FName ImpactType, bool bPlaySound = default)
+    public unsafe virtual void SpawnHitEffect(BmSDK.Engine.Actor.FImpactInfo Impact, BmSDK.FName ImpactType, bool bPlaySound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhysicalMaterialProperty.SpawnHitEffect", true);
         byte* paramsPtr = stackalloc byte[100];

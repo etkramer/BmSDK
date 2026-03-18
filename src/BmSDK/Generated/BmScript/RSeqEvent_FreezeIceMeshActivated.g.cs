@@ -47,7 +47,7 @@ public partial class RSeqEvent_FreezeIceMeshActivated : BmSDK.Engine.SequenceEve
     /// <summary>
     /// Function: GetRailsTarget
     /// </summary>
-    public unsafe BmSDK.BmScript.RFreezeEnvironmentTarget GetRailsTarget()
+    public unsafe virtual BmSDK.BmScript.RFreezeEnvironmentTarget GetRailsTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqEvent_FreezeIceMeshActivated.GetRailsTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqEvent_FreezeIceMeshActivated : BmSDK.Engine.SequenceEve
     /// <summary>
     /// Function: GetIceMesh
     /// </summary>
-    public unsafe BmSDK.BmScript.RFreezeDynamicSMIceFormation GetIceMesh()
+    public unsafe virtual BmSDK.BmScript.RFreezeDynamicSMIceFormation GetIceMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqEvent_FreezeIceMeshActivated.GetIceMesh", true);
         byte* paramsPtr = stackalloc byte[4];

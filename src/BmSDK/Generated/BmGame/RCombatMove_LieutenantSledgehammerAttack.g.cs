@@ -71,7 +71,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPlayHitReaction
     /// </summary>
-    public unsafe bool CanPlayHitReaction()
+    public unsafe virtual bool CanPlayHitReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.CanPlayHitReaction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ExitMoveNaturally
     /// </summary>
-    public unsafe void ExitMoveNaturally()
+    public unsafe virtual void ExitMoveNaturally()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.ExitMoveNaturally", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetAnimInfo
     /// </summary>
-    public unsafe void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
+    public unsafe virtual void GetAnimInfo(out BmSDK.FName AnimName, out float DurationScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.GetAnimInfo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -142,7 +142,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CombatAnimHitEnd
     /// </summary>
-    public unsafe void CombatAnimHitEnd()
+    public unsafe virtual void CombatAnimHitEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.CombatAnimHitEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe virtual void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanRespondToDamageType
     /// </summary>
-    public unsafe bool CanRespondToDamageType(BmSDK.Class dmgType)
+    public unsafe virtual bool CanRespondToDamageType(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.CanRespondToDamageType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RCombatMove_LieutenantSledgehammerAttack : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LieutenantSledgehammerAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

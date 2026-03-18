@@ -36,7 +36,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetStream
     /// </summary>
-    public unsafe void ResetStream()
+    public unsafe virtual void ResetStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.ResetStream", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: GotoFrame
     /// </summary>
-    public unsafe void GotoFrame(int frameNumber)
+    public unsafe virtual void GotoFrame(int frameNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.GotoFrame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPause
     /// </summary>
-    public unsafe void SetPause(bool shouldPause)
+    public unsafe virtual void SetPause(bool shouldPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.SetPause", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop()
+    public unsafe virtual void Stop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.Stop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: Pause
     /// </summary>
-    public unsafe void Pause()
+    public unsafe virtual void Pause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.Pause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: Play
     /// </summary>
-    public unsafe void Play()
+    public unsafe virtual void Play()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TextureMovie.Play", true);
         byte* paramsPtr = stackalloc byte[0];

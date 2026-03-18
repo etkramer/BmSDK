@@ -71,7 +71,7 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Cower.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// Function: StartCowerAnim
     /// </summary>
-    public unsafe void StartCowerAnim(float Facing)
+    public unsafe virtual void StartCowerAnim(float Facing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Cower.StartCowerAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Cower.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_Cower : BmSDK.BmGame.RBMAIAction, BmSDK.IGameOb
     /// <summary>
     /// Function: SetFleePoint
     /// </summary>
-    public unsafe void SetFleePoint(BmSDK.BmGame.RPredHostageFleePoint NewFleePoint)
+    public unsafe virtual void SetFleePoint(BmSDK.BmGame.RPredHostageFleePoint NewFleePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_Cower.SetFleePoint", true);
         byte* paramsPtr = stackalloc byte[4];

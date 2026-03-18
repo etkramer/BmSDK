@@ -47,7 +47,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: GetNextPoint
     /// </summary>
-    public unsafe bool GetNextPoint(bool bExitIfReachEnd = default)
+    public unsafe virtual bool GetNextPoint(bool bExitIfReachEnd = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.GetNextPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: SetupWalkAction
     /// </summary>
-    public unsafe void SetupWalkAction(BmSDK.BmGame.RBMAIAction_PatrolWalk MoveAction)
+    public unsafe virtual void SetupWalkAction(BmSDK.BmGame.RBMAIAction_PatrolWalk MoveAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.SetupWalkAction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: ForceWaitForPingPong
     /// </summary>
-    public unsafe bool ForceWaitForPingPong()
+    public unsafe virtual bool ForceWaitForPingPong()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.ForceWaitForPingPong", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_CoopPatrol : BmSDK.BmGame.RBMBehaviour_ActionQ
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_CoopPatrol.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

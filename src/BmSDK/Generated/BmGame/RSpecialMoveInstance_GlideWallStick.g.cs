@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: OverrideGrappleFireMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleFireMove()
+    public unsafe override BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleFireMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.OverrideGrappleFireMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: PerformOverrideMove
     /// </summary>
-    public unsafe bool PerformOverrideMove(bool FastForward)
+    public unsafe override bool PerformOverrideMove(bool FastForward)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.PerformOverrideMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: CanCwJumpOffWallStick
     /// </summary>
-    public unsafe bool CanCwJumpOffWallStick()
+    public unsafe virtual bool CanCwJumpOffWallStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.CanCwJumpOffWallStick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -153,7 +153,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: StopAutoClimb
     /// </summary>
-    public unsafe void StopAutoClimb()
+    public unsafe virtual void StopAutoClimb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.StopAutoClimb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: StartAutoClimb
     /// </summary>
-    public unsafe void StartAutoClimb()
+    public unsafe virtual void StartAutoClimb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.StartAutoClimb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_GlideWallStick.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];

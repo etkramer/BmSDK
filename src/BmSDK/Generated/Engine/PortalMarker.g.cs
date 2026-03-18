@@ -71,7 +71,7 @@ public partial class PortalMarker : BmSDK.Engine.NavigationPoint, BmSDK.IGameObj
     /// <summary>
     /// Function: CanTeleport
     /// </summary>
-    public unsafe bool CanTeleport(BmSDK.Engine.Actor A)
+    public unsafe override bool CanTeleport(BmSDK.Engine.Actor A)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PortalMarker.CanTeleport", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -81,7 +81,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: DestroyProjectile
     /// </summary>
-    public unsafe void DestroyProjectile()
+    public unsafe virtual void DestroyProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.DestroyProjectile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: Deploy
     /// </summary>
-    public unsafe void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.Deploy", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -132,7 +132,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate(bool noGroundParticles = default)
+    public unsafe virtual void Detonate(bool noGroundParticles = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.Detonate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RGadgetProje
     /// <summary>
     /// Function: TriggerCreatedRaftEvent
     /// </summary>
-    public unsafe void TriggerCreatedRaftEvent()
+    public unsafe virtual void TriggerCreatedRaftEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeClusterGrenadeProjectile.TriggerCreatedRaftEvent", true);
         byte* paramsPtr = stackalloc byte[20];

@@ -71,7 +71,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: SpawnWeaponDestroy
     /// </summary>
-    public unsafe void SpawnWeaponDestroy(BmSDK.BmGame.RPawnVillain TargetPawn)
+    public unsafe override void SpawnWeaponDestroy(BmSDK.BmGame.RPawnVillain TargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.SpawnWeaponDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: SpawnFailMove
     /// </summary>
-    public unsafe void SpawnFailMove(BmSDK.FName FailAnim, bool bCanBecomeThrow = default, bool bCanBecomeTakedown = default, bool bCanBecomeFloorTakedown = default, bool bCanBecomeWeaponDestroy = default, BmSDK.FName FailCapeState = default)
+    public unsafe override void SpawnFailMove(BmSDK.FName FailAnim, bool bCanBecomeThrow = default, bool bCanBecomeTakedown = default, bool bCanBecomeFloorTakedown = default, bool bCanBecomeWeaponDestroy = default, BmSDK.FName FailCapeState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.SpawnFailMove", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -100,7 +100,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetProjectileCounterClass
     /// </summary>
-    public unsafe BmSDK.Class GetProjectileCounterClass()
+    public unsafe override BmSDK.Class GetProjectileCounterClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetProjectileCounterClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetFailMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetFailMovementStance()
+    public unsafe override BmSDK.FName GetFailMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetFailMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetHitReactionMovementPose
     /// </summary>
-    public unsafe BmSDK.FName GetHitReactionMovementPose()
+    public unsafe override BmSDK.FName GetHitReactionMovementPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetHitReactionMovementPose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -133,7 +133,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetRedirectMovementPose
     /// </summary>
-    public unsafe BmSDK.FName GetRedirectMovementPose()
+    public unsafe override BmSDK.FName GetRedirectMovementPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetRedirectMovementPose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetEvadeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetEvadeMovementStance()
+    public unsafe override BmSDK.FName GetEvadeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetEvadeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: SpawnComboTakeDown
     /// </summary>
-    public unsafe void SpawnComboTakeDown(BmSDK.BmGame.RPawnVillain TargetPawn)
+    public unsafe override void SpawnComboTakeDown(BmSDK.BmGame.RPawnVillain TargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.SpawnComboTakeDown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.Bump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -181,7 +181,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: AddMovementMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe override void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.AddMovementMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[464];
@@ -193,7 +193,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: CreateUnarmedWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateUnarmedWeaponConfig()
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateUnarmedWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.CreateUnarmedWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: CreateSwordWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateSwordWeaponConfig()
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateSwordWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.CreateSwordWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1644];
@@ -215,7 +215,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: HideSword
     /// </summary>
-    public unsafe void HideSword()
+    public unsafe virtual void HideSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.HideSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -226,7 +226,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: ShowSword
     /// </summary>
-    public unsafe void ShowSword()
+    public unsafe virtual void ShowSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.ShowSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -237,7 +237,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: DeInitAttackMoveWeapons
     /// </summary>
-    public unsafe void DeInitAttackMoveWeapons()
+    public unsafe override void DeInitAttackMoveWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.DeInitAttackMoveWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -248,7 +248,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: InitAttackMoveWeapons
     /// </summary>
-    public unsafe void InitAttackMoveWeapons(bool bMirrored)
+    public unsafe override void InitAttackMoveWeapons(bool bMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.InitAttackMoveWeapons", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -260,7 +260,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: NotifyGadgetEquip
     /// </summary>
-    public unsafe void NotifyGadgetEquip(bool equip)
+    public unsafe override void NotifyGadgetEquip(bool equip)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.NotifyGadgetEquip", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: OverrideChangeRunningModeStance
     /// </summary>
-    public unsafe bool OverrideChangeRunningModeStance()
+    public unsafe override bool OverrideChangeRunningModeStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.OverrideChangeRunningModeStance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -283,7 +283,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: OverrideChangeWalkingModeStance
     /// </summary>
-    public unsafe bool OverrideChangeWalkingModeStance()
+    public unsafe override bool OverrideChangeWalkingModeStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.OverrideChangeWalkingModeStance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -294,7 +294,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -306,7 +306,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetSlideEndMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetSlideEndMovementStance()
+    public unsafe override BmSDK.FName GetSlideEndMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetSlideEndMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -317,7 +317,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetStrikeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetStrikeMovementStance()
+    public unsafe override BmSDK.FName GetStrikeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetStrikeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -328,7 +328,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetQuickStrikeDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetQuickStrikeDamageType()
+    public unsafe override BmSDK.Class GetQuickStrikeDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetQuickStrikeDamageType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -339,7 +339,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetQuickStrikeType
     /// </summary>
-    public unsafe BmSDK.Class GetQuickStrikeType()
+    public unsafe override BmSDK.Class GetQuickStrikeType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetQuickStrikeType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -350,7 +350,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetHeavyStrikeType
     /// </summary>
-    public unsafe BmSDK.Class GetHeavyStrikeType()
+    public unsafe override BmSDK.Class GetHeavyStrikeType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetHeavyStrikeType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -361,7 +361,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetHeavyStrikeDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetHeavyStrikeDamageType()
+    public unsafe override BmSDK.Class GetHeavyStrikeDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetHeavyStrikeDamageType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -372,7 +372,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: CounterHitClay
     /// </summary>
-    public unsafe void CounterHitClay()
+    public unsafe virtual void CounterHitClay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.CounterHitClay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -383,7 +383,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: EndSword
     /// </summary>
-    public unsafe void EndSword()
+    public unsafe virtual void EndSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.EndSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -394,7 +394,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: StartSword
     /// </summary>
-    public unsafe void StartSword()
+    public unsafe virtual void StartSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.StartSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -405,7 +405,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetCinematicModeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetCinematicModeMovementStance()
+    public unsafe override BmSDK.FName GetCinematicModeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetCinematicModeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -416,7 +416,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetRunningStrikeClass
     /// </summary>
-    public unsafe BmSDK.Class GetRunningStrikeClass()
+    public unsafe override BmSDK.Class GetRunningStrikeClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetRunningStrikeClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -427,7 +427,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetStunMove
     /// </summary>
-    public unsafe BmSDK.Class GetStunMove()
+    public unsafe override BmSDK.Class GetStunMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetStunMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -438,7 +438,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: SetIsValidCombatant
     /// </summary>
-    public unsafe void SetIsValidCombatant(bool bNewValue)
+    public unsafe override void SetIsValidCombatant(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.SetIsValidCombatant", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -450,7 +450,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -461,7 +461,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: PlayDying
     /// </summary>
-    public unsafe void PlayDying(BmSDK.Class DamageType, System.Numerics.Vector3 HitLoc)
+    public unsafe override void PlayDying(BmSDK.Class DamageType, System.Numerics.Vector3 HitLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.PlayDying", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -474,7 +474,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: CheckForSwordHits
     /// </summary>
-    public unsafe void CheckForSwordHits()
+    public unsafe virtual void CheckForSwordHits()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.CheckForSwordHits", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -485,7 +485,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: HurtDrone
     /// </summary>
-    public unsafe void HurtDrone(BmSDK.BmScript.RPawnVillainClayfaceDrone TestDrone)
+    public unsafe virtual void HurtDrone(BmSDK.BmScript.RPawnVillainClayfaceDrone TestDrone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.HurtDrone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -497,7 +497,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: MultiHitRestart
     /// </summary>
-    public unsafe void MultiHitRestart()
+    public unsafe virtual void MultiHitRestart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.MultiHitRestart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -508,7 +508,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: SliceClayface
     /// </summary>
-    public unsafe void SliceClayface()
+    public unsafe virtual void SliceClayface()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.SliceClayface", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -519,7 +519,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -530,7 +530,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetSword
     /// </summary>
-    public unsafe void GetSword()
+    public unsafe virtual void GetSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -541,7 +541,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: ForceGadgetUpdate
     /// </summary>
-    public unsafe void ForceGadgetUpdate()
+    public unsafe virtual void ForceGadgetUpdate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.ForceGadgetUpdate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -552,7 +552,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: PossessedBy
     /// </summary>
-    public unsafe void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
+    public unsafe override void PossessedBy(BmSDK.Engine.Controller C, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.PossessedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -565,7 +565,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: GetPlayerConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAddContentPlayerCharacter GetPlayerConfig(out BmSDK.BmGame.RAddContentPlayerCharacterMesh MeshData)
+    public unsafe override BmSDK.BmGame.RAddContentPlayerCharacter GetPlayerConfig(out BmSDK.BmGame.RAddContentPlayerCharacterMesh MeshData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.GetPlayerConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -577,7 +577,7 @@ public partial class RPawnPlayerBatmanWithSword : BmSDK.BmScript.RPawnPlayerBm, 
     /// <summary>
     /// Function: CounterClass
     /// </summary>
-    public unsafe BmSDK.Class CounterClass()
+    public unsafe override BmSDK.Class CounterClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerBatmanWithSword.CounterClass", true);
         byte* paramsPtr = stackalloc byte[4];

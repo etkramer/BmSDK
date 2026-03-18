@@ -71,7 +71,7 @@ public partial class RCombatMove_RasShockwaveAttack : BmSDK.BmGame.RCombatMove_R
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasShockwaveAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasShockwaveAttack : BmSDK.BmGame.RCombatMove_R
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasShockwaveAttack.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RasShockwaveAttack : BmSDK.BmGame.RCombatMove_R
     /// <summary>
     /// Function: UnleashAttack
     /// </summary>
-    public unsafe bool UnleashAttack()
+    public unsafe override bool UnleashAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasShockwaveAttack.UnleashAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCombatMove_RasShockwaveAttack : BmSDK.BmGame.RCombatMove_R
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasShockwaveAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

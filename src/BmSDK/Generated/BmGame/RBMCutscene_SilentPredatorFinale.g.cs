@@ -59,7 +59,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: ResetViewTarget
     /// </summary>
-    public unsafe void ResetViewTarget()
+    public unsafe override void ResetViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.ResetViewTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.Tick", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -93,7 +93,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: SetSlowMoOff
     /// </summary>
-    public unsafe void SetSlowMoOff()
+    public unsafe virtual void SetSlowMoOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.SetSlowMoOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: SetSlowMoSpeed
     /// </summary>
-    public unsafe void SetSlowMoSpeed(float Speed)
+    public unsafe virtual void SetSlowMoSpeed(float Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.SetSlowMoSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe bool OnActivate()
+    public unsafe override bool OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_SilentPredatorFinale.OnActivate", true);
         byte* paramsPtr = stackalloc byte[96];

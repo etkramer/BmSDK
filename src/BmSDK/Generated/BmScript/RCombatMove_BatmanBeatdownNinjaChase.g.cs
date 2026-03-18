@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanBeatdownNinjaChase : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanBeatdownNinjaChase.Initialise", true);
         byte* paramsPtr = stackalloc byte[244];

@@ -71,7 +71,7 @@ public partial class RPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTimeSinceLastSighting
     /// </summary>
-    public unsafe float GetTimeSinceLastSighting(int Index)
+    public unsafe virtual float GetTimeSinceLastSighting(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPathNode.GetTimeSinceLastSighting", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -90,7 +90,7 @@ public partial class RPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLastSeenTime
     /// </summary>
-    public unsafe void UpdateLastSeenTime(int Index)
+    public unsafe virtual void UpdateLastSeenTime(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPathNode.UpdateLastSeenTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSafe
     /// </summary>
-    public unsafe bool IsSafe(BmSDK.Engine.Pawn TestPawn)
+    public unsafe virtual bool IsSafe(BmSDK.Engine.Pawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPathNode.IsSafe", true);
         byte* paramsPtr = stackalloc byte[8];

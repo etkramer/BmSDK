@@ -71,7 +71,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCharacters
     /// </summary>
-    public unsafe void SetCharacters(BmSDK.FString LeftCharacterName, BmSDK.FString RightCharacterName, bool Player1Ready, bool Player2Ready)
+    public unsafe virtual void SetCharacters(BmSDK.FString LeftCharacterName, BmSDK.FString RightCharacterName, bool Player1Ready, bool Player2Ready)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.SetCharacters", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -86,7 +86,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCharacterConfigIndex
     /// </summary>
-    public unsafe int GetCharacterConfigIndex(BmSDK.FString CharacterName)
+    public unsafe virtual int GetCharacterConfigIndex(BmSDK.FString CharacterName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.GetCharacterConfigIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -98,7 +98,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaSeconds)
+    public unsafe override void Tick(float DeltaSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TickPlayer
     /// </summary>
-    public unsafe void TickPlayer(float DeltaSeconds, out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.Engine.Actor PositionDummy)
+    public unsafe virtual void TickPlayer(float DeltaSeconds, out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.Engine.Actor PositionDummy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.TickPlayer", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -124,7 +124,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RightPlayerBlendToIdle
     /// </summary>
-    public unsafe void RightPlayerBlendToIdle()
+    public unsafe virtual void RightPlayerBlendToIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.RightPlayerBlendToIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LeftPlayerBlendToIdle
     /// </summary>
-    public unsafe void LeftPlayerBlendToIdle()
+    public unsafe virtual void LeftPlayerBlendToIdle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.LeftPlayerBlendToIdle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetReady
     /// </summary>
-    public unsafe void SetReady(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, bool bNewValue, BmSDK.FName BlendToIdleFunction)
+    public unsafe virtual void SetReady(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, bool bNewValue, BmSDK.FName BlendToIdleFunction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.SetReady", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -171,7 +171,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RAddContentCharacterSelect GetConfig(int Index)
+    public unsafe virtual BmSDK.BmGame.RAddContentCharacterSelect GetConfig(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.GetConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SyncMesh
     /// </summary>
-    public unsafe void SyncMesh(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.BmGame.RAddContentCharacterSelect Config, BmSDK.Engine.Actor PositionDummy)
+    public unsafe virtual void SyncMesh(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.BmGame.RAddContentCharacterSelect Config, BmSDK.Engine.Actor PositionDummy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.SyncMesh", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -197,7 +197,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearMaterials
     /// </summary>
-    public unsafe void ClearMaterials(BmSDK.Engine.SkeletalMeshComponent Mesh)
+    public unsafe virtual void ClearMaterials(BmSDK.Engine.SkeletalMeshComponent Mesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.ClearMaterials", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -209,7 +209,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SyncMeshPosition
     /// </summary>
-    public unsafe void SyncMeshPosition(BmSDK.Engine.SkeletalMeshComponent Mesh, BmSDK.Engine.Actor PositionDummy, System.Numerics.Vector3 PositionOffset)
+    public unsafe virtual void SyncMeshPosition(BmSDK.Engine.SkeletalMeshComponent Mesh, BmSDK.Engine.Actor PositionDummy, System.Numerics.Vector3 PositionOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.SyncMeshPosition", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -223,7 +223,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstructCape
     /// </summary>
-    public unsafe void ConstructCape(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.Engine.Actor PositionDummy, BmSDK.Engine.SkeletalMeshComponent Parent)
+    public unsafe virtual void ConstructCape(out BmSDK.BmGame.RCharacterSelect.FCharacterSelectPlayer Player, BmSDK.Engine.Actor PositionDummy, BmSDK.Engine.SkeletalMeshComponent Parent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.ConstructCape", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -237,7 +237,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstructAttachMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ConstructAttachMesh()
+    public unsafe virtual BmSDK.Engine.SkeletalMeshComponent ConstructAttachMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.ConstructAttachMesh", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -248,7 +248,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstructExtraMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ConstructExtraMesh(BmSDK.Engine.Actor PositionDummy, BmSDK.Engine.SkeletalMeshComponent Parent)
+    public unsafe virtual BmSDK.Engine.SkeletalMeshComponent ConstructExtraMesh(BmSDK.Engine.Actor PositionDummy, BmSDK.Engine.SkeletalMeshComponent Parent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.ConstructExtraMesh", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -261,7 +261,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstructMainMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent ConstructMainMesh(BmSDK.Engine.Actor PositionDummy)
+    public unsafe virtual BmSDK.Engine.SkeletalMeshComponent ConstructMainMesh(BmSDK.Engine.Actor PositionDummy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.ConstructMainMesh", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -273,7 +273,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAllConfigs
     /// </summary>
-    public unsafe void RemoveAllConfigs()
+    public unsafe virtual void RemoveAllConfigs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.RemoveAllConfigs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -284,7 +284,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddConfig
     /// </summary>
-    public unsafe void AddConfig(BmSDK.BmGame.RAddContentCharacterSelect CharConfig)
+    public unsafe virtual void AddConfig(BmSDK.BmGame.RAddContentCharacterSelect CharConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.AddConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -296,7 +296,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadBanks
     /// </summary>
-    public unsafe void LoadBanks(BmSDK.BmGame.RAddContentCharacterSelect Config)
+    public unsafe virtual void LoadBanks(BmSDK.BmGame.RAddContentCharacterSelect Config)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.LoadBanks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -315,7 +315,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnloadBanks
     /// </summary>
-    public unsafe void UnloadBanks()
+    public unsafe virtual void UnloadBanks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.UnloadBanks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -333,7 +333,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TermCharacterSelectPhysics
     /// </summary>
-    public unsafe void TermCharacterSelectPhysics()
+    public unsafe virtual void TermCharacterSelectPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.TermCharacterSelectPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -351,7 +351,7 @@ public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitCharacterSelectPhysics
     /// </summary>
-    public unsafe void InitCharacterSelectPhysics()
+    public unsafe virtual void InitCharacterSelectPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterSelect.InitCharacterSelectPhysics", true);
         byte* paramsPtr = stackalloc byte[0];

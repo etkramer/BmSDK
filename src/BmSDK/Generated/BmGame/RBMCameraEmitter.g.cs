@@ -66,7 +66,7 @@ public partial class RBMCameraEmitter : BmSDK.BmGame.REmitter, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLocation
     /// </summary>
-    public unsafe void UpdateLocation(out System.Numerics.Vector3 CamLoc, out BmSDK.Rotator CamRot, float CamFOVDeg)
+    public unsafe virtual void UpdateLocation(out System.Numerics.Vector3 CamLoc, out BmSDK.Rotator CamRot, float CamFOVDeg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCameraEmitter.UpdateLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -87,7 +87,7 @@ public partial class RBMCameraEmitter : BmSDK.BmGame.REmitter, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterCamera
     /// </summary>
-    public unsafe void RegisterCamera(BmSDK.BmGame.R3rdPersonCamera inCam)
+    public unsafe virtual void RegisterCamera(BmSDK.BmGame.R3rdPersonCamera inCam)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCameraEmitter.RegisterCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RBMCameraEmitter : BmSDK.BmGame.REmitter, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCameraEmitter.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RBMCameraEmitter : BmSDK.BmGame.REmitter, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCameraEmitter.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

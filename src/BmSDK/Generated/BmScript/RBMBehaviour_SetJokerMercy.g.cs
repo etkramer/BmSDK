@@ -36,7 +36,7 @@ public partial class RBMBehaviour_SetJokerMercy : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_SetJokerMercy.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

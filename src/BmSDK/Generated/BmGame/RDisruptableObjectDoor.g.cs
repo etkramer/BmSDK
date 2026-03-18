@@ -71,7 +71,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: PlayShockedSound
     /// </summary>
-    public unsafe void PlayShockedSound()
+    public unsafe virtual void PlayShockedSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.PlayShockedSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetHitNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHitNormal(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual System.Numerics.Vector3 GetHitNormal(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.GetHitNormal", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -94,7 +94,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: SetSplitNavMesh
     /// </summary>
-    public unsafe void SetSplitNavMesh(bool bSplit)
+    public unsafe virtual void SetSplitNavMesh(bool bSplit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.SetSplitNavMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: CalcCharge
     /// </summary>
-    public unsafe float CalcCharge(System.Numerics.Vector3 InLoc, out float Dist)
+    public unsafe virtual float CalcCharge(System.Numerics.Vector3 InLoc, out float Dist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.CalcCharge", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -155,7 +155,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: StopExtraEffects
     /// </summary>
-    public unsafe void StopExtraEffects(bool IsBats = default)
+    public unsafe virtual void StopExtraEffects(bool IsBats = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.StopExtraEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: StartExtraEffects
     /// </summary>
-    public unsafe void StartExtraEffects(bool IsBats = default)
+    public unsafe virtual void StartExtraEffects(bool IsBats = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDisruptableObjectDoor.StartExtraEffects", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAnim
     /// </summary>
-    public unsafe BmSDK.FName GetAnim(float CurrentTime)
+    public unsafe virtual BmSDK.FName GetAnim(float CurrentTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.GetAnim", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -48,7 +48,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddAnim
     /// </summary>
-    public unsafe void AddAnim(BmSDK.FName NewAnim)
+    public unsafe virtual void AddAnim(BmSDK.FName NewAnim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.AddAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLockoutTimes
     /// </summary>
-    public unsafe void SetLockoutTimes(float NewHard, float NewSoft)
+    public unsafe virtual void SetLockoutTimes(float NewHard, float NewSoft)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.SetLockoutTimes", true);
         byte* paramsPtr = stackalloc byte[8];

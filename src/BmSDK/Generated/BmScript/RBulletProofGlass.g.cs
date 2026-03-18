@@ -71,7 +71,7 @@ public partial class RBulletProofGlass : BmSDK.BmGame.RBulletProofGlassBase, BmS
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBulletProofGlass.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[20];

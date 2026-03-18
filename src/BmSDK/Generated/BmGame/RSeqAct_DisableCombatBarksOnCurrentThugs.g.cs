@@ -47,7 +47,7 @@ public partial class RSeqAct_DisableCombatBarksOnCurrentThugs : BmSDK.Engine.Seq
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DisableCombatBarksOnCurrentThugs.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

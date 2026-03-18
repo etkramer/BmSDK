@@ -66,7 +66,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateGrappleGunTarget
     /// </summary>
-    public unsafe void UpdateGrappleGunTarget(float DeltaTime)
+    public unsafe virtual void UpdateGrappleGunTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.UpdateGrappleGunTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -85,7 +85,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CanAimGrapple
     /// </summary>
-    public unsafe bool CanAimGrapple()
+    public unsafe virtual bool CanAimGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CanAimGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: LastHidePointTimeOut
     /// </summary>
-    public unsafe void LastHidePointTimeOut()
+    public unsafe virtual void LastHidePointTimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.LastHidePointTimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: SucceedBoost
     /// </summary>
-    public unsafe void SucceedBoost()
+    public unsafe virtual void SucceedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.SucceedBoost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FailedBoost
     /// </summary>
-    public unsafe void FailedBoost()
+    public unsafe virtual void FailedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FailedBoost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CheckGrapplePointCollision
     /// </summary>
-    public unsafe bool CheckGrapplePointCollision(BmSDK.Engine.Actor GrapplePointToCheck, System.Numerics.Vector3 GrappleTargetPos)
+    public unsafe virtual bool CheckGrapplePointCollision(BmSDK.Engine.Actor GrapplePointToCheck, System.Numerics.Vector3 GrappleTargetPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CheckGrapplePointCollision", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -149,7 +149,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CheckCurrentGrapplePointCollision
     /// </summary>
-    public unsafe bool CheckCurrentGrapplePointCollision()
+    public unsafe virtual bool CheckCurrentGrapplePointCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CheckCurrentGrapplePointCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: GetGrappleTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrappleTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetGrappleTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.GetGrappleTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -185,7 +185,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: InitialiseGrappleWayPoints
     /// </summary>
-    public unsafe void InitialiseGrappleWayPoints()
+    public unsafe virtual void InitialiseGrappleWayPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.InitialiseGrappleWayPoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -203,7 +203,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CalcGrappleLength
     /// </summary>
-    public unsafe void CalcGrappleLength()
+    public unsafe virtual void CalcGrappleLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CalcGrappleLength", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -221,7 +221,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CheckForGrappleWaypoints
     /// </summary>
-    public unsafe void CheckForGrappleWaypoints()
+    public unsafe virtual void CheckForGrappleWaypoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CheckForGrappleWaypoints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: NoWaypointCheck
     /// </summary>
-    public unsafe void NoWaypointCheck()
+    public unsafe virtual void NoWaypointCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.NoWaypointCheck", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: ReachedGrappleWayPoint
     /// </summary>
-    public unsafe void ReachedGrappleWayPoint()
+    public unsafe virtual void ReachedGrappleWayPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.ReachedGrappleWayPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: QueueGrappleTimer
     /// </summary>
-    public unsafe void QueueGrappleTimer()
+    public unsafe virtual void QueueGrappleTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.QueueGrappleTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -272,7 +272,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: QueueGrapple
     /// </summary>
-    public unsafe void QueueGrapple(float QueueTime = default)
+    public unsafe virtual void QueueGrapple(float QueueTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.QueueGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -284,7 +284,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateRange
     /// </summary>
-    public unsafe void UpdateRange()
+    public unsafe virtual void UpdateRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.UpdateRange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -295,7 +295,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -306,7 +306,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: GetNumAvailableGrapplePoints
     /// </summary>
-    public unsafe int GetNumAvailableGrapplePoints()
+    public unsafe virtual int GetNumAvailableGrapplePoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.GetNumAvailableGrapplePoints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -324,7 +324,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: AttachToHand
     /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
+    public unsafe override void AttachToHand(BmSDK.FName CustomBone = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.AttachToHand", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -336,7 +336,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: AttachToBelt
     /// </summary>
-    public unsafe void AttachToBelt()
+    public unsafe override void AttachToBelt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.AttachToBelt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -347,7 +347,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: StopGrappleTrails
     /// </summary>
-    public unsafe void StopGrappleTrails()
+    public unsafe virtual void StopGrappleTrails()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.StopGrappleTrails", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -358,7 +358,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: StartGrappleTrails
     /// </summary>
-    public unsafe void StartGrappleTrails()
+    public unsafe virtual void StartGrappleTrails()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.StartGrappleTrails", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -369,7 +369,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: TurnOffProjectiles
     /// </summary>
-    public unsafe void TurnOffProjectiles()
+    public unsafe override void TurnOffProjectiles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.TurnOffProjectiles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -380,7 +380,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FireProjectile
     /// </summary>
-    public unsafe void FireProjectile(System.Numerics.Vector3 ProjectileTarget)
+    public unsafe override void FireProjectile(System.Numerics.Vector3 ProjectileTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FireProjectile", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -392,7 +392,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -404,7 +404,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: CalculateOffScreenIconPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateOffScreenIconPosition(BmSDK.Engine.Canvas HudCanvas, System.Numerics.Vector3 TargetPosition)
+    public unsafe virtual System.Numerics.Vector3 CalculateOffScreenIconPosition(BmSDK.Engine.Canvas HudCanvas, System.Numerics.Vector3 TargetPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.CalculateOffScreenIconPosition", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -424,7 +424,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindEscapeVantagePoint
     /// </summary>
-    public unsafe void FindEscapeVantagePoint()
+    public unsafe virtual void FindEscapeVantagePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindEscapeVantagePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -442,7 +442,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindBestVantagePoint
     /// </summary>
-    public unsafe float FindBestVantagePoint(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection, float MaxHorizontalDistance, out BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints VantagePointList, bool Zoomed)
+    public unsafe virtual float FindBestVantagePoint(System.Numerics.Vector3 CheckLocation, System.Numerics.Vector3 CheckDirection, float MaxHorizontalDistance, out BmSDK.BmGame.RGrappleGun.FAvailableVantagePoints VantagePointList, bool Zoomed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindBestVantagePoint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -465,7 +465,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: ClearGrappleInfo
     /// </summary>
-    public unsafe void ClearGrappleInfo()
+    public unsafe virtual void ClearGrappleInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.ClearGrappleInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -483,7 +483,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: DrawGrapplePointDebug
     /// </summary>
-    public unsafe void DrawGrapplePointDebug()
+    public unsafe virtual void DrawGrapplePointDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.DrawGrapplePointDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -501,7 +501,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindGrapplePointMultipleConesNative
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleConesNative(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
+    public unsafe virtual BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleConesNative(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindGrapplePointMultipleConesNative", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -521,7 +521,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindGrapplePointMultipleCones
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleCones(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
+    public unsafe virtual BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleCones(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindGrapplePointMultipleCones", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -534,7 +534,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindGrapplePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint FindGrapplePoint(float MinAngle, System.Numerics.Vector3 CameraLocation, BmSDK.Rotator CameraRotation, System.Numerics.Vector3 PlayerLocation, bool bZoomed)
+    public unsafe virtual BmSDK.BmGame.RGrapplePoint FindGrapplePoint(float MinAngle, System.Numerics.Vector3 CameraLocation, BmSDK.Rotator CameraRotation, System.Numerics.Vector3 PlayerLocation, bool bZoomed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindGrapplePoint", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -550,7 +550,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateCheckFrame
     /// </summary>
-    public unsafe void UpdateCheckFrame()
+    public unsafe virtual void UpdateCheckFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.UpdateCheckFrame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -568,7 +568,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: FindBestCeilingClimbPoint
     /// </summary>
-    public unsafe bool FindBestCeilingClimbPoint(out BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint CeilingClimbPoint)
+    public unsafe virtual bool FindBestCeilingClimbPoint(out BmSDK.BmGame.RPawnPlayer.FCeilingClimbPoint CeilingClimbPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.FindBestCeilingClimbPoint", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -587,7 +587,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: ToggleGrappleTarget
     /// </summary>
-    public unsafe void ToggleGrappleTarget()
+    public unsafe virtual void ToggleGrappleTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.ToggleGrappleTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -598,7 +598,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: SetFailedGrappleTimer
     /// </summary>
-    public unsafe void SetFailedGrappleTimer(float FailTime = default)
+    public unsafe virtual void SetFailedGrappleTimer(float FailTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.SetFailedGrappleTimer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -610,7 +610,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: Grapple
     /// </summary>
-    public unsafe bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucceed = default)
+    public unsafe virtual bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucceed = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.Grapple", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -623,7 +623,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: OnPlayerHasBeenMoved
     /// </summary>
-    public unsafe void OnPlayerHasBeenMoved()
+    public unsafe virtual void OnPlayerHasBeenMoved()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.OnPlayerHasBeenMoved", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -634,7 +634,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: OnRoomChange
     /// </summary>
-    public unsafe void OnRoomChange()
+    public unsafe override void OnRoomChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.OnRoomChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -645,7 +645,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.GivenTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -658,7 +658,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: ScriptTick
     /// </summary>
-    public unsafe void ScriptTick(float DeltaTime)
+    public unsafe virtual void ScriptTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.ScriptTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -670,7 +670,7 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleGun.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

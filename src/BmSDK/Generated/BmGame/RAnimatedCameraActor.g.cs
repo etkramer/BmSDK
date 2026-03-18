@@ -71,7 +71,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: OnAnimEnd
     /// </summary>
-    public unsafe void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
+    public unsafe override void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.OnAnimEnd", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -97,7 +97,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: SetFOV
     /// </summary>
-    public unsafe void SetFOV(float DesiredValue, float TimeToChange)
+    public unsafe virtual void SetFOV(float DesiredValue, float TimeToChange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.SetFOV", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: SetGameSpeed
     /// </summary>
-    public unsafe void SetGameSpeed(float DesiredValue, float TimeToChange)
+    public unsafe virtual void SetGameSpeed(float DesiredValue, float TimeToChange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.SetGameSpeed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -136,7 +136,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: GetCameraDummyRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetCameraDummyRotation()
+    public unsafe virtual BmSDK.Rotator GetCameraDummyRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.GetCameraDummyRotation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -147,7 +147,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: RotateQuat
     /// </summary>
-    public unsafe BmSDK.GameObject.FQuat RotateQuat(BmSDK.GameObject.FQuat Q, int YawAmount)
+    public unsafe virtual BmSDK.GameObject.FQuat RotateQuat(BmSDK.GameObject.FQuat Q, int YawAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.RotateQuat", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -160,7 +160,7 @@ public partial class RAnimatedCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
     /// <summary>
     /// Function: PostInitAnimTree
     /// </summary>
-    public unsafe void PostInitAnimTree(BmSDK.Engine.SkeletalMeshComponent SkelComp)
+    public unsafe override void PostInitAnimTree(BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimatedCameraActor.PostInitAnimTree", true);
         byte* paramsPtr = stackalloc byte[4];

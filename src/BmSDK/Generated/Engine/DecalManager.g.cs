@@ -71,7 +71,7 @@ public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DecalFinished
     /// </summary>
-    public unsafe void DecalFinished(BmSDK.Engine.DecalComponent Decal)
+    public unsafe virtual void DecalFinished(BmSDK.Engine.DecalComponent Decal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DecalManager.DecalFinished", true);
         byte* paramsPtr = stackalloc byte[4];

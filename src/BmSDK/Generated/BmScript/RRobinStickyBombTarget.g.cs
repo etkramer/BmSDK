@@ -71,7 +71,7 @@ public partial class RRobinStickyBombTarget : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStickyBombTarget.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];

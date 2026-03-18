@@ -36,7 +36,7 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: RestartPathFind
     /// </summary>
-    public unsafe void RestartPathFind()
+    public unsafe virtual void RestartPathFind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPathGoalEvaluator.RestartPathFind", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe virtual void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPathGoalEvaluator.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: DropThug
     /// </summary>
-    public unsafe void DropThug(int ThugNo)
+    public unsafe virtual void DropThug(int ThugNo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.DropThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.Update", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -71,7 +71,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: Train2Ready
     /// </summary>
-    public unsafe bool Train2Ready()
+    public unsafe virtual bool Train2Ready()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.Train2Ready", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: Train1Ready
     /// </summary>
-    public unsafe bool Train1Ready()
+    public unsafe virtual bool Train1Ready()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.Train1Ready", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: SpawnPawns
     /// </summary>
-    public unsafe bool SpawnPawns(int WaveNo, bool bSecondTrain)
+    public unsafe virtual bool SpawnPawns(int WaveNo, bool bSecondTrain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.SpawnPawns", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -106,7 +106,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: TriggerTrainEvent
     /// </summary>
-    public unsafe void TriggerTrainEvent(int outputNo)
+    public unsafe virtual void TriggerTrainEvent(int outputNo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.TriggerTrainEvent", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -118,7 +118,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: ClearDeadPawns
     /// </summary>
-    public unsafe void ClearDeadPawns()
+    public unsafe virtual void ClearDeadPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.ClearDeadPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: IsOffScreen
     /// </summary>
-    public unsafe bool IsOffScreen(BmSDK.BmGame.RPawn Pawn)
+    public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RPawn Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: UpdateAlivePawns
     /// </summary>
-    public unsafe void UpdateAlivePawns()
+    public unsafe virtual void UpdateAlivePawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.UpdateAlivePawns", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RSeqAct_GhostTrainCombatSpawner : BmSDK.BmGame.RSeqAct_Comb
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GhostTrainCombatSpawner.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

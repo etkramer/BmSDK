@@ -71,7 +71,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: UpdateInput
     /// </summary>
-    public unsafe void UpdateInput(float DeltaSeconds, BmSDK.BmGame.RPlayerInput PlayerInput)
+    public unsafe virtual void UpdateInput(float DeltaSeconds, BmSDK.BmGame.RPlayerInput PlayerInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.UpdateInput", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -108,7 +108,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaSeconds)
+    public unsafe override void Tick(float DeltaSeconds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -120,7 +120,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: InitControls
     /// </summary>
-    public unsafe void InitControls(float InAutoRotateIdleTimeRemaining)
+    public unsafe virtual void InitControls(float InAutoRotateIdleTimeRemaining)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.InitControls", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RCharacterViewerCamera : BmSDK.BmGame.RCameraActor, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCharacterViewerCamera.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// <summary>
     /// Function: StopScaredIdle
     /// </summary>
-    public unsafe void StopScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
+    public unsafe override void StopScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.StopScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// <summary>
     /// Function: StartScaredIdle
     /// </summary>
-    public unsafe void StartScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
+    public unsafe override void StartScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.StartScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// <summary>
     /// Function: IsPlayerScary
     /// </summary>
-    public unsafe bool IsPlayerScary(bool bCurrentlyScared, BmSDK.BmGame.RBMPawnAI CurrentUser, BmSDK.BmGame.RPawn Player)
+    public unsafe override bool IsPlayerScary(bool bCurrentlyScared, BmSDK.BmGame.RBMPawnAI CurrentUser, BmSDK.BmGame.RPawn Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.IsPlayerScary", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -109,7 +109,7 @@ public partial class RFleePoint_Cower : BmSDK.BmGame.RFleePoint, BmSDK.IGameObje
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
+    public unsafe override bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_Cower.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[12];

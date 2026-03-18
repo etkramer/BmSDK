@@ -36,7 +36,7 @@ public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableCont
     /// <summary>
     /// Function: UnloadDLC
     /// </summary>
-    public unsafe void UnloadDLC()
+    public unsafe virtual void UnloadDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDownloadableContentManager.UnloadDLC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableCont
     /// <summary>
     /// Function: RefreshDLCEnumComplete
     /// </summary>
-    public unsafe void RefreshDLCEnumComplete()
+    public unsafe override void RefreshDLCEnumComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDownloadableContentManager.RefreshDLCEnumComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableCont
     /// <summary>
     /// Function: RefreshDLC
     /// </summary>
-    public unsafe void RefreshDLC()
+    public unsafe override void RefreshDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDownloadableContentManager.RefreshDLC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableCont
     /// <summary>
     /// Function: IsScanInProgress
     /// </summary>
-    public unsafe bool IsScanInProgress()
+    public unsafe virtual bool IsScanInProgress()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDownloadableContentManager.IsScanInProgress", true);
         byte* paramsPtr = stackalloc byte[4];

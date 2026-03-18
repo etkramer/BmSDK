@@ -71,7 +71,7 @@ public partial class RCombatMove_BaneShockwave : BmSDK.BmScript.RCombatMove_Bane
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneShockwave.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -85,7 +85,7 @@ public partial class RCombatMove_BaneShockwave : BmSDK.BmScript.RCombatMove_Bane
     /// <summary>
     /// Function: StartShockwave
     /// </summary>
-    public unsafe void StartShockwave()
+    public unsafe virtual void StartShockwave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneShockwave.StartShockwave", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RCombatMove_BaneShockwave : BmSDK.BmScript.RCombatMove_Bane
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneShockwave.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

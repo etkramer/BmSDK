@@ -71,7 +71,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe virtual void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: Open
     /// </summary>
-    public unsafe void Open()
+    public unsafe virtual void Open()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.Open", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: ResetStasis
     /// </summary>
-    public unsafe void ResetStasis()
+    public unsafe virtual void ResetStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.ResetStasis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: BlendToOpen
     /// </summary>
-    public unsafe void BlendToOpen()
+    public unsafe virtual void BlendToOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.BlendToOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RRiddlerRewardCage : BmSDK.BmGame.RSkeletalMeshActor, BmSDK
     /// <summary>
     /// Function: BlendToClose
     /// </summary>
-    public unsafe void BlendToClose()
+    public unsafe virtual void BlendToClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerRewardCage.BlendToClose", true);
         byte* paramsPtr = stackalloc byte[0];

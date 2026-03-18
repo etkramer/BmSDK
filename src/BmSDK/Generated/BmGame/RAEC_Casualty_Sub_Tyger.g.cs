@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_Tyger : BmSDK.BmGame.RAEC_Casualty_Sub_So
     /// <summary>
     /// Function: PlayDiscoverBark
     /// </summary>
-    public unsafe void PlayDiscoverBark()
+    public unsafe override void PlayDiscoverBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Tyger.PlayDiscoverBark", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_Tyger : BmSDK.BmGame.RAEC_Casualty_Sub_So
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe override void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_Tyger.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[12];

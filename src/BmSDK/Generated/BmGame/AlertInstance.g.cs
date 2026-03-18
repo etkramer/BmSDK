@@ -36,7 +36,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateTypeIfBetter
     /// </summary>
-    public unsafe bool UpdateTypeIfBetter(BmSDK.BmGame.AlertInstance.InterruptType NewType)
+    public unsafe virtual bool UpdateTypeIfBetter(BmSDK.BmGame.AlertInstance.InterruptType NewType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.UpdateTypeIfBetter", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe int GetPriority()
+    public unsafe virtual int GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAlert
     /// </summary>
-    public unsafe void UpdateAlert(System.Numerics.Vector3 NewLocation, BmSDK.BmGame.AlertInstance.InterruptType NewType, float BackDateTime = default)
+    public unsafe virtual void UpdateAlert(System.Numerics.Vector3 NewLocation, BmSDK.BmGame.AlertInstance.InterruptType NewType, float BackDateTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.UpdateAlert", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -85,7 +85,7 @@ public partial class AlertInstance : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAlertLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAlertLocation()
+    public unsafe virtual System.Numerics.Vector3 GetAlertLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.AlertInstance.GetAlertLocation", true);
         byte* paramsPtr = stackalloc byte[12];

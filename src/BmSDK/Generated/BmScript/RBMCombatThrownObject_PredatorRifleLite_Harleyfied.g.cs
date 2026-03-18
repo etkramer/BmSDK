@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_PredatorRifleLite_Harleyfied : BmSDK.
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_PredatorRifleLite_Harleyfied.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

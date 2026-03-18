@@ -57,7 +57,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: SetForceMipLevelsToBeResident
     /// </summary>
-    public unsafe void SetForceMipLevelsToBeResident(float Seconds, int CinematicTextureGroups = default)
+    public unsafe virtual void SetForceMipLevelsToBeResident(float Seconds, int CinematicTextureGroups = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2D.SetForceMipLevelsToBeResident", true);
         byte* paramsPtr = stackalloc byte[8];

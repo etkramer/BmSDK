@@ -71,7 +71,7 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileGrenade.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileGrenade.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -97,7 +97,7 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// Function: SetTarget
     /// </summary>
-    public unsafe void SetTarget(System.Numerics.Vector3 TargetPosition)
+    public unsafe virtual void SetTarget(System.Numerics.Vector3 TargetPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileGrenade.SetTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -123,7 +123,7 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileGrenade.Explode", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -136,7 +136,7 @@ public partial class RFreezeProjectileGrenade : BmSDK.BmScript.RFreezeProjectile
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileGrenade.Tick", true);
         byte* paramsPtr = stackalloc byte[16];

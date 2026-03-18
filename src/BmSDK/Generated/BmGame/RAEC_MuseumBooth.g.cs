@@ -71,7 +71,7 @@ public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// <summary>
     /// Function: DismissBoothEvent
     /// </summary>
-    public unsafe void DismissBoothEvent(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase BoothPoint)
+    public unsafe virtual void DismissBoothEvent(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase BoothPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth.DismissBoothEvent", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -83,7 +83,7 @@ public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// <summary>
     /// Function: PointActivated
     /// </summary>
-    public unsafe void PointActivated(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase TriggeredPoint)
+    public unsafe virtual void PointActivated(BmSDK.BmGame.RPred_MuseumBoothReactionPointBase TriggeredPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth.PointActivated", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase,
     /// <summary>
     /// Function: RemoveChild
     /// </summary>
-    public unsafe void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MuseumBooth.RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];

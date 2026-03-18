@@ -47,7 +47,7 @@ public partial class RBMBehaviour_TerrorDiscoverCasualty : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// Function: GetDiscoverAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetDiscoverAnimName()
+    public unsafe virtual BmSDK.FName GetDiscoverAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_TerrorDiscoverCasualty.GetDiscoverAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_TerrorDiscoverCasualty : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_TerrorDiscoverCasualty.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_TerrorDiscoverCasualty : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_TerrorDiscoverCasualty.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_TerrorDiscoverCasualty : BmSDK.BmGame.RBMBehav
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_TerrorDiscoverCasualty.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: ReachedPostFleePoint
     /// </summary>
-    public unsafe void ReachedPostFleePoint(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void ReachedPostFleePoint(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.ReachedPostFleePoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: StartPathingToPostFleePoint
     /// </summary>
-    public unsafe void StartPathingToPostFleePoint()
+    public unsafe virtual void StartPathingToPostFleePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.StartPathingToPostFleePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: ShouldReactBeforeJoiningCombat
     /// </summary>
-    public unsafe bool ShouldReactBeforeJoiningCombat()
+    public unsafe override bool ShouldReactBeforeJoiningCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.ShouldReactBeforeJoiningCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: TriggerCombat
     /// </summary>
-    public unsafe void TriggerCombat()
+    public unsafe virtual void TriggerCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.TriggerCombat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: UpdateLOS
     /// </summary>
-    public unsafe void UpdateLOS()
+    public unsafe virtual void UpdateLOS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.UpdateLOS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: SetPostFleePoint
     /// </summary>
-    public unsafe bool SetPostFleePoint()
+    public unsafe virtual bool SetPostFleePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.SetPostFleePoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -115,7 +115,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: SetPostFleePointFromKismet
     /// </summary>
-    public unsafe bool SetPostFleePointFromKismet()
+    public unsafe virtual bool SetPostFleePointFromKismet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.SetPostFleePointFromKismet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: SetupMultiNavHandleWrapper
     /// </summary>
-    public unsafe void SetupMultiNavHandleWrapper()
+    public unsafe virtual void SetupMultiNavHandleWrapper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.SetupMultiNavHandleWrapper", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -137,7 +137,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PostFlee.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: InitialiseMaggot
     /// </summary>
-    public unsafe void InitialiseMaggot(BmSDK.BmGame.RBMPawnAI Thug, int Damage, bool onFire, bool electrified, float inLifetime, float inMaxSpeed)
+    public unsafe virtual void InitialiseMaggot(BmSDK.BmGame.RBMPawnAI Thug, int Damage, bool onFire, bool electrified, float inLifetime, float inMaxSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.InitialiseMaggot", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -88,7 +88,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: DoGetFloorZ
     /// </summary>
-    public unsafe float DoGetFloorZ(System.Numerics.Vector3 Motion)
+    public unsafe virtual float DoGetFloorZ(System.Numerics.Vector3 Motion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.DoGetFloorZ", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -100,7 +100,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.Tick", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -112,7 +112,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: GetTargetLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetLoc()
+    public unsafe virtual System.Numerics.Vector3 GetTargetLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.GetTargetLoc", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -123,7 +123,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: RemoveBomb
     /// </summary>
-    public unsafe void RemoveBomb()
+    public unsafe virtual void RemoveBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.RemoveBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: DamageNearbyPeople
     /// </summary>
-    public unsafe void DamageNearbyPeople()
+    public unsafe virtual void DamageNearbyPeople()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.DamageNearbyPeople", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -145,7 +145,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: AllowPlayerHitByTeeth
     /// </summary>
-    public unsafe bool AllowPlayerHitByTeeth()
+    public unsafe virtual bool AllowPlayerHitByTeeth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.AllowPlayerHitByTeeth", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -174,7 +174,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: EarlyDeath
     /// </summary>
-    public unsafe void EarlyDeath()
+    public unsafe override void EarlyDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.EarlyDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: DelayedEarlyDeath
     /// </summary>
-    public unsafe void DelayedEarlyDeath(float Delay)
+    public unsafe virtual void DelayedEarlyDeath(float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.DelayedEarlyDeath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: BlowUpNearbyMaggots
     /// </summary>
-    public unsafe void BlowUpNearbyMaggots()
+    public unsafe virtual void BlowUpNearbyMaggots()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.BlowUpNearbyMaggots", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -208,7 +208,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -222,7 +222,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.Explode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -233,7 +233,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: Launch
     /// </summary>
-    public unsafe void Launch()
+    public unsafe virtual void Launch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.Launch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -244,7 +244,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: TeethTick
     /// </summary>
-    public unsafe void TeethTick(float DeltaTime)
+    public unsafe virtual void TeethTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.TeethTick", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -256,7 +256,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: IsBatmanBusy
     /// </summary>
-    public unsafe bool IsBatmanBusy()
+    public unsafe virtual bool IsBatmanBusy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.IsBatmanBusy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -267,7 +267,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: UpdateMoveTarget
     /// </summary>
-    public unsafe bool UpdateMoveTarget(float DeltaTime)
+    public unsafe virtual bool UpdateMoveTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.UpdateMoveTarget", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -279,7 +279,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe virtual void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -290,7 +290,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: StartExplodeWarning
     /// </summary>
-    public unsafe void StartExplodeWarning()
+    public unsafe virtual void StartExplodeWarning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.StartExplodeWarning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -301,7 +301,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -312,7 +312,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -323,7 +323,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -334,7 +334,7 @@ public partial class RMaggot : BmSDK.BmGame.RJokerBombTeeth, BmSDK.BmGame.RBatar
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMaggot.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];

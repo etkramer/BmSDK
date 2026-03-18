@@ -71,7 +71,7 @@ public partial class RPawnVillainOutcast : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: ImmuneToBatarang
     /// </summary>
-    public unsafe bool ImmuneToBatarang()
+    public unsafe override bool ImmuneToBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainOutcast.ImmuneToBatarang", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainOutcast : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainOutcast.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RPawnVillainOutcast : BmSDK.BmGame.RPawnVillainThug, BmSDK.
     /// <summary>
     /// Function: CreateOutcastWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateOutcastWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateOutcastWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainOutcast.CreateOutcastWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[3828];

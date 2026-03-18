@@ -71,7 +71,7 @@ public partial class RPawnFriendly_BloodOnHands : BmSDK.BmGame.RPawnFriendly, Bm
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool show, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool show, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendly_BloodOnHands.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];

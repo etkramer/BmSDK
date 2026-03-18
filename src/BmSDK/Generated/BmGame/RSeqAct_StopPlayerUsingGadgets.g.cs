@@ -36,7 +36,7 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Function: TriedToUseGadget
     /// </summary>
-    public unsafe void TriedToUseGadget()
+    public unsafe virtual void TriedToUseGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StopPlayerUsingGadgets.TriedToUseGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceActio
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StopPlayerUsingGadgets.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

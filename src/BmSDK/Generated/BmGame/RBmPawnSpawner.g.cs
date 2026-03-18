@@ -36,7 +36,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCurrentPlayerPawnDeadFlagName
     /// </summary>
-    public unsafe BmSDK.FString GetCurrentPlayerPawnDeadFlagName()
+    public unsafe virtual BmSDK.FString GetCurrentPlayerPawnDeadFlagName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetCurrentPlayerPawnDeadFlagName", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -47,7 +47,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: RegisterDeadGuyWithRoomInfo
     /// </summary>
-    public unsafe void RegisterDeadGuyWithRoomInfo()
+    public unsafe virtual void RegisterDeadGuyWithRoomInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.RegisterDeadGuyWithRoomInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: RemovePawnWithoutKillingIt
     /// </summary>
-    public unsafe void RemovePawnWithoutKillingIt()
+    public unsafe virtual void RemovePawnWithoutKillingIt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.RemovePawnWithoutKillingIt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: DestroyKOPawn
     /// </summary>
-    public unsafe void DestroyKOPawn()
+    public unsafe virtual void DestroyKOPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.DestroyKOPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: DestroyPawn
     /// </summary>
-    public unsafe void DestroyPawn()
+    public unsafe virtual void DestroyPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.DestroyPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe bool SpawnPawn()
+    public unsafe virtual bool SpawnPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetStreamedCombatWeaponType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.StreamedCombatWeaponTypes GetStreamedCombatWeaponType()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.StreamedCombatWeaponTypes GetStreamedCombatWeaponType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetStreamedCombatWeaponType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -138,7 +138,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetStreamedPredWeaponType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.StreamedPredWeaponTypes GetStreamedPredWeaponType()
+    public unsafe virtual BmSDK.BmGame.RGameInfo.StreamedPredWeaponTypes GetStreamedPredWeaponType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetStreamedPredWeaponType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -156,7 +156,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetWeaponType
     /// </summary>
-    public unsafe BmSDK.Class GetWeaponType()
+    public unsafe virtual BmSDK.Class GetWeaponType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetWeaponType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetCharactersType
     /// </summary>
-    public unsafe BmSDK.Class GetCharactersType()
+    public unsafe virtual BmSDK.Class GetCharactersType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetCharactersType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObj
     /// <summary>
     /// Function: GetPawnClass
     /// </summary>
-    public unsafe BmSDK.Class GetPawnClass()
+    public unsafe virtual BmSDK.Class GetPawnClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBmPawnSpawner.GetPawnClass", true);
         byte* paramsPtr = stackalloc byte[4];

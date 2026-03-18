@@ -36,7 +36,7 @@ public partial class RBMBehaviour_FreezeBlastHit_Gun : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: NotifyGunJamDiscovered
     /// </summary>
-    public unsafe void NotifyGunJamDiscovered()
+    public unsafe virtual void NotifyGunJamDiscovered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit_Gun.NotifyGunJamDiscovered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_FreezeBlastHit_Gun : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: IsWithinAngle
     /// </summary>
-    public unsafe bool IsWithinAngle(System.Numerics.Vector3 TestLoc)
+    public unsafe virtual bool IsWithinAngle(System.Numerics.Vector3 TestLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit_Gun.IsWithinAngle", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_FreezeBlastHit_Gun : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
+    public unsafe override void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit_Gun.Initialise", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -75,7 +75,7 @@ public partial class RBMBehaviour_FreezeBlastHit_Gun : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_FreezeBlastHit_Gun.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];

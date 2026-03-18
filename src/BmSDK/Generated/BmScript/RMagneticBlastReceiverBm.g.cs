@@ -71,7 +71,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -94,7 +94,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: SpawnLight
     /// </summary>
-    public unsafe void SpawnLight()
+    public unsafe override void SpawnLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.SpawnLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -119,7 +119,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: SuperComboBlast
     /// </summary>
-    public unsafe void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe override void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.SuperComboBlast", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
+    public unsafe override void Detonate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.Detonate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastRecei
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBlastReceiverBm.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

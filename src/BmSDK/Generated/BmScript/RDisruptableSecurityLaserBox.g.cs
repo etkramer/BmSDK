@@ -71,7 +71,7 @@ public partial class RDisruptableSecurityLaserBox : BmSDK.BmScript.RDisruptableC
     /// <summary>
     /// Function: ChangeState
     /// </summary>
-    public unsafe void ChangeState()
+    public unsafe override void ChangeState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableSecurityLaserBox.ChangeState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDisruptableSecurityLaserBox : BmSDK.BmScript.RDisruptableC
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
+    public unsafe override void SuccessfullyDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableSecurityLaserBox.SuccessfullyDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];

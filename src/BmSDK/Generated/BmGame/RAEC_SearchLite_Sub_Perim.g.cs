@@ -71,7 +71,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: ForceWaitForPingPong
     /// </summary>
-    public unsafe bool ForceWaitForPingPong()
+    public unsafe virtual bool ForceWaitForPingPong()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.ForceWaitForPingPong", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: GetNextPoint
     /// </summary>
-    public unsafe void GetNextPoint()
+    public unsafe virtual void GetNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.GetNextPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: StartPatrol
     /// </summary>
-    public unsafe void StartPatrol()
+    public unsafe virtual void StartPatrol()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.StartPatrol", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: AtUltimateDest
     /// </summary>
-    public unsafe void AtUltimateDest()
+    public unsafe override void AtUltimateDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchLite_Sub_Perim.AtUltimateDest", true);
         byte* paramsPtr = stackalloc byte[0];

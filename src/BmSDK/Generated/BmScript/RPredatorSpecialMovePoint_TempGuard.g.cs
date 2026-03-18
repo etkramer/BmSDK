@@ -71,7 +71,7 @@ public partial class RPredatorSpecialMovePoint_TempGuard : BmSDK.BmScript.RPreda
     /// <summary>
     /// Function: GetUseTime
     /// </summary>
-    public unsafe float GetUseTime()
+    public unsafe virtual float GetUseTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint_TempGuard.GetUseTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPredatorSpecialMovePoint_TempGuard : BmSDK.BmScript.RPreda
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint_TempGuard.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RPredatorSpecialMovePoint_TempGuard : BmSDK.BmScript.RPreda
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint_TempGuard.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RPredatorSpecialMovePoint_TempGuard : BmSDK.BmScript.RPreda
     /// <summary>
     /// Function: AddActionsToQueue
     /// </summary>
-    public unsafe void AddActionsToQueue(BmSDK.BmGame.RAEC_Search_Sub_PredatorPoint UserAEC, BmSDK.FString ActionID)
+    public unsafe override void AddActionsToQueue(BmSDK.BmGame.RAEC_Search_Sub_PredatorPoint UserAEC, BmSDK.FString ActionID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint_TempGuard.AddActionsToQueue", true);
         byte* paramsPtr = stackalloc byte[20];

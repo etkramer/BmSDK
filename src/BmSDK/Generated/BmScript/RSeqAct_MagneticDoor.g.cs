@@ -36,7 +36,7 @@ public partial class RSeqAct_MagneticDoor : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MagneticDoor.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

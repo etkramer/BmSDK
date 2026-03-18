@@ -82,7 +82,7 @@ public partial class RHarpoonGunLv2 : BmSDK.BmScript.RHarpoonGunBm, BmSDK.IGameO
     /// <summary>
     /// Function: GetPotentialTargetPositions
     /// </summary>
-    public unsafe bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions)
+    public unsafe override bool GetPotentialTargetPositions(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out BmSDK.TArray<System.Numerics.Vector3> PotentialTargetPositions)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonGunLv2.GetPotentialTargetPositions", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -96,7 +96,7 @@ public partial class RHarpoonGunLv2 : BmSDK.BmScript.RHarpoonGunBm, BmSDK.IGameO
     /// <summary>
     /// Function: UpdateTarget
     /// </summary>
-    public unsafe void UpdateTarget()
+    public unsafe override void UpdateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonGunLv2.UpdateTarget", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPickup_Tape : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_Tape.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RPickup_Tape : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_Tape.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RPickup_Tape : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PickedUp
     /// </summary>
-    public unsafe void PickedUp(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void PickedUp(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_Tape.PickedUp", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -106,7 +106,7 @@ public partial class RPickup_Tape : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe override bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_Tape.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

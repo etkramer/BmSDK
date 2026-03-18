@@ -47,7 +47,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: UpdateWaitingSpawns
     /// </summary>
-    public unsafe void UpdateWaitingSpawns(float DeltaTime)
+    public unsafe virtual void UpdateWaitingSpawns(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.UpdateWaitingSpawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: AddSpawn
     /// </summary>
-    public unsafe void AddSpawn()
+    public unsafe virtual void AddSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.AddSpawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: GetPawnCount
     /// </summary>
-    public unsafe int GetPawnCount()
+    public unsafe virtual int GetPawnCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.GetPawnCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: GetSpawnPoint
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetSpawnPoint()
+    public unsafe virtual BmSDK.Engine.Actor GetSpawnPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.GetSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -104,7 +104,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: GetScoreForSpawnPoint
     /// </summary>
-    public unsafe float GetScoreForSpawnPoint(BmSDK.Engine.Actor TestPoint, BmSDK.BmGame.RPawnPlayerCombat Batman)
+    public unsafe virtual float GetScoreForSpawnPoint(BmSDK.Engine.Actor TestPoint, BmSDK.BmGame.RPawnPlayerCombat Batman)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.GetScoreForSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -117,7 +117,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: SpawnNextPawn
     /// </summary>
-    public unsafe void SpawnNextPawn()
+    public unsafe virtual void SpawnNextPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.SpawnNextPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RSeqAct_InfiniteCombatSpawner : BmSDK.BmGame.RSeqAct_Combat
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InfiniteCombatSpawner.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

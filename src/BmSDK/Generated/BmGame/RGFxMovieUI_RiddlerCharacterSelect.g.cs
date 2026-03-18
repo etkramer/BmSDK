@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: AddItem
     /// </summary>
-    public unsafe void AddItem(int inID, BmSDK.FString inSectionName, BmSDK.FString inLabelName)
+    public unsafe virtual void AddItem(int inID, BmSDK.FString inSectionName, BmSDK.FString inLabelName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.AddItem", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -50,7 +50,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: BuildCharacterListV3
     /// </summary>
-    public unsafe void BuildCharacterListV3()
+    public unsafe virtual void BuildCharacterListV3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.BuildCharacterListV3", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -61,7 +61,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: IsBaseInstalled
     /// </summary>
-    public unsafe bool IsBaseInstalled(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 NewItem)
+    public unsafe virtual bool IsBaseInstalled(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 NewItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.IsBaseInstalled", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -73,7 +73,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: IsDuplicate
     /// </summary>
-    public unsafe bool IsDuplicate(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 NewItem)
+    public unsafe virtual bool IsDuplicate(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 NewItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.IsDuplicate", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -85,7 +85,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: LoadingBar_Load
     /// </summary>
-    public unsafe void LoadingBar_Load(BmSDK.FString inItem, BmSDK.FString inFlash_Callback)
+    public unsafe virtual void LoadingBar_Load(BmSDK.FString inItem, BmSDK.FString inFlash_Callback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.LoadingBar_Load", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -98,7 +98,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: LoadingBar_FetchLoadList
     /// </summary>
-    public unsafe void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
+    public unsafe virtual void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.LoadingBar_FetchLoadList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: IsBusy
     /// </summary>
-    public unsafe bool IsBusy()
+    public unsafe virtual bool IsBusy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.IsBusy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: BuildLoadList
     /// </summary>
-    public unsafe bool BuildLoadList()
+    public unsafe virtual bool BuildLoadList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.BuildLoadList", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -132,7 +132,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: LoadPackage
     /// </summary>
-    public unsafe void LoadPackage(BmSDK.FString PkgName)
+    public unsafe virtual void LoadPackage(BmSDK.FString PkgName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.LoadPackage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -151,7 +151,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: LoadPackages_CB
     /// </summary>
-    public unsafe void LoadPackages_CB(BmSDK.GameObject pkg)
+    public unsafe virtual void LoadPackages_CB(BmSDK.GameObject pkg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.LoadPackages_CB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: DumpItems
     /// </summary>
-    public unsafe void DumpItems()
+    public unsafe virtual void DumpItems()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.DumpItems", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: SortById
     /// </summary>
-    public unsafe int SortById(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 A, BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 B)
+    public unsafe virtual int SortById(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 A, BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.SortById", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -187,7 +187,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: SortByBaseId
     /// </summary>
-    public unsafe int SortByBaseId(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 A, BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 B)
+    public unsafe virtual int SortByBaseId(BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 A, BmSDK.BmGame.RGFxMovieUI_RiddlerCharacterSelect.FLobbyCharacterV3 B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.SortByBaseId", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -200,7 +200,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: OnChangeIndex
     /// </summary>
-    public unsafe void OnChangeIndex(int Index)
+    public unsafe virtual void OnChangeIndex(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.OnChangeIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Index)
+    public unsafe override void OnClicked(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.OnClicked", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -224,7 +224,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe override void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -235,7 +235,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: OnBackCustom
     /// </summary>
-    public unsafe void OnBackCustom()
+    public unsafe override void OnBackCustom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.OnBackCustom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -246,7 +246,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -257,7 +257,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: SetInitialPrompt
     /// </summary>
-    public unsafe void SetInitialPrompt()
+    public unsafe virtual void SetInitialPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.SetInitialPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -268,7 +268,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: SaveCurrentMenu
     /// </summary>
-    public unsafe void SaveCurrentMenu(BmSDK.FString MenuName)
+    public unsafe override void SaveCurrentMenu(BmSDK.FString MenuName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.SaveCurrentMenu", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -280,7 +280,7 @@ public partial class RGFxMovieUI_RiddlerCharacterSelect : BmSDK.BmGame.RGFxMovie
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerCharacterSelect.Init", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetScannerPower
     /// </summary>
-    public unsafe float GetScannerPower()
+    public unsafe virtual float GetScannerPower()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.GetScannerPower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -94,7 +94,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateZoom
     /// </summary>
-    public unsafe void UpdateZoom(float DeltaTime)
+    public unsafe virtual void UpdateZoom(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.UpdateZoom", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetZoom
     /// </summary>
-    public unsafe void ResetZoom()
+    public unsafe virtual void ResetZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.ResetZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopScanning
     /// </summary>
-    public unsafe void StopScanning()
+    public unsafe virtual void StopScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.StopScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LockScanning
     /// </summary>
-    public unsafe void LockScanning()
+    public unsafe virtual void LockScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.LockScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartScanning
     /// </summary>
-    public unsafe void StartScanning()
+    public unsafe virtual void StartScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.StartScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ScannerPercentageUpdate
     /// </summary>
-    public unsafe void ScannerPercentageUpdate(int NewCompletionPercentage)
+    public unsafe virtual void ScannerPercentageUpdate(int NewCompletionPercentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.ScannerPercentageUpdate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -162,7 +162,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CompleteAnimFinished
     /// </summary>
-    public unsafe void CompleteAnimFinished()
+    public unsafe virtual void CompleteAnimFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.CompleteAnimFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ScanMovieComplete
     /// </summary>
-    public unsafe void ScanMovieComplete()
+    public unsafe virtual void ScanMovieComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.ScanMovieComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceScanned
     /// </summary>
-    public unsafe void SetEvidenceScanned()
+    public unsafe virtual void SetEvidenceScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.SetEvidenceScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ScanComplete
     /// </summary>
-    public unsafe void ScanComplete()
+    public unsafe virtual void ScanComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.ScanComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe virtual void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -218,7 +218,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRunning
     /// </summary>
-    public unsafe bool IsRunning()
+    public unsafe virtual bool IsRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.IsRunning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -229,7 +229,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -240,7 +240,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -251,7 +251,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Activate(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.Activate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -263,7 +263,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TestPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 TestPos(System.Numerics.Vector3 TestPosition, BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual System.Numerics.Vector3 TestPos(System.Numerics.Vector3 TestPosition, BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.TestPos", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -276,7 +276,7 @@ public partial class RPhotoScanner : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsSelectedByCursor
     /// </summary>
-    public unsafe bool IsSelectedByCursor(BmSDK.Engine.StaticMeshComponent testMesh, System.Numerics.Vector3 Origin, float Scale, BmSDK.Engine.Canvas Canvas, out System.Numerics.Vector2 cmin, out System.Numerics.Vector2 cmax)
+    public unsafe virtual bool IsSelectedByCursor(BmSDK.Engine.StaticMeshComponent testMesh, System.Numerics.Vector3 Origin, float Scale, BmSDK.Engine.Canvas Canvas, out System.Numerics.Vector2 cmin, out System.Numerics.Vector2 cmax)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPhotoScanner.IsSelectedByCursor", true);
         byte* paramsPtr = stackalloc byte[44];

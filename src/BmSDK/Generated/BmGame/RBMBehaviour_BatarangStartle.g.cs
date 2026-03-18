@@ -36,7 +36,7 @@ public partial class RBMBehaviour_BatarangStartle : BmSDK.BmGame.RBMBehaviour_Ba
     /// <summary>
     /// Function: SetThreatLocation
     /// </summary>
-    public unsafe void SetThreatLocation(System.Numerics.Vector3 NewLoc)
+    public unsafe override void SetThreatLocation(System.Numerics.Vector3 NewLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BatarangStartle.SetThreatLocation", true);
         byte* paramsPtr = stackalloc byte[12];

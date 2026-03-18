@@ -71,7 +71,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(BmSDK.FName AnimName = default)
+    public unsafe virtual bool IsPlayingAnim(BmSDK.FName AnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: IsValidTargetComp
     /// </summary>
-    public unsafe bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
+    public unsafe override bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.IsValidTargetComp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: DoorClosedNotify
     /// </summary>
-    public unsafe void DoorClosedNotify()
+    public unsafe virtual void DoorClosedNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.DoorClosedNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: DoorOpenNotify
     /// </summary>
-    public unsafe void DoorOpenNotify()
+    public unsafe virtual void DoorOpenNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.DoorOpenNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: GetAutoTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
+    public unsafe override System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.GetAutoTargetLocation", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -153,7 +153,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: CanRECAutoTarget
     /// </summary>
-    public unsafe bool CanRECAutoTarget()
+    public unsafe override bool CanRECAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.CanRECAutoTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
+    public unsafe override bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.HitByREC", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -179,7 +179,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: OnAnimEnd
     /// </summary>
-    public unsafe void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
+    public unsafe override void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.OnAnimEnd", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -193,7 +193,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: StopMotorFX
     /// </summary>
-    public unsafe void StopMotorFX()
+    public unsafe virtual void StopMotorFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.StopMotorFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -204,7 +204,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: RECTimeOut
     /// </summary>
-    public unsafe void RECTimeOut()
+    public unsafe virtual void RECTimeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.RECTimeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: UnlockedDoorReact
     /// </summary>
-    public unsafe void UnlockedDoorReact(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual void UnlockedDoorReact(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.UnlockedDoorReact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -227,7 +227,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: LockedDoorReact
     /// </summary>
-    public unsafe void LockedDoorReact(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual void LockedDoorReact(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.LockedDoorReact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: UnlockDoor
     /// </summary>
-    public unsafe void UnlockDoor()
+    public unsafe override void UnlockDoor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.UnlockDoor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: LockDoor
     /// </summary>
-    public unsafe void LockDoor(bool Immediate = default)
+    public unsafe override void LockDoor(bool Immediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.LockDoor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe override bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -273,7 +273,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe override bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -284,7 +284,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe override bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -295,7 +295,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -308,7 +308,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -319,7 +319,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: GetMotorActivationFXLocation
     /// </summary>
-    public unsafe void GetMotorActivationFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot)
+    public unsafe override void GetMotorActivationFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp, out System.Numerics.Vector3 Loc, out BmSDK.Rotator Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.GetMotorActivationFXLocation", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -333,7 +333,7 @@ public partial class RLevelTransitionMagBlastSecurityDoor : BmSDK.BmScript.RLeve
     /// <summary>
     /// Function: SetFXLocation
     /// </summary>
-    public unsafe void SetFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp)
+    public unsafe virtual void SetFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionMagBlastSecurityDoor.SetFXLocation", true);
         byte* paramsPtr = stackalloc byte[28];

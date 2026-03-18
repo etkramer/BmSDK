@@ -71,7 +71,7 @@ public partial class RSecurityLaserDoorBase : BmSDK.Engine.SkeletalMeshActor, Bm
     /// <summary>
     /// Function: GetAudioSpatial
     /// </summary>
-    public unsafe void GetAudioSpatial(BmSDK.Engine.AkComponent akComp, out System.Numerics.Vector3 SoundPosition, out BmSDK.Rotator SoundOrientation)
+    public unsafe override void GetAudioSpatial(BmSDK.Engine.AkComponent akComp, out System.Numerics.Vector3 SoundPosition, out BmSDK.Rotator SoundOrientation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSecurityLaserDoorBase.GetAudioSpatial", true);
         byte* paramsPtr = stackalloc byte[28];

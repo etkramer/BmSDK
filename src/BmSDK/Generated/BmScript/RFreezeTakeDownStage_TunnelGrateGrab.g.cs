@@ -71,7 +71,7 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim()
+    public unsafe override bool FinishAttackVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_TunnelGrateGrab.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_TunnelGrateGrab.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
     /// <summary>
     /// Function: AttackingFromFront
     /// </summary>
-    public unsafe bool AttackingFromFront()
+    public unsafe virtual bool AttackingFromFront()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_TunnelGrateGrab.AttackingFromFront", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_TunnelGrateGrab.Begin", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RFreezeTakeDownStage_TunnelGrateGrab : BmSDK.BmScript.RFree
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_TunnelGrateGrab.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[24];

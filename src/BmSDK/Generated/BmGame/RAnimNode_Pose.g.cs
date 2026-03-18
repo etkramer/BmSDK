@@ -36,7 +36,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableGlobalAdditiveAnim
     /// </summary>
-    public unsafe void DisableGlobalAdditiveAnim()
+    public unsafe virtual void DisableGlobalAdditiveAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.DisableGlobalAdditiveAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGlobalAdditiveAnim
     /// </summary>
-    public unsafe void SetGlobalAdditiveAnim(BmSDK.Engine.AnimSequence AddAnim, BmSDK.Engine.AnimSequence SubtractAnim, float Time, float Weight)
+    public unsafe virtual void SetGlobalAdditiveAnim(BmSDK.Engine.AnimSequence AddAnim, BmSDK.Engine.AnimSequence SubtractAnim, float Time, float Weight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetGlobalAdditiveAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -76,7 +76,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCurveFloat
     /// </summary>
-    public unsafe float GetCurveFloat(BmSDK.FName CurveFloatName)
+    public unsafe virtual float GetCurveFloat(BmSDK.FName CurveFloatName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetCurveFloat", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SnapFloorCorrection
     /// </summary>
-    public unsafe void SnapFloorCorrection()
+    public unsafe virtual void SnapFloorCorrection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SnapFloorCorrection", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCustomFloorCorrection
     /// </summary>
-    public unsafe void SetCustomFloorCorrection(float CustomFloorCorrection)
+    public unsafe virtual void SetCustomFloorCorrection(float CustomFloorCorrection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetCustomFloorCorrection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPhysicsBodyForBone
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetPhysicsBodyForBone(BmSDK.FName BoneName)
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetPhysicsBodyForBone(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetPhysicsBodyForBone", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -151,7 +151,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRightFootPhysicsBody
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetRightFootPhysicsBody()
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetRightFootPhysicsBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetRightFootPhysicsBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLeftFootPhysicsBody
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetLeftFootPhysicsBody()
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetLeftFootPhysicsBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetLeftFootPhysicsBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSpinePhysicsBody
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetSpinePhysicsBody()
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetSpinePhysicsBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetSpinePhysicsBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPelvisPhysicsBody
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodyInstance GetPelvisPhysicsBody()
+    public unsafe virtual BmSDK.Engine.RB_BodyInstance GetPelvisPhysicsBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetPelvisPhysicsBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTimeScale
     /// </summary>
-    public unsafe void SetTimeScale(float Value)
+    public unsafe virtual void SetTimeScale(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTimeScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -242,7 +242,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: DisableTick
     /// </summary>
-    public unsafe void DisableTick(bool bDisable)
+    public unsafe virtual void DisableTick(bool bDisable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.DisableTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -261,7 +261,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAdditiveAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAdditiveAnim(BmSDK.FName AnimName, BmSDK.FName BaseAnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets, float Weight, float HideWeight)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig GetAdditiveAnim(BmSDK.FName AnimName, BmSDK.FName BaseAnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets, float Weight, float HideWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetAdditiveAnim", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -285,7 +285,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEmptyAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetEmptyAnim()
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetEmptyAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetEmptyAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -303,7 +303,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsValidAnim
     /// </summary>
-    public unsafe bool IsValidAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets = default)
+    public unsafe virtual bool IsValidAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsValidAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -324,7 +324,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFullBodyAnim
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetFullBodyAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets, BmSDK.BmGame.RAimingConfig AimingConfig, BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig PresetAimingConfig = default)
+    public unsafe virtual BmSDK.BmGame.RAnimConfig.FCustomAnimConfig GetFullBodyAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet Set, BmSDK.TArray<BmSDK.Engine.AnimSet> ExtraSets, BmSDK.BmGame.RAimingConfig AimingConfig, BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig PresetAimingConfig = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetFullBodyAnim", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -347,7 +347,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAimAtOnTarget
     /// </summary>
-    public unsafe bool IsAimAtOnTarget()
+    public unsafe virtual bool IsAimAtOnTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsAimAtOnTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -365,7 +365,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIdleTimeScale
     /// </summary>
-    public unsafe void SetIdleTimeScale(float NewValue)
+    public unsafe virtual void SetIdleTimeScale(float NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetIdleTimeScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -384,7 +384,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRagdollFacing
     /// </summary>
-    public unsafe float GetRagdollFacing()
+    public unsafe virtual float GetRagdollFacing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetRagdollFacing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -402,7 +402,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AddRagdollForce
     /// </summary>
-    public unsafe void AddRagdollForce(BmSDK.BmGame.RAnimUtil_PhysicsOutput.ERagdollForceType Type, System.Numerics.Vector3 Translation, System.Numerics.Vector3 Rotation, BmSDK.FName BodyName = default)
+    public unsafe virtual void AddRagdollForce(BmSDK.BmGame.RAnimUtil_PhysicsOutput.ERagdollForceType Type, System.Numerics.Vector3 Translation, System.Numerics.Vector3 Rotation, BmSDK.FName BodyName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AddRagdollForce", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -424,7 +424,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakRagdollConstraint
     /// </summary>
-    public unsafe void BreakRagdollConstraint(BmSDK.FName ConstraintName)
+    public unsafe virtual void BreakRagdollConstraint(BmSDK.FName ConstraintName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.BreakRagdollConstraint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -443,7 +443,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsConsideringStuckAsARagdoll
     /// </summary>
-    public unsafe bool IsConsideringStuckAsARagdoll()
+    public unsafe virtual bool IsConsideringStuckAsARagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsConsideringStuckAsARagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -461,7 +461,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsStuckAsARagdoll
     /// </summary>
-    public unsafe bool IsStuckAsARagdoll()
+    public unsafe virtual bool IsStuckAsARagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsStuckAsARagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -479,7 +479,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRagdoll
     /// </summary>
-    public unsafe bool IsRagdoll()
+    public unsafe virtual bool IsRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsRagdoll", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -497,7 +497,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeRagdollMotorWeight
     /// </summary>
-    public unsafe void ChangeRagdollMotorWeight(BmSDK.FName Description, float NewWeight, float BlendDuration)
+    public unsafe virtual void ChangeRagdollMotorWeight(BmSDK.FName Description, float NewWeight, float BlendDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.ChangeRagdollMotorWeight", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -518,7 +518,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetRagdoll
     /// </summary>
-    public unsafe void ResetRagdoll()
+    public unsafe virtual void ResetRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.ResetRagdoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -536,7 +536,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PopRagdoll
     /// </summary>
-    public unsafe void PopRagdoll(BmSDK.FName Description)
+    public unsafe virtual void PopRagdoll(BmSDK.FName Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PopRagdoll", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -555,7 +555,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PushRagdollOff
     /// </summary>
-    public unsafe void PushRagdollOff(BmSDK.FName Description)
+    public unsafe virtual void PushRagdollOff(BmSDK.FName Description)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PushRagdollOff", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -574,7 +574,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PushRagdollOn
     /// </summary>
-    public unsafe void PushRagdollOn(BmSDK.FName Description, float MotorWeight, float BlendInDuration, float BlendOutDuration, BmSDK.TArray<BmSDK.FName> FixedBodies)
+    public unsafe virtual void PushRagdollOn(BmSDK.FName Description, float MotorWeight, float BlendInDuration, float BlendOutDuration, BmSDK.TArray<BmSDK.FName> FixedBodies)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PushRagdollOn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -597,7 +597,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, out BmSDK.TArray<BmSDK.Engine.Actor.FThought> OutThoughts)
+    public unsafe virtual void GetThoughts(BmSDK.BmGame.RPersistentDebugData.FPerCharacterTypeAnimDebug Options, out BmSDK.TArray<BmSDK.Engine.Actor.FThought> OutThoughts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -617,7 +617,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFallingOrLanding
     /// </summary>
-    public unsafe bool IsFallingOrLanding()
+    public unsafe virtual bool IsFallingOrLanding()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsFallingOrLanding", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -635,7 +635,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFalling
     /// </summary>
-    public unsafe bool IsFalling()
+    public unsafe virtual bool IsFalling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsFalling", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -653,7 +653,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAdditiveAnimStateOnAll
     /// </summary>
-    public unsafe void SetAdditiveAnimStateOnAll(int Index, float Time, float Weight)
+    public unsafe virtual void SetAdditiveAnimStateOnAll(int Index, float Time, float Weight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetAdditiveAnimStateOnAll", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -674,7 +674,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAdditiveAnimState
     /// </summary>
-    public unsafe void SetAdditiveAnimState(int Index, float Time, float Weight)
+    public unsafe virtual void SetAdditiveAnimState(int Index, float Time, float Weight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetAdditiveAnimState", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -695,7 +695,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionAnimFromCurrent
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence GetTransitionAnimFromCurrent(BmSDK.FName ToMovementStance, BmSDK.FName ToWeaponStance, BmSDK.FName ToIdleStance, bool ToMirrored = default, BmSDK.FName TransitionName = default)
+    public unsafe virtual BmSDK.Engine.AnimSequence GetTransitionAnimFromCurrent(BmSDK.FName ToMovementStance, BmSDK.FName ToWeaponStance, BmSDK.FName ToIdleStance, bool ToMirrored = default, BmSDK.FName TransitionName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionAnimFromCurrent", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -718,7 +718,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionAnim
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence GetTransitionAnim(BmSDK.BmGame.RWeaponConfig WeaponConfig, BmSDK.FName FromMovementStance, BmSDK.FName FromWeaponStance, BmSDK.FName FromIdleStance, bool FromMirrored, BmSDK.FName ToMovementStance, BmSDK.FName ToWeaponStance, BmSDK.FName ToIdleStance, bool ToMirrored, BmSDK.FName TransitionName)
+    public unsafe virtual BmSDK.Engine.AnimSequence GetTransitionAnim(BmSDK.BmGame.RWeaponConfig WeaponConfig, BmSDK.FName FromMovementStance, BmSDK.FName FromWeaponStance, BmSDK.FName FromIdleStance, bool FromMirrored, BmSDK.FName ToMovementStance, BmSDK.FName ToWeaponStance, BmSDK.FName ToIdleStance, bool ToMirrored, BmSDK.FName TransitionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionAnim", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -746,7 +746,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionActorPosition
     /// </summary>
-    public unsafe bool GetTransitionActorPosition(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig Anim, float Time, System.Numerics.Vector3 WorldReferencePosition, int WorldReferenceYaw, bool Mirrored, out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
+    public unsafe virtual bool GetTransitionActorPosition(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig Anim, float Time, System.Numerics.Vector3 WorldReferencePosition, int WorldReferenceYaw, bool Mirrored, out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionActorPosition", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -771,7 +771,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMeetingPointTranslationXPercent
     /// </summary>
-    public unsafe float GetMeetingPointTranslationXPercent(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual float GetMeetingPointTranslationXPercent(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetMeetingPointTranslationXPercent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -790,7 +790,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPastTransitionMeetingPointEnd
     /// </summary>
-    public unsafe bool IsPastTransitionMeetingPointEnd(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual bool IsPastTransitionMeetingPointEnd(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsPastTransitionMeetingPointEnd", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -809,7 +809,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPastTransitionMeetingPointBegin
     /// </summary>
-    public unsafe bool IsPastTransitionMeetingPointBegin(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual bool IsPastTransitionMeetingPointBegin(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsPastTransitionMeetingPointBegin", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -828,7 +828,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionDominantAnim
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence GetTransitionDominantAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual BmSDK.Engine.AnimSequence GetTransitionDominantAnim(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionDominantAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -847,7 +847,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTransitionDuration
     /// </summary>
-    public unsafe void SetTransitionDuration(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float NewDuration)
+    public unsafe virtual void SetTransitionDuration(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float NewDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTransitionDuration", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -867,7 +867,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionDuration
     /// </summary>
-    public unsafe float GetTransitionDuration(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual float GetTransitionDuration(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionDuration", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -886,7 +886,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionNormalizedTime
     /// </summary>
-    public unsafe float GetTransitionNormalizedTime(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual float GetTransitionNormalizedTime(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionNormalizedTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -905,7 +905,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionTimeInSeconds
     /// </summary>
-    public unsafe float GetTransitionTimeInSeconds(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual float GetTransitionTimeInSeconds(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionTimeInSeconds", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -924,7 +924,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsHeadTransition
     /// </summary>
-    public unsafe bool IsHeadTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual bool IsHeadTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsHeadTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -943,7 +943,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: HasTransition
     /// </summary>
-    public unsafe bool HasTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual bool HasTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.HasTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -962,7 +962,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: WillBeInTransition
     /// </summary>
-    public unsafe bool WillBeInTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float DeltaSeconds, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool WillBeInTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, float DeltaSeconds, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.WillBeInTransition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -983,7 +983,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInTransition
     /// </summary>
-    public unsafe bool IsInTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInTransition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1003,7 +1003,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInAnyNonAutomaticTransition
     /// </summary>
-    public unsafe bool IsInAnyNonAutomaticTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInAnyNonAutomaticTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInAnyNonAutomaticTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1022,7 +1022,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInAnyAutomaticTransition
     /// </summary>
-    public unsafe bool IsInAnyAutomaticTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness, out BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition)
+    public unsafe virtual bool IsInAnyAutomaticTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness, out BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Transition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInAnyAutomaticTransition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1042,7 +1042,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInAnyTransition
     /// </summary>
-    public unsafe bool IsInAnyTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInAnyTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInAnyTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1061,7 +1061,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayingAnyOverlay
     /// </summary>
-    public unsafe bool IsPlayingAnyOverlay()
+    public unsafe virtual bool IsPlayingAnyOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsPlayingAnyOverlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1079,7 +1079,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayingOverlay
     /// </summary>
-    public unsafe bool IsPlayingOverlay(BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId Id)
+    public unsafe virtual bool IsPlayingOverlay(BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsPlayingOverlay", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1098,7 +1098,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAllOverlaysInstantly
     /// </summary>
-    public unsafe void StopAllOverlaysInstantly()
+    public unsafe virtual void StopAllOverlaysInstantly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopAllOverlaysInstantly", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1116,7 +1116,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAllOverlays
     /// </summary>
-    public unsafe void StopAllOverlays()
+    public unsafe virtual void StopAllOverlays()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopAllOverlays", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1134,7 +1134,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAdditiveOverlay
     /// </summary>
-    public unsafe void StopAdditiveOverlay()
+    public unsafe virtual void StopAdditiveOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopAdditiveOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1152,7 +1152,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayAdditiveOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayAdditiveOverlay(BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig Anim, float StartTime = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayAdditiveOverlay(BmSDK.BmGame.RAnimConfig.FCustomAdditiveAnimConfig Anim, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PlayAdditiveOverlay", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -1172,7 +1172,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopIdleOverlay
     /// </summary>
-    public unsafe void StopIdleOverlay()
+    public unsafe virtual void StopIdleOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopIdleOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1190,7 +1190,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayIdleOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayIdleOverlay(BmSDK.FName OverlayName, BmSDK.BmGame.RAnimConfig.FCustomAnimConfig OverrideAnim = default, float StartTime = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayIdleOverlay(BmSDK.FName OverlayName, BmSDK.BmGame.RAnimConfig.FCustomAnimConfig OverrideAnim = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PlayIdleOverlay", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1211,7 +1211,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopWeaponOverlay
     /// </summary>
-    public unsafe void StopWeaponOverlay()
+    public unsafe virtual void StopWeaponOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopWeaponOverlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1229,7 +1229,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayWeaponOverlay
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayWeaponOverlay(BmSDK.FName OverlayName, BmSDK.BmGame.RAnimConfig.FCustomAnimConfig OverrideAnim = default, float StartTime = default)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_OverlayPlayer.FOverlayId PlayWeaponOverlay(BmSDK.FName OverlayName, BmSDK.BmGame.RAnimConfig.FCustomAnimConfig OverrideAnim = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PlayWeaponOverlay", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1250,7 +1250,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideYawVelocity
     /// </summary>
-    public unsafe void OverrideYawVelocity(float YawVelocity)
+    public unsafe virtual void OverrideYawVelocity(float YawVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.OverrideYawVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1269,7 +1269,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideTranslationVelocity
     /// </summary>
-    public unsafe void OverrideTranslationVelocity(System.Numerics.Vector3 TranslationVelocity)
+    public unsafe virtual void OverrideTranslationVelocity(System.Numerics.Vector3 TranslationVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.OverrideTranslationVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1288,7 +1288,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AddYaw
     /// </summary>
-    public unsafe void AddYaw(float Yaw)
+    public unsafe virtual void AddYaw(float Yaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AddYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1307,7 +1307,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AddYawVelocity
     /// </summary>
-    public unsafe void AddYawVelocity(float YawVelocity)
+    public unsafe virtual void AddYawVelocity(float YawVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AddYawVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1326,7 +1326,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AddTranslation
     /// </summary>
-    public unsafe void AddTranslation(System.Numerics.Vector3 Translation)
+    public unsafe virtual void AddTranslation(System.Numerics.Vector3 Translation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AddTranslation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1345,7 +1345,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AddTranslationVelocity
     /// </summary>
-    public unsafe void AddTranslationVelocity(System.Numerics.Vector3 TranslationVelocity)
+    public unsafe virtual void AddTranslationVelocity(System.Numerics.Vector3 TranslationVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AddTranslationVelocity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1364,7 +1364,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLegDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLegDirection()
+    public unsafe virtual System.Numerics.Vector3 GetLegDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetLegDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1382,7 +1382,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFaceAtDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFaceAtDirection()
+    public unsafe virtual System.Numerics.Vector3 GetFaceAtDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetFaceAtDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1400,7 +1400,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopFaceAt
     /// </summary>
-    public unsafe void StopFaceAt()
+    public unsafe virtual void StopFaceAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopFaceAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1418,7 +1418,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: FaceAtActor
     /// </summary>
-    public unsafe void FaceAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName ActorBoneName = default)
+    public unsafe virtual void FaceAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName ActorBoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.FaceAtActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1438,7 +1438,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: FaceAt
     /// </summary>
-    public unsafe void FaceAt(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space = default)
+    public unsafe virtual void FaceAt(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.FaceAt", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -1458,7 +1458,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopLookAt
     /// </summary>
-    public unsafe void StopLookAt()
+    public unsafe virtual void StopLookAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopLookAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1476,7 +1476,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: LookAtActor
     /// </summary>
-    public unsafe void LookAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName ActorBoneName = default)
+    public unsafe virtual void LookAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName ActorBoneName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.LookAtActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1496,7 +1496,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: LookAt
     /// </summary>
-    public unsafe void LookAt(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space)
+    public unsafe virtual void LookAt(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.LookAt", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -1516,7 +1516,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActualAimAtDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetActualAimAtDirection()
+    public unsafe virtual System.Numerics.Vector3 GetActualAimAtDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetActualAimAtDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1534,7 +1534,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTargetAimAtDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetAimAtDirection()
+    public unsafe virtual System.Numerics.Vector3 GetTargetAimAtDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTargetAimAtDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1552,7 +1552,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SnapAimAt
     /// </summary>
-    public unsafe void SnapAimAt()
+    public unsafe virtual void SnapAimAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SnapAimAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1570,7 +1570,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAimAt
     /// </summary>
-    public unsafe void StopAimAt()
+    public unsafe virtual void StopAimAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopAimAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1588,7 +1588,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AimAtActor
     /// </summary>
-    public unsafe void AimAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName Description, BmSDK.FName ActorBoneName = default, BmSDK.BmGame.RAnimConfig.EYesNoDefault AllowTurningToAim = default, float LimitScale = default)
+    public unsafe virtual void AimAtActor(BmSDK.Engine.Actor Actor, BmSDK.FName Description, BmSDK.FName ActorBoneName = default, BmSDK.BmGame.RAnimConfig.EYesNoDefault AllowTurningToAim = default, float LimitScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AimAtActor", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1611,7 +1611,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: AimAt
     /// </summary>
-    public unsafe void AimAt(System.Numerics.Vector3 Position, BmSDK.FName Description, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space, BmSDK.BmGame.RAnimConfig.EYesNoDefault AllowTurningToAim = default, float LimitScale = default)
+    public unsafe virtual void AimAt(System.Numerics.Vector3 Position, BmSDK.FName Description, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space, BmSDK.BmGame.RAnimConfig.EYesNoDefault AllowTurningToAim = default, float LimitScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.AimAt", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1634,7 +1634,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsMoveToFinished
     /// </summary>
-    public unsafe bool IsMoveToFinished()
+    public unsafe virtual bool IsMoveToFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsMoveToFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1652,7 +1652,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsMoveToActive
     /// </summary>
-    public unsafe bool IsMoveToActive()
+    public unsafe virtual bool IsMoveToActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsMoveToActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1670,7 +1670,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMoveToDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToDirection()
+    public unsafe virtual System.Numerics.Vector3 GetMoveToDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetMoveToDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1688,7 +1688,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: InstantStopMoveTo
     /// </summary>
-    public unsafe void InstantStopMoveTo()
+    public unsafe virtual void InstantStopMoveTo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.InstantStopMoveTo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1706,7 +1706,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: StopMoveTo
     /// </summary>
-    public unsafe void StopMoveTo()
+    public unsafe virtual void StopMoveTo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.StopMoveTo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1724,7 +1724,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveTo
     /// </summary>
-    public unsafe void MoveTo(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space)
+    public unsafe virtual void MoveTo(System.Numerics.Vector3 Position, BmSDK.BmGame.RAnimUtil.EAbsoluteOrRelative Space)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.MoveTo", true);
         byte* paramsPtr = stackalloc byte[13];
@@ -1744,7 +1744,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayOneShotMovementCycle
     /// </summary>
-    public unsafe void PlayOneShotMovementCycle(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig AnimConfig)
+    public unsafe virtual void PlayOneShotMovementCycle(BmSDK.BmGame.RAnimConfig.FCustomAnimConfig AnimConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.PlayOneShotMovementCycle", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -1763,7 +1763,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAnimMovementSpeed
     /// </summary>
-    public unsafe float GetAnimMovementSpeed(BmSDK.Engine.AnimSequence Sequence)
+    public unsafe virtual float GetAnimMovementSpeed(BmSDK.Engine.AnimSequence Sequence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetAnimMovementSpeed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1782,7 +1782,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMovementSpeedScale
     /// </summary>
-    public unsafe float GetMovementSpeedScale()
+    public unsafe virtual float GetMovementSpeedScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetMovementSpeedScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1800,7 +1800,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMovementSpeed
     /// </summary>
-    public unsafe BmSDK.BmGame.RPoseConfig.EMovementSpeed GetMovementSpeed()
+    public unsafe virtual BmSDK.BmGame.RPoseConfig.EMovementSpeed GetMovementSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetMovementSpeed", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1818,7 +1818,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMovementSpeed
     /// </summary>
-    public unsafe void SetMovementSpeed(BmSDK.BmGame.RPoseConfig.EMovementSpeed NewSpeed, float NewSpeedScale)
+    public unsafe virtual void SetMovementSpeed(BmSDK.BmGame.RPoseConfig.EMovementSpeed NewSpeed, float NewSpeedScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetMovementSpeed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1838,7 +1838,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInWeaponTransition
     /// </summary>
-    public unsafe bool IsInWeaponTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInWeaponTransition(BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInWeaponTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1857,7 +1857,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPoseMirrored
     /// </summary>
-    public unsafe bool IsPoseMirrored()
+    public unsafe virtual bool IsPoseMirrored()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsPoseMirrored", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1875,7 +1875,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAllowAutomaticTransitionOutOfMatinee
     /// </summary>
-    public unsafe void SetAllowAutomaticTransitionOutOfMatinee()
+    public unsafe virtual void SetAllowAutomaticTransitionOutOfMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetAllowAutomaticTransitionOutOfMatinee", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1893,7 +1893,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsControlledByMatinee
     /// </summary>
-    public unsafe bool IsControlledByMatinee()
+    public unsafe virtual bool IsControlledByMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsControlledByMatinee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1911,7 +1911,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInWeaponStance
     /// </summary>
-    public unsafe bool IsInWeaponStance(BmSDK.FName Stance, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInWeaponStance(BmSDK.FName Stance, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInWeaponStance", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1931,7 +1931,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInMovementStance
     /// </summary>
-    public unsafe bool IsInMovementStance(BmSDK.FName Stance, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
+    public unsafe virtual bool IsInMovementStance(BmSDK.FName Stance, BmSDK.BmGame.RAnimUtil.EFuzziness Fuzziness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.IsInMovementStance", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1951,7 +1951,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIdleStance
     /// </summary>
-    public unsafe BmSDK.FName GetIdleStance()
+    public unsafe virtual BmSDK.FName GetIdleStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetIdleStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1969,7 +1969,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWeaponStance
     /// </summary>
-    public unsafe BmSDK.FName GetWeaponStance()
+    public unsafe virtual BmSDK.FName GetWeaponStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetWeaponStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1987,7 +1987,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetMovementStance()
+    public unsafe virtual BmSDK.FName GetMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2005,7 +2005,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: EndSetDirectionalWeights
     /// </summary>
-    public unsafe void EndSetDirectionalWeights(BmSDK.Engine.Actor Actor)
+    public unsafe virtual void EndSetDirectionalWeights(BmSDK.Engine.Actor Actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.EndSetDirectionalWeights", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2024,7 +2024,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDirectionalWeight
     /// </summary>
-    public unsafe void SetDirectionalWeight(int Index, float Weight)
+    public unsafe virtual void SetDirectionalWeight(int Index, float Weight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetDirectionalWeight", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2044,7 +2044,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginSetDirectionalWeights
     /// </summary>
-    public unsafe void BeginSetDirectionalWeights()
+    public unsafe virtual void BeginSetDirectionalWeights()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.BeginSetDirectionalWeights", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2062,7 +2062,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionTargetRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetTransitionTargetRotation()
+    public unsafe virtual BmSDK.Rotator GetTransitionTargetRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2080,7 +2080,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionTargetYaw
     /// </summary>
-    public unsafe int GetTransitionTargetYaw()
+    public unsafe virtual int GetTransitionTargetYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionTargetYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2098,7 +2098,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTransitionTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetTransitionTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2116,7 +2116,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTransitionType
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType GetTransitionType()
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType GetTransitionType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.GetTransitionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -2134,7 +2134,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIdleTargetRotation
     /// </summary>
-    public unsafe void SetIdleTargetRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetIdleTargetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetIdleTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2153,7 +2153,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIdleTargetYaw
     /// </summary>
-    public unsafe void SetIdleTargetYaw(int NewYaw)
+    public unsafe virtual void SetIdleTargetYaw(int NewYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetIdleTargetYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2172,7 +2172,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIdleTargetPosition
     /// </summary>
-    public unsafe void SetIdleTargetPosition(System.Numerics.Vector3 NewPosition)
+    public unsafe virtual void SetIdleTargetPosition(System.Numerics.Vector3 NewPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetIdleTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2191,7 +2191,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTransitionTargetRotation
     /// </summary>
-    public unsafe void SetTransitionTargetRotation(BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetTransitionTargetRotation(BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTransitionTargetRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2210,7 +2210,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTransitionTargetYaw
     /// </summary>
-    public unsafe void SetTransitionTargetYaw(int NewYaw)
+    public unsafe virtual void SetTransitionTargetYaw(int NewYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTransitionTargetYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -2229,7 +2229,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTransitionTargetPosition
     /// </summary>
-    public unsafe void SetTransitionTargetPosition(System.Numerics.Vector3 NewPosition)
+    public unsafe virtual void SetTransitionTargetPosition(System.Numerics.Vector3 NewPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTransitionTargetPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2248,7 +2248,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTransitionType
     /// </summary>
-    public unsafe void SetTransitionType(BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType NewType)
+    public unsafe virtual void SetTransitionType(BmSDK.BmGame.RAnimUtil_PosePlayer.EAnimTransitionType NewType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.SetTransitionType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -2267,7 +2267,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: FakeTickTransitionTime
     /// </summary>
-    public unsafe void FakeTickTransitionTime(float NormalizedTime, int DisableTimeAdvanceForNumFrames = default)
+    public unsafe virtual void FakeTickTransitionTime(float NormalizedTime, int DisableTimeAdvanceForNumFrames = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.FakeTickTransitionTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2287,7 +2287,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: OverrideTransitionTime
     /// </summary>
-    public unsafe void OverrideTransitionTime(float NormalizedTime, int DisableTimeAdvanceForNumFrames = default)
+    public unsafe virtual void OverrideTransitionTime(float NormalizedTime, int DisableTimeAdvanceForNumFrames = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.OverrideTransitionTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -2307,7 +2307,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: MatineeTeleport
     /// </summary>
-    public unsafe void MatineeTeleport()
+    public unsafe virtual void MatineeTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.MatineeTeleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2325,7 +2325,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMatineeMovementTarget
     /// </summary>
-    public unsafe void UpdateMatineeMovementTarget(System.Numerics.Vector3 TargetLocation, BmSDK.Rotator TargetRotation)
+    public unsafe virtual void UpdateMatineeMovementTarget(System.Numerics.Vector3 TargetLocation, BmSDK.Rotator TargetRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.UpdateMatineeMovementTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -2345,7 +2345,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateMatineeAnim
     /// </summary>
-    public unsafe void UpdateMatineeAnim(BmSDK.FName AnimName, float Time, bool FireNotifies, bool Looping)
+    public unsafe virtual void UpdateMatineeAnim(BmSDK.FName AnimName, float Time, bool FireNotifies, bool Looping)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.UpdateMatineeAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -2367,7 +2367,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearQueue
     /// </summary>
-    public unsafe void ClearQueue()
+    public unsafe virtual void ClearQueue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.ClearQueue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -2385,7 +2385,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangePose
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ChangePose(BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Input, BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousInput)
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId ChangePose(BmSDK.BmGame.RAnimNode_Pose.FPoseDescription Input, BmSDK.BmGame.RAnimNode_Pose.FPreviousPoseDescription PreviousInput)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.ChangePose", true);
         byte* paramsPtr = stackalloc byte[336];
@@ -2405,7 +2405,7 @@ public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// <summary>
     /// Function: DummyOnPlayedQueuedTransition
     /// </summary>
-    public unsafe void DummyOnPlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual void DummyOnPlayedQueuedTransition(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Pose.DummyOnPlayedQueuedTransition", true);
         byte* paramsPtr = stackalloc byte[4];

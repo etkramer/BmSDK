@@ -71,7 +71,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: GetScoreForPawn
     /// </summary>
-    public unsafe float GetScoreForPawn(BmSDK.BmGame.RPawnVillain TestPawn, System.Numerics.Vector3 TestThrowDir)
+    public unsafe virtual float GetScoreForPawn(BmSDK.BmGame.RPawnVillain TestPawn, System.Numerics.Vector3 TestThrowDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.GetScoreForPawn", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -84,7 +84,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: FindTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain FindTarget(System.Numerics.Vector3 TestThrowDir)
+    public unsafe virtual BmSDK.BmGame.RPawnVillain FindTarget(System.Numerics.Vector3 TestThrowDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.FindTarget", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -96,7 +96,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: KnockDownEnemy
     /// </summary>
-    public unsafe void KnockDownEnemy(BmSDK.BmGame.RPawnVillain Villain, System.Numerics.Vector3 staffEndLoc)
+    public unsafe virtual void KnockDownEnemy(BmSDK.BmGame.RPawnVillain Villain, System.Numerics.Vector3 staffEndLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.KnockDownEnemy", true);
         byte* paramsPtr = stackalloc byte[261];
@@ -109,7 +109,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: StopTrail
     /// </summary>
-    public unsafe void StopTrail()
+    public unsafe virtual void StopTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.StopTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: StartTrail
     /// </summary>
-    public unsafe void StartTrail()
+    public unsafe virtual void StartTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.StartTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -157,7 +157,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -181,7 +181,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -192,7 +192,7 @@ public partial class RCombatMove_RobinGroupStun : BmSDK.BmGame.RCombatMove_Playe
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RobinGroupStun.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];

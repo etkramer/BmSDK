@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: HitBySmoke
     /// </summary>
-    public unsafe void HitBySmoke(BmSDK.Class dmgType)
+    public unsafe virtual void HitBySmoke(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.HitBySmoke", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyGunJamDiscovered
     /// </summary>
-    public unsafe void NotifyGunJamDiscovered()
+    public unsafe virtual void NotifyGunJamDiscovered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.NotifyGunJamDiscovered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayPickup
     /// </summary>
-    public unsafe void PlayPickup(BmSDK.BmGame.RBMWeapon WeaponPickedUp)
+    public unsafe virtual void PlayPickup(BmSDK.BmGame.RBMWeapon WeaponPickedUp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.PlayPickup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReachedWeapon
     /// </summary>
-    public unsafe void ReachedWeapon(BmSDK.BmGame.RNavigationHandle Nav)
+    public unsafe virtual void ReachedWeapon(BmSDK.BmGame.RNavigationHandle Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.ReachedWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: WeaponNotFound
     /// </summary>
-    public unsafe void WeaponNotFound()
+    public unsafe virtual void WeaponNotFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.WeaponNotFound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: WeaponFound
     /// </summary>
-    public unsafe void WeaponFound(BmSDK.BmGame.RBMCombatThrownObject NewPickup)
+    public unsafe virtual void WeaponFound(BmSDK.BmGame.RBMCombatThrownObject NewPickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.WeaponFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetWeaponToPickup
     /// </summary>
-    public unsafe void SetWeaponToPickup(BmSDK.BmGame.RBMCombatThrownObject NewWeaponPickup)
+    public unsafe virtual void SetWeaponToPickup(BmSDK.BmGame.RBMCombatThrownObject NewWeaponPickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetWeaponToPickup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: WeaponChanged
     /// </summary>
-    public unsafe void WeaponChanged()
+    public unsafe override void WeaponChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.WeaponChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanSeeBatarangLocation
     /// </summary>
-    public unsafe bool CanSeeBatarangLocation()
+    public unsafe virtual bool CanSeeBatarangLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.CanSeeBatarangLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: FindBatarangLookAtPoint
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindBatarangLookAtPoint()
+    public unsafe virtual BmSDK.Engine.Actor FindBatarangLookAtPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.FindBatarangLookAtPoint", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -174,7 +174,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SniperEvent
     /// </summary>
-    public unsafe void SniperEvent(System.Numerics.Vector3 NewLocation)
+    public unsafe virtual void SniperEvent(System.Numerics.Vector3 NewLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SniperEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -186,7 +186,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SnapCurrAimLocationToBM
     /// </summary>
-    public unsafe void SnapCurrAimLocationToBM(bool bExact = default)
+    public unsafe virtual void SnapCurrAimLocationToBM(bool bExact = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SnapCurrAimLocationToBM", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -198,7 +198,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MakeAlertToBatman
     /// </summary>
-    public unsafe void MakeAlertToBatman()
+    public unsafe virtual void MakeAlertToBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.MakeAlertToBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetAimAtActor()
+    public unsafe virtual BmSDK.Engine.Actor GetAimAtActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetAimAtActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStandPoint()
+    public unsafe virtual System.Numerics.Vector3 GetStandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetStandPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -231,7 +231,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetNextAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
+    public unsafe virtual BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetNextAimAtActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -243,7 +243,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetNextStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 SetNextStandPoint(BmSDK.FName ComingFromState = default)
+    public unsafe virtual System.Numerics.Vector3 SetNextStandPoint(BmSDK.FName ComingFromState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetNextStandPoint", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -255,7 +255,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman()
+    public unsafe virtual bool CanSeeBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -266,7 +266,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: UpdateCanSeeBatmanTime
     /// </summary>
-    public unsafe void UpdateCanSeeBatmanTime(float DeltaTime)
+    public unsafe virtual void UpdateCanSeeBatmanTime(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.UpdateCanSeeBatmanTime", true);
         byte* paramsPtr = stackalloc byte[136];
@@ -278,7 +278,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetPlayerPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer GetPlayerPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetPlayerPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetRetreatPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRetreatPoint(BmSDK.Engine.Actor IgnoreActor = default)
+    public unsafe virtual System.Numerics.Vector3 GetRetreatPoint(BmSDK.Engine.Actor IgnoreActor = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetRetreatPoint", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -301,7 +301,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetBatmanDistSq
     /// </summary>
-    public unsafe float GetBatmanDistSq()
+    public unsafe virtual float GetBatmanDistSq()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetBatmanDistSq", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -312,7 +312,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: BatmanIsShimmyingNearby
     /// </summary>
-    public unsafe bool BatmanIsShimmyingNearby()
+    public unsafe virtual bool BatmanIsShimmyingNearby()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.BatmanIsShimmyingNearby", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -323,7 +323,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: BatmanBelowUs
     /// </summary>
-    public unsafe bool BatmanBelowUs()
+    public unsafe virtual bool BatmanBelowUs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.BatmanBelowUs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -334,7 +334,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PathToRetreatPoint
     /// </summary>
-    public unsafe void PathToRetreatPoint()
+    public unsafe virtual void PathToRetreatPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.PathToRetreatPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -345,7 +345,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NoPathToRetreatPoint
     /// </summary>
-    public unsafe void NoPathToRetreatPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void NoPathToRetreatPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.NoPathToRetreatPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReachedRetreatPoint
     /// </summary>
-    public unsafe void ReachedRetreatPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void ReachedRetreatPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.ReachedRetreatPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -369,7 +369,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetSniperPointInfo
     /// </summary>
-    public unsafe bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
+    public unsafe virtual bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetSniperPointInfo", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -382,7 +382,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PathToNextStandPoint
     /// </summary>
-    public unsafe void PathToNextStandPoint(BmSDK.FName ComingFromState = default)
+    public unsafe virtual void PathToNextStandPoint(BmSDK.FName ComingFromState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.PathToNextStandPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -394,7 +394,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NoPathToSniperPoint
     /// </summary>
-    public unsafe void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.NoPathToSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -406,7 +406,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReachedSniperPoint
     /// </summary>
-    public unsafe void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.ReachedSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -418,7 +418,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ForceFire
     /// </summary>
-    public unsafe bool ForceFire()
+    public unsafe virtual bool ForceFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.ForceFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -429,7 +429,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsAwareOfBatman
     /// </summary>
-    public unsafe bool IsAwareOfBatman()
+    public unsafe virtual bool IsAwareOfBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.IsAwareOfBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -440,7 +440,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanFire
     /// </summary>
-    public unsafe bool CanFire()
+    public unsafe virtual bool CanFire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.CanFire", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -451,7 +451,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GunFired
     /// </summary>
-    public unsafe void GunFired()
+    public unsafe override void GunFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GunFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -462,7 +462,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartNextShotState
     /// </summary>
-    public unsafe void StartNextShotState()
+    public unsafe virtual void StartNextShotState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.StartNextShotState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -473,7 +473,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetBetweenShotTimer
     /// </summary>
-    public unsafe void SetBetweenShotTimer()
+    public unsafe virtual void SetBetweenShotTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetBetweenShotTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -484,7 +484,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -496,7 +496,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -507,7 +507,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -518,7 +518,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReleaseNavHandle
     /// </summary>
-    public unsafe void ReleaseNavHandle()
+    public unsafe virtual void ReleaseNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.ReleaseNavHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -529,7 +529,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetAttackFOV
     /// </summary>
-    public unsafe void SetAttackFOV()
+    public unsafe virtual void SetAttackFOV()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetAttackFOV", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -540,7 +540,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetLongFOV
     /// </summary>
-    public unsafe void SetLongFOV()
+    public unsafe virtual void SetLongFOV()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetLongFOV", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -551,7 +551,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetShortFOV
     /// </summary>
-    public unsafe void SetShortFOV()
+    public unsafe virtual void SetShortFOV()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetShortFOV", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -562,7 +562,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -573,7 +573,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OutputSniperPointList
     /// </summary>
-    public unsafe void OutputSniperPointList()
+    public unsafe virtual void OutputSniperPointList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.OutputSniperPointList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -584,7 +584,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -595,7 +595,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsAiming
     /// </summary>
-    public unsafe bool IsAiming()
+    public unsafe virtual bool IsAiming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.IsAiming", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -606,7 +606,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetGetupWeaponStance
     /// </summary>
-    public unsafe BmSDK.FName GetGetupWeaponStance()
+    public unsafe override BmSDK.FName GetGetupWeaponStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetGetupWeaponStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -617,7 +617,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetGetupMoveStance
     /// </summary>
-    public unsafe BmSDK.FName GetGetupMoveStance()
+    public unsafe override BmSDK.FName GetGetupMoveStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.GetGetupMoveStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -628,7 +628,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -639,7 +639,7 @@ public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: BuildSniperPointArray
     /// </summary>
-    public unsafe void BuildSniperPointArray()
+    public unsafe virtual void BuildSniperPointArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Sniper.BuildSniperPointArray", true);
         byte* paramsPtr = stackalloc byte[0];

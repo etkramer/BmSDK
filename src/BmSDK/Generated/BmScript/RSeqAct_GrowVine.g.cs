@@ -47,7 +47,7 @@ public partial class RSeqAct_GrowVine : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GrowVine.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

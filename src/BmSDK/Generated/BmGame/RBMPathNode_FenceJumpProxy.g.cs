@@ -71,7 +71,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: GetLockedPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLockedPoint(BmSDK.BmGame.RPawn PeekingPawn)
+    public unsafe virtual System.Numerics.Vector3 GetLockedPoint(BmSDK.BmGame.RPawn PeekingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.GetLockedPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_Varia
     /// <summary>
     /// Function: Unlock
     /// </summary>
-    public unsafe void Unlock(BmSDK.BmGame.RBMAIController Unlocker)
+    public unsafe virtual void Unlock(BmSDK.BmGame.RBMAIController Unlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJumpProxy.Unlock", true);
         byte* paramsPtr = stackalloc byte[4];

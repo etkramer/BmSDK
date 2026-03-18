@@ -47,7 +47,7 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: FetchAudioSource
     /// </summary>
-    public unsafe void FetchAudioSource(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
+    public unsafe virtual void FetchAudioSource(out BmSDK.TArray<float> pos, out BmSDK.TArray<float> Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FlashTextureMovieControl.FetchAudioSource", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -60,7 +60,7 @@ public partial class RSeqAct_FlashTextureMovieControl : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FlashTextureMovieControl.Activated", true);
         byte* paramsPtr = stackalloc byte[28];

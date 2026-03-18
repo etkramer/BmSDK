@@ -71,7 +71,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: IsAwareOfPlayer
     /// </summary>
-    public unsafe bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
+    public unsafe override bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.IsAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: GetFailedPairedAnimMoveAnimset
     /// </summary>
-    public unsafe void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
+    public unsafe override void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.GetFailedPairedAnimMoveAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[245];
@@ -109,7 +109,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: EnterMercyMode
     /// </summary>
-    public unsafe void EnterMercyMode()
+    public unsafe virtual void EnterMercyMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.EnterMercyMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: CanBeatdownFinish
     /// </summary>
-    public unsafe bool CanBeatdownFinish()
+    public unsafe override bool CanBeatdownFinish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.CanBeatdownFinish", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: ShouldGotoMercy
     /// </summary>
-    public unsafe bool ShouldGotoMercy()
+    public unsafe virtual bool ShouldGotoMercy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.ShouldGotoMercy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: SetMercyMode
     /// </summary>
-    public unsafe void SetMercyMode(float NewMercyHealthLimit)
+    public unsafe virtual void SetMercyMode(float NewMercyHealthLimit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.SetMercyMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: GetSpecialMoveAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetSpecialMoveAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetSpecialMoveAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.GetSpecialMoveAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -177,7 +177,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: CreateCombatWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4 = default)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4 = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -193,7 +193,7 @@ public partial class RPawnVillainThugToughJoker : BmSDK.BmScript.RPawnVillainThu
     /// <summary>
     /// Function: CreateMercyWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateMercyWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateMercyWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugToughJoker.CreateMercyWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[764];

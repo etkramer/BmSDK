@@ -71,7 +71,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: GetMagTargetTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagTargetTangent()
+    public unsafe virtual System.Numerics.Vector3 GetMagTargetTangent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.GetMagTargetTangent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: IsSecondaryTarget
     /// </summary>
-    public unsafe bool IsSecondaryTarget()
+    public unsafe virtual bool IsSecondaryTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.IsSecondaryTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: IsMagActive
     /// </summary>
-    public unsafe bool IsMagActive()
+    public unsafe virtual bool IsMagActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.IsMagActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: GetMagLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMagLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.GetMagLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: SetMagnetStrength
     /// </summary>
-    public unsafe float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
+    public unsafe virtual float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.SetMagnetStrength", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -144,7 +144,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: GetActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetActor()
+    public unsafe virtual BmSDK.Engine.Actor GetActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.GetActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -169,7 +169,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: UpdateSavedPosition
     /// </summary>
-    public unsafe void UpdateSavedPosition()
+    public unsafe virtual void UpdateSavedPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.UpdateSavedPosition", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -191,7 +191,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: GetMass
     /// </summary>
-    public unsafe float GetMass()
+    public unsafe virtual float GetMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.GetMass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -222,7 +222,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: SetMass
     /// </summary>
-    public unsafe void SetMass(float Mass)
+    public unsafe virtual void SetMass(float Mass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.SetMass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysi
     /// <summary>
     /// Function: SetMassScale
     /// </summary>
-    public unsafe void SetMassScale(float MassScale)
+    public unsafe virtual void SetMassScale(float MassScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectBase.SetMassScale", true);
         byte* paramsPtr = stackalloc byte[4];

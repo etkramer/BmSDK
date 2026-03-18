@@ -47,7 +47,7 @@ public partial class RSeqAct_FadeScreen : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: TickFade
     /// </summary>
-    public unsafe bool TickFade(float DeltaTime)
+    public unsafe virtual bool TickFade(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FadeScreen.TickFade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_FadeScreen : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: SetFadeType
     /// </summary>
-    public unsafe void SetFadeType(bool FadeIn)
+    public unsafe virtual void SetFadeType(bool FadeIn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_FadeScreen.SetFadeType", true);
         byte* paramsPtr = stackalloc byte[4];

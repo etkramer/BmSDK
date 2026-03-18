@@ -66,7 +66,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: InterpolationFinished
     /// </summary>
-    public unsafe void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
+    public unsafe override void InterpolationFinished(BmSDK.Engine.SeqAct_Interp InterpAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.InterpolationFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: InterpolationStarted
     /// </summary>
-    public unsafe void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
+    public unsafe override void InterpolationStarted(BmSDK.Engine.SeqAct_Interp InterpAction, BmSDK.Engine.InterpGroupInst GroupInst)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.InterpolationStarted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: InitNavigationHandle
     /// </summary>
-    public unsafe void InitNavigationHandle()
+    public unsafe virtual void InitNavigationHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.InitNavigationHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ReadyForLift
     /// </summary>
-    public unsafe void ReadyForLift()
+    public unsafe virtual void ReadyForLift()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ReadyForLift", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RemoveFromAIManager
     /// </summary>
-    public unsafe void RemoveFromAIManager()
+    public unsafe virtual void RemoveFromAIManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RemoveFromAIManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: CurrentLevelUnloaded
     /// </summary>
-    public unsafe void CurrentLevelUnloaded()
+    public unsafe virtual void CurrentLevelUnloaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.CurrentLevelUnloaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: IsInCombat
     /// </summary>
-    public unsafe bool IsInCombat(bool bForceCheck = default)
+    public unsafe virtual bool IsInCombat(bool bForceCheck = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.IsInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -147,7 +147,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: IsSpectating
     /// </summary>
-    public unsafe bool IsSpectating()
+    public unsafe virtual bool IsSpectating()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.IsSpectating", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyAddInventory
     /// </summary>
-    public unsafe void NotifyAddInventory(BmSDK.Engine.Inventory NewItem)
+    public unsafe virtual void NotifyAddInventory(BmSDK.Engine.Inventory NewItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyAddInventory", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -182,7 +182,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnModifyHealth
     /// </summary>
-    public unsafe void OnModifyHealth(BmSDK.Engine.SeqAct_ModifyHealth Action)
+    public unsafe override void OnModifyHealth(BmSDK.Engine.SeqAct_ModifyHealth Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnModifyHealth", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -194,7 +194,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyCoverAdjusted
     /// </summary>
-    public unsafe void NotifyCoverAdjusted()
+    public unsafe virtual void NotifyCoverAdjusted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyCoverAdjusted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnSetVelocity
     /// </summary>
-    public unsafe void OnSetVelocity(BmSDK.Engine.SeqAct_SetVelocity Action)
+    public unsafe override void OnSetVelocity(BmSDK.Engine.SeqAct_SetVelocity Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnSetVelocity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnSetPhysics
     /// </summary>
-    public unsafe void OnSetPhysics(BmSDK.Engine.SeqAct_SetPhysics Action)
+    public unsafe override void OnSetPhysics(BmSDK.Engine.SeqAct_SetPhysics Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnSetPhysics", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -229,7 +229,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnToggleGodMode
     /// </summary>
-    public unsafe void OnToggleGodMode(BmSDK.Engine.SeqAct_ToggleGodMode inAction)
+    public unsafe virtual void OnToggleGodMode(BmSDK.Engine.SeqAct_ToggleGodMode inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnToggleGodMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnTeleport
     /// </summary>
-    public unsafe void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
+    public unsafe override void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -253,7 +253,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetHumanReadableName
     /// </summary>
-    public unsafe BmSDK.FString GetHumanReadableName()
+    public unsafe override BmSDK.FString GetHumanReadableName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetHumanReadableName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -264,7 +264,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -278,7 +278,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: StopLatentExecution
     /// </summary>
-    public unsafe void StopLatentExecution()
+    public unsafe virtual void StopLatentExecution()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.StopLatentExecution", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: InLatentExecution
     /// </summary>
-    public unsafe bool InLatentExecution(int LatentActionNumber)
+    public unsafe virtual bool InLatentExecution(int LatentActionNumber)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.InLatentExecution", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -315,7 +315,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ReachedPreciseDestination
     /// </summary>
-    public unsafe void ReachedPreciseDestination()
+    public unsafe virtual void ReachedPreciseDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ReachedPreciseDestination", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -326,7 +326,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyMissedJump
     /// </summary>
-    public unsafe void NotifyMissedJump()
+    public unsafe virtual void NotifyMissedJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyMissedJump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -337,7 +337,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyJumpApex
     /// </summary>
-    public unsafe void NotifyJumpApex()
+    public unsafe virtual void NotifyJumpApex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyJumpApex", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -348,7 +348,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyBump
     /// </summary>
-    public unsafe bool NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool NotifyBump(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyBump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -361,7 +361,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyFallingHitWall
     /// </summary>
-    public unsafe void NotifyFallingHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall)
+    public unsafe virtual void NotifyFallingHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyFallingHitWall", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -374,7 +374,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyHitWall
     /// </summary>
-    public unsafe bool NotifyHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent HitComponent)
+    public unsafe virtual bool NotifyHitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent HitComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyHitWall", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -388,7 +388,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyLanded
     /// </summary>
-    public unsafe bool NotifyLanded(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
+    public unsafe virtual bool NotifyLanded(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor FloorActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyLanded", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -401,7 +401,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyHeadVolumeChange
     /// </summary>
-    public unsafe bool NotifyHeadVolumeChange(BmSDK.Engine.PhysicsVolume NewVolume)
+    public unsafe virtual bool NotifyHeadVolumeChange(BmSDK.Engine.PhysicsVolume NewVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyHeadVolumeChange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -413,7 +413,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyPhysicsVolumeChange
     /// </summary>
-    public unsafe void NotifyPhysicsVolumeChange(BmSDK.Engine.PhysicsVolume NewVolume)
+    public unsafe virtual void NotifyPhysicsVolumeChange(BmSDK.Engine.PhysicsVolume NewVolume)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyPhysicsVolumeChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -425,7 +425,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: IsAimingAt
     /// </summary>
-    public unsafe bool IsAimingAt(BmSDK.Engine.Actor ATarget, float Epsilon)
+    public unsafe virtual bool IsAimingAt(BmSDK.Engine.Actor ATarget, float Epsilon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.IsAimingAt", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -438,7 +438,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetActorEyesViewPoint
     /// </summary>
-    public unsafe void GetActorEyesViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
+    public unsafe override void GetActorEyesViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetActorEyesViewPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -451,7 +451,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetPlayerViewPoint
     /// </summary>
-    public unsafe void GetPlayerViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
+    public unsafe virtual void GetPlayerViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetPlayerViewPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -464,7 +464,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: HandlePathObstruction
     /// </summary>
-    public unsafe bool HandlePathObstruction(BmSDK.Engine.Actor BlockedBy)
+    public unsafe virtual bool HandlePathObstruction(BmSDK.Engine.Actor BlockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.HandlePathObstruction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -476,7 +476,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MoverFinished
     /// </summary>
-    public unsafe bool MoverFinished()
+    public unsafe virtual bool MoverFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MoverFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -487,7 +487,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: AllowDetourTo
     /// </summary>
-    public unsafe bool AllowDetourTo(BmSDK.Engine.NavigationPoint N)
+    public unsafe virtual bool AllowDetourTo(BmSDK.Engine.NavigationPoint N)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.AllowDetourTo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -499,7 +499,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MayFall
     /// </summary>
-    public unsafe void MayFall(bool bFloor, System.Numerics.Vector3 FloorNormal)
+    public unsafe virtual void MayFall(bool bFloor, System.Numerics.Vector3 FloorNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MayFall", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -512,7 +512,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: EndClimbLadder
     /// </summary>
-    public unsafe void EndClimbLadder()
+    public unsafe virtual void EndClimbLadder()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.EndClimbLadder", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -530,7 +530,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: LongFall
     /// </summary>
-    public unsafe void LongFall()
+    public unsafe virtual void LongFall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.LongFall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -541,7 +541,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: WaitForLanding
     /// </summary>
-    public unsafe void WaitForLanding(float waitDuration = default)
+    public unsafe virtual void WaitForLanding(float waitDuration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.WaitForLanding", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -560,7 +560,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PickWallAdjust
     /// </summary>
-    public unsafe bool PickWallAdjust(System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool PickWallAdjust(System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PickWallAdjust", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -579,7 +579,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MoveUnreachable
     /// </summary>
-    public unsafe void MoveUnreachable(System.Numerics.Vector3 AttemptedDest, BmSDK.Engine.Actor AttemptedTarget)
+    public unsafe virtual void MoveUnreachable(System.Numerics.Vector3 AttemptedDest, BmSDK.Engine.Actor AttemptedTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MoveUnreachable", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -592,7 +592,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ActorReachable
     /// </summary>
-    public unsafe bool ActorReachable(BmSDK.Engine.Actor anActor)
+    public unsafe virtual bool ActorReachable(BmSDK.Engine.Actor anActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ActorReachable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -611,7 +611,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PointReachable
     /// </summary>
-    public unsafe bool PointReachable(System.Numerics.Vector3 aPoint)
+    public unsafe virtual bool PointReachable(System.Numerics.Vector3 aPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PointReachable", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -630,7 +630,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FindPathToIntercept
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindPathToIntercept(BmSDK.Engine.Pawn P, BmSDK.Engine.Actor InRouteGoal, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
+    public unsafe virtual BmSDK.Engine.Actor FindPathToIntercept(BmSDK.Engine.Pawn P, BmSDK.Engine.Actor InRouteGoal, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FindPathToIntercept", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -653,7 +653,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FindRandomDest
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint FindRandomDest()
+    public unsafe virtual BmSDK.Engine.NavigationPoint FindRandomDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FindRandomDest", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -671,7 +671,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FindPathTowardNearest
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindPathTowardNearest(BmSDK.Class GoalClass, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
+    public unsafe virtual BmSDK.Engine.Actor FindPathTowardNearest(BmSDK.Class GoalClass, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FindPathTowardNearest", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -693,7 +693,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FindPathToward
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindPathToward(BmSDK.Engine.Actor anActor, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
+    public unsafe virtual BmSDK.Engine.Actor FindPathToward(BmSDK.Engine.Actor anActor, bool bWeightDetours = default, int MaxPathLength = default, bool bReturnPartial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FindPathToward", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -715,7 +715,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FindPathTo
     /// </summary>
-    public unsafe BmSDK.Engine.Actor FindPathTo(System.Numerics.Vector3 aPoint, int MaxPathLength = default, bool bReturnPartial = default)
+    public unsafe virtual BmSDK.Engine.Actor FindPathTo(System.Numerics.Vector3 aPoint, int MaxPathLength = default, bool bReturnPartial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FindPathTo", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -736,7 +736,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FinishRotation
     /// </summary>
-    public unsafe void FinishRotation()
+    public unsafe virtual void FinishRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FinishRotation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -754,7 +754,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetupSpecialPathAbilities
     /// </summary>
-    public unsafe void SetupSpecialPathAbilities()
+    public unsafe virtual void SetupSpecialPathAbilities()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetupSpecialPathAbilities", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -765,7 +765,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MoveToward
     /// </summary>
-    public unsafe void MoveToward(BmSDK.Engine.Actor NewTarget, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bUseStrafing = default, bool bShouldWalk = default)
+    public unsafe virtual void MoveToward(BmSDK.Engine.Actor NewTarget, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bUseStrafing = default, bool bShouldWalk = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MoveToward", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -788,7 +788,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MoveToDirectNonPathPos
     /// </summary>
-    public unsafe void MoveToDirectNonPathPos(System.Numerics.Vector3 NewDestination, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bShouldWalk = default)
+    public unsafe virtual void MoveToDirectNonPathPos(System.Numerics.Vector3 NewDestination, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bShouldWalk = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MoveToDirectNonPathPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -810,7 +810,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: MoveTo
     /// </summary>
-    public unsafe void MoveTo(System.Numerics.Vector3 NewDestination, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bShouldWalk = default)
+    public unsafe virtual void MoveTo(System.Numerics.Vector3 NewDestination, BmSDK.Engine.Actor ViewFocus = default, float DestinationOffset = default, bool bShouldWalk = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.MoveTo", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -832,7 +832,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: EnemyNotVisible
     /// </summary>
-    public unsafe void EnemyNotVisible()
+    public unsafe virtual void EnemyNotVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.EnemyNotVisible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -843,7 +843,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: HearNoise
     /// </summary>
-    public unsafe void HearNoise(float Loudness, BmSDK.Engine.Actor NoiseMaker, BmSDK.FName NoiseType = default)
+    public unsafe virtual void HearNoise(float Loudness, BmSDK.Engine.Actor NoiseMaker, BmSDK.FName NoiseType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.HearNoise", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -857,7 +857,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PickTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Pawn PickTarget(BmSDK.Class TargetClass, out float bestAim, out float bestDist, System.Numerics.Vector3 FireDir, System.Numerics.Vector3 projStart, float MaxRange)
+    public unsafe virtual BmSDK.Engine.Pawn PickTarget(BmSDK.Class TargetClass, out float bestAim, out float bestDist, System.Numerics.Vector3 FireDir, System.Numerics.Vector3 projStart, float MaxRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PickTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -881,7 +881,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: CanSeeByPoints
     /// </summary>
-    public unsafe bool CanSeeByPoints(System.Numerics.Vector3 ViewLocation, System.Numerics.Vector3 TestLocation, BmSDK.Rotator ViewRotation)
+    public unsafe virtual bool CanSeeByPoints(System.Numerics.Vector3 ViewLocation, System.Numerics.Vector3 TestLocation, BmSDK.Rotator ViewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.CanSeeByPoints", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -902,7 +902,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: CanSee
     /// </summary>
-    public unsafe bool CanSee(BmSDK.Engine.Pawn Other)
+    public unsafe virtual bool CanSee(BmSDK.Engine.Pawn Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.CanSee", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -921,7 +921,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: LineOfSightTo
     /// </summary>
-    public unsafe bool LineOfSightTo(BmSDK.Engine.Actor Other, System.Numerics.Vector3 chkLocation = default, bool bTryAlternateTargetLoc = default)
+    public unsafe virtual bool LineOfSightTo(BmSDK.Engine.Actor Other, System.Numerics.Vector3 chkLocation = default, bool bTryAlternateTargetLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.LineOfSightTo", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -942,7 +942,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyChangedWeapon
     /// </summary>
-    public unsafe void NotifyChangedWeapon(BmSDK.Engine.Weapon PrevWeapon, BmSDK.Engine.Weapon NewWeapon)
+    public unsafe virtual void NotifyChangedWeapon(BmSDK.Engine.Weapon PrevWeapon, BmSDK.Engine.Weapon NewWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyChangedWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -955,7 +955,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ClientSwitchToBestWeapon
     /// </summary>
-    public unsafe void ClientSwitchToBestWeapon(bool bForceNewWeapon = default)
+    public unsafe virtual void ClientSwitchToBestWeapon(bool bForceNewWeapon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ClientSwitchToBestWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -967,7 +967,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SwitchToBestWeapon
     /// </summary>
-    public unsafe void SwitchToBestWeapon(bool bForceNewWeapon = default)
+    public unsafe virtual void SwitchToBestWeapon(bool bForceNewWeapon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SwitchToBestWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -979,7 +979,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ReceiveProjectileWarning
     /// </summary>
-    public unsafe void ReceiveProjectileWarning(BmSDK.Engine.Projectile Proj)
+    public unsafe virtual void ReceiveProjectileWarning(BmSDK.Engine.Projectile Proj)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ReceiveProjectileWarning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -991,7 +991,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetAdjustedAimFor
     /// </summary>
-    public unsafe BmSDK.Rotator GetAdjustedAimFor(BmSDK.Engine.Weapon W, System.Numerics.Vector3 StartFireLoc)
+    public unsafe virtual BmSDK.Rotator GetAdjustedAimFor(BmSDK.Engine.Weapon W, System.Numerics.Vector3 StartFireLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetAdjustedAimFor", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1004,7 +1004,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: HandlePickup
     /// </summary>
-    public unsafe void HandlePickup(BmSDK.Engine.Inventory Inv)
+    public unsafe virtual void HandlePickup(BmSDK.Engine.Inventory Inv)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.HandlePickup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1016,7 +1016,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: StopFiring
     /// </summary>
-    public unsafe void StopFiring()
+    public unsafe virtual void StopFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.StopFiring", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1027,7 +1027,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyKilled
     /// </summary>
-    public unsafe void NotifyKilled(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller Killed, BmSDK.Engine.Pawn KilledPawn, BmSDK.Class damageTyp)
+    public unsafe virtual void NotifyKilled(BmSDK.Engine.Controller Killer, BmSDK.Engine.Controller Killed, BmSDK.Engine.Pawn KilledPawn, BmSDK.Class damageTyp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyKilled", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1042,7 +1042,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GameHasEnded
     /// </summary>
-    public unsafe void GameHasEnded(BmSDK.Engine.Actor EndGameFocus = default, bool bIsWinner = default)
+    public unsafe virtual void GameHasEnded(BmSDK.Engine.Actor EndGameFocus = default, bool bIsWinner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GameHasEnded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1055,7 +1055,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetCharacter
     /// </summary>
-    public unsafe void SetCharacter(BmSDK.FString inCharacter)
+    public unsafe virtual void SetCharacter(BmSDK.FString inCharacter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetCharacter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1067,7 +1067,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ServerGivePawn
     /// </summary>
-    public unsafe void ServerGivePawn()
+    public unsafe virtual void ServerGivePawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ServerGivePawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1078,7 +1078,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ServerRestartPlayer
     /// </summary>
-    public unsafe void ServerRestartPlayer()
+    public unsafe virtual void ServerRestartPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ServerRestartPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1089,7 +1089,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetTeamNum
     /// </summary>
-    public unsafe byte GetTeamNum()
+    public unsafe override byte GetTeamNum()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetTeamNum", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1107,7 +1107,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: InitPlayerReplicationInfo
     /// </summary>
-    public unsafe void InitPlayerReplicationInfo()
+    public unsafe virtual void InitPlayerReplicationInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.InitPlayerReplicationInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1118,7 +1118,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyTakeHit
     /// </summary>
-    public unsafe void NotifyTakeHit(BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, int Damage, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum)
+    public unsafe virtual void NotifyTakeHit(BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, int Damage, BmSDK.Class DamageType, System.Numerics.Vector3 Momentum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyTakeHit", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1134,7 +1134,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: EnemyJustTeleported
     /// </summary>
-    public unsafe void EnemyJustTeleported()
+    public unsafe virtual void EnemyJustTeleported()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.EnemyJustTeleported", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1145,7 +1145,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: BeyondFogDistance
     /// </summary>
-    public unsafe bool BeyondFogDistance(System.Numerics.Vector3 ViewPoint, System.Numerics.Vector3 OtherPoint)
+    public unsafe virtual bool BeyondFogDistance(System.Numerics.Vector3 ViewPoint, System.Numerics.Vector3 OtherPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.BeyondFogDistance", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1165,7 +1165,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: Restart
     /// </summary>
-    public unsafe void Restart(bool bVehicleTransition)
+    public unsafe virtual void Restart(bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.Restart", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1177,7 +1177,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: CleanupPRI
     /// </summary>
-    public unsafe void CleanupPRI()
+    public unsafe virtual void CleanupPRI()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.CleanupPRI", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1188,7 +1188,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1199,7 +1199,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyPostLanded
     /// </summary>
-    public unsafe void NotifyPostLanded()
+    public unsafe virtual void NotifyPostLanded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyPostLanded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1210,7 +1210,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GamePlayEndedState
     /// </summary>
-    public unsafe bool GamePlayEndedState()
+    public unsafe virtual bool GamePlayEndedState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GamePlayEndedState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1221,7 +1221,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PawnDied
     /// </summary>
-    public unsafe void PawnDied(BmSDK.Engine.Pawn inPawn)
+    public unsafe virtual void PawnDied(BmSDK.Engine.Pawn inPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PawnDied", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1233,7 +1233,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: UnPossess
     /// </summary>
-    public unsafe void UnPossess()
+    public unsafe virtual void UnPossess()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.UnPossess", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1244,7 +1244,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: Possess
     /// </summary>
-    public unsafe void Possess(BmSDK.Engine.Pawn inPawn, bool bVehicleTransition)
+    public unsafe virtual void Possess(BmSDK.Engine.Pawn inPawn, bool bVehicleTransition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.Possess", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1257,7 +1257,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: OnPossess
     /// </summary>
-    public unsafe void OnPossess(BmSDK.Engine.SeqAct_Possess inAction)
+    public unsafe virtual void OnPossess(BmSDK.Engine.SeqAct_Possess inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.OnPossess", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1269,7 +1269,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1281,7 +1281,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: ClientSetRotation
     /// </summary>
-    public unsafe void ClientSetRotation(BmSDK.Rotator NewRotation, bool bResetCamera = default)
+    public unsafe virtual void ClientSetRotation(BmSDK.Rotator NewRotation, bool bResetCamera = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.ClientSetRotation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1294,7 +1294,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1305,7 +1305,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1316,7 +1316,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetSkelControlScale
     /// </summary>
-    public unsafe void SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
+    public unsafe override void SetSkelControlScale(BmSDK.FName SkelControlName, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetSkelControlScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1329,7 +1329,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetMorphWeight
     /// </summary>
-    public unsafe void SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
+    public unsafe override void SetMorphWeight(BmSDK.FName MorphNodeName, float MorphWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetMorphWeight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1342,7 +1342,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: StopActorFaceFXAnim
     /// </summary>
-    public unsafe void StopActorFaceFXAnim()
+    public unsafe override void StopActorFaceFXAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.StopActorFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1353,7 +1353,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: PlayActorFaceFXAnim
     /// </summary>
-    public unsafe bool PlayActorFaceFXAnim(BmSDK.Engine.FaceFXAnimSet AnimSet, BmSDK.FString GroupName, BmSDK.FString SeqName, BmSDK.Engine.RDialogueEvent DialogueEvent)
+    public unsafe override bool PlayActorFaceFXAnim(BmSDK.Engine.FaceFXAnimSet AnimSet, BmSDK.FString GroupName, BmSDK.FString SeqName, BmSDK.Engine.RDialogueEvent DialogueEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.PlayActorFaceFXAnim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1368,7 +1368,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: FinishAnimControl
     /// </summary>
-    public unsafe void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe override void FinishAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.FinishAnimControl", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1380,7 +1380,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetAnimPosition
     /// </summary>
-    public unsafe void SetAnimPosition(BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
+    public unsafe override void SetAnimPosition(BmSDK.FName SlotName, int ChannelIndex, BmSDK.FName InAnimSeqName, float InPosition, bool bFireNotifies, bool bLooping, bool bEnableRootMotion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetAnimPosition", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1398,7 +1398,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: BeginAnimControl
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe override void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.BeginAnimControl", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1410,7 +1410,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: NotifyPathChanged
     /// </summary>
-    public unsafe void NotifyPathChanged()
+    public unsafe virtual void NotifyPathChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.NotifyPathChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1421,7 +1421,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetAdjustLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAdjustLocation()
+    public unsafe virtual System.Numerics.Vector3 GetAdjustLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetAdjustLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1439,7 +1439,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetAdjustLocation
     /// </summary>
-    public unsafe void SetAdjustLocation(System.Numerics.Vector3 NewLoc, bool bAdjust, bool bOffsetFromBase = default)
+    public unsafe virtual void SetAdjustLocation(System.Numerics.Vector3 NewLoc, bool bAdjust, bool bOffsetFromBase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetAdjustLocation", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1460,7 +1460,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetDestinationPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDestinationPosition()
+    public unsafe virtual System.Numerics.Vector3 GetDestinationPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetDestinationPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1478,7 +1478,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetDestinationPosition
     /// </summary>
-    public unsafe void SetDestinationPosition(System.Numerics.Vector3 Dest, bool bOffsetFromBase = default)
+    public unsafe virtual void SetDestinationPosition(System.Numerics.Vector3 Dest, bool bOffsetFromBase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetDestinationPosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1498,7 +1498,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: GetFocalPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFocalPoint()
+    public unsafe virtual System.Numerics.Vector3 GetFocalPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.GetFocalPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1516,7 +1516,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: SetFocalPoint
     /// </summary>
-    public unsafe void SetFocalPoint(System.Numerics.Vector3 FP, bool bOffsetFromBase = default)
+    public unsafe virtual void SetFocalPoint(System.Numerics.Vector3 FP, bool bOffsetFromBase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.SetFocalPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1536,7 +1536,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RouteCache_RemoveIndex
     /// </summary>
-    public unsafe void RouteCache_RemoveIndex(int InIndex, int Count = default)
+    public unsafe virtual void RouteCache_RemoveIndex(int InIndex, int Count = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RouteCache_RemoveIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1556,7 +1556,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RouteCache_RemoveItem
     /// </summary>
-    public unsafe void RouteCache_RemoveItem(BmSDK.Engine.NavigationPoint Nav)
+    public unsafe virtual void RouteCache_RemoveItem(BmSDK.Engine.NavigationPoint Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RouteCache_RemoveItem", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1575,7 +1575,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RouteCache_InsertItem
     /// </summary>
-    public unsafe void RouteCache_InsertItem(BmSDK.Engine.NavigationPoint Nav, int Idx = default)
+    public unsafe virtual void RouteCache_InsertItem(BmSDK.Engine.NavigationPoint Nav, int Idx = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RouteCache_InsertItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1595,7 +1595,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RouteCache_AddItem
     /// </summary>
-    public unsafe void RouteCache_AddItem(BmSDK.Engine.NavigationPoint Nav)
+    public unsafe virtual void RouteCache_AddItem(BmSDK.Engine.NavigationPoint Nav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RouteCache_AddItem", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1614,7 +1614,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: RouteCache_Empty
     /// </summary>
-    public unsafe void RouteCache_Empty()
+    public unsafe virtual void RouteCache_Empty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.RouteCache_Empty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1632,7 +1632,7 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.Engine.Interface_Nav
     /// <summary>
     /// Function: IsLocalPlayerController
     /// </summary>
-    public unsafe bool IsLocalPlayerController()
+    public unsafe virtual bool IsLocalPlayerController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Controller.IsLocalPlayerController", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: WDHit
     /// </summary>
-    public unsafe void WDHit()
+    public unsafe virtual void WDHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.WDHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: DropDestroyedObject
     /// </summary>
-    public unsafe void DropDestroyedObject()
+    public unsafe virtual void DropDestroyedObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.DropDestroyedObject", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: ThrowObject
     /// </summary>
-    public unsafe void ThrowObject()
+    public unsafe virtual void ThrowObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.ThrowObject", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: GoRagdollFeetSweep
     /// </summary>
-    public unsafe void GoRagdollFeetSweep()
+    public unsafe virtual void GoRagdollFeetSweep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.GoRagdollFeetSweep", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -175,7 +175,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: DropShatteredWeapon
     /// </summary>
-    public unsafe void DropShatteredWeapon()
+    public unsafe virtual void DropShatteredWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.DropShatteredWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: WeaponShatter
     /// </summary>
-    public unsafe void WeaponShatter()
+    public unsafe virtual void WeaponShatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.WeaponShatter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -197,7 +197,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent()
+    public unsafe virtual void DoEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.DoEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -208,7 +208,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: DetachWeaponPart
     /// </summary>
-    public unsafe void DetachWeaponPart()
+    public unsafe virtual void DetachWeaponPart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.DetachWeaponPart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -230,7 +230,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: GetWeaponDestroyInfoScore
     /// </summary>
-    public unsafe float GetWeaponDestroyInfoScore(BmSDK.BmGame.RPawnPlayerCombat.FWeaponDestroyInfo TestWeaponDestroy)
+    public unsafe virtual float GetWeaponDestroyInfoScore(BmSDK.BmGame.RPawnPlayerCombat.FWeaponDestroyInfo TestWeaponDestroy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.GetWeaponDestroyInfoScore", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -242,7 +242,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: SetWeaponDestroyInfo
     /// </summary>
-    public unsafe bool SetWeaponDestroyInfo()
+    public unsafe virtual bool SetWeaponDestroyInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.SetWeaponDestroyInfo", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -253,7 +253,7 @@ public partial class RCombatMove_BatmanWeaponDestroy : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanWeaponDestroy.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPawnVillainMadHatterBase : BmSDK.BmGame.RPawnVillain, BmSD
     /// <summary>
     /// Function: ApplyFakeDamage
     /// </summary>
-    public unsafe void ApplyFakeDamage()
+    public unsafe virtual void ApplyFakeDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainMadHatterBase.ApplyFakeDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnVillainMadHatterBase : BmSDK.BmGame.RPawnVillain, BmSD
     /// <summary>
     /// Function: NotifyBatclawed
     /// </summary>
-    public unsafe void NotifyBatclawed()
+    public unsafe virtual void NotifyBatclawed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainMadHatterBase.NotifyBatclawed", true);
         byte* paramsPtr = stackalloc byte[0];

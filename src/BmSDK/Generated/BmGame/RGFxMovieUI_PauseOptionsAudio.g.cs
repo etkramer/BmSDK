@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe override void OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Function: OnFocus
     /// </summary>
-    public unsafe void OnFocus(int Id)
+    public unsafe override void OnFocus(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.OnFocus", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe override void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.Init", true);
         byte* paramsPtr = stackalloc byte[4];

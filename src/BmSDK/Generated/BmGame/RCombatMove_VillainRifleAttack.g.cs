@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ShouldHitTarget
     /// </summary>
-    public unsafe bool ShouldHitTarget()
+    public unsafe virtual bool ShouldHitTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.ShouldHitTarget", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ClientGotoPauseState
     /// </summary>
-    public unsafe void ClientGotoPauseState()
+    public unsafe virtual void ClientGotoPauseState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.ClientGotoPauseState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: MulticastExitRifleAttackMove
     /// </summary>
-    public unsafe void MulticastExitRifleAttackMove()
+    public unsafe virtual void MulticastExitRifleAttackMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.MulticastExitRifleAttackMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ClientGotoAttackState
     /// </summary>
-    public unsafe void ClientGotoAttackState()
+    public unsafe virtual void ClientGotoAttackState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.ClientGotoAttackState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated(BmSDK.BmGame.RPawnVillain VillainPawn, BmSDK.BmGame.RPawnCombat TargetPawn)
+    public unsafe virtual void InitialiseSimulated(BmSDK.BmGame.RPawnVillain VillainPawn, BmSDK.BmGame.RPawnCombat TargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RCombatMove_VillainRifleAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VillainRifleAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPawnVillainLunatic : BmSDK.BmScript.RPawnVillainLunaticBas
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunatic.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];

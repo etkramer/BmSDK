@@ -36,7 +36,7 @@ public partial class RSeqAct_RandomSwitchForGameOver : BmSDK.Engine.SeqAct_Switc
     /// <summary>
     /// Function: CopyOutState
     /// </summary>
-    public unsafe void CopyOutState()
+    public unsafe virtual void CopyOutState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RandomSwitchForGameOver.CopyOutState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_RandomSwitchForGameOver : BmSDK.Engine.SeqAct_Switc
     /// <summary>
     /// Function: CopyInState
     /// </summary>
-    public unsafe void CopyInState()
+    public unsafe virtual void CopyInState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RandomSwitchForGameOver.CopyInState", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: OverrideAkComponentDefaults
     /// </summary>
-    public unsafe void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.OverrideAkComponentDefaults", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -117,7 +117,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -142,7 +142,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: CacheFractureEffects
     /// </summary>
-    public unsafe void CacheFractureEffects()
+    public unsafe virtual void CacheFractureEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.CacheFractureEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class ApexDestructibleActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: SpawnFractureEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystemComponent SpawnFractureEmitter(BmSDK.Engine.ParticleSystem EmitterTemplate, System.Numerics.Vector3 SpawnLocation, System.Numerics.Vector3 SpawnDirection)
+    public unsafe virtual BmSDK.Engine.ParticleSystemComponent SpawnFractureEmitter(BmSDK.Engine.ParticleSystem EmitterTemplate, System.Numerics.Vector3 SpawnLocation, System.Numerics.Vector3 SpawnDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ApexDestructibleActor.SpawnFractureEmitter", true);
         byte* paramsPtr = stackalloc byte[36];

@@ -71,7 +71,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: SetLightEnvironmentBounds
     /// </summary>
-    public unsafe void SetLightEnvironmentBounds(BmSDK.GameObject.FBoxSphereBounds Bounds)
+    public unsafe override void SetLightEnvironmentBounds(BmSDK.GameObject.FBoxSphereBounds Bounds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.SetLightEnvironmentBounds", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -83,7 +83,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.Bump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -120,7 +120,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: DestroyLLWire
     /// </summary>
-    public unsafe void DestroyLLWire()
+    public unsafe virtual void DestroyLLWire()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.DestroyLLWire", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeB
     /// <summary>
     /// Function: BMLeft
     /// </summary>
-    public unsafe void BMLeft()
+    public unsafe override void BMLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_LineLauncherWire.BMLeft", true);
         byte* paramsPtr = stackalloc byte[0];

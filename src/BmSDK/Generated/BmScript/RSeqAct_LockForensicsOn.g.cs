@@ -47,7 +47,7 @@ public partial class RSeqAct_LockForensicsOn : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: AbortScanning
     /// </summary>
-    public unsafe void AbortScanning()
+    public unsafe virtual void AbortScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_LockForensicsOn.AbortScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_LockForensicsOn : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_LockForensicsOn.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

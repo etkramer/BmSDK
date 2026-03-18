@@ -36,7 +36,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: UpdateCompletionText
     /// </summary>
-    public unsafe void UpdateCompletionText(BmSDK.FString CompletionText)
+    public unsafe virtual void UpdateCompletionText(BmSDK.FString CompletionText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.UpdateCompletionText", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: InitCrimeSceneInfoCaseFile
     /// </summary>
-    public unsafe void InitCrimeSceneInfoCaseFile(BmSDK.FString CaseFileName, BmSDK.FString CrimeSceneName, BmSDK.FString CompletionText)
+    public unsafe virtual void InitCrimeSceneInfoCaseFile(BmSDK.FString CaseFileName, BmSDK.FString CrimeSceneName, BmSDK.FString CompletionText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.InitCrimeSceneInfoCaseFile", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -62,7 +62,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: InitCrimeSceneInfo
     /// </summary>
-    public unsafe void InitCrimeSceneInfo(BmSDK.FString CrimeSceneName, BmSDK.FString CompletionText)
+    public unsafe virtual void InitCrimeSceneInfo(BmSDK.FString CrimeSceneName, BmSDK.FString CompletionText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.InitCrimeSceneInfo", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -75,7 +75,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide()
+    public unsafe override void Hide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.Hide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -86,7 +86,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RHudExtensionCrimeSceneInfo : BmSDK.BmGame.RHudExtension, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionCrimeSceneInfo.Init", true);
         byte* paramsPtr = stackalloc byte[32];

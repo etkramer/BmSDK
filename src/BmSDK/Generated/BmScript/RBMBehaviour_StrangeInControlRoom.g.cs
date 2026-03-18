@@ -47,7 +47,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe override void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.Repath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe override void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: MoveToNearestWindowBase
     /// </summary>
-    public unsafe void MoveToNearestWindowBase(bool bForceDoor)
+    public unsafe virtual void MoveToNearestWindowBase(bool bForceDoor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.MoveToNearestWindowBase", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: MoveToNearestWindow
     /// </summary>
-    public unsafe void MoveToNearestWindow(bool bForceDoor)
+    public unsafe virtual void MoveToNearestWindow(bool bForceDoor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.MoveToNearestWindow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman(float SeeDist)
+    public unsafe virtual bool CanSeeBatman(float SeeDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe override System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -150,7 +150,7 @@ public partial class RBMBehaviour_StrangeInControlRoom : BmSDK.BmGame.RBMBehavio
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_StrangeInControlRoom.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

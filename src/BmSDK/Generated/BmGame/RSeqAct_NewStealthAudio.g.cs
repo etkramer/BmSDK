@@ -47,7 +47,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdateStealthValue
     /// </summary>
-    public unsafe void UpdateStealthValue(float DeltaTime)
+    public unsafe virtual void UpdateStealthValue(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.UpdateStealthValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: InitializeSetting
     /// </summary>
-    public unsafe void InitializeSetting()
+    public unsafe virtual void InitializeSetting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.InitializeSetting", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.Update", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: LogToScreen
     /// </summary>
-    public unsafe void LogToScreen(BmSDK.FString String)
+    public unsafe virtual void LogToScreen(BmSDK.FString String)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.LogToScreen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -101,7 +101,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StartMusic
     /// </summary>
-    public unsafe void StartMusic()
+    public unsafe virtual void StartMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.StartMusic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: SetMusicState
     /// </summary>
-    public unsafe void SetMusicState(BmSDK.Engine.AkStateName StateToSet)
+    public unsafe virtual void SetMusicState(BmSDK.Engine.AkStateName StateToSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.SetMusicState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RSeqAct_NewStealthAudio : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: SetStealthParam
     /// </summary>
-    public unsafe void SetStealthParam(float SetValue, float timeToInterp)
+    public unsafe virtual void SetStealthParam(float SetValue, float timeToInterp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewStealthAudio.SetStealthParam", true);
         byte* paramsPtr = stackalloc byte[8];

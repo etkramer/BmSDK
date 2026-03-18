@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[408];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig CancellingMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig CancellingMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CancelMove
     /// </summary>
-    public unsafe void CancelMove()
+    public unsafe virtual void CancelMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.CancelMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[428];
@@ -142,7 +142,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CanPounceAgain
     /// </summary>
-    public unsafe bool CanPounceAgain()
+    public unsafe virtual bool CanPounceAgain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.CanPounceAgain", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: NextPounceTimer
     /// </summary>
-    public unsafe void NextPounceTimer()
+    public unsafe virtual void NextPounceTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.NextPounceTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SetPounceTimer
     /// </summary>
-    public unsafe void SetPounceTimer()
+    public unsafe virtual void SetPounceTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.SetPounceTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: PerfectTiming
     /// </summary>
-    public unsafe void PerfectTiming()
+    public unsafe virtual void PerfectTiming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.PerfectTiming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CanLaunchFromHere
     /// </summary>
-    public unsafe void CanLaunchFromHere()
+    public unsafe virtual void CanLaunchFromHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.CanLaunchFromHere", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: StartAutoClimb
     /// </summary>
-    public unsafe void StartAutoClimb()
+    public unsafe virtual void StartAutoClimb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.StartAutoClimb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -208,7 +208,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ButtonMashPenalty
     /// </summary>
-    public unsafe void ButtonMashPenalty()
+    public unsafe virtual void ButtonMashPenalty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.ButtonMashPenalty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ShowFeedbackMessage
     /// </summary>
-    public unsafe void ShowFeedbackMessage(BmSDK.FString Feedback)
+    public unsafe virtual void ShowFeedbackMessage(BmSDK.FString Feedback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.ShowFeedbackMessage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -231,7 +231,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName ActionName)
+    public unsafe override void HandleAction(BmSDK.FName ActionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -243,7 +243,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: WallIdleTimeout
     /// </summary>
-    public unsafe void WallIdleTimeout()
+    public unsafe virtual void WallIdleTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.WallIdleTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: LookAtNextPoint
     /// </summary>
-    public unsafe void LookAtNextPoint()
+    public unsafe virtual void LookAtNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.LookAtNextPoint", true);
         byte* paramsPtr = stackalloc byte[608];
@@ -265,7 +265,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerLandCamUp
     /// </summary>
-    public unsafe void TriggerLandCamUp()
+    public unsafe virtual void TriggerLandCamUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.TriggerLandCamUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerLandCamRight
     /// </summary>
-    public unsafe void TriggerLandCamRight()
+    public unsafe virtual void TriggerLandCamRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.TriggerLandCamRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -287,7 +287,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerLandCamLeft
     /// </summary>
-    public unsafe void TriggerLandCamLeft()
+    public unsafe virtual void TriggerLandCamLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.TriggerLandCamLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -298,7 +298,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerLandCam
     /// </summary>
-    public unsafe void TriggerLandCam()
+    public unsafe virtual void TriggerLandCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.TriggerLandCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: CantHoldOnToWallAnymore
     /// </summary>
-    public unsafe void CantHoldOnToWallAnymore()
+    public unsafe virtual void CantHoldOnToWallAnymore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.CantHoldOnToWallAnymore", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RSpecialMoveInstance_CwClawClimbWallLand : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CwClawClimbWallLand.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[508];

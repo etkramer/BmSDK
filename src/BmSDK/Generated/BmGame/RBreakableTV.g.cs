@@ -71,7 +71,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe virtual void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetStatic
     /// </summary>
-    public unsafe void SetStatic()
+    public unsafe virtual void SetStatic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetStatic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetTexture
     /// </summary>
-    public unsafe void SetTexture(BmSDK.Engine.Texture NewTexture)
+    public unsafe virtual void SetTexture(BmSDK.Engine.Texture NewTexture)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetTexture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -124,7 +124,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetDistortion
     /// </summary>
-    public unsafe void SetDistortion(bool bUseFX)
+    public unsafe virtual void SetDistortion(bool bUseFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetDistortion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -136,7 +136,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetOverrideMaterial
     /// </summary>
-    public unsafe void SetOverrideMaterial()
+    public unsafe virtual void SetOverrideMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.SetOverrideMaterial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class RBreakableTV : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObj
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakableTV.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

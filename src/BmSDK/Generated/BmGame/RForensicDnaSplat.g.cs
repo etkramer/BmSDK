@@ -71,7 +71,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show(float _show, int ShowMode = default)
+    public unsafe virtual void show(float _show, int ShowMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.show", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: InitialiseDna
     /// </summary>
-    public unsafe void InitialiseDna()
+    public unsafe virtual void InitialiseDna()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.InitialiseDna", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: GetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.GetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: CanBeScanned
     /// </summary>
-    public unsafe bool CanBeScanned()
+    public unsafe virtual bool CanBeScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.CanBeScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: GetSelf
     /// </summary>
-    public unsafe BmSDK.GameObject GetSelf()
+    public unsafe virtual BmSDK.GameObject GetSelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.GetSelf", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: GetEvidenceInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.REvidence GetEvidenceInfo()
+    public unsafe virtual BmSDK.BmGame.REvidence GetEvidenceInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.GetEvidenceInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: GetEvidenceIndex
     /// </summary>
-    public unsafe int GetEvidenceIndex()
+    public unsafe virtual int GetEvidenceIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.GetEvidenceIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RForensicDnaSplat : BmSDK.Engine.DecalActor, BmSDK.BmGame.R
     /// <summary>
     /// Function: SetMovieScanned
     /// </summary>
-    public unsafe void SetMovieScanned()
+    public unsafe virtual void SetMovieScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplat.SetMovieScanned", true);
         byte* paramsPtr = stackalloc byte[0];

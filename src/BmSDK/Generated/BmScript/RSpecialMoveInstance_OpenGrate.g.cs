@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: AllowKismetHelpText
     /// </summary>
-    public unsafe bool AllowKismetHelpText(BmSDK.BmGame.RSeqAct_HelpText HelpAction)
+    public unsafe override bool AllowKismetHelpText(BmSDK.BmGame.RSeqAct_HelpText HelpAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.AllowKismetHelpText", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PressingButtons
     /// </summary>
-    public unsafe void PressingButtons()
+    public unsafe virtual void PressingButtons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.PressingButtons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: UpdateRumbleStrength
     /// </summary>
-    public unsafe void UpdateRumbleStrength(float Strength)
+    public unsafe virtual void UpdateRumbleStrength(float Strength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.UpdateRumbleStrength", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: ChoosePullSequence
     /// </summary>
-    public unsafe void ChoosePullSequence(System.Numerics.Vector3 TargetLocation)
+    public unsafe virtual void ChoosePullSequence(System.Numerics.Vector3 TargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.ChoosePullSequence", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PlayGratePullCameraAnim
     /// </summary>
-    public unsafe bool PlayGratePullCameraAnim(BmSDK.FName AnimName, bool bPlaying, float FOV = default)
+    public unsafe virtual bool PlayGratePullCameraAnim(BmSDK.FName AnimName, bool bPlaying, float FOV = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.PlayGratePullCameraAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -132,7 +132,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: FirstFrameSucceeded
     /// </summary>
-    public unsafe void FirstFrameSucceeded()
+    public unsafe virtual void FirstFrameSucceeded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.FirstFrameSucceeded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: StopRumble
     /// </summary>
-    public unsafe void StopRumble()
+    public unsafe virtual void StopRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.StopRumble", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: AllowPull
     /// </summary>
-    public unsafe void AllowPull()
+    public unsafe virtual void AllowPull()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.AllowPull", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -177,7 +177,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default, float StartTime = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -191,7 +191,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: FinalYank
     /// </summary>
-    public unsafe void FinalYank()
+    public unsafe virtual void FinalYank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.FinalYank", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: Yank
     /// </summary>
-    public unsafe void Yank()
+    public unsafe virtual void Yank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.Yank", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -213,7 +213,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -225,7 +225,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PlayReleaseSound
     /// </summary>
-    public unsafe void PlayReleaseSound()
+    public unsafe override void PlayReleaseSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.PlayReleaseSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -247,7 +247,7 @@ public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_OpenGrate.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[160];

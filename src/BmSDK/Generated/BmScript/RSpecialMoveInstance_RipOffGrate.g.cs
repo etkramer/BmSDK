@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PressingButtons
     /// </summary>
-    public unsafe void PressingButtons()
+    public unsafe virtual void PressingButtons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.PressingButtons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool bLoop = default, float AnimStartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -110,7 +110,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PlayGrateAnim
     /// </summary>
-    public unsafe void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default)
+    public unsafe virtual void PlayGrateAnim(BmSDK.FName AnimName, bool bAnimMirrored = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.PlayGrateAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -123,7 +123,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PlayCameraAnim
     /// </summary>
-    public unsafe bool PlayCameraAnim(BmSDK.FName AnimName, bool bAnimMirrored = default)
+    public unsafe override bool PlayCameraAnim(BmSDK.FName AnimName, bool bAnimMirrored = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.PlayCameraAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -136,7 +136,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PlayPlayerAnim
     /// </summary>
-    public unsafe void PlayPlayerAnim(BmSDK.FName TransitionAnim, BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig IdleConfig = default, float MeetingTime = default, BmSDK.FName Stance = default)
+    public unsafe virtual void PlayPlayerAnim(BmSDK.FName TransitionAnim, BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig IdleConfig = default, float MeetingTime = default, BmSDK.FName Stance = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.PlayPlayerAnim", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -163,7 +163,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -175,7 +175,7 @@ public partial class RSpecialMoveInstance_RipOffGrate : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: AnimationStarted
     /// </summary>
-    public unsafe void AnimationStarted()
+    public unsafe override void AnimationStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RipOffGrate.AnimationStarted", true);
         byte* paramsPtr = stackalloc byte[0];

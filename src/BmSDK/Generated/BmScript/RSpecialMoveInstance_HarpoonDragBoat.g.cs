@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName ActionName)
+    public unsafe override void HandleAction(BmSDK.FName ActionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: GetRopeEndLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRopeEndLoc()
+    public unsafe override System.Numerics.Vector3 GetRopeEndLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.GetRopeEndLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: RopeObstructed
     /// </summary>
-    public unsafe void RopeObstructed()
+    public unsafe virtual void RopeObstructed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.RopeObstructed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: ReleaseClaws
     /// </summary>
-    public unsafe void ReleaseClaws()
+    public unsafe override void ReleaseClaws()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.ReleaseClaws", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: UpdateRope
     /// </summary>
-    public unsafe void UpdateRope(float DeltaTime)
+    public unsafe override void UpdateRope(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.UpdateRope", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -164,7 +164,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: DragObjectEndingNotCancelled
     /// </summary>
-    public unsafe void DragObjectEndingNotCancelled()
+    public unsafe override void DragObjectEndingNotCancelled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.DragObjectEndingNotCancelled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -175,7 +175,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: IsRopeTooShort
     /// </summary>
-    public unsafe bool IsRopeTooShort()
+    public unsafe override bool IsRopeTooShort()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.IsRopeTooShort", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: StopPull
     /// </summary>
-    public unsafe void StopPull()
+    public unsafe virtual void StopPull()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.StopPull", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: StartPull
     /// </summary>
-    public unsafe void StartPull()
+    public unsafe override void StartPull()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.StartPull", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -208,7 +208,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: GetBoat
     /// </summary>
-    public unsafe BmSDK.BmGame.RFloatingRaft GetBoat()
+    public unsafe virtual BmSDK.BmGame.RFloatingRaft GetBoat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.GetBoat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RSpecialMoveInstance_HarpoonDragBoat : BmSDK.BmGame.RSpecia
     /// <summary>
     /// Function: SetupRope
     /// </summary>
-    public unsafe void SetupRope()
+    public unsafe override void SetupRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HarpoonDragBoat.SetupRope", true);
         byte* paramsPtr = stackalloc byte[64];

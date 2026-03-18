@@ -71,7 +71,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe void DamagePawn(BmSDK.BmGame.RPawn PawnToDamage)
+    public unsafe virtual void DamagePawn(BmSDK.BmGame.RPawn PawnToDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: ShouldDoDamage
     /// </summary>
-    public unsafe bool ShouldDoDamage()
+    public unsafe virtual bool ShouldDoDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.ShouldDoDamage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: DamageActors
     /// </summary>
-    public unsafe void DamageActors()
+    public unsafe virtual void DamageActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.DamageActors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: UnblockPaths
     /// </summary>
-    public unsafe void UnblockPaths()
+    public unsafe virtual void UnblockPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.UnblockPaths", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: BlockPaths
     /// </summary>
-    public unsafe void BlockPaths()
+    public unsafe virtual void BlockPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.BlockPaths", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: UpdateModifiedSpecList
     /// </summary>
-    public unsafe void UpdateModifiedSpecList()
+    public unsafe virtual void UpdateModifiedSpecList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.UpdateModifiedSpecList", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -138,7 +138,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: AddModifiedNode
     /// </summary>
-    public unsafe void AddModifiedNode(BmSDK.BmGame.RPathNode NewNode)
+    public unsafe virtual void AddModifiedNode(BmSDK.BmGame.RPathNode NewNode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.AddModifiedNode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: StartDamagingActors
     /// </summary>
-    public unsafe void StartDamagingActors()
+    public unsafe virtual void StartDamagingActors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.StartDamagingActors", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: ToggleOff
     /// </summary>
-    public unsafe void ToggleOff()
+    public unsafe virtual void ToggleOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.ToggleOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: ToggleOn
     /// </summary>
-    public unsafe void ToggleOn()
+    public unsafe virtual void ToggleOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.ToggleOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: AlertCombatPawns
     /// </summary>
-    public unsafe void AlertCombatPawns()
+    public unsafe virtual void AlertCombatPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.AlertCombatPawns", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -194,7 +194,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RBMCombatDangerZone : BmSDK.Engine.PhysicsVolume, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatDangerZone.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

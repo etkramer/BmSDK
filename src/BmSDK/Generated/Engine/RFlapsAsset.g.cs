@@ -36,7 +36,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveCollisionConstraint
     /// </summary>
-    public unsafe void RemoveCollisionConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference particleRef, BmSDK.FName BoneName)
+    public unsafe virtual void RemoveCollisionConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference particleRef, BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.RemoveCollisionConstraint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -56,7 +56,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddCollisionConstraint
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup AddCollisionConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference particleRef, BmSDK.FName BoneName, BmSDK.Engine.SkeletalMesh RefSkelMesh)
+    public unsafe virtual BmSDK.Engine.RFlaps_ConstraintSetup AddCollisionConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference particleRef, BmSDK.FName BoneName, BmSDK.Engine.SkeletalMesh RefSkelMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.AddCollisionConstraint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -77,7 +77,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindFlapsBodyIndexFromBodyIndex
     /// </summary>
-    public unsafe int FindFlapsBodyIndexFromBodyIndex(int BodyIndex)
+    public unsafe virtual int FindFlapsBodyIndexFromBodyIndex(int BodyIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.FindFlapsBodyIndexFromBodyIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateConstraintReferences
     /// </summary>
-    public unsafe void UpdateConstraintReferences()
+    public unsafe virtual void UpdateConstraintReferences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.UpdateConstraintReferences", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddConstraint
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup AddConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticleRef, BmSDK.Engine.RFlaps_ConstraintSetup.ERFlapsConstraintType ConstraintType, BmSDK.Engine.SkeletalMesh RefSkelMesh)
+    public unsafe virtual BmSDK.Engine.RFlaps_ConstraintSetup AddConstraint(BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticleRef, BmSDK.Engine.RFlaps_ConstraintSetup.ERFlapsConstraintType ConstraintType, BmSDK.Engine.SkeletalMesh RefSkelMesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.AddConstraint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -135,7 +135,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveBody
     /// </summary>
-    public unsafe bool RemoveBody(BmSDK.FName BoneName)
+    public unsafe virtual bool RemoveBody(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.RemoveBody", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -154,7 +154,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddBody
     /// </summary>
-    public unsafe int AddBody(BmSDK.FName BoneName)
+    public unsafe virtual int AddBody(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.AddBody", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -173,7 +173,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindBodyIndex
     /// </summary>
-    public unsafe int FindBodyIndex(BmSDK.FName BoneName)
+    public unsafe virtual int FindBodyIndex(BmSDK.FName BoneName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.FindBodyIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -192,7 +192,7 @@ public partial class RFlapsAsset : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumBodies
     /// </summary>
-    public unsafe int GetNumBodies()
+    public unsafe virtual int GetNumBodies()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlapsAsset.GetNumBodies", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ThugSeenTarget
     /// </summary>
-    public unsafe void ThugSeenTarget()
+    public unsafe virtual void ThugSeenTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.ThugSeenTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartConvergeNavRequests
     /// </summary>
-    public unsafe void StartConvergeNavRequests()
+    public unsafe virtual void StartConvergeNavRequests()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.StartConvergeNavRequests", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetMineLocation
     /// </summary>
-    public unsafe void SetMineLocation(System.Numerics.Vector3 NewTargetLoc)
+    public unsafe virtual void SetMineLocation(System.Numerics.Vector3 NewTargetLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.SetMineLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ClearConvergeNavReqs
     /// </summary>
-    public unsafe void ClearConvergeNavReqs()
+    public unsafe virtual void ClearConvergeNavReqs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.ClearConvergeNavReqs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: RemoveChild
     /// </summary>
-    public unsafe void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ConvergeMine.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

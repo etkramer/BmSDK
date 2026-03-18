@@ -71,7 +71,7 @@ public partial class VolumeTimer : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Timer
     /// </summary>
-    public unsafe void Timer()
+    public unsafe override void Timer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.VolumeTimer.Timer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class VolumeTimer : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.VolumeTimer.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSeqEvent_FreezeOpenBackScreen : BmSDK.BmGame.RSeqEvent_Cus
     /// <summary>
     /// Function: GetAvailability
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqEvent_CustomBackscreenRequested.BackscreenAvailability GetAvailability()
+    public unsafe override BmSDK.BmGame.RSeqEvent_CustomBackscreenRequested.BackscreenAvailability GetAvailability()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqEvent_FreezeOpenBackScreen.GetAvailability", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetAttackTransition
     /// </summary>
-    public unsafe BmSDK.FName GetAttackTransition()
+    public unsafe virtual BmSDK.FName GetAttackTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.GetAttackTransition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetHitPS
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetHitPS()
+    public unsafe override BmSDK.Engine.ParticleSystem GetHitPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.GetHitPS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -129,7 +129,7 @@ public partial class RCombatMove_ClayfaceDroneHug : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ClayfaceDroneHug.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

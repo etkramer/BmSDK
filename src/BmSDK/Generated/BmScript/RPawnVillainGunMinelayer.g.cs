@@ -71,7 +71,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
     /// <summary>
     /// Function: GetMinelayerAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetMinelayerAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetMinelayerAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMinelayer.GetMinelayerAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
     /// <summary>
     /// Function: SetGrabMineHidden
     /// </summary>
-    public unsafe void SetGrabMineHidden(bool bNewVal)
+    public unsafe override void SetGrabMineHidden(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMinelayer.SetGrabMineHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMinelayer.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[216];
@@ -105,7 +105,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMinelayer.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class RPawnVillainGunMinelayer : BmSDK.BmScript.RPawnVillainGun, 
     /// <summary>
     /// Function: SpawnMine
     /// </summary>
-    public unsafe void SpawnMine(BmSDK.BmGame.RThugMineablePointBase TargetMinePoint)
+    public unsafe override void SpawnMine(BmSDK.BmGame.RThugMineablePointBase TargetMinePoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunMinelayer.SpawnMine", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: PlayRandomBark
     /// </summary>
-    public unsafe bool PlayRandomBark()
+    public unsafe override bool PlayRandomBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.PlayRandomBark", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: HandlesGlance
     /// </summary>
-    public unsafe bool HandlesGlance()
+    public unsafe override bool HandlesGlance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.HandlesGlance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.ActionTick", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: MoveAndShootInit
     /// </summary>
-    public unsafe void MoveAndShootInit(BmSDK.Engine.Pawn PawnTarget)
+    public unsafe virtual void MoveAndShootInit(BmSDK.Engine.Pawn PawnTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.MoveAndShootInit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SetPlayerAlert
     /// </summary>
-    public unsafe void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
+    public unsafe virtual void SetPlayerAlert(BmSDK.BmGame.AlertInstance NewAlert)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.SetPlayerAlert", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SetAvoidActor
     /// </summary>
-    public unsafe void SetAvoidActor(BmSDK.Engine.Actor NewAvoidActor)
+    public unsafe virtual void SetAvoidActor(BmSDK.Engine.Actor NewAvoidActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.SetAvoidActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RBMAIAction_WalkAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SetupGoal
     /// </summary>
-    public unsafe void SetupGoal(System.Numerics.Vector3 NewGoalPos)
+    public unsafe virtual void SetupGoal(System.Numerics.Vector3 NewGoalPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_WalkAndShoot.SetupGoal", true);
         byte* paramsPtr = stackalloc byte[12];

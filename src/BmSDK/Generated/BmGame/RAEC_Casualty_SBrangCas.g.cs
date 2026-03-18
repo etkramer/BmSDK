@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_SBrangCas : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// <summary>
     /// Function: AllJumpersAdded
     /// </summary>
-    public unsafe void AllJumpersAdded(BmSDK.TArray<BmSDK.BmGame.RBMAIController> PauseLookList)
+    public unsafe virtual void AllJumpersAdded(BmSDK.TArray<BmSDK.BmGame.RBMAIController> PauseLookList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_SBrangCas.AllJumpersAdded", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RAEC_Casualty_SBrangCas : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// <summary>
     /// Function: AddToGroup
     /// </summary>
-    public unsafe void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe override void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_SBrangCas.AddToGroup", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RAEC_Casualty_SBrangCas : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// <summary>
     /// Function: SetCasualty
     /// </summary>
-    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_SBrangCas.SetCasualty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RAEC_Casualty_SBrangCas : BmSDK.BmGame.RAEC_SubGroup, BmSDK
     /// <summary>
     /// Function: RemoveChild
     /// </summary>
-    public unsafe void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_SBrangCas.RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];

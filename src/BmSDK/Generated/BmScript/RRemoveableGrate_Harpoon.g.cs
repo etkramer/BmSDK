@@ -71,7 +71,7 @@ public partial class RRemoveableGrate_Harpoon : BmSDK.BmGame.RRemoveableGrate, B
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRemoveableGrate_Harpoon.Interact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RRemoveableGrate_Harpoon : BmSDK.BmGame.RRemoveableGrate, B
     /// <summary>
     /// Function: StartRemoveAttempt
     /// </summary>
-    public unsafe void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
+    public unsafe override void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRemoveableGrate_Harpoon.StartRemoveAttempt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RRemoveableGrate_Harpoon : BmSDK.BmGame.RRemoveableGrate, B
     /// <summary>
     /// Function: IsHarpoonable
     /// </summary>
-    public unsafe bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
+    public unsafe override bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRemoveableGrate_Harpoon.IsHarpoonable", true);
         byte* paramsPtr = stackalloc byte[8];

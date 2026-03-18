@@ -71,7 +71,7 @@ public partial class RShieldRas_StatueBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Function: IsBlocked
     /// </summary>
-    public unsafe bool IsBlocked(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool IsBlocked(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShieldRas_StatueBase.IsBlocked", true);
         byte* paramsPtr = stackalloc byte[28];

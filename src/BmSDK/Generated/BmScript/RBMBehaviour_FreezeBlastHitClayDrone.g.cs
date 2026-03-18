@@ -36,7 +36,7 @@ public partial class RBMBehaviour_FreezeBlastHitClayDrone : BmSDK.BmGame.RBMBeha
     /// <summary>
     /// Function: ActivateFreezeMats
     /// </summary>
-    public unsafe void ActivateFreezeMats()
+    public unsafe virtual void ActivateFreezeMats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_FreezeBlastHitClayDrone.ActivateFreezeMats", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_FreezeBlastHitClayDrone : BmSDK.BmGame.RBMBeha
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
+    public unsafe override void Initialise(BmSDK.BmGame.RPawnPlayer Instigator, System.Numerics.Vector3 HitNorm, bool bInstantFreeze = default, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bShouldAlwaysRagdoll = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_FreezeBlastHitClayDrone.Initialise", true);
         byte* paramsPtr = stackalloc byte[28];

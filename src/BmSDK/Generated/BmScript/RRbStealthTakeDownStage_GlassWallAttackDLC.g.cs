@@ -71,7 +71,7 @@ public partial class RRbStealthTakeDownStage_GlassWallAttackDLC : BmSDK.BmScript
     /// <summary>
     /// Function: HandleBreakWallPDLC
     /// </summary>
-    public unsafe void HandleBreakWallPDLC(BmSDK.Engine.FracturedStaticMeshActor FractureWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
+    public unsafe virtual void HandleBreakWallPDLC(BmSDK.Engine.FracturedStaticMeshActor FractureWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakeDownStage_GlassWallAttackDLC.HandleBreakWallPDLC", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RRbStealthTakeDownStage_GlassWallAttackDLC : BmSDK.BmScript
     /// <summary>
     /// Function: BreakWallPDLC
     /// </summary>
-    public unsafe void BreakWallPDLC()
+    public unsafe virtual void BreakWallPDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakeDownStage_GlassWallAttackDLC.BreakWallPDLC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RRbStealthTakeDownStage_GlassWallAttackDLC : BmSDK.BmScript
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakeDownStage_GlassWallAttackDLC.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];

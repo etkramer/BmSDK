@@ -71,7 +71,7 @@ public partial class RBMAIController_Clayface : BmSDK.BmGame.RBMAIController, Bm
     /// <summary>
     /// Function: HandleFreezeClusterGrenadeHit
     /// </summary>
-    public unsafe bool HandleFreezeClusterGrenadeHit(BmSDK.BmGame.RPawnPlayer Player, System.Numerics.Vector3 HitNormal)
+    public unsafe override bool HandleFreezeClusterGrenadeHit(BmSDK.BmGame.RPawnPlayer Player, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIController_Clayface.HandleFreezeClusterGrenadeHit", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -84,7 +84,7 @@ public partial class RBMAIController_Clayface : BmSDK.BmGame.RBMAIController, Bm
     /// <summary>
     /// Function: HandleFreezeBlastHit
     /// </summary>
-    public unsafe bool HandleFreezeBlastHit(BmSDK.BmGame.RPawnPlayer Player, System.Numerics.Vector3 HitNormal, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bInstantFreeze = default)
+    public unsafe override bool HandleFreezeBlastHit(BmSDK.BmGame.RPawnPlayer Player, System.Numerics.Vector3 HitNormal, BmSDK.BmGame.RFreezeSprayProjectile Proj = default, bool bInstantFreeze = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIController_Clayface.HandleFreezeBlastHit", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -71,7 +71,7 @@ public partial class RCwBullwhipCombatDisarm : BmSDK.BmScript.RCwBullwhip, BmSDK
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwBullwhipCombatDisarm.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[17];

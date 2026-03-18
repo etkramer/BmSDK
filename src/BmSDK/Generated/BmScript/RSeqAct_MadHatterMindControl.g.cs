@@ -47,7 +47,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Complete
     /// </summary>
-    public unsafe void Complete()
+    public unsafe virtual void Complete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.Complete", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: MindControlFinished
     /// </summary>
-    public unsafe void MindControlFinished()
+    public unsafe virtual void MindControlFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.MindControlFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -80,7 +80,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartMindControl
     /// </summary>
-    public unsafe void StartMindControl()
+    public unsafe virtual void StartMindControl()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartMindControl", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: PrepareMindControl
     /// </summary>
-    public unsafe void PrepareMindControl()
+    public unsafe virtual void PrepareMindControl()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.PrepareMindControl", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: SwapToBMRabbitHead
     /// </summary>
-    public unsafe void SwapToBMRabbitHead()
+    public unsafe virtual void SwapToBMRabbitHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.SwapToBMRabbitHead", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -113,7 +113,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: ThugsLookAtBM
     /// </summary>
-    public unsafe void ThugsLookAtBM()
+    public unsafe virtual void ThugsLookAtBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.ThugsLookAtBM", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartPuttingMaskOn
     /// </summary>
-    public unsafe void StartPuttingMaskOn()
+    public unsafe virtual void StartPuttingMaskOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartPuttingMaskOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartHatterWalkingAcrossTable
     /// </summary>
-    public unsafe void StartHatterWalkingAcrossTable()
+    public unsafe virtual void StartHatterWalkingAcrossTable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartHatterWalkingAcrossTable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -146,7 +146,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartBMSpecialMove
     /// </summary>
-    public unsafe void StartBMSpecialMove()
+    public unsafe virtual void StartBMSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartBMSpecialMove", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -157,7 +157,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartTeaParty
     /// </summary>
-    public unsafe void StartTeaParty()
+    public unsafe virtual void StartTeaParty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartTeaParty", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -168,7 +168,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdatePuttingMaskOn
     /// </summary>
-    public unsafe void UpdatePuttingMaskOn(float DeltaTime)
+    public unsafe virtual void UpdatePuttingMaskOn(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.UpdatePuttingMaskOn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdateMindControlPP
     /// </summary>
-    public unsafe void UpdateMindControlPP(float DeltaTime, float topPanVal, float bottomPanVal)
+    public unsafe virtual void UpdateMindControlPP(float DeltaTime, float topPanVal, float bottomPanVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.UpdateMindControlPP", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -194,7 +194,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdateMindControlCamera
     /// </summary>
-    public unsafe void UpdateMindControlCamera()
+    public unsafe virtual void UpdateMindControlCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.UpdateMindControlCamera", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -205,7 +205,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: ButtonPressed
     /// </summary>
-    public unsafe void ButtonPressed()
+    public unsafe virtual void ButtonPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.ButtonPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: PrintDebugText
     /// </summary>
-    public unsafe void PrintDebugText()
+    public unsafe virtual void PrintDebugText()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.PrintDebugText", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdateCinematicCamExtraRot
     /// </summary>
-    public unsafe void UpdateCinematicCamExtraRot(float DeltaTime)
+    public unsafe virtual void UpdateCinematicCamExtraRot(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.UpdateCinematicCamExtraRot", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -239,7 +239,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: TriggerRumble
     /// </summary>
-    public unsafe void TriggerRumble()
+    public unsafe virtual void TriggerRumble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.TriggerRumble", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -250,7 +250,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: UpdateMindControlProgress
     /// </summary>
-    public unsafe void UpdateMindControlProgress(float DeltaTime)
+    public unsafe virtual void UpdateMindControlProgress(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.UpdateMindControlProgress", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: MidStruggleChatFinished
     /// </summary>
-    public unsafe void MidStruggleChatFinished()
+    public unsafe virtual void MidStruggleChatFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.MidStruggleChatFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -273,7 +273,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartMidStruggleChat
     /// </summary>
-    public unsafe void StartMidStruggleChat(int Index)
+    public unsafe virtual void StartMidStruggleChat(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartMidStruggleChat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -285,7 +285,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: StartIdleChat
     /// </summary>
-    public unsafe void StartIdleChat()
+    public unsafe virtual void StartIdleChat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.StartIdleChat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RSeqAct_MadHatterMindControl : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterMindControl.Update", true);
         byte* paramsPtr = stackalloc byte[20];

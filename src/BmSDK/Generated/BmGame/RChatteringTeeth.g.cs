@@ -66,7 +66,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: DestroyTeeth
     /// </summary>
-    public unsafe void DestroyTeeth()
+    public unsafe virtual void DestroyTeeth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.DestroyTeeth", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: RouterMoveRouterMove
     /// </summary>
-    public unsafe bool RouterMoveRouterMove(float DeltaTime)
+    public unsafe virtual bool RouterMoveRouterMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.RouterMoveRouterMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: MakeRoute
     /// </summary>
-    public unsafe bool MakeRoute()
+    public unsafe virtual bool MakeRoute()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.MakeRoute", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: RandomMoveTick
     /// </summary>
-    public unsafe void RandomMoveTick(float DeltaTime)
+    public unsafe virtual void RandomMoveTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.RandomMoveTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: SetNewRot
     /// </summary>
-    public unsafe void SetNewRot()
+    public unsafe virtual void SetNewRot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.SetNewRot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: SetNewDir
     /// </summary>
-    public unsafe void SetNewDir()
+    public unsafe virtual void SetNewDir()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.SetNewDir", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -169,7 +169,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: UseSecretLocation
     /// </summary>
-    public unsafe bool UseSecretLocation()
+    public unsafe virtual bool UseSecretLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.UseSecretLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretLocationY
     /// </summary>
-    public unsafe int GetSecretLocationY()
+    public unsafe virtual int GetSecretLocationY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretLocationY", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretLocationX
     /// </summary>
-    public unsafe int GetSecretLocationX()
+    public unsafe virtual int GetSecretLocationX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretLocationX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe virtual byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -213,7 +213,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe virtual int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -224,7 +224,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe virtual BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -235,7 +235,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe virtual BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -246,7 +246,7 @@ public partial class RChatteringTeeth : BmSDK.Engine.Actor, BmSDK.BmGame.RSecret
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe virtual bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChatteringTeeth.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

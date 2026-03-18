@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: GetAttackForTarget
     /// </summary>
-    public unsafe BmSDK.Class GetAttackForTarget(BmSDK.BmGame.RPawnCombat NextTarget)
+    public unsafe virtual BmSDK.Class GetAttackForTarget(BmSDK.BmGame.RPawnCombat NextTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.GetAttackForTarget", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: FindNextTarget
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillain FindNextTarget()
+    public unsafe virtual BmSDK.BmGame.RPawnVillain FindNextTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.FindNextTarget", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: UpdateVillainTargets
     /// </summary>
-    public unsafe void UpdateVillainTargets()
+    public unsafe virtual void UpdateVillainTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.UpdateVillainTargets", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: IsCurrentCombatant
     /// </summary>
-    public unsafe bool IsCurrentCombatant()
+    public unsafe override bool IsCurrentCombatant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.IsCurrentCombatant", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_Bane : BmSDK.BmGame.RBMBehaviour_Combat, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Bane.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

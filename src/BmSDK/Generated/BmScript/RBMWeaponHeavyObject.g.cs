@@ -66,7 +66,7 @@ public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
     /// <summary>
     /// Function: OnWeaponDestroy
     /// </summary>
-    public unsafe void OnWeaponDestroy(System.Numerics.Vector3 SmashVel)
+    public unsafe override void OnWeaponDestroy(System.Numerics.Vector3 SmashVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHeavyObject.OnWeaponDestroy", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -78,7 +78,7 @@ public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHeavyObject.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -90,7 +90,7 @@ public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
     /// <summary>
     /// Function: CreateCombatWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHeavyObject.CreateCombatWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4036];

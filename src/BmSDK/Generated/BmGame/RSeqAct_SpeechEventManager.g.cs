@@ -47,7 +47,7 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManager.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
     /// <summary>
     /// Function: CheckPlayerClose
     /// </summary>
-    public unsafe void CheckPlayerClose(float DeltaTime)
+    public unsafe virtual void CheckPlayerClose(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManager.CheckPlayerClose", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -71,7 +71,7 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
     /// <summary>
     /// Function: QueuePlayerCloseLines
     /// </summary>
-    public unsafe void QueuePlayerCloseLines(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void QueuePlayerCloseLines(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManager.QueuePlayerCloseLines", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RSeqAct_SpeechEventManager : BmSDK.BmGame.RSeqAct_SpeechEve
     /// <summary>
     /// Function: InputActivated
     /// </summary>
-    public unsafe void InputActivated(int InputID)
+    public unsafe override void InputActivated(int InputID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManager.InputActivated", true);
         byte* paramsPtr = stackalloc byte[44];

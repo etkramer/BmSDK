@@ -36,7 +36,7 @@ public partial class RNavMeshPath_AvoidBlockedPolys : BmSDK.Engine.NavMeshPathCo
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_AvoidBlockedPolys.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

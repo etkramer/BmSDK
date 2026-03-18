@@ -71,7 +71,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetBeamStartLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBeamStartLocation()
+    public unsafe virtual System.Numerics.Vector3 GetBeamStartLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.GetBeamStartLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.ExitMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StunEnemy
     /// </summary>
-    public unsafe void StunEnemy(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual void StunEnemy(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.StunEnemy", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -105,7 +105,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StopSlowMo
     /// </summary>
-    public unsafe void StopSlowMo()
+    public unsafe virtual void StopSlowMo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.StopSlowMo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartSlowMo
     /// </summary>
-    public unsafe void StartSlowMo()
+    public unsafe virtual void StartSlowMo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.StartSlowMo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetFOVModifier
     /// </summary>
-    public unsafe float GetFOVModifier()
+    public unsafe override float GetFOVModifier()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.GetFOVModifier", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: EndStun
     /// </summary>
-    public unsafe void EndStun()
+    public unsafe virtual void EndStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.EndStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartStun
     /// </summary>
-    public unsafe void StartStun()
+    public unsafe virtual void StartStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.StartStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -186,7 +186,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -199,7 +199,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanNewAttackBeStarted
     /// </summary>
-    public unsafe bool CanNewAttackBeStarted()
+    public unsafe override bool CanNewAttackBeStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.CanNewAttackBeStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -210,7 +210,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ProcessTargets
     /// </summary>
-    public unsafe void ProcessTargets()
+    public unsafe virtual void ProcessTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.ProcessTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(BmSDK.BmGame.RPawnVillain Enemy)
+    public unsafe virtual bool IsValidTarget(BmSDK.BmGame.RPawnVillain Enemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -233,7 +233,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: AcquireTargets
     /// </summary>
-    public unsafe void AcquireTargets()
+    public unsafe virtual void AcquireTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.AcquireTargets", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -244,7 +244,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RCombatMove_NightwingGroupElectrify : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_NightwingGroupElectrify.Initialise", true);
         byte* paramsPtr = stackalloc byte[12];

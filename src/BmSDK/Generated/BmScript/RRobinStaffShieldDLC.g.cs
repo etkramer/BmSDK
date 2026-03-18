@@ -71,7 +71,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor Target, out System.Numerics.Vector3 TargetPosition, out float OverridePriority, out float OverrideMaxRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -86,7 +86,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: IsSameShieldAttackVolume
     /// </summary>
-    public unsafe bool IsSameShieldAttackVolume(BmSDK.Engine.Actor A, BmSDK.Engine.Actor B)
+    public unsafe virtual bool IsSameShieldAttackVolume(BmSDK.Engine.Actor A, BmSDK.Engine.Actor B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.IsSameShieldAttackVolume", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -99,7 +99,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -115,7 +115,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: BulletShieldFadeTimer
     /// </summary>
-    public unsafe void BulletShieldFadeTimer()
+    public unsafe virtual void BulletShieldFadeTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.BulletShieldFadeTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: GetGadgetClassNameForHUD
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetClassNameForHUD()
+    public unsafe override BmSDK.FName GetGadgetClassNameForHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.GetGadgetClassNameForHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -159,7 +159,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: ShotBy
     /// </summary>
-    public unsafe void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, bool animationOnly = default)
+    public unsafe override void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, bool animationOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.ShotBy", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -172,7 +172,7 @@ public partial class RRobinStaffShieldDLC : BmSDK.BmScript.RRobinStaffShield, Bm
     /// <summary>
     /// Function: TurretHitTimer
     /// </summary>
-    public unsafe void TurretHitTimer()
+    public unsafe virtual void TurretHitTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinStaffShieldDLC.TurretHitTimer", true);
         byte* paramsPtr = stackalloc byte[0];

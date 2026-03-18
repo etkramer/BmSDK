@@ -31,7 +31,7 @@ public partial class RSeqAct_CombatSpawnerBase : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor NewSpawnPoint)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor NewSpawnPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatSpawnerBase.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[20];

@@ -71,7 +71,7 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagePawn(BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneCharge.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
     /// <summary>
     /// Function: MovementOn
     /// </summary>
-    public unsafe void MovementOn()
+    public unsafe virtual void MovementOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneCharge.MovementOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BaneCharge : BmSDK.BmScript.RCombatMove_BaneAtt
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BaneCharge.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

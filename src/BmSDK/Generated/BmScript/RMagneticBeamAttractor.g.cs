@@ -71,7 +71,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: GetMagTargetTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagTargetTangent()
+    public unsafe virtual System.Numerics.Vector3 GetMagTargetTangent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.GetMagTargetTangent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: IsSecondaryTarget
     /// </summary>
-    public unsafe bool IsSecondaryTarget()
+    public unsafe virtual bool IsSecondaryTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.IsSecondaryTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: IsMagActive
     /// </summary>
-    public unsafe bool IsMagActive()
+    public unsafe virtual bool IsMagActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.IsMagActive", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: GetActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetActor()
+    public unsafe virtual BmSDK.Engine.Actor GetActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.GetActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: GetMagLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMagLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.GetMagLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -150,7 +150,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: SetMagnetStrength
     /// </summary>
-    public unsafe float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse = default, BmSDK.BmGame.RMagneticSurfaceSMBase Surface = default)
+    public unsafe virtual float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse = default, BmSDK.BmGame.RMagneticSurfaceSMBase Surface = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.SetMagnetStrength", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -167,7 +167,7 @@ public partial class RMagneticBeamAttractor : BmSDK.BmGame.RDummyTarget, BmSDK.B
     /// <summary>
     /// Function: Unlink
     /// </summary>
-    public unsafe void Unlink()
+    public unsafe virtual void Unlink()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticBeamAttractor.Unlink", true);
         byte* paramsPtr = stackalloc byte[0];

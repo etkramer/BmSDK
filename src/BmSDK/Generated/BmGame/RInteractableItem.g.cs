@@ -71,7 +71,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -124,7 +124,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -135,7 +135,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -146,7 +146,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -182,7 +182,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -215,7 +215,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -237,7 +237,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.IsActive", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -249,7 +249,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -260,7 +260,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -271,7 +271,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -282,7 +282,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -293,7 +293,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -304,7 +304,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.Interact", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -316,7 +316,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetUsedEvent
     /// </summary>
-    public unsafe BmSDK.Engine.SeqEvent_Used GetUsedEvent()
+    public unsafe virtual BmSDK.Engine.SeqEvent_Used GetUsedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetUsedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -327,7 +327,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -339,7 +339,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -352,7 +352,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -363,7 +363,7 @@ public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.BmG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInteractableItem.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

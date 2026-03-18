@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLC_OfferCatwoman.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -49,7 +49,7 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLC_OfferCatwoman.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int inID)
+    public unsafe override void OnClicked(int inID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLC_OfferCatwoman.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RGFxMovieUI_DLC_OfferCatwoman : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_DLC_OfferCatwoman.Init", true);
         byte* paramsPtr = stackalloc byte[4];

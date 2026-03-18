@@ -31,7 +31,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnlineDebugCommand
     /// </summary>
-    public unsafe bool OnlineDebugCommand(int Command, int Parameter = default)
+    public unsafe virtual bool OnlineDebugCommand(int Command, int Parameter = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.OnlineDebugCommand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -44,7 +44,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDebugSpewLevel
     /// </summary>
-    public unsafe void SetDebugSpewLevel(int DebugSpewLevel)
+    public unsafe virtual void SetDebugSpewLevel(int DebugSpewLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetDebugSpewLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -56,7 +56,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpVoiceRegistration
     /// </summary>
-    public unsafe void DumpVoiceRegistration()
+    public unsafe virtual void DumpVoiceRegistration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.DumpVoiceRegistration", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -67,7 +67,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpSessionState
     /// </summary>
-    public unsafe void DumpSessionState()
+    public unsafe virtual void DumpSessionState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.DumpSessionState", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -108,7 +108,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetBuildUniqueId
     /// </summary>
-    public unsafe int GetBuildUniqueId()
+    public unsafe virtual int GetBuildUniqueId()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetBuildUniqueId", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNamedInterface
     /// </summary>
-    public unsafe BmSDK.GameObject GetNamedInterface(BmSDK.FName InterfaceName)
+    public unsafe virtual BmSDK.GameObject GetNamedInterface(BmSDK.FName InterfaceName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.GetNamedInterface", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -177,7 +177,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTitleFileInterface
     /// </summary>
-    public unsafe bool SetTitleFileInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetTitleFileInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetTitleFileInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -189,7 +189,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPartyChatInterface
     /// </summary>
-    public unsafe bool SetPartyChatInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetPartyChatInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPartyChatInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -201,7 +201,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetStatsInterface
     /// </summary>
-    public unsafe bool SetStatsInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetStatsInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetStatsInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -213,7 +213,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVoiceInterface
     /// </summary>
-    public unsafe bool SetVoiceInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetVoiceInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetVoiceInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -225,7 +225,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetContentInterface
     /// </summary>
-    public unsafe bool SetContentInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetContentInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetContentInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -237,7 +237,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGameInterface
     /// </summary>
-    public unsafe bool SetGameInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetGameInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetGameInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -249,7 +249,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSystemInterface
     /// </summary>
-    public unsafe bool SetSystemInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetSystemInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetSystemInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -261,7 +261,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPlayerInterfaceEx
     /// </summary>
-    public unsafe bool SetPlayerInterfaceEx(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetPlayerInterfaceEx(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPlayerInterfaceEx", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -273,7 +273,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPlayerInterface
     /// </summary>
-    public unsafe bool SetPlayerInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetPlayerInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetPlayerInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -285,7 +285,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAccountInterface
     /// </summary>
-    public unsafe bool SetAccountInterface(BmSDK.GameObject NewInterface)
+    public unsafe virtual bool SetAccountInterface(BmSDK.GameObject NewInterface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.SetAccountInterface", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -297,7 +297,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Exit
     /// </summary>
-    public unsafe void Exit()
+    public unsafe virtual void Exit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.Exit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -308,7 +308,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PostInit
     /// </summary>
-    public unsafe bool PostInit()
+    public unsafe virtual bool PostInit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.PostInit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -319,7 +319,7 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init()
+    public unsafe virtual bool Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineSubsystem.Init", true);
         byte* paramsPtr = stackalloc byte[4];

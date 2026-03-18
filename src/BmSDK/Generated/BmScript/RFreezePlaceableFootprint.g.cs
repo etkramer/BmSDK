@@ -71,7 +71,7 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezePlaceableFootprint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: SetAlpha
     /// </summary>
-    public unsafe void SetAlpha(float new_alpha)
+    public unsafe virtual void SetAlpha(float new_alpha)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezePlaceableFootprint.SetAlpha", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: Fluoresce
     /// </summary>
-    public unsafe void Fluoresce()
+    public unsafe virtual void Fluoresce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezePlaceableFootprint.Fluoresce", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: RemoveFromWorld
     /// </summary>
-    public unsafe void RemoveFromWorld()
+    public unsafe virtual void RemoveFromWorld()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezePlaceableFootprint.RemoveFromWorld", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RFreezePlaceableFootprint : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: InitFootprint
     /// </summary>
-    public unsafe void InitFootprint(BmSDK.BmScript.RBMBehaviour_Freeze _BehaviourReference, int _FootprintIndex)
+    public unsafe virtual void InitFootprint(BmSDK.BmScript.RBMBehaviour_Freeze _BehaviourReference, int _FootprintIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezePlaceableFootprint.InitFootprint", true);
         byte* paramsPtr = stackalloc byte[8];

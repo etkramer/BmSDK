@@ -36,7 +36,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowFailedGadget
     /// </summary>
-    public unsafe void ShowFailedGadget(int Id)
+    public unsafe virtual void ShowFailedGadget(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.ShowFailedGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowRequiredGadget
     /// </summary>
-    public unsafe void ShowRequiredGadget(int Id)
+    public unsafe virtual void ShowRequiredGadget(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.ShowRequiredGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SendGadgetDataPC
     /// </summary>
-    public unsafe void SendGadgetDataPC(BmSDK.TArray<BmSDK.FString> GadgetIDs, BmSDK.TArray<int> GadgetQuantities, BmSDK.TArray<int> GadgetParams)
+    public unsafe virtual void SendGadgetDataPC(BmSDK.TArray<BmSDK.FString> GadgetIDs, BmSDK.TArray<int> GadgetQuantities, BmSDK.TArray<int> GadgetParams)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SendGadgetDataPC", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -74,7 +74,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SendGadgetData
     /// </summary>
-    public unsafe void SendGadgetData(BmSDK.TArray<BmSDK.FString> GadgetIDs, BmSDK.TArray<int> GadgetQuantities, BmSDK.TArray<int> GadgetParams)
+    public unsafe virtual void SendGadgetData(BmSDK.TArray<BmSDK.FString> GadgetIDs, BmSDK.TArray<int> GadgetQuantities, BmSDK.TArray<int> GadgetParams)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SendGadgetData", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -88,7 +88,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowGadgetIconPrivate
     /// </summary>
-    public unsafe void ShowGadgetIconPrivate(int Id, bool pc_mode)
+    public unsafe virtual void ShowGadgetIconPrivate(int Id, bool pc_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.ShowGadgetIconPrivate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowGadgetIcon
     /// </summary>
-    public unsafe void ShowGadgetIcon()
+    public unsafe virtual void ShowGadgetIcon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.ShowGadgetIcon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetGadgetIconName
     /// </summary>
-    public unsafe void SetGadgetIconName(BmSDK.FString gadget_icon_name)
+    public unsafe virtual void SetGadgetIconName(BmSDK.FString gadget_icon_name)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SetGadgetIconName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: RefreshPC
     /// </summary>
-    public unsafe void RefreshPC()
+    public unsafe virtual void RefreshPC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.RefreshPC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Refresh
     /// </summary>
-    public unsafe void Refresh()
+    public unsafe virtual void Refresh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.Refresh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: FadeOutGadgetCharge
     /// </summary>
-    public unsafe void FadeOutGadgetCharge(int Id)
+    public unsafe virtual void FadeOutGadgetCharge(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.FadeOutGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetGadgetParamPC
     /// </summary>
-    public unsafe void SetGadgetParamPC(int Id, int Recharge, int Quantity)
+    public unsafe virtual void SetGadgetParamPC(int Id, int Recharge, int Quantity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SetGadgetParamPC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -172,7 +172,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetGadgetParam
     /// </summary>
-    public unsafe void SetGadgetParam(int Id, int Recharge, int Quantity)
+    public unsafe virtual void SetGadgetParam(int Id, int Recharge, int Quantity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SetGadgetParam", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -186,7 +186,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SelectInitialGadget
     /// </summary>
-    public unsafe void SelectInitialGadget(int Id, bool pc_mode)
+    public unsafe virtual void SelectInitialGadget(int Id, bool pc_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SelectInitialGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -199,7 +199,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SelectGadgetPC
     /// </summary>
-    public unsafe void SelectGadgetPC(int Id)
+    public unsafe virtual void SelectGadgetPC(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SelectGadgetPC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SelectGadget
     /// </summary>
-    public unsafe void SelectGadget(int Id)
+    public unsafe virtual void SelectGadget(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.SelectGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: RemoveGadgets
     /// </summary>
-    public unsafe void RemoveGadgets()
+    public unsafe virtual void RemoveGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.RemoveGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -234,7 +234,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: HideGadgets
     /// </summary>
-    public unsafe void HideGadgets()
+    public unsafe virtual void HideGadgets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.HideGadgets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -245,7 +245,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: DetonateExplosiveGel
     /// </summary>
-    public unsafe void DetonateExplosiveGel()
+    public unsafe virtual void DetonateExplosiveGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.DetonateExplosiveGel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -256,7 +256,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowExplosiveGelCount
     /// </summary>
-    public unsafe void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
+    public unsafe virtual void ShowExplosiveGelCount(int NumVictims, bool WillKnockdown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.ShowExplosiveGelCount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -269,7 +269,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -280,7 +280,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: AutoSelectCurrentGadget
     /// </summary>
-    public unsafe void AutoSelectCurrentGadget()
+    public unsafe virtual void AutoSelectCurrentGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.AutoSelectCurrentGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -291,7 +291,7 @@ public partial class RHudExtensionGadgets : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionGadgets.Init", true);
         byte* paramsPtr = stackalloc byte[36];

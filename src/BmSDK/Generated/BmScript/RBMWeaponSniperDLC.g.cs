@@ -71,7 +71,7 @@ public partial class RBMWeaponSniperDLC : BmSDK.BmScript.RBMWeaponSniper, BmSDK.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponSniperDLC.Tick", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -83,7 +83,7 @@ public partial class RBMWeaponSniperDLC : BmSDK.BmScript.RBMWeaponSniper, BmSDK.
     /// <summary>
     /// Function: TurnOffVisibleSight
     /// </summary>
-    public unsafe void TurnOffVisibleSight()
+    public unsafe override void TurnOffVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponSniperDLC.TurnOffVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMWeaponSniperDLC : BmSDK.BmScript.RBMWeaponSniper, BmSDK.
     /// <summary>
     /// Function: TurnOnVisibleSight
     /// </summary>
-    public unsafe void TurnOnVisibleSight()
+    public unsafe override void TurnOnVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponSniperDLC.TurnOnVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];

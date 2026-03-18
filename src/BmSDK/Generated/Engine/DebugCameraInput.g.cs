@@ -36,7 +36,7 @@ public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObj
     /// <summary>
     /// Function: InputKey
     /// </summary>
-    public unsafe bool InputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
+    public unsafe virtual bool InputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DebugCameraInput.InputKey", true);
         byte* paramsPtr = stackalloc byte[36];

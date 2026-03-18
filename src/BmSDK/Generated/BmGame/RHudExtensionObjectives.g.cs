@@ -36,7 +36,7 @@ public partial class RHudExtensionObjectives : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: FlushObjective
     /// </summary>
-    public unsafe void FlushObjective(BmSDK.FString Title)
+    public unsafe virtual void FlushObjective(BmSDK.FString Title)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectives.FlushObjective", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RHudExtensionObjectives : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: AddObjective
     /// </summary>
-    public unsafe void AddObjective(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator)
+    public unsafe virtual void AddObjective(float Time, BmSDK.FString Title, BmSDK.FString Desc, BmSDK.FString OrgDesc, int ArrowType, bool bForceShowMap, BmSDK.FString BackPrompt, bool bNoDuplicates, bool bPulseCompassIndicator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectives.AddObjective", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -68,7 +68,7 @@ public partial class RHudExtensionObjectives : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectives.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -79,7 +79,7 @@ public partial class RHudExtensionObjectives : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectives.Init", true);
         byte* paramsPtr = stackalloc byte[32];

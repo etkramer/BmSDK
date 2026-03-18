@@ -71,7 +71,7 @@ public partial class RNightwingStickDumbActor : BmSDK.BmScript.RSkeletalMeshActo
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingStickDumbActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

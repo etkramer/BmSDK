@@ -71,7 +71,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AdvanceAgentGroup
     /// </summary>
-    public unsafe void AdvanceAgentGroup()
+    public unsafe virtual void AdvanceAgentGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.AdvanceAgentGroup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNextAgentGroup
     /// </summary>
-    public unsafe int GetNextAgentGroup()
+    public unsafe virtual int GetNextAgentGroup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.GetNextAgentGroup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyXPBats
     /// </summary>
-    public unsafe void DestroyXPBats()
+    public unsafe virtual void DestroyXPBats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.DestroyXPBats", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateAttractors
     /// </summary>
-    public unsafe void ActivateAttractors()
+    public unsafe virtual void ActivateAttractors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.ActivateAttractors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DeactivateAttractors
     /// </summary>
-    public unsafe void DeactivateAttractors()
+    public unsafe virtual void DeactivateAttractors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.DeactivateAttractors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAttractor
     /// </summary>
-    public unsafe void RemoveAttractor(BmSDK.BmGame.RCrowdAttractor RemoveCA)
+    public unsafe virtual void RemoveAttractor(BmSDK.BmGame.RCrowdAttractor RemoveCA)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.RemoveAttractor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterAttractor
     /// </summary>
-    public unsafe void RegisterAttractor(BmSDK.BmGame.RCrowdAttractor NewCA)
+    public unsafe virtual void RegisterAttractor(BmSDK.BmGame.RCrowdAttractor NewCA)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.RegisterAttractor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveAgent
     /// </summary>
-    public unsafe void RemoveAgent(BmSDK.BmGame.RCrowdAgent OldAgent)
+    public unsafe virtual void RemoveAgent(BmSDK.BmGame.RCrowdAgent OldAgent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.RemoveAgent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RegisterAgent
     /// </summary>
-    public unsafe void RegisterAgent(BmSDK.BmGame.RCrowdAgent NewAgent)
+    public unsafe virtual void RegisterAgent(BmSDK.BmGame.RCrowdAgent NewAgent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.RegisterAgent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNewFlockID
     /// </summary>
-    public unsafe int GetNewFlockID()
+    public unsafe virtual int GetNewFlockID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.GetNewFlockID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumAgentsInFlock
     /// </summary>
-    public unsafe int GetNumAgentsInFlock(int FlockID)
+    public unsafe virtual int GetNumAgentsInFlock(int FlockID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdManager.GetNumAgentsInFlock", true);
         byte* paramsPtr = stackalloc byte[8];

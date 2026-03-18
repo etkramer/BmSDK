@@ -71,7 +71,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: CombatMoveInitialised
     /// </summary>
-    public unsafe void CombatMoveInitialised(BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void CombatMoveInitialised(BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.CombatMoveInitialised", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: PlayStowStaffAnim
     /// </summary>
-    public unsafe bool PlayStowStaffAnim()
+    public unsafe override bool PlayStowStaffAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.PlayStowStaffAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.UnTouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -121,7 +121,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: SetPersistentBallisticArmour
     /// </summary>
-    public unsafe void SetPersistentBallisticArmour(int armour)
+    public unsafe override void SetPersistentBallisticArmour(int armour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.SetPersistentBallisticArmour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: GetPersistentBallisticArmour
     /// </summary>
-    public unsafe int GetPersistentBallisticArmour()
+    public unsafe override int GetPersistentBallisticArmour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.GetPersistentBallisticArmour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: SetPersistentMeleeArmour
     /// </summary>
-    public unsafe void SetPersistentMeleeArmour(int armour)
+    public unsafe override void SetPersistentMeleeArmour(int armour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.SetPersistentMeleeArmour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: GetPersistentMeleeArmour
     /// </summary>
-    public unsafe int GetPersistentMeleeArmour()
+    public unsafe override int GetPersistentMeleeArmour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.GetPersistentMeleeArmour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: UpdatePDLCAchievement
     /// </summary>
-    public unsafe void UpdatePDLCAchievement(int Id, int Value)
+    public unsafe virtual void UpdatePDLCAchievement(int Id, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.UpdatePDLCAchievement", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -180,7 +180,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: IsPDLCAchievementDone
     /// </summary>
-    public unsafe bool IsPDLCAchievementDone(int Id)
+    public unsafe virtual bool IsPDLCAchievementDone(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.IsPDLCAchievementDone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -192,7 +192,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: CheckNewShieldBashTarget
     /// </summary>
-    public unsafe bool CheckNewShieldBashTarget(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool CheckNewShieldBashTarget(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.CheckNewShieldBashTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -204,7 +204,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: CheckNewZipKickTarget
     /// </summary>
-    public unsafe bool CheckNewZipKickTarget(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual bool CheckNewZipKickTarget(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.CheckNewZipKickTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -216,7 +216,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: UnlockAchievement
     /// </summary>
-    public unsafe void UnlockAchievement(int AchievementId)
+    public unsafe virtual void UnlockAchievement(int AchievementId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.UnlockAchievement", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -228,7 +228,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: AddNewDLCZipKickMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddNewDLCZipKickMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddNewDLCZipKickMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.AddNewDLCZipKickMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[484];
@@ -240,7 +240,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: AddMovementMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe override void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.AddMovementMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -252,7 +252,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: IsShieldActive
     /// </summary>
-    public unsafe bool IsShieldActive()
+    public unsafe virtual bool IsShieldActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.IsShieldActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -263,7 +263,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: SetShieldBlocking
     /// </summary>
-    public unsafe void SetShieldBlocking(bool bBlock)
+    public unsafe virtual void SetShieldBlocking(bool bBlock)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.SetShieldBlocking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -275,7 +275,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: ClearEffects
     /// </summary>
-    public unsafe void ClearEffects(int ThingIndex)
+    public unsafe override void ClearEffects(int ThingIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.ClearEffects", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -287,7 +287,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: SpawnEffectsOnThing
     /// </summary>
-    public unsafe void SpawnEffectsOnThing(int ThingIndex)
+    public unsafe override void SpawnEffectsOnThing(int ThingIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.SpawnEffectsOnThing", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -299,7 +299,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: BlockedTurret
     /// </summary>
-    public unsafe bool BlockedTurret(BmSDK.Engine.Actor Turret)
+    public unsafe virtual bool BlockedTurret(BmSDK.Engine.Actor Turret)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.BlockedTurret", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -311,7 +311,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: BlockedSteamVent
     /// </summary>
-    public unsafe bool BlockedSteamVent(BmSDK.Engine.Actor Vent)
+    public unsafe virtual bool BlockedSteamVent(BmSDK.Engine.Actor Vent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.BlockedSteamVent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -323,7 +323,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[245];
@@ -335,7 +335,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: ShotBy
     /// </summary>
-    public unsafe void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, System.Numerics.Vector3 HitLocation = default)
+    public unsafe override void ShotBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, System.Numerics.Vector3 HitLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.ShotBy", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -348,7 +348,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: CanBlockShotsFrom
     /// </summary>
-    public unsafe bool CanBlockShotsFrom(System.Numerics.Vector3 Origin, bool bCheck2DOnly = default)
+    public unsafe virtual bool CanBlockShotsFrom(System.Numerics.Vector3 Origin, bool bCheck2DOnly = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.CanBlockShotsFrom", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -361,7 +361,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: CanBlockShotsFromDirection
     /// </summary>
-    public unsafe bool CanBlockShotsFromDirection(System.Numerics.Vector3 Dir, bool bCheck2DOnly)
+    public unsafe virtual bool CanBlockShotsFromDirection(System.Numerics.Vector3 Dir, bool bCheck2DOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.CanBlockShotsFromDirection", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -374,7 +374,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: InvestigateModeEyes
     /// </summary>
-    public unsafe void InvestigateModeEyes(bool bOnOrOff)
+    public unsafe override void InvestigateModeEyes(bool bOnOrOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.InvestigateModeEyes", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -386,7 +386,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: EyeMaterialUpdated
     /// </summary>
-    public unsafe void EyeMaterialUpdated()
+    public unsafe override void EyeMaterialUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.EyeMaterialUpdated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -397,7 +397,7 @@ public partial class RPawnPlayerRobinStoryDLC : BmSDK.BmScript.RPawnPlayerRobin,
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe override void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerRobinStoryDLC.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[12];

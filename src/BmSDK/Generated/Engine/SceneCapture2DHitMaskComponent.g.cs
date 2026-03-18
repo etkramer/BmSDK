@@ -36,7 +36,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     /// <summary>
     /// Function: SetFadingStartTimeSinceHit
     /// </summary>
-    public unsafe void SetFadingStartTimeSinceHit(float InFadingStartTimeSinceHit)
+    public unsafe virtual void SetFadingStartTimeSinceHit(float InFadingStartTimeSinceHit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetFadingStartTimeSinceHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     /// <summary>
     /// Function: SetCaptureParameters
     /// </summary>
-    public unsafe void SetCaptureParameters(System.Numerics.Vector3 InMaskPosition, float InMaskRadius, System.Numerics.Vector3 InStartupPosition, bool bOnlyWhenFacing)
+    public unsafe virtual void SetCaptureParameters(System.Numerics.Vector3 InMaskPosition, float InMaskRadius, System.Numerics.Vector3 InStartupPosition, bool bOnlyWhenFacing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetCaptureParameters", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -77,7 +77,7 @@ public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureC
     /// <summary>
     /// Function: SetCaptureTargetTexture
     /// </summary>
-    public unsafe void SetCaptureTargetTexture(BmSDK.Engine.TextureRenderTarget2D InTextureTarget)
+    public unsafe virtual void SetCaptureTargetTexture(BmSDK.Engine.TextureRenderTarget2D InTextureTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DHitMaskComponent.SetCaptureTargetTexture", true);
         byte* paramsPtr = stackalloc byte[4];

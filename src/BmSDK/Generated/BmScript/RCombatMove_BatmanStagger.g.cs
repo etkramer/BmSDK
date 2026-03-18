@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanStagger : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStagger.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanStagger : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: GetSandFlowFxRotation
     /// </summary>
-    public unsafe BmSDK.Rotator GetSandFlowFxRotation()
+    public unsafe virtual BmSDK.Rotator GetSandFlowFxRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStagger.GetSandFlowFxRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RCombatMove_BatmanStagger : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: GetSandFlowFxLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSandFlowFxLocation()
+    public unsafe virtual System.Numerics.Vector3 GetSandFlowFxLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStagger.GetSandFlowFxLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RCombatMove_BatmanStagger : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: SpawnRepelFx
     /// </summary>
-    public unsafe void SpawnRepelFx()
+    public unsafe virtual void SpawnRepelFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStagger.SpawnRepelFx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RCombatMove_BatmanStagger : BmSDK.BmGame.RCombatMove, BmSDK
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanStagger.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

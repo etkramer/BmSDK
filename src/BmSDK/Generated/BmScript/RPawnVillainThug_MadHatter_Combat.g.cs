@@ -71,7 +71,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: ShouldCombatantLockDoors
     /// </summary>
-    public unsafe bool ShouldCombatantLockDoors()
+    public unsafe override bool ShouldCombatantLockDoors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.ShouldCombatantLockDoors", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: DoDespawnFX
     /// </summary>
-    public unsafe void DoDespawnFX()
+    public unsafe virtual void DoDespawnFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.DoDespawnFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: DestroySelf
     /// </summary>
-    public unsafe void DestroySelf()
+    public unsafe override void DestroySelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.DestroySelf", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.Died", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -129,7 +129,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: AwardXP
     /// </summary>
-    public unsafe void AwardXP(BmSDK.Class DamageType)
+    public unsafe override void AwardXP(BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.AwardXP", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -153,7 +153,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: CanPlayBark
     /// </summary>
-    public unsafe bool CanPlayBark()
+    public unsafe override bool CanPlayBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RPawnVillainThug_MadHatter_Combat : BmSDK.BmGame.RPawnVilla
     /// <summary>
     /// Function: PlaySound_Falling
     /// </summary>
-    public unsafe void PlaySound_Falling()
+    public unsafe override void PlaySound_Falling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_MadHatter_Combat.PlaySound_Falling", true);
         byte* paramsPtr = stackalloc byte[0];

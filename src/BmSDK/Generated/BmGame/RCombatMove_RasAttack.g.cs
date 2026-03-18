@@ -71,7 +71,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat()
+    public unsafe virtual bool CanBeHitInCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess = default)
+    public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: StartUnleash
     /// </summary>
-    public unsafe void StartUnleash()
+    public unsafe virtual void StartUnleash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.StartUnleash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: IsAttackPrimed
     /// </summary>
-    public unsafe bool IsAttackPrimed()
+    public unsafe virtual bool IsAttackPrimed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.IsAttackPrimed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RCombatMove_RasAttack : BmSDK.BmGame.RCombatMove_VillainAtt
     /// <summary>
     /// Function: UnleashAttack
     /// </summary>
-    public unsafe bool UnleashAttack()
+    public unsafe virtual bool UnleashAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasAttack.UnleashAttack", true);
         byte* paramsPtr = stackalloc byte[4];

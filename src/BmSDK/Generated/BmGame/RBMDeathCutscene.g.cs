@@ -71,7 +71,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: StrikeImpact
     /// </summary>
-    public unsafe void StrikeImpact(bool bFinalImpact = default)
+    public unsafe virtual void StrikeImpact(bool bFinalImpact = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.StrikeImpact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: GetKillerPawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetKillerPawnLocation()
+    public unsafe virtual System.Numerics.Vector3 GetKillerPawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.GetKillerPawnLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: GetKillerPawn
     /// </summary>
-    public unsafe BmSDK.Engine.Pawn GetKillerPawn()
+    public unsafe virtual BmSDK.Engine.Pawn GetKillerPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.GetKillerPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: PickCamera
     /// </summary>
-    public unsafe void PickCamera()
+    public unsafe override void PickCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.PickCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: InitialiseDeathCutscene
     /// </summary>
-    public unsafe void InitialiseDeathCutscene(BmSDK.BmGame.RPlayerController NewCutsceneOwner, BmSDK.BmGame.RPawn NewCutsceneTarget, BmSDK.BmGame.RPawn NewCutsceneKiller, BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo NewStrikeInfo, BmSDK.Class DeathCamClass, float NewTimeUntilImpact)
+    public unsafe virtual void InitialiseDeathCutscene(BmSDK.BmGame.RPlayerController NewCutsceneOwner, BmSDK.BmGame.RPawn NewCutsceneTarget, BmSDK.BmGame.RPawn NewCutsceneKiller, BmSDK.BmGame.RPawnPlayerCombat.FStrikeInfo NewStrikeInfo, BmSDK.Class DeathCamClass, float NewTimeUntilImpact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.InitialiseDeathCutscene", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -133,7 +133,7 @@ public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGam
     /// <summary>
     /// Function: InitialiseBoneFollowers
     /// </summary>
-    public unsafe void InitialiseBoneFollowers(BmSDK.FName TargetBoneToFollow)
+    public unsafe override void InitialiseBoneFollowers(BmSDK.FName TargetBoneToFollow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMDeathCutscene.InitialiseBoneFollowers", true);
         byte* paramsPtr = stackalloc byte[8];

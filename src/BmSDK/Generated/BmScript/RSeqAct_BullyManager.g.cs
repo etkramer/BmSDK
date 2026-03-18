@@ -47,7 +47,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: FireOutputsForAllActiveEncounters
     /// </summary>
-    public unsafe void FireOutputsForAllActiveEncounters()
+    public unsafe virtual void FireOutputsForAllActiveEncounters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.FireOutputsForAllActiveEncounters", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: FixJackRyderBugInPData
     /// </summary>
-    public unsafe void FixJackRyderBugInPData()
+    public unsafe virtual void FixJackRyderBugInPData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.FixJackRyderBugInPData", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: PrintStatus
     /// </summary>
-    public unsafe void PrintStatus()
+    public unsafe virtual void PrintStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.PrintStatus", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -91,7 +91,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: StartEncounter
     /// </summary>
-    public unsafe void StartEncounter(int Index)
+    public unsafe virtual void StartEncounter(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.StartEncounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: StartRandomEncounterAnywhere
     /// </summary>
-    public unsafe void StartRandomEncounterAnywhere()
+    public unsafe virtual void StartRandomEncounterAnywhere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.StartRandomEncounterAnywhere", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -114,7 +114,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: StartRandomEncounterInRegion
     /// </summary>
-    public unsafe void StartRandomEncounterInRegion(int Region)
+    public unsafe virtual void StartRandomEncounterInRegion(int Region)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.StartRandomEncounterInRegion", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -126,7 +126,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: StartJackRyderEncounter
     /// </summary>
-    public unsafe void StartJackRyderEncounter()
+    public unsafe virtual void StartJackRyderEncounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.StartJackRyderEncounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RSeqAct_BullyManager : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BullyManager.Update", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetStandPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStandPoint()
+    public unsafe virtual System.Numerics.Vector3 GetStandPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineablePointBase.GetStandPoint", true);
         byte* paramsPtr = stackalloc byte[12];

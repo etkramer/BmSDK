@@ -71,7 +71,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: SetBrainElectricityActive
     /// </summary>
-    public unsafe void SetBrainElectricityActive(bool make_active)
+    public unsafe virtual void SetBrainElectricityActive(bool make_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.SetBrainElectricityActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: ExplodeFx
     /// </summary>
-    public unsafe void ExplodeFx()
+    public unsafe virtual void ExplodeFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.ExplodeFx", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: ScanComplete
     /// </summary>
-    public unsafe void ScanComplete()
+    public unsafe override void ScanComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.ScanComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: SetInDisabledState
     /// </summary>
-    public unsafe void SetInDisabledState()
+    public unsafe virtual void SetInDisabledState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.SetInDisabledState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: ScanningBegins
     /// </summary>
-    public unsafe void ScanningBegins()
+    public unsafe override void ScanningBegins()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.ScanningBegins", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool show, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool show, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: InitDisabledRobot
     /// </summary>
-    public unsafe void InitDisabledRobot()
+    public unsafe override void InitDisabledRobot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.InitDisabledRobot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: InitRobot
     /// </summary>
-    public unsafe void InitRobot()
+    public unsafe override void InitRobot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.InitRobot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RPawnFriendlyRobot : BmSDK.BmGame.RPawnFriendlyRobotBase, B
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyRobot.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

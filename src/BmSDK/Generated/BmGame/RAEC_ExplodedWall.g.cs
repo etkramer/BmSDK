@@ -71,7 +71,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: ClearInvestigateNavReqs
     /// </summary>
-    public unsafe void ClearInvestigateNavReqs()
+    public unsafe virtual void ClearInvestigateNavReqs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.ClearInvestigateNavReqs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: StartInvestigateNavRequests
     /// </summary>
-    public unsafe void StartInvestigateNavRequests()
+    public unsafe virtual void StartInvestigateNavRequests()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.StartInvestigateNavRequests", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: GetDiscoverBarkType
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController.BarkType GetDiscoverBarkType(BmSDK.BmGame.RPawn TestPawn)
+    public unsafe virtual BmSDK.BmGame.RBMAIController.BarkType GetDiscoverBarkType(BmSDK.BmGame.RPawn TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.GetDiscoverBarkType", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -105,7 +105,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: WallSeen
     /// </summary>
-    public unsafe void WallSeen(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void WallSeen(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.WallSeen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: HandleExplodeNoise
     /// </summary>
-    public unsafe void HandleExplodeNoise(System.Numerics.Vector3 NewExplosionCentre, System.Numerics.Vector3 NewWallNormal)
+    public unsafe virtual void HandleExplodeNoise(System.Numerics.Vector3 NewExplosionCentre, System.Numerics.Vector3 NewWallNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.HandleExplodeNoise", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -130,7 +130,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: WallDownCleanUp
     /// </summary>
-    public unsafe void WallDownCleanUp()
+    public unsafe virtual void WallDownCleanUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.WallDownCleanUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: RemoveChild
     /// </summary>
-    public unsafe void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: SetWall
     /// </summary>
-    public unsafe void SetWall(BmSDK.BmGame.RFractureWallBase NewWall)
+    public unsafe virtual void SetWall(BmSDK.BmGame.RFractureWallBase NewWall)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.SetWall", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RAEC_ExplodedWall : BmSDK.BmGame.RAlertEventCoordinatorBase
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_ExplodedWall.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

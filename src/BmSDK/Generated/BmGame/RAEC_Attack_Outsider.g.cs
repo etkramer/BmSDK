@@ -71,7 +71,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: PlayEndBark
     /// </summary>
-    public unsafe void PlayEndBark()
+    public unsafe virtual void PlayEndBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.PlayEndBark", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -82,7 +82,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: DropPriorityAsSmokeCleared
     /// </summary>
-    public unsafe void DropPriorityAsSmokeCleared()
+    public unsafe virtual void DropPriorityAsSmokeCleared()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.DropPriorityAsSmokeCleared", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: AllPerimThugsFinishedShootingAndAtLeastOneIsInPosition
     /// </summary>
-    public unsafe bool AllPerimThugsFinishedShootingAndAtLeastOneIsInPosition()
+    public unsafe virtual bool AllPerimThugsFinishedShootingAndAtLeastOneIsInPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.AllPerimThugsFinishedShootingAndAtLeastOneIsInPosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: InitThugSearch
     /// </summary>
-    public unsafe void InitThugSearch()
+    public unsafe virtual void InitThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.InitThugSearch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -115,7 +115,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: AddPotentialLateJoiner
     /// </summary>
-    public unsafe void AddPotentialLateJoiner(BmSDK.BmGame.RBMAIController C)
+    public unsafe virtual void AddPotentialLateJoiner(BmSDK.BmGame.RBMAIController C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.AddPotentialLateJoiner", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: AddWatcher
     /// </summary>
-    public unsafe void AddWatcher(BmSDK.BmGame.RBMAIController C, bool bCanSeeSmoke)
+    public unsafe virtual void AddWatcher(BmSDK.BmGame.RBMAIController C, bool bCanSeeSmoke)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.AddWatcher", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: FindPerimStartPos
     /// </summary>
-    public unsafe bool FindPerimStartPos(out System.Numerics.Vector3 StartPos)
+    public unsafe virtual bool FindPerimStartPos(out System.Numerics.Vector3 StartPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.FindPerimStartPos", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -164,7 +164,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: SetSmokeScreen
     /// </summary>
-    public unsafe void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen, bool bNewIsExtinguisher, bool bNewIsRepeatExtiguisher, bool bNewThugsInsideCloud)
+    public unsafe virtual void SetSmokeScreen(BmSDK.BmGame.RSmokeScreen NewSmokeScreen, bool bNewIsExtinguisher, bool bNewIsRepeatExtiguisher, bool bNewThugsInsideCloud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.SetSmokeScreen", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -179,7 +179,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: ClearThugSearch
     /// </summary>
-    public unsafe void ClearThugSearch()
+    public unsafe virtual void ClearThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.ClearThugSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RAEC_Attack_Outsider : BmSDK.BmGame.RAEC_SubGroup, BmSDK.IG
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Attack_Outsider.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

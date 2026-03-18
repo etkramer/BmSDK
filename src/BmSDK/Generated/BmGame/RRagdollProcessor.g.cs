@@ -36,7 +36,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HitPawn
     /// </summary>
-    public unsafe void HitPawn(BmSDK.BmGame.RPawnCombat OtherPawn)
+    public unsafe virtual void HitPawn(BmSDK.BmGame.RPawnCombat OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.HitPawn", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -48,7 +48,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckHitPawns
     /// </summary>
-    public unsafe void CheckHitPawns()
+    public unsafe virtual void CheckHitPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.CheckHitPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHostPawnPelvisPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHostPawnPelvisPosition()
+    public unsafe virtual System.Numerics.Vector3 GetHostPawnPelvisPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.GetHostPawnPelvisPosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SwitchToHitWallWrithe
     /// </summary>
-    public unsafe void SwitchToHitWallWrithe()
+    public unsafe virtual void SwitchToHitWallWrithe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.SwitchToHitWallWrithe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessHitWall
     /// </summary>
-    public unsafe void ProcessHitWall()
+    public unsafe virtual void ProcessHitWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.ProcessHitWall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe virtual void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -110,7 +110,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ConstrainedToNavMesh
     /// </summary>
-    public unsafe void ConstrainedToNavMesh()
+    public unsafe virtual void ConstrainedToNavMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.ConstrainedToNavMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TimeUntilGetup
     /// </summary>
-    public unsafe float TimeUntilGetup()
+    public unsafe virtual float TimeUntilGetup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.TimeUntilGetup", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TrackRagdollFacing
     /// </summary>
-    public unsafe void TrackRagdollFacing(float DeltaTime)
+    public unsafe virtual void TrackRagdollFacing(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.TrackRagdollFacing", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOffPawnCollision
     /// </summary>
-    public unsafe void TurnOffPawnCollision()
+    public unsafe virtual void TurnOffPawnCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.TurnOffPawnCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyARF
     /// </summary>
-    public unsafe void ApplyARF(float DeltaTime)
+    public unsafe virtual void ApplyARF(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.ApplyARF", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -179,7 +179,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -201,7 +201,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRagdollOn
     /// </summary>
-    public unsafe bool IsRagdollOn()
+    public unsafe virtual bool IsRagdollOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.IsRagdollOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -212,7 +212,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EnterState
     /// </summary>
-    public unsafe void EnterState(BmSDK.BmGame.RRagdollProcessor.RagdollState NewState)
+    public unsafe virtual void EnterState(BmSDK.BmGame.RRagdollProcessor.RagdollState NewState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.EnterState", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -224,7 +224,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginWrithe
     /// </summary>
-    public unsafe void BeginWrithe(BmSDK.FName NewRagdollName, BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bKill, bool bNewFrozen)
+    public unsafe virtual void BeginWrithe(BmSDK.FName NewRagdollName, BmSDK.BmGame.RPawnCombat.FDamageInfo NewDmgInfo, bool bKill, bool bNewFrozen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.BeginWrithe", true);
         byte* paramsPtr = stackalloc byte[284];
@@ -239,7 +239,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseWritheAnim
     /// </summary>
-    public unsafe void InitialiseWritheAnim()
+    public unsafe virtual void InitialiseWritheAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.InitialiseWritheAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -250,7 +250,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseRagdollFacing
     /// </summary>
-    public unsafe void InitialiseRagdollFacing()
+    public unsafe virtual void InitialiseRagdollFacing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.InitialiseRagdollFacing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseWrithePhaseFromAnimName
     /// </summary>
-    public unsafe void InitialiseWrithePhaseFromAnimName()
+    public unsafe virtual void InitialiseWrithePhaseFromAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.InitialiseWrithePhaseFromAnimName", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -272,7 +272,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseWrithePhase
     /// </summary>
-    public unsafe void InitialiseWrithePhase(BmSDK.BmGame.RPawnCombat.FWritheDescription WritheDesc, float ImpulseDotPawnDir)
+    public unsafe virtual void InitialiseWrithePhase(BmSDK.BmGame.RPawnCombat.FWritheDescription WritheDesc, float ImpulseDotPawnDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.InitialiseWrithePhase", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -285,7 +285,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe virtual void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnCombat NewPawn)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawnCombat NewPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollProcessor.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];

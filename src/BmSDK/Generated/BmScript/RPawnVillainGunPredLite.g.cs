@@ -71,7 +71,7 @@ public partial class RPawnVillainGunPredLite : BmSDK.BmGame.RPawnVillainGunPredB
     /// <summary>
     /// Function: CreateLitePredPanicWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateLitePredPanicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet TurnAnimSet2)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateLitePredPanicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.Engine.AnimSet AnimSet1, BmSDK.Engine.AnimSet AnimSet2, BmSDK.Engine.AnimSet AnimSet3, BmSDK.Engine.AnimSet AnimSet4, BmSDK.Engine.AnimSet TurnAnimSet2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLite.CreateLitePredPanicWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1124];
@@ -88,7 +88,7 @@ public partial class RPawnVillainGunPredLite : BmSDK.BmGame.RPawnVillainGunPredB
     /// <summary>
     /// Function: CreateWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeapon()
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLite.CreateWeapon", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: RemoveBomb
     /// </summary>
-    public unsafe void RemoveBomb()
+    public unsafe virtual void RemoveBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.RemoveBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: HurtBatman
     /// </summary>
-    public unsafe bool HurtBatman()
+    public unsafe virtual bool HurtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.HurtBatman", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -93,7 +93,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.Explode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: InitialiseProj
     /// </summary>
-    public unsafe void InitialiseProj(BmSDK.BmGame.RPawnBossClayfaceBase CF, float FlightSpd, float Damage, bool bMakeDrone)
+    public unsafe virtual void InitialiseProj(BmSDK.BmGame.RPawnBossClayfaceBase CF, float FlightSpd, float Damage, bool bMakeDrone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.InitialiseProj", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: HitLevel
     /// </summary>
-    public unsafe void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.HitLevel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -144,7 +144,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: UpdateMoveTarget
     /// </summary>
-    public unsafe void UpdateMoveTarget(float DeltaTime)
+    public unsafe virtual void UpdateMoveTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.UpdateMoveTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -156,7 +156,7 @@ public partial class RClayfaceProjectile : BmSDK.BmGame.RClayfaceProjectileBase,
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe virtual void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectile.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[24];

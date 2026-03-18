@@ -71,7 +71,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: ChangeIdle
     /// </summary>
-    public unsafe void ChangeIdle(BmSDK.FName NewIdle)
+    public unsafe virtual void ChangeIdle(BmSDK.FName NewIdle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.ChangeIdle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: PlayShortOverlayAnim
     /// </summary>
-    public unsafe void PlayShortOverlayAnim()
+    public unsafe override void PlayShortOverlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.PlayShortOverlayAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: PlayIdleOverlay
     /// </summary>
-    public unsafe void PlayIdleOverlay(BmSDK.FName NewOverlay)
+    public unsafe virtual void PlayIdleOverlay(BmSDK.FName NewOverlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.PlayIdleOverlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: PlayLongOverlayAnim
     /// </summary>
-    public unsafe void PlayLongOverlayAnim()
+    public unsafe override void PlayLongOverlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.PlayLongOverlayAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: StartPause
     /// </summary>
-    public unsafe void StartPause(BmSDK.FName IdleName)
+    public unsafe virtual void StartPause(BmSDK.FName IdleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.StartPause", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_PatrolWait : BmSDK.BmGame.RBMAIAction_PatrolWai
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWait.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

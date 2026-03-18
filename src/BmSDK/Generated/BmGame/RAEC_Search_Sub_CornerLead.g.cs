@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: IsPlayerBehind
     /// </summary>
-    public unsafe bool IsPlayerBehind()
+    public unsafe virtual bool IsPlayerBehind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.IsPlayerBehind", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: IsThugVisibleFromCornerEndNavCheck
     /// </summary>
-    public unsafe bool IsThugVisibleFromCornerEndNavCheck()
+    public unsafe virtual bool IsThugVisibleFromCornerEndNavCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.IsThugVisibleFromCornerEndNavCheck", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RCornerWallMarker NewStartCorner, BmSDK.BmGame.RCornerWallMarker NewEndCorner)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RCornerWallMarker NewStartCorner, BmSDK.BmGame.RCornerWallMarker NewEndCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -108,7 +108,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction NotifyAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -122,7 +122,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RAEC_Search_Sub_CornerLead : BmSDK.BmGame.RAEC_Sub_Formatio
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_CornerLead.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

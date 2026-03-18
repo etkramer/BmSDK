@@ -71,7 +71,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: FinishAttackAttacker
     /// </summary>
-    public unsafe void FinishAttackAttacker()
+    public unsafe override void FinishAttackAttacker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.FinishAttackAttacker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RStealthTakeDownStage_DoubleHead : BmSDK.BmGame.RStealthTak
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStealthTakeDownStage_DoubleHead.End", true);
         byte* paramsPtr = stackalloc byte[8];

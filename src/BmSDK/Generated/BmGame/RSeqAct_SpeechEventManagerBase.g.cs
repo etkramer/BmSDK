@@ -31,7 +31,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: QueueSpeechEvent
     /// </summary>
-    public unsafe void QueueSpeechEvent(out BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent CurrEvent, int OutputID, BmSDK.Engine.Actor Target)
+    public unsafe virtual void QueueSpeechEvent(out BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent CurrEvent, int OutputID, BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.QueueSpeechEvent", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -45,7 +45,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: QueueSpeechLine
     /// </summary>
-    public unsafe void QueueSpeechLine(BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent CurrEvent, int OutputID, BmSDK.Engine.Actor Target, int LineIndex)
+    public unsafe virtual void QueueSpeechLine(BmSDK.BmGame.RSeqAct_SpeechEventManagerBase.FSpeechEvent CurrEvent, int OutputID, BmSDK.Engine.Actor Target, int LineIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.QueueSpeechLine", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -60,7 +60,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: PlayNextLine
     /// </summary>
-    public unsafe void PlayNextLine()
+    public unsafe virtual void PlayNextLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.PlayNextLine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: InputActivated
     /// </summary>
-    public unsafe void InputActivated(int InputID)
+    public unsafe virtual void InputActivated(int InputID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.InputActivated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: CueAborted
     /// </summary>
-    public unsafe void CueAborted()
+    public unsafe override void CueAborted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.CueAborted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RSeqAct_SpeechEventManagerBase : BmSDK.BmGame.RSeqAct_PlayS
     /// <summary>
     /// Function: CueFinished
     /// </summary>
-    public unsafe void CueFinished()
+    public unsafe override void CueFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SpeechEventManagerBase.CueFinished", true);
         byte* paramsPtr = stackalloc byte[0];

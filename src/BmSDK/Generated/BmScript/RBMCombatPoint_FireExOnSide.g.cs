@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
     /// <summary>
     /// Function: GetAnimInfo_AimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide.GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RBMCombatPoint_FireExOnSide : BmSDK.BmScript.RBMCombatPoint
     /// <summary>
     /// Function: GetAnimInfo_Name
     /// </summary>
-    public unsafe BmSDK.FName GetAnimInfo_Name()
+    public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExOnSide.GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];

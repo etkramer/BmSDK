@@ -71,7 +71,7 @@ public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: StopPlayerSnowEffect
     /// </summary>
-    public unsafe void StopPlayerSnowEffect()
+    public unsafe virtual void StopPlayerSnowEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase.StopPlayerSnowEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Function: UpdatePlayerSnowEffect
     /// </summary>
-    public unsafe void UpdatePlayerSnowEffect(float DeltaTime)
+    public unsafe virtual void UpdatePlayerSnowEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeatherAttachedToCameraBase.UpdatePlayerSnowEffect", true);
         byte* paramsPtr = stackalloc byte[4];

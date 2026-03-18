@@ -36,7 +36,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DebugSetUISystemEnabled
     /// </summary>
-    public unsafe void DebugSetUISystemEnabled(bool bOldUISystemActive, bool bGFxUISystemActive)
+    public unsafe virtual void DebugSetUISystemEnabled(bool bOldUISystemActive, bool bGFxUISystemActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.DebugSetUISystemEnabled", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -56,7 +56,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FixupOwnerReferences
     /// </summary>
-    public unsafe void FixupOwnerReferences()
+    public unsafe virtual void FixupOwnerReferences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.FixupOwnerReferences", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -74,7 +74,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerOwner
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer GetPlayerOwner(int PlayerIndex)
+    public unsafe virtual BmSDK.Engine.LocalPlayer GetPlayerOwner(int PlayerIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetPlayerOwner", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDynamicShadows
     /// </summary>
-    public unsafe void SetDynamicShadows(bool OnOrOff)
+    public unsafe virtual void SetDynamicShadows(bool OnOrOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.SetDynamicShadows", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearProgressMessages
     /// </summary>
-    public unsafe void ClearProgressMessages()
+    public unsafe virtual void ClearProgressMessages()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.ClearProgressMessages", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetProgressTime
     /// </summary>
-    public unsafe void SetProgressTime(float T)
+    public unsafe virtual void SetProgressTime(float T)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.SetProgressTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyConnectionError
     /// </summary>
-    public unsafe void NotifyConnectionError(BmSDK.FString Message = default, BmSDK.FString Title = default)
+    public unsafe virtual void NotifyConnectionError(BmSDK.FString Message = default, BmSDK.FString Title = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.NotifyConnectionError", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -148,7 +148,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetProgressMessage
     /// </summary>
-    public unsafe void SetProgressMessage(BmSDK.Engine.PlayerController.EProgressMessageType MessageType, BmSDK.FString Message, BmSDK.FString Title = default, bool bIgnoreFutureNetworkMessages = default)
+    public unsafe virtual void SetProgressMessage(BmSDK.Engine.PlayerController.EProgressMessageType MessageType, BmSDK.FString Message, BmSDK.FString Title = default, bool bIgnoreFutureNetworkMessages = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.SetProgressMessage", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -187,7 +187,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerRemoved
     /// </summary>
-    public unsafe void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
+    public unsafe virtual void NotifyPlayerRemoved(int PlayerIndex, BmSDK.Engine.LocalPlayer RemovedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.NotifyPlayerRemoved", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -200,7 +200,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPlayerAdded
     /// </summary>
-    public unsafe void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
+    public unsafe virtual void NotifyPlayerAdded(int PlayerIndex, BmSDK.Engine.LocalPlayer AddedPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.NotifyPlayerAdded", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -213,7 +213,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTransitionMessage
     /// </summary>
-    public unsafe void DrawTransitionMessage(BmSDK.Engine.Canvas Canvas, BmSDK.FString Message)
+    public unsafe virtual void DrawTransitionMessage(BmSDK.Engine.Canvas Canvas, BmSDK.FString Message)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.DrawTransitionMessage", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -226,7 +226,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTransition
     /// </summary>
-    public unsafe void DrawTransition(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawTransition(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.DrawTransition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -238,7 +238,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender
     /// </summary>
-    public unsafe void PostRender(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PostRender(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.PostRender", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawTitleSafeArea
     /// </summary>
-    public unsafe void DrawTitleSafeArea(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawTitleSafeArea(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.DrawTitleSafeArea", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -274,7 +274,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubtitleRegion
     /// </summary>
-    public unsafe void GetSubtitleRegion(out System.Numerics.Vector2 MinPos, out System.Numerics.Vector2 MaxPos)
+    public unsafe virtual void GetSubtitleRegion(out System.Numerics.Vector2 MinPos, out System.Numerics.Vector2 MaxPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetSubtitleRegion", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -287,7 +287,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: LayoutPlayers
     /// </summary>
-    public unsafe void LayoutPlayers()
+    public unsafe virtual void LayoutPlayers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.LayoutPlayers", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -298,7 +298,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateActiveSplitscreenType
     /// </summary>
-    public unsafe void UpdateActiveSplitscreenType()
+    public unsafe virtual void UpdateActiveSplitscreenType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.UpdateActiveSplitscreenType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -309,7 +309,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSplitscreenConfiguration
     /// </summary>
-    public unsafe BmSDK.Engine.GameViewportClient.ESplitScreenType GetSplitscreenConfiguration()
+    public unsafe virtual BmSDK.Engine.GameViewportClient.ESplitScreenType GetSplitscreenConfiguration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetSplitscreenConfiguration", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -320,7 +320,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSplitscreenConfiguration
     /// </summary>
-    public unsafe void SetSplitscreenConfiguration(BmSDK.Engine.GameViewportClient.ESplitScreenType SplitType)
+    public unsafe virtual void SetSplitscreenConfiguration(BmSDK.Engine.GameViewportClient.ESplitScreenType SplitType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.SetSplitscreenConfiguration", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -332,7 +332,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GameSessionEnded
     /// </summary>
-    public unsafe void GameSessionEnded()
+    public unsafe virtual void GameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GameSessionEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -343,7 +343,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InsertInteraction
     /// </summary>
-    public unsafe int InsertInteraction(BmSDK.Engine.Interaction NewInteraction, int InIndex = default)
+    public unsafe virtual int InsertInteraction(BmSDK.Engine.Interaction NewInteraction, int InIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.InsertInteraction", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -356,7 +356,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateInitialPlayer
     /// </summary>
-    public unsafe bool CreateInitialPlayer(out BmSDK.FString OutError)
+    public unsafe virtual bool CreateInitialPlayer(out BmSDK.FString OutError)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.CreateInitialPlayer", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -368,7 +368,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(out BmSDK.FString OutError)
+    public unsafe virtual bool Init(out BmSDK.FString OutError)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.Init", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -380,7 +380,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPlayerByControllerId
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer FindPlayerByControllerId(int ControllerId)
+    public unsafe virtual BmSDK.Engine.LocalPlayer FindPlayerByControllerId(int ControllerId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.FindPlayerByControllerId", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -392,7 +392,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePlayer
     /// </summary>
-    public unsafe bool RemovePlayer(BmSDK.Engine.LocalPlayer ExPlayer)
+    public unsafe virtual bool RemovePlayer(BmSDK.Engine.LocalPlayer ExPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.RemovePlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -404,7 +404,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CreatePlayer
     /// </summary>
-    public unsafe BmSDK.Engine.LocalPlayer CreatePlayer(int ControllerId, out BmSDK.FString OutError, bool bSpawnActor)
+    public unsafe virtual BmSDK.Engine.LocalPlayer CreatePlayer(int ControllerId, out BmSDK.FString OutError, bool bSpawnActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.CreatePlayer", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -418,7 +418,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCustomInteractionObject
     /// </summary>
-    public unsafe void SetCustomInteractionObject(BmSDK.Engine.Interaction InInteraction)
+    public unsafe virtual void SetCustomInteractionObject(BmSDK.Engine.Interaction InInteraction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.SetCustomInteractionObject", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -437,7 +437,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCustomInteractionClass
     /// </summary>
-    public unsafe BmSDK.Class GetCustomInteractionClass(int InIndex)
+    public unsafe virtual BmSDK.Class GetCustomInteractionClass(int InIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetCustomInteractionClass", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -456,7 +456,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumCustomInteractions
     /// </summary>
-    public unsafe int GetNumCustomInteractions()
+    public unsafe virtual int GetNumCustomInteractions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetNumCustomInteractions", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -474,7 +474,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldForceFullscreenViewport
     /// </summary>
-    public unsafe bool ShouldForceFullscreenViewport()
+    public unsafe virtual bool ShouldForceFullscreenViewport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.ShouldForceFullscreenViewport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -492,7 +492,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Is4x3
     /// </summary>
-    public unsafe bool Is4x3()
+    public unsafe virtual bool Is4x3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.Is4x3", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -510,7 +510,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Is16x9
     /// </summary>
-    public unsafe bool Is16x9()
+    public unsafe virtual bool Is16x9()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.Is16x9", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -528,7 +528,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsFullScreenViewport
     /// </summary>
-    public unsafe bool IsFullScreenViewport()
+    public unsafe virtual bool IsFullScreenViewport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.IsFullScreenViewport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -546,7 +546,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetViewportSize
     /// </summary>
-    public unsafe void GetViewportSize(out System.Numerics.Vector2 out_ViewportSize)
+    public unsafe virtual void GetViewportSize(out System.Numerics.Vector2 out_ViewportSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.GetViewportSize", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -565,7 +565,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ConsoleCommand
     /// </summary>
-    public unsafe BmSDK.FString ConsoleCommand(BmSDK.FString Command)
+    public unsafe virtual BmSDK.FString ConsoleCommand(BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.ConsoleCommand", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -584,7 +584,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleInputChar
     /// </summary>
-    public unsafe bool HandleInputChar(int ControllerId, BmSDK.FString Unicode)
+    public unsafe virtual bool HandleInputChar(int ControllerId, BmSDK.FString Unicode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.HandleInputChar", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -597,7 +597,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleInputAxis
     /// </summary>
-    public unsafe bool HandleInputAxis(int ControllerId, BmSDK.FName Key, float Delta, float DeltaTime, bool bGamepad)
+    public unsafe virtual bool HandleInputAxis(int ControllerId, BmSDK.FName Key, float Delta, float DeltaTime, bool bGamepad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.HandleInputAxis", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -613,7 +613,7 @@ public partial class GameViewportClient : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HandleInputKey
     /// </summary>
-    public unsafe bool HandleInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed, bool bGamepad = default)
+    public unsafe virtual bool HandleInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameViewportClient.HandleInputKey", true);
         byte* paramsPtr = stackalloc byte[28];

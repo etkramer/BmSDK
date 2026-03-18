@@ -71,7 +71,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: StartSink
     /// </summary>
-    public unsafe void StartSink()
+    public unsafe virtual void StartSink()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.StartSink", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: DestroyShurikan
     /// </summary>
-    public unsafe void DestroyShurikan()
+    public unsafe virtual void DestroyShurikan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.DestroyShurikan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.Touch", true);
         byte* paramsPtr = stackalloc byte[280];
@@ -108,7 +108,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.Explode", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -121,7 +121,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.HitWall", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -135,7 +135,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -153,7 +153,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -211,7 +211,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: SpawnBatarangedParticles
     /// </summary>
-    public unsafe void SpawnBatarangedParticles()
+    public unsafe virtual void SpawnBatarangedParticles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.SpawnBatarangedParticles", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -222,7 +222,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: SpawnSandParticles
     /// </summary>
-    public unsafe void SpawnSandParticles()
+    public unsafe virtual void SpawnSandParticles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.SpawnSandParticles", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -233,7 +233,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: SpawnHitParticles
     /// </summary>
-    public unsafe void SpawnHitParticles()
+    public unsafe virtual void SpawnHitParticles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.SpawnHitParticles", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -244,7 +244,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: Release
     /// </summary>
-    public unsafe void Release(BmSDK.Engine.ParticleSystem BlastPS, System.Numerics.Vector3 InitialMoveVec, System.Numerics.Vector3 TargetLoc)
+    public unsafe virtual void Release(BmSDK.Engine.ParticleSystem BlastPS, System.Numerics.Vector3 InitialMoveVec, System.Numerics.Vector3 TargetLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.Release", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -258,7 +258,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPawnBossRasBase RasPawn, BmSDK.BmGame.RRasDemonBlastBase NextDemonBlast = default)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPawnBossRasBase RasPawn, BmSDK.BmGame.RRasDemonBlastBase NextDemonBlast = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -271,7 +271,7 @@ public partial class RRasDemonBlastBase : BmSDK.BmGame.RProjectile, BmSDK.BmGame
     /// <summary>
     /// Function: UpdateRotation
     /// </summary>
-    public unsafe void UpdateRotation()
+    public unsafe virtual void UpdateRotation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRasDemonBlastBase.UpdateRotation", true);
         byte* paramsPtr = stackalloc byte[0];

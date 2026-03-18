@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnTick
     /// </summary>
-    public unsafe void OnTick()
+    public unsafe override void OnTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: PS3SignIn
     /// </summary>
-    public unsafe void PS3SignIn()
+    public unsafe virtual void PS3SignIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.PS3SignIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: StartPS3SignIn
     /// </summary>
-    public unsafe void StartPS3SignIn()
+    public unsafe virtual void StartPS3SignIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.StartPS3SignIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SendLeaderBoardToFlash
     /// </summary>
-    public unsafe void SendLeaderBoardToFlash(int Total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores)
+    public unsafe override void SendLeaderBoardToFlash(int Total, BmSDK.TArray<int> FriendIndex, BmSDK.TArray<int> Ranks, BmSDK.TArray<BmSDK.FString> NickNames, BmSDK.TArray<int> Stars, BmSDK.TArray<float> Scores)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.SendLeaderBoardToFlash", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -86,7 +86,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: TriggerLeaderboard_CB
     /// </summary>
-    public unsafe void TriggerLeaderboard_CB()
+    public unsafe virtual void TriggerLeaderboard_CB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.TriggerLeaderboard_CB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: TriggerLeaderboard_Clear
     /// </summary>
-    public unsafe void TriggerLeaderboard_Clear()
+    public unsafe virtual void TriggerLeaderboard_Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.TriggerLeaderboard_Clear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_FetchStats
     /// </summary>
-    public unsafe void Live_FetchStats(BmSDK.Engine.UIDataStore_OnlineStats.EStatsFetchType StatsFetchType, int LeaderboardOffset)
+    public unsafe virtual void Live_FetchStats(BmSDK.Engine.UIDataStore_OnlineStats.EStatsFetchType StatsFetchType, int LeaderboardOffset)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_FetchStats", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -121,7 +121,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_GetNickName
     /// </summary>
-    public unsafe BmSDK.FString Live_GetNickName()
+    public unsafe virtual BmSDK.FString Live_GetNickName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_GetNickName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -132,7 +132,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_ShowGamerCard
     /// </summary>
-    public unsafe void Live_ShowGamerCard(int FriendIndex)
+    public unsafe virtual void Live_ShowGamerCard(int FriendIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_ShowGamerCard", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_CanShowGamerCard
     /// </summary>
-    public unsafe bool Live_CanShowGamerCard(int FriendIndex)
+    public unsafe virtual bool Live_CanShowGamerCard(int FriendIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_CanShowGamerCard", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_IsSignedInOnline
     /// </summary>
-    public unsafe bool Live_IsSignedInOnline()
+    public unsafe override bool Live_IsSignedInOnline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_IsSignedInOnline", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Live_CanPlayOnline
     /// </summary>
-    public unsafe bool Live_CanPlayOnline()
+    public unsafe virtual bool Live_CanPlayOnline()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Live_CanPlayOnline", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -178,7 +178,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: FetchCampaignIDs
     /// </summary>
-    public unsafe void FetchCampaignIDs(int ChallengeID, BmSDK.FString TargetPath)
+    public unsafe virtual void FetchCampaignIDs(int ChallengeID, BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.FetchCampaignIDs", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -191,7 +191,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: GetGoalTitles
     /// </summary>
-    public unsafe void GetGoalTitles(int Round, BmSDK.FString TargetPath)
+    public unsafe virtual void GetGoalTitles(int Round, BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.GetGoalTitles", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -204,7 +204,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: FetchMapPageList
     /// </summary>
-    public unsafe BmSDK.FString FetchMapPageList(int PageId, BmSDK.FString TargetPath)
+    public unsafe virtual BmSDK.FString FetchMapPageList(int PageId, BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.FetchMapPageList", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -217,7 +217,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: FetchMapPageTotalCount
     /// </summary>
-    public unsafe void FetchMapPageTotalCount(BmSDK.FString TargetPath)
+    public unsafe virtual void FetchMapPageTotalCount(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.FetchMapPageTotalCount", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -229,7 +229,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: IsPredatorMap
     /// </summary>
-    public unsafe bool IsPredatorMap(int ChallengeID)
+    public unsafe virtual bool IsPredatorMap(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.IsPredatorMap", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -241,7 +241,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: BuildPage
     /// </summary>
-    public unsafe void BuildPage(BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.LobbyPageType PageType, BmSDK.FString Title, BmSDK.TArray<int> Ids, BmSDK.TArray<int> PackIds)
+    public unsafe virtual void BuildPage(BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.LobbyPageType PageType, BmSDK.FString Title, BmSDK.TArray<int> Ids, BmSDK.TArray<int> PackIds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.BuildPage", true);
         byte* paramsPtr = stackalloc byte[192];
@@ -256,7 +256,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: BuildMapPagesList
     /// </summary>
-    public unsafe void BuildMapPagesList()
+    public unsafe virtual void BuildMapPagesList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.BuildMapPagesList", true);
         byte* paramsPtr = stackalloc byte[100];
@@ -267,7 +267,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SortBySId
     /// </summary>
-    public unsafe int SortBySId(BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.FIDSorter A, BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.FIDSorter B)
+    public unsafe virtual int SortBySId(BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.FIDSorter A, BmSDK.BmGame.RGFxMovieUI_RiddlerMapSelectBase.FIDSorter B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.SortBySId", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -280,7 +280,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: LoadingBar_Load
     /// </summary>
-    public unsafe void LoadingBar_Load(BmSDK.FString inItem, BmSDK.FString inFlash_Callback)
+    public unsafe virtual void LoadingBar_Load(BmSDK.FString inItem, BmSDK.FString inFlash_Callback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.LoadingBar_Load", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -293,7 +293,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: LoadingBar_FetchLoadList
     /// </summary>
-    public unsafe void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
+    public unsafe virtual void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.LoadingBar_FetchLoadList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -305,7 +305,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: IsBusy
     /// </summary>
-    public unsafe bool IsBusy()
+    public unsafe virtual bool IsBusy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.IsBusy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -316,7 +316,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: BuildLoadList
     /// </summary>
-    public unsafe bool BuildLoadList()
+    public unsafe virtual bool BuildLoadList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.BuildLoadList", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -327,7 +327,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: LoadPackage
     /// </summary>
-    public unsafe void LoadPackage(BmSDK.FString PkgName)
+    public unsafe virtual void LoadPackage(BmSDK.FString PkgName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.LoadPackage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -346,7 +346,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: LoadPackages_CB
     /// </summary>
-    public unsafe void LoadPackages_CB(BmSDK.GameObject pkg)
+    public unsafe virtual void LoadPackages_CB(BmSDK.GameObject pkg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.LoadPackages_CB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -358,7 +358,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SetScreenPrompts
     /// </summary>
-    public unsafe void SetScreenPrompts(int Id)
+    public unsafe virtual void SetScreenPrompts(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.SetScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -370,7 +370,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -381,7 +381,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: TriggerFadeThenRun
     /// </summary>
-    public unsafe void TriggerFadeThenRun()
+    public unsafe virtual void TriggerFadeThenRun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.TriggerFadeThenRun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -392,7 +392,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: StartGame
     /// </summary>
-    public unsafe void StartGame(int SelectedPageIndex, int SelectedMapIndex)
+    public unsafe virtual void StartGame(int SelectedPageIndex, int SelectedMapIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.StartGame", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -405,7 +405,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: SetSelectedChallenge
     /// </summary>
-    public unsafe void SetSelectedChallenge(int SelectedPageIndex, int SelectedMapIndex)
+    public unsafe virtual void SetSelectedChallenge(int SelectedPageIndex, int SelectedMapIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.SetSelectedChallenge", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -418,7 +418,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int inID)
+    public unsafe override void OnClicked(int inID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -430,7 +430,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe override void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -441,7 +441,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnBackCustom
     /// </summary>
-    public unsafe void OnBackCustom()
+    public unsafe override void OnBackCustom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnBackCustom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -452,7 +452,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -463,7 +463,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: GetMedalTotal
     /// </summary>
-    public unsafe BmSDK.FString GetMedalTotal()
+    public unsafe virtual BmSDK.FString GetMedalTotal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.GetMedalTotal", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -474,7 +474,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -487,7 +487,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.Init", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -499,7 +499,7 @@ public partial class RGFxMovieUI_RiddlerMapSelectBase : BmSDK.BmGame.RGFxMovieUI
     /// <summary>
     /// Function: FindDefs
     /// </summary>
-    public unsafe void FindDefs()
+    public unsafe virtual void FindDefs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_RiddlerMapSelectBase.FindDefs", true);
         byte* paramsPtr = stackalloc byte[0];

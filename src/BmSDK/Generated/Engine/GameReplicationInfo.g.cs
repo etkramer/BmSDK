@@ -71,7 +71,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: SetFadeInstantly
     /// </summary>
-    public unsafe void SetFadeInstantly(float FadePerc, bool bFadeAudio, bool InFadeDuringMovieCapture = default)
+    public unsafe virtual void SetFadeInstantly(float FadePerc, bool bFadeAudio, bool InFadeDuringMovieCapture = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.SetFadeInstantly", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -85,7 +85,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: ShouldShowGore
     /// </summary>
-    public unsafe bool ShouldShowGore()
+    public unsafe virtual bool ShouldShowGore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.ShouldShowGore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: EndGame
     /// </summary>
-    public unsafe void EndGame()
+    public unsafe virtual void EndGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.EndGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: StartMatch
     /// </summary>
-    public unsafe void StartMatch()
+    public unsafe virtual void StartMatch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.StartMatch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: SetTeam
     /// </summary>
-    public unsafe void SetTeam(int Index, BmSDK.Engine.TeamInfo TI)
+    public unsafe virtual void SetTeam(int Index, BmSDK.Engine.TeamInfo TI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.SetTeam", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: RemovePRI
     /// </summary>
-    public unsafe void RemovePRI(BmSDK.Engine.PlayerReplicationInfo PRI)
+    public unsafe virtual void RemovePRI(BmSDK.Engine.PlayerReplicationInfo PRI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.RemovePRI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: AddPRI
     /// </summary>
-    public unsafe void AddPRI(BmSDK.Engine.PlayerReplicationInfo PRI)
+    public unsafe virtual void AddPRI(BmSDK.Engine.PlayerReplicationInfo PRI)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.AddPRI", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: OnSameTeam
     /// </summary>
-    public unsafe bool OnSameTeam(BmSDK.Engine.Actor A, BmSDK.Engine.Actor B)
+    public unsafe virtual bool OnSameTeam(BmSDK.Engine.Actor A, BmSDK.Engine.Actor B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.OnSameTeam", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -175,7 +175,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: Timer
     /// </summary>
-    public unsafe void Timer()
+    public unsafe override void Timer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.Timer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: ReceivedGameClass
     /// </summary>
-    public unsafe void ReceivedGameClass()
+    public unsafe virtual void ReceivedGameClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.ReceivedGameClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class GameReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameReplicationInfo.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];

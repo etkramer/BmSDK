@@ -71,7 +71,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnPartHit
     /// </summary>
-    public unsafe void OnPartHit()
+    public unsafe virtual void OnPartHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.OnPartHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnToProtect
     /// </summary>
-    public unsafe void TurnToProtect()
+    public unsafe virtual void TurnToProtect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.TurnToProtect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RestoreTurnRate
     /// </summary>
-    public unsafe void RestoreTurnRate()
+    public unsafe virtual void RestoreTurnRate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.RestoreTurnRate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTargetTurnRateDeg
     /// </summary>
-    public unsafe void SetTargetTurnRateDeg(float RateDeg)
+    public unsafe virtual void SetTargetTurnRateDeg(float RateDeg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.SetTargetTurnRateDeg", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RShield_Ras : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Activate
     /// </summary>
-    public unsafe void Activate(bool bIsEasy)
+    public unsafe virtual void Activate(bool bIsEasy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RShield_Ras.Activate", true);
         byte* paramsPtr = stackalloc byte[4];

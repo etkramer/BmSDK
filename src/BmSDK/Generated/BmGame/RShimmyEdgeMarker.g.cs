@@ -71,7 +71,7 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
     /// <summary>
     /// Function: SetupFromActor
     /// </summary>
-    public unsafe void SetupFromActor(BmSDK.Engine.Actor inActor)
+    public unsafe virtual void SetupFromActor(BmSDK.Engine.Actor inActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShimmyEdgeMarker.SetupFromActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShimmyEdgeMarker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
     /// <summary>
     /// Function: RegisterShimmyEdgeMarker
     /// </summary>
-    public unsafe void RegisterShimmyEdgeMarker()
+    public unsafe virtual void RegisterShimmyEdgeMarker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShimmyEdgeMarker.RegisterShimmyEdgeMarker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSD
     /// <summary>
     /// Function: SetupEndPoints
     /// </summary>
-    public unsafe void SetupEndPoints()
+    public unsafe virtual void SetupEndPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RShimmyEdgeMarker.SetupEndPoints", true);
         byte* paramsPtr = stackalloc byte[0];

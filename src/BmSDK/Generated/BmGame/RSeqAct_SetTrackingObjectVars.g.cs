@@ -47,7 +47,7 @@ public partial class RSeqAct_SetTrackingObjectVars : BmSDK.Engine.SequenceAction
     /// <summary>
     /// Function: SetT
     /// </summary>
-    public unsafe void SetT()
+    public unsafe virtual void SetT()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetTrackingObjectVars.SetT", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetTrackingObjectVars : BmSDK.Engine.SequenceAction
     /// <summary>
     /// Function: CheckDistance
     /// </summary>
-    public unsafe bool CheckDistance(BmSDK.BmGame.RTrackingObjectBase CameraBase)
+    public unsafe virtual bool CheckDistance(BmSDK.BmGame.RTrackingObjectBase CameraBase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetTrackingObjectVars.CheckDistance", true);
         byte* paramsPtr = stackalloc byte[8];

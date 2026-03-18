@@ -71,7 +71,7 @@ public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: FrozenThugSpottedBy
     /// </summary>
-    public unsafe void FrozenThugSpottedBy(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void FrozenThugSpottedBy(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FrozenThug.FrozenThugSpottedBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: SetFrozenThug
     /// </summary>
-    public unsafe void SetFrozenThug(BmSDK.BmGame.RBMAIController FrozenCon)
+    public unsafe virtual void SetFrozenThug(BmSDK.BmGame.RBMAIController FrozenCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FrozenThug.SetFrozenThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: RemoveChild
     /// </summary>
-    public unsafe void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
+    public unsafe override void RemoveChild(BmSDK.BmGame.RAlertEventCoordinatorBase RemAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_FrozenThug.RemoveChild", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RCrowdSpawner_XPBats : BmSDK.BmGame.RCrowdSpawner, BmSDK.IG
     /// <summary>
     /// Function: SpawnAgent
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrowdAgent SpawnAgent()
+    public unsafe override BmSDK.BmGame.RCrowdAgent SpawnAgent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner_XPBats.SpawnAgent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RCrowdSpawner_XPBats : BmSDK.BmGame.RCrowdSpawner, BmSDK.IG
     /// <summary>
     /// Function: SpawnCrowd
     /// </summary>
-    public unsafe void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
+    public unsafe override void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner_XPBats.SpawnCrowd", true);
         byte* paramsPtr = stackalloc byte[12];

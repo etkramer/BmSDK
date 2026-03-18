@@ -71,7 +71,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: AllowMovementExit
     /// </summary>
-    public unsafe void AllowMovementExit()
+    public unsafe override void AllowMovementExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.AllowMovementExit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetDamageDir
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDamageDir()
+    public unsafe virtual System.Numerics.Vector3 GetDamageDir()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.GetDamageDir", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -151,7 +151,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: SlowMoOff
     /// </summary>
-    public unsafe void SlowMoOff()
+    public unsafe virtual void SlowMoOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.SlowMoOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: SlowishMoOn
     /// </summary>
-    public unsafe void SlowishMoOn()
+    public unsafe virtual void SlowishMoOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.SlowishMoOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: SlowMoOn
     /// </summary>
-    public unsafe void SlowMoOn()
+    public unsafe virtual void SlowMoOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.SlowMoOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: StopTrail
     /// </summary>
-    public unsafe void StopTrail()
+    public unsafe virtual void StopTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.StopTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: StartTrailHand
     /// </summary>
-    public unsafe void StartTrailHand()
+    public unsafe virtual void StartTrailHand()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.StartTrailHand", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -206,7 +206,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: StartTrail
     /// </summary>
-    public unsafe void StartTrail()
+    public unsafe virtual void StartTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.StartTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: FinalBlow
     /// </summary>
-    public unsafe void FinalBlow()
+    public unsafe virtual void FinalBlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.FinalBlow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: StrikeContact
     /// </summary>
-    public unsafe void StrikeContact(bool bPreStrike)
+    public unsafe override void StrikeContact(bool bPreStrike)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.StrikeContact", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -240,7 +240,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -251,7 +251,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: CanBeStruckBy
     /// </summary>
-    public unsafe bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
+    public unsafe override bool CanBeStruckBy(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat Defender)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.CanBeStruckBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -264,7 +264,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: IsPawnVulnerableToPawn
     /// </summary>
-    public unsafe bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe override bool IsPawnVulnerableToPawn(BmSDK.BmGame.RPawnCombat Defender, BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.IsPawnVulnerableToPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -277,7 +277,7 @@ public partial class RCombatMove_CatwomanCauseTitanBerserk : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_CatwomanCauseTitanBerserk.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[12];

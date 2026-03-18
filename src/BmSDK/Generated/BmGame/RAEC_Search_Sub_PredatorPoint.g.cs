@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Sub_Forma
     /// <summary>
     /// Function: StartFromSearch
     /// </summary>
-    public unsafe void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RPredatorSpecialMovePointBase NewPredatorPoint)
+    public unsafe virtual void StartFromSearch(BmSDK.BmGame.RBMAIController NewCon, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldSearchState, BmSDK.BmGame.RPredatorSpecialMovePointBase NewPredatorPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.StartFromSearch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -85,7 +85,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Sub_Forma
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -97,7 +97,7 @@ public partial class RAEC_Search_Sub_PredatorPoint : BmSDK.BmGame.RAEC_Sub_Forma
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_PredatorPoint.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

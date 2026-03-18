@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: ReceiveCombatEvent
     /// </summary>
-    public unsafe void ReceiveCombatEvent(BmSDK.BmGame.RPawnCombat EventInstigator, System.Numerics.Vector3 EventLocation, System.Numerics.Vector3 SightingLocation)
+    public unsafe virtual void ReceiveCombatEvent(BmSDK.BmGame.RPawnCombat EventInstigator, System.Numerics.Vector3 EventLocation, System.Numerics.Vector3 SightingLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.ReceiveCombatEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -73,7 +73,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OverrideGetupStances
     /// </summary>
-    public unsafe bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
+    public unsafe override bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OverrideGetupStances", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -86,7 +86,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -98,7 +98,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: ScaredThug
     /// </summary>
-    public unsafe void ScaredThug(BmSDK.BmGame.RPawnCombat Thug)
+    public unsafe virtual void ScaredThug(BmSDK.BmGame.RPawnCombat Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.ScaredThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: NewPredThugSpawned
     /// </summary>
-    public unsafe void NewPredThugSpawned()
+    public unsafe override void NewPredThugSpawned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.NewPredThugSpawned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: ReleaseNavHandle
     /// </summary>
-    public unsafe void ReleaseNavHandle()
+    public unsafe virtual void ReleaseNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.ReleaseNavHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: FindNextPoint
     /// </summary>
-    public unsafe void FindNextPoint()
+    public unsafe virtual void FindNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.FindNextPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetAimAtActor()
+    public unsafe virtual BmSDK.Engine.Actor GetAimAtActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GetAimAtActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: SetNextAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
+    public unsafe virtual BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.SetNextAimAtActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: FindPathToCurrPoint
     /// </summary>
-    public unsafe void FindPathToCurrPoint()
+    public unsafe virtual void FindPathToCurrPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.FindPathToCurrPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: CanPlayDialogue
     /// </summary>
-    public unsafe bool CanPlayDialogue()
+    public unsafe virtual bool CanPlayDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.CanPlayDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetSniperPointInfo
     /// </summary>
-    public unsafe bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
+    public unsafe virtual bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GetSniperPointInfo", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -201,7 +201,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetNavHandleAndPath_Override
     /// </summary>
-    public unsafe void GetNavHandleAndPath_Override(System.Numerics.Vector3 DestPos, BmSDK.FName ClaimName)
+    public unsafe virtual void GetNavHandleAndPath_Override(System.Numerics.Vector3 DestPos, BmSDK.FName ClaimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GetNavHandleAndPath_Override", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -214,7 +214,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: LostSightOfPlayer
     /// </summary>
-    public unsafe void LostSightOfPlayer()
+    public unsafe virtual void LostSightOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.LostSightOfPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -225,7 +225,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: SeenPlayer
     /// </summary>
-    public unsafe void SeenPlayer()
+    public unsafe virtual void SeenPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.SeenPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -248,7 +248,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GlobalTick
     /// </summary>
-    public unsafe void GlobalTick(float DeltaTime)
+    public unsafe virtual void GlobalTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GlobalTick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -260,7 +260,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnReceivedImpulse
     /// </summary>
-    public unsafe void OnReceivedImpulse(int ActivatedLinkID)
+    public unsafe override void OnReceivedImpulse(int ActivatedLinkID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OnReceivedImpulse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: Damaged
     /// </summary>
-    public unsafe void Damaged()
+    public unsafe virtual void Damaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.Damaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: SetNextRandAlertedPoint
     /// </summary>
-    public unsafe void SetNextRandAlertedPoint()
+    public unsafe virtual void SetNextRandAlertedPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.SetNextRandAlertedPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -294,7 +294,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: Alerted
     /// </summary>
-    public unsafe void Alerted()
+    public unsafe virtual void Alerted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.Alerted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GetAlertedPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RSniperPoint GetAlertedPoint()
+    public unsafe virtual BmSDK.BmGame.RSniperPoint GetAlertedPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.GetAlertedPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -316,7 +316,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -327,7 +327,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -338,7 +338,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: NoPathToSniperPoint
     /// </summary>
-    public unsafe void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.NoPathToSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -350,7 +350,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: ReachedSniperPoint
     /// </summary>
-    public unsafe void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.ReachedSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -362,7 +362,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -373,7 +373,7 @@ public partial class RBMBehaviour_HarleyPred : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyPred.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

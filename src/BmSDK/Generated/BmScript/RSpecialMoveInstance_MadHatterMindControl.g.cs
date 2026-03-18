@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: PutHatOn
     /// </summary>
-    public unsafe void PutHatOn()
+    public unsafe virtual void PutHatOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.PutHatOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: ThugsLookAtBM
     /// </summary>
-    public unsafe void ThugsLookAtBM()
+    public unsafe virtual void ThugsLookAtBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.ThugsLookAtBM", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName ActionName)
+    public unsafe override void HandleAction(BmSDK.FName ActionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -153,7 +153,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -165,7 +165,7 @@ public partial class RSpecialMoveInstance_MadHatterMindControl : BmSDK.BmGame.RS
     /// <summary>
     /// Function: setSeqAct
     /// </summary>
-    public unsafe void setSeqAct(BmSDK.BmScript.RSeqAct_MadHatterMindControl Seq)
+    public unsafe virtual void setSeqAct(BmSDK.BmScript.RSeqAct_MadHatterMindControl Seq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_MadHatterMindControl.setSeqAct", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RAEC_Sub_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: FrozenThugSpottedBy
     /// </summary>
-    public unsafe void FrozenThugSpottedBy(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void FrozenThugSpottedBy(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_FrozenThug.FrozenThugSpottedBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RAEC_Sub_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_FrozenThug.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -97,7 +97,7 @@ public partial class RAEC_Sub_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_FrozenThug.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RAEC_Sub_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_FrozenThug.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];

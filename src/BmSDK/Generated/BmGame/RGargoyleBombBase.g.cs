@@ -71,7 +71,7 @@ public partial class RGargoyleBombBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BatmanOnGargoyle
     /// </summary>
-    public unsafe void BatmanOnGargoyle()
+    public unsafe virtual void BatmanOnGargoyle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargoyleBombBase.BatmanOnGargoyle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGargoyleBombBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateBomb
     /// </summary>
-    public unsafe void ActivateBomb()
+    public unsafe virtual void ActivateBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGargoyleBombBase.ActivateBomb", true);
         byte* paramsPtr = stackalloc byte[0];

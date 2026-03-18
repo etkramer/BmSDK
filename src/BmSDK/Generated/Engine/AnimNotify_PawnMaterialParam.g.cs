@@ -36,7 +36,7 @@ public partial class AnimNotify_PawnMaterialParam : BmSDK.Engine.AnimNotify_Scri
     /// <summary>
     /// Function: Notify
     /// </summary>
-    public unsafe void Notify(BmSDK.Engine.Actor Owner, BmSDK.Engine.SkeletalMeshComponent AnimSeqInstigator)
+    public unsafe override void Notify(BmSDK.Engine.Actor Owner, BmSDK.Engine.SkeletalMeshComponent AnimSeqInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNotify_PawnMaterialParam.Notify", true);
         byte* paramsPtr = stackalloc byte[36];

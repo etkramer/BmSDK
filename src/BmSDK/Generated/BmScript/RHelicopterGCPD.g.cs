@@ -71,7 +71,7 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
     /// <summary>
     /// Function: SetupPlayerGrapplePoint
     /// </summary>
-    public unsafe void SetupPlayerGrapplePoint()
+    public unsafe override void SetupPlayerGrapplePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterGCPD.SetupPlayerGrapplePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
     /// <summary>
     /// Function: ApplyXrayMat
     /// </summary>
-    public unsafe void ApplyXrayMat(BmSDK.Engine.MaterialInstanceConstant NewXrayMat)
+    public unsafe override void ApplyXrayMat(BmSDK.Engine.MaterialInstanceConstant NewXrayMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterGCPD.ApplyXrayMat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
     /// <summary>
     /// Function: SetHighlightType
     /// </summary>
-    public unsafe void SetHighlightType(BmSDK.BmScript.RHelicopter.HeliHighlightType new_type)
+    public unsafe override void SetHighlightType(BmSDK.BmScript.RHelicopter.HeliHighlightType new_type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterGCPD.SetHighlightType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -106,7 +106,7 @@ public partial class RHelicopterGCPD : BmSDK.BmScript.RHelicopter, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterGCPD.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

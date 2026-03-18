@@ -66,7 +66,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: UpdateMovement
     /// </summary>
-    public unsafe void UpdateMovement()
+    public unsafe virtual void UpdateMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.UpdateMovement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: BeginMovement
     /// </summary>
-    public unsafe void BeginMovement()
+    public unsafe virtual void BeginMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.BeginMovement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: FindMovementDestination
     /// </summary>
-    public unsafe bool FindMovementDestination()
+    public unsafe virtual bool FindMovementDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.FindMovementDestination", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -99,7 +99,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: ShouldIMove
     /// </summary>
-    public unsafe bool ShouldIMove()
+    public unsafe virtual bool ShouldIMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.ShouldIMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: NavMeshRepath
     /// </summary>
-    public unsafe void NavMeshRepath()
+    public unsafe virtual void NavMeshRepath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.NavMeshRepath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe virtual void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetHitReactAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetHitReactAnimSet()
+    public unsafe virtual BmSDK.Engine.AnimSet GetHitReactAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetHitReactAnimSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetHitReactAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetHitReactAnimName(bool bLeft)
+    public unsafe virtual BmSDK.FName GetHitReactAnimName(bool bLeft)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetHitReactAnimName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -155,7 +155,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -166,7 +166,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetRECHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetRECHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.Died", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -191,7 +191,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -203,7 +203,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetCombatWeaponStance
     /// </summary>
-    public unsafe BmSDK.FName GetCombatWeaponStance(bool bWeaponWillBeDropped)
+    public unsafe override BmSDK.FName GetCombatWeaponStance(bool bWeaponWillBeDropped)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetCombatWeaponStance", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -215,7 +215,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetCombatStance
     /// </summary>
-    public unsafe BmSDK.FName GetCombatStance()
+    public unsafe override BmSDK.FName GetCombatStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetCombatStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -226,7 +226,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: ShouldForceBeatDownEnd
     /// </summary>
-    public unsafe bool ShouldForceBeatDownEnd()
+    public unsafe override bool ShouldForceBeatDownEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.ShouldForceBeatDownEnd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -237,7 +237,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: ShouldForceBeatDown
     /// </summary>
-    public unsafe bool ShouldForceBeatDown()
+    public unsafe override bool ShouldForceBeatDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.ShouldForceBeatDown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -248,7 +248,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: GetBlockBreakerStunTime
     /// </summary>
-    public unsafe float GetBlockBreakerStunTime()
+    public unsafe override float GetBlockBreakerStunTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.GetBlockBreakerStunTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -259,7 +259,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: IgniteCameraReturnFromCut
     /// </summary>
-    public unsafe void IgniteCameraReturnFromCut()
+    public unsafe virtual void IgniteCameraReturnFromCut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.IgniteCameraReturnFromCut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: StopMeleeCamera
     /// </summary>
-    public unsafe void StopMeleeCamera()
+    public unsafe virtual void StopMeleeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.StopMeleeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -281,7 +281,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: PlayMeleeCamera
     /// </summary>
-    public unsafe void PlayMeleeCamera()
+    public unsafe virtual void PlayMeleeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.PlayMeleeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: SpawnLauncher
     /// </summary>
-    public unsafe void SpawnLauncher()
+    public unsafe virtual void SpawnLauncher()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.SpawnLauncher", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -303,7 +303,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: MagBlast
     /// </summary>
-    public unsafe void MagBlast(float Str)
+    public unsafe virtual void MagBlast(float Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.MagBlast", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -315,7 +315,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -326,7 +326,7 @@ public partial class RPawnBossPenguinBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossPenguinBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

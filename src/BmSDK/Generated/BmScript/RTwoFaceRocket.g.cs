@@ -71,7 +71,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: RemoveBomb
     /// </summary>
-    public unsafe void RemoveBomb()
+    public unsafe virtual void RemoveBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.RemoveBomb", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: HurtBatman
     /// </summary>
-    public unsafe void HurtBatman()
+    public unsafe virtual void HurtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.HurtBatman", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -93,7 +93,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: HitLevel
     /// </summary>
-    public unsafe void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.HitLevel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -106,7 +106,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: TriggerCowerEvent
     /// </summary>
-    public unsafe void TriggerCowerEvent()
+    public unsafe virtual void TriggerCowerEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.TriggerCowerEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe virtual void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.Explode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: InitialiseRocket
     /// </summary>
-    public unsafe void InitialiseRocket(BmSDK.BmScript.RPawnVillainTwoFace Spawner, float Damage, float FlightSpd, float ExplosionRadius, float StartAngle, float MaxWidth)
+    public unsafe virtual void InitialiseRocket(BmSDK.BmScript.RPawnVillainTwoFace Spawner, float Damage, float FlightSpd, float ExplosionRadius, float StartAngle, float MaxWidth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.InitialiseRocket", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -145,7 +145,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -157,7 +157,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: UpdateMoveTarget
     /// </summary>
-    public unsafe void UpdateMoveTarget(float DeltaTime)
+    public unsafe virtual void UpdateMoveTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.UpdateMoveTarget", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -169,7 +169,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: CheckRagdollThugs
     /// </summary>
-    public unsafe void CheckRagdollThugs()
+    public unsafe virtual void CheckRagdollThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.CheckRagdollThugs", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -180,7 +180,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: IsExploded
     /// </summary>
-    public unsafe bool IsExploded(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual bool IsExploded(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.IsExploded", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -192,7 +192,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: IsInfluenced
     /// </summary>
-    public unsafe bool IsInfluenced(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual bool IsInfluenced(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.IsInfluenced", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: CheckThugInfluence
     /// </summary>
-    public unsafe void CheckThugInfluence()
+    public unsafe virtual void CheckThugInfluence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.CheckThugInfluence", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -215,7 +215,7 @@ public partial class RTwoFaceRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.IGa
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe virtual void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTwoFaceRocket.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[4];

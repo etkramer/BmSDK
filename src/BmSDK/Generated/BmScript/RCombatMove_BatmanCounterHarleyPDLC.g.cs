@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TriggerEndAnims
     /// </summary>
-    public unsafe void TriggerEndAnims()
+    public unsafe virtual void TriggerEndAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.TriggerEndAnims", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ForcePlayCameraAnim
     /// </summary>
-    public unsafe bool ForcePlayCameraAnim(System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName AnimationName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default, float BlendInTime = default)
+    public unsafe virtual bool ForcePlayCameraAnim(System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName AnimationName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default, float BlendInTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.ForcePlayCameraAnim", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -101,7 +101,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: PlayTargetAnimation
     /// </summary>
-    public unsafe void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.PlayTargetAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: PlayBatmanAnimation
     /// </summary>
-    public unsafe void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.PlayBatmanAnimation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -127,7 +127,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetCounterAnim
     /// </summary>
-    public unsafe BmSDK.FName GetCounterAnim()
+    public unsafe override BmSDK.FName GetCounterAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.GetCounterAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -161,7 +161,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: PlayCapeAnim
     /// </summary>
-    public unsafe void PlayCapeAnim(BmSDK.FName DestCapeState, BmSDK.FName CapeAnimName = default)
+    public unsafe override void PlayCapeAnim(BmSDK.FName DestCapeState, BmSDK.FName CapeAnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.PlayCapeAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -185,7 +185,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DamageTarget
     /// </summary>
-    public unsafe void DamageTarget()
+    public unsafe override void DamageTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.DamageTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RCombatMove_BatmanCounterHarleyPDLC : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetNewMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetNewMovementStance()
+    public unsafe virtual BmSDK.FName GetNewMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyPDLC.GetNewMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];

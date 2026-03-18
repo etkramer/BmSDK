@@ -47,7 +47,7 @@ public partial class RSeqAct_CrackIce : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CrackIce.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_CrackIce : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// Function: BreakTile
     /// </summary>
-    public unsafe void BreakTile()
+    public unsafe virtual void BreakTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CrackIce.BreakTile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_CrackIce : BmSDK.Engine.SequenceAction, BmSDK.IGame
     /// <summary>
     /// Function: CrackTile
     /// </summary>
-    public unsafe void CrackTile()
+    public unsafe virtual void CrackTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CrackIce.CrackTile", true);
         byte* paramsPtr = stackalloc byte[16];

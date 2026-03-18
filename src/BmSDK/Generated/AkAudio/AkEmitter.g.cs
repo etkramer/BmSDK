@@ -71,7 +71,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEmitterEvents
     /// </summary>
-    public unsafe void StopEmitterEvents()
+    public unsafe virtual void StopEmitterEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.StopEmitterEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartEmitterEvents
     /// </summary>
-    public unsafe void StartEmitterEvents()
+    public unsafe virtual void StartEmitterEvents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.StartEmitterEvents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnAudioSourceDestroy
     /// </summary>
-    public unsafe void OnAudioSourceDestroy(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OnAudioSourceDestroy(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.OnAudioSourceDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnAudioSourceCreate
     /// </summary>
-    public unsafe void OnAudioSourceCreate(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OnAudioSourceCreate(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.OnAudioSourceCreate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyEmitterSpatial
     /// </summary>
-    public unsafe void ApplyEmitterSpatial()
+    public unsafe virtual void ApplyEmitterSpatial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.ApplyEmitterSpatial", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnableEmitter
     /// </summary>
-    public unsafe void EnableEmitter(bool Enable)
+    public unsafe virtual void EnableEmitter(bool Enable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.EnableEmitter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "AkAudio.AkEmitter.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RGameRI Game)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RGameRI Game)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectPool.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitterOnMesh
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitterOnMesh(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.SkeletalMeshComponent Skeleton = default, BmSDK.FName Bone = default, bool HardAttach = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitterOnMesh(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.SkeletalMeshComponent Skeleton = default, BmSDK.FName Bone = default, bool HardAttach = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectPool.SpawnEmitterOnMesh", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -65,7 +65,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitterOnPawn
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitterOnPawn(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.Pawn P = default, BmSDK.FName Bone = default, bool HardAttach = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitterOnPawn(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, BmSDK.Engine.Pawn P = default, BmSDK.FName Bone = default, bool HardAttach = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectPool.SpawnEmitterOnPawn", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -82,7 +82,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, int TranslucencySortPriority = default, float DrawScale = default)
+    public unsafe virtual BmSDK.Engine.Emitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation, int TranslucencySortPriority = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RObjectPool.SpawnEmitter", true);
         byte* paramsPtr = stackalloc byte[52];

@@ -31,7 +31,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEventFiltered
     /// </summary>
-    public unsafe bool IsEventFiltered(int EventID)
+    public unsafe virtual bool IsEventFiltered(int EventID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.IsEventFiltered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddFilter
     /// </summary>
-    public unsafe void AddFilter(int EventID)
+    public unsafe virtual void AddFilter(int EventID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.AddFilter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -55,7 +55,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ResolveGroupFilters
     /// </summary>
-    public unsafe void ResolveGroupFilters()
+    public unsafe virtual void ResolveGroupFilters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.ResolveGroupFilters", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -66,7 +66,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PostProcessStream
     /// </summary>
-    public unsafe void PostProcessStream()
+    public unsafe virtual void PostProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.PostProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PreProcessStream
     /// </summary>
-    public unsafe void PreProcessStream()
+    public unsafe virtual void PreProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.PreProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class GameplayEventsHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetReader
     /// </summary>
-    public unsafe void SetReader(BmSDK.Engine.GameplayEventsReader NewReader)
+    public unsafe virtual void SetReader(BmSDK.Engine.GameplayEventsReader NewReader)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsHandler.SetReader", true);
         byte* paramsPtr = stackalloc byte[4];

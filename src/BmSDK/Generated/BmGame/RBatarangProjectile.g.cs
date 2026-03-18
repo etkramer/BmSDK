@@ -66,7 +66,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: RemoveTouchingActor
     /// </summary>
-    public unsafe void RemoveTouchingActor(BmSDK.Engine.Actor Other)
+    public unsafe virtual void RemoveTouchingActor(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.RemoveTouchingActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -85,7 +85,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: Electrify
     /// </summary>
-    public unsafe void Electrify()
+    public unsafe virtual void Electrify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.Electrify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: GetTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetPosition()
+    public unsafe virtual System.Numerics.Vector3 GetTargetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.GetTargetPosition", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -107,7 +107,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: FakeRicochet
     /// </summary>
-    public unsafe void FakeRicochet()
+    public unsafe virtual void FakeRicochet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.FakeRicochet", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: DoRicochet
     /// </summary>
-    public unsafe void DoRicochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual void DoRicochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.DoRicochet", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -131,7 +131,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: Ricochet
     /// </summary>
-    public unsafe void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe virtual void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.Ricochet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -144,7 +144,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: TriggerSniperReaction
     /// </summary>
-    public unsafe void TriggerSniperReaction(System.Numerics.Vector3 EventLocation)
+    public unsafe virtual void TriggerSniperReaction(System.Numerics.Vector3 EventLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.TriggerSniperReaction", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -156,7 +156,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: TriggerCombatReaction
     /// </summary>
-    public unsafe void TriggerCombatReaction(System.Numerics.Vector3 EventLocation)
+    public unsafe virtual void TriggerCombatReaction(System.Numerics.Vector3 EventLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.TriggerCombatReaction", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -168,7 +168,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: TriggerAIReaction
     /// </summary>
-    public unsafe void TriggerAIReaction(System.Numerics.Vector3 SafeNoiseLocation, bool bWasBoothButton)
+    public unsafe virtual void TriggerAIReaction(System.Numerics.Vector3 SafeNoiseLocation, bool bWasBoothButton)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.TriggerAIReaction", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -181,7 +181,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: ApplyFluidSurfaceImpact
     /// </summary>
-    public unsafe void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
+    public unsafe override void ApplyFluidSurfaceImpact(BmSDK.Engine.FluidSurfaceActor Fluid, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.ApplyFluidSurfaceImpact", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -194,7 +194,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -208,7 +208,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: TriggerNoiseEvent
     /// </summary>
-    public unsafe void TriggerNoiseEvent()
+    public unsafe virtual void TriggerNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.TriggerNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -219,7 +219,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: VillainNotHit
     /// </summary>
-    public unsafe void VillainNotHit()
+    public unsafe virtual void VillainNotHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.VillainNotHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: VillainHit
     /// </summary>
-    public unsafe void VillainHit(BmSDK.BmGame.RPawnVillain Target)
+    public unsafe virtual void VillainHit(BmSDK.BmGame.RPawnVillain Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.VillainHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -242,7 +242,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.Touch", true);
         byte* paramsPtr = stackalloc byte[364];
@@ -257,7 +257,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: StopSpinSound
     /// </summary>
-    public unsafe void StopSpinSound()
+    public unsafe virtual void StopSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.StopSpinSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -268,7 +268,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: StartSpinSound
     /// </summary>
-    public unsafe void StartSpinSound()
+    public unsafe virtual void StartSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.StartSpinSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -279,7 +279,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: CameraStoppedTracking
     /// </summary>
-    public unsafe void CameraStoppedTracking()
+    public unsafe virtual void CameraStoppedTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.CameraStoppedTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -290,7 +290,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: CameraStartedTracking
     /// </summary>
-    public unsafe void CameraStartedTracking()
+    public unsafe virtual void CameraStartedTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.CameraStartedTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -301,7 +301,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -312,7 +312,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: StopElectrifySound
     /// </summary>
-    public unsafe void StopElectrifySound()
+    public unsafe virtual void StopElectrifySound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.StopElectrifySound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -323,7 +323,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: StartElectrifySound
     /// </summary>
-    public unsafe void StartElectrifySound()
+    public unsafe virtual void StartElectrifySound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.StartElectrifySound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -334,7 +334,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: InitBatarang
     /// </summary>
-    public unsafe void InitBatarang(System.Numerics.Vector3 ThrowDirection, BmSDK.BmGame.RBatarang Launcher, bool bFlightPathMirrored = default, BmSDK.FName BoneTarget = default, float SpeedMod = default, bool bStraightPath = default)
+    public unsafe virtual void InitBatarang(System.Numerics.Vector3 ThrowDirection, BmSDK.BmGame.RBatarang Launcher, bool bFlightPathMirrored = default, BmSDK.FName BoneTarget = default, float SpeedMod = default, bool bStraightPath = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.InitBatarang", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -351,7 +351,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -362,7 +362,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: UpdateMeshRotation
     /// </summary>
-    public unsafe void UpdateMeshRotation(float DeltaTime)
+    public unsafe virtual void UpdateMeshRotation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.UpdateMeshRotation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -381,7 +381,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: UpdateFlightPath
     /// </summary>
-    public unsafe void UpdateFlightPath(float DeltaTime)
+    public unsafe virtual void UpdateFlightPath(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.UpdateFlightPath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -400,7 +400,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: StartedFlightPath
     /// </summary>
-    public unsafe void StartedFlightPath()
+    public unsafe virtual void StartedFlightPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.StartedFlightPath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -418,7 +418,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: GetFlightPathDeltaTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFlightPathDeltaTangent(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetFlightPathDeltaTangent(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.GetFlightPathDeltaTangent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -437,7 +437,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: GetFlightPathTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFlightPathTangent(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetFlightPathTangent(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.GetFlightPathTangent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -456,7 +456,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: GetFlightPathPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFlightPathPosition(float Proportion)
+    public unsafe virtual System.Numerics.Vector3 GetFlightPathPosition(float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.GetFlightPathPosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -475,7 +475,7 @@ public partial class RBatarangProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGame
     /// <summary>
     /// Function: CalculateFlightPath
     /// </summary>
-    public unsafe void CalculateFlightPath(System.Numerics.Vector3 DesiredLaunchPosition, System.Numerics.Vector3 TargetPosition, BmSDK.Engine.Actor TargetActor, float CheckSizeMod = default, bool bStraightPath = default)
+    public unsafe virtual void CalculateFlightPath(System.Numerics.Vector3 DesiredLaunchPosition, System.Numerics.Vector3 TargetPosition, BmSDK.Engine.Actor TargetActor, float CheckSizeMod = default, bool bStraightPath = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangProjectile.CalculateFlightPath", true);
         byte* paramsPtr = stackalloc byte[36];

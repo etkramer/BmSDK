@@ -71,7 +71,7 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurretDLC.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -85,7 +85,7 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurretDLC.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// Function: DoShotFXDLC
     /// </summary>
-    public unsafe void DoShotFXDLC(System.Numerics.Vector3 TargetLoc, bool bBlocked = default)
+    public unsafe virtual void DoShotFXDLC(System.Numerics.Vector3 TargetLoc, bool bBlocked = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurretDLC.DoShotFXDLC", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -109,7 +109,7 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// Function: ShootAtTarget
     /// </summary>
-    public unsafe void ShootAtTarget(BmSDK.Engine.Actor Target)
+    public unsafe override void ShootAtTarget(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurretDLC.ShootAtTarget", true);
         byte* paramsPtr = stackalloc byte[448];
@@ -121,7 +121,7 @@ public partial class RTurretDLC : BmSDK.BmScript.RTurret, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTurretDLC.Tick", true);
         byte* paramsPtr = stackalloc byte[36];

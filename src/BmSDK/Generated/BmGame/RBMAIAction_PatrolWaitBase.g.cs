@@ -66,7 +66,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayShortOverlayAnim
     /// </summary>
-    public unsafe void PlayShortOverlayAnim()
+    public unsafe virtual void PlayShortOverlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.PlayShortOverlayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayLongOverlayAnim
     /// </summary>
-    public unsafe void PlayLongOverlayAnim()
+    public unsafe virtual void PlayLongOverlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.PlayLongOverlayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetWaitTime
     /// </summary>
-    public unsafe void SetWaitTime(float MinTime = default, float Range = default)
+    public unsafe virtual void SetWaitTime(float MinTime = default, float Range = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.SetWaitTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetAimAtTime
     /// </summary>
-    public unsafe void SetAimAtTime(float MinTime = default, float Range = default)
+    public unsafe virtual void SetAimAtTime(float MinTime = default, float Range = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.SetAimAtTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetAimTargets
     /// </summary>
-    public unsafe void SetAimTargets(BmSDK.TArray<BmSDK.Engine.Actor> NewAimTargets, bool bNewSetAimOnce, bool bNewCanDoLongOverlay)
+    public unsafe virtual void SetAimTargets(BmSDK.TArray<BmSDK.Engine.Actor> NewAimTargets, bool bNewSetAimOnce, bool bNewCanDoLongOverlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_PatrolWaitBase.SetAimTargets", true);
         byte* paramsPtr = stackalloc byte[20];

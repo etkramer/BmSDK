@@ -36,7 +36,7 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_RunAwayFromPoint.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: LookAtSpotOnCeiling
     /// </summary>
-    public unsafe void LookAtSpotOnCeiling()
+    public unsafe virtual void LookAtSpotOnCeiling()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_RunAwayFromPoint.LookAtSpotOnCeiling", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_RunAwayFromPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: StopRunning
     /// </summary>
-    public unsafe void StopRunning()
+    public unsafe virtual void StopRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_RunAwayFromPoint.StopRunning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_RunAwayFromPoint : BmSDK.BmGame.RBMBehaviour, 
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_RunAwayFromPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: StartExitAnim
     /// </summary>
-    public unsafe void StartExitAnim()
+    public unsafe virtual void StartExitAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.StartExitAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: AimAway
     /// </summary>
-    public unsafe void AimAway()
+    public unsafe virtual void AimAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.AimAway", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: AimNearby
     /// </summary>
-    public unsafe void AimNearby()
+    public unsafe virtual void AimNearby()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.AimNearby", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ProcessAimTargets
     /// </summary>
-    public unsafe void ProcessAimTargets()
+    public unsafe virtual void ProcessAimTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.ProcessAimTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SwitchOff
     /// </summary>
-    public unsafe void SwitchOff()
+    public unsafe virtual void SwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.SwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: EnableLookAt
     /// </summary>
-    public unsafe void EnableLookAt()
+    public unsafe virtual void EnableLookAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.EnableLookAt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe override void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RBMAIAction_ThermalInSmoke : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThermalInSmoke.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -36,7 +36,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: RemoveRelevantInteraction
     /// </summary>
-    public unsafe void RemoveRelevantInteraction(BmSDK.FName InteractionToRemove)
+    public unsafe virtual void RemoveRelevantInteraction(BmSDK.FName InteractionToRemove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.RemoveRelevantInteraction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -55,7 +55,7 @@ public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: AddRelevantInteraction
     /// </summary>
-    public unsafe void AddRelevantInteraction(BmSDK.FName NewInteraction)
+    public unsafe virtual void AddRelevantInteraction(BmSDK.FName NewInteraction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RInteractionComponent.AddRelevantInteraction", true);
         byte* paramsPtr = stackalloc byte[8];

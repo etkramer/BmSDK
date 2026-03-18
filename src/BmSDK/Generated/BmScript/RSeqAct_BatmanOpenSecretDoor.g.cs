@@ -36,7 +36,7 @@ public partial class RSeqAct_BatmanOpenSecretDoor : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOpenSecretDoor.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_BatmanOpenSecretDoor : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: ExitAction
     /// </summary>
-    public unsafe void ExitAction()
+    public unsafe virtual void ExitAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOpenSecretDoor.ExitAction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_BatmanOpenSecretDoor : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: ActivateAnims
     /// </summary>
-    public unsafe void ActivateAnims()
+    public unsafe virtual void ActivateAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_BatmanOpenSecretDoor.ActivateAnims", true);
         byte* paramsPtr = stackalloc byte[0];

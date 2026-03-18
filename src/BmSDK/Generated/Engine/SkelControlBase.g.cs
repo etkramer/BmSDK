@@ -31,7 +31,7 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: TickSkelControl
     /// </summary>
-    public unsafe void TickSkelControl(float DeltaTime, BmSDK.Engine.SkeletalMeshComponent SkelComp)
+    public unsafe virtual void TickSkelControl(float DeltaTime, BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlBase.TickSkelControl", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -44,7 +44,7 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSkelControlStrength
     /// </summary>
-    public unsafe void SetSkelControlStrength(float NewStrength, float InBlendTime)
+    public unsafe virtual void SetSkelControlStrength(float NewStrength, float InBlendTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlBase.SetSkelControlStrength", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -64,7 +64,7 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetSkelControlActive
     /// </summary>
-    public unsafe void SetSkelControlActive(bool bInActive)
+    public unsafe virtual void SetSkelControlActive(bool bInActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SkelControlBase.SetSkelControlActive", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: IsValidTargetComp
     /// </summary>
-    public unsafe bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
+    public unsafe virtual bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.IsValidTargetComp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: GetMagTargetTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagTargetTangent()
+    public unsafe virtual System.Numerics.Vector3 GetMagTargetTangent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.GetMagTargetTangent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
+    public unsafe virtual bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.HitByREC", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -109,7 +109,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: GetAutoTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
+    public unsafe virtual System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.GetAutoTargetLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -121,7 +121,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: CanRECAutoTarget
     /// </summary>
-    public unsafe bool CanRECAutoTarget()
+    public unsafe virtual bool CanRECAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.CanRECAutoTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: IsSecondaryTarget
     /// </summary>
-    public unsafe bool IsSecondaryTarget()
+    public unsafe virtual bool IsSecondaryTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.IsSecondaryTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: IsMagActive
     /// </summary>
-    public unsafe bool IsMagActive()
+    public unsafe virtual bool IsMagActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.IsMagActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: GetMagLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMagLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.GetMagLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: SetMagnetStrength
     /// </summary>
-    public unsafe float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
+    public unsafe virtual float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.SetMagnetStrength", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -194,7 +194,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: GetActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetActor()
+    public unsafe virtual BmSDK.Engine.Actor GetActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.GetActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -205,7 +205,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(BmSDK.FName AnimName = default, bool bCheckBlendOutPoint = default)
+    public unsafe virtual bool IsPlayingAnim(BmSDK.FName AnimName = default, bool bCheckBlendOutPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -218,7 +218,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: SetFXLocation
     /// </summary>
-    public unsafe void SetFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp)
+    public unsafe virtual void SetFXLocation(BmSDK.Engine.PrimitiveComponent MotorComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.SetFXLocation", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -230,7 +230,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -241,7 +241,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: GetObstacleBoudingShape
     /// </summary>
-    public unsafe bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
+    public unsafe virtual bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.GetObstacleBoudingShape", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -264,7 +264,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -275,7 +275,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: IsBlendingOut
     /// </summary>
-    public unsafe bool IsBlendingOut(BmSDK.Engine.AnimNodeSequence AnimNode)
+    public unsafe virtual bool IsBlendingOut(BmSDK.Engine.AnimNodeSequence AnimNode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.IsBlendingOut", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -294,7 +294,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -312,7 +312,7 @@ public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalM
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMagneticDynamicObjectSkeletalBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];

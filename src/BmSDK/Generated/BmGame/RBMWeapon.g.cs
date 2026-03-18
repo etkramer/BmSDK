@@ -66,7 +66,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetCombatIdleStance
     /// </summary>
-    public unsafe BmSDK.FName GetCombatIdleStance()
+    public unsafe virtual BmSDK.FName GetCombatIdleStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetCombatIdleStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: OnWeaponDestroy
     /// </summary>
-    public unsafe void OnWeaponDestroy(System.Numerics.Vector3 SmashVel)
+    public unsafe virtual void OnWeaponDestroy(System.Numerics.Vector3 SmashVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.OnWeaponDestroy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetRECPriority
     /// </summary>
-    public unsafe float GetRECPriority()
+    public unsafe virtual float GetRECPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetRECPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetRECFlailDamageType
     /// </summary>
-    public unsafe BmSDK.Class GetRECFlailDamageType()
+    public unsafe virtual BmSDK.Class GetRECFlailDamageType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetRECFlailDamageType", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe virtual BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetRECHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
+    public unsafe virtual BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetRECHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetMultiAttackAnimNames
     /// </summary>
-    public unsafe void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
+    public unsafe virtual void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetMultiAttackAnimNames", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -149,7 +149,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetBatClawPriority
     /// </summary>
-    public unsafe float GetBatClawPriority()
+    public unsafe virtual float GetBatClawPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetBatClawPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PairedAnimsLoadFailed
     /// </summary>
-    public unsafe void PairedAnimsLoadFailed()
+    public unsafe virtual void PairedAnimsLoadFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.PairedAnimsLoadFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PairedAnimsSuccessfullyLoaded
     /// </summary>
-    public unsafe void PairedAnimsSuccessfullyLoaded()
+    public unsafe virtual void PairedAnimsSuccessfullyLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.PairedAnimsSuccessfullyLoaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: DeRegisterPairedAnimsets
     /// </summary>
-    public unsafe void DeRegisterPairedAnimsets()
+    public unsafe virtual void DeRegisterPairedAnimsets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.DeRegisterPairedAnimsets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: RegisterPairedAnimsets
     /// </summary>
-    public unsafe void RegisterPairedAnimsets(BmSDK.Engine.AnimSet PlayerAnimset, BmSDK.Engine.AnimSet VillainAnimSet)
+    public unsafe virtual void RegisterPairedAnimsets(BmSDK.Engine.AnimSet PlayerAnimset, BmSDK.Engine.AnimSet VillainAnimSet)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.RegisterPairedAnimsets", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetDropOnDisarm
     /// </summary>
-    public unsafe void SetDropOnDisarm(bool bNewValue)
+    public unsafe virtual void SetDropOnDisarm(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SetDropOnDisarm", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -218,7 +218,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetWeaponNameForBarks
     /// </summary>
-    public unsafe BmSDK.FString GetWeaponNameForBarks()
+    public unsafe virtual BmSDK.FString GetWeaponNameForBarks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetWeaponNameForBarks", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -229,7 +229,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetOverlayAnim
     /// </summary>
-    public unsafe BmSDK.FName GetOverlayAnim()
+    public unsafe virtual BmSDK.FName GetOverlayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetOverlayAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -240,7 +240,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetTauntAnim
     /// </summary>
-    public unsafe int GetTauntAnim(out BmSDK.FName AnimName, out BmSDK.Engine.AnimSet AnimSet, int LastTauntID)
+    public unsafe virtual int GetTauntAnim(out BmSDK.FName AnimName, out BmSDK.Engine.AnimSet AnimSet, int LastTauntID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetTauntAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -254,7 +254,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ShowWeaponRight
     /// </summary>
-    public unsafe void ShowWeaponRight()
+    public unsafe virtual void ShowWeaponRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ShowWeaponRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -265,7 +265,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ShowWeaponLeft
     /// </summary>
-    public unsafe void ShowWeaponLeft()
+    public unsafe virtual void ShowWeaponLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ShowWeaponLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: IsWeaponHidden
     /// </summary>
-    public unsafe bool IsWeaponHidden()
+    public unsafe virtual bool IsWeaponHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.IsWeaponHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -287,7 +287,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ShowWeapon
     /// </summary>
-    public unsafe void ShowWeapon()
+    public unsafe virtual void ShowWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ShowWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -298,7 +298,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe virtual void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CanBeSeenByBatsForXray
     /// </summary>
-    public unsafe bool CanBeSeenByBatsForXray()
+    public unsafe virtual bool CanBeSeenByBatsForXray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CanBeSeenByBatsForXray", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -327,7 +327,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: UpdateXrayVisibility
     /// </summary>
-    public unsafe void UpdateXrayVisibility(float DeltaTime)
+    public unsafe virtual void UpdateXrayVisibility(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.UpdateXrayVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -346,7 +346,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -359,7 +359,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetOffhand
     /// </summary>
-    public unsafe void SetOffhand(bool bIsOffhand)
+    public unsafe virtual void SetOffhand(bool bIsOffhand)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SetOffhand", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -382,7 +382,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CreateDestroyedWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject CreateDestroyedWeapon(bool bDropOnSpawn = default)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject CreateDestroyedWeapon(bool bDropOnSpawn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CreateDestroyedWeapon", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -394,7 +394,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CreateDroppedWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject CreateDroppedWeapon(bool bDropOnSpawn = default, System.Numerics.Vector3 DropVelocity = default)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject CreateDroppedWeapon(bool bDropOnSpawn = default, System.Numerics.Vector3 DropVelocity = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CreateDroppedWeapon", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -407,7 +407,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SpawnAndThrowWeaponVelocity
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject SpawnAndThrowWeaponVelocity(System.Numerics.Vector3 NewVelocity)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject SpawnAndThrowWeaponVelocity(System.Numerics.Vector3 NewVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SpawnAndThrowWeaponVelocity", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -419,7 +419,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SpawnAndThrowWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject SpawnAndThrowWeapon(System.Numerics.Vector3 TargetPos = default)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject SpawnAndThrowWeapon(System.Numerics.Vector3 TargetPos = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SpawnAndThrowWeapon", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -431,7 +431,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CreateAndInitThrownObject
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject CreateAndInitThrownObject()
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject CreateAndInitThrownObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CreateAndInitThrownObject", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -442,7 +442,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject Drop()
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.Drop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -453,7 +453,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ThrowWeaponVelocity
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject ThrowWeaponVelocity(System.Numerics.Vector3 NewVel)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject ThrowWeaponVelocity(System.Numerics.Vector3 NewVel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ThrowWeaponVelocity", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -465,7 +465,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ThrowWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject ThrowWeapon(System.Numerics.Vector3 TargetPos = default)
+    public unsafe virtual BmSDK.BmGame.RBMCombatThrownObject ThrowWeapon(System.Numerics.Vector3 TargetPos = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ThrowWeapon", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -477,7 +477,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: DropFrom
     /// </summary>
-    public unsafe void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
+    public unsafe override void DropFrom(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 StartVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.DropFrom", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -501,7 +501,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Disarm
     /// </summary>
-    public unsafe void Disarm(System.Numerics.Vector3 StartVelocity = default)
+    public unsafe virtual void Disarm(System.Numerics.Vector3 StartVelocity = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.Disarm", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -513,7 +513,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -524,7 +524,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetCombatBehaviourClass
     /// </summary>
-    public unsafe BmSDK.Class GetCombatBehaviourClass()
+    public unsafe virtual BmSDK.Class GetCombatBehaviourClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetCombatBehaviourClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -535,7 +535,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -547,7 +547,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetLocationAndRotation
     /// </summary>
-    public unsafe void GetLocationAndRotation(out System.Numerics.Vector3 WeaponLocation, out BmSDK.Rotator WeaponRotation)
+    public unsafe virtual void GetLocationAndRotation(out System.Numerics.Vector3 WeaponLocation, out BmSDK.Rotator WeaponRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetLocationAndRotation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -560,7 +560,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: DetachWeapon
     /// </summary>
-    public unsafe void DetachWeapon()
+    public unsafe virtual void DetachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.DetachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -571,7 +571,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: LoadNextBarkset
     /// </summary>
-    public unsafe void LoadNextBarkset()
+    public unsafe virtual void LoadNextBarkset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.LoadNextBarkset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -582,7 +582,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: BarksetLoadedCallback
     /// </summary>
-    public unsafe void BarksetLoadedCallback(bool bSuccess)
+    public unsafe virtual void BarksetLoadedCallback(bool bSuccess)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.BarksetLoadedCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -594,7 +594,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: AttachWeapon
     /// </summary>
-    public unsafe void AttachWeapon()
+    public unsafe virtual void AttachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.AttachWeapon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -605,7 +605,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: HitByGel
     /// </summary>
-    public unsafe void HitByGel()
+    public unsafe virtual void HitByGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.HitByGel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -616,7 +616,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -627,7 +627,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -638,7 +638,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: DeregisterWeaponConfig
     /// </summary>
-    public unsafe void DeregisterWeaponConfig()
+    public unsafe virtual void DeregisterWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.DeregisterWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -649,7 +649,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetWeaponConfig
     /// </summary>
-    public unsafe void SetWeaponConfig()
+    public unsafe virtual void SetWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SetWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -660,7 +660,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -671,7 +671,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetJammedAttackMoveClass
     /// </summary>
-    public unsafe BmSDK.Class GetJammedAttackMoveClass()
+    public unsafe virtual BmSDK.Class GetJammedAttackMoveClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetJammedAttackMoveClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -682,7 +682,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: GetAttackMoveClass
     /// </summary>
-    public unsafe BmSDK.Class GetAttackMoveClass()
+    public unsafe virtual BmSDK.Class GetAttackMoveClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.GetAttackMoveClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -693,7 +693,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetMetal
     /// </summary>
-    public unsafe void SetMetal(bool bNewMetal)
+    public unsafe virtual void SetMetal(bool bNewMetal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.SetMetal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -705,7 +705,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CancelBarkSetLoading
     /// </summary>
-    public unsafe void CancelBarkSetLoading()
+    public unsafe virtual void CancelBarkSetLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CancelBarkSetLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -723,7 +723,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: InitBarkSet
     /// </summary>
-    public unsafe bool InitBarkSet()
+    public unsafe virtual bool InitBarkSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.InitBarkSet", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -741,7 +741,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: LoadBarkSet
     /// </summary>
-    public unsafe bool LoadBarkSet(BmSDK.FString BarkSetString)
+    public unsafe virtual bool LoadBarkSet(BmSDK.FString BarkSetString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.LoadBarkSet", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -760,7 +760,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: CancelPairedAnimsetLoading
     /// </summary>
-    public unsafe void CancelPairedAnimsetLoading()
+    public unsafe virtual void CancelPairedAnimsetLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.CancelPairedAnimsetLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -778,7 +778,7 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: LoadPairedAnimsetForPlayer
     /// </summary>
-    public unsafe bool LoadPairedAnimsetForPlayer()
+    public unsafe virtual bool LoadPairedAnimsetForPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMWeapon.LoadPairedAnimsetForPlayer", true);
         byte* paramsPtr = stackalloc byte[4];

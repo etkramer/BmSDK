@@ -47,7 +47,7 @@ public partial class RSeqAct_IsThugAbleToAct : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IsThugAbleToAct.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_IsThugAbleToAct : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: AbleToAct
     /// </summary>
-    public unsafe bool AbleToAct(BmSDK.BmGame.RPawnVillain Thug)
+    public unsafe virtual bool AbleToAct(BmSDK.BmGame.RPawnVillain Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_IsThugAbleToAct.AbleToAct", true);
         byte* paramsPtr = stackalloc byte[12];

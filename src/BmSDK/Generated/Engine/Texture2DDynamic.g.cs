@@ -58,7 +58,7 @@ public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
+    public unsafe virtual void Init(int InSizeX, int InSizeY, BmSDK.Engine.Texture.EPixelFormat InFormat = default, bool InIsResolveTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DDynamic.Init", true);
         byte* paramsPtr = stackalloc byte[16];

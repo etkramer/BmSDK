@@ -36,7 +36,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// Function: ResetSourceRegions
     /// </summary>
-    public unsafe void ResetSourceRegions()
+    public unsafe virtual void ResetSourceRegions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.ResetSourceRegions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateCompositeTexture
     /// </summary>
-    public unsafe void UpdateCompositeTexture(int NumMipsToGenerate)
+    public unsafe virtual void UpdateCompositeTexture(int NumMipsToGenerate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.UpdateCompositeTexture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// Function: SourceTexturesFullyStreamedIn
     /// </summary>
-    public unsafe bool SourceTexturesFullyStreamedIn()
+    public unsafe virtual bool SourceTexturesFullyStreamedIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Texture2DComposite.SourceTexturesFullyStreamedIn", true);
         byte* paramsPtr = stackalloc byte[4];

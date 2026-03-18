@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int inID)
+    public unsafe override void OnClicked(int inID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.OnClicked", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: MakeLevelIfMissing
     /// </summary>
-    public unsafe void MakeLevelIfMissing(BmSDK.FString LevelName)
+    public unsafe virtual void MakeLevelIfMissing(BmSDK.FString LevelName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.MakeLevelIfMissing", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe override void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: LoadingBar_Load
     /// </summary>
-    public unsafe void LoadingBar_Load(BmSDK.FString inItem)
+    public unsafe virtual void LoadingBar_Load(BmSDK.FString inItem)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.LoadingBar_Load", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: LoadingBar_FetchLoadList
     /// </summary>
-    public unsafe void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
+    public unsafe virtual void LoadingBar_FetchLoadList(BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.LoadingBar_FetchLoadList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: IsBusy
     /// </summary>
-    public unsafe bool IsBusy()
+    public unsafe virtual bool IsBusy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.IsBusy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: BuildLoadList
     /// </summary>
-    public unsafe bool BuildLoadList()
+    public unsafe virtual bool BuildLoadList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.BuildLoadList", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -128,7 +128,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: LoadPackage
     /// </summary>
-    public unsafe void LoadPackage(BmSDK.FString PkgName)
+    public unsafe virtual void LoadPackage(BmSDK.FString PkgName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.LoadPackage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -147,7 +147,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: LoadPackages_CB
     /// </summary>
-    public unsafe void LoadPackages_CB(BmSDK.GameObject pkg)
+    public unsafe virtual void LoadPackages_CB(BmSDK.GameObject pkg)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.LoadPackages_CB", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -159,7 +159,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: SetInitialPrompt
     /// </summary>
-    public unsafe void SetInitialPrompt()
+    public unsafe virtual void SetInitialPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.SetInitialPrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.Init", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -193,7 +193,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: SortByCharacter
     /// </summary>
-    public unsafe int SortByCharacter(BmSDK.BmGame.RGIFrontend.FCharacterItem A, BmSDK.BmGame.RGIFrontend.FCharacterItem B)
+    public unsafe virtual int SortByCharacter(BmSDK.BmGame.RGIFrontend.FCharacterItem A, BmSDK.BmGame.RGIFrontend.FCharacterItem B)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.SortByCharacter", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -206,7 +206,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: ClearNew
     /// </summary>
-    public unsafe bool ClearNew(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
+    public unsafe virtual bool ClearNew(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.ClearNew", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -218,7 +218,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: IsNew
     /// </summary>
-    public unsafe bool IsNew(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
+    public unsafe virtual bool IsNew(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.IsNew", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -230,7 +230,7 @@ public partial class RGFxMovieUI_Characters : BmSDK.BmGame.RGFxMovieUI, BmSDK.IG
     /// <summary>
     /// Function: IsLocked
     /// </summary>
-    public unsafe bool IsLocked(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
+    public unsafe virtual bool IsLocked(BmSDK.BmGame.RPersistentData.ECharacterViewer ch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_Characters.IsLocked", true);
         byte* paramsPtr = stackalloc byte[8];

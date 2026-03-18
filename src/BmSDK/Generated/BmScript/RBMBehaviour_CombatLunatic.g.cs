@@ -36,7 +36,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: GetPossibleMoves
     /// </summary>
-    public unsafe void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
+    public unsafe override void GetPossibleMoves(out BmSDK.TArray<BmSDK.Class> PossibleMoves)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.GetPossibleMoves", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: ShouldAttackTargetPawn
     /// </summary>
-    public unsafe bool ShouldAttackTargetPawn()
+    public unsafe virtual bool ShouldAttackTargetPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.ShouldAttackTargetPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: GetAttackPriority
     /// </summary>
-    public unsafe int GetAttackPriority(bool bForceAttack)
+    public unsafe override int GetAttackPriority(bool bForceAttack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.GetAttackPriority", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: CheckForAttackOrExit
     /// </summary>
-    public unsafe bool CheckForAttackOrExit()
+    public unsafe virtual bool CheckForAttackOrExit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.CheckForAttackOrExit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: PlayTauntAnim
     /// </summary>
-    public unsafe void PlayTauntAnim(BmSDK.FName TauntAnimName, BmSDK.Engine.AnimSet TauntAnimset = default)
+    public unsafe virtual void PlayTauntAnim(BmSDK.FName TauntAnimName, BmSDK.Engine.AnimSet TauntAnimset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.PlayTauntAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -95,7 +95,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: HasClearPathToCombat
     /// </summary>
-    public unsafe bool HasClearPathToCombat(bool bForceCheck = default, bool bDefaultValue = default, bool bForceCheckOnActualPosition = default)
+    public unsafe override bool HasClearPathToCombat(bool bForceCheck = default, bool bDefaultValue = default, bool bForceCheckOnActualPosition = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.HasClearPathToCombat", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -109,7 +109,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: GetTauntMoveStance
     /// </summary>
-    public unsafe BmSDK.FName GetTauntMoveStance()
+    public unsafe override BmSDK.FName GetTauntMoveStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.GetTauntMoveStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_CombatLunatic : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_CombatLunatic.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

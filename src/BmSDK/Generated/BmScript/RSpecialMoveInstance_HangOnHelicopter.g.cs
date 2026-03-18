@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: UpdateGForceAnims
     /// </summary>
-    public unsafe void UpdateGForceAnims()
+    public unsafe virtual void UpdateGForceAnims()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.UpdateGForceAnims", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetGlideOutAnim
     /// </summary>
-    public unsafe BmSDK.BmScript.RSpecialMoveConfig_HangOnHelicopter.FGlideOutAnim GetGlideOutAnim()
+    public unsafe virtual BmSDK.BmScript.RSpecialMoveConfig_HangOnHelicopter.FGlideOutAnim GetGlideOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.GetGlideOutAnim", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: StartScan
     /// </summary>
-    public unsafe void StartScan()
+    public unsafe virtual void StartScan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.StartScan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: OpenHelicopterPanel
     /// </summary>
-    public unsafe void OpenHelicopterPanel()
+    public unsafe virtual void OpenHelicopterPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.OpenHelicopterPanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: GetHelicopter
     /// </summary>
-    public unsafe BmSDK.BmGame.RHelicopterBase GetHelicopter()
+    public unsafe virtual BmSDK.BmGame.RHelicopterBase GetHelicopter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.GetHelicopter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpeci
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_HangOnHelicopter.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];

@@ -47,7 +47,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: Shoot
     /// </summary>
-    public unsafe bool Shoot()
+    public unsafe virtual bool Shoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.Shoot", true);
         byte* paramsPtr = stackalloc byte[312];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: CanShootBmDirect
     /// </summary>
-    public unsafe bool CanShootBmDirect()
+    public unsafe virtual bool CanShootBmDirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.CanShootBmDirect", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: DisableTracer
     /// </summary>
-    public unsafe void DisableTracer()
+    public unsafe virtual void DisableTracer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.DisableTracer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: StopShoot
     /// </summary>
-    public unsafe void StopShoot()
+    public unsafe virtual void StopShoot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.StopShoot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: BangHammer
     /// </summary>
-    public unsafe void BangHammer()
+    public unsafe virtual void BangHammer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.BangHammer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_TwoFaceShooting : BmSDK.BmGame.RBMBehaviour, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFaceShooting.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

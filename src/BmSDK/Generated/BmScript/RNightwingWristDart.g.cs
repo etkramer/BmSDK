@@ -71,7 +71,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: CalculateHitImpulse
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateHitImpulse(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, int HitVillainIndex)
+    public unsafe virtual System.Numerics.Vector3 CalculateHitImpulse(BmSDK.Engine.Actor.FImpactInfo HitImpactInfo, int HitVillainIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.CalculateHitImpulse", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -84,7 +84,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: AlertNearbyVillains
     /// </summary>
-    public unsafe void AlertNearbyVillains(BmSDK.BmGame.RPawnVillain HitVillain, float Range)
+    public unsafe virtual void AlertNearbyVillains(BmSDK.BmGame.RPawnVillain HitVillain, float Range)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.AlertNearbyVillains", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -97,7 +97,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: DestroyProjectile
     /// </summary>
-    public unsafe void DestroyProjectile()
+    public unsafe virtual void DestroyProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.DestroyProjectile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: TickDart
     /// </summary>
-    public unsafe bool TickDart(float TimeDelta)
+    public unsafe virtual bool TickDart(float TimeDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.TickDart", true);
         byte* paramsPtr = stackalloc byte[436];
@@ -120,7 +120,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: QuickFireDart
     /// </summary>
-    public unsafe void QuickFireDart()
+    public unsafe virtual void QuickFireDart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.QuickFireDart", true);
         byte* paramsPtr = stackalloc byte[336];
@@ -131,7 +131,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: FireDart
     /// </summary>
-    public unsafe void FireDart(BmSDK.Rotator FireRotation, System.Numerics.Vector3 FirePosition)
+    public unsafe virtual void FireDart(BmSDK.Rotator FireRotation, System.Numerics.Vector3 FirePosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.FireDart", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -144,7 +144,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: CanThrowGadget
     /// </summary>
-    public unsafe bool CanThrowGadget()
+    public unsafe override bool CanThrowGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.CanThrowGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -155,7 +155,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetCamera
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
+    public unsafe override BmSDK.FName GetGadgetCamera(bool InSoftCover = default, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.GetGadgetCamera", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -168,7 +168,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: CheckAutoTarget
     /// </summary>
-    public unsafe bool CheckAutoTarget(BmSDK.Engine.Actor BatarangTarget, out System.Numerics.Vector3 BatarangTargetPosition, out float OverridePriority, out float OverrideMaxRange)
+    public unsafe override bool CheckAutoTarget(BmSDK.Engine.Actor BatarangTarget, out System.Numerics.Vector3 BatarangTargetPosition, out float OverridePriority, out float OverrideMaxRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.CheckAutoTarget", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -183,7 +183,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: FireGadgetCombat
     /// </summary>
-    public unsafe bool FireGadgetCombat()
+    public unsafe override bool FireGadgetCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.FireGadgetCombat", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -194,7 +194,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: UpdateAutoTarget
     /// </summary>
-    public unsafe void UpdateAutoTarget()
+    public unsafe virtual void UpdateAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.UpdateAutoTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -205,7 +205,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: GetPrimedPose
     /// </summary>
-    public unsafe BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
+    public unsafe override BmSDK.FName GetPrimedPose(out BmSDK.BmGame.RInventoryGadget.PlayerWantsToCrouch StanceIsCrouched, out BmSDK.BmGame.RAnimUtil.EMirrorChoice MirroredNess, bool InSoftCover, BmSDK.BmGame.RInventoryGadget.CoverCornerType CornerType, out BmSDK.FName OutCapeState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.GetPrimedPose", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -221,7 +221,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: DrawAimingHUD
     /// </summary>
-    public unsafe void DrawAimingHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawAimingHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.DrawAimingHUD", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -233,7 +233,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: IsFiring
     /// </summary>
-    public unsafe bool IsFiring()
+    public unsafe override bool IsFiring()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.IsFiring", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -244,7 +244,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: ExittedPrimedMode
     /// </summary>
-    public unsafe void ExittedPrimedMode()
+    public unsafe override void ExittedPrimedMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.ExittedPrimedMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: ShowBody
     /// </summary>
-    public unsafe void ShowBody()
+    public unsafe virtual void ShowBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.ShowBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -266,7 +266,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: AdditiveArmAvoidance
     /// </summary>
-    public unsafe void AdditiveArmAvoidance()
+    public unsafe override void AdditiveArmAvoidance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.AdditiveArmAvoidance", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -277,7 +277,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: RestockAmmo
     /// </summary>
-    public unsafe void RestockAmmo()
+    public unsafe override void RestockAmmo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.RestockAmmo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -288,7 +288,7 @@ public partial class RNightwingWristDart : BmSDK.BmGame.RBlowDartBase, BmSDK.IGa
     /// <summary>
     /// Function: CanPlayerMove
     /// </summary>
-    public unsafe bool CanPlayerMove()
+    public unsafe override bool CanPlayerMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RNightwingWristDart.CanPlayerMove", true);
         byte* paramsPtr = stackalloc byte[4];

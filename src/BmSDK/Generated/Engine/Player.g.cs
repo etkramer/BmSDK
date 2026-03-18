@@ -36,7 +36,7 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SwitchController
     /// </summary>
-    public unsafe void SwitchController(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual void SwitchController(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Player.SwitchController", true);
         byte* paramsPtr = stackalloc byte[4];

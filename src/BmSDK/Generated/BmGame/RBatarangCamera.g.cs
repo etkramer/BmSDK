@@ -71,7 +71,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetExtraDistance
     /// </summary>
-    public unsafe void SetExtraDistance(float Distance, float T = default)
+    public unsafe virtual void SetExtraDistance(float Distance, float T = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.SetExtraDistance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetOverrideFOV
     /// </summary>
-    public unsafe void SetOverrideFOV(float FOV, float T = default)
+    public unsafe virtual void SetOverrideFOV(float FOV, float T = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.SetOverrideFOV", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: StopTrackingSound
     /// </summary>
-    public unsafe void StopTrackingSound()
+    public unsafe virtual void StopTrackingSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.StopTrackingSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: StartTrackingSound
     /// </summary>
-    public unsafe void StartTrackingSound()
+    public unsafe virtual void StartTrackingSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.StartTrackingSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: SetTrackingActor
     /// </summary>
-    public unsafe void SetTrackingActor(BmSDK.Engine.Actor ActorToTrackPostImpact)
+    public unsafe virtual void SetTrackingActor(BmSDK.Engine.Actor ActorToTrackPostImpact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.SetTrackingActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -131,7 +131,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: TrackPostImpact
     /// </summary>
-    public unsafe void TrackPostImpact(System.Numerics.Vector3 ActorLocation, float DeltaTime)
+    public unsafe virtual void TrackPostImpact(System.Numerics.Vector3 ActorLocation, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.TrackPostImpact", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: InstantOutOfBounds
     /// </summary>
-    public unsafe void InstantOutOfBounds(BmSDK.Engine.Actor OutOfBoundsActor)
+    public unsafe virtual void InstantOutOfBounds(BmSDK.Engine.Actor OutOfBoundsActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.InstantOutOfBounds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: OutOfBounds
     /// </summary>
-    public unsafe void OutOfBounds(BmSDK.Engine.Actor OutOfBoundsActor)
+    public unsafe virtual void OutOfBounds(BmSDK.Engine.Actor OutOfBoundsActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.OutOfBounds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: DestroySelf
     /// </summary>
-    public unsafe void DestroySelf()
+    public unsafe virtual void DestroySelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.DestroySelf", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -186,7 +186,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: FinishUp
     /// </summary>
-    public unsafe void FinishUp(bool ForceInstantReturn = default)
+    public unsafe virtual void FinishUp(bool ForceInstantReturn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.FinishUp", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -198,7 +198,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: CheckForIntersectingCollision
     /// </summary>
-    public unsafe bool CheckForIntersectingCollision()
+    public unsafe virtual bool CheckForIntersectingCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.CheckForIntersectingCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -216,7 +216,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateKillVolumeEffects
     /// </summary>
-    public unsafe void UpdateKillVolumeEffects()
+    public unsafe virtual void UpdateKillVolumeEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.UpdateKillVolumeEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -227,7 +227,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: DoneImpact
     /// </summary>
-    public unsafe void DoneImpact()
+    public unsafe virtual void DoneImpact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.DoneImpact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.Actor Projectile)
+    public unsafe virtual void Init(BmSDK.Engine.Actor Projectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.Init", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -250,7 +250,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: GetTrackingPositionAndRotation
     /// </summary>
-    public unsafe void GetTrackingPositionAndRotation(out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
+    public unsafe virtual void GetTrackingPositionAndRotation(out System.Numerics.Vector3 Out_Position, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.GetTrackingPositionAndRotation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -263,7 +263,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: LagBatarangCameraRotation
     /// </summary>
-    public unsafe void LagBatarangCameraRotation(float LagTime = default)
+    public unsafe virtual void LagBatarangCameraRotation(float LagTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.LagBatarangCameraRotation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -275,7 +275,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: LagBatarangCamera
     /// </summary>
-    public unsafe void LagBatarangCamera(float LagTime = default)
+    public unsafe virtual void LagBatarangCamera(float LagTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.LagBatarangCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -287,7 +287,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: PlayFlipAnimation
     /// </summary>
-    public unsafe void PlayFlipAnimation(float Position)
+    public unsafe virtual void PlayFlipAnimation(float Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.PlayFlipAnimation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -306,7 +306,7 @@ public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObj
     /// <summary>
     /// Function: UpdateTrackingPosition
     /// </summary>
-    public unsafe void UpdateTrackingPosition(float DeltaTime)
+    public unsafe virtual void UpdateTrackingPosition(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatarangCamera.UpdateTrackingPosition", true);
         byte* paramsPtr = stackalloc byte[4];

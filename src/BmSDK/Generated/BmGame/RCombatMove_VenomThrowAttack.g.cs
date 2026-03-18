@@ -71,7 +71,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IsBatmanInteruptable
     /// </summary>
-    public unsafe bool IsBatmanInteruptable()
+    public unsafe virtual bool IsBatmanInteruptable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.IsBatmanInteruptable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IsBatmanTooClose
     /// </summary>
-    public unsafe bool IsBatmanTooClose()
+    public unsafe virtual bool IsBatmanTooClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.IsBatmanTooClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DamageCollisionWithObject
     /// </summary>
-    public unsafe void DamageCollisionWithObject(BmSDK.Engine.Actor Object)
+    public unsafe override void DamageCollisionWithObject(BmSDK.Engine.Actor Object)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.DamageCollisionWithObject", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetHitPS
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetHitPS()
+    public unsafe override BmSDK.Engine.ParticleSystem GetHitPS()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.GetHitPS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -141,7 +141,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: EnableRedirect
     /// </summary>
-    public unsafe void EnableRedirect()
+    public unsafe virtual void EnableRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.EnableRedirect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: GetClampedThrowDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClampedThrowDirection(System.Numerics.Vector3 ThrowPos, System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos)
+    public unsafe virtual System.Numerics.Vector3 GetClampedThrowDirection(System.Numerics.Vector3 ThrowPos, System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.GetClampedThrowDirection", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -177,7 +177,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: SetAimingOff
     /// </summary>
-    public unsafe void SetAimingOff()
+    public unsafe virtual void SetAimingOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.SetAimingOff", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -188,7 +188,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: SetAimingOn
     /// </summary>
-    public unsafe void SetAimingOn()
+    public unsafe virtual void SetAimingOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.SetAimingOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: OnAbortRelease
     /// </summary>
-    public unsafe void OnAbortRelease()
+    public unsafe virtual void OnAbortRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.OnAbortRelease", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -210,7 +210,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: OnThrowRelease
     /// </summary>
-    public unsafe void OnThrowRelease()
+    public unsafe virtual void OnThrowRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.OnThrowRelease", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -221,7 +221,7 @@ public partial class RCombatMove_VenomThrowAttack : BmSDK.BmGame.RCombatMove_Vil
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomThrowAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

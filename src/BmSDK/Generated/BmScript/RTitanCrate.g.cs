@@ -71,7 +71,7 @@ public partial class RTitanCrate : BmSDK.BmGame.RTitanCrateBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SpawnExplosionParticle
     /// </summary>
-    public unsafe void SpawnExplosionParticle()
+    public unsafe override void SpawnExplosionParticle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTitanCrate.SpawnExplosionParticle", true);
         byte* paramsPtr = stackalloc byte[0];

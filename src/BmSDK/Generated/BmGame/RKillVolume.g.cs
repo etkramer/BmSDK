@@ -71,7 +71,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: BatarangCameraStarted
     /// </summary>
-    public unsafe void BatarangCameraStarted(BmSDK.BmGame.RBatarangCamera bc)
+    public unsafe virtual void BatarangCameraStarted(BmSDK.BmGame.RBatarangCamera bc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.BatarangCameraStarted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: BatarangCameraFinished
     /// </summary>
-    public unsafe void BatarangCameraFinished(BmSDK.BmGame.RBatarangCamera bc)
+    public unsafe virtual void BatarangCameraFinished(BmSDK.BmGame.RBatarangCamera bc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.BatarangCameraFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: FindClosestRescuePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RRescuePoint FindClosestRescuePoint(BmSDK.Engine.Actor RescueActor)
+    public unsafe virtual BmSDK.BmGame.RRescuePoint FindClosestRescuePoint(BmSDK.Engine.Actor RescueActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.FindClosestRescuePoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -107,7 +107,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: StopEntryAmbience
     /// </summary>
-    public unsafe void StopEntryAmbience()
+    public unsafe virtual void StopEntryAmbience()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.StopEntryAmbience", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayEntryAmbience
     /// </summary>
-    public unsafe void PlayEntryAmbience()
+    public unsafe virtual void PlayEntryAmbience()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.PlayEntryAmbience", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBatmanInVolume
     /// </summary>
-    public unsafe void SetBatmanInVolume(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void SetBatmanInVolume(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.SetBatmanInVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RKillVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[44];

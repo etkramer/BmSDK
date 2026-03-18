@@ -47,7 +47,7 @@ public partial class RSeqAct_SetPlayerInvisibleToHelicopters : BmSDK.Engine.Sequ
     /// <summary>
     /// Function: SetHelicopterDialogueEnabled
     /// </summary>
-    public unsafe void SetHelicopterDialogueEnabled(BmSDK.BmGame.RPlayerController RPC, bool is_enabled)
+    public unsafe virtual void SetHelicopterDialogueEnabled(BmSDK.BmGame.RPlayerController RPC, bool is_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetPlayerInvisibleToHelicopters.SetHelicopterDialogueEnabled", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -60,7 +60,7 @@ public partial class RSeqAct_SetPlayerInvisibleToHelicopters : BmSDK.Engine.Sequ
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetPlayerInvisibleToHelicopters.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

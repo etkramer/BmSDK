@@ -47,7 +47,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: PhoneStoppedRinging
     /// </summary>
-    public unsafe void PhoneStoppedRinging(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void PhoneStoppedRinging(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.PhoneStoppedRinging", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: PhoneStartedRinging
     /// </summary>
-    public unsafe void PhoneStartedRinging(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void PhoneStartedRinging(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.PhoneStartedRinging", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ClearSurvillanceTargetPhone
     /// </summary>
-    public unsafe void ClearSurvillanceTargetPhone(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void ClearSurvillanceTargetPhone(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.ClearSurvillanceTargetPhone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetSurveillanceTargetPhone
     /// </summary>
-    public unsafe void SetSurveillanceTargetPhone(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void SetSurveillanceTargetPhone(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.SetSurveillanceTargetPhone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: HasRaceBeenCompleted
     /// </summary>
-    public unsafe bool HasRaceBeenCompleted(int race)
+    public unsafe virtual bool HasRaceBeenCompleted(int race)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.HasRaceBeenCompleted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetNumRacesAvailable
     /// </summary>
-    public unsafe int GetNumRacesAvailable()
+    public unsafe virtual int GetNumRacesAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetNumRacesAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetNumRacesAvailable
     /// </summary>
-    public unsafe void SetNumRacesAvailable(int NumAvailable)
+    public unsafe virtual void SetNumRacesAvailable(int NumAvailable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.SetNumRacesAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetNumRacesCompleted
     /// </summary>
-    public unsafe int GetNumRacesCompleted()
+    public unsafe virtual int GetNumRacesCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetNumRacesCompleted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ClearMapMarker
     /// </summary>
-    public unsafe void ClearMapMarker()
+    public unsafe virtual void ClearMapMarker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.ClearMapMarker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetMapMarker
     /// </summary>
-    public unsafe void SetMapMarker(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void SetMapMarker(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.SetMapMarker", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: UndoRaceRejections
     /// </summary>
-    public unsafe void UndoRaceRejections()
+    public unsafe virtual void UndoRaceRejections()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.UndoRaceRejections", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -186,7 +186,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ResetReadyToStartRace
     /// </summary>
-    public unsafe void ResetReadyToStartRace()
+    public unsafe virtual void ResetReadyToStartRace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.ResetReadyToStartRace", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -197,7 +197,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: PhoneDecidedToRing
     /// </summary>
-    public unsafe void PhoneDecidedToRing(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void PhoneDecidedToRing(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.PhoneDecidedToRing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -209,7 +209,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CompleteCurrentRace
     /// </summary>
-    public unsafe void CompleteCurrentRace()
+    public unsafe virtual void CompleteCurrentRace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CompleteCurrentRace", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -220,7 +220,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: FailCurrentRace
     /// </summary>
-    public unsafe void FailCurrentRace()
+    public unsafe virtual void FailCurrentRace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.FailCurrentRace", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -231,7 +231,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: StartCurrentRace
     /// </summary>
-    public unsafe void StartCurrentRace()
+    public unsafe virtual void StartCurrentRace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.StartCurrentRace", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -242,7 +242,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetupRace
     /// </summary>
-    public unsafe void SetupRace(int race, BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void SetupRace(int race, BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.SetupRace", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -255,7 +255,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: EnablePhones
     /// </summary>
-    public unsafe void EnablePhones()
+    public unsafe virtual void EnablePhones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.EnablePhones", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: DisablePhones
     /// </summary>
-    public unsafe void DisablePhones()
+    public unsafe virtual void DisablePhones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.DisablePhones", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: RequestEnable
     /// </summary>
-    public unsafe void RequestEnable(bool bEnable)
+    public unsafe virtual void RequestEnable(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.RequestEnable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -300,7 +300,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -311,7 +311,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: OnInteract
     /// </summary>
-    public unsafe void OnInteract(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void OnInteract(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.OnInteract", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -323,7 +323,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: DbgPrintState
     /// </summary>
-    public unsafe void DbgPrintState()
+    public unsafe virtual void DbgPrintState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.DbgPrintState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -334,7 +334,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetLikelihoodOfEligiblePhoneRinging
     /// </summary>
-    public unsafe float GetLikelihoodOfEligiblePhoneRinging()
+    public unsafe virtual float GetLikelihoodOfEligiblePhoneRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetLikelihoodOfEligiblePhoneRinging", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -345,7 +345,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetNumEligiblePhones
     /// </summary>
-    public unsafe int GetNumEligiblePhones()
+    public unsafe virtual int GetNumEligiblePhones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetNumEligiblePhones", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -356,7 +356,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: BMInPhoneVolume
     /// </summary>
-    public unsafe void BMInPhoneVolume(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void BMInPhoneVolume(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.BMInPhoneVolume", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -368,7 +368,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: InterruptPhoneRinging
     /// </summary>
-    public unsafe bool InterruptPhoneRinging()
+    public unsafe virtual bool InterruptPhoneRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.InterruptPhoneRinging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -379,7 +379,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckForInterruption
     /// </summary>
-    public unsafe void CheckForInterruption()
+    public unsafe virtual void CheckForInterruption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckForInterruption", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -390,7 +390,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckForRaceAbandonmentPrompt
     /// </summary>
-    public unsafe bool CheckForRaceAbandonmentPrompt()
+    public unsafe virtual bool CheckForRaceAbandonmentPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckForRaceAbandonmentPrompt", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -401,7 +401,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckForStoppingRinging
     /// </summary>
-    public unsafe void CheckForStoppingRinging()
+    public unsafe virtual void CheckForStoppingRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckForStoppingRinging", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -412,7 +412,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: PollPhoneVolumes
     /// </summary>
-    public unsafe void PollPhoneVolumes()
+    public unsafe virtual void PollPhoneVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.PollPhoneVolumes", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -423,7 +423,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: IsBMInPhonesVolume
     /// </summary>
-    public unsafe bool IsBMInPhonesVolume(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual bool IsBMInPhonesVolume(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.IsBMInPhonesVolume", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -435,7 +435,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckForRace5Fakeout
     /// </summary>
-    public unsafe void CheckForRace5Fakeout()
+    public unsafe virtual void CheckForRace5Fakeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckForRace5Fakeout", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -446,7 +446,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: StopPhonesRinging
     /// </summary>
-    public unsafe void StopPhonesRinging()
+    public unsafe virtual void StopPhonesRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.StopPhonesRinging", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -457,7 +457,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: StartPhoneRinging
     /// </summary>
-    public unsafe void StartPhoneRinging(BmSDK.BmScript.RZsaszPhone Phone)
+    public unsafe virtual void StartPhoneRinging(BmSDK.BmScript.RZsaszPhone Phone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.StartPhoneRinging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -469,7 +469,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetPhoneFromIndex
     /// </summary>
-    public unsafe BmSDK.BmScript.RZsaszPhone GetPhoneFromIndex(int Index)
+    public unsafe virtual BmSDK.BmScript.RZsaszPhone GetPhoneFromIndex(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetPhoneFromIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -481,7 +481,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetPhoneIndex
     /// </summary>
-    public unsafe int GetPhoneIndex(BmSDK.BmScript.RZsaszPhone inPhone)
+    public unsafe virtual int GetPhoneIndex(BmSDK.BmScript.RZsaszPhone inPhone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetPhoneIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -493,7 +493,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: GetPhoneRace
     /// </summary>
-    public unsafe int GetPhoneRace(BmSDK.BmScript.RZsaszPhone inPhone)
+    public unsafe virtual int GetPhoneRace(BmSDK.BmScript.RZsaszPhone inPhone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.GetPhoneRace", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -505,7 +505,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -516,7 +516,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.InitHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -527,7 +527,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -539,7 +539,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: CheckAutoDisable
     /// </summary>
-    public unsafe void CheckAutoDisable()
+    public unsafe virtual void CheckAutoDisable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.CheckAutoDisable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -550,7 +550,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: DoesRaceExclusionAffectRace
     /// </summary>
-    public unsafe bool DoesRaceExclusionAffectRace(int exclusion, int race)
+    public unsafe virtual bool DoesRaceExclusionAffectRace(int exclusion, int race)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.DoesRaceExclusionAffectRace", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -563,7 +563,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: IsRaceExclusionActive
     /// </summary>
-    public unsafe bool IsRaceExclusionActive(int exclusion)
+    public unsafe virtual bool IsRaceExclusionActive(int exclusion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.IsRaceExclusionActive", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -575,7 +575,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: dbgPrintExclusions
     /// </summary>
-    public unsafe void dbgPrintExclusions()
+    public unsafe virtual void dbgPrintExclusions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.dbgPrintExclusions", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -586,7 +586,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: dbgGetExclusionString
     /// </summary>
-    public unsafe void dbgGetExclusionString(int exclusion, out BmSDK.FString Str)
+    public unsafe virtual void dbgGetExclusionString(int exclusion, out BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.dbgGetExclusionString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -599,7 +599,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SpecialPhoneOnly
     /// </summary>
-    public unsafe bool SpecialPhoneOnly()
+    public unsafe virtual bool SpecialPhoneOnly()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.SpecialPhoneOnly", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -610,7 +610,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.Update", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -622,7 +622,7 @@ public partial class RSeqAct_ZsaszPhoneManager : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ZsaszPhoneManager.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

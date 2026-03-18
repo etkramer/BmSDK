@@ -71,7 +71,7 @@ public partial class RPawnFriendlyAzriel : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
     /// <summary>
     /// Function: CatchBatarangNPC
     /// </summary>
-    public unsafe void CatchBatarangNPC(BmSDK.BmGame.RBatarangProjectile CatchProjectile)
+    public unsafe virtual void CatchBatarangNPC(BmSDK.BmGame.RBatarangProjectile CatchProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyAzriel.CatchBatarangNPC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnFriendlyAzriel : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
     /// <summary>
     /// Function: DropBatarang
     /// </summary>
-    public unsafe void DropBatarang()
+    public unsafe virtual void DropBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyAzriel.DropBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RPawnFriendlyAzriel : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
     /// <summary>
     /// Function: CheckCatchBatarang
     /// </summary>
-    public unsafe void CheckCatchBatarang()
+    public unsafe virtual void CheckCatchBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyAzriel.CheckCatchBatarang", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -105,7 +105,7 @@ public partial class RPawnFriendlyAzriel : BmSDK.BmGame.RPawnFriendly, BmSDK.IGa
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnFriendlyAzriel.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPawnVillainGunPredLiteInformantDLC : BmSDK.BmScript.RPawnV
     /// <summary>
     /// Function: ChangeXrayColour
     /// </summary>
-    public unsafe void ChangeXrayColour(bool bBlue)
+    public unsafe override void ChangeXrayColour(bool bBlue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLiteInformantDLC.ChangeXrayColour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RPawnVillainGunPredLiteInformantDLC : BmSDK.BmScript.RPawnV
     /// <summary>
     /// Function: SetInterrogatableHack
     /// </summary>
-    public unsafe void SetInterrogatableHack(bool bNewValue)
+    public unsafe virtual void SetInterrogatableHack(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLiteInformantDLC.SetInterrogatableHack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RPawnVillainGunPredLiteInformantDLC : BmSDK.BmScript.RPawnV
     /// <summary>
     /// Function: RemoveMultiplayerAura
     /// </summary>
-    public unsafe void RemoveMultiplayerAura()
+    public unsafe override void RemoveMultiplayerAura()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLiteInformantDLC.RemoveMultiplayerAura", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RPawnVillainGunPredLiteInformantDLC : BmSDK.BmScript.RPawnV
     /// <summary>
     /// Function: ActivateMultiplayerAura
     /// </summary>
-    public unsafe void ActivateMultiplayerAura(BmSDK.Engine.MaterialInterface AuraMat)
+    public unsafe override void ActivateMultiplayerAura(BmSDK.Engine.MaterialInterface AuraMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunPredLiteInformantDLC.ActivateMultiplayerAura", true);
         byte* paramsPtr = stackalloc byte[4];

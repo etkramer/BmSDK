@@ -71,7 +71,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForOtherCrows
     /// </summary>
-    public unsafe void CheckForOtherCrows()
+    public unsafe virtual void CheckForOtherCrows()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.CheckForOtherCrows", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -82,7 +82,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SwapMesh
     /// </summary>
-    public unsafe void SwapMesh(int crowIndex)
+    public unsafe virtual void SwapMesh(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.SwapMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTranslationToRootBoneLocation
     /// </summary>
-    public unsafe void SetTranslationToRootBoneLocation(int crowIndex)
+    public unsafe virtual void SetTranslationToRootBoneLocation(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.SetTranslationToRootBoneLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -106,7 +106,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveRootBone
     /// </summary>
-    public unsafe void MoveRootBone(int crowIndex, System.Numerics.Vector3 Delta)
+    public unsafe virtual void MoveRootBone(int crowIndex, System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.MoveRootBone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRootBoneLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRootBoneLocation(int crowIndex)
+    public unsafe virtual System.Numerics.Vector3 GetRootBoneLocation(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.GetRootBoneLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -131,7 +131,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayRandomFlyLoop
     /// </summary>
-    public unsafe void PlayRandomFlyLoop(int crowIndex)
+    public unsafe virtual void PlayRandomFlyLoop(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.PlayRandomFlyLoop", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -143,7 +143,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayRandomIdle
     /// </summary>
-    public unsafe void PlayRandomIdle(int crowIndex)
+    public unsafe virtual void PlayRandomIdle(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.PlayRandomIdle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -155,7 +155,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim(int crowIndex)
+    public unsafe virtual bool IsPlayingAnim(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Startle
     /// </summary>
-    public unsafe void Startle(System.Numerics.Vector3 StartleLoc, bool startledByKismet = default)
+    public unsafe override void Startle(System.Numerics.Vector3 StartleLoc, bool startledByKismet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.Startle", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -180,7 +180,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -191,7 +191,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.Touch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -229,7 +229,7 @@ public partial class RCrows : BmSDK.BmGame.RCrowsBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCrows.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

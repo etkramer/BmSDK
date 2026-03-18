@@ -93,7 +93,7 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetOriginalNameString
     /// </summary>
-    public unsafe BmSDK.FString GetOriginalNameString()
+    public unsafe virtual BmSDK.FString GetOriginalNameString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkHash.GetOriginalNameString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -111,7 +111,7 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHashString
     /// </summary>
-    public unsafe BmSDK.FString GetHashString(BmSDK.FString NotFoundResult = default)
+    public unsafe virtual BmSDK.FString GetHashString(BmSDK.FString NotFoundResult = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkHash.GetHashString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -130,7 +130,7 @@ public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHashValue
     /// </summary>
-    public unsafe int GetHashValue()
+    public unsafe virtual int GetHashValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkHash.GetHashValue", true);
         byte* paramsPtr = stackalloc byte[4];

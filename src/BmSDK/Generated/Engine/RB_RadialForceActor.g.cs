@@ -71,7 +71,7 @@ public partial class RB_RadialForceActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGa
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_RadialForceActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];

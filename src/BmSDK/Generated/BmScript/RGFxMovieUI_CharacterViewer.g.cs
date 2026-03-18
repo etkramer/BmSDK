@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_CharacterViewer : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CharacterViewer.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_CharacterViewer : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CharacterViewer.OnBack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_CharacterViewer : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: DisplayPrompt
     /// </summary>
-    public unsafe void DisplayPrompt(bool bShowBack)
+    public unsafe virtual void DisplayPrompt(bool bShowBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CharacterViewer.DisplayPrompt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RGFxMovieUI_CharacterViewer : BmSDK.BmGame.RGFxMovieUI, BmS
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CharacterViewer.Init", true);
         byte* paramsPtr = stackalloc byte[4];

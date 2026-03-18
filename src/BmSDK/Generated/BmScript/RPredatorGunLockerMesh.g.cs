@@ -66,7 +66,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -79,7 +79,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -91,7 +91,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetAnimRefYaw
     /// </summary>
-    public unsafe int GetAnimRefYaw()
+    public unsafe override int GetAnimRefYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetAnimRefYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -102,7 +102,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetAnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimRefPoint()
+    public unsafe override System.Numerics.Vector3 GetAnimRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetAnimRefPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -113,7 +113,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: GetMoveLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLoc()
+    public unsafe override System.Numerics.Vector3 GetMoveLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.GetMoveLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -124,7 +124,7 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorGunLockerMesh.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnTogglePressurePad
     /// </summary>
-    public unsafe void OnTogglePressurePad(BmSDK.BmScript.RSeqAct_TogglePressurePad ToggleAction)
+    public unsafe virtual void OnTogglePressurePad(BmSDK.BmScript.RSeqAct_TogglePressurePad ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.OnTogglePressurePad", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Detach
     /// </summary>
-    public unsafe void Detach(BmSDK.Engine.Actor Other)
+    public unsafe override void Detach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Detach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.Attach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: KismetDeactivate
     /// </summary>
-    public unsafe void KismetDeactivate()
+    public unsafe virtual void KismetDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.KismetDeactivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: DeactivatePressurePad
     /// </summary>
-    public unsafe void DeactivatePressurePad(bool bSilent = default)
+    public unsafe virtual void DeactivatePressurePad(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.DeactivatePressurePad", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ActivatePressurePad
     /// </summary>
-    public unsafe void ActivatePressurePad()
+    public unsafe virtual void ActivatePressurePad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.ActivatePressurePad", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPresurePad.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

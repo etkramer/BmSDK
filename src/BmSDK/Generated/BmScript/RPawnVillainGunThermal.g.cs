@@ -71,7 +71,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: GetGargoyleScanFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetGargoyleScanFX()
+    public unsafe override BmSDK.Engine.ParticleSystem GetGargoyleScanFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.GetGargoyleScanFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: GetThermalAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetThermalAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetThermalAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.GetThermalAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: PlayGoggleOffSFX
     /// </summary>
-    public unsafe void PlayGoggleOffSFX()
+    public unsafe override void PlayGoggleOffSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.PlayGoggleOffSFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: FakeThermalSwitchOff
     /// </summary>
-    public unsafe void FakeThermalSwitchOff()
+    public unsafe virtual void FakeThermalSwitchOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.FakeThermalSwitchOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: FakeThermalSwitchOn
     /// </summary>
-    public unsafe void FakeThermalSwitchOn()
+    public unsafe virtual void FakeThermalSwitchOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.FakeThermalSwitchOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: PlayGoggleOnSFX
     /// </summary>
-    public unsafe void PlayGoggleOnSFX()
+    public unsafe override void PlayGoggleOnSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.PlayGoggleOnSFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -148,7 +148,7 @@ public partial class RPawnVillainGunThermal : BmSDK.BmScript.RPawnVillainGun, Bm
     /// <summary>
     /// Function: PostInitCharacter
     /// </summary>
-    public unsafe void PostInitCharacter()
+    public unsafe override void PostInitCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainGunThermal.PostInitCharacter", true);
         byte* paramsPtr = stackalloc byte[0];

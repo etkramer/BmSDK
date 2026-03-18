@@ -36,7 +36,7 @@ public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Function: AddPlayerToRecentPlayers
     /// </summary>
-    public unsafe void AddPlayerToRecentPlayers(BmSDK.Engine.OnlineSubsystem.FUniqueNetId NewPlayer)
+    public unsafe virtual void AddPlayerToRecentPlayers(BmSDK.Engine.OnlineSubsystem.FUniqueNetId NewPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineRecentPlayersList.AddPlayerToRecentPlayers", true);
         byte* paramsPtr = stackalloc byte[12];

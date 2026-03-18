@@ -47,7 +47,7 @@ public partial class RSeqAct_AutoInitialiseHelicopters : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: GetControlChopperIndex
     /// </summary>
-    public unsafe int GetControlChopperIndex(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RFlagManager FlagMan)
+    public unsafe virtual int GetControlChopperIndex(BmSDK.BmGame.RPlayerController RPC, BmSDK.BmGame.RFlagManager FlagMan)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AutoInitialiseHelicopters.GetControlChopperIndex", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -60,7 +60,7 @@ public partial class RSeqAct_AutoInitialiseHelicopters : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AutoInitialiseHelicopters.Activated", true);
         byte* paramsPtr = stackalloc byte[18];

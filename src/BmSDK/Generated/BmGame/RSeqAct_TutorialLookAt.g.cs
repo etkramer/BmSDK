@@ -47,7 +47,7 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: CancelZoom
     /// </summary>
-    public unsafe void CancelZoom()
+    public unsafe virtual void CancelZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TutorialLookAt.CancelZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TriggerZoom
     /// </summary>
-    public unsafe void TriggerZoom()
+    public unsafe virtual void TriggerZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TutorialLookAt.TriggerZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_TutorialLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: TriggerLookAt
     /// </summary>
-    public unsafe void TriggerLookAt()
+    public unsafe virtual void TriggerLookAt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TutorialLookAt.TriggerLookAt", true);
         byte* paramsPtr = stackalloc byte[0];

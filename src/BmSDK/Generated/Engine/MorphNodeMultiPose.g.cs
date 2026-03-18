@@ -36,7 +36,7 @@ public partial class MorphNodeMultiPose : BmSDK.Engine.MorphNodeBase, BmSDK.IGam
     /// <summary>
     /// Function: UpdateMorphTarget
     /// </summary>
-    public unsafe bool UpdateMorphTarget(BmSDK.Engine.MorphTarget Target, float InWeight)
+    public unsafe virtual bool UpdateMorphTarget(BmSDK.Engine.MorphTarget Target, float InWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MorphNodeMultiPose.UpdateMorphTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -56,7 +56,7 @@ public partial class MorphNodeMultiPose : BmSDK.Engine.MorphNodeBase, BmSDK.IGam
     /// <summary>
     /// Function: RemoveMorphTarget
     /// </summary>
-    public unsafe void RemoveMorphTarget(BmSDK.FName MorphTargetName)
+    public unsafe virtual void RemoveMorphTarget(BmSDK.FName MorphTargetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MorphNodeMultiPose.RemoveMorphTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -75,7 +75,7 @@ public partial class MorphNodeMultiPose : BmSDK.Engine.MorphNodeBase, BmSDK.IGam
     /// <summary>
     /// Function: AddMorphTarget
     /// </summary>
-    public unsafe bool AddMorphTarget(BmSDK.FName MorphTargetName, float InWeight = default)
+    public unsafe virtual bool AddMorphTarget(BmSDK.FName MorphTargetName, float InWeight = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MorphNodeMultiPose.AddMorphTarget", true);
         byte* paramsPtr = stackalloc byte[16];

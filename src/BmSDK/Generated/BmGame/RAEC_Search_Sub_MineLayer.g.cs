@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_MineLayer : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: AtUltimateDest
     /// </summary>
-    public unsafe void AtUltimateDest()
+    public unsafe override void AtUltimateDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_MineLayer.AtUltimateDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_MineLayer : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: SetNextMinePoint
     /// </summary>
-    public unsafe bool SetNextMinePoint()
+    public unsafe virtual bool SetNextMinePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_MineLayer.SetNextMinePoint", true);
         byte* paramsPtr = stackalloc byte[20];

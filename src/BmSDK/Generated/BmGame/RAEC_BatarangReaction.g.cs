@@ -71,7 +71,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ClearTestRequests
     /// </summary>
-    public unsafe void ClearTestRequests()
+    public unsafe virtual void ClearTestRequests()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ClearTestRequests", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetRandomThugToSpeakIfNobodyIsRECed
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController GetRandomThugToSpeakIfNobodyIsRECed()
+    public unsafe virtual BmSDK.BmGame.RBMAIController GetRandomThugToSpeakIfNobodyIsRECed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.GetRandomThugToSpeakIfNobodyIsRECed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetRandomThugToSpeak
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController GetRandomThugToSpeak()
+    public unsafe virtual BmSDK.BmGame.RBMAIController GetRandomThugToSpeak()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.GetRandomThugToSpeak", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ProcessThugSearch
     /// </summary>
-    public unsafe bool ProcessThugSearch(BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper> TargetThugSearch, bool bUncappedDist)
+    public unsafe virtual bool ProcessThugSearch(BmSDK.TArray<BmSDK.BmGame.RMultiNavHandleWrapper> TargetThugSearch, bool bUncappedDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ProcessThugSearch", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -117,7 +117,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: PawnCanSeeLastPoint
     /// </summary>
-    public unsafe bool PawnCanSeeLastPoint(BmSDK.BmGame.RBMPawnAI TestPawn)
+    public unsafe virtual bool PawnCanSeeLastPoint(BmSDK.BmGame.RBMPawnAI TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.PawnCanSeeLastPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: InitThugSearch
     /// </summary>
-    public unsafe void InitThugSearch()
+    public unsafe virtual void InitThugSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.InitThugSearch", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: StartResponderSearch
     /// </summary>
-    public unsafe void StartResponderSearch()
+    public unsafe virtual void StartResponderSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.StartResponderSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ResponderSearchActive
     /// </summary>
-    public unsafe bool ResponderSearchActive()
+    public unsafe virtual bool ResponderSearchActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ResponderSearchActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -162,7 +162,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: DoJumpReaction
     /// </summary>
-    public unsafe void DoJumpReaction(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, float JumpRange, int NewBRangID = default, bool bDueToBodyDrop = default, BmSDK.BmGame.RBMAIController BodyDodger = default, bool bTerrorShootStartle = default, bool bAwardRECScareMedal = default)
+    public unsafe virtual void DoJumpReaction(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, float JumpRange, int NewBRangID = default, bool bDueToBodyDrop = default, BmSDK.BmGame.RBMAIController BodyDodger = default, bool bTerrorShootStartle = default, bool bAwardRECScareMedal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.DoJumpReaction", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -182,7 +182,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: HasThugsReacting
     /// </summary>
-    public unsafe bool HasThugsReacting()
+    public unsafe virtual bool HasThugsReacting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.HasThugsReacting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ExitIntoAttack
     /// </summary>
-    public unsafe void ExitIntoAttack()
+    public unsafe virtual void ExitIntoAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ExitIntoAttack", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -204,7 +204,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ThugGotBatarangedOutOfFrozen
     /// </summary>
-    public unsafe void ThugGotBatarangedOutOfFrozen(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void ThugGotBatarangedOutOfFrozen(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ThugGotBatarangedOutOfFrozen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ThugGotUpFromBatarang
     /// </summary>
-    public unsafe void ThugGotUpFromBatarang(BmSDK.BmGame.RPawnVillain TestThug)
+    public unsafe virtual void ThugGotUpFromBatarang(BmSDK.BmGame.RPawnVillain TestThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ThugGotUpFromBatarang", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ManDownBodyDodge
     /// </summary>
-    public unsafe void ManDownBodyDodge(BmSDK.BmGame.RBMAIController Dodger, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, int LaunchID)
+    public unsafe virtual void ManDownBodyDodge(BmSDK.BmGame.RBMAIController Dodger, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, int LaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ManDownBodyDodge", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -244,7 +244,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ThugHit
     /// </summary>
-    public unsafe void ThugHit(BmSDK.BmGame.RPawnVillain NewVictim, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int NewLaunchID, bool bAwardRECScareMedal = default)
+    public unsafe virtual void ThugHit(BmSDK.BmGame.RPawnVillain NewVictim, System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int NewLaunchID, bool bAwardRECScareMedal = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ThugHit", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -262,7 +262,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: MakeRicochetNoise
     /// </summary>
-    public unsafe void MakeRicochetNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID, bool bTerrorShootStartle = default)
+    public unsafe virtual void MakeRicochetNoise(System.Numerics.Vector3 HitLoc, System.Numerics.Vector3 ThrownFromPos, bool bThrownFromGarg, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID, bool bTerrorShootStartle = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.MakeRicochetNoise", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -279,7 +279,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: CheckForThrowReaction
     /// </summary>
-    public unsafe void CheckForThrowReaction(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
+    public unsafe virtual void CheckForThrowReaction(System.Numerics.Vector3 ThrownFromPos, BmSDK.BmGame.RBMAIController.BRAECReactionType Type, int LaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.CheckForThrowReaction", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -293,7 +293,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: HandleHostageTakerReaction
     /// </summary>
-    public unsafe void HandleHostageTakerReaction(System.Numerics.Vector3 HitLoc, float JumpRange)
+    public unsafe virtual void HandleHostageTakerReaction(System.Numerics.Vector3 HitLoc, float JumpRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.HandleHostageTakerReaction", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -306,7 +306,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetParamsFromReactionType
     /// </summary>
-    public unsafe bool GetParamsFromReactionType(BmSDK.BmGame.RBMAIController.BRAECReactionType TestType, out float JumpRange)
+    public unsafe virtual bool GetParamsFromReactionType(BmSDK.BmGame.RBMAIController.BRAECReactionType TestType, out float JumpRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.GetParamsFromReactionType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -319,7 +319,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: ThugSawThrow
     /// </summary>
-    public unsafe bool ThugSawThrow(System.Numerics.Vector3 ThrownFromPos, int NewLaunchID)
+    public unsafe virtual bool ThugSawThrow(System.Numerics.Vector3 ThrownFromPos, int NewLaunchID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.ThugSawThrow", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -332,7 +332,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: UnregisterGuardAEC
     /// </summary>
-    public unsafe void UnregisterGuardAEC(BmSDK.BmGame.RAEC_Search_Sub_Guard ExGuardAEC)
+    public unsafe virtual void UnregisterGuardAEC(BmSDK.BmGame.RAEC_Search_Sub_Guard ExGuardAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.UnregisterGuardAEC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -344,7 +344,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: RegisterGuardAEC
     /// </summary>
-    public unsafe void RegisterGuardAEC(BmSDK.BmGame.RAEC_Search_Sub_Guard NewGuardAEC)
+    public unsafe virtual void RegisterGuardAEC(BmSDK.BmGame.RAEC_Search_Sub_Guard NewGuardAEC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.RegisterGuardAEC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -356,7 +356,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -368,7 +368,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -380,7 +380,7 @@ public partial class RAEC_BatarangReaction : BmSDK.BmGame.RAlertEventCoordinator
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_BatarangReaction.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

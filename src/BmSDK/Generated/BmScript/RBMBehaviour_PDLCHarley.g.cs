@@ -47,7 +47,7 @@ public partial class RBMBehaviour_PDLCHarley : BmSDK.BmGame.RBMBehaviour_Combat,
     /// <summary>
     /// Function: DoVisionChecks
     /// </summary>
-    public unsafe bool DoVisionChecks()
+    public unsafe virtual bool DoVisionChecks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PDLCHarley.DoVisionChecks", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_PDLCHarley : BmSDK.BmGame.RBMBehaviour_Combat,
     /// <summary>
     /// Function: IsCurrentCombatant
     /// </summary>
-    public unsafe bool IsCurrentCombatant()
+    public unsafe override bool IsCurrentCombatant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PDLCHarley.IsCurrentCombatant", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_PDLCHarley : BmSDK.BmGame.RBMBehaviour_Combat,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PDLCHarley.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_PDLCHarley : BmSDK.BmGame.RBMBehaviour_Combat,
     /// <summary>
     /// Function: Attack
     /// </summary>
-    public unsafe void Attack()
+    public unsafe virtual void Attack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PDLCHarley.Attack", true);
         byte* paramsPtr = stackalloc byte[0];

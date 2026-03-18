@@ -47,7 +47,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe override void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.Repath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe override void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: BatmanTooFarAway
     /// </summary>
-    public unsafe bool BatmanTooFarAway()
+    public unsafe virtual bool BatmanTooFarAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.BatmanTooFarAway", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe override System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.Update", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_TaliaWalkWithBats : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TaliaWalkWithBats.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

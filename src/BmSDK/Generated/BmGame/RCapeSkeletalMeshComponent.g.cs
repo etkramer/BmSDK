@@ -36,7 +36,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Function: InternalUpdateMaterial
     /// </summary>
-    public unsafe void InternalUpdateMaterial()
+    public unsafe virtual void InternalUpdateMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.InternalUpdateMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Function: SetupMaterialConstants
     /// </summary>
-    public unsafe void SetupMaterialConstants()
+    public unsafe virtual void SetupMaterialConstants()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.SetupMaterialConstants", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Function: UpdateOverrideMaterial
     /// </summary>
-    public unsafe void UpdateOverrideMaterial(BmSDK.Engine.MaterialInterface NewMat)
+    public unsafe virtual void UpdateOverrideMaterial(BmSDK.Engine.MaterialInterface NewMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.UpdateOverrideMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Function: UpdateDefaultMaterial
     /// </summary>
-    public unsafe void UpdateDefaultMaterial(BmSDK.Engine.MaterialInterface NewMat)
+    public unsafe virtual void UpdateDefaultMaterial(BmSDK.Engine.MaterialInterface NewMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.UpdateDefaultMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// <summary>
     /// Function: GetCapeComponent
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeComponent GetCapeComponent()
+    public unsafe virtual BmSDK.BmGame.RCapeComponent GetCapeComponent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.GetCapeComponent", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -47,7 +47,7 @@ public partial class RBMBehaviour_PredGuard : BmSDK.BmGame.RBMBehaviour_ActionQu
     /// <summary>
     /// Function: CanDodgeProjectile
     /// </summary>
-    public unsafe bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
+    public unsafe override bool CanDodgeProjectile(System.Numerics.Vector3 ThrownFromPos, int CheckBatarangID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredGuard.CanDodgeProjectile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_PredGuard : BmSDK.BmGame.RBMBehaviour_ActionQu
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredGuard.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_PredGuard : BmSDK.BmGame.RBMBehaviour_ActionQu
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_PredGuard.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -66,7 +66,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: WantsLeaderToWait
     /// </summary>
-    public unsafe bool WantsLeaderToWait()
+    public unsafe virtual bool WantsLeaderToWait()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.WantsLeaderToWait", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: IsInFormation
     /// </summary>
-    public unsafe bool IsInFormation()
+    public unsafe virtual bool IsInFormation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.IsInFormation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: FollowTargetChanged
     /// </summary>
-    public unsafe void FollowTargetChanged()
+    public unsafe virtual void FollowTargetChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.FollowTargetChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: UnChain
     /// </summary>
-    public unsafe void UnChain()
+    public unsafe virtual void UnChain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.UnChain", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: HandlePushIn
     /// </summary>
-    public unsafe void HandlePushIn(BmSDK.BmGame.RAEC_Sub_Formation Pushee)
+    public unsafe virtual void HandlePushIn(BmSDK.BmGame.RAEC_Sub_Formation Pushee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.HandlePushIn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: StopFollowing
     /// </summary>
-    public unsafe void StopFollowing()
+    public unsafe virtual void StopFollowing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.StopFollowing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: Follow
     /// </summary>
-    public unsafe void Follow(BmSDK.BmGame.RAEC_Sub_Formation NewTarget)
+    public unsafe virtual void Follow(BmSDK.BmGame.RAEC_Sub_Formation NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.Follow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class RAEC_Sub_Formation : BmSDK.BmGame.RAlertEventCoordinatorBas
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Sub_Formation.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[12];

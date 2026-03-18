@@ -71,7 +71,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToCas.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// Function: GetCasDist
     /// </summary>
-    public unsafe float GetCasDist()
+    public unsafe virtual float GetCasDist()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToCas.GetCasDist", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// Function: BuildHandle
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavigationHandle BuildHandle()
+    public unsafe override BmSDK.BmGame.RNavigationHandle BuildHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToCas.BuildHandle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToCas.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_RunToCas : BmSDK.BmGame.RBMAIAction_BaseMove, B
     /// <summary>
     /// Function: SetCasualty
     /// </summary>
-    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe virtual void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_RunToCas.SetCasualty", true);
         byte* paramsPtr = stackalloc byte[4];

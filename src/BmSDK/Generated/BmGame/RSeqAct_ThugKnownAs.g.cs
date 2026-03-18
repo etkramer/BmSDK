@@ -47,7 +47,7 @@ public partial class RSeqAct_ThugKnownAs : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ThugKnownAs.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ThugKnownAs : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ThugKnownAs.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ThugKnownAs : BmSDK.Engine.SeqAct_Latent, BmSDK.IGa
     /// <summary>
     /// Function: GetDialogueManager
     /// </summary>
-    public unsafe BmSDK.BmGame.RDialogueManager GetDialogueManager()
+    public unsafe virtual BmSDK.BmGame.RDialogueManager GetDialogueManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ThugKnownAs.GetDialogueManager", true);
         byte* paramsPtr = stackalloc byte[4];

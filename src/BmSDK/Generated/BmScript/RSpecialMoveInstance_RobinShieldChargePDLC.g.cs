@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RobinShieldChargePDLC : BmSDK.BmScript
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldChargePDLC.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RSpecialMoveInstance_RobinShieldChargePDLC : BmSDK.BmScript
     /// <summary>
     /// Function: KnockDownVillain
     /// </summary>
-    public unsafe void KnockDownVillain()
+    public unsafe override void KnockDownVillain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldChargePDLC.KnockDownVillain", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_RobinShieldChargePDLC : BmSDK.BmScript
     /// <summary>
     /// Function: RetryKnockDownVillain
     /// </summary>
-    public unsafe void RetryKnockDownVillain()
+    public unsafe virtual void RetryKnockDownVillain()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinShieldChargePDLC.RetryKnockDownVillain", true);
         byte* paramsPtr = stackalloc byte[0];

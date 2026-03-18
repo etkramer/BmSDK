@@ -36,7 +36,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: SendStatusToFlash
     /// </summary>
-    public unsafe void SendStatusToFlash(bool BenchmarkingActive, int BenchmarkMin, int BenchmarkMax, int BenchmarkAverage)
+    public unsafe virtual void SendStatusToFlash(bool BenchmarkingActive, int BenchmarkMin, int BenchmarkMax, int BenchmarkAverage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.SendStatusToFlash", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -51,7 +51,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: OnCloseHUD
     /// </summary>
-    public unsafe void OnCloseHUD()
+    public unsafe virtual void OnCloseHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.OnCloseHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -62,7 +62,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe virtual void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -73,7 +73,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide()
+    public unsafe virtual void Hide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.Hide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show()
+    public unsafe virtual void show()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.show", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: HideItem
     /// </summary>
-    public unsafe void HideItem(BmSDK.FString ItemName)
+    public unsafe virtual void HideItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.HideItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: ShowItem
     /// </summary>
-    public unsafe void ShowItem(BmSDK.FString ItemName)
+    public unsafe virtual void ShowItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.ShowItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: KismetControlsInOut
     /// </summary>
-    public unsafe void KismetControlsInOut(bool bTrue)
+    public unsafe virtual void KismetControlsInOut(bool bTrue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.KismetControlsInOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class GFxMovieBenchmarking : BmSDK.BmGame.RGFxMovie, BmSDK.IGameO
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.GFxMovieBenchmarking.Init", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: DamageStatues
     /// </summary>
-    public unsafe void DamageStatues(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void DamageStatues(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.DamageStatues", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -84,7 +84,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Explode(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.Explode", true);
         byte* paramsPtr = stackalloc byte[324];
@@ -97,7 +97,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: IsSkylight
     /// </summary>
-    public unsafe bool IsSkylight(BmSDK.BmGame.RFractureWallBase FractureWindow)
+    public unsafe virtual bool IsSkylight(BmSDK.BmGame.RFractureWallBase FractureWindow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.IsSkylight", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -109,7 +109,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: CheckBreakWindow
     /// </summary>
-    public unsafe bool CheckBreakWindow(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual bool CheckBreakWindow(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.CheckBreakWindow", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -123,7 +123,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: ExplodeFx
     /// </summary>
-    public unsafe void ExplodeFx()
+    public unsafe virtual void ExplodeFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.ExplodeFx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -145,7 +145,7 @@ public partial class RFreezeProjectileExploding : BmSDK.BmGame.RProjectile, BmSD
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeProjectileExploding.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

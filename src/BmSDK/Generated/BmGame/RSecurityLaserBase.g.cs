@@ -71,7 +71,7 @@ public partial class RSecurityLaserBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
+    public unsafe virtual void SuccessfullyDisrupted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSecurityLaserBase.SuccessfullyDisrupted", true);
         byte* paramsPtr = stackalloc byte[0];

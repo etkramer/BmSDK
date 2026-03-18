@@ -66,7 +66,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: UpdateProximityTimers
     /// </summary>
-    public unsafe void UpdateProximityTimers(float DeltaTime)
+    public unsafe virtual void UpdateProximityTimers(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.UpdateProximityTimers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: NativeTick
     /// </summary>
-    public unsafe void NativeTick(float DeltaTime)
+    public unsafe virtual void NativeTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.NativeTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -171,7 +171,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -185,7 +185,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: ExplodeFx
     /// </summary>
-    public unsafe void ExplodeFx()
+    public unsafe virtual void ExplodeFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.ExplodeFx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: DoDamage
     /// </summary>
-    public unsafe void DoDamage()
+    public unsafe virtual void DoDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.DoDamage", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -207,7 +207,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -225,7 +225,7 @@ public partial class RTripMineBase : BmSDK.BmGame.RXrayInterpActor, BmSDK.BmGame
     /// <summary>
     /// Function: Kill
     /// </summary>
-    public unsafe void Kill()
+    public unsafe virtual void Kill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RTripMineBase.Kill", true);
         byte* paramsPtr = stackalloc byte[0];

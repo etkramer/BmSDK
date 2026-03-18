@@ -47,7 +47,7 @@ public partial class RSeqAct_RemovePlacedGoo : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RemovePlacedGoo.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

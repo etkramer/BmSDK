@@ -71,7 +71,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
     /// <summary>
     /// Function: SetPerfectConcealment
     /// </summary>
-    public unsafe void SetPerfectConcealment(bool bNewPerfectConcealment)
+    public unsafe override void SetPerfectConcealment(bool bNewPerfectConcealment)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.SetPerfectConcealment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
     /// <summary>
     /// Function: GetCatwomanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCatwomanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetCatwomanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetCatwomanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -94,7 +94,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
     /// <summary>
     /// Function: GetBatmanPerchPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatmanPerchPosition()
+    public unsafe override System.Numerics.Vector3 GetBatmanPerchPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetBatmanPerchPosition", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.UnTouch", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.Touch", true);
         byte* paramsPtr = stackalloc byte[36];

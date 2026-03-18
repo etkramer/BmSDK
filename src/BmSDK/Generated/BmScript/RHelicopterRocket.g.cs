@@ -71,7 +71,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: RemoveRocket
     /// </summary>
-    public unsafe void RemoveRocket()
+    public unsafe virtual void RemoveRocket()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.RemoveRocket", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: HurtBatman
     /// </summary>
-    public unsafe void HurtBatman()
+    public unsafe virtual void HurtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.HurtBatman", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -93,7 +93,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: HitLevel
     /// </summary>
-    public unsafe void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void HitLevel(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.HitLevel", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -106,7 +106,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(BmSDK.Rotator HitRotator)
+    public unsafe virtual void Explode(BmSDK.Rotator HitRotator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.Explode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -118,7 +118,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: InitialiseRocket
     /// </summary>
-    public unsafe void InitialiseRocket()
+    public unsafe virtual void InitialiseRocket()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.InitialiseRocket", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: UpdateMoveTarget
     /// </summary>
-    public unsafe void UpdateMoveTarget(float DeltaTime)
+    public unsafe virtual void UpdateMoveTarget(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.UpdateMoveTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -153,7 +153,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: SetLowDetailNoCollision
     /// </summary>
-    public unsafe void SetLowDetailNoCollision()
+    public unsafe virtual void SetLowDetailNoCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.SetLowDetailNoCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RHelicopterRocket : BmSDK.BmGame.RPenguinRocketBase, BmSDK.
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe virtual void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopterRocket.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
+    public unsafe override BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_HelpTextDLC.GetLine", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -48,7 +48,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_HelpTextDLC.Update", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_HelpTextDLC.Activated", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -71,7 +71,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Function: ActionPerformed
     /// </summary>
-    public unsafe void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe override void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_HelpTextDLC.ActionPerformed", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -83,7 +83,7 @@ public partial class RSeqAct_HelpTextDLC : BmSDK.BmGame.RSeqAct_HelpText, BmSDK.
     /// <summary>
     /// Function: ActionPerformedDLC
     /// </summary>
-    public unsafe void ActionPerformedDLC(BmSDK.BmScript.RSeqAct_HelpTextDLC.EGameActionDLC Action)
+    public unsafe virtual void ActionPerformedDLC(BmSDK.BmScript.RSeqAct_HelpTextDLC.EGameActionDLC Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_HelpTextDLC.ActionPerformedDLC", true);
         byte* paramsPtr = stackalloc byte[8];

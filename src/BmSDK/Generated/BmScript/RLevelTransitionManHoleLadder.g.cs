@@ -71,7 +71,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: DetachVisibleComponents
     /// </summary>
-    public unsafe void DetachVisibleComponents()
+    public unsafe override void DetachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.DetachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: AttachVisibleComponents
     /// </summary>
-    public unsafe void AttachVisibleComponents()
+    public unsafe override void AttachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.AttachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: StartLevelFromHere
     /// </summary>
-    public unsafe void StartLevelFromHere(bool LevelStart = default)
+    public unsafe override void StartLevelFromHere(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.StartLevelFromHere", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: SwitchLevelsAfterFade
     /// </summary>
-    public unsafe void SwitchLevelsAfterFade()
+    public unsafe virtual void SwitchLevelsAfterFade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.SwitchLevelsAfterFade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: ExitPlayerFromTransition
     /// </summary>
-    public unsafe void ExitPlayerFromTransition()
+    public unsafe override void ExitPlayerFromTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.ExitPlayerFromTransition", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -138,7 +138,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: StartFadeOut
     /// </summary>
-    public unsafe void StartFadeOut()
+    public unsafe virtual void StartFadeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.StartFadeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -161,7 +161,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -173,7 +173,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -184,7 +184,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -195,7 +195,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -206,7 +206,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -262,7 +262,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -273,7 +273,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -284,7 +284,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -295,7 +295,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -306,7 +306,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.Interact", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -318,7 +318,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -329,7 +329,7 @@ public partial class RLevelTransitionManHoleLadder : BmSDK.BmGame.RLevelTransiti
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionManHoleLadder.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -47,7 +47,7 @@ public partial class RSeqAct_ShootingGallery : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShootingGallery.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ShootingGallery : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdateShooting
     /// </summary>
-    public unsafe void UpdateShooting()
+    public unsafe virtual void UpdateShooting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShootingGallery.UpdateShooting", true);
         byte* paramsPtr = stackalloc byte[60];

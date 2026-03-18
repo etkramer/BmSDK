@@ -71,7 +71,7 @@ public partial class RCwBolasProjectile : BmSDK.BmGame.RBatarangProjectile, BmSD
     /// <summary>
     /// Function: Ricochet
     /// </summary>
-    public unsafe void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
+    public unsafe override void Ricochet(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor HitActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwBolasProjectile.Ricochet", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -84,7 +84,7 @@ public partial class RCwBolasProjectile : BmSDK.BmGame.RBatarangProjectile, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwBolasProjectile.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RCwBolasProjectile : BmSDK.BmGame.RBatarangProjectile, BmSD
     /// <summary>
     /// Function: PlayGadgetAnim
     /// </summary>
-    public unsafe void PlayGadgetAnim(BmSDK.FName GadgetAnim)
+    public unsafe virtual void PlayGadgetAnim(BmSDK.FName GadgetAnim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwBolasProjectile.PlayGadgetAnim", true);
         byte* paramsPtr = stackalloc byte[12];

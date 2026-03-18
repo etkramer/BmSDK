@@ -71,7 +71,7 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmashIcedThug.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ToppleFrozenThug
     /// </summary>
-    public unsafe void ToppleFrozenThug()
+    public unsafe virtual void ToppleFrozenThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmashIcedThug.ToppleFrozenThug", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe virtual void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmashIcedThug.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: StartSmashAnim
     /// </summary>
-    public unsafe void StartSmashAnim()
+    public unsafe virtual void StartSmashAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmashIcedThug.StartSmashAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RBMAIAction_SmashIcedThug : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_SmashIcedThug.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: DrawCollisionCylinders
     /// </summary>
-    public unsafe void DrawCollisionCylinders()
+    public unsafe virtual void DrawCollisionCylinders()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.DrawCollisionCylinders", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: DestroySelf
     /// </summary>
-    public unsafe void DestroySelf()
+    public unsafe virtual void DestroySelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.DestroySelf", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: OnActivated
     /// </summary>
-    public unsafe void OnActivated()
+    public unsafe virtual void OnActivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.OnActivated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: OnTouchVillain
     /// </summary>
-    public unsafe void OnTouchVillain(BmSDK.BmGame.RPawnVillain touchVillain)
+    public unsafe virtual void OnTouchVillain(BmSDK.BmGame.RPawnVillain touchVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.OnTouchVillain", true);
         byte* paramsPtr = stackalloc byte[320];
@@ -127,7 +127,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.Touch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -142,7 +142,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(bool bSecondary)
+    public unsafe virtual void Initialise(bool bSecondary)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RFreezeClusterTrap : BmSDK.BmGame.RFreezeClusterTrapBase, B
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeClusterTrap.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

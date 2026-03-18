@@ -71,7 +71,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -91,7 +91,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -106,7 +106,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.Bump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -120,7 +120,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReceiveImpulse
     /// </summary>
-    public unsafe void ReceiveImpulse(BmSDK.Engine.Pawn Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void ReceiveImpulse(BmSDK.Engine.Pawn Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.ReceiveImpulse", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -134,7 +134,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: ApplyImpulse
     /// </summary>
-    public unsafe void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
+    public unsafe override void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.ApplyImpulse", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -187,7 +187,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: BecomeStatic
     /// </summary>
-    public unsafe void BecomeStatic()
+    public unsafe virtual void BecomeStatic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.BecomeStatic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnWakeRBPhysics
     /// </summary>
-    public unsafe void OnWakeRBPhysics()
+    public unsafe override void OnWakeRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.OnWakeRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisablePrecomputedLighting
     /// </summary>
-    public unsafe void DisablePrecomputedLighting()
+    public unsafe virtual void DisablePrecomputedLighting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.KActorFromStatic.DisablePrecomputedLighting", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: PlayLookAnim
     /// </summary>
-    public unsafe void PlayLookAnim(BmSDK.FName AnimName)
+    public unsafe virtual void PlayLookAnim(BmSDK.FName AnimName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.PlayLookAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: GetLookOutAnim
     /// </summary>
-    public unsafe BmSDK.FName GetLookOutAnim()
+    public unsafe virtual BmSDK.FName GetLookOutAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.GetLookOutAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: CentrePointIsOnRight
     /// </summary>
-    public unsafe bool CentrePointIsOnRight()
+    public unsafe virtual bool CentrePointIsOnRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.CentrePointIsOnRight", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -117,7 +117,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -128,7 +128,7 @@ public partial class RBMAIAction_HoldPerim : BmSDK.BmGame.RBMAIAction, BmSDK.IGa
     /// <summary>
     /// Function: SetPoints
     /// </summary>
-    public unsafe void SetPoints(System.Numerics.Vector3 NewCentre, BmSDK.TArray<System.Numerics.Vector3> NewWatch)
+    public unsafe virtual void SetPoints(System.Numerics.Vector3 NewCentre, BmSDK.TArray<System.Numerics.Vector3> NewWatch)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldPerim.SetPoints", true);
         byte* paramsPtr = stackalloc byte[24];

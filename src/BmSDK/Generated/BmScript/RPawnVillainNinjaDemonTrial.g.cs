@@ -71,7 +71,7 @@ public partial class RPawnVillainNinjaDemonTrial : BmSDK.BmScript.RPawnVillainNi
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaDemonTrial.Died", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -85,7 +85,7 @@ public partial class RPawnVillainNinjaDemonTrial : BmSDK.BmScript.RPawnVillainNi
     /// <summary>
     /// Function: SpawnDesintegrateParticles
     /// </summary>
-    public unsafe void SpawnDesintegrateParticles(bool bPlaySfx = default)
+    public unsafe virtual void SpawnDesintegrateParticles(bool bPlaySfx = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaDemonTrial.SpawnDesintegrateParticles", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -97,7 +97,7 @@ public partial class RPawnVillainNinjaDemonTrial : BmSDK.BmScript.RPawnVillainNi
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaDemonTrial.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RPawnVillainNinjaDemonTrial : BmSDK.BmScript.RPawnVillainNi
     /// <summary>
     /// Function: SetSandCloneVisibilityFx
     /// </summary>
-    public unsafe void SetSandCloneVisibilityFx(float Param)
+    public unsafe virtual void SetSandCloneVisibilityFx(float Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaDemonTrial.SetSandCloneVisibilityFx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -121,7 +121,7 @@ public partial class RPawnVillainNinjaDemonTrial : BmSDK.BmScript.RPawnVillainNi
     /// <summary>
     /// Function: UpdateDesintegrate
     /// </summary>
-    public unsafe bool UpdateDesintegrate(float DeltaTime)
+    public unsafe virtual bool UpdateDesintegrate(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaDemonTrial.UpdateDesintegrate", true);
         byte* paramsPtr = stackalloc byte[8];

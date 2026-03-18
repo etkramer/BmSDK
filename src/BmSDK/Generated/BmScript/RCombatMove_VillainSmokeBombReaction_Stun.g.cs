@@ -71,7 +71,7 @@ public partial class RCombatMove_VillainSmokeBombReaction_Stun : BmSDK.BmGame.RC
     /// <summary>
     /// Function: SetCounterInfo
     /// </summary>
-    public unsafe void SetCounterInfo(bool bMirrored)
+    public unsafe override void SetCounterInfo(bool bMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainSmokeBombReaction_Stun.SetCounterInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCombatMove_VillainSmokeBombReaction_Stun : BmSDK.BmGame.RC
     /// <summary>
     /// Function: CombatAnimHitStart
     /// </summary>
-    public unsafe void CombatAnimHitStart()
+    public unsafe override void CombatAnimHitStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainSmokeBombReaction_Stun.CombatAnimHitStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RCombatMove_VillainSmokeBombReaction_Stun : BmSDK.BmGame.RC
     /// <summary>
     /// Function: ShouldMirror
     /// </summary>
-    public unsafe bool ShouldMirror()
+    public unsafe override bool ShouldMirror()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_VillainSmokeBombReaction_Stun.ShouldMirror", true);
         byte* paramsPtr = stackalloc byte[4];

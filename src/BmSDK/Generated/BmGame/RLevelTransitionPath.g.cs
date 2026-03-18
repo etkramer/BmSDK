@@ -71,7 +71,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: ResetStreaming
     /// </summary>
-    public unsafe void ResetStreaming()
+    public unsafe override void ResetStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.ResetStreaming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float TimeDelta)
+    public unsafe override void Tick(float TimeDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: HandleKismetAction
     /// </summary>
-    public unsafe void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_LockDown Action)
+    public unsafe override void HandleKismetAction(int Index, BmSDK.BmGame.RSeqAct_LockDown Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.HandleKismetAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe override void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: CheckPlayerStart
     /// </summary>
-    public unsafe void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
+    public unsafe override void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.CheckPlayerStart", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: FinishPreloadingLevelsForEntering
     /// </summary>
-    public unsafe void FinishPreloadingLevelsForEntering()
+    public unsafe override void FinishPreloadingLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.FinishPreloadingLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: PreloadLevelsForEntering
     /// </summary>
-    public unsafe void PreloadLevelsForEntering()
+    public unsafe override void PreloadLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.PreloadLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK
     /// <summary>
     /// Function: IsInActivationRange
     /// </summary>
-    public unsafe bool IsInActivationRange(System.Numerics.Vector3 pos, float ExtraSize = default)
+    public unsafe virtual bool IsInActivationRange(System.Numerics.Vector3 pos, float ExtraSize = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionPath.IsInActivationRange", true);
         byte* paramsPtr = stackalloc byte[20];

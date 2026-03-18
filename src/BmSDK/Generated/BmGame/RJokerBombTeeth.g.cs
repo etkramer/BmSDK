@@ -71,7 +71,7 @@ public partial class RJokerBombTeeth : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EarlyDeath
     /// </summary>
-    public unsafe void EarlyDeath()
+    public unsafe virtual void EarlyDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBombTeeth.EarlyDeath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RJokerBombTeeth : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: WillCollideWithMovement
     /// </summary>
-    public unsafe bool WillCollideWithMovement(System.Numerics.Vector3 Mov)
+    public unsafe virtual bool WillCollideWithMovement(System.Numerics.Vector3 Mov)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBombTeeth.WillCollideWithMovement", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -101,7 +101,7 @@ public partial class RJokerBombTeeth : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFloorZ
     /// </summary>
-    public unsafe float GetFloorZ(System.Numerics.Vector3 MovPos)
+    public unsafe virtual float GetFloorZ(System.Numerics.Vector3 MovPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJokerBombTeeth.GetFloorZ", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -71,7 +71,7 @@ public partial class RPawnVillainThugTough : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: GetFailedPairedAnimMoveAnimsetCw
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFailedPairedAnimMoveAnimsetCw()
+    public unsafe override BmSDK.Engine.AnimSet GetFailedPairedAnimMoveAnimsetCw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugTough.GetFailedPairedAnimMoveAnimsetCw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainThugTough : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: GetFailedPairedAnimMoveAnimsetBm
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetFailedPairedAnimMoveAnimsetBm()
+    public unsafe override BmSDK.Engine.AnimSet GetFailedPairedAnimMoveAnimsetBm()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugTough.GetFailedPairedAnimMoveAnimsetBm", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RPawnVillainThugTough : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: GetFailedPairedAnimMoveAnimset
     /// </summary>
-    public unsafe void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
+    public unsafe override void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugTough.GetFailedPairedAnimMoveAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RPawnVillainThugTough : BmSDK.BmGame.RPawnVillainThug, BmSD
     /// <summary>
     /// Function: SetHealth
     /// </summary>
-    public unsafe void SetHealth()
+    public unsafe override void SetHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThugTough.SetHealth", true);
         byte* paramsPtr = stackalloc byte[0];

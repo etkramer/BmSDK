@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: FadeTrigger
     /// </summary>
-    public unsafe void FadeTrigger()
+    public unsafe virtual void FadeTrigger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.FadeTrigger", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int inID)
+    public unsafe override void OnClicked(int inID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe override void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe override void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: ContentCount
     /// </summary>
-    public unsafe int ContentCount()
+    public unsafe virtual int ContentCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.ContentCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: ClearNew
     /// </summary>
-    public unsafe bool ClearNew(int Index)
+    public unsafe virtual bool ClearNew(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.ClearNew", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: IsNew
     /// </summary>
-    public unsafe bool IsNew(int Index)
+    public unsafe virtual bool IsNew(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.IsNew", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -127,7 +127,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: IsLocked
     /// </summary>
-    public unsafe bool IsLocked(int Index)
+    public unsafe virtual bool IsLocked(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.IsLocked", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: GetGridButtonContext
     /// </summary>
-    public unsafe BmSDK.FString GetGridButtonContext(int ButtonId)
+    public unsafe override BmSDK.FString GetGridButtonContext(int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.GetGridButtonContext", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -151,7 +151,7 @@ public partial class RGFxMovieUI_CatwomanEPs : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_CatwomanEPs.Init", true);
         byte* paramsPtr = stackalloc byte[8];

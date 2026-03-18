@@ -71,7 +71,7 @@ public partial class RAEC_Parent : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSD
     /// <summary>
     /// Function: AssignToEvent
     /// </summary>
-    public unsafe void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
+    public unsafe override void AssignToEvent(BmSDK.BmGame.RBMAIController Con)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Parent.AssignToEvent", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RAEC_Parent : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSD
     /// <summary>
     /// Function: SetNewFearLevel
     /// </summary>
-    public unsafe void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel NewFearLevel)
+    public unsafe virtual void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel NewFearLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Parent.SetNewFearLevel", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -95,7 +95,7 @@ public partial class RAEC_Parent : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSD
     /// <summary>
     /// Function: SetRoom
     /// </summary>
-    public unsafe void SetRoom(BmSDK.BmGame.RBMRoomAIState NewRoomState)
+    public unsafe virtual void SetRoom(BmSDK.BmGame.RBMRoomAIState NewRoomState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Parent.SetRoom", true);
         byte* paramsPtr = stackalloc byte[12];

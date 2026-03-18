@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanQuickHandcuffStrike : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanQuickHandcuffStrike.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanQuickHandcuffStrike : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: ProcessDamageResult
     /// </summary>
-    public unsafe void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
+    public unsafe override void ProcessDamageResult(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat DamageReceiver)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanQuickHandcuffStrike.ProcessDamageResult", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RCombatMove_BatmanQuickHandcuffStrike : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetStrikeAnim
     /// </summary>
-    public unsafe BmSDK.FName GetStrikeAnim()
+    public unsafe override BmSDK.FName GetStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanQuickHandcuffStrike.GetStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RCombatMove_BatmanQuickHandcuffStrike : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetStrikeAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetStrikeAnimSet()
+    public unsafe override BmSDK.Engine.AnimSet GetStrikeAnimSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanQuickHandcuffStrike.GetStrikeAnimSet", true);
         byte* paramsPtr = stackalloc byte[4];

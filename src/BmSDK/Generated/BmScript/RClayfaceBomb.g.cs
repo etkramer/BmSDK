@@ -71,7 +71,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: AnimatedExplode
     /// </summary>
-    public unsafe void AnimatedExplode()
+    public unsafe virtual void AnimatedExplode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.AnimatedExplode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: SetBroken
     /// </summary>
-    public unsafe void SetBroken()
+    public unsafe virtual void SetBroken()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.SetBroken", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -105,7 +105,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: HitByExplosion
     /// </summary>
-    public unsafe void HitByExplosion()
+    public unsafe override void HitByExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.HitByExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: CheckForBMHitByBomb
     /// </summary>
-    public unsafe void CheckForBMHitByBomb(bool bIgnoreDamage)
+    public unsafe virtual void CheckForBMHitByBomb(bool bIgnoreDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.CheckForBMHitByBomb", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -128,7 +128,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RClayfaceBomb : BmSDK.BmGame.RExplosionDetector, BmSDK.IGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceBomb.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowLobby
     /// </summary>
-    public unsafe bool ShowLobby(BmSDK.BmGame.RPlayerController LobbyTarget)
+    public unsafe override bool ShowLobby(BmSDK.BmGame.RPlayerController LobbyTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.ShowLobby", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_ExitToFrontend
     /// </summary>
-    public unsafe void Game_ExitToFrontend()
+    public unsafe override void Game_ExitToFrontend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.Game_ExitToFrontend", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_PauseExitToFrontend
     /// </summary>
-    public unsafe void Game_PauseExitToFrontend()
+    public unsafe override void Game_PauseExitToFrontend()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.Game_PauseExitToFrontend", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_Retry
     /// </summary>
-    public unsafe void Game_Retry()
+    public unsafe override void Game_Retry()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.Game_Retry", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_Restart
     /// </summary>
-    public unsafe void Game_Restart()
+    public unsafe override void Game_Restart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.Game_Restart", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Game_ExitGame
     /// </summary>
-    public unsafe void Game_ExitGame()
+    public unsafe override void Game_ExitGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.Game_ExitGame", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushStats
     /// </summary>
-    public unsafe void FlushStats()
+    public unsafe virtual void FlushStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.FlushStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: WriteOnlineStats
     /// </summary>
-    public unsafe void WriteOnlineStats()
+    public unsafe override void WriteOnlineStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.WriteOnlineStats", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -160,7 +160,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -171,7 +171,7 @@ public partial class RGIChallenge : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetChapterNumber
     /// </summary>
-    public unsafe int GetChapterNumber()
+    public unsafe override int GetChapterNumber()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGIChallenge.GetChapterNumber", true);
         byte* paramsPtr = stackalloc byte[4];

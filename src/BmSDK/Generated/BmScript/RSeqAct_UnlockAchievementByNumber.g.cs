@@ -36,7 +36,7 @@ public partial class RSeqAct_UnlockAchievementByNumber : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_UnlockAchievementByNumber.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

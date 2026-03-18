@@ -71,7 +71,7 @@ public partial class RBatarangProjectileRb_Controllable : BmSDK.BmGame.RBatarang
     /// <summary>
     /// Function: StartSpinSound
     /// </summary>
-    public unsafe void StartSpinSound()
+    public unsafe override void StartSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangProjectileRb_Controllable.StartSpinSound", true);
         byte* paramsPtr = stackalloc byte[4];

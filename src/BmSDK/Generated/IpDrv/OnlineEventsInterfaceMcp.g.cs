@@ -36,7 +36,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
     /// <summary>
     /// Function: UploadMatchmakingStats
     /// </summary>
-    public unsafe bool UploadMatchmakingStats(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, BmSDK.Engine.OnlineMatchmakingStats MMStats)
+    public unsafe virtual bool UploadMatchmakingStats(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, BmSDK.Engine.OnlineMatchmakingStats MMStats)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineEventsInterfaceMcp.UploadMatchmakingStats", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -56,7 +56,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
     /// <summary>
     /// Function: UpdatePlaylistPopulation
     /// </summary>
-    public unsafe bool UpdatePlaylistPopulation(int PlaylistId, int NumPlayers)
+    public unsafe virtual bool UpdatePlaylistPopulation(int PlaylistId, int NumPlayers)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineEventsInterfaceMcp.UpdatePlaylistPopulation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -76,7 +76,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
     /// <summary>
     /// Function: UploadGameplayEventsData
     /// </summary>
-    public unsafe bool UploadGameplayEventsData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, out BmSDK.TArray<byte> Payload)
+    public unsafe virtual bool UploadGameplayEventsData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, out BmSDK.TArray<byte> Payload)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineEventsInterfaceMcp.UploadGameplayEventsData", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -96,7 +96,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.Engin
     /// <summary>
     /// Function: UploadPlayerData
     /// </summary>
-    public unsafe bool UploadPlayerData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, BmSDK.FString PlayerNick, BmSDK.Engine.OnlineProfileSettings ProfileSettings, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
+    public unsafe virtual bool UploadPlayerData(BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqueId, BmSDK.FString PlayerNick, BmSDK.Engine.OnlineProfileSettings ProfileSettings, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineEventsInterfaceMcp.UploadPlayerData", true);
         byte* paramsPtr = stackalloc byte[32];

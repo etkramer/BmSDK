@@ -36,7 +36,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: SetGroupRateScale
     /// </summary>
-    public unsafe void SetGroupRateScale(BmSDK.FName GroupName, float NewRateScale)
+    public unsafe virtual void SetGroupRateScale(BmSDK.FName GroupName, float NewRateScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.SetGroupRateScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -56,7 +56,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: GetRelativePosition
     /// </summary>
-    public unsafe float GetRelativePosition(BmSDK.FName GroupName)
+    public unsafe virtual float GetRelativePosition(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.GetRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -75,7 +75,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: ForceRelativePosition
     /// </summary>
-    public unsafe void ForceRelativePosition(BmSDK.FName GroupName, float RelativePosition)
+    public unsafe virtual void ForceRelativePosition(BmSDK.FName GroupName, float RelativePosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.ForceRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: GetMasterNodeOfGroup
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetMasterNodeOfGroup(BmSDK.FName GroupName)
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetMasterNodeOfGroup(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.GetMasterNodeOfGroup", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -114,7 +114,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: RemoveNodeFromGroup
     /// </summary>
-    public unsafe void RemoveNodeFromGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
+    public unsafe virtual void RemoveNodeFromGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.RemoveNodeFromGroup", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -134,7 +134,7 @@ public partial class AnimNodeSynch : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGame
     /// <summary>
     /// Function: AddNodeToGroup
     /// </summary>
-    public unsafe void AddNodeToGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
+    public unsafe virtual void AddNodeToGroup(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeSynch.AddNodeToGroup", true);
         byte* paramsPtr = stackalloc byte[12];

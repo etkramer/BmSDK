@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: ReleaseCamera
     /// </summary>
-    public unsafe void ReleaseCamera()
+    public unsafe virtual void ReleaseCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.ReleaseCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: SetCamera
     /// </summary>
-    public unsafe void SetCamera()
+    public unsafe virtual void SetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.SetCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: DoPunch
     /// </summary>
-    public unsafe void DoPunch()
+    public unsafe virtual void DoPunch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.DoPunch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: GetRageProportion
     /// </summary>
-    public unsafe float GetRageProportion()
+    public unsafe virtual float GetRageProportion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.GetRageProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: PunchContact
     /// </summary>
-    public unsafe void PunchContact()
+    public unsafe virtual void PunchContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.PunchContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName ActionName)
+    public unsafe override void HandleAction(BmSDK.FName ActionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.HandleAction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -150,7 +150,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: IsPunchAllowed
     /// </summary>
-    public unsafe bool IsPunchAllowed()
+    public unsafe virtual bool IsPunchAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.IsPunchAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: PlayBatmanAnim
     /// </summary>
-    public unsafe void PlayBatmanAnim(BmSDK.FName TransitionAnim, BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig IdleConfig = default, float TransitionScale = default, float ClipFront = default, float MeetingTime = default)
+    public unsafe virtual void PlayBatmanAnim(BmSDK.FName TransitionAnim, BmSDK.BmGame.RPawnCharacter.FCustomIdleConfig IdleConfig = default, float TransitionScale = default, float ClipFront = default, float MeetingTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.PlayBatmanAnim", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -177,7 +177,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: BeatdownConfig
     /// </summary>
-    public unsafe BmSDK.BmScript.RSpecialMoveConfig_FreezeFinalBeatdown BeatdownConfig()
+    public unsafe virtual BmSDK.BmScript.RSpecialMoveConfig_FreezeFinalBeatdown BeatdownConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.BeatdownConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -200,7 +200,7 @@ public partial class RSpecialMoveInstance_FreezeFinalBeatdown : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: AnimationStarted
     /// </summary>
-    public unsafe void AnimationStarted()
+    public unsafe override void AnimationStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FreezeFinalBeatdown.AnimationStarted", true);
         byte* paramsPtr = stackalloc byte[0];

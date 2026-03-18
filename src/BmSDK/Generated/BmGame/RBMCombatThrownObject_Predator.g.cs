@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_Predator : BmSDK.BmGame.RBMCombatThro
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_Predator.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

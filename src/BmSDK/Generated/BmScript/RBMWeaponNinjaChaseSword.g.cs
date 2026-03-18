@@ -71,7 +71,7 @@ public partial class RBMWeaponNinjaChaseSword : BmSDK.BmScript.RBMWeaponNinjaSwo
     /// <summary>
     /// Function: GetMultiAttackAnimNames
     /// </summary>
-    public unsafe void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
+    public unsafe override void GetMultiAttackAnimNames(out BmSDK.FName IntroName, out BmSDK.FName AttackName, out BmSDK.FName FailName, out BmSDK.FName CounterName, BmSDK.BmGame.RPawnPlayerCombat Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaChaseSword.GetMultiAttackAnimNames", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -87,7 +87,7 @@ public partial class RBMWeaponNinjaChaseSword : BmSDK.BmScript.RBMWeaponNinjaSwo
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaChaseSword.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -99,7 +99,7 @@ public partial class RBMWeaponNinjaChaseSword : BmSDK.BmScript.RBMWeaponNinjaSwo
     /// <summary>
     /// Function: CreateTiredConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateTiredConfig()
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateTiredConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponNinjaChaseSword.CreateTiredConfig", true);
         byte* paramsPtr = stackalloc byte[964];

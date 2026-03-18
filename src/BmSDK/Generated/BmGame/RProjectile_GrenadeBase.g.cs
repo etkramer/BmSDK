@@ -71,7 +71,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: SetInitialThrow
     /// </summary>
-    public unsafe void SetInitialThrow(System.Numerics.Vector3 StartingVelocity, System.Numerics.Vector3 NewTargetCentre)
+    public unsafe virtual void SetInitialThrow(System.Numerics.Vector3 StartingVelocity, System.Numerics.Vector3 NewTargetCentre)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.SetInitialThrow", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -84,7 +84,7 @@ public partial class RProjectile_GrenadeBase : BmSDK.Engine.Projectile, BmSDK.IG
     /// <summary>
     /// Function: ProcessTouch
     /// </summary>
-    public unsafe void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void ProcessTouch(BmSDK.Engine.Actor Other, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile_GrenadeBase.ProcessTouch", true);
         byte* paramsPtr = stackalloc byte[28];

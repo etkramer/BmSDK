@@ -71,7 +71,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: DoorClosedNotify
     /// </summary>
-    public unsafe void DoorClosedNotify()
+    public unsafe virtual void DoorClosedNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.DoorClosedNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: DoorOpenNotify
     /// </summary>
-    public unsafe void DoorOpenNotify()
+    public unsafe virtual void DoorOpenNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.DoorOpenNotify", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: MakePlayerJumpOutOfTheWay
     /// </summary>
-    public unsafe void MakePlayerJumpOutOfTheWay()
+    public unsafe virtual void MakePlayerJumpOutOfTheWay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.MakePlayerJumpOutOfTheWay", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -104,7 +104,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: CanRECAutoTarget
     /// </summary>
-    public unsafe bool CanRECAutoTarget()
+    public unsafe override bool CanRECAutoTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.CanRECAutoTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -129,7 +129,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: RECChargeTimer
     /// </summary>
-    public unsafe void RECChargeTimer()
+    public unsafe virtual void RECChargeTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.RECChargeTimer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: OnAnimEnd
     /// </summary>
-    public unsafe void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
+    public unsafe override void OnAnimEnd(BmSDK.Engine.AnimNodeSequence SeqNode, float PlayedTime, float ExcessTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.OnAnimEnd", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -154,7 +154,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: SetMagnetStrength
     /// </summary>
-    public unsafe float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
+    public unsafe override float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.SetMagnetStrength", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -171,7 +171,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: ReCloseDoor
     /// </summary>
-    public unsafe bool ReCloseDoor(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual bool ReCloseDoor(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.ReCloseDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -183,7 +183,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: ReOpenDoor
     /// </summary>
-    public unsafe bool ReOpenDoor(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual bool ReOpenDoor(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.ReOpenDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: OpenDoor
     /// </summary>
-    public unsafe bool OpenDoor(bool bInstantOpen = default)
+    public unsafe virtual bool OpenDoor(bool bInstantOpen = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.OpenDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -207,7 +207,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: CloseDoor
     /// </summary>
-    public unsafe bool CloseDoor(bool bInstantOpen = default)
+    public unsafe virtual bool CloseDoor(bool bInstantOpen = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.CloseDoor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: GetEffectiveMagStr
     /// </summary>
-    public unsafe float GetEffectiveMagStr(float MagStr, System.Numerics.Vector3 SourceLocation)
+    public unsafe virtual float GetEffectiveMagStr(float MagStr, System.Numerics.Vector3 SourceLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.GetEffectiveMagStr", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -232,7 +232,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: IsValidTargetComp
     /// </summary>
-    public unsafe bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
+    public unsafe override bool IsValidTargetComp(BmSDK.Engine.PrimitiveComponent TargetComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.IsValidTargetComp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -244,7 +244,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -256,7 +256,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: CheckBmSide
     /// </summary>
-    public unsafe void CheckBmSide()
+    public unsafe virtual void CheckBmSide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.CheckBmSide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -267,7 +267,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: IsPlayingLoops
     /// </summary>
-    public unsafe bool IsPlayingLoops()
+    public unsafe virtual bool IsPlayingLoops()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.IsPlayingLoops", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -278,7 +278,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorClosedLoop
     /// </summary>
-    public unsafe void PlayMotorClosedLoop()
+    public unsafe virtual void PlayMotorClosedLoop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorClosedLoop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -289,7 +289,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorOpenLoop
     /// </summary>
-    public unsafe void PlayMotorOpenLoop()
+    public unsafe virtual void PlayMotorOpenLoop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorOpenLoop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -300,7 +300,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: StopMotor
     /// </summary>
-    public unsafe void StopMotor()
+    public unsafe virtual void StopMotor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.StopMotor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -311,7 +311,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorCloseReact
     /// </summary>
-    public unsafe void PlayMotorCloseReact(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual void PlayMotorCloseReact(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorCloseReact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -323,7 +323,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorOpenReact
     /// </summary>
-    public unsafe void PlayMotorOpenReact(BmSDK.Engine.PrimitiveComponent OtherComp)
+    public unsafe virtual void PlayMotorOpenReact(BmSDK.Engine.PrimitiveComponent OtherComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorOpenReact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -335,7 +335,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorClose
     /// </summary>
-    public unsafe void PlayMotorClose()
+    public unsafe virtual void PlayMotorClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -346,7 +346,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PlayMotorOpen
     /// </summary>
-    public unsafe void PlayMotorOpen()
+    public unsafe virtual void PlayMotorOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PlayMotorOpen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -357,7 +357,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: GetAutoTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
+    public unsafe override System.Numerics.Vector3 GetAutoTargetLocation(System.Numerics.Vector3 PlayerPosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.GetAutoTargetLocation", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -369,7 +369,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: UpdateAnimations
     /// </summary>
-    public unsafe void UpdateAnimations(bool bUsingGenerator)
+    public unsafe virtual void UpdateAnimations(bool bUsingGenerator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.UpdateAnimations", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -381,7 +381,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RMagneticDoor : BmSDK.BmGame.RMagneticDynamicObjectSkeletal
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
+    public unsafe override bool HitByREC(System.Numerics.Vector3 HitLoc, BmSDK.Engine.PrimitiveComponent OtherComp, BmSDK.BmGame.RMagneticBlast.MBImpulseType ImpulseType, BmSDK.BmGame.RMagneticBlastReceiver RECProjectile)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticDoor.HitByREC", true);
         byte* paramsPtr = stackalloc byte[28];

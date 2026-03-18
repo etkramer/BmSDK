@@ -71,7 +71,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: Rehide
     /// </summary>
-    public unsafe void Rehide()
+    public unsafe virtual void Rehide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.Rehide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: TickRailFreezeEffect
     /// </summary>
-    public unsafe void TickRailFreezeEffect(float DeltaTime)
+    public unsafe virtual void TickRailFreezeEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.TickRailFreezeEffect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: MakeResponsibleForRailFreezeEffect
     /// </summary>
-    public unsafe void MakeResponsibleForRailFreezeEffect(BmSDK.BmScript.RFreezeEnvironmentTarget _ParentForCallback)
+    public unsafe virtual void MakeResponsibleForRailFreezeEffect(BmSDK.BmScript.RFreezeEnvironmentTarget _ParentForCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.MakeResponsibleForRailFreezeEffect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: TriggerGrateEjection
     /// </summary>
-    public unsafe void TriggerGrateEjection()
+    public unsafe virtual void TriggerGrateEjection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.TriggerGrateEjection", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: MakeResponsibleForTriggeringGrateEjection
     /// </summary>
-    public unsafe void MakeResponsibleForTriggeringGrateEjection(BmSDK.BmScript.RFreezeEnvironmentTarget _ParentForCallback, float ejection_delay)
+    public unsafe virtual void MakeResponsibleForTriggeringGrateEjection(BmSDK.BmScript.RFreezeEnvironmentTarget _ParentForCallback, float ejection_delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.MakeResponsibleForTriggeringGrateEjection", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: FreezeWithDelay
     /// </summary>
-    public unsafe void FreezeWithDelay(float the_delay)
+    public unsafe virtual void FreezeWithDelay(float the_delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.FreezeWithDelay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: PostDelayFreeze
     /// </summary>
-    public unsafe void PostDelayFreeze()
+    public unsafe virtual void PostDelayFreeze()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.PostDelayFreeze", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: FreezeNow
     /// </summary>
-    public unsafe void FreezeNow()
+    public unsafe virtual void FreezeNow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.FreezeNow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: SetUnhidden
     /// </summary>
-    public unsafe void SetUnhidden()
+    public unsafe virtual void SetUnhidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.SetUnhidden", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -187,7 +187,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: CheckDisableTick
     /// </summary>
-    public unsafe void CheckDisableTick()
+    public unsafe virtual void CheckDisableTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.CheckDisableTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -198,7 +198,7 @@ public partial class RFreezeDynamicSMIceFormation : BmSDK.Engine.DynamicSMActor,
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeDynamicSMIceFormation.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

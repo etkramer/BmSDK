@@ -71,7 +71,7 @@ public partial class EnvironmentVolume : BmSDK.Engine.Volume, BmSDK.Engine.Inter
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EnvironmentVolume.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class EnvironmentVolume : BmSDK.Engine.Volume, BmSDK.Engine.Inter
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EnvironmentVolume.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class EnvironmentVolume : BmSDK.Engine.Volume, BmSDK.Engine.Inter
     /// <summary>
     /// Function: SetSplitNavMesh
     /// </summary>
-    public unsafe void SetSplitNavMesh(bool bNewValue)
+    public unsafe virtual void SetSplitNavMesh(bool bNewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.EnvironmentVolume.SetSplitNavMesh", true);
         byte* paramsPtr = stackalloc byte[4];

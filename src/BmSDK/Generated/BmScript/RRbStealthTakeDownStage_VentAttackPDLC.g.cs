@@ -71,7 +71,7 @@ public partial class RRbStealthTakeDownStage_VentAttackPDLC : BmSDK.BmScript.RRb
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRbStealthTakeDownStage_VentAttackPDLC.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

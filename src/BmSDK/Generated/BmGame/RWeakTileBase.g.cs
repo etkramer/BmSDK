@@ -66,7 +66,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// Function: OnWallSmashed
     /// </summary>
-    public unsafe void OnWallSmashed(System.Numerics.Vector3 ExplosionCentre, int NumPiecesRemoved)
+    public unsafe override void OnWallSmashed(System.Numerics.Vector3 ExplosionCentre, int NumPiecesRemoved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.OnWallSmashed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -79,7 +79,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -90,7 +90,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// Function: RemoveBlockers
     /// </summary>
-    public unsafe void RemoveBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
+    public unsafe virtual void RemoveBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.RemoveBlockers", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -102,7 +102,7 @@ public partial class RWeakTileBase : BmSDK.BmGame.RFractureWallBase, BmSDK.IGame
     /// <summary>
     /// Function: ActivateBlockers
     /// </summary>
-    public unsafe void ActivateBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
+    public unsafe virtual void ActivateBlockers(BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> BlockingBoxes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeakTileBase.ActivateBlockers", true);
         byte* paramsPtr = stackalloc byte[12];

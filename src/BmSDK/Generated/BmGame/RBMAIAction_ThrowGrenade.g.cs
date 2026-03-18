@@ -71,7 +71,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SpawnGrenade
     /// </summary>
-    public unsafe void SpawnGrenade()
+    public unsafe virtual void SpawnGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.SpawnGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: GrabGrenade
     /// </summary>
-    public unsafe void GrabGrenade()
+    public unsafe virtual void GrabGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.GrabGrenade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: StartThrowAnim
     /// </summary>
-    public unsafe void StartThrowAnim(System.Numerics.Vector3 ThrowStandPoint, BmSDK.Rotator ThrowRotation)
+    public unsafe virtual void StartThrowAnim(System.Numerics.Vector3 ThrowStandPoint, BmSDK.Rotator ThrowRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.StartThrowAnim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_ThrowGrenade : BmSDK.BmGame.RBMAIAction, BmSDK.
     /// <summary>
     /// Function: SetThrowParams
     /// </summary>
-    public unsafe void SetThrowParams(System.Numerics.Vector3 NewVel, System.Numerics.Vector3 NewTarget)
+    public unsafe virtual void SetThrowParams(System.Numerics.Vector3 NewVel, System.Numerics.Vector3 NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ThrowGrenade.SetThrowParams", true);
         byte* paramsPtr = stackalloc byte[24];

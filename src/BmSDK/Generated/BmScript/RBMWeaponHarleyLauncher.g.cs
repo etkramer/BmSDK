@@ -71,7 +71,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: GetRECHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.GetRECHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: SetupWeaponAudio
     /// </summary>
-    public unsafe void SetupWeaponAudio()
+    public unsafe override void SetupWeaponAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.SetupWeaponAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.GetDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: CreateRagdollWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateRagdollWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateRagdollWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.CreateRagdollWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -128,7 +128,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RBMWeaponHarleyLauncher : BmSDK.BmGame.RBMWeaponRanged, BmS
     /// <summary>
     /// Function: CreateHarleyWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateHarleyWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateHarleyWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponHarleyLauncher.CreateHarleyWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2532];

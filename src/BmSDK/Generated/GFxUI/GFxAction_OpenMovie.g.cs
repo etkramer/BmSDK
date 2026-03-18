@@ -36,7 +36,7 @@ public partial class GFxAction_OpenMovie : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// Function: IsValidLevelSequenceObject
     /// </summary>
-    public unsafe bool IsValidLevelSequenceObject()
+    public unsafe override bool IsValidLevelSequenceObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxAction_OpenMovie.IsValidLevelSequenceObject", true);
         byte* paramsPtr = stackalloc byte[4];

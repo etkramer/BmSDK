@@ -66,7 +66,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawDebugGraphics
     /// </summary>
-    public unsafe void DrawDebugGraphics()
+    public unsafe virtual void DrawDebugGraphics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.DrawDebugGraphics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceLowQualityLight
     /// </summary>
-    public unsafe void ForceLowQualityLight()
+    public unsafe virtual void ForceLowQualityLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.ForceLowQualityLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceHighQualityLight
     /// </summary>
-    public unsafe void ForceHighQualityLight()
+    public unsafe virtual void ForceHighQualityLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.ForceHighQualityLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: IsTargetatble
     /// </summary>
-    public unsafe bool IsTargetatble()
+    public unsafe virtual bool IsTargetatble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.IsTargetatble", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: FireHelicopterScannedEvent
     /// </summary>
-    public unsafe void FireHelicopterScannedEvent(BmSDK.BmGame.RPlayerController _RPC, bool IsControlHelicopter)
+    public unsafe virtual void FireHelicopterScannedEvent(BmSDK.BmGame.RPlayerController _RPC, bool IsControlHelicopter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.FireHelicopterScannedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGrapplePointEnabled
     /// </summary>
-    public unsafe void SetGrapplePointEnabled(bool make_enabled)
+    public unsafe virtual void SetGrapplePointEnabled(bool make_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetGrapplePointEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetControlChopper
     /// </summary>
-    public unsafe void SetControlChopper()
+    public unsafe virtual void SetControlChopper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetControlChopper", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: StartDownloadHud
     /// </summary>
-    public unsafe void StartDownloadHud()
+    public unsafe virtual void StartDownloadHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.StartDownloadHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -157,7 +157,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: ReleaseHelicopterPanel
     /// </summary>
-    public unsafe void ReleaseHelicopterPanel()
+    public unsafe virtual void ReleaseHelicopterPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.ReleaseHelicopterPanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -168,7 +168,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: OpenHelicopterPanel
     /// </summary>
-    public unsafe void OpenHelicopterPanel()
+    public unsafe virtual void OpenHelicopterPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.OpenHelicopterPanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -179,7 +179,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetScanned
     /// </summary>
-    public unsafe void SetScanned()
+    public unsafe virtual void SetScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOverrideSpeed
     /// </summary>
-    public unsafe void SetOverrideSpeed(float _override_speed)
+    public unsafe virtual void SetOverrideSpeed(float _override_speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetOverrideSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: HasBeenScanned
     /// </summary>
-    public unsafe bool HasBeenScanned()
+    public unsafe virtual bool HasBeenScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.HasBeenScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: WatchPlayer
     /// </summary>
-    public unsafe void WatchPlayer()
+    public unsafe virtual void WatchPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.WatchPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: HitByJammerGadgetCharge
     /// </summary>
-    public unsafe void HitByJammerGadgetCharge()
+    public unsafe virtual void HitByJammerGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.HitByJammerGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -235,7 +235,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: RecoveredFromREC
     /// </summary>
-    public unsafe void RecoveredFromREC()
+    public unsafe virtual void RecoveredFromREC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.RecoveredFromREC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -246,7 +246,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 AttackerLocation)
+    public unsafe virtual void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 AttackerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.HitByREC", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -259,7 +259,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangePath
     /// </summary>
-    public unsafe void ChangePath(BmSDK.BmGame.RPatrolPoint NewStartPoint, bool bTeleport)
+    public unsafe virtual void ChangePath(BmSDK.BmGame.RPatrolPoint NewStartPoint, bool bTeleport)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.ChangePath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -272,7 +272,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAggressionLevels
     /// </summary>
-    public unsafe void SetAggressionLevels(bool ChaingunEnabled, bool MissilesEnabled)
+    public unsafe virtual void SetAggressionLevels(bool ChaingunEnabled, bool MissilesEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetAggressionLevels", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -318,7 +318,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: HelicopterDismounted
     /// </summary>
-    public unsafe void HelicopterDismounted()
+    public unsafe virtual void HelicopterDismounted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.HelicopterDismounted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAttackEnabled
     /// </summary>
-    public unsafe bool IsAttackEnabled()
+    public unsafe virtual bool IsAttackEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.IsAttackEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -340,7 +340,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: HelicopterBoarded
     /// </summary>
-    public unsafe void HelicopterBoarded()
+    public unsafe virtual void HelicopterBoarded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.HelicopterBoarded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -351,7 +351,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: CanBeJammed
     /// </summary>
-    public unsafe bool CanBeJammed()
+    public unsafe virtual bool CanBeJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.CanBeJammed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -362,7 +362,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDifficultyParameters
     /// </summary>
-    public unsafe BmSDK.BmGame.RHelicopterBase.FHelicopterDifficultyParameters GetDifficultyParameters(int DifficultyLevel)
+    public unsafe virtual BmSDK.BmGame.RHelicopterBase.FHelicopterDifficultyParameters GetDifficultyParameters(int DifficultyLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.GetDifficultyParameters", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -374,7 +374,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayerInvisible
     /// </summary>
-    public unsafe bool IsPlayerInvisible()
+    public unsafe virtual bool IsPlayerInvisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.IsPlayerInvisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -385,7 +385,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlightControlEnabled
     /// </summary>
-    public unsafe void SetFlightControlEnabled(bool is_enabled)
+    public unsafe virtual void SetFlightControlEnabled(bool is_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetFlightControlEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -397,7 +397,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: TickWindGust
     /// </summary>
-    public unsafe void TickWindGust(float DeltaTime)
+    public unsafe virtual void TickWindGust(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.TickWindGust", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -416,7 +416,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: RandomWindGust
     /// </summary>
-    public unsafe void RandomWindGust()
+    public unsafe virtual void RandomWindGust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.RandomWindGust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -434,7 +434,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: FlightControlAdjustVirtualLocation
     /// </summary>
-    public unsafe void FlightControlAdjustVirtualLocation(float TargetZ, float DeltaTime)
+    public unsafe virtual void FlightControlAdjustVirtualLocation(float TargetZ, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.FlightControlAdjustVirtualLocation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -454,7 +454,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: AdvanceTowardsVirtualLocation
     /// </summary>
-    public unsafe void AdvanceTowardsVirtualLocation(float DeltaTime)
+    public unsafe virtual void AdvanceTowardsVirtualLocation(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.AdvanceTowardsVirtualLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -473,7 +473,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVirtualLocationWithConstraints
     /// </summary>
-    public unsafe bool SetVirtualLocationWithConstraints(System.Numerics.Vector3 NewVirtualLocation, float DeltaTime)
+    public unsafe virtual bool SetVirtualLocationWithConstraints(System.Numerics.Vector3 NewVirtualLocation, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetVirtualLocationWithConstraints", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -493,7 +493,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVirtualLocation
     /// </summary>
-    public unsafe void SetVirtualLocation(System.Numerics.Vector3 NewVirtualLocation, float DeltaTime = default)
+    public unsafe virtual void SetVirtualLocation(System.Numerics.Vector3 NewVirtualLocation, float DeltaTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.SetVirtualLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -513,7 +513,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateRotation
     /// </summary>
-    public unsafe void UpdateRotation(System.Numerics.Vector3 TargetLocation, float DeltaTime)
+    public unsafe virtual void UpdateRotation(System.Numerics.Vector3 TargetLocation, float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.UpdateRotation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -533,7 +533,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveTowardPath
     /// </summary>
-    public unsafe bool MoveTowardPath(System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 NextTargetLocation, float DeltaTime, float MaxVelocity = default)
+    public unsafe virtual bool MoveTowardPath(System.Numerics.Vector3 TargetLocation, System.Numerics.Vector3 NextTargetLocation, float DeltaTime, float MaxVelocity = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.MoveTowardPath", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -555,7 +555,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveToward
     /// </summary>
-    public unsafe bool MoveToward(System.Numerics.Vector3 TargetLocation, float DeltaTime, float MaxVelocity = default, bool SlowdownOnApproach = default)
+    public unsafe virtual bool MoveToward(System.Numerics.Vector3 TargetLocation, float DeltaTime, float MaxVelocity = default, bool SlowdownOnApproach = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.MoveToward", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -577,7 +577,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPathToLocation
     /// </summary>
-    public unsafe bool FindPathToLocation(System.Numerics.Vector3 StartingLocation, System.Numerics.Vector3 TargetLocation, bool FindPointAbove = default)
+    public unsafe virtual bool FindPathToLocation(System.Numerics.Vector3 StartingLocation, System.Numerics.Vector3 TargetLocation, bool FindPointAbove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.FindPathToLocation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -598,7 +598,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: MoveNoCollision
     /// </summary>
-    public unsafe bool MoveNoCollision(System.Numerics.Vector3 Delta)
+    public unsafe virtual bool MoveNoCollision(System.Numerics.Vector3 Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.MoveNoCollision", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -617,7 +617,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: TestLineOfSight
     /// </summary>
-    public unsafe bool TestLineOfSight()
+    public unsafe virtual bool TestLineOfSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.TestLineOfSight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -635,7 +635,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: TestSearchLight
     /// </summary>
-    public unsafe bool TestSearchLight()
+    public unsafe virtual bool TestSearchLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.TestSearchLight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -653,7 +653,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateVisibility
     /// </summary>
-    public unsafe void UpdateVisibility(float DeltaTime)
+    public unsafe virtual void UpdateVisibility(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.UpdateVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -672,7 +672,7 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Function: TickNative
     /// </summary>
-    public unsafe void TickNative(float DeltaTime)
+    public unsafe virtual void TickNative(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHelicopterBase.TickNative", true);
         byte* paramsPtr = stackalloc byte[4];

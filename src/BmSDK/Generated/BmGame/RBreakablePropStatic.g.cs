@@ -71,7 +71,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.Init", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: InitCollideDamageScale
     /// </summary>
-    public unsafe void InitCollideDamageScale(float DamageScale)
+    public unsafe virtual void InitCollideDamageScale(float DamageScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.InitCollideDamageScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: Detach
     /// </summary>
-    public unsafe void Detach(BmSDK.Engine.Actor Other)
+    public unsafe override void Detach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.Detach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.Attach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle ToggleAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: TakeRadiusDamage
     /// </summary>
-    public unsafe void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
+    public unsafe override void TakeRadiusDamage(BmSDK.Engine.Controller InstigatedBy, float BaseDamage, float DamageRadius, BmSDK.Class DamageType, float Momentum, System.Numerics.Vector3 HurtOrigin, bool bFullDamage, BmSDK.Engine.Actor DamageCauser, float DamageFalloffExponent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.TakeRadiusDamage", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -161,7 +161,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -179,7 +179,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: SkipDamageStage
     /// </summary>
-    public unsafe bool SkipDamageStage(int I)
+    public unsafe virtual bool SkipDamageStage(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.SkipDamageStage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: SetToDamageStageMesh
     /// </summary>
-    public unsafe void SetToDamageStageMesh(int stage)
+    public unsafe virtual void SetToDamageStageMesh(int stage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.SetToDamageStageMesh", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -203,7 +203,7 @@ public partial class RBreakablePropStatic : BmSDK.BmGame.RKActorSpawnable, BmSDK
     /// <summary>
     /// Function: IsValidDamageType
     /// </summary>
-    public unsafe bool IsValidDamageType(BmSDK.Class inDamageType, int DmgStage)
+    public unsafe virtual bool IsValidDamageType(BmSDK.Class inDamageType, int DmgStage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBreakablePropStatic.IsValidDamageType", true);
         byte* paramsPtr = stackalloc byte[20];

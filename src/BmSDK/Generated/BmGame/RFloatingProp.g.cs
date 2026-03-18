@@ -71,7 +71,7 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// Function: GetFloatingAdjustedPropCentreOfMass
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFloatingAdjustedPropCentreOfMass()
+    public unsafe virtual System.Numerics.Vector3 GetFloatingAdjustedPropCentreOfMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropCentreOfMass", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// Function: GetFloatingAdjustedPropDensity
     /// </summary>
-    public unsafe float GetFloatingAdjustedPropDensity()
+    public unsafe virtual float GetFloatingAdjustedPropDensity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropDensity", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// Function: GetFloatingAdjustedPropMass
     /// </summary>
-    public unsafe float GetFloatingAdjustedPropMass()
+    public unsafe virtual float GetFloatingAdjustedPropMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropMass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -125,7 +125,7 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// <summary>
     /// Function: GetPropMass
     /// </summary>
-    public unsafe float GetPropMass()
+    public unsafe virtual float GetPropMass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetPropMass", true);
         byte* paramsPtr = stackalloc byte[4];

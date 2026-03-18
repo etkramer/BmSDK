@@ -71,7 +71,7 @@ public partial class RLevelTransitionDoorMedical : BmSDK.BmGame.RLevelTransition
     /// <summary>
     /// Function: DetachVisibleComponents
     /// </summary>
-    public unsafe void DetachVisibleComponents()
+    public unsafe override void DetachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorMedical.DetachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RLevelTransitionDoorMedical : BmSDK.BmGame.RLevelTransition
     /// <summary>
     /// Function: AttachVisibleComponents
     /// </summary>
-    public unsafe void AttachVisibleComponents()
+    public unsafe override void AttachVisibleComponents()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorMedical.AttachVisibleComponents", true);
         byte* paramsPtr = stackalloc byte[0];

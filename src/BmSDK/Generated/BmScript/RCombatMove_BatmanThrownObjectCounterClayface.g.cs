@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: FindFire
     /// </summary>
-    public unsafe void FindFire(out System.Numerics.Vector3 TestThrowDir)
+    public unsafe virtual void FindFire(out System.Numerics.Vector3 TestThrowDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.FindFire", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -83,7 +83,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: ThrowWeaponAt
     /// </summary>
-    public unsafe void ThrowWeaponAt(System.Numerics.Vector3 Destination, float TimeMultiplier = default)
+    public unsafe override void ThrowWeaponAt(System.Numerics.Vector3 Destination, float TimeMultiplier = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.ThrowWeaponAt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -96,7 +96,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: ThrowObject
     /// </summary>
-    public unsafe void ThrowObject()
+    public unsafe override void ThrowObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.ThrowObject", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -107,7 +107,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: GetFlightVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFlightVelocity(System.Numerics.Vector3 Destination)
+    public unsafe virtual System.Numerics.Vector3 GetFlightVelocity(System.Numerics.Vector3 Destination)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.GetFlightVelocity", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -119,7 +119,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RCombatMove_BatmanThrownObjectCounterClayface : BmSDK.BmGam
     /// <summary>
     /// Function: HideSword
     /// </summary>
-    public unsafe void HideSword(bool _HideSword)
+    public unsafe virtual void HideSword(bool _HideSword)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanThrownObjectCounterClayface.HideSword", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerMercy.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: Getup
     /// </summary>
-    public unsafe void Getup()
+    public unsafe virtual void Getup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerMercy.Getup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: TriggerDialogue
     /// </summary>
-    public unsafe void TriggerDialogue()
+    public unsafe virtual void TriggerDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerMercy.TriggerDialogue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: CanBeTargettedByPlayer
     /// </summary>
-    public unsafe bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe override bool CanBeTargettedByPlayer(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerMercy.CanBeTargettedByPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RCombatMove_JokerMercy : BmSDK.BmGame.RCombatMove, BmSDK.IG
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_JokerMercy.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

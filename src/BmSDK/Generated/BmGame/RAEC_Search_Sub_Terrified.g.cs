@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: GetCurrentForward
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCurrentForward()
+    public unsafe override System.Numerics.Vector3 GetCurrentForward()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.GetCurrentForward", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Terrified : BmSDK.BmGame.RAEC_Search_Sub, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Terrified.Tick", true);
         byte* paramsPtr = stackalloc byte[16];

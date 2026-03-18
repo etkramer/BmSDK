@@ -66,7 +66,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: DelayRespawn
     /// </summary>
-    public unsafe bool DelayRespawn()
+    public unsafe virtual bool DelayRespawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.DelayRespawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SetPickupVisible
     /// </summary>
-    public unsafe void SetPickupVisible()
+    public unsafe virtual void SetPickupVisible()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SetPickupVisible", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -99,7 +99,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SetPickupHidden
     /// </summary>
-    public unsafe void SetPickupHidden()
+    public unsafe virtual void SetPickupHidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SetPickupHidden", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: RespawnEffect
     /// </summary>
-    public unsafe void RespawnEffect()
+    public unsafe virtual void RespawnEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.RespawnEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: GetRespawnTime
     /// </summary>
-    public unsafe float GetRespawnTime()
+    public unsafe virtual float GetRespawnTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.GetRespawnTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: RecheckValidTouch
     /// </summary>
-    public unsafe void RecheckValidTouch()
+    public unsafe virtual void RecheckValidTouch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.RecheckValidTouch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: PickedUpBy
     /// </summary>
-    public unsafe void PickedUpBy(BmSDK.Engine.Pawn P)
+    public unsafe virtual void PickedUpBy(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.PickedUpBy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: GiveTo
     /// </summary>
-    public unsafe void GiveTo(BmSDK.Engine.Pawn P)
+    public unsafe virtual void GiveTo(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.GiveTo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -167,7 +167,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SpawnCopyFor
     /// </summary>
-    public unsafe void SpawnCopyFor(BmSDK.Engine.Pawn Recipient)
+    public unsafe virtual void SpawnCopyFor(BmSDK.Engine.Pawn Recipient)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SpawnCopyFor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -179,7 +179,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: DetourWeight
     /// </summary>
-    public unsafe float DetourWeight(BmSDK.Engine.Pawn Other, float PathWeight)
+    public unsafe override float DetourWeight(BmSDK.Engine.Pawn Other, float PathWeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.DetourWeight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -192,7 +192,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: StartSleeping
     /// </summary>
-    public unsafe void StartSleeping()
+    public unsafe virtual void StartSleeping()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.StartSleeping", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -203,7 +203,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SetRespawn
     /// </summary>
-    public unsafe void SetRespawn()
+    public unsafe virtual void SetRespawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SetRespawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -214,7 +214,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: CheckForErrors
     /// </summary>
-    public unsafe bool CheckForErrors()
+    public unsafe override bool CheckForErrors()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.CheckForErrors", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -225,7 +225,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SetPickupMesh
     /// </summary>
-    public unsafe void SetPickupMesh()
+    public unsafe virtual void SetPickupMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SetPickupMesh", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: ShutDown
     /// </summary>
-    public unsafe void ShutDown()
+    public unsafe override void ShutDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.ShutDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -269,7 +269,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: InitializePickup
     /// </summary>
-    public unsafe void InitializePickup()
+    public unsafe virtual void InitializePickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.InitializePickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -280,7 +280,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -291,7 +291,7 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PickupFactory.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];

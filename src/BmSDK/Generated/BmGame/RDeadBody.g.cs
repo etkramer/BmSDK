@@ -71,7 +71,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: InitMeshes
     /// </summary>
-    public unsafe void InitMeshes()
+    public unsafe virtual void InitMeshes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.InitMeshes", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -101,7 +101,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -112,7 +112,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: DoKismetAttachment
     /// </summary>
-    public unsafe void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
+    public unsafe override void DoKismetAttachment(BmSDK.Engine.Actor Attachment, BmSDK.Engine.SeqAct_AttachToActor Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.DoKismetAttachment", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -125,7 +125,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: GetMICs
     /// </summary>
-    public unsafe void GetMICs()
+    public unsafe virtual void GetMICs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.GetMICs", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: GetSelf
     /// </summary>
-    public unsafe BmSDK.GameObject GetSelf()
+    public unsafe virtual BmSDK.GameObject GetSelf()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.GetSelf", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -147,7 +147,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: GetEvidenceInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.REvidence GetEvidenceInfo()
+    public unsafe virtual BmSDK.BmGame.REvidence GetEvidenceInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.GetEvidenceInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: CanBeScanned
     /// </summary>
-    public unsafe bool CanBeScanned()
+    public unsafe virtual bool CanBeScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.CanBeScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: GetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.GetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show(float _show, int ShowMode = default)
+    public unsafe virtual void show(float _show, int ShowMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.show", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -193,7 +193,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: CreateTransparentSkeletalMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent CreateTransparentSkeletalMesh(BmSDK.Engine.SkeletalMesh SkeletalMesh, BmSDK.Engine.SkeletalMeshComponent ParentAnimComponent, BmSDK.Engine.MaterialInterface OverrideMaterial = default, bool AllowOcclusion = default)
+    public unsafe virtual BmSDK.Engine.SkeletalMeshComponent CreateTransparentSkeletalMesh(BmSDK.Engine.SkeletalMesh SkeletalMesh, BmSDK.Engine.SkeletalMeshComponent ParentAnimComponent, BmSDK.Engine.MaterialInterface OverrideMaterial = default, bool AllowOcclusion = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.CreateTransparentSkeletalMesh", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -208,7 +208,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: SetMovieScanned
     /// </summary>
-    public unsafe void SetMovieScanned()
+    public unsafe virtual void SetMovieScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.SetMovieScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -219,7 +219,7 @@ public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.BmGame.REvidenceInter
     /// <summary>
     /// Function: GetEvidenceIndex
     /// </summary>
-    public unsafe int GetEvidenceIndex()
+    public unsafe virtual int GetEvidenceIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeadBody.GetEvidenceIndex", true);
         byte* paramsPtr = stackalloc byte[4];

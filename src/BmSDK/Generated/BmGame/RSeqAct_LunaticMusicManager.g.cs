@@ -47,7 +47,7 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LunaticMusicManager.Update", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -59,7 +59,7 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: RemoveLunatic
     /// </summary>
-    public unsafe void RemoveLunatic(BmSDK.BmGame.RPawnCombat _RemoveLunatic)
+    public unsafe virtual void RemoveLunatic(BmSDK.BmGame.RPawnCombat _RemoveLunatic)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LunaticMusicManager.RemoveLunatic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: AddLunatic
     /// </summary>
-    public unsafe void AddLunatic(BmSDK.BmGame.RPawnCombat NewLunatic)
+    public unsafe virtual void AddLunatic(BmSDK.BmGame.RPawnCombat NewLunatic)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LunaticMusicManager.AddLunatic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LunaticMusicManager.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSeqAct_LunaticMusicManager : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_LunaticMusicManager.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: PlayStrikeAnim
     /// </summary>
-    public unsafe void PlayStrikeAnim()
+    public unsafe override void PlayStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.PlayStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe override void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess = default)
+    public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: ChooseAttack
     /// </summary>
-    public unsafe void ChooseAttack()
+    public unsafe override void ChooseAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.ChooseAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RCombatMove_KickingGuardAttack : BmSDK.BmGame.RCombatMove_V
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_KickingGuardAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

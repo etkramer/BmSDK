@@ -71,7 +71,7 @@ public partial class RClayfaceProjectileVomit : BmSDK.BmScript.RClayfaceProjecti
     /// <summary>
     /// Function: HurtThug
     /// </summary>
-    public unsafe void HurtThug(BmSDK.BmGame.RPawnVillain Drone)
+    public unsafe virtual void HurtThug(BmSDK.BmGame.RPawnVillain Drone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectileVomit.HurtThug", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -83,7 +83,7 @@ public partial class RClayfaceProjectileVomit : BmSDK.BmScript.RClayfaceProjecti
     /// <summary>
     /// Function: CheckDistanceToTargets
     /// </summary>
-    public unsafe void CheckDistanceToTargets()
+    public unsafe override void CheckDistanceToTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceProjectileVomit.CheckDistanceToTargets", true);
         byte* paramsPtr = stackalloc byte[12];

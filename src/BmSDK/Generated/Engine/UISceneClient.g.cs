@@ -31,7 +31,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: InitializeSceneClient
     /// </summary>
-    public unsafe void InitializeSceneClient()
+    public unsafe virtual void InitializeSceneClient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.InitializeSceneClient", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -42,7 +42,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInverseCanvasToScreen
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetInverseCanvasToScreen()
+    public unsafe virtual BmSDK.GameObject.FMatrix GetInverseCanvasToScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.GetInverseCanvasToScreen", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -60,7 +60,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCanvasToScreen
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix GetCanvasToScreen()
+    public unsafe virtual BmSDK.GameObject.FMatrix GetCanvasToScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.GetCanvasToScreen", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -78,7 +78,7 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: IsUIActive
     /// </summary>
-    public unsafe bool IsUIActive(int Flags = default)
+    public unsafe virtual bool IsUIActive(int Flags = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISceneClient.IsUIActive", true);
         byte* paramsPtr = stackalloc byte[8];

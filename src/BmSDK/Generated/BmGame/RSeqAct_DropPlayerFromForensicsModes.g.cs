@@ -47,7 +47,7 @@ public partial class RSeqAct_DropPlayerFromForensicsModes : BmSDK.Engine.Sequenc
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe void Drop()
+    public unsafe virtual void Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_DropPlayerFromForensicsModes.Drop", true);
         byte* paramsPtr = stackalloc byte[4];

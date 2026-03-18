@@ -49,7 +49,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanCombineWith
     /// </summary>
-    public unsafe bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
+    public unsafe virtual bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.CanCombineWith", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -63,7 +63,7 @@ public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Clear
     /// </summary>
-    public unsafe void Clear()
+    public unsafe virtual void Clear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SavedMove.Clear", true);
         byte* paramsPtr = stackalloc byte[0];

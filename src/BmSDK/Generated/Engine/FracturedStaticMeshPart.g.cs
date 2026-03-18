@@ -71,7 +71,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode(BmSDK.Engine.Actor BreakInstigator)
+    public unsafe override void Explode(BmSDK.Engine.Actor BreakInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.Explode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: FellOutOfWorld
     /// </summary>
-    public unsafe void FellOutOfWorld(BmSDK.Class dmgType)
+    public unsafe override void FellOutOfWorld(BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.FellOutOfWorld", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: TryToCleanUp
     /// </summary>
-    public unsafe void TryToCleanUp()
+    public unsafe virtual void TryToCleanUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.TryToCleanUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -124,7 +124,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: LocalBreakOffParts
     /// </summary>
-    public unsafe void LocalBreakOffParts(BmSDK.Engine.FracturedStaticMeshActor.FBreakOffPartsData BreakData, BmSDK.Engine.Actor BreakInstigator)
+    public unsafe override void LocalBreakOffParts(BmSDK.Engine.FracturedStaticMeshActor.FBreakOffPartsData BreakData, BmSDK.Engine.Actor BreakInstigator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.LocalBreakOffParts", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -137,7 +137,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: RecyclePart
     /// </summary>
-    public unsafe void RecyclePart(bool bAddToFreePool)
+    public unsafe virtual void RecyclePart(bool bAddToFreePool)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.RecyclePart", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshA
     /// <summary>
     /// Function: Initialize
     /// </summary>
-    public unsafe void Initialize()
+    public unsafe virtual void Initialize()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FracturedStaticMeshPart.Initialize", true);
         byte* paramsPtr = stackalloc byte[0];

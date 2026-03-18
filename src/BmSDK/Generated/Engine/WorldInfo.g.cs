@@ -71,7 +71,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPhysicsPools
     /// </summary>
-    public unsafe void ClearPhysicsPools()
+    public unsafe virtual void ClearPhysicsPools()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ClearPhysicsPools", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleHostMigration
     /// </summary>
-    public unsafe void ToggleHostMigration(bool bEnabled)
+    public unsafe virtual void ToggleHostMigration(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ToggleHostMigration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: BeginHostMigration
     /// </summary>
-    public unsafe bool BeginHostMigration()
+    public unsafe virtual bool BeginHostMigration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.BeginHostMigration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: FindEnvironmentVolume
     /// </summary>
-    public unsafe BmSDK.Engine.EnvironmentVolume FindEnvironmentVolume(System.Numerics.Vector3 TestLocation)
+    public unsafe virtual BmSDK.Engine.EnvironmentVolume FindEnvironmentVolume(System.Numerics.Vector3 TestLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.FindEnvironmentVolume", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -163,7 +163,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetWorldFractureSettings
     /// </summary>
-    public unsafe BmSDK.Engine.WorldInfo.FWorldFractureSettings GetWorldFractureSettings()
+    public unsafe virtual BmSDK.Engine.WorldInfo.FWorldFractureSettings GetWorldFractureSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetWorldFractureSettings", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -181,7 +181,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: DoMemoryTracking
     /// </summary>
-    public unsafe void DoMemoryTracking()
+    public unsafe virtual void DoMemoryTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.DoMemoryTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDemoRewindPoints
     /// </summary>
-    public unsafe bool GetDemoRewindPoints(out BmSDK.TArray<int> OutRewindPoints)
+    public unsafe virtual bool GetDemoRewindPoints(out BmSDK.TArray<int> OutRewindPoints)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetDemoRewindPoints", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -218,7 +218,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDemoFrameInfo
     /// </summary>
-    public unsafe void GetDemoFrameInfo(out int CurrentFrame, out int TotalFrames)
+    public unsafe virtual void GetDemoFrameInfo(out int CurrentFrame, out int TotalFrames)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetDemoFrameInfo", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -238,7 +238,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPlayingDemo
     /// </summary>
-    public unsafe bool IsPlayingDemo()
+    public unsafe virtual bool IsPlayingDemo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.IsPlayingDemo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -256,7 +256,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRecordingDemo
     /// </summary>
-    public unsafe bool IsRecordingDemo()
+    public unsafe virtual bool IsRecordingDemo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.IsRecordingDemo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -274,7 +274,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDetailMode
     /// </summary>
-    public unsafe BmSDK.Engine.Scene.EDetailMode GetDetailMode()
+    public unsafe virtual BmSDK.Engine.Scene.EDetailMode GetDetailMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetDetailMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -292,7 +292,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMapName
     /// </summary>
-    public unsafe BmSDK.FString GetMapName(bool bIncludePrefix = default)
+    public unsafe virtual BmSDK.FString GetMapName(bool bIncludePrefix = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetMapName", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -311,7 +311,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetActorChannel
     /// </summary>
-    public unsafe void ResetActorChannel(BmSDK.Engine.Actor ChannelOwner)
+    public unsafe virtual void ResetActorChannel(BmSDK.Engine.Actor ChannelOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ResetActorChannel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -330,7 +330,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: SetMapInfo
     /// </summary>
-    public unsafe void SetMapInfo(BmSDK.Engine.MapInfo NewMapInfo)
+    public unsafe virtual void SetMapInfo(BmSDK.Engine.MapInfo NewMapInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.SetMapInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -349,7 +349,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetMapInfo
     /// </summary>
-    public unsafe BmSDK.Engine.MapInfo GetMapInfo()
+    public unsafe virtual BmSDK.Engine.MapInfo GetMapInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetMapInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -367,7 +367,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSeamlessTravelMidpointPause
     /// </summary>
-    public unsafe void SetSeamlessTravelMidpointPause(bool bNowPaused)
+    public unsafe virtual void SetSeamlessTravelMidpointPause(bool bNowPaused)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.SetSeamlessTravelMidpointPause", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -386,7 +386,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: IsInSeamlessTravel
     /// </summary>
-    public unsafe bool IsInSeamlessTravel()
+    public unsafe virtual bool IsInSeamlessTravel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.IsInSeamlessTravel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -404,7 +404,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: SeamlessTravel
     /// </summary>
-    public unsafe void SeamlessTravel(BmSDK.FString URL, bool bAbsolute = default, BmSDK.GameObject.FGuid MapPackageGuid = default)
+    public unsafe virtual void SeamlessTravel(BmSDK.FString URL, bool bAbsolute = default, BmSDK.GameObject.FGuid MapPackageGuid = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.SeamlessTravel", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -425,7 +425,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: CommitMapChange
     /// </summary>
-    public unsafe void CommitMapChange()
+    public unsafe virtual void CommitMapChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.CommitMapChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -443,7 +443,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: CancelPendingMapChange
     /// </summary>
-    public unsafe void CancelPendingMapChange()
+    public unsafe virtual void CancelPendingMapChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.CancelPendingMapChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -461,7 +461,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: IsMapChangeReady
     /// </summary>
-    public unsafe bool IsMapChangeReady()
+    public unsafe virtual bool IsMapChangeReady()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.IsMapChangeReady", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -479,7 +479,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: IsPreparingMapChange
     /// </summary>
-    public unsafe bool IsPreparingMapChange()
+    public unsafe virtual bool IsPreparingMapChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.IsPreparingMapChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -497,7 +497,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: PrepareMapChange
     /// </summary>
-    public unsafe void PrepareMapChange(out BmSDK.TArray<BmSDK.FName> LevelNames, out BmSDK.TArray<BmSDK.FName> LevelsToNotMakeVisible)
+    public unsafe virtual void PrepareMapChange(out BmSDK.TArray<BmSDK.FName> LevelNames, out BmSDK.TArray<BmSDK.FName> LevelsToNotMakeVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.PrepareMapChange", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -517,7 +517,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyMatchStarted
     /// </summary>
-    public unsafe void NotifyMatchStarted(bool bShouldActivateLevelStartupEvents = default, bool bShouldActivateLevelBeginningEvents = default, bool bShouldActivateLevelLoadedEvents = default)
+    public unsafe virtual void NotifyMatchStarted(bool bShouldActivateLevelStartupEvents = default, bool bShouldActivateLevelBeginningEvents = default, bool bShouldActivateLevelLoadedEvents = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.NotifyMatchStarted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -540,7 +540,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: NavigationPointCheck
     /// </summary>
-    public unsafe void NavigationPointCheck(System.Numerics.Vector3 Point, System.Numerics.Vector3 Extent, out BmSDK.TArray<BmSDK.Engine.NavigationPoint> Navs, out BmSDK.TArray<BmSDK.Engine.ReachSpec> Specs)
+    public unsafe virtual void NavigationPointCheck(System.Numerics.Vector3 Point, System.Numerics.Vector3 Extent, out BmSDK.TArray<BmSDK.Engine.NavigationPoint> Navs, out BmSDK.TArray<BmSDK.Engine.ReachSpec> Specs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.NavigationPointCheck", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -564,7 +564,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -575,7 +575,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -586,7 +586,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -597,7 +597,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ServerTravel
     /// </summary>
-    public unsafe void ServerTravel(BmSDK.FString URL, bool bAbsolute = default, bool bShouldSkipGameNotify = default)
+    public unsafe virtual void ServerTravel(BmSDK.FString URL, bool bAbsolute = default, bool bShouldSkipGameNotify = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ServerTravel", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -611,7 +611,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAddressURL
     /// </summary>
-    public unsafe BmSDK.FString GetAddressURL()
+    public unsafe virtual BmSDK.FString GetAddressURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetAddressURL", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -629,7 +629,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: VerifyNavList
     /// </summary>
-    public unsafe void VerifyNavList()
+    public unsafe virtual void VerifyNavList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.VerifyNavList", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -647,7 +647,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceGarbageCollection
     /// </summary>
-    public unsafe void ForceGarbageCollection(bool bFullPurge = default)
+    public unsafe virtual void ForceGarbageCollection(bool bFullPurge = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ForceGarbageCollection", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -757,7 +757,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetLocalURL
     /// </summary>
-    public unsafe BmSDK.FString GetLocalURL()
+    public unsafe virtual BmSDK.FString GetLocalURL()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetLocalURL", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -775,7 +775,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: SetLevelRBGravity
     /// </summary>
-    public unsafe void SetLevelRBGravity(System.Numerics.Vector3 NewGrav)
+    public unsafe virtual void SetLevelRBGravity(System.Numerics.Vector3 NewGrav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.SetLevelRBGravity", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -794,7 +794,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAllRootSequences
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Sequence> GetAllRootSequences()
+    public unsafe virtual BmSDK.TArray<BmSDK.Engine.Sequence> GetAllRootSequences()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetAllRootSequences", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -812,7 +812,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGameSequence
     /// </summary>
-    public unsafe BmSDK.Engine.Sequence GetGameSequence()
+    public unsafe virtual BmSDK.Engine.Sequence GetGameSequence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetGameSequence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -830,7 +830,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGravityZ
     /// </summary>
-    public unsafe float GetGravityZ()
+    public unsafe override float GetGravityZ()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetGravityZ", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -867,7 +867,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: AddOnScreenDebugMessage
     /// </summary>
-    public unsafe void AddOnScreenDebugMessage(int Key, float TimeToDisplay, BmSDK.GameObject.FColor DisplayColor, BmSDK.FString DebugMessage)
+    public unsafe virtual void AddOnScreenDebugMessage(int Key, float TimeToDisplay, BmSDK.GameObject.FColor DisplayColor, BmSDK.FString DebugMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.AddOnScreenDebugMessage", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -889,7 +889,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplicatedEvent
     /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
+    public unsafe override void ReplicatedEvent(BmSDK.FName VarName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ReplicatedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -901,7 +901,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNavMeshPathGoalEvaluatorFromCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavMeshPathGoalEvaluator GetNavMeshPathGoalEvaluatorFromCache(BmSDK.Class GoalEvalClass, BmSDK.Engine.NavigationHandle Requestor)
+    public unsafe virtual BmSDK.Engine.NavMeshPathGoalEvaluator GetNavMeshPathGoalEvaluatorFromCache(BmSDK.Class GoalEvalClass, BmSDK.Engine.NavigationHandle Requestor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetNavMeshPathGoalEvaluatorFromCache", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -921,7 +921,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNavMeshPathConstraintFromCache
     /// </summary>
-    public unsafe BmSDK.Engine.NavMeshPathConstraint GetNavMeshPathConstraintFromCache(BmSDK.Class ConstraintClass, BmSDK.Engine.NavigationHandle Requestor)
+    public unsafe virtual BmSDK.Engine.NavMeshPathConstraint GetNavMeshPathConstraintFromCache(BmSDK.Class ConstraintClass, BmSDK.Engine.NavigationHandle Requestor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.GetNavMeshPathConstraintFromCache", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -941,7 +941,7 @@ public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject
     /// <summary>
     /// Function: ReleaseCachedConstraintsAndEvaluators
     /// </summary>
-    public unsafe void ReleaseCachedConstraintsAndEvaluators()
+    public unsafe virtual void ReleaseCachedConstraintsAndEvaluators()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.WorldInfo.ReleaseCachedConstraintsAndEvaluators", true);
         byte* paramsPtr = stackalloc byte[0];

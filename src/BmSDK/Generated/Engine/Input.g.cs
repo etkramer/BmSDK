@@ -36,7 +36,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: SetBind
     /// </summary>
-    public unsafe void SetBind(BmSDK.FName BindName, BmSDK.FString Command)
+    public unsafe virtual void SetBind(BmSDK.FName BindName, BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.SetBind", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -49,7 +49,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetInput
     /// </summary>
-    public unsafe void ResetInput()
+    public unsafe virtual void ResetInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Input.ResetInput", true);
         byte* paramsPtr = stackalloc byte[0];

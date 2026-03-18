@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: ForceOutOfRearGuard
     /// </summary>
-    public unsafe void ForceOutOfRearGuard()
+    public unsafe virtual void ForceOutOfRearGuard()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.ForceOutOfRearGuard", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: CheckIfShouldWalkBackwards
     /// </summary>
-    public unsafe void CheckIfShouldWalkBackwards()
+    public unsafe virtual void CheckIfShouldWalkBackwards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.CheckIfShouldWalkBackwards", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -107,7 +107,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: WantsLeaderToWait
     /// </summary>
-    public unsafe bool WantsLeaderToWait()
+    public unsafe override bool WantsLeaderToWait()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.WantsLeaderToWait", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: IsInFormation
     /// </summary>
-    public unsafe bool IsInFormation()
+    public unsafe override bool IsInFormation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.IsInFormation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: CalcNewSplitPoint
     /// </summary>
-    public unsafe void CalcNewSplitPoint(BmSDK.BmGame.RNavigationHandle NewPath)
+    public unsafe virtual void CalcNewSplitPoint(BmSDK.BmGame.RNavigationHandle NewPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.CalcNewSplitPoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -141,7 +141,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: ReassessSplitPoint
     /// </summary>
-    public unsafe void ReassessSplitPoint(BmSDK.BmGame.RNavigationHandle NewPath)
+    public unsafe virtual void ReassessSplitPoint(BmSDK.BmGame.RNavigationHandle NewPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.ReassessSplitPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -166,7 +166,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -179,7 +179,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: Cleanup
     /// </summary>
-    public unsafe void Cleanup()
+    public unsafe virtual void Cleanup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.Cleanup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -190,7 +190,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: SetHasBackwardsFollower
     /// </summary>
-    public unsafe void SetHasBackwardsFollower(bool bNewVal)
+    public unsafe virtual void SetHasBackwardsFollower(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.SetHasBackwardsFollower", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: SetBackwards
     /// </summary>
-    public unsafe void SetBackwards(bool bNewBack)
+    public unsafe virtual void SetBackwards(bool bNewBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.SetBackwards", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: FollowPositionChanged
     /// </summary>
-    public unsafe void FollowPositionChanged(System.Numerics.Vector3 Offset, float Distance)
+    public unsafe virtual void FollowPositionChanged(System.Numerics.Vector3 Offset, float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.FollowPositionChanged", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -227,7 +227,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: FollowTargetChanged
     /// </summary>
-    public unsafe void FollowTargetChanged()
+    public unsafe override void FollowTargetChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.FollowTargetChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: InitFollow
     /// </summary>
-    public unsafe void InitFollow(BmSDK.BmGame.RNavigationHandle NewLeaderPath, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState NewSavedSearchState)
+    public unsafe virtual void InitFollow(BmSDK.BmGame.RNavigationHandle NewLeaderPath, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState NewSavedSearchState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.InitFollow", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -251,7 +251,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -265,7 +265,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -277,7 +277,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -289,7 +289,7 @@ public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAEC_Sub_Formation,
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Follower.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];

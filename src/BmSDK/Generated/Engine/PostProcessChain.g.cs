@@ -36,7 +36,7 @@ public partial class PostProcessChain : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPostProcessEffect
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessEffect FindPostProcessEffect(BmSDK.FName EffectName)
+    public unsafe virtual BmSDK.Engine.PostProcessEffect FindPostProcessEffect(BmSDK.FName EffectName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PostProcessChain.FindPostProcessEffect", true);
         byte* paramsPtr = stackalloc byte[12];

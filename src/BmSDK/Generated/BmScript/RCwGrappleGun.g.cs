@@ -71,7 +71,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: CanAimGrapple
     /// </summary>
-    public unsafe bool CanAimGrapple()
+    public unsafe override bool CanAimGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.CanAimGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: RecalculatePath
     /// </summary>
-    public unsafe void RecalculatePath()
+    public unsafe virtual void RecalculatePath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.RecalculatePath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: IsWallClimbMove
     /// </summary>
-    public unsafe bool IsWallClimbMove(BmSDK.BmGame.RSpecialMoveConfig Config)
+    public unsafe override bool IsWallClimbMove(BmSDK.BmGame.RSpecialMoveConfig Config)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.IsWallClimbMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: FindGrapplePointMultipleCones
     /// </summary>
-    public unsafe BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleCones(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
+    public unsafe override BmSDK.BmGame.RGrapplePoint FindGrapplePointMultipleCones(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.FindGrapplePointMultipleCones", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -118,7 +118,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: ModifyCone
     /// </summary>
-    public unsafe void ModifyCone(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle, System.Numerics.Vector3 CameraLocation, BmSDK.Rotator CameraRotation, System.Numerics.Vector3 PlayerLocation, bool bZoomed, float OverrideMaxDistance = default, BmSDK.FString Desc = default)
+    public unsafe virtual void ModifyCone(out BmSDK.TArray<BmSDK.BmGame.RGrappleGun.FGrappleConeDefinition> Cones, float MinAngle, System.Numerics.Vector3 CameraLocation, BmSDK.Rotator CameraRotation, System.Numerics.Vector3 PlayerLocation, bool bZoomed, float OverrideMaxDistance = default, BmSDK.FString Desc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.ModifyCone", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -137,7 +137,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: ResetAutoSwing
     /// </summary>
-    public unsafe void ResetAutoSwing()
+    public unsafe virtual void ResetAutoSwing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.ResetAutoSwing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: StartAutoSwing
     /// </summary>
-    public unsafe void StartAutoSwing(bool bTriggeredFromEdge = default)
+    public unsafe virtual void StartAutoSwing(bool bTriggeredFromEdge = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.StartAutoSwing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: ScriptTick
     /// </summary>
-    public unsafe void ScriptTick(float DeltaTime)
+    public unsafe override void ScriptTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.ScriptTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -172,7 +172,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: DrawClimbRoute
     /// </summary>
-    public unsafe void DrawClimbRoute(bool bPersistent = default)
+    public unsafe override void DrawClimbRoute(bool bPersistent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.DrawClimbRoute", true);
         byte* paramsPtr = stackalloc byte[344];
@@ -184,7 +184,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: CheckForSwingEdge
     /// </summary>
-    public unsafe void CheckForSwingEdge()
+    public unsafe virtual void CheckForSwingEdge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.CheckForSwingEdge", true);
         byte* paramsPtr = stackalloc byte[196];
@@ -195,7 +195,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: DrawDebugInfo
     /// </summary>
-    public unsafe void DrawDebugInfo()
+    public unsafe virtual void DrawDebugInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.DrawDebugInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: ClearDebugInfo
     /// </summary>
-    public unsafe void ClearDebugInfo()
+    public unsafe virtual void ClearDebugInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.ClearDebugInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: DumpTargetInfo
     /// </summary>
-    public unsafe void DumpTargetInfo()
+    public unsafe virtual void DumpTargetInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.DumpTargetInfo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -228,7 +228,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: GetIdealSwingParameters
     /// </summary>
-    public unsafe void GetIdealSwingParameters(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, System.Numerics.Vector3 WallLocation, out float IdealSwingTime, out float IdealSwingLength)
+    public unsafe override void GetIdealSwingParameters(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, System.Numerics.Vector3 WallLocation, out float IdealSwingTime, out float IdealSwingLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.GetIdealSwingParameters", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -244,7 +244,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: GetAerialWhipConfig
     /// </summary>
-    public unsafe BmSDK.BmScript.RSpecialMoveConfig_CwAerialWhipPounce GetAerialWhipConfig(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, System.Numerics.Vector3 WallLocation, BmSDK.BmGame.RPawnPlayerCatwomanBase.ESwingDirection SwingDirection = default, bool bGetSafeMove = default)
+    public unsafe virtual BmSDK.BmScript.RSpecialMoveConfig_CwAerialWhipPounce GetAerialWhipConfig(System.Numerics.Vector3 StartLocation, System.Numerics.Vector3 EndLocation, System.Numerics.Vector3 WallLocation, BmSDK.BmGame.RPawnPlayerCatwomanBase.ESwingDirection SwingDirection = default, bool bGetSafeMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.GetAerialWhipConfig", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -260,7 +260,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: TriggerAerialWhipPounce
     /// </summary>
-    public unsafe bool TriggerAerialWhipPounce()
+    public unsafe virtual bool TriggerAerialWhipPounce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.TriggerAerialWhipPounce", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -271,7 +271,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: TriggerAerialAutoWhipPounce
     /// </summary>
-    public unsafe bool TriggerAerialAutoWhipPounce()
+    public unsafe virtual bool TriggerAerialAutoWhipPounce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.TriggerAerialAutoWhipPounce", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -282,7 +282,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: StartWallClimbCamera
     /// </summary>
-    public unsafe void StartWallClimbCamera(System.Numerics.Vector3 CurrentLandLocation, int FirstClimbPointIndex = default, bool bEstimatedLandPoint = default, bool bFromSwing = default)
+    public unsafe override void StartWallClimbCamera(System.Numerics.Vector3 CurrentLandLocation, int FirstClimbPointIndex = default, bool bEstimatedLandPoint = default, bool bFromSwing = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.StartWallClimbCamera", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -297,7 +297,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: TriggerClawClimb
     /// </summary>
-    public unsafe void TriggerClawClimb(bool bForceClawClimb)
+    public unsafe virtual void TriggerClawClimb(bool bForceClawClimb)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.TriggerClawClimb", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -309,7 +309,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: TriggerPounce
     /// </summary>
-    public unsafe void TriggerPounce()
+    public unsafe virtual void TriggerPounce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.TriggerPounce", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -320,7 +320,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: TryAerialSwingMove
     /// </summary>
-    public unsafe bool TryAerialSwingMove()
+    public unsafe virtual bool TryAerialSwingMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.TryAerialSwingMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -331,7 +331,7 @@ public partial class RCwGrappleGun : BmSDK.BmGame.RCwGrappleGunBase, BmSDK.IGame
     /// <summary>
     /// Function: Grapple
     /// </summary>
-    public unsafe bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucced = default)
+    public unsafe override bool Grapple(BmSDK.BmGame.RSpecialMoveConfig OverrideGrappleMove = default, bool bForceSucced = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwGrappleGun.Grapple", true);
         byte* paramsPtr = stackalloc byte[1180];

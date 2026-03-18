@@ -36,7 +36,7 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: FindFogVolumes
     /// </summary>
-    public unsafe void FindFogVolumes()
+    public unsafe virtual void FindFogVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ApproachingFreeze.FindFogVolumes", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetProportion
     /// </summary>
-    public unsafe void SetProportion(float proportion_to_set)
+    public unsafe virtual void SetProportion(float proportion_to_set)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ApproachingFreeze.SetProportion", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: SetProportionByCurrentLocation
     /// </summary>
-    public unsafe void SetProportionByCurrentLocation()
+    public unsafe virtual void SetProportionByCurrentLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ApproachingFreeze.SetProportionByCurrentLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ApproachingFreeze : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ApproachingFreeze.Update", true);
         byte* paramsPtr = stackalloc byte[8];

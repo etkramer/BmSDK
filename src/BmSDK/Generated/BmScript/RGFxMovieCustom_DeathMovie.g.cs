@@ -36,7 +36,7 @@ public partial class RGFxMovieCustom_DeathMovie : BmSDK.BmGame.RGFxMovieCustom, 
     /// <summary>
     /// Function: HideDeathHint
     /// </summary>
-    public unsafe void HideDeathHint()
+    public unsafe virtual void HideDeathHint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieCustom_DeathMovie.HideDeathHint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieCustom_DeathMovie : BmSDK.BmGame.RGFxMovieCustom, 
     /// <summary>
     /// Function: GetDeathHint
     /// </summary>
-    public unsafe BmSDK.FString GetDeathHint()
+    public unsafe virtual BmSDK.FString GetDeathHint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieCustom_DeathMovie.GetDeathHint", true);
         byte* paramsPtr = stackalloc byte[32];

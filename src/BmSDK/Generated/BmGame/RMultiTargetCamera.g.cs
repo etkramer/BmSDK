@@ -71,7 +71,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: CalculateViewSphere
     /// </summary>
-    public unsafe void CalculateViewSphere(out System.Numerics.Vector3 OutCentre, out float OutRadius, System.Numerics.Vector3 CameraOrigin, System.Numerics.Vector3 Circle1Centre, float Circle1Radius, System.Numerics.Vector3 Circle2Centre, float Circle2Radius)
+    public unsafe virtual void CalculateViewSphere(out System.Numerics.Vector3 OutCentre, out float OutRadius, System.Numerics.Vector3 CameraOrigin, System.Numerics.Vector3 Circle1Centre, float Circle1Radius, System.Numerics.Vector3 Circle2Centre, float Circle2Radius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.CalculateViewSphere", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -96,7 +96,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: Stop
     /// </summary>
-    public unsafe void Stop()
+    public unsafe virtual void Stop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.Stop", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(float BlendTime = default, bool bCameraCollides = default)
+    public unsafe virtual void Init(float BlendTime = default, bool bCameraCollides = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.Init", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: SetFixedRotation
     /// </summary>
-    public unsafe void SetFixedRotation(BmSDK.Rotator LookRotation)
+    public unsafe virtual void SetFixedRotation(BmSDK.Rotator LookRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.SetFixedRotation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -132,7 +132,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGame
     /// <summary>
     /// Function: UpdatePosition
     /// </summary>
-    public unsafe void UpdatePosition(float DeltaTime)
+    public unsafe virtual void UpdatePosition(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiTargetCamera.UpdatePosition", true);
         byte* paramsPtr = stackalloc byte[4];

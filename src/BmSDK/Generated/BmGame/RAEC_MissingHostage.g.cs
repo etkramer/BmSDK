@@ -71,7 +71,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: GetHostageCount
     /// </summary>
-    public unsafe int GetHostageCount()
+    public unsafe virtual int GetHostageCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.GetHostageCount", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -82,7 +82,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: PlayMissingHostageBark
     /// </summary>
-    public unsafe void PlayMissingHostageBark(int NumMissing)
+    public unsafe virtual void PlayMissingHostageBark(int NumMissing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.PlayMissingHostageBark", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(int NumMissing)
+    public unsafe virtual void Init(int NumMissing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: StartChild
     /// </summary>
-    public unsafe bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
+    public unsafe virtual bool StartChild(BmSDK.BmGame.RBMAIController NewCon, int NewPriority, bool bForceClaim = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.StartChild", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -120,7 +120,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: VillainStolen
     /// </summary>
-    public unsafe void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
+    public unsafe override void VillainStolen(BmSDK.BmGame.RBMAIController Stolen)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.VillainStolen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RAEC_MissingHostage : BmSDK.BmGame.RAlertEventCoordinatorBa
     /// <summary>
     /// Function: SetMissingPoint
     /// </summary>
-    public unsafe void SetMissingPoint(BmSDK.BmGame.RMissingHostageAIMarker NewPoint)
+    public unsafe virtual void SetMissingPoint(BmSDK.BmGame.RMissingHostageAIMarker NewPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_MissingHostage.SetMissingPoint", true);
         byte* paramsPtr = stackalloc byte[4];

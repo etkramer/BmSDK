@@ -36,7 +36,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: SaveSubscriberValue
     /// </summary>
-    public unsafe bool SaveSubscriberValue(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores, int BindingIndex = default)
+    public unsafe virtual bool SaveSubscriberValue(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores, int BindingIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.SaveSubscriberValue", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -56,7 +56,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: ClearBoundDataStores
     /// </summary>
-    public unsafe void ClearBoundDataStores()
+    public unsafe virtual void ClearBoundDataStores()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.ClearBoundDataStores", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -74,7 +74,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: GetBoundDataStores
     /// </summary>
-    public unsafe void GetBoundDataStores(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores)
+    public unsafe virtual void GetBoundDataStores(out BmSDK.TArray<BmSDK.Engine.UIDataStore> out_BoundDataStores)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.GetBoundDataStores", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: NotifyDataStoreValueUpdated
     /// </summary>
-    public unsafe void NotifyDataStoreValueUpdated(BmSDK.Engine.UIDataStore SourceDataStore, bool bValuesInvalidated, BmSDK.FName PropertyTag, BmSDK.Engine.UIDataProvider SourceProvider, int ArrayIndex)
+    public unsafe virtual void NotifyDataStoreValueUpdated(BmSDK.Engine.UIDataStore SourceDataStore, bool bValuesInvalidated, BmSDK.FName PropertyTag, BmSDK.Engine.UIDataProvider SourceProvider, int ArrayIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.NotifyDataStoreValueUpdated", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: RefreshSubscriberValue
     /// </summary>
-    public unsafe bool RefreshSubscriberValue(int BindingIndex = default)
+    public unsafe virtual bool RefreshSubscriberValue(int BindingIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.RefreshSubscriberValue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -135,7 +135,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: GetDataStoreBinding
     /// </summary>
-    public unsafe BmSDK.FString GetDataStoreBinding(int BindingIndex = default)
+    public unsafe virtual BmSDK.FString GetDataStoreBinding(int BindingIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.GetDataStoreBinding", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -154,7 +154,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: SetDataStoreBinding
     /// </summary>
-    public unsafe void SetDataStoreBinding(BmSDK.FString MarkupText, int BindingIndex = default)
+    public unsafe virtual void SetDataStoreBinding(BmSDK.FString MarkupText, int BindingIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.SetDataStoreBinding", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -174,7 +174,7 @@ public partial class GFxDataStoreSubscriber : BmSDK.GameObject, BmSDK.Engine.UID
     /// <summary>
     /// Function: PublishValues
     /// </summary>
-    public unsafe void PublishValues()
+    public unsafe virtual void PublishValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "GFxUI.GFxDataStoreSubscriber.PublishValues", true);
         byte* paramsPtr = stackalloc byte[0];

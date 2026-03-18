@@ -71,7 +71,7 @@ public partial class RBMWeaponCrowdRifle : BmSDK.BmGame.RBMWeapon, BmSDK.IGameOb
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCrowdRifle.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];

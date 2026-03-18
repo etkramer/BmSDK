@@ -71,7 +71,7 @@ public partial class RBMPathNode_FenceJump : BmSDK.BmGame.RBMPathNode_VariablePo
     /// <summary>
     /// Function: GetEyePosForFence
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEyePosForFence(System.Numerics.Vector3 StandPoint, System.Numerics.Vector3 FenceTopPoint)
+    public unsafe virtual System.Numerics.Vector3 GetEyePosForFence(System.Numerics.Vector3 StandPoint, System.Numerics.Vector3 FenceTopPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJump.GetEyePosForFence", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -84,7 +84,7 @@ public partial class RBMPathNode_FenceJump : BmSDK.BmGame.RBMPathNode_VariablePo
     /// <summary>
     /// Function: UseFenceJump
     /// </summary>
-    public unsafe void UseFenceJump(BmSDK.Engine.NavigationHandle Handle, BmSDK.BmGame.RBMPawnAI User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
+    public unsafe virtual void UseFenceJump(BmSDK.Engine.NavigationHandle Handle, BmSDK.BmGame.RBMPawnAI User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_FenceJump.UseFenceJump", true);
         byte* paramsPtr = stackalloc byte[40];

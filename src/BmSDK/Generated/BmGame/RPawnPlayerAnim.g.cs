@@ -71,7 +71,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: PostFallingPhysicsCallback
     /// </summary>
-    public unsafe void PostFallingPhysicsCallback()
+    public unsafe virtual void PostFallingPhysicsCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.PostFallingPhysicsCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetPlayerMeshTranslationZ
     /// </summary>
-    public unsafe void SetPlayerMeshTranslationZ(float Value)
+    public unsafe virtual void SetPlayerMeshTranslationZ(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetPlayerMeshTranslationZ", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: OnTeleport
     /// </summary>
-    public unsafe void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
+    public unsafe override void OnTeleport(BmSDK.Engine.SeqAct_Teleport Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.OnTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -117,7 +117,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: CreateUnarmedWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateUnarmedWeaponConfig()
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateUnarmedWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.CreateUnarmedWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: AddMovementMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.AddMovementMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[7224];
@@ -140,7 +140,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupRailingPose
     /// </summary>
-    public unsafe void SetupRailingPose(out BmSDK.BmGame.RPoseConfig.FPose RailingPredator)
+    public unsafe virtual void SetupRailingPose(out BmSDK.BmGame.RPoseConfig.FPose RailingPredator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupRailingPose", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -152,7 +152,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupSilentPredatorPose
     /// </summary>
-    public unsafe void SetupSilentPredatorPose(out BmSDK.BmGame.RPoseConfig.FPose SilentPredator)
+    public unsafe virtual void SetupSilentPredatorPose(out BmSDK.BmGame.RPoseConfig.FPose SilentPredator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupSilentPredatorPose", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -164,7 +164,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupCoverCornerRightPose
     /// </summary>
-    public unsafe void SetupCoverCornerRightPose(out BmSDK.BmGame.RPoseConfig.FPose CoverCornerRight, bool bUseRandomOverlays = default)
+    public unsafe virtual void SetupCoverCornerRightPose(out BmSDK.BmGame.RPoseConfig.FPose CoverCornerRight, bool bUseRandomOverlays = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupCoverCornerRightPose", true);
         byte* paramsPtr = stackalloc byte[344];
@@ -177,7 +177,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupCoverMovementRightPose
     /// </summary>
-    public unsafe void SetupCoverMovementRightPose(out BmSDK.BmGame.RPoseConfig.FPose CoverMovementRight, bool bUseRandomOverlays = default)
+    public unsafe virtual void SetupCoverMovementRightPose(out BmSDK.BmGame.RPoseConfig.FPose CoverMovementRight, bool bUseRandomOverlays = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupCoverMovementRightPose", true);
         byte* paramsPtr = stackalloc byte[344];
@@ -190,7 +190,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupCrouchingPose
     /// </summary>
-    public unsafe void SetupCrouchingPose(out BmSDK.BmGame.RPoseConfig.FPose CrouchingPose)
+    public unsafe virtual void SetupCrouchingPose(out BmSDK.BmGame.RPoseConfig.FPose CrouchingPose)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupCrouchingPose", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -202,7 +202,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupRunningPose
     /// </summary>
-    public unsafe void SetupRunningPose(out BmSDK.BmGame.RPoseConfig.FPose RunningPose)
+    public unsafe virtual void SetupRunningPose(out BmSDK.BmGame.RPoseConfig.FPose RunningPose)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupRunningPose", true);
         byte* paramsPtr = stackalloc byte[340];
@@ -214,7 +214,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetupStandingPose
     /// </summary>
-    public unsafe void SetupStandingPose(out BmSDK.BmGame.RPoseConfig.FPose StandingPose, BmSDK.Engine.AnimSet IdleOverlayAnimSet = default, BmSDK.Engine.AnimSet MovementAnimSet = default, BmSDK.BmGame.RPawnPlayerAnim.FAllowedMovementTypes MovementTypes = default)
+    public unsafe virtual void SetupStandingPose(out BmSDK.BmGame.RPoseConfig.FPose StandingPose, BmSDK.Engine.AnimSet IdleOverlayAnimSet = default, BmSDK.Engine.AnimSet MovementAnimSet = default, BmSDK.BmGame.RPawnPlayerAnim.FAllowedMovementTypes MovementTypes = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetupStandingPose", true);
         byte* paramsPtr = stackalloc byte[472];
@@ -229,7 +229,7 @@ public partial class RPawnPlayerAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObje
     /// <summary>
     /// Function: SetDontConsumeAdditiveWeightOnMovement
     /// </summary>
-    public unsafe void SetDontConsumeAdditiveWeightOnMovement(out BmSDK.BmGame.RPoseConfig.FPose InOut_Pose)
+    public unsafe virtual void SetDontConsumeAdditiveWeightOnMovement(out BmSDK.BmGame.RPoseConfig.FPose InOut_Pose)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerAnim.SetDontConsumeAdditiveWeightOnMovement", true);
         byte* paramsPtr = stackalloc byte[344];

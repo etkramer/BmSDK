@@ -87,7 +87,7 @@ public partial class RBMWeaponDeadshotPistol : BmSDK.BmScript.RBMWeaponCombatRif
     /// <summary>
     /// Function: DoFakedShotFX
     /// </summary>
-    public unsafe void DoFakedShotFX(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
+    public unsafe virtual void DoFakedShotFX(System.Numerics.Vector3 Start, System.Numerics.Vector3 End, BmSDK.Engine.Actor HitTarget = default, bool bShouldHit = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponDeadshotPistol.DoFakedShotFX", true);
         byte* paramsPtr = stackalloc byte[120];

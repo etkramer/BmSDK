@@ -71,7 +71,7 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// Function: MotorJammed
     /// </summary>
-    public unsafe void MotorJammed()
+    public unsafe override void MotorJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRECMotor.MotorJammed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// Function: StopMotor
     /// </summary>
-    public unsafe void StopMotor()
+    public unsafe override void StopMotor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRECMotor.StopMotor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// Function: PlayMotorDown
     /// </summary>
-    public unsafe void PlayMotorDown()
+    public unsafe override void PlayMotorDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRECMotor.PlayMotorDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// Function: PlayMotorUp
     /// </summary>
-    public unsafe void PlayMotorUp()
+    public unsafe override void PlayMotorUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRECMotor.PlayMotorUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RRECMotor : BmSDK.BmScript.RMagneticSurfaceSM, BmSDK.IGameO
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRECMotor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBeamStartPoint
     /// </summary>
-    public unsafe void UpdateBeamStartPoint()
+    public unsafe virtual void UpdateBeamStartPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatSignalBase.UpdateBeamStartPoint", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -82,7 +82,7 @@ public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateBeamStartPointFirstTime
     /// </summary>
-    public unsafe void UpdateBeamStartPointFirstTime()
+    public unsafe virtual void UpdateBeamStartPointFirstTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatSignalBase.UpdateBeamStartPointFirstTime", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBatSignalBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

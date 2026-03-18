@@ -71,7 +71,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: CheatDown
     /// </summary>
-    public unsafe void CheatDown()
+    public unsafe virtual void CheatDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.CheatDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: CheatUp
     /// </summary>
-    public unsafe void CheatUp()
+    public unsafe virtual void CheatUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.CheatUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: CheatRight
     /// </summary>
-    public unsafe void CheatRight()
+    public unsafe virtual void CheatRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.CheatRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: CheatLeft
     /// </summary>
-    public unsafe void CheatLeft()
+    public unsafe virtual void CheatLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.CheatLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: AddScreenShake
     /// </summary>
-    public unsafe void AddScreenShake(float Strength = default)
+    public unsafe virtual void AddScreenShake(float Strength = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.AddScreenShake", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: TrackingMode
     /// </summary>
-    public unsafe void TrackingMode()
+    public unsafe virtual void TrackingMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.TrackingMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: OrbitMode
     /// </summary>
-    public unsafe void OrbitMode()
+    public unsafe virtual void OrbitMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.OrbitMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: FindTrackingPlayer
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer FindTrackingPlayer()
+    public unsafe virtual BmSDK.BmGame.RPawnPlayer FindTrackingPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.FindTrackingPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: UpdateFocusSettings
     /// </summary>
-    public unsafe void UpdateFocusSettings()
+    public unsafe virtual void UpdateFocusSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.UpdateFocusSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: InitPlayerReplicationInfo
     /// </summary>
-    public unsafe void InitPlayerReplicationInfo()
+    public unsafe override void InitPlayerReplicationInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.InitPlayerReplicationInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -189,7 +189,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: FocusDof
     /// </summary>
-    public unsafe void FocusDof()
+    public unsafe virtual void FocusDof()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.FocusDof", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -200,7 +200,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ResetRoll
     /// </summary>
-    public unsafe void ResetRoll()
+    public unsafe virtual void ResetRoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ResetRoll", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -211,7 +211,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StopRoll
     /// </summary>
-    public unsafe void StopRoll()
+    public unsafe virtual void StopRoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StopRoll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -222,7 +222,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StartRollRight
     /// </summary>
-    public unsafe void StartRollRight()
+    public unsafe virtual void StartRollRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StartRollRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -233,7 +233,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StartRollLeft
     /// </summary>
-    public unsafe void StartRollLeft()
+    public unsafe virtual void StartRollLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StartRollLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -244,7 +244,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StopZoom
     /// </summary>
-    public unsafe void StopZoom()
+    public unsafe virtual void StopZoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StopZoom", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StartZoomOut
     /// </summary>
-    public unsafe void StartZoomOut()
+    public unsafe virtual void StartZoomOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StartZoomOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StartZoomIn
     /// </summary>
-    public unsafe void StartZoomIn()
+    public unsafe virtual void StartZoomIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StartZoomIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DialogueInc
     /// </summary>
-    public unsafe void DialogueInc()
+    public unsafe virtual void DialogueInc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DialogueInc", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -288,7 +288,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ShowDialogueInfo
     /// </summary>
-    public unsafe void ShowDialogueInfo()
+    public unsafe virtual void ShowDialogueInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ShowDialogueInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -299,7 +299,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DialogueCaptureAll
     /// </summary>
-    public unsafe void DialogueCaptureAll()
+    public unsafe virtual void DialogueCaptureAll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DialogueCaptureAll", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -310,7 +310,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DialogueCapture
     /// </summary>
-    public unsafe void DialogueCapture()
+    public unsafe virtual void DialogueCapture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DialogueCapture", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -321,7 +321,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DialogueCaptureMulti
     /// </summary>
-    public unsafe void DialogueCaptureMulti(bool SetAll)
+    public unsafe virtual void DialogueCaptureMulti(bool SetAll)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DialogueCaptureMulti", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -333,7 +333,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SpeedUpSpectatorCamera
     /// </summary>
-    public unsafe void SpeedUpSpectatorCamera()
+    public unsafe virtual void SpeedUpSpectatorCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SpeedUpSpectatorCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -344,7 +344,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SlowDownSpectatorCamera
     /// </summary>
-    public unsafe void SlowDownSpectatorCamera()
+    public unsafe virtual void SlowDownSpectatorCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SlowDownSpectatorCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -355,7 +355,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ReloadLevel
     /// </summary>
-    public unsafe void ReloadLevel()
+    public unsafe virtual void ReloadLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ReloadLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -366,7 +366,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleGfx
     /// </summary>
-    public unsafe void ToggleGfx()
+    public unsafe virtual void ToggleGfx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleGfx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -377,7 +377,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: GPU
     /// </summary>
-    public unsafe void GPU()
+    public unsafe virtual void GPU()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.GPU", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleLowSpeed
     /// </summary>
-    public unsafe void ToggleLowSpeed()
+    public unsafe virtual void ToggleLowSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleLowSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -399,7 +399,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleSuperHighSpeed
     /// </summary>
-    public unsafe void ToggleSuperHighSpeed()
+    public unsafe virtual void ToggleSuperHighSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleSuperHighSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -410,7 +410,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleHighSpeed
     /// </summary>
-    public unsafe void ToggleHighSpeed()
+    public unsafe virtual void ToggleHighSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleHighSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -421,7 +421,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -433,7 +433,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SpecialMoveCheat
     /// </summary>
-    public unsafe void SpecialMoveCheat()
+    public unsafe virtual void SpecialMoveCheat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SpecialMoveCheat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -444,7 +444,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleDebugLight
     /// </summary>
-    public unsafe void ToggleDebugLight()
+    public unsafe virtual void ToggleDebugLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleDebugLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -455,7 +455,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe override void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -467,7 +467,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Set360ShotFileName
     /// </summary>
-    public unsafe void Set360ShotFileName(out int Series, int Index, bool bOrbit)
+    public unsafe virtual void Set360ShotFileName(out int Series, int Index, bool bOrbit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Set360ShotFileName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -488,7 +488,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SetOrbitCamera
     /// </summary>
-    public unsafe void SetOrbitCamera(System.Numerics.Vector3 Pivot, System.Numerics.Vector3 StartPos, BmSDK.Rotator StartRotation, float fOrbitPos, bool bOrbitOnXYPlane)
+    public unsafe virtual void SetOrbitCamera(System.Numerics.Vector3 Pivot, System.Numerics.Vector3 StartPos, BmSDK.Rotator StartRotation, float fOrbitPos, bool bOrbitOnXYPlane)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SetOrbitCamera", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -511,7 +511,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: TurnCamera
     /// </summary>
-    public unsafe void TurnCamera(BmSDK.Rotator R)
+    public unsafe virtual void TurnCamera(BmSDK.Rotator R)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.TurnCamera", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -530,7 +530,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Reset360OrbitLocation
     /// </summary>
-    public unsafe void Reset360OrbitLocation()
+    public unsafe virtual void Reset360OrbitLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Reset360OrbitLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -541,7 +541,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Set360OrbitLocation
     /// </summary>
-    public unsafe void Set360OrbitLocation()
+    public unsafe virtual void Set360OrbitLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Set360OrbitLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -552,7 +552,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Take360OrbitXYScreenshot
     /// </summary>
-    public unsafe void Take360OrbitXYScreenshot()
+    public unsafe virtual void Take360OrbitXYScreenshot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Take360OrbitXYScreenshot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -563,7 +563,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Take360OrbitScreenshot
     /// </summary>
-    public unsafe void Take360OrbitScreenshot()
+    public unsafe virtual void Take360OrbitScreenshot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Take360OrbitScreenshot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -574,7 +574,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: GetDefaultOrbitLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDefaultOrbitLocation()
+    public unsafe virtual System.Numerics.Vector3 GetDefaultOrbitLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.GetDefaultOrbitLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -585,7 +585,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Take360Screenshot
     /// </summary>
-    public unsafe void Take360Screenshot()
+    public unsafe virtual void Take360Screenshot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Take360Screenshot", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -596,7 +596,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleAIPaths
     /// </summary>
-    public unsafe void ToggleAIPaths()
+    public unsafe virtual void ToggleAIPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleAIPaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -607,7 +607,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: TogglePaths
     /// </summary>
-    public unsafe void TogglePaths()
+    public unsafe virtual void TogglePaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.TogglePaths", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -618,7 +618,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleEnemiesCanAttack
     /// </summary>
-    public unsafe void ToggleEnemiesCanAttack()
+    public unsafe virtual void ToggleEnemiesCanAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleEnemiesCanAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -629,7 +629,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: StepPawnDisplayingThoughts
     /// </summary>
-    public unsafe void StepPawnDisplayingThoughts()
+    public unsafe virtual void StepPawnDisplayingThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.StepPawnDisplayingThoughts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -640,7 +640,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleThoughts
     /// </summary>
-    public unsafe void ToggleThoughts()
+    public unsafe virtual void ToggleThoughts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleThoughts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -651,7 +651,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugCamSingleFrameStep
     /// </summary>
-    public unsafe void DebugCamSingleFrameStep()
+    public unsafe virtual void DebugCamSingleFrameStep()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugCamSingleFrameStep", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -662,7 +662,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: Pause
     /// </summary>
-    public unsafe void Pause()
+    public unsafe override void Pause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.Pause", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -673,7 +673,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SetPlayersOnly
     /// </summary>
-    public unsafe void SetPlayersOnly(bool bPlayersOnly)
+    public unsafe virtual void SetPlayersOnly(bool bPlayersOnly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SetPlayersOnly", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -685,7 +685,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: SetScreenshotMode
     /// </summary>
-    public unsafe void SetScreenshotMode()
+    public unsafe virtual void SetScreenshotMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.SetScreenshotMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -696,7 +696,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate(BmSDK.Engine.PlayerController PC)
+    public unsafe override void OnDeactivate(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -708,7 +708,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate(BmSDK.Engine.PlayerController PC)
+    public unsafe override void OnActivate(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -720,7 +720,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -731,7 +731,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugUpdateCinematicCapes
     /// </summary>
-    public unsafe void DebugUpdateCinematicCapes()
+    public unsafe virtual void DebugUpdateCinematicCapes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugUpdateCinematicCapes", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -761,7 +761,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: RegisterOnlineDelegates
     /// </summary>
-    public unsafe void RegisterOnlineDelegates()
+    public unsafe override void RegisterOnlineDelegates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.RegisterOnlineDelegates", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -772,7 +772,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuStepDown
     /// </summary>
-    public unsafe void DebugMenuStepDown()
+    public unsafe virtual void DebugMenuStepDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuStepDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -783,7 +783,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuStepUp
     /// </summary>
-    public unsafe void DebugMenuStepUp()
+    public unsafe virtual void DebugMenuStepUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuStepUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -794,7 +794,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuDownReleased
     /// </summary>
-    public unsafe void DebugMenuDownReleased()
+    public unsafe virtual void DebugMenuDownReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuDownReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -805,7 +805,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuDownPressed
     /// </summary>
-    public unsafe void DebugMenuDownPressed()
+    public unsafe virtual void DebugMenuDownPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuDownPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -816,7 +816,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuUpReleased
     /// </summary>
-    public unsafe void DebugMenuUpReleased()
+    public unsafe virtual void DebugMenuUpReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuUpReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -827,7 +827,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuUpPressed
     /// </summary>
-    public unsafe void DebugMenuUpPressed()
+    public unsafe virtual void DebugMenuUpPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuUpPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -838,7 +838,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuRightReleased
     /// </summary>
-    public unsafe void DebugMenuRightReleased()
+    public unsafe virtual void DebugMenuRightReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuRightReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -849,7 +849,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuRightPressed
     /// </summary>
-    public unsafe void DebugMenuRightPressed()
+    public unsafe virtual void DebugMenuRightPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuRightPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -860,7 +860,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuLeftReleased
     /// </summary>
-    public unsafe void DebugMenuLeftReleased()
+    public unsafe virtual void DebugMenuLeftReleased()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuLeftReleased", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -871,7 +871,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuLeftPressed
     /// </summary>
-    public unsafe void DebugMenuLeftPressed()
+    public unsafe virtual void DebugMenuLeftPressed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuLeftPressed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -882,7 +882,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuSelectY
     /// </summary>
-    public unsafe void DebugMenuSelectY()
+    public unsafe virtual void DebugMenuSelectY()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuSelectY", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -893,7 +893,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuSelectX
     /// </summary>
-    public unsafe void DebugMenuSelectX()
+    public unsafe virtual void DebugMenuSelectX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuSelectX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -904,7 +904,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuSelectB
     /// </summary>
-    public unsafe void DebugMenuSelectB()
+    public unsafe virtual void DebugMenuSelectB()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuSelectB", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -915,7 +915,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuSelectA
     /// </summary>
-    public unsafe void DebugMenuSelectA()
+    public unsafe virtual void DebugMenuSelectA()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuSelectA", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -926,7 +926,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuNextPage
     /// </summary>
-    public unsafe void DebugMenuNextPage()
+    public unsafe virtual void DebugMenuNextPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuNextPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -937,7 +937,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuPrevPage
     /// </summary>
-    public unsafe void DebugMenuPrevPage()
+    public unsafe virtual void DebugMenuPrevPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuPrevPage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -948,7 +948,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: ToggleDebugMenu
     /// </summary>
-    public unsafe void ToggleDebugMenu()
+    public unsafe virtual void ToggleDebugMenu()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.ToggleDebugMenu", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -959,7 +959,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuOff
     /// </summary>
-    public unsafe void DebugMenuOff()
+    public unsafe virtual void DebugMenuOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -970,7 +970,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuOn
     /// </summary>
-    public unsafe void DebugMenuOn()
+    public unsafe virtual void DebugMenuOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -981,7 +981,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuQualifyOff
     /// </summary>
-    public unsafe void DebugMenuQualifyOff()
+    public unsafe virtual void DebugMenuQualifyOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuQualifyOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -992,7 +992,7 @@ public partial class RDebugCameraController : BmSDK.Engine.DebugCameraController
     /// <summary>
     /// Function: DebugMenuQualifyOn
     /// </summary>
-    public unsafe void DebugMenuQualifyOn()
+    public unsafe virtual void DebugMenuQualifyOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDebugCameraController.DebugMenuQualifyOn", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -66,7 +66,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -88,7 +88,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -111,7 +111,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.Attach", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -138,7 +138,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.Bump", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: CauseElectricDamageToPawn
     /// </summary>
-    public unsafe void CauseElectricDamageToPawn(BmSDK.BmGame.RPawnCharacter CPawn)
+    public unsafe virtual void CauseElectricDamageToPawn(BmSDK.BmGame.RPawnCharacter CPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.CauseElectricDamageToPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: IsHitReactionBehav
     /// </summary>
-    public unsafe bool IsHitReactionBehav(BmSDK.BmGame.RBMBehaviour behav)
+    public unsafe virtual bool IsHitReactionBehav(BmSDK.BmGame.RBMBehaviour behav)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.IsHitReactionBehav", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: CauseDamageToPawn
     /// </summary>
-    public unsafe void CauseDamageToPawn(BmSDK.BmGame.RPawnCharacter CPawn)
+    public unsafe virtual void CauseDamageToPawn(BmSDK.BmGame.RPawnCharacter CPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.CauseDamageToPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: TriggerBatmanOnEvent
     /// </summary>
-    public unsafe void TriggerBatmanOnEvent(bool IsOff)
+    public unsafe virtual void TriggerBatmanOnEvent(bool IsOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.TriggerBatmanOnEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: UpdatePawnsOnTile
     /// </summary>
-    public unsafe void UpdatePawnsOnTile()
+    public unsafe virtual void UpdatePawnsOnTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.UpdatePawnsOnTile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -218,7 +218,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: CheckForPawnsOnTile
     /// </summary>
-    public unsafe void CheckForPawnsOnTile()
+    public unsafe virtual void CheckForPawnsOnTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.CheckForPawnsOnTile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: UpdateShockedCharactersEffect
     /// </summary>
-    public unsafe void UpdateShockedCharactersEffect()
+    public unsafe virtual void UpdateShockedCharactersEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.UpdateShockedCharactersEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: TriggerEvent
     /// </summary>
-    public unsafe void TriggerEvent()
+    public unsafe virtual void TriggerEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.TriggerEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -265,7 +265,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: CreateMaterial
     /// </summary>
-    public unsafe void CreateMaterial()
+    public unsafe virtual void CreateMaterial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.CreateMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -276,7 +276,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: Intialise
     /// </summary>
-    public unsafe void Intialise()
+    public unsafe virtual void Intialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.Intialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     /// <summary>
     /// Function: SetState
     /// </summary>
-    public unsafe void SetState(BmSDK.BmGame.RElectrifiedFloorPanel.FloorPanelStates NewState)
+    public unsafe virtual void SetState(BmSDK.BmGame.RElectrifiedFloorPanel.FloorPanelStates NewState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RElectrifiedFloorPanel.SetState", true);
         byte* paramsPtr = stackalloc byte[1];

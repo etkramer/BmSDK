@@ -36,7 +36,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPhysAssetBody
     /// </summary>
-    public unsafe BmSDK.Engine.RB_BodySetup FindPhysAssetBody()
+    public unsafe virtual BmSDK.Engine.RB_BodySetup FindPhysAssetBody()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindPhysAssetBody", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindPhysAssetBodyIndex
     /// </summary>
-    public unsafe int FindPhysAssetBodyIndex()
+    public unsafe virtual int FindPhysAssetBodyIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindPhysAssetBodyIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindParticleIndex
     /// </summary>
-    public unsafe int FindParticleIndex(BmSDK.FName ParticleName)
+    public unsafe virtual int FindParticleIndex(BmSDK.FName ParticleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RFlaps_BodySetup.FindParticleIndex", true);
         byte* paramsPtr = stackalloc byte[12];

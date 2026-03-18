@@ -36,7 +36,7 @@ public partial class SeqAct_Delay : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
     /// <summary>
     /// Function: ResetDelayActive
     /// </summary>
-    public unsafe void ResetDelayActive()
+    public unsafe virtual void ResetDelayActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Delay.ResetDelayActive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class SeqAct_Delay : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_Delay.Reset", true);
         byte* paramsPtr = stackalloc byte[0];

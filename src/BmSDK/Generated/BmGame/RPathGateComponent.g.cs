@@ -36,7 +36,7 @@ public partial class RPathGateComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: OpenGate
     /// </summary>
-    public unsafe void OpenGate()
+    public unsafe virtual void OpenGate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPathGateComponent.OpenGate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RPathGateComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Function: CloseGate
     /// </summary>
-    public unsafe void CloseGate()
+    public unsafe virtual void CloseGate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPathGateComponent.CloseGate", true);
         byte* paramsPtr = stackalloc byte[0];

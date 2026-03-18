@@ -71,7 +71,7 @@ public partial class RVariableFogVolume : BmSDK.Engine.PostProcessVolume, BmSDK.
     /// <summary>
     /// Function: SetProportion
     /// </summary>
-    public unsafe void SetProportion(float new_proportion)
+    public unsafe virtual void SetProportion(float new_proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVariableFogVolume.SetProportion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RVariableFogVolume : BmSDK.Engine.PostProcessVolume, BmSDK.
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RVariableFogVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

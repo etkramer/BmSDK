@@ -71,7 +71,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: SignalHit
     /// </summary>
-    public unsafe bool SignalHit()
+    public unsafe override bool SignalHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.SignalHit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: GetSecretZone
     /// </summary>
-    public unsafe byte GetSecretZone()
+    public unsafe override byte GetSecretZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.GetSecretZone", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -104,7 +104,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: GetSecretPickupIndex
     /// </summary>
-    public unsafe int GetSecretPickupIndex()
+    public unsafe override int GetSecretPickupIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.GetSecretPickupIndex", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: GetSecretSubType
     /// </summary>
-    public unsafe BmSDK.FString GetSecretSubType()
+    public unsafe override BmSDK.FString GetSecretSubType()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.GetSecretSubType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: GetSecretName
     /// </summary>
-    public unsafe BmSDK.FString GetSecretName()
+    public unsafe override BmSDK.FString GetSecretName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.GetSecretName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -137,7 +137,7 @@ public partial class RBreakablePickupPenguin : BmSDK.BmScript.RPenguinTarget, Bm
     /// <summary>
     /// Function: IsValidSecret
     /// </summary>
-    public unsafe bool IsValidSecret()
+    public unsafe override bool IsValidSecret()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakablePickupPenguin.IsValidSecret", true);
         byte* paramsPtr = stackalloc byte[4];

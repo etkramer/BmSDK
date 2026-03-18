@@ -71,7 +71,7 @@ public partial class RLevelTransitionDoorBunkerNaval : BmSDK.BmScript.RLevelTran
     /// <summary>
     /// Function: AttemptToOpenDoor
     /// </summary>
-    public unsafe void AttemptToOpenDoor(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void AttemptToOpenDoor(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerNaval.AttemptToOpenDoor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RLevelTransitionDoorBunkerNaval : BmSDK.BmScript.RLevelTran
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerNaval.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RLevelTransitionDoorBunkerNaval : BmSDK.BmScript.RLevelTran
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLevelTransitionDoorBunkerNaval.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

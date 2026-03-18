@@ -71,7 +71,7 @@ public partial class RNinjaWaypointLocation : BmSDK.BmGame.RDummyTarget, BmSDK.I
     /// <summary>
     /// Function: WaypointReached
     /// </summary>
-    public unsafe void WaypointReached()
+    public unsafe virtual void WaypointReached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNinjaWaypointLocation.WaypointReached", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_ForceSubtitle : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ForceSubtitle.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ForceSubtitle : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: ForceSubtitle
     /// </summary>
-    public unsafe void ForceSubtitle(BmSDK.Engine.RDialogueLine Line)
+    public unsafe virtual void ForceSubtitle(BmSDK.Engine.RDialogueLine Line)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ForceSubtitle.ForceSubtitle", true);
         byte* paramsPtr = stackalloc byte[4];

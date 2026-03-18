@@ -71,7 +71,7 @@ public partial class RBatclawPipeCover_OW : BmSDK.BmScript.RBatclawPipeCover, Bm
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover_OW.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBatclawPipeCover_OW : BmSDK.BmScript.RBatclawPipeCover, Bm
     /// <summary>
     /// Function: Remove
     /// </summary>
-    public unsafe void Remove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe override void Remove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover_OW.Remove", true);
         byte* paramsPtr = stackalloc byte[4];

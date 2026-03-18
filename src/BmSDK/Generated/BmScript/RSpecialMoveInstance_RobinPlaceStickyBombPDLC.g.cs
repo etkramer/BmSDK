@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_RobinPlaceStickyBombPDLC : BmSDK.BmScr
     /// <summary>
     /// Function: PlaceBomb
     /// </summary>
-    public unsafe void PlaceBomb()
+    public unsafe override void PlaceBomb()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinPlaceStickyBombPDLC.PlaceBomb", true);
         byte* paramsPtr = stackalloc byte[160];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_RobinPlaceStickyBombPDLC : BmSDK.BmScr
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinPlaceStickyBombPDLC.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[248];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_RobinPlaceStickyBombPDLC : BmSDK.BmScr
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinPlaceStickyBombPDLC.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_RobinPlaceStickyBombPDLC : BmSDK.BmScr
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_RobinPlaceStickyBombPDLC.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[376];

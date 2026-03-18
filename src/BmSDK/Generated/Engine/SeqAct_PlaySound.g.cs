@@ -36,7 +36,7 @@ public partial class SeqAct_PlaySound : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     /// <summary>
     /// Function: SetVariableLinkType
     /// </summary>
-    public unsafe void SetVariableLinkType(int I)
+    public unsafe virtual void SetVariableLinkType(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_PlaySound.SetVariableLinkType", true);
         byte* paramsPtr = stackalloc byte[4];

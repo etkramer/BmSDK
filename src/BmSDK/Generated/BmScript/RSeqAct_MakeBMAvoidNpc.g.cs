@@ -47,7 +47,7 @@ public partial class RSeqAct_MakeBMAvoidNpc : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MakeBMAvoidNpc.Update", true);
         byte* paramsPtr = stackalloc byte[20];

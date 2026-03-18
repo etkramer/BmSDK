@@ -71,7 +71,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: SuccessfullyMergedGroups
     /// </summary>
-    public unsafe bool SuccessfullyMergedGroups(BmSDK.BmGame.RAEC_Search_Group Group1, BmSDK.BmGame.RAEC_Search_Group Group2)
+    public unsafe virtual bool SuccessfullyMergedGroups(BmSDK.BmGame.RAEC_Search_Group Group1, BmSDK.BmGame.RAEC_Search_Group Group2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.SuccessfullyMergedGroups", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -84,7 +84,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: AssignFromChase
     /// </summary>
-    public unsafe void AssignFromChase(BmSDK.BmGame.RBMAIController NewMember, System.Numerics.Vector3 NewUDestFromChase)
+    public unsafe virtual void AssignFromChase(BmSDK.BmGame.RBMAIController NewMember, System.Numerics.Vector3 NewUDestFromChase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.AssignFromChase", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -97,7 +97,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: AssignFromFollow
     /// </summary>
-    public unsafe void AssignFromFollow(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
+    public unsafe virtual void AssignFromFollow(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.AssignFromFollow", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -110,7 +110,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: Assign
     /// </summary>
-    public unsafe void Assign(BmSDK.BmGame.RBMAIController NewMember, bool bFirstAttempt = default, bool bHasHintLoc = default, System.Numerics.Vector3 HintLoc = default)
+    public unsafe virtual void Assign(BmSDK.BmGame.RBMAIController NewMember, bool bFirstAttempt = default, bool bHasHintLoc = default, System.Numerics.Vector3 HintLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.Assign", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -125,7 +125,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: SetNewFearLevel
     /// </summary>
-    public unsafe void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
+    public unsafe virtual void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.SetNewFearLevel", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -137,7 +137,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: CanSnipe
     /// </summary>
-    public unsafe bool CanSnipe()
+    public unsafe virtual bool CanSnipe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.CanSnipe", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RAEC_SearchBase : BmSDK.BmGame.RAlertEventCoordinatorBase, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SearchBase.Tick", true);
         byte* paramsPtr = stackalloc byte[20];

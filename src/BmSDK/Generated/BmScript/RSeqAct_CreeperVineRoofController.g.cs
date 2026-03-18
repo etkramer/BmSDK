@@ -36,7 +36,7 @@ public partial class RSeqAct_CreeperVineRoofController : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CreeperVineRoofController.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_CreeperVineRoofController : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: CreateVineSpawn
     /// </summary>
-    public unsafe BmSDK.BmScript.RCreeperVine CreateVineSpawn(System.Numerics.Vector3 SpawnPoint, BmSDK.Engine.Actor VineOwner)
+    public unsafe virtual BmSDK.BmScript.RCreeperVine CreateVineSpawn(System.Numerics.Vector3 SpawnPoint, BmSDK.Engine.Actor VineOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CreeperVineRoofController.CreateVineSpawn", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -60,7 +60,7 @@ public partial class RSeqAct_CreeperVineRoofController : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: InitialiseVines
     /// </summary>
-    public unsafe void InitialiseVines()
+    public unsafe virtual void InitialiseVines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CreeperVineRoofController.InitialiseVines", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -71,7 +71,7 @@ public partial class RSeqAct_CreeperVineRoofController : BmSDK.Engine.SequenceAc
     /// <summary>
     /// Function: RetractVines
     /// </summary>
-    public unsafe void RetractVines()
+    public unsafe virtual void RetractVines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CreeperVineRoofController.RetractVines", true);
         byte* paramsPtr = stackalloc byte[4];
