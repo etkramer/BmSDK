@@ -2,54 +2,78 @@
 #include "TArray.h"
 #include "../Runtime.h"
 
-constexpr INT NAME_UNICODE_MASK = 0x1;
-constexpr INT NAME_INDEX_SHIFT = 1;
-
 // NOTE: Not fixed-size. Engine intentionally avoids allocating
 // complete FNameEntry instances, basing the actual size on the name length.
 class FNameEntry
 {
-#if BATMAN2
-    QWORD Flags;
-#elif BATMAN3
-    DWORD Flags;
-#endif
-    INT Index;
-    FNameEntry* HashNext;
+	INT Index;
+	INT HashNext;
 
-    union
-    {
-        char AnsiName[128];
-        wchar_t UniName[128];
-    };
+	SHORT NameLen;
+
+	// This alignment is strange - there's a chance that the last bit of the GNames pointer
+	// is used for something else, causing us to read 1 byte ahead.
+	BYTE Pad;
+
+	union
+	{
+		char AnsiName[128];
+		wchar_t UniName[128];
+	};
+
+	static bool IsNameChar(unsigned char c)
+	{
+		return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') ||
+			   c == '_';
+	}
 
 public:
-    string ToString() const
-    {
-        if (IsUnicode())
-        {
-            wstring wstr = wstring(UniName);
-            return string(wstr.begin(), wstr.end());
-        }
-        else
-        {
-            return string(AnsiName);
-        }
-    }
+	string ToString() const
+	{
+		// Sometimes this struct stores a pointer to a string, instead of having it inline.
+		// It's not clear how to check this properly yet, so we implement a heuristic
+		// to try and detect pointers.
 
-    BOOL IsUnicode() const { return (Index & NAME_UNICODE_MASK); }
+		// Short inline names (e.g. "HUD\0") can look like valid pointers when
+		// read as 8 bytes. Check for valid name chars followed by a null first.
+		bool shortInline = false;
+		for (int i = 0; i < 8; i++)
+		{
+			if (AnsiName[i] == '\0')
+			{
+				shortInline = (i > 0);
+				break;
+			}
+
+			if (!IsNameChar(AnsiName[i]))
+			{
+				break;
+			}
+		}
+
+		if (!shortInline)
+		{
+			uintptr_t nameAsPtr = *(uintptr_t*)&AnsiName;
+			if ((nameAsPtr > 0x10000) && ((nameAsPtr >> 48) == 0))
+			{
+				return string((char*)nameAsPtr);
+			}
+		}
+
+		return string(AnsiName);
+	}
 };
 
 CLASS(FName, 8)
 class FName
 {
-    FIELD(INT, Index)
-        FIELD(INT, Number)
+	FIELD(INT, Index)
+	FIELD(INT, Number)
 
 public:
-    string ToString() const { return GetNameEntry()->ToString(); }
+	string ToString() const { return GetNameEntry()->ToString(); }
 
-    const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
+	const FNameEntry* GetNameEntry() const { return Runtime::GNames->ElementAt(Index); }
 };
 
 CHECK_CLASS(FName)

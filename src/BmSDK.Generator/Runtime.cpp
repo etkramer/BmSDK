@@ -14,7 +14,7 @@
 uintptr_t Runtime::BaseAddress = 0;
 DWORD Runtime::MainThreadId = 0;
 
-TArray<UObject*>* Runtime::GObjects = 0;
+GObjectsArray* Runtime::GObjects = 0;
 TArray<FNameEntry*>* Runtime::GNames = 0;
 LoadPackageFn Runtime::LoadPackage = 0;
 
@@ -30,9 +30,9 @@ void Runtime::OnAttach()
     Runtime::MainThreadId = GetCurrentThreadId();
 
     // Set global pointers
-    Runtime::GObjects = (TArray<UObject*>*) (Runtime::BaseAddress + GameOffsets::GObjects);
+    Runtime::GObjects = (GObjectsArray*) (Runtime::BaseAddress + GameOffsets::GObjects);
     Runtime::GNames = (TArray<FNameEntry*>*) (Runtime::BaseAddress + GameOffsets::GNames);
-    Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
+    // Runtime::LoadPackage = (LoadPackageFn)(Runtime::BaseAddress + GameOffsets::LoadPackage);
 
     // Wait for keypress in another thread
     std::thread(
@@ -70,33 +70,33 @@ void Runtime::OnAttach()
 }
 
 void Runtime::LoadClassesIntoMemory() {
-    TRACE("Loading all UPKs into memory");
+    // TRACE("Loading all UPKs into memory");
 
-    const wregex packageFilter(
-        L"(?:"
-        // These packages are always loaded
-        // exact match these names
-        L"^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
-        // These packages never contain classes
-        // match if these are present anywhere
-        L"ShaderCache|"
-        // match if these are at the start
-        L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery"
-        L")",
-        regex_constants::icase);
+    // const wregex packageFilter(
+    //     L"(?:"
+    //     // These packages are always loaded
+    //     // exact match these names
+    //     L"^Core$|^Engine$|^BmGame$|^OnlineSubsystem|"
+    //     // These packages never contain classes
+    //     // match if these are present anywhere
+    //     L"ShaderCache|"
+    //     // match if these are at the start
+    //     L"^Anim_|^Bio_|^CS_|^CV_|^Dlg-|^LH-|^WwSpch-|^Tape|^Synopsis|^Gallery"
+    //     L")",
+    //     regex_constants::icase);
 
-    const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
-    for (const auto& entry : fs::directory_iterator(upkDir)) {
-        if (!entry.is_regular_file()) continue;	// filter files
-        if (entry.path().extension() != ".upk") continue;	// filter UPKs
-        auto name = entry.path().stem().wstring();
+    // const auto upkDir = fs::path{ "." } / ".." / ".." / "BmGame" / "CookedPCConsole";
+    // for (const auto& entry : fs::directory_iterator(upkDir)) {
+    //     if (!entry.is_regular_file()) continue;	// filter files
+    //     if (entry.path().extension() != ".upk") continue;	// filter UPKs
+    //     auto name = entry.path().stem().wstring();
 
-        // Filter packages that are only for assets
-        if (regex_search(name, packageFilter)) continue;
+    //     // Filter packages that are only for assets
+    //     if (regex_search(name, packageFilter)) continue;
 
-        LoadPackage(0, name.c_str(), 0);
-    }
-    TRACE("Done loading packages");
+    //     LoadPackage(0, name.c_str(), 0);
+    // }
+    // TRACE("Done loading packages");
 }
 
 void Runtime::GenerateSDK()

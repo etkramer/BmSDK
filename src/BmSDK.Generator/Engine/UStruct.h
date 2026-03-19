@@ -3,19 +3,21 @@
 #include "TArray.h"
 #include "UField.h"
 
-CLASS(UStruct, 108)
+CLASS(UStruct, 164)
 class UStruct : public UField
 {
-    BYTE UNK1[8];
-    FIELD(UStruct*, SuperStruct)
-        FIELD(UField*, Children)
-        FIELD(WORD, PropertiesSize)
-        WORD MinAlignment;
+	FIELD(UStruct*, SuperStruct)
+	BYTE UNK1[12];
+	FIELD(WORD, PropertiesSize)
+	WORD MinAlignment;
 
-    BYTE UNK2[40];
+	BYTE UNK3[16];
+	FIELD(UField*, Children)
+
+	BYTE UNK5[24];
 
 public:
-    STATIC_CLASS("Core.Struct")
+	STATIC_CLASS("Core.Struct")
 };
 
 class UScriptStruct : public UStruct

@@ -24,7 +24,7 @@ public:
     static uintptr_t BaseAddress;
     static DWORD MainThreadId;
 
-    static TArray<UObject*>* GObjects;
+    static GObjectsArray* GObjects;
     static TArray<FNameEntry*>* GNames;
     static LoadPackageFn LoadPackage;
 };

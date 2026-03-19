@@ -68,14 +68,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)bin\Binaries\Win32\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\Win64\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)bin\Binaries\Win32\plugins\</OutDir>
+    <OutDir>$(SolutionDir)bin\Binaries\Win64\plugins\</OutDir>
     <IntDir>$(ProjectDir)obj\</IntDir>
     <TargetExt>.asi</TargetExt>
   </PropertyGroup>
@@ -84,11 +84,11 @@
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
-    <VcpkgTriplet>x86-windows</VcpkgTriplet>
+    <VcpkgTriplet>x64-windows</VcpkgTriplet>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
-    <VcpkgTriplet>x86-windows</VcpkgTriplet>
+    <VcpkgTriplet>x64-windows</VcpkgTriplet>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

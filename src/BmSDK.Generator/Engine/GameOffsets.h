@@ -3,17 +3,15 @@
 class GameOffsets
 {
 private:
-    GameOffsets() = delete;
+	GameOffsets() = delete;
 
 public:
-    // Globals
-#if BATMAN2
-    static const uintptr_t GObjects = 0x122E900;
-    static const uintptr_t GNames = 0x11EC5E8;
-    static const uintptr_t LoadPackage = 0x9FCA0;
-#elif BATMAN3
-    static const uintptr_t GObjects = 0x14B1ACC;
-    static const uintptr_t GNames = 0x14B1A98;
-    static const uintptr_t LoadPackage = 0x92210;
-#endif
+	// Globals
+	static const uintptr_t GObjects = 0x340CBE4;
+	static const uintptr_t GNames = 0x3A208B8;
+	// TODO: Update for BM4
+	static const uintptr_t LoadPackage = 0x9FCA0;
+
+	// UObject
+	static const uintptr_t ProcessEvent = 0xF90CD0;
 };

@@ -71,7 +71,7 @@ function Invoke-MSBuild {
     
     $AllArgs = @($SolutionFile) + $TargetArgs + @(
         "/p:Configuration=$ConfigParam"
-        '/p:Platform=x86'
+        '/p:Platform=x64'
         '/nologo'
         '/verbosity:m'
     )

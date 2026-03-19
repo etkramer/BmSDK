@@ -3,10 +3,11 @@
 #include "UObject.h"
 #include "Framework/FieldInfo.h"
 
-CLASS(UField, 48)
+CLASS(UField, 92)
 class UField : public UObject
 {
-    FIELD(UField*, Next)
+	BYTE UNK0[8];
+	FIELD(UField*, Next)
 
 public:
     FieldInfo* GetInfo();

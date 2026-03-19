@@ -115,13 +115,14 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         out << _class->SuperStruct->GetPathNameManaged() << ", ";
     }
     // Print implemented interfaces
-    if (_class->Interfaces.Num > 0)
-    {
-        for (int i = 0; i < _class->Interfaces.Num; i++)
-        {
-            out << _class->Interfaces.ElementAt(i).Class->GetPathNameManaged() << ", ";
-        }
-    }
+    // BM4: This isn't working properly yet, UClass layout might need updating
+    // if (_class->Interfaces.Num > 0)
+    // {
+    //     for (int i = 0; i < _class->Interfaces.Num; i++)
+    //     {
+    //         out << _class->Interfaces.ElementAt(i).Class->GetPathNameManaged() << ", ";
+    //     }
+    // }
     out << "BmSDK.IGameObject" << endl;
 
     // Print class body

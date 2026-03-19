@@ -1,7 +1,7 @@
 {
   "folders": [
     {
-      "name": "BmSDK (BM2)",
+      "name": "BmSDK (BM4)",
       "path": "."
     }
   ],
@@ -30,7 +30,7 @@
     "dotnet.defaultSolution": "BmSDK.slnx",
     "C_Cpp.default.compilerPath": "cl.exe",
     "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.intelliSenseMode": "windows-msvc-x86",
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x64",
     "C_Cpp.default.defines": ["WIN32", "_DEBUG", "_CONSOLE", "BATMAN2"],
     "files.associations": {
       "iosfwd": "cpp",
@@ -127,9 +127,9 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Build",
-        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
-        "args": ["-nosplash"],
-        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
+        "program": "${workspaceFolder}/bin/Binaries/Win64/BatmanAK.exe",
+        "args": ["-nosplash", "-nologo", "-windowed"],
+        "cwd": "${workspaceFolder}/bin/Binaries/Win64/",
         "logging": {
           "exceptions": false,
           "moduleLoad": false
@@ -140,9 +140,9 @@
         "type": "cppvsdbg",
         "request": "launch",
         "preLaunchTask": "Prebuild",
-        "program": "${workspaceFolder}/bin/Binaries/Win32/BatmanAC.exe",
-        "args": ["-nosplash"],
-        "cwd": "${workspaceFolder}/bin/Binaries/Win32/",
+        "program": "${workspaceFolder}/bin/Binaries/Win64/BatmanAK.exe",
+        "args": ["-nosplash", "-nologo", "-windowed"],
+        "cwd": "${workspaceFolder}/bin/Binaries/Win64/",
         "logging": {
           "exceptions": false,
           "moduleLoad": false

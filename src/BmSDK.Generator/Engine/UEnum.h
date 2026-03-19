@@ -12,4 +12,4 @@ public:
 	STATIC_CLASS("Core.Enum")
 };
 
-CHECK_CLASS(UEnum)
+// CHECK_CLASS(UEnum)

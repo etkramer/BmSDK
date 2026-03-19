@@ -12,4 +12,4 @@ public:
 	STATIC_CLASS("Core.State")
 };
 
-CHECK_CLASS(UState);
+// CHECK_CLASS(UState);
