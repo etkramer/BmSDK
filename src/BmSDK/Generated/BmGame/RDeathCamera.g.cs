@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeathCamera<br/>
-/// (size = 908)
-/// (flags = 10485778)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {
@@ -69,77 +69,30 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: FreezeCamera
-    /// </summary>
-    public unsafe void FreezeCamera()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.FreezeCamera", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Tick
-    /// </summary>
-    public unsafe void Tick(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.Tick", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CheckForBossRestriction
-    /// </summary>
-    public unsafe void CheckForBossRestriction()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.CheckForBossRestriction", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetUpCamera
-    /// </summary>
-    public unsafe void SetUpCamera(System.Numerics.Vector3 Loc, BmSDK.Engine.SkeletalMeshComponent targetAct)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.SetUpCamera", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Loc, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(targetAct, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: LookFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LookFromLocation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LookFromLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 864); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
     }
 
     /// <summary>
-    /// ComponentProperty: TargetHead
+    /// ObjectProperty: TargetHead
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent TargetHead
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetHead
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 876); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
     }
 
     /// <summary>
     /// StructProperty: SilentPredCameraOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 SilentPredCameraOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SilentPredCameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 880); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1268); }
     }
 
     /// <summary>
@@ -147,8 +100,8 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFrozen
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 892) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 892); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 892); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1280) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1280); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1280); }
     }
 
     /// <summary>
@@ -156,16 +109,25 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bBossDeathRestriction
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 892) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 892); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 892); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1280) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1280); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1280); }
     }
 
     /// <summary>
     /// StructProperty: InitialRot
     /// </summary>
-    public unsafe BmSDK.Rotator InitialRot
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InitialRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 896); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 896); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1284); }
+    }
+
+    /// <summary>
+    /// StructProperty: LerpLookTarget
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LerpLookTarget
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 }

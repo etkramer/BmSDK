@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_AwardXP<br/>
-/// (size = 212)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_AwardXP : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -38,16 +38,16 @@ public partial class RSeqAct_AwardXP : BmSDK.Engine.SequenceAction, BmSDK.IGameO
     /// </summary>
     public unsafe int Xp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: XPTarget
     /// </summary>
-    public unsafe BmSDK.GameObject XPTarget
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XPTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 }

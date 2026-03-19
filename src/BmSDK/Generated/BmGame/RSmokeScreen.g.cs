@@ -4,11 +4,11 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RSmokeScreen<br/>
-/// (size = 504)
-/// (flags = 142606483)
+/// Class: RSmokeScreen<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableInterface, BmSDK.Engine.Interface_NavMeshPathObstacle, BmSDK.Engine.Interface_NavMeshPathObject, BmSDK.IGameObject
+public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -22,6 +22,11 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     }
 
     internal RSmokeScreen() { }
+
+    /// <summary>
+    /// Constructs a new RSmokeScreen
+    /// </summary>
+    public RSmokeScreen(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSmokeScreen Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -64,193 +69,30 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: PathBlockedBySmoke
-    /// </summary>
-    public unsafe void PathBlockedBySmoke(BmSDK.BmGame.RBMPawnAI User)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PathBlockedBySmoke", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PathCutBySmoke
-    /// </summary>
-    public unsafe void PathCutBySmoke(BmSDK.BmGame.RBMPawnAI User)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PathCutBySmoke", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetGlanceScore
-    /// </summary>
-    public unsafe int GetGlanceScore()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.GetGlanceScore", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: PreStreamOut
-    /// </summary>
-    public unsafe void PreStreamOut()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PreStreamOut", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Destroyed
-    /// </summary>
-    public unsafe void Destroyed()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SmokeNoticedBy
-    /// </summary>
-    public unsafe void SmokeNoticedBy(BmSDK.BmGame.RBMAIController C)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.SmokeNoticedBy", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(C, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SmokeScreenOver
-    /// </summary>
-    public unsafe void SmokeScreenOver()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.SmokeScreenOver", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: AIReactionFinished
-    /// </summary>
-    public unsafe void AIReactionFinished()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.AIReactionFinished", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: UnRegisterObstacle
-    /// </summary>
-    public unsafe void UnRegisterObstacle()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.UnRegisterObstacle", true);
-        byte* paramsPtr = stackalloc byte[0];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: RegisterObstacle
-    /// </summary>
-    public unsafe void RegisterObstacle()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.RegisterObstacle", true);
-        byte* paramsPtr = stackalloc byte[0];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: StartPredReaction
-    /// </summary>
-    public unsafe void StartPredReaction(bool bIsExtinguisher)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.StartPredReaction", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsExtinguisher, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: InitSmoke
-    /// </summary>
-    public unsafe void InitSmoke(bool bHitWall, bool bSmokePellet)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.InitSmoke", true);
-        byte* paramsPtr = stackalloc byte[268];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bHitWall, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSmokePellet, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PostBeginPlay
-    /// </summary>
-    public unsafe void PostBeginPlay()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSmokeScreen.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: VfTable_IRSpotableInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IRSpotableInterface
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IRSpotableInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObstacle
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObstacle
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IInterface_NavMeshPathObstacle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IInterface_NavMeshPathObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
@@ -258,44 +100,80 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float StunRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
     /// ObjectProperty: SmokeFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem SmokeFX
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
     /// ObjectProperty: WallSmokeFX
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem WallSmokeFX
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WallSmokeFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 
     /// <summary>
     /// ObjectProperty: SmokePelletSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent SmokePelletSound
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokePelletSound
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
-    /// ObjectProperty: PhysXSmokeFX
+    /// ObjectProperty: SpawnedEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem PhysXSmokeFX
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnedEmitter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: AEC_Smoke
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AEC_Smoke
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+    }
+
+    /// <summary>
+    /// ClassProperty: SmokeDamageType
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeDamageType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: RoomState
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RoomState
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: LOSBlockingCylinder
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LOSBlockingCylinder
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
@@ -303,8 +181,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float SmokeScreenDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
@@ -312,8 +190,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float SmokeScreenAudioRadiusInner
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
     /// <summary>
@@ -321,8 +199,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float SmokeScreenAudioRadiusOuter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
@@ -330,17 +208,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float SmokeAudioEffectTimeUp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: AEC_Smoke
-    /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Attack_Smoke AEC_Smoke
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAEC_Attack_Smoke>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
     /// <summary>
@@ -348,26 +217,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float SmokeStartTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: LOSBlockingCylinder
-    /// </summary>
-    public unsafe BmSDK.Engine.CylinderComponent LOSBlockingCylinder
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CylinderComponent>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: RoomState
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMRoomAIState RoomState
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMRoomAIState>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
@@ -375,8 +226,8 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe float InitTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 780); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
     }
 
     /// <summary>
@@ -384,8 +235,17 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe bool bUsedForEscape
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 496); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlayerHasUsedSmokeToPerformFearTakedown
+    /// </summary>
+    public unsafe bool bPlayerHasUsedSmokeToPerformFearTakedown
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
     }
 
     /// <summary>
@@ -393,16 +253,52 @@ public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.BmGame.RSpotableIn
     /// </summary>
     public unsafe bool bFromFireExtinguisher
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 496); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 496); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
     }
 
     /// <summary>
-    /// ClassProperty: SmokeDamageType
+    /// BoolProperty: bFromSmokeMachine
     /// </summary>
-    public unsafe BmSDK.Class SmokeDamageType
+    public unsafe bool bFromSmokeMachine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPreventPathingThrough
+    /// </summary>
+    public unsafe bool bPreventPathingThrough
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// BoolProperty: ForceMaxCover
+    /// </summary>
+    public unsafe bool ForceMaxCover
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// FloatProperty: fUpgradeDurationMultiplier
+    /// </summary>
+    public unsafe float fUpgradeDurationMultiplier
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
+    }
+
+    /// <summary>
+    /// FloatProperty: fUpgradeRadiusMultiplier
+    /// </summary>
+    public unsafe float fUpgradeRadiusMultiplier
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 }

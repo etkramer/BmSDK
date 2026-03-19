@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleLODLevel<br/>
-/// (size = 144)
-/// (flags = 136327314)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int Level
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bEnabled
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
     }
 
     /// <summary>
@@ -56,98 +56,98 @@ public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool ConvertedModules
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
     }
 
     /// <summary>
     /// ObjectProperty: RequiredModule
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleRequired RequiredModule
+    public unsafe BmSDK.Engine.ParticleLODLevel.Modules RequiredModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleRequired>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: Modules
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModule> Modules
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModule>>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleLODLevel.Modules>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ObjectProperty: TypeDataModule
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModule TypeDataModule
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TypeDataModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ObjectProperty: SpawnModule
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleSpawn SpawnModule
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnModule
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleSpawn>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ObjectProperty: EventGenerator
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleEventGenerator EventGenerator
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EventGenerator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleEventGenerator>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Modules
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Modules
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ArrayProperty: SpawningModules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModuleSpawnBase> SpawningModules
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawningModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModuleSpawnBase>>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
     /// ArrayProperty: SpawnModules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModule> SpawnModules
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpawnModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModule>>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
     /// ArrayProperty: UpdateModules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModule> UpdateModules
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT UpdateModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModule>>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ArrayProperty: OrbitModules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModuleOrbit> OrbitModules
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT OrbitModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModuleOrbit>>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ArrayProperty: EventReceiverModules
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ParticleModuleEventReceiverBase> EventReceiverModules
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT EventReceiverModules
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ParticleModuleEventReceiverBase>>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
@@ -155,7 +155,7 @@ public partial class ParticleLODLevel : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int PeakActiveParticles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 }

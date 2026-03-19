@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoalFilter_PolyEncompassesAI<br/>
-/// (size = 68)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshG
     /// <summary>
     /// StructProperty: OverrideExtentToCheck
     /// </summary>
-    public unsafe System.Numerics.Vector3 OverrideExtentToCheck
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OverrideExtentToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

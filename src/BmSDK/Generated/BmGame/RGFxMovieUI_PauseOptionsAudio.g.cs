@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieUI_PauseOptionsAudio<br/>
-/// (size = 672)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_PauseBase, BmSDK.IGameObject
 {
@@ -34,73 +34,11 @@ public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_Pa
     protected RGFxMovieUI_PauseOptionsAudio(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: OnClicked
+    /// IntProperty: OldDynRange
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe int OldDynRange
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.OnClicked", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetupScreenPrompts
-    /// </summary>
-    public unsafe void SetupScreenPrompts()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.SetupScreenPrompts", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: OnFocus
-    /// </summary>
-    public unsafe void OnFocus(int Id)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.OnFocus", true);
-        byte* paramsPtr = stackalloc byte[5];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CloseScreen
-    /// </summary>
-    public unsafe void CloseScreen()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.CloseScreen", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Init
-    /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieUI_PauseOptionsAudio.Init", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Enum: AOPMenuItem
-    /// </summary>
-    public enum AOPMenuItem
-    {
-        AOPMI_None = 0,
-        AOPMI_Subtitles = 1,
-        AOPMI_VolumeSFX = 2,
-        AOPMI_VolumeBGM = 3,
-        AOPMI_VolumeDLG = 4,
-        AOPMI_MAX = 5,
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1612); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1612); }
     }
 }

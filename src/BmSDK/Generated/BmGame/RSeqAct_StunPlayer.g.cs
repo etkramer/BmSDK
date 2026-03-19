@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_StunPlayer<br/>
-/// (size = 216)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_StunPlayer : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,34 +34,21 @@ public partial class RSeqAct_StunPlayer : BmSDK.Engine.SequenceAction, BmSDK.IGa
     protected RSeqAct_StunPlayer(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
-    /// </summary>
-    public unsafe static int GetObjClassVersion()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StunPlayer.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: Activated
-    /// </summary>
-    public unsafe void Activated()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StunPlayer.Activated", true);
-        byte* paramsPtr = stackalloc byte[256];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: Player
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerControllerCombat Player
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Player
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerControllerCombat>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: KnockBackDir
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KnockBackDir
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -69,16 +56,7 @@ public partial class RSeqAct_StunPlayer : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// </summary>
     public unsafe bool bKnockback
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: KnockBackDir
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor KnockBackDir
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 }

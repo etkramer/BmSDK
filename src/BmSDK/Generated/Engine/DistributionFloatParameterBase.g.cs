@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: DistributionFloatParameterBase<br/>
-/// (size = 93)
-/// (flags = 134230163)
+/// Class: DistributionFloatParameterBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionFloatConstant, BmSDK.IGameObject
 {
@@ -24,28 +24,22 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     internal DistributionFloatParameterBase() { }
 
     /// <summary>
+    /// Constructs a new DistributionFloatParameterBase
+    /// </summary>
+    public DistributionFloatParameterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DistributionFloatParameterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected DistributionFloatParameterBase(nint ptr) : base(ptr) { }
-
-    /// <summary>
-    /// Enum: DistributionParamMode
-    /// </summary>
-    public enum DistributionParamMode
-    {
-        DPM_Normal = 0,
-        DPM_Abs = 1,
-        DPM_Direct = 2,
-        DPM_MAX = 3,
-    }
 
     /// <summary>
     /// NameProperty: ParameterName
     /// </summary>
     public unsafe BmSDK.FName ParameterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -53,8 +47,8 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     /// </summary>
     public unsafe float MinInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
@@ -62,8 +56,8 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     /// </summary>
     public unsafe float MaxInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
@@ -71,8 +65,8 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     /// </summary>
     public unsafe float MinOutput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
@@ -80,16 +74,16 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     /// </summary>
     public unsafe float MaxOutput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
     /// ByteProperty: ParamMode
     /// </summary>
-    public unsafe BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode ParamMode
+    public unsafe byte ParamMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParameterBase.DistributionParamMode>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 }

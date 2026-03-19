@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ObjectReferencer<br/>
-/// (size = 56)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ObjectReferencer : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ObjectReferencer : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ReferencedObjects
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> ReferencedObjects
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ReferencedObjects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

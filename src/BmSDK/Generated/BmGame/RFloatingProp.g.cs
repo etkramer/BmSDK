@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFloatingProp<br/>
-/// (size = 792)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameObject
 {
@@ -69,93 +69,21 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: GetFloatingAdjustedPropCentreOfMass
-    /// </summary>
-    public unsafe System.Numerics.Vector3 GetFloatingAdjustedPropCentreOfMass()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropCentreOfMass", true);
-        byte* paramsPtr = stackalloc byte[12];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetFloatingAdjustedPropDensity
-    /// </summary>
-    public unsafe float GetFloatingAdjustedPropDensity()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropDensity", true);
-        byte* paramsPtr = stackalloc byte[4];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetFloatingAdjustedPropMass
-    /// </summary>
-    public unsafe float GetFloatingAdjustedPropMass()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetFloatingAdjustedPropMass", true);
-        byte* paramsPtr = stackalloc byte[4];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetPropMass
-    /// </summary>
-    public unsafe float GetPropMass()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFloatingProp.GetPropMass", true);
-        byte* paramsPtr = stackalloc byte[4];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
-
-    /// <summary>
     /// FloatProperty: PropDensityMultiplier
     /// </summary>
     public unsafe float PropDensityMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 996); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 996); }
     }
 
     /// <summary>
     /// StructProperty: PropCentreOfMassOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 PropCentreOfMassOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PropCentreOfMassOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 704); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1000); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1000); }
     }
 
     /// <summary>
@@ -163,8 +91,8 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// </summary>
     public unsafe float PropRightingForceMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1012); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1012); }
     }
 
     /// <summary>
@@ -172,8 +100,8 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// </summary>
     public unsafe float WaterLineOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1016); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1016); }
     }
 
     /// <summary>
@@ -181,61 +109,61 @@ public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameO
     /// </summary>
     public unsafe float LiftForceDamping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 724); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1020); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1020); }
     }
 
     /// <summary>
     /// ObjectProperty: CurrWaterVolume
     /// </summary>
-    public unsafe BmSDK.BmGame.RWaterVolumeBase CurrWaterVolume
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrWaterVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RWaterVolumeBase>(Ptr + 728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1024); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1024); }
     }
 
     /// <summary>
     /// StructProperty: CurrSurfacePosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrSurfacePosition
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrSurfacePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1032); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1032); }
     }
 
     /// <summary>
     /// StructProperty: CurrSurfaceNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrSurfaceNormal
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrSurfaceNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 744); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1044); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
     }
 
     /// <summary>
     /// StructProperty: CurrPropDesiredFloatingUp
     /// </summary>
-    public unsafe System.Numerics.Vector3 CurrPropDesiredFloatingUp
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrPropDesiredFloatingUp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1056); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
     }
 
     /// <summary>
     /// StructProperty: FloatingLiftForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloatingLiftForce
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloatingLiftForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 768); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1068); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
     }
 
     /// <summary>
     /// StructProperty: FloatingDragForce
     /// </summary>
-    public unsafe System.Numerics.Vector3 FloatingDragForce
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloatingDragForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 780); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1080); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
     }
 }

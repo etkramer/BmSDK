@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationEmitter<br/>
-/// (size = 80)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {
@@ -34,31 +34,21 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     protected ParticleModuleLocationEmitter(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ELocationEmitterSelectionMethod
-    /// </summary>
-    public enum ELocationEmitterSelectionMethod
-    {
-        ELESM_Random = 0,
-        ELESM_Sequential = 1,
-        ELESM_MAX = 2,
-    }
-
-    /// <summary>
     /// NameProperty: EmitterName
     /// </summary>
     public unsafe BmSDK.FName EmitterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: SelectionMethod
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationEmitter.ELocationEmitterSelectionMethod SelectionMethod
+    public unsafe byte SelectionMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationEmitter.ELocationEmitterSelectionMethod>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
@@ -66,8 +56,8 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     /// </summary>
     public unsafe bool InheritSourceVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 68); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
     }
 
     /// <summary>
@@ -75,8 +65,8 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     /// </summary>
     public unsafe bool bInheritSourceRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 68); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
     }
 
     /// <summary>
@@ -84,8 +74,8 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     /// </summary>
     public unsafe float InheritSourceVelocityScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -93,7 +83,7 @@ public partial class ParticleModuleLocationEmitter : BmSDK.Engine.ParticleModule
     /// </summary>
     public unsafe float InheritSourceRotationScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ChangeDebugLabelText<br/>
-/// (size = 220)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ChangeDebugLabelText : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RSeqAct_ChangeDebugLabelText : BmSDK.Engine.SequenceAction,
     /// </summary>
     public unsafe BmSDK.FString Text
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RSeqAct_ChangeDebugLabelText : BmSDK.Engine.SequenceAction,
     /// </summary>
     public unsafe int Int
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

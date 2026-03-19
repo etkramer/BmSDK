@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionConstant4Vector<br/>
-/// (size = 108)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionConstant4Vector : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class MaterialExpressionConstant4Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float R
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class MaterialExpressionConstant4Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float G
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class MaterialExpressionConstant4Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float B
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class MaterialExpressionConstant4Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 }

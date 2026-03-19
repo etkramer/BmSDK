@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_ShootBatarang<br/>
-/// (size = 584)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_ShootBatarang : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -69,58 +69,12 @@ public partial class RBMAIAction_ShootBatarang : BmSDK.BmGame.RBMAIAction, BmSDK
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: SmashSonicBatarang
-    /// </summary>
-    public unsafe void SmashSonicBatarang(BmSDK.BmGame.RBatDistractProjectile RepSBrang)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootBatarang.SmashSonicBatarang", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RepSBrang, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ActionTick
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootBatarang.ActionTick", true);
-        byte* paramsPtr = stackalloc byte[5];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMAIAction.ActionTickResult>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// Function: OnDeactivate
-    /// </summary>
-    public unsafe void OnDeactivate()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootBatarang.OnDeactivate", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: OnActivate
-    /// </summary>
-    public unsafe void OnActivate()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_ShootBatarang.OnActivate", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: SBrang
     /// </summary>
-    public unsafe BmSDK.BmGame.RBatDistractProjectile SBrang
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SBrang
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBatDistractProjectile>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 864); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
     }
 
     /// <summary>
@@ -128,8 +82,8 @@ public partial class RBMAIAction_ShootBatarang : BmSDK.BmGame.RBMAIAction, BmSDK
     /// </summary>
     public unsafe float WaitTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 872); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 
     /// <summary>
@@ -137,8 +91,8 @@ public partial class RBMAIAction_ShootBatarang : BmSDK.BmGame.RBMAIAction, BmSDK
     /// </summary>
     public unsafe bool bStartedTalk
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 580); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 876) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 876); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 876); }
     }
 
     /// <summary>
@@ -146,7 +100,7 @@ public partial class RBMAIAction_ShootBatarang : BmSDK.BmGame.RBMAIAction, BmSDK
     /// </summary>
     public unsafe bool bStartedSmash
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 580); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 580); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 876) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 876); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 876); }
     }
 }

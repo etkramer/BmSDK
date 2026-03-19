@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieNoController<br/>
-/// (size = 496)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RGFxMovieNoController : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     protected RGFxMovieNoController(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// BoolProperty: bClose
+    /// </summary>
+    public unsafe bool bClose
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
+    }
 }

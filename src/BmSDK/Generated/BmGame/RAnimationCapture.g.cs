@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimationCapture<br/>
-/// (size = 268)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -34,97 +34,93 @@ public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
     protected RAnimationCapture(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
-    /// </summary>
-    public unsafe static int GetObjClassVersion()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimationCapture.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: SetupOurPawns
-    /// </summary>
-    public unsafe void SetupOurPawns()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimationCapture.SetupOurPawns", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: Animator1
     /// </summary>
-    public unsafe BmSDK.BmGame.RCinematicActorSpawnable Animator1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Animator1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicActorSpawnable>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
     /// ObjectProperty: Animator2
     /// </summary>
-    public unsafe BmSDK.BmGame.RCinematicActorSpawnable Animator2
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Animator2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicActorSpawnable>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ObjectProperty: OurAnimSequence1
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence OurAnimSequence1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OurAnimSequence1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 
     /// <summary>
     /// ObjectProperty: OurAnimSequence2
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence OurAnimSequence2
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OurAnimSequence2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 400); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 
     /// <summary>
     /// ObjectProperty: SpawnPoint1
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnPoint1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnPoint1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
     }
 
     /// <summary>
     /// ObjectProperty: SpawnPoint2
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnPoint2
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnPoint2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
     /// <summary>
     /// ObjectProperty: Object1
     /// </summary>
-    public unsafe BmSDK.BmGame.RCinematicActorSpawnable Object1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Object1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicActorSpawnable>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 424); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
     }
 
     /// <summary>
     /// ObjectProperty: Object2
     /// </summary>
-    public unsafe BmSDK.BmGame.RCinematicActorSpawnable Object2
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Object2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCinematicActorSpawnable>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SequenceNode1
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SequenceNode1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SequenceNode2
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SequenceNode2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 448); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
     }
 
     /// <summary>
@@ -132,8 +128,8 @@ public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
     /// </summary>
     public unsafe float AnimationTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
@@ -141,25 +137,7 @@ public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGame
     /// </summary>
     public unsafe float AnimationTimeLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SequenceNode1
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence SequenceNode1
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SequenceNode2
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence SequenceNode2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNodeSequence>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
     }
 }

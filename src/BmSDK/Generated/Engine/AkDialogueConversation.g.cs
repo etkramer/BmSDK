@@ -1,0 +1,69 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// Class: AkDialogueConversation<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.AkDialogueConversation", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal AkDialogueConversation() { }
+
+    /// <summary>
+    /// Constructs a new AkDialogueConversation
+    /// </summary>
+    public AkDialogueConversation(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkDialogueConversation Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected AkDialogueConversation(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ArrayProperty: DialogueLines
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DialogueLines
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// Struct: FAkDialogueConversationItem
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FAkDialogueConversationItem
+    {
+        /// <summary>
+        /// ObjectProperty: DialogueLine
+        /// </summary>
+        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueLine
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Order
+        /// </summary>
+        public unsafe int Order
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+    }
+}

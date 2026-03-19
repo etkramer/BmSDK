@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_NervousCorner_In_Left<br/>
-/// (size = 616)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_NervousCorner_In_Left : BmSDK.BmGame.RBMAIAction_NervousCorner_In, BmSDK.IGameObject
 {
@@ -68,4 +68,57 @@ public partial class RBMAIAction_NervousCorner_In_Left : BmSDK.BmGame.RBMAIActio
         where TComponent : class, Framework.IScriptComponent<RBMAIAction_NervousCorner_In_Left>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// StructProperty: CornerPos
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CornerPos
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 864); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CornerYaw
+    /// </summary>
+    public unsafe float CornerYaw
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 876); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 876); }
+    }
+
+    /// <summary>
+    /// StructProperty: EnterCornerID
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EnterCornerID
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 880); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 880); }
+    }
+
+    /// <summary>
+    /// NameProperty: StanceName
+    /// </summary>
+    public unsafe BmSDK.FName StanceName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 884); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 884); }
+    }
+
+    /// <summary>
+    /// NameProperty: InAnimName_HeadOn
+    /// </summary>
+    public unsafe BmSDK.FName InAnimName_HeadOn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 892); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 892); }
+    }
+
+    /// <summary>
+    /// NameProperty: InAnimName_Along
+    /// </summary>
+    public unsafe BmSDK.FName InAnimName_Along
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 900); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 900); }
+    }
 }

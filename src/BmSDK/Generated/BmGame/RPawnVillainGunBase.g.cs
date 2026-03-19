@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainGunBase<br/>
-/// (size = 3604)
-/// (flags = 144703670)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject
 {
@@ -69,381 +69,57 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: GetThermalAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetThermalAnimset()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.GetThermalAnimset", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetMinelayerAnimset
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetMinelayerAnimset()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.GetMinelayerAnimset", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: ShowSecurityCard
-    /// </summary>
-    public unsafe void ShowSecurityCard()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.ShowSecurityCard", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: HideSecurityCard
-    /// </summary>
-    public unsafe void HideSecurityCard()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.HideSecurityCard", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetSecurityCardMesh
-    /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh GetSecurityCardMesh()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.GetSecurityCardMesh", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: HasRECedGear
-    /// </summary>
-    public unsafe bool HasRECedGear()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.HasRECedGear", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: CanReachPlayerForPunch
-    /// </summary>
-    public unsafe bool CanReachPlayerForPunch()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.CanReachPlayerForPunch", true);
-        byte* paramsPtr = stackalloc byte[44];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: SetGrabMineHidden
-    /// </summary>
-    public unsafe void SetGrabMineHidden(bool bNewVal)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SetGrabMineHidden", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewVal, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SpawnMine
-    /// </summary>
-    public unsafe void SpawnMine(BmSDK.BmGame.RThugMineablePointBase TargetMinePoint)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SpawnMine", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetMinePoint, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetGrenadeHidden
-    /// </summary>
-    public unsafe void SetGrenadeHidden(BmSDK.BmGame.RPawnVillainGunBase.LeftRight GrenadeHand, bool bNewVal)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SetGrenadeHidden", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(GrenadeHand, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewVal, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CurrentGrenadeFuseTime
-    /// </summary>
-    public unsafe float CurrentGrenadeFuseTime()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.CurrentGrenadeFuseTime", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: DoGrenadeVentThrow
-    /// </summary>
-    public unsafe bool DoGrenadeVentThrow(System.Numerics.Vector3 ThrowVel, BmSDK.Rotator SpawnRot, System.Numerics.Vector3 TargetLoc)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.DoGrenadeVentThrow", true);
-        byte* paramsPtr = stackalloc byte[40];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ThrowVel, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SpawnRot, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetLoc, paramsPtr + 24);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 36);
-    }
-
-    /// <summary>
-    /// Function: DoGrenadeLaunch
-    /// </summary>
-    public unsafe bool DoGrenadeLaunch(System.Numerics.Vector3 ThrowVel, System.Numerics.Vector3 TargetLoc)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.DoGrenadeLaunch", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ThrowVel, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(TargetLoc, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 24);
-    }
-
-    /// <summary>
-    /// Function: NewWeaponAttached
-    /// </summary>
-    public unsafe void NewWeaponAttached(BmSDK.BmGame.RBMWeapon NewWeapon)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.NewWeaponAttached", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewWeapon, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: IsHostageTaker
-    /// </summary>
-    public unsafe bool IsHostageTaker()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.IsHostageTaker", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: RestoreInteractions
-    /// </summary>
-    public unsafe void RestoreInteractions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.RestoreInteractions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SwitchToHostageInteractions
-    /// </summary>
-    public unsafe void SwitchToHostageInteractions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SwitchToHostageInteractions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PlayGoggleOffSFX
-    /// </summary>
-    public unsafe void PlayGoggleOffSFX()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.PlayGoggleOffSFX", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PlayGoggleOnSFX
-    /// </summary>
-    public unsafe void PlayGoggleOnSFX()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.PlayGoggleOnSFX", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetGargoyleScanFX
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetGargoyleScanFX()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.GetGargoyleScanFX", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: SetThermalGoggleVFX
-    /// </summary>
-    public unsafe void SetThermalGoggleVFX(BmSDK.BmGame.RPawnVillainGunBase.ThermalGoggleState NewState)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SetThermalGoggleVFX", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewState, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SonicBatarangCollarFX
-    /// </summary>
-    public unsafe void SonicBatarangCollarFX(bool bKillEffect = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.SonicBatarangCollarFX", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bKillEffect, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Died
-    /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.Died", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Killer, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
-    }
-
-    /// <summary>
-    /// Function: ResetXrayOnDeath
-    /// </summary>
-    public unsafe void ResetXrayOnDeath()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.ResetXrayOnDeath", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Tick
-    /// </summary>
-    public unsafe void Tick(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.Tick", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: RECDisableEquipment
-    /// </summary>
-    public unsafe void RECDisableEquipment()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.RECDisableEquipment", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PostBeginPlay
-    /// </summary>
-    public unsafe void PostBeginPlay()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnVillainGunBase.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Enum: LeftRight
-    /// </summary>
-    public enum LeftRight
-    {
-        LR_Left = 0,
-        LR_Right = 1,
-        LR_MAX = 2,
-    }
-
-    /// <summary>
-    /// Enum: ThermalGoggleState
-    /// </summary>
-    public enum ThermalGoggleState
-    {
-        TGS_Off = 0,
-        TGS_Active = 1,
-        TGS_MAX = 2,
-    }
-
-    /// <summary>
     /// ComponentProperty: GoggleVFX
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent GoggleVFX
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GoggleVFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 3560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3560); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6664); }
     }
 
     /// <summary>
     /// ObjectProperty: GoggleVFXMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant GoggleVFXMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GoggleVFXMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6672); }
     }
 
     /// <summary>
-    /// FloatProperty: WarmupTimer
+    /// ObjectProperty: GuardVolume
     /// </summary>
-    public unsafe float WarmupTimer
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GuardVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 3568); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3568); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: HostageTakerInteractions
-    /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent HostageTakerInteractions
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 3572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6680); }
     }
 
     /// <summary>
     /// ComponentProperty: OldPlayerInteractions
     /// </summary>
-    public unsafe BmSDK.Engine.RInteractionComponent OldPlayerInteractions
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OldPlayerInteractions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RInteractionComponent>(Ptr + 3576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6688); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: HostageTakerInteractions
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostageTakerInteractions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
+    }
+
+    /// <summary>
+    /// FloatProperty: WarmUpTimer
+    /// </summary>
+    public unsafe float WarmUpTimer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6704); }
     }
 
     /// <summary>
@@ -451,8 +127,8 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe float SearchSpecialMoveTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 3580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6708); }
     }
 
     /// <summary>
@@ -460,17 +136,17 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe float LastDisarmTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 3584); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3584); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentGoggleState
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnVillainGunBase.ThermalGoggleState CurrentGoggleState
+    public unsafe byte CurrentGoggleState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnVillainGunBase.ThermalGoggleState>(Ptr + 3588); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3588); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 6716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6716); }
     }
 
     /// <summary>
@@ -478,8 +154,8 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe float GoggleVFXCycleTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 3592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
     }
 
     /// <summary>
@@ -487,8 +163,8 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe bool bGoggleCycleOn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3596) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3596); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6724) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6724); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6724); }
     }
 
     /// <summary>
@@ -496,8 +172,8 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe bool bForceNoXPBankWhileAlive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3596) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 3596); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 3596); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6724) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6724); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6724); }
     }
 
     /// <summary>
@@ -505,7 +181,25 @@ public partial class RPawnVillainGunBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGam
     /// </summary>
     public unsafe float RECDisableSpecialsTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 3600); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3600); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6728); }
+    }
+
+    /// <summary>
+    /// IntProperty: bHasDoneJokerWalk
+    /// </summary>
+    public unsafe int bHasDoneJokerWalk
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6732); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: JokerNervousSyncWalks
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> JokerNervousSyncWalks
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 6736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6736); }
     }
 }

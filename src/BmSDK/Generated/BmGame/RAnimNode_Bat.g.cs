@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_Bat<br/>
-/// (size = 212)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNode_Bat : BmSDK.Engine.AnimNode, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RAnimNode_Bat : BmSDK.Engine.AnimNode, BmSDK.IGameObject
     /// </summary>
     public unsafe float RandomTimeOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 }

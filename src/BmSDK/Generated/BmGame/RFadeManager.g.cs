@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFadeManager<br/>
-/// (size = 456)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -69,223 +69,21 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: HasFinishedAudio
+    /// StructProperty: MainFade
     /// </summary>
-    public unsafe bool HasFinishedAudio()
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MainFade
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.HasFinishedAudio", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
-    /// Function: HasFinished
+    /// ArrayProperty: IndependentFades
     /// </summary>
-    public unsafe bool HasFinished()
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> IndependentFades
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.HasFinished", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: IsFadedOut
-    /// </summary>
-    public unsafe bool IsFadedOut()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.IsFadedOut", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: Tick
-    /// </summary>
-    public unsafe void Tick(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.Tick", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetFadeInstantly
-    /// </summary>
-    public unsafe void SetFadeInstantly(float FadePerc, bool bFadeAudio, bool InFadeDuringMovieCapture = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.SetFadeInstantly", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadePerc, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bFadeAudio, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InFadeDuringMovieCapture, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetFadeType
-    /// </summary>
-    public unsafe void SetFadeType(bool FadeIn, float FadeT, bool fadesAudio, bool InFadeDuringMovieCapture = default, float FadeColR = default, float FadeColG = default, float FadeColB = default, float DelayBeforeStartFade = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.SetFadeType", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeIn, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeT, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(fadesAudio, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InFadeDuringMovieCapture, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeColR, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeColG, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeColB, paramsPtr + 24);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DelayBeforeStartFade, paramsPtr + 28);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: StartAudioFadeIn
-    /// </summary>
-    public unsafe void StartAudioFadeIn(float FadeT)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.StartAudioFadeIn", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeT, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: StartAudioFadeOut
-    /// </summary>
-    public unsafe void StartAudioFadeOut(float FadeT)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.StartAudioFadeOut", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FadeT, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetVolume
-    /// </summary>
-    public unsafe float GetVolume()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.GetVolume", true);
-        byte* paramsPtr = stackalloc byte[4];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: SetVolume
-    /// </summary>
-    public unsafe void SetVolume(float Vol)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFadeManager.SetVolume", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Vol, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// BoolProperty: bFadeIn
-    /// </summary>
-    public unsafe bool bFadeIn
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bHasPlayedAtLeastOneFrame
-    /// </summary>
-    public unsafe bool bHasPlayedAtLeastOneFrame
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// BoolProperty: FadeDuringMovieCapture
-    /// </summary>
-    public unsafe bool FadeDuringMovieCapture
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnabledFade
-    /// </summary>
-    public unsafe bool bEnabledFade
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bAudioFadeIn
-    /// </summary>
-    public unsafe bool bAudioFadeIn
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// BoolProperty: AudioIsFadedOut
-    /// </summary>
-    public unsafe bool AudioIsFadedOut
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// FloatProperty: FadeTime
-    /// </summary>
-    public unsafe float FadeTime
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
-    }
-
-    /// <summary>
-    /// FloatProperty: TimeElapsed
-    /// </summary>
-    public unsafe float TimeElapsed
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
-
-    /// <summary>
-    /// IntProperty: FadeRGB
-    /// </summary>
-    public unsafe int FadeRGB
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
     /// <summary>
@@ -293,8 +91,35 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float FadePercLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MainFadePercLast
+    /// </summary>
+    public unsafe float MainFadePercLast
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAudioFadeIn
+    /// </summary>
+    public unsafe bool bAudioFadeIn
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AudioIsFadedOut
+    /// </summary>
+    public unsafe bool AudioIsFadedOut
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
     }
 
     /// <summary>
@@ -302,8 +127,8 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AudioFadeTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
     /// <summary>
@@ -311,7 +136,86 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AudioTimeElapsed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+
+    /// <summary>
+    /// Struct: FMainFadeState
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FMainFadeState
+    {
+        /// <summary>
+        /// BoolProperty: bFadeIn
+        /// </summary>
+        public unsafe bool bFadeIn
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bHasPlayedAtLeastOneFrame
+        /// </summary>
+        public unsafe bool bHasPlayedAtLeastOneFrame
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: fadeTime
+        /// </summary>
+        public unsafe float fadeTime
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: TimeElapsed
+        /// </summary>
+        public unsafe float TimeElapsed
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 8); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: FadeRGB
+        /// </summary>
+        public unsafe int FadeRGB
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: FadeDuringMovieCapture
+        /// </summary>
+        public unsafe bool FadeDuringMovieCapture
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: FadeStartedByBatmobileInWater
+        /// </summary>
+        public unsafe bool FadeStartedByBatmobileInWater
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: ControlledByInstantFade
+        /// </summary>
+        public unsafe bool ControlledByInstantFade
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 16); }; }
+        }
     }
 }

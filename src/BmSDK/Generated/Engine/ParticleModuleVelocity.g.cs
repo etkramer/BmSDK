@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleVelocity<br/>
-/// (size = 116)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleVelocity : BmSDK.Engine.ParticleModuleVelocityBase, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ParticleModuleVelocity : BmSDK.Engine.ParticleModuleVelocit
     /// <summary>
     /// StructProperty: StartVelocity
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartVelocity
+    public unsafe BmSDK.Engine.ParticleModuleVelocity.StartVelocityRadial StartVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleVelocity.StartVelocityRadial>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: StartVelocityRadial
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartVelocityRadial
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartVelocityRadial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 }

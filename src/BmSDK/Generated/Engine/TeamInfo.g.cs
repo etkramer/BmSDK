@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TeamInfo<br/>
-/// (size = 456)
-/// (flags = 142608562)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
 {
@@ -69,76 +69,12 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: GetTeamNum
-    /// </summary>
-    public unsafe byte GetTeamNum()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TeamInfo.GetTeamNum", true);
-        byte* paramsPtr = stackalloc byte[1];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<byte>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetHumanReadableName
-    /// </summary>
-    public unsafe BmSDK.FString GetHumanReadableName()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TeamInfo.GetHumanReadableName", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: RemoveFromTeam
-    /// </summary>
-    public unsafe void RemoveFromTeam(BmSDK.Engine.Controller Other)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TeamInfo.RemoveFromTeam", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Destroyed
-    /// </summary>
-    public unsafe void Destroyed()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TeamInfo.Destroyed", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ReplicatedEvent
-    /// </summary>
-    public unsafe void ReplicatedEvent(BmSDK.FName VarName)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.TeamInfo.ReplicatedEvent", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(VarName, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// StrProperty: TeamName
     /// </summary>
     public unsafe BmSDK.FString TeamName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
@@ -146,8 +82,8 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe int Size
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
@@ -155,8 +91,8 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe float Score
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
     /// <summary>
@@ -164,16 +100,16 @@ public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
     /// </summary>
     public unsafe int TeamIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
     /// StructProperty: TeamColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor TeamColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TeamColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 }

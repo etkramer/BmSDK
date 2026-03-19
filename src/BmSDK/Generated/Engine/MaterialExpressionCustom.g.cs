@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionCustom<br/>
-/// (size = 132)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -38,17 +38,17 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// </summary>
     public unsafe BmSDK.FString Code
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: OutputType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionCustom.ECustomMaterialOutputType OutputType
+    public unsafe byte OutputType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionCustom.ECustomMaterialOutputType>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
@@ -56,23 +56,23 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// </summary>
     public unsafe BmSDK.FString Description
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
     /// ArrayProperty: Inputs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialExpressionCustom.FCustomInput> Inputs
+    public unsafe BmSDK.TArray<BmSDK.FString> Inputs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialExpressionCustom.FCustomInput>>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
     /// <summary>
     /// Struct: FCustomInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 40)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FCustomInput
     {
         /// <summary>
@@ -87,10 +87,10 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
         /// <summary>
         /// StructProperty: Input
         /// </summary>
-        public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Input
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
     }
 

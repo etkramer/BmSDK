@@ -1,0 +1,331 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RDeadBodyExtra<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class RDeadBodyExtra : BmSDK.BmGame.RDeadBody, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RDeadBodyExtra", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RDeadBodyExtra() { }
+
+    /// <summary>
+    /// Constructs a new RDeadBodyExtra
+    /// </summary>
+    public RDeadBodyExtra(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDeadBodyExtra Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RDeadBodyExtra(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>, new()
+        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
+    public void DetachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RDeadBodyExtra>
+        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+
+    /// <summary>
+    /// ArrayProperty: Meshes
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RDeadBody.BodyName>> Meshes
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RDeadBody.BodyName>>>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: OldMaterial
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RDeadBody.BodyName> OldMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RDeadBody.BodyName>>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// BoolProperty: XRaySet
+    /// </summary>
+    public unsafe bool XRaySet
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bFakeDead
+    /// </summary>
+    public unsafe bool bFakeDead
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCryogenicallyFrozen
+    /// </summary>
+    public unsafe bool bCryogenicallyFrozen
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: EnableEmbeddedFaceFXAnims
+    /// </summary>
+    public unsafe bool EnableEmbeddedFaceFXAnims
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AutomaticallySetKOExpression
+    /// </summary>
+    public unsafe bool AutomaticallySetKOExpression
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUseRealNameForInvestigate
+    /// </summary>
+    public unsafe bool bUseRealNameForInvestigate
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPauseSkel
+    /// </summary>
+    public unsafe bool bPauseSkel
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DoneFirstTick
+    /// </summary>
+    public unsafe bool DoneFirstTick
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSetOnlyVisibleInXray
+    /// </summary>
+    public unsafe bool bSetOnlyVisibleInXray
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bIsForOverworldGas
+    /// </summary>
+    public unsafe bool bIsForOverworldGas
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayMaterialMIC
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayMaterialMIC
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayBoneMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayBoneMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayBoneMaterialMIC
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayBoneMaterialMIC
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayGutsMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XRayGutsMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XRayGutsMaterialMIC
+    /// </summary>
+    public unsafe BmSDK.BmGame.RDeadBody.BodyName XRayGutsMaterialMIC
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDeadBody.BodyName>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XraySkeleton
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XraySkeleton
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: XrayGuts
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT XrayGuts
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: DeathAnimset
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DeathAnimset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PresetCharacterType
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PresetCharacterType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: GutsMesh
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GutsMesh
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 784); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: SkeletonMesh
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletonMesh
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
+    }
+
+    /// <summary>
+    /// NameProperty: DeathAnimName
+    /// </summary>
+    public unsafe BmSDK.FName DeathAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 800); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
+    }
+
+    /// <summary>
+    /// StrProperty: BodyName
+    /// </summary>
+    public unsafe BmSDK.FString BodyName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 808); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
+    }
+
+    /// <summary>
+    /// StrProperty: RealNameForInvestigate
+    /// </summary>
+    public unsafe BmSDK.FString RealNameForInvestigate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 824); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
+    }
+
+    /// <summary>
+    /// StructProperty: Breathing
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Breathing
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 840); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
+    }
+
+    /// <summary>
+    /// NameProperty: HeadBoneName
+    /// </summary>
+    public unsafe BmSDK.FName HeadBoneName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 852); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
+    }
+}

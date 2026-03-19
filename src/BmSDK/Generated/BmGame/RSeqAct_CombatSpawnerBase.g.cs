@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RSeqAct_CombatSpawnerBase<br/>
-/// (size = 224)
-/// (flags = 201334931)
+/// Class: RSeqAct_CombatSpawnerBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_CombatSpawnerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -24,38 +24,48 @@ public partial class RSeqAct_CombatSpawnerBase : BmSDK.Engine.SeqAct_Latent, BmS
     internal RSeqAct_CombatSpawnerBase() { }
 
     /// <summary>
+    /// Constructs a new RSeqAct_CombatSpawnerBase
+    /// </summary>
+    public RSeqAct_CombatSpawnerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_CombatSpawnerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RSeqAct_CombatSpawnerBase(nint ptr) : base(ptr) { }
-
-    /// <summary>
-    /// Function: SpawnPawn
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, BmSDK.Engine.Actor NewSpawnPoint)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatSpawnerBase.SpawnPawn", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPawnClass, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCharacterClass, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewWeaponClass, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSpawnPoint, paramsPtr + 12);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawn>(paramsPtr + 16);
-    }
 
     /// <summary>
     /// BoolProperty: bSnapToGround
     /// </summary>
     public unsafe bool bSnapToGround
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bForceFlappyBitsOff
+    /// </summary>
+    public unsafe bool bForceFlappyBitsOff
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+    }
+
+    /// <summary>
+    /// BoolProperty: OverridePhysWalkingType
+    /// </summary>
+    public unsafe bool OverridePhysWalkingType
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
+    }
+
+    /// <summary>
+    /// ByteProperty: PhysWalkingType
+    /// </summary>
+    public unsafe byte PhysWalkingType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdAgent<br/>
-/// (size = 544)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -69,94 +69,12 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: AdvanceFlockStage
-    /// </summary>
-    public unsafe void AdvanceFlockStage(int StageNum = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.AdvanceFlockStage", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(StageNum, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: DestroyAgent
-    /// </summary>
-    public unsafe void DestroyAgent()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.DestroyAgent", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: KillAgent
-    /// </summary>
-    public unsafe void KillAgent()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.KillAgent", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: TakeDamage
-    /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.TakeDamage", true);
-        byte* paramsPtr = stackalloc byte[76];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageAmount, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(EventInstigator, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Momentum, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageType, paramsPtr + 32);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitInfo, paramsPtr + 36);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageCauser, paramsPtr + 72);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PostBeginPlay
-    /// </summary>
-    public unsafe void PostBeginPlay()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CanRespondToAttractor
-    /// </summary>
-    public unsafe bool CanRespondToAttractor(BmSDK.BmGame.RCrowdAttractor Attractor)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdAgent.CanRespondToAttractor", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Attractor, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
-
-    /// <summary>
     /// FloatProperty: MinVelDamping
     /// </summary>
     public unsafe float MinVelDamping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
@@ -164,8 +82,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float MaxVelDamping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
     /// <summary>
@@ -173,8 +91,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float MoveTowardsFlockForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
@@ -182,17 +100,17 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float MoveInFlockDirForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// StructProperty: ToTargetRot
     /// </summary>
-    public unsafe BmSDK.Rotator ToTargetRot
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ToTargetRot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
@@ -200,8 +118,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bRotateToTargetRot
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
     }
 
     /// <summary>
@@ -209,17 +127,17 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bFlyAwayWhenFinish
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 456); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
     }
 
     /// <summary>
     /// ComponentProperty: SkeletalMeshComponent
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent SkeletalMeshComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletalMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
     /// <summary>
@@ -227,8 +145,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int Health
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
     /// <summary>
@@ -236,8 +154,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AwareRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 468); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
@@ -245,8 +163,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AvoidOtherRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
     /// <summary>
@@ -254,8 +172,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AvoidForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
@@ -263,8 +181,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float SpeedBlendStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
     /// <summary>
@@ -272,8 +190,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float SpeedBlendEnd
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
@@ -281,8 +199,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float MaxYawRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 
     /// <summary>
@@ -290,8 +208,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float AttractionMulti
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
     /// <summary>
@@ -299,8 +217,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float WaveForce
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
@@ -308,8 +226,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float WaveTimeMulti
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
@@ -317,8 +235,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float WaveTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
     /// <summary>
@@ -326,8 +244,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float CurrScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
@@ -335,8 +253,17 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float TargetScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ScaleBlend
+    /// </summary>
+    public unsafe float ScaleBlend
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
@@ -344,8 +271,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int AgentGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
     /// <summary>
@@ -353,8 +280,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float FlockStageTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
@@ -362,8 +289,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float FlockNextStageTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
     /// <summary>
@@ -371,8 +298,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float DebugTimer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
@@ -380,8 +307,8 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int FlockStage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 780); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
     }
 
     /// <summary>
@@ -389,16 +316,16 @@ public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int FlockID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 784); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
     /// ObjectProperty: CrowdSequence
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrowdSequence CrowdSequence
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrowdSequence
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdSequence>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_SetHostile<br/>
-/// (size = 212)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetHostile : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,23 +34,12 @@ public partial class RSeqAct_SetHostile : BmSDK.Engine.SequenceAction, BmSDK.IGa
     protected RSeqAct_SetHostile(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Activated
-    /// </summary>
-    public unsafe void Activated()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHostile.Activated", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: PawnAI
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI PawnAI
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnAI
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -58,7 +47,7 @@ public partial class RSeqAct_SetHostile : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// </summary>
     public unsafe bool bAttackImmediately
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
     }
 }

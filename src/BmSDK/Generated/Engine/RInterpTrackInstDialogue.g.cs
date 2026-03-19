@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackInstDialogue<br/>
-/// (size = 76)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RInterpTrackInstDialogue : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -38,61 +38,34 @@ public partial class RInterpTrackInstDialogue : BmSDK.Engine.InterpTrackInst, Bm
     /// </summary>
     public unsafe float LastUpdatePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
-    /// ComponentProperty: WwiseMatineeDialogueAudioComp
+    /// FloatProperty: SeekPos
     /// </summary>
-    public unsafe BmSDK.Engine.AkComponent WwiseMatineeDialogueAudioComp
+    public unsafe float SeekPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkComponent>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
-    /// StructProperty: WwiseMatineeDialogueSoundHandle
+    /// ObjectProperty: LastDialogue
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.FAkSoundHandle WwiseMatineeDialogueSoundHandle
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LastDialogue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.FAkSoundHandle>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
-    /// FloatProperty: fSeekPos
+    /// ArrayProperty: SpeechIDs
     /// </summary>
-    public unsafe float fSeekPos
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpeechIDs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: LastSubtitle
-    /// </summary>
-    public unsafe BmSDK.Engine.RDialogueEvent LastSubtitle
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDialogueEvent>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// BoolProperty: LoadedBanks
-    /// </summary>
-    public unsafe bool LoadedBanks
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bFirstUpdate
-    /// </summary>
-    public unsafe bool bFirstUpdate
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

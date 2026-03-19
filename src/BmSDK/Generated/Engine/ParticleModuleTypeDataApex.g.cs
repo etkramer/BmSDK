@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataApex<br/>
-/// (size = 112)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {
@@ -36,37 +36,37 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// <summary>
     /// ObjectProperty: ApexIOFX
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGenericAsset ApexIOFX
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ApexIOFX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGenericAsset>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ObjectProperty: ApexEmitter
     /// </summary>
-    public unsafe BmSDK.Engine.ApexGenericAsset ApexEmitter
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ApexEmitter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexGenericAsset>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// ArrayProperty: Materials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> Materials
+    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> Materials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// ArrayProperty: Meshes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMesh> Meshes
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Meshes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMesh>>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool SubUVBlend
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe int SubUVStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe int SubUVCount
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe int SubImagesHorizontal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
@@ -110,16 +110,25 @@ public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe int SubImagesVertical
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
-    /// StructProperty: EmitterInstance
+    /// StructProperty: ApexCustomParamHandler
     /// </summary>
-    public unsafe System.IntPtr EmitterInstance
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ApexCustomParamHandler
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ApexLODAssets
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ApexLODAssets
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

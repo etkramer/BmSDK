@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_DefaultIdle<br/>
-/// (size = 432)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RBMBehaviour_DefaultIdle : BmSDK.BmGame.RBMBehaviour_Idle, 
     /// </summary>
     protected RBMBehaviour_DefaultIdle(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// BoolProperty: bOldForceNavMeshObstacleUpdate
+    /// </summary>
+    public unsafe bool bOldForceNavMeshObstacleUpdate
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 628) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 628); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 628); }
+    }
 }

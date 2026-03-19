@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_PlayCameraEmitter<br/>
-/// (size = 216)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,34 +34,21 @@ public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_PlayCameraEmitter(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
+    /// ObjectProperty: Pfx
     /// </summary>
-    public unsafe static int GetObjClassVersion()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Pfx
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraEmitter.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
-    /// Function: PlayEmitter
+    /// ObjectProperty: PC
     /// </summary>
-    public unsafe void PlayEmitter()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_PlayCameraEmitter.PlayEmitter", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// ObjectProperty: PFX
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem PFX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -69,16 +56,7 @@ public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, Bm
     /// </summary>
     public unsafe float Lifetime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: PC
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController PC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

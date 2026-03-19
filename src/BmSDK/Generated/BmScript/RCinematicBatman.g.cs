@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCinematicBatman<br/>
-/// (size = 624)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCinematicBatman : BmSDK.BmGame.RCinematicBatmanBase, BmSDK.IGameObject
 {
@@ -69,34 +69,47 @@ public partial class RCinematicBatman : BmSDK.BmGame.RCinematicBatmanBase, BmSDK
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: BeginAnimControl
+    /// ComponentProperty: CapeSkeletalMesh
     /// </summary>
-    public unsafe void BeginAnimControl(BmSDK.Engine.InterpGroup InInterpGroup)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeSkeletalMesh
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCinematicBatman.BeginAnimControl", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InInterpGroup, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1028); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1028); }
     }
 
     /// <summary>
-    /// Function: PostBeginPlay
+    /// ComponentProperty: CapeComponent
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeComponent
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCinematicBatman.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1036); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1036); }
     }
 
     /// <summary>
-    /// BoolProperty: AutomaticallyUseSickMaterial
+    /// ComponentProperty: CapeRenderingComponent
     /// </summary>
-    public unsafe bool AutomaticallyUseSickMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeRenderingComponent
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 620); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1044); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1044); }
+    }
+
+    /// <summary>
+    /// BoolProperty: EnableCape
+    /// </summary>
+    public unsafe bool EnableCape
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1052); }
+    }
+
+    /// <summary>
+    /// BoolProperty: UseAutomaticDamageModel
+    /// </summary>
+    public unsafe bool UseAutomaticDamageModel
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1052); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1052); }
     }
 }

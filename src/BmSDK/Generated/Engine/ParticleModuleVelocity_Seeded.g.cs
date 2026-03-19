@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleVelocity_Seeded<br/>
-/// (size = 140)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleVelocity_Seeded : BmSDK.Engine.ParticleModuleVelocity, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleVelocity_Seeded : BmSDK.Engine.ParticleModule
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModuleVelocity.StartVelocity RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleVelocity.StartVelocity>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 }

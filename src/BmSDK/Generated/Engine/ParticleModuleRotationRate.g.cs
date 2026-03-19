@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleRotationRate<br/>
-/// (size = 84)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleRotationRate : BmSDK.Engine.ParticleModuleRotationRateBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleRotationRate : BmSDK.Engine.ParticleModuleRot
     /// <summary>
     /// StructProperty: StartRotationRate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRotationRate
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartRotationRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

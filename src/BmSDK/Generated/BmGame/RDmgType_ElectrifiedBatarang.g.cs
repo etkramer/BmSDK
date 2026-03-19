@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ElectrifiedBatarang<br/>
-/// (size = 120)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDmgType_ElectrifiedBatarang : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RDmgType_ElectrifiedBatarang : BmSDK.BmGame.RDmgType_Electr
     /// </summary>
     protected RDmgType_ElectrifiedBatarang(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// BoolProperty: bAlwaysKO
+    /// </summary>
+    public unsafe bool bAlwaysKO
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 216); }
+    }
 }

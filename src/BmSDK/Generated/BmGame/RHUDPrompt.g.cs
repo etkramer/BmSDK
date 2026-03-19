@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHUDPrompt<br/>
-/// (size = 176)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,188 +34,21 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     protected RHUDPrompt(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SetHighPriorityInstructions
-    /// </summary>
-    public unsafe void SetHighPriorityInstructions(BmSDK.FString NewInstructions)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetHighPriorityInstructions", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInstructions, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetInstructions
-    /// </summary>
-    public unsafe bool SetInstructions(BmSDK.FString NewInstructions, bool CanOverrideEmptyKismet = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetInstructions", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInstructions, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(CanOverrideEmptyKismet, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
-
-    /// <summary>
-    /// Function: GetLines
-    /// </summary>
-    public unsafe void GetLines()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.GetLines", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetOverridePrompt
-    /// </summary>
-    public unsafe void SetOverridePrompt(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.SetOverridePrompt", true);
-        byte* paramsPtr = stackalloc byte[13];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: DrawHUD
-    /// </summary>
-    public unsafe void DrawHUD()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.DrawHUD", true);
-        byte* paramsPtr = stackalloc byte[0];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: ResetLines
-    /// </summary>
-    public unsafe void ResetLines()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.ResetLines", true);
-        byte* paramsPtr = stackalloc byte[0];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: AddLine
-    /// </summary>
-    public unsafe void AddLine(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddLine", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Main, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bHammerButton, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAddHighlight, paramsPtr + 24);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: HelpLinesMatch
-    /// </summary>
-    public unsafe bool HelpLinesMatch(out BmSDK.BmGame.RHUDPrompt.FHelpLine HL1, out BmSDK.BmGame.RHUDPrompt.FHelpLine HL2)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.HelpLinesMatch", true);
-        byte* paramsPtr = stackalloc byte[44];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        HL1 = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(paramsPtr + 0);
-        HL2 = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(paramsPtr + 20);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 40);
-    }
-
-    /// <summary>
-    /// Function: AddTutorialLineLoc
-    /// </summary>
-    public unsafe void AddTutorialLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddTutorialLineLoc", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Main, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bHammerButton, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAddHighlight, paramsPtr + 24);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: AddGadgetLineLoc
-    /// </summary>
-    public unsafe void AddGadgetLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddGadgetLineLoc", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Main, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bHammerButton, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAddHighlight, paramsPtr + 24);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: AddLineLoc
-    /// </summary>
-    public unsafe void AddLineLoc(BmSDK.FString Text, BmSDK.BmGame.RHUDPrompt.EControlIcon Icon = default, bool Main = default, bool bHammerButton = default, bool bAddHighlight = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHUDPrompt.AddLineLoc", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Text, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Icon, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Main, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bHammerButton, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAddHighlight, paramsPtr + 24);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: PC
     /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController PC
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: FromKismet
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FromKismet
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -223,8 +56,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverridePromptIsActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -232,53 +65,71 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bOverridePromptShouldBeActive
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bForcePromptUpdate
+    /// </summary>
+    public unsafe bool bForcePromptUpdate
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDisplayWhetherHelpTextIsHintOrTutorial
+    /// </summary>
+    public unsafe bool bDisplayWhetherHelpTextIsHintOrTutorial
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: OverridePrompt
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine OverridePrompt
+    public unsafe BmSDK.BmGame.RHUDPrompt.MainLine OverridePrompt
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.MainLine>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// StructProperty: MainLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLine
+    public unsafe BmSDK.BmGame.RHUDPrompt.MainLineLast MainLine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.MainLineLast>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
     /// StructProperty: MainLineLast
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine MainLineLast
+    public unsafe BmSDK.BmGame.RHUDPrompt.Lines MainLineLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.FHelpLine>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.Lines>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// ArrayProperty: Lines
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine> Lines
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> Lines
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine>>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
     /// ArrayProperty: LinesLast
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine> LinesLast
+    public unsafe BmSDK.TArray<BmSDK.FString> LinesLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RHUDPrompt.FHelpLine>>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
@@ -286,8 +137,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString Instructions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
@@ -295,8 +146,8 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString InstructionsLast
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
@@ -304,23 +155,14 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString HighPriorityInstructions
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: FromKismet
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_HelpText FromKismet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_HelpText>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 252); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// Struct: FHelpLine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 20)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FHelpLine
     {
         /// <summary>
@@ -335,10 +177,10 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ByteProperty: Icon
         /// </summary>
-        public unsafe BmSDK.BmGame.RHUDPrompt.EControlIcon Icon
+        public unsafe byte Icon
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHUDPrompt.EControlIcon>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
         }
 
         /// <summary>
@@ -346,8 +188,17 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         /// </summary>
         public unsafe int Alpha
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bAsSecondaryMain
+        /// </summary>
+        public unsafe bool bAsSecondaryMain
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 24); }; }
         }
     }
 
@@ -446,49 +297,128 @@ public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
         CI_SwingAttack = 87,
         CI_KnifeCounter = 88,
         CI_BeatDown = 89,
-        CI_AerialAttack = 90,
-        CI_DirectedAerialAttack = 91,
-        CI_Jump = 92,
-        CI_SmokeAndEscape = 93,
-        CI_SuperStun = 94,
-        CI_CombatSpecialLeft = 95,
-        CI_CombatSpecialTop = 96,
-        CI_CombatSpecialBottom = 97,
-        CI_Evade = 98,
-        CI_HoldRunGlide = 99,
-        CI_ToggleDetectiveMode = 100,
-        CI_TriggerScan = 101,
-        CI_GrappleBoost = 102,
-        CI_RecUp = 103,
-        CI_RecDown = 104,
-        CI_SelectGadget1 = 105,
-        CI_SelectGadget2 = 106,
-        CI_SelectGadget3 = 107,
-        CI_SelectGadget4 = 108,
-        CI_SelectGadget5 = 109,
-        CI_SelectGadget6 = 110,
-        CI_SelectGadget7 = 111,
-        CI_SelectGadget8 = 112,
-        CI_SelectGadget9 = 113,
-        CI_SelectGadget10 = 114,
-        CI_SelectGadget11 = 115,
-        CI_SelectGadget12 = 116,
-        CI_GrappleToHang = 117,
-        CI_GrappleToClimb = 118,
-        CI_StunStick = 119,
-        CI_TitanBeatdown = 120,
-        CI_LockOnSecondaryGadget = 121,
-        CI_ThrowSecondaryGadget = 122,
-        CI_Slide = 123,
-        CI_ReadyGadgetButton = 124,
-        CI_UseGadgetShort = 125,
-        CI_SecondaryGadgetShort = 126,
-        CI_BatclawSlam = 127,
-        CI_UseGadgetHoldShort = 128,
-        CI_SecondaryGadgetHoldShort = 129,
-        CI_UseGadgetHold = 130,
-        CI_BladeCounter = 131,
-        CI_QuickCaltrops = 132,
-        CI_MAX = 133,
+        CI_BeatDownDarkX = 90,
+        CI_AerialAttack = 91,
+        CI_AerialIntoBeatdown = 92,
+        CI_AerialIntoBeatdownDarkX = 93,
+        CI_DirectedAerialAttack = 94,
+        CI_Jump = 95,
+        CI_SmokeAndEscape = 96,
+        CI_SuperStun = 97,
+        CI_CombatSpecialLeft = 98,
+        CI_CombatSpecialTop = 99,
+        CI_CombatSpecialBottom = 100,
+        CI_Evade = 101,
+        CI_HoldRunGlide = 102,
+        CI_ToggleDetectiveMode = 103,
+        CI_TriggerScan = 104,
+        CI_GrappleBoost = 105,
+        CI_RecUp = 106,
+        CI_RecDown = 107,
+        CI_SelectGadget1 = 108,
+        CI_SelectGadget2 = 109,
+        CI_SelectGadget3 = 110,
+        CI_SelectGadget4 = 111,
+        CI_SelectGadget5 = 112,
+        CI_SelectGadget6 = 113,
+        CI_SelectGadget7 = 114,
+        CI_SelectGadget8 = 115,
+        CI_SelectGadget9 = 116,
+        CI_SelectGadget10 = 117,
+        CI_SelectGadget11 = 118,
+        CI_SelectGadget12 = 119,
+        CI_ReleaseGadgetSelect = 120,
+        CI_GrappleToHang = 121,
+        CI_GrappleToClimb = 122,
+        CI_StunStick = 123,
+        CI_TitanBeatdown = 124,
+        CI_LockOnSecondaryGadget = 125,
+        CI_ThrowSecondaryGadget = 126,
+        CI_Slide = 127,
+        CI_ReadyGadgetButton = 128,
+        CI_UseGadgetShort = 129,
+        CI_SecondaryGadgetShort = 130,
+        CI_BatclawSlam = 131,
+        CI_UseGadgetHoldShort = 132,
+        CI_SecondaryGadgetHoldShort = 133,
+        CI_UseGadgetHold = 134,
+        CI_BladeCounter = 135,
+        CI_ClimbDown = 136,
+        CI_SwitchCharacter = 137,
+        CI_CallBatmobile = 138,
+        CI_BatmobileEject = 139,
+        CI_CrouchStrike = 140,
+        CI_BatmobileHandbrake = 141,
+        CI_BatmobileThrottle = 142,
+        CI_BatmobileBrake = 143,
+        CI_BatmobileBoost = 144,
+        CI_BatmobileRiddlerSwitch = 145,
+        CI_FloorPickup = 146,
+        CI_GrappleBoostMk2 = 147,
+        CI_BatmobileDodge = 148,
+        CI_ThrowCounter = 149,
+        CI_EnvironmentTakedown = 150,
+        CI_BatmobileBattleMode = 151,
+        CI_BatmobileSecondaryFire = 152,
+        CI_BatmobileSonarBlast = 153,
+        CI_BatmobileSonar = 154,
+        CI_BatmobileEMPLv1 = 155,
+        CI_BatmobileEMPLv2 = 156,
+        CI_DroneHacker = 157,
+        CI_TagVehicle = 158,
+        CI_UnTagVehicle = 159,
+        CI_DiveBomb = 160,
+        CI_BatmobileSideSwipe = 161,
+        CI_BatmobileMissileBarrage = 162,
+        CI_BatmobileMissileBarrageLv2 = 163,
+        CI_BatmobileMissileBarrageLv3 = 164,
+        CI_BatmobileMissileBarrageLv4 = 165,
+        CI_MoveCrane = 166,
+        CI_EnterCover = 167,
+        CI_LineLauncherStop = 168,
+        CI_GrappleBoostMk3 = 169,
+        CI_GrappleBoostMk4 = 170,
+        CI_SuperComboBatarang = 171,
+        CI_SuperComboBatclaw = 172,
+        CI_SuperComboGel = 173,
+        CI_SuperComboREC = 174,
+        CI_SuperComboFreeze = 175,
+        CI_BatmobileSuperEject = 176,
+        CI_Arrows = 177,
+        CI_LeftAndRightKeys = 178,
+        CI_DiveRelease = 179,
+        CI_ToggleBatmobileCamera = 180,
+        CI_GadgetSelect = 181,
+        CI_SpecialCombo1 = 182,
+        CI_SpecialCombo2 = 183,
+        CI_SpecialCombo3 = 184,
+        CI_SpecialCombo4 = 185,
+        CI_Left = 186,
+        CI_Right = 187,
+        CI_ZipLine = 188,
+        CI_DoubleDodge = 189,
+        CI_BatmobileFire = 190,
+        CI_GlideSteer = 191,
+        CI_NavigateLeaderboard = 192,
+        CI_FlipBatmobile = 193,
+        CI_ContinuePromptBatmobile = 194,
+        CI_BatmobileInteract = 195,
+        CI_PhotoModeLook = 196,
+        CI_PhotoModeUpDown = 197,
+        CI_QuickPhotoMode = 198,
+        CI_ToggleForensicsScan = 199,
+        CI_MAX = 200,
+    }
+
+    /// <summary>
+    /// Enum: JustifyText
+    /// </summary>
+    public enum JustifyText
+    {
+        JT_Left = 0,
+        JT_Center = 1,
+        JT_Right = 2,
+        JT_Align = 3,
+        JT_MAX = 4,
     }
 }

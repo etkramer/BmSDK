@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_LineLauncherFlipAndAim<br/>
-/// (size = 304)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_LineLauncherFlipAndAim : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RSpecialMoveConfig_LineLauncherFlipAndAim : BmSDK.BmGame.RS
     /// </summary>
     public unsafe BmSDK.FName FlipAndAimAnimationName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 400); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 }

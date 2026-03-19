@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSwingingDirectorCamera<br/>
-/// (size = 940)
-/// (flags = 10486290)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSwingingDirectorCamera : BmSDK.BmGame.RLineLauncherDirectorCamera, BmSDK.IGameObject
 {
@@ -68,4 +68,84 @@ public partial class RSwingingDirectorCamera : BmSDK.BmGame.RLineLauncherDirecto
         where TComponent : class, Framework.IScriptComponent<RSwingingDirectorCamera>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// FloatProperty: PivotDistMin
+    /// </summary>
+    public unsafe float PivotDistMin
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1248); }
+    }
+
+    /// <summary>
+    /// FloatProperty: PivotDistMax
+    /// </summary>
+    public unsafe float PivotDistMax
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1252); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1252); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OffsetSize
+    /// </summary>
+    public unsafe float OffsetSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ZVelocity
+    /// </summary>
+    public unsafe float ZVelocity
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1260); }
+    }
+
+    /// <summary>
+    /// StructProperty: CentrePoint
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CentrePoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1264); }
+    }
+
+    /// <summary>
+    /// StructProperty: Direction
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Direction
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1276); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PawnToTrack
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnToTrack
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
+    }
+
+    /// <summary>
+    /// IntProperty: DelayTillRevert
+    /// </summary>
+    public unsafe int DelayTillRevert
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
+    }
+
+    /// <summary>
+    /// StructProperty: Smoother
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Smoother
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1300); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
+    }
 }

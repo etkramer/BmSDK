@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraAnim<br/>
-/// (size = 488)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,10 +36,19 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: CameraInterpGroup
     /// </summary>
-    public unsafe BmSDK.Engine.InterpGroup CameraInterpGroup
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraInterpGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpGroup>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PreviewInterpGroup
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewInterpGroup
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -47,26 +56,26 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float AnimLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: BoundingBox
     /// </summary>
-    public unsafe BmSDK.GameObject.FBox BoundingBox
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoundingBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBox>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// StructProperty: BasePPSettings
     /// </summary>
-    public unsafe BmSDK.Engine.PostProcessVolume.FPostProcessSettings BasePPSettings
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BasePPSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PostProcessVolume.FPostProcessSettings>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
@@ -74,8 +83,8 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float BasePPSettingsAlpha
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 656); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
     }
 
     /// <summary>
@@ -83,7 +92,7 @@ public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float BaseFOV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 660); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
     }
 }

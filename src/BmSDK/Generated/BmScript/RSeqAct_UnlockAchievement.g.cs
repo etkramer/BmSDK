@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_UnlockAchievement<br/>
-/// (size = 205)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_UnlockAchievement : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,22 +34,20 @@ public partial class RSeqAct_UnlockAchievement : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_UnlockAchievement(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Activated
+    /// ByteProperty: AchievementId
     /// </summary>
-    public unsafe void Activated()
+    public unsafe byte AchievementId
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_UnlockAchievement.Activated", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
-    /// ByteProperty: AchievementId
+    /// IntProperty: Value
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.EAchievementID AchievementId
+    public unsafe int Value
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGameInfo.EAchievementID>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 }

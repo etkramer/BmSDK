@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: AICommandBase<br/>
-/// (size = 48)
-/// (flags = 134217875)
+/// Class: AICommandBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
 {
@@ -24,19 +24,21 @@ public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
     internal AICommandBase() { }
 
     /// <summary>
+    /// Constructs a new AICommandBase
+    /// </summary>
+    public AICommandBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AICommandBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AICommandBase(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetUtility
+    /// StructProperty: StateFrame
     /// </summary>
-    public unsafe static int GetUtility(BmSDK.Engine.AIController InAI)
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StateFrame
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AICommandBase.GetUtility", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InAI, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGrinderVolume<br/>
-/// (size = 484)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGrinderVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameObject
 {
@@ -73,7 +73,7 @@ public partial class RGrinderVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bInstantDestruction
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 480); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 480); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 748); }
     }
 }

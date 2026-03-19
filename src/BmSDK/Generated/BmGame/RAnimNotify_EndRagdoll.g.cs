@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_EndRagdoll<br/>
-/// (size = 48)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_EndRagdoll : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RAnimNotify_EndRagdoll : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// </summary>
     public unsafe float BlendOutDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

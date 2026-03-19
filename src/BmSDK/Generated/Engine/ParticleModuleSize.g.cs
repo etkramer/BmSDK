@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSize<br/>
-/// (size = 84)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSize : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleSize : BmSDK.Engine.ParticleModuleSizeBase, B
     /// <summary>
     /// StructProperty: StartSize
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartSize
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartSize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

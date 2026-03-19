@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_CustomBackscreenRequested<br/>
-/// (size = 228)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RSeqEvent_CustomBackscreenRequested : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
+public partial class RSeqEvent_CustomBackscreenRequested : BmSDK.BmGame.RSeqEvent_CustomBackscreenRequestedBase, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,25 +34,12 @@ public partial class RSeqEvent_CustomBackscreenRequested : BmSDK.Engine.Sequence
     protected RSeqEvent_CustomBackscreenRequested(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetAvailability
+    /// IntProperty: Priority
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqEvent_CustomBackscreenRequested.BackscreenAvailability GetAvailability()
+    public unsafe int Priority
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_CustomBackscreenRequested.GetAvailability", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqEvent_CustomBackscreenRequested.BackscreenAvailability>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: GetObjClassVersion
-    /// </summary>
-    public unsafe static int GetObjClassVersion()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_CustomBackscreenRequested.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>

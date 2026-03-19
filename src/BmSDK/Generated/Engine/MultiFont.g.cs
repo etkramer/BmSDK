@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MultiFont<br/>
-/// (size = 328)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
 {
@@ -34,30 +34,11 @@ public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
     protected MultiFont(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetResolutionTestTableIndex
-    /// </summary>
-    public unsafe int GetResolutionTestTableIndex(float HeightTest)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiFont.GetResolutionTestTableIndex", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HeightTest, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
-    }
-
-    /// <summary>
     /// ArrayProperty: ResolutionTestTable
     /// </summary>
-    public unsafe BmSDK.TArray<float> ResolutionTestTable
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>> ResolutionTestTable
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Font.MaxCharHeight>>>>(Ptr + 404); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
     }
 }

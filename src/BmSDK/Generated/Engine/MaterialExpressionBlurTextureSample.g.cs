@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionBlurTextureSample<br/>
-/// (size = 164)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -34,49 +34,39 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     protected MaterialExpressionBlurTextureSample(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ESampleBlurType
-    /// </summary>
-    public enum ESampleBlurType
-    {
-        SampleBlur_PoissonDisc = 0,
-        SampleBlur_Mip = 1,
-        SampleBlur_MAX = 2,
-    }
-
-    /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe BmSDK.Engine.Texture Texture
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
+    public unsafe BmSDK.Engine.MaterialExpressionBlurTextureSample.SampleRadius Coordinates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlurTextureSample.SampleRadius>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// StructProperty: SampleRadius
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput SampleRadius
+    public unsafe BmSDK.Engine.MaterialExpression.Desc SampleRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
     /// <summary>
     /// ByteProperty: SampleBlurType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionBlurTextureSample.ESampleBlurType SampleBlurType
+    public unsafe byte SampleBlurType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionBlurTextureSample.ESampleBlurType>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
@@ -84,8 +74,8 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     /// </summary>
     public unsafe int SampleNum
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 
     /// <summary>
@@ -93,7 +83,7 @@ public partial class MaterialExpressionBlurTextureSample : BmSDK.Engine.Material
     /// </summary>
     public unsafe float SampleRadiusDefault
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
     }
 }

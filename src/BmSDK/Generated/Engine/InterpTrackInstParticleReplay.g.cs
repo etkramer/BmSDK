@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstParticleReplay<br/>
-/// (size = 48)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstParticleReplay : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -38,7 +38,16 @@ public partial class InterpTrackInstParticleReplay : BmSDK.Engine.InterpTrackIns
     /// </summary>
     public unsafe float LastUpdatePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bIsCapturingReplay
+    /// </summary>
+    public unsafe bool bIsCapturingReplay
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
     }
 }

@@ -4,84 +4,199 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Interface: OnlineSystemInterface<br/>
-/// (size = 104)
-/// (flags = 16403)
+/// Class: OnlineSystemInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface OnlineSystemInterface : BmSDK.Interface
+public partial class OnlineSystemInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: ClearStorageDeviceChangeDelegate
-    /// </summary>
-    public unsafe void ClearStorageDeviceChangeDelegate(System.IntPtr StorageDeviceChangeDelegate);
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlineSystemInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal OnlineSystemInterface() { }
 
     /// <summary>
-    /// Function: AddStorageDeviceChangeDelegate
+    /// Constructs a new OnlineSystemInterface
     /// </summary>
-    public unsafe void AddStorageDeviceChangeDelegate(System.IntPtr StorageDeviceChangeDelegate);
+    public OnlineSystemInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineSystemInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
-    /// Function: OnStorageDeviceChange
+    /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    public unsafe void OnStorageDeviceChange();
+    protected OnlineSystemInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: ClearConnectionStatusChangeDelegate
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe void ClearConnectionStatusChangeDelegate(System.IntPtr ConnectionStatusDelegate);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
-    /// Function: AddConnectionStatusChangeDelegate
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe void AddConnectionStatusChangeDelegate(System.IntPtr ConnectionStatusDelegate);
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
 
     /// <summary>
-    /// Function: OnConnectionStatusChange
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    public unsafe void OnConnectionStatusChange(BmSDK.Engine.OnlineSubsystem.EOnlineServerConnectionStatus ConnectionStatus);
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
 
     /// <summary>
-    /// Function: IsControllerConnected
+    /// IntProperty: HashIndexPrev
     /// </summary>
-    public unsafe bool IsControllerConnected(int ControllerId);
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
-    /// Function: ClearControllerChangeDelegate
+    /// IntProperty: HashIndexNext
     /// </summary>
-    public unsafe void ClearControllerChangeDelegate(System.IntPtr ControllerChangeDelegate);
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
-    /// Function: AddControllerChangeDelegate
+    /// IntProperty: HashOuterIndexPrev
     /// </summary>
-    public unsafe void AddControllerChangeDelegate(System.IntPtr ControllerChangeDelegate);
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
 
     /// <summary>
-    /// Function: OnControllerChange
+    /// IntProperty: HashOuterIndexNext
     /// </summary>
-    public unsafe void OnControllerChange(int ControllerId, bool bIsConnected);
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
 
     /// <summary>
-    /// Function: ClearExternalUIChangeDelegate
+    /// ObjectProperty: Linker
     /// </summary>
-    public unsafe void ClearExternalUIChangeDelegate(System.IntPtr ExternalUIDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
 
     /// <summary>
-    /// Function: AddExternalUIChangeDelegate
+    /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe void AddExternalUIChangeDelegate(System.IntPtr ExternalUIDelegate);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
 
     /// <summary>
-    /// Function: OnExternalUIChange
+    /// IntProperty: ObjectInternalInteger
     /// </summary>
-    public unsafe void OnExternalUIChange(bool bIsOpening);
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
-    /// Function: AddLinkStatusChangeDelegate
+    /// ObjectProperty: Outer
     /// </summary>
-    public unsafe void AddLinkStatusChangeDelegate(System.IntPtr LinkStatusDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
-    /// Function: OnLinkStatusChange
+    /// NameProperty: Name
     /// </summary>
-    public unsafe void OnLinkStatusChange(bool bIsConnected);
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// ClassProperty: Class
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ObjectArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+
+    /// <summary>
+    /// Struct: FQWord
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FPointer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
 }

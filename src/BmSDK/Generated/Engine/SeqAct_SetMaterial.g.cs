@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetMaterial<br/>
-/// (size = 212)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetMaterial : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class SeqAct_SetMaterial : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: NewMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface NewMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NewMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class SeqAct_SetMaterial : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// </summary>
     public unsafe int MaterialIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 }

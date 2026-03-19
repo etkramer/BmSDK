@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstFaceFX<br/>
-/// (size = 52)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstFaceFX : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class InterpTrackInstFaceFX : BmSDK.Engine.InterpTrackInst, BmSDK
     /// </summary>
     public unsafe bool bFirstUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class InterpTrackInstFaceFX : BmSDK.Engine.InterpTrackInst, BmSDK
     /// </summary>
     public unsafe float LastUpdatePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxForceFieldTornadoComponent<br/>
-/// (size = 536)
-/// (flags = 2292199570)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldComponent, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float RadialStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 660); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float RotationalStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float LiftStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float ForceRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float ForceTopRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float LiftFalloffHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float EscapeVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float ForceHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float HeightOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe bool BSpecialRadialForceMode
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 524) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 524); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 524); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
     }
 
     /// <summary>
@@ -128,16 +128,16 @@ public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldCom
     /// </summary>
     public unsafe float SelfRotationStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
     /// <summary>
     /// StructProperty: Kernel
     /// </summary>
-    public unsafe System.IntPtr Kernel
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Kernel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
     }
 }

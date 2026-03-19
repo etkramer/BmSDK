@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: SoundNode<br/>
-/// (size = 60)
-/// (flags = 134221971)
+/// Class: SoundNode<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
     internal SoundNode() { }
 
     /// <summary>
+    /// Constructs a new SoundNode
+    /// </summary>
+    public SoundNode(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SoundNode Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SoundNode(nint ptr) : base(ptr) { }
@@ -33,16 +38,16 @@ public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int NodeUpdateHint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: ChildNodes
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.SoundNode> ChildNodes
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ChildNodes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SoundNode>>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

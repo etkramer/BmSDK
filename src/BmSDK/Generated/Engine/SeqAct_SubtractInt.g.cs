@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SubtractInt<br/>
-/// (size = 220)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_SubtractInt : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class SeqAct_SubtractInt : BmSDK.Engine.SeqAct_SetSequenceVariabl
     /// </summary>
     public unsafe int ValueA
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class SeqAct_SubtractInt : BmSDK.Engine.SeqAct_SetSequenceVariabl
     /// </summary>
     public unsafe int ValueB
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class SeqAct_SubtractInt : BmSDK.Engine.SeqAct_SetSequenceVariabl
     /// </summary>
     public unsafe float FloatResult
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class SeqAct_SubtractInt : BmSDK.Engine.SeqAct_SetSequenceVariabl
     /// </summary>
     public unsafe int IntResult
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 364); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 }

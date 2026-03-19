@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PrefabInstance<br/>
-/// (size = 616)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,10 +71,55 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: TemplatePrefab
     /// </summary>
-    public unsafe BmSDK.Engine.Prefab TemplatePrefab
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TemplatePrefab
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Prefab>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SequenceInstance
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SequenceInstance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Sibling1
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Sibling1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Sibling2
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Sibling2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Sibling3
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Sibling3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PivotArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PivotArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 
     /// <summary>
@@ -82,8 +127,8 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int TemplateVersion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
     /// <summary>
@@ -91,17 +136,8 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.TMap<object, object> /* TODO */ ArchetypeToInstanceMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TMap<object, object> /* TODO */>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SequenceInstance
-    /// </summary>
-    public unsafe BmSDK.Engine.PrefabSequence SequenceInstance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrefabSequence>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TMap<object, object> /* TODO */>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
     }
 
     /// <summary>
@@ -109,8 +145,8 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int PI_PackageVersion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
@@ -118,44 +154,44 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int PI_LicenseePackageVersion
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 796); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
     }
 
     /// <summary>
     /// ArrayProperty: PI_Bytes
     /// </summary>
-    public unsafe BmSDK.TArray<byte> PI_Bytes
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>> PI_Bytes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>>(Ptr + 800); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
     }
 
     /// <summary>
     /// ArrayProperty: PI_CompleteObjects
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> PI_CompleteObjects
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> PI_CompleteObjects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
     /// <summary>
     /// ArrayProperty: PI_ReferencedObjects
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> PI_ReferencedObjects
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> PI_ReferencedObjects
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 832); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 
     /// <summary>
     /// ArrayProperty: PI_SavedNames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> PI_SavedNames
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> PI_SavedNames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 848); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
     }
 
     /// <summary>
@@ -163,7 +199,41 @@ public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.TMap<object, object> /* TODO */ PI_ObjectMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TMap<object, object> /* TODO */>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TMap<object, object> /* TODO */>(Ptr + 864); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
+    }
+
+    /// <summary>
+    /// BoolProperty: SiblingLeader
+    /// </summary>
+    public unsafe bool SiblingLeader
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+    }
+
+    /// <summary>
+    /// ByteProperty: SiblingExists
+    /// </summary>
+    public unsafe byte SiblingExists_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 940); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 940); }
+    }
+    /// <summary>
+    /// ByteProperty: SiblingExists
+    /// </summary>
+    public unsafe byte SiblingExists_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 941); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 941); }
+    }
+    /// <summary>
+    /// ByteProperty: SiblingExists
+    /// </summary>
+    public unsafe byte SiblingExists_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 942); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 942); }
     }
 }

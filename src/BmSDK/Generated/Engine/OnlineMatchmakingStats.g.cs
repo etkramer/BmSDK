@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineMatchmakingStats<br/>
-/// (size = 44)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class OnlineMatchmakingStats : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,65 +34,169 @@ public partial class OnlineMatchmakingStats : BmSDK.GameObject, BmSDK.IGameObjec
     protected OnlineMatchmakingStats(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: StopTimer
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe void StopTimer(out BmSDK.Engine.OnlineMatchmakingStats.FMMStats_Timer Timer)
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineMatchmakingStats.StopTimer", true);
-        byte* paramsPtr = stackalloc byte[12];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        Timer = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineMatchmakingStats.FMMStats_Timer>(paramsPtr + 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
     }
 
     /// <summary>
-    /// Function: StartTimer
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe void StartTimer(out BmSDK.Engine.OnlineMatchmakingStats.FMMStats_Timer Timer)
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineMatchmakingStats.StartTimer", true);
-        byte* paramsPtr = stackalloc byte[12];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        Timer = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineMatchmakingStats.FMMStats_Timer>(paramsPtr + 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
     }
 
     /// <summary>
-    /// Struct: FMMStats_Timer
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 12)]
-    public partial record struct FMMStats_Timer
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexPrev
+    /// </summary>
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexNext
+    /// </summary>
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexPrev
+    /// </summary>
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexNext
+    /// </summary>
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Linker
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
+
+    /// <summary>
+    /// StructProperty: LinkerIndex
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
+
+    /// <summary>
+    /// IntProperty: ObjectInternalInteger
+    /// </summary>
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Outer
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// NameProperty: Name
+    /// </summary>
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// ClassProperty: Class
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ObjectArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+
+    /// <summary>
+    /// Struct: FQWord
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
     {
         /// <summary>
-        /// BoolProperty: bInProgress
+        /// IntProperty: A
         /// </summary>
-        public unsafe bool bInProgress
+        public unsafe int A
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// StructProperty: MSecs
+        /// IntProperty: B
         /// </summary>
-        public unsafe double MSecs
+        public unsafe int B
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<double>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FPointer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }
 }

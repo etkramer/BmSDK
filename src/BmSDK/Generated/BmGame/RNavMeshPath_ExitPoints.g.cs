@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_ExitPoints<br/>
-/// (size = 68)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
 {
@@ -34,35 +34,11 @@ public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstrain
     protected RNavMeshPath_ExitPoints(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Recycle
-    /// </summary>
-    public unsafe void Recycle()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ExitPoints.Recycle", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: BuildExitPointList
-    /// </summary>
-    public unsafe static void BuildExitPointList(BmSDK.Engine.NavigationHandle NavHandle, BmSDK.BmGame.RExitPoints NewExitPoint)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RNavMeshPath_ExitPoints.BuildExitPointList", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NavHandle, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewExitPoint, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: ExitPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RExitPoints ExitPoint
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExitPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RExitPoints>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

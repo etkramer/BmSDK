@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_MotionExtractionOffset<br/>
-/// (size = 68)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_MotionExtractionOffset : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,18 +36,27 @@ public partial class RAnimNotify_MotionExtractionOffset : BmSDK.Engine.AnimNotif
     /// <summary>
     /// StructProperty: Localspace_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Localspace_Translation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Localspace_Translation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// StructProperty: Animspace_Translation
     /// </summary>
-    public unsafe System.Numerics.Vector3 Animspace_Translation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Animspace_Translation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+
+    /// <summary>
+    /// StructProperty: Localspace_Rotation
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Localspace_Rotation
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CodecMovieFallback<br/>
-/// (size = 52)
-/// (flags = 134217882)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class CodecMovieFallback : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class CodecMovieFallback : BmSDK.Engine.CodecMovie, BmSDK.IGameOb
     /// </summary>
     public unsafe float CurrentTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

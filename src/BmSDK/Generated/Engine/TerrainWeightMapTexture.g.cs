@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainWeightMapTexture<br/>
-/// (size = 344)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGa
     /// <summary>
     /// ObjectProperty: ParentTerrain
     /// </summary>
-    public unsafe BmSDK.Engine.Terrain ParentTerrain
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentTerrain
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Terrain>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 496); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
     }
 
     /// <summary>
     /// ArrayProperty: WeightedMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> WeightedMaterials
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT WeightedMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 504); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
 
     /// <summary>

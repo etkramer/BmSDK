@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacterBioCue<br/>
-/// (size = 84)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCharacterBioCue : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {
@@ -34,21 +34,21 @@ public partial class RCharacterBioCue : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     protected RCharacterBioCue(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: Conversation
+    /// ObjectProperty: Speech
     /// </summary>
-    public unsafe BmSDK.BmGame.RScriptConversation Conversation
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Speech
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RScriptConversation>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
-    /// ObjectProperty: SingleLine
+    /// ClassProperty: WeaponType
     /// </summary>
-    public unsafe BmSDK.Engine.RDialogueLine SingleLine
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WeaponType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDialogueLine>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -56,34 +56,25 @@ public partial class RCharacterBioCue : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// </summary>
     public unsafe int ForceRandomLine
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ArrayProperty: Barksets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkSet> Barksets
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Barksets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RBarkSet>>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// ArrayProperty: AnimsetReferences
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> AnimsetReferences
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AnimsetReferences
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// ClassProperty: WeaponType
-    /// </summary>
-    public unsafe BmSDK.Class WeaponType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

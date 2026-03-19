@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_GlideWallStick<br/>
-/// (size = 356)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_GlideWallStick : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject
 {
@@ -36,18 +36,27 @@ public partial class RSpecialMoveConfig_GlideWallStick : BmSDK.BmGame.RSpecialMo
     /// <summary>
     /// ObjectProperty: GrappleFireMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig GrappleFireMove
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
     /// ObjectProperty: KickOffGrappleFireMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig KickOffGrappleFireMove
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT KickOffGrappleFireMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+    }
+
+    /// <summary>
+    /// BoolProperty: WallRunMove
+    /// </summary>
+    public unsafe bool WallRunMove
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 472); }
     }
 }

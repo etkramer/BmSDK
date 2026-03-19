@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LightFunction<br/>
-/// (size = 64)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class LightFunction : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class LightFunction : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: SourceMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface SourceMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SourceMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe System.Numerics.Vector3 Scale
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Scale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class LightFunction : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float DisabledBrightness
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

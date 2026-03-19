@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryApexDestructible<br/>
-/// (size = 120)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryApexDestructible : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -38,17 +38,26 @@ public partial class ActorFactoryApexDestructible : BmSDK.Engine.ActorFactory, B
     /// </summary>
     public unsafe bool bStartAwake
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// BoolProperty: OverrideRBCollisionSettings
+    /// </summary>
+    public unsafe bool OverrideRBCollisionSettings
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 144); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 144); }
     }
 
     /// <summary>
     /// ByteProperty: RBChannel
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel RBChannel
+    public unsafe byte RBChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERBCollisionChannel>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
@@ -56,34 +65,34 @@ public partial class ActorFactoryApexDestructible : BmSDK.Engine.ActorFactory, B
     /// </summary>
     public unsafe byte RBDominanceGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 97); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 97); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 149); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 149); }
     }
 
     /// <summary>
     /// StructProperty: DrawScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 DrawScale3D
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrawScale3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
     /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer CollideWithChannels
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.FRBCollisionChannelContainer>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
     /// ObjectProperty: DestructibleAsset
     /// </summary>
-    public unsafe BmSDK.Engine.ApexDestructibleAsset DestructibleAsset
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DestructibleAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleAsset>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 }

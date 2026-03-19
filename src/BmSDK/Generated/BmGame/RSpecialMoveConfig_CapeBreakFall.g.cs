@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_CapeBreakFall<br/>
-/// (size = 528)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMoveConfig_Land, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMov
     /// </summary>
     public unsafe BmSDK.FName AnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMov
     /// </summary>
     public unsafe BmSDK.FName LandOnRailingPerchAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMov
     /// </summary>
     public unsafe BmSDK.FName LandOnRailingStandAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>
@@ -65,17 +65,26 @@ public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMov
     /// </summary>
     public unsafe float TerminalVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
     }
 
     /// <summary>
     /// ObjectProperty: FloorParticles
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem FloorParticles
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FloorParticles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 636); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CapeOpeningSoundEvent
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeOpeningSoundEvent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 644); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
     }
 
     /// <summary>
@@ -83,16 +92,7 @@ public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMov
     /// </summary>
     public unsafe bool bManual
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 520) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 520); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 520); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: CapeOpeningSoundEvent
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent CapeOpeningSoundEvent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 652) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 652); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 652); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_Ladder<br/>
-/// (size = 680)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, 
     /// <summary>
     /// ObjectProperty: Ladder
     /// </summary>
-    public unsafe BmSDK.BmGame.RLadder Ladder
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Ladder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RLadder>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FaceFXAnimSet<br/>
-/// (size = 92)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,46 +36,46 @@ public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: DefaultFaceFXAsset
     /// </summary>
-    public unsafe BmSDK.Engine.FaceFXAsset DefaultFaceFXAsset
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultFaceFXAsset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.FaceFXAsset>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// StructProperty: InternalFaceFXAnimSet
     /// </summary>
-    public unsafe System.IntPtr InternalFaceFXAnimSet
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InternalFaceFXAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ArrayProperty: RawFaceFXAnimSetBytes
     /// </summary>
-    public unsafe BmSDK.TArray<byte> RawFaceFXAnimSetBytes
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT RawFaceFXAnimSetBytes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ArrayProperty: RawFaceFXMiniSessionBytes
     /// </summary>
-    public unsafe BmSDK.TArray<byte> RawFaceFXMiniSessionBytes
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT RawFaceFXMiniSessionBytes
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
-    /// ArrayProperty: ReferencedDialogueCues
+    /// ArrayProperty: ReferencedSoundCues
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.RDialogueEvent> ReferencedDialogueCues
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT ReferencedSoundCues
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RDialogueEvent>>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
@@ -83,7 +83,7 @@ public partial class FaceFXAnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int NumLoadErrors
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

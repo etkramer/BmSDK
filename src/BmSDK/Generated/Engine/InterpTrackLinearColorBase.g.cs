@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: InterpTrackLinearColorBase<br/>
-/// (size = 132)
-/// (flags = 134226067)
+/// Class: InterpTrackLinearColorBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
     internal InterpTrackLinearColorBase() { }
 
     /// <summary>
+    /// Constructs a new InterpTrackLinearColorBase
+    /// </summary>
+    public InterpTrackLinearColorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, InterpTrackLinearColorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected InterpTrackLinearColorBase(nint ptr) : base(ptr) { }
@@ -31,10 +36,10 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
     /// <summary>
     /// StructProperty: LinearColorTrack
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveLinearColor LinearColorTrack
+    public unsafe BmSDK.Engine.InterpTrack.SubTracks LinearColorTrack
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveLinearColor>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
@@ -42,7 +47,7 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
     /// </summary>
     public unsafe float CurveTension
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 }

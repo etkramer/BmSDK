@@ -5,8 +5,8 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioParameterReset<br/>
-/// (size = 208)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkAudioParameterReset : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioParameterReset : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// ObjectProperty: AudioParameter
     /// </summary>
-    public unsafe BmSDK.Engine.AkParameterName AudioParameter
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioParameter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkParameterName>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

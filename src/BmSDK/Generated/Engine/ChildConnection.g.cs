@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ChildConnection<br/>
-/// (size = 20056)
-/// (flags = 268435596)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// </summary>
     protected ChildConnection(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ObjectProperty: Parent
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Parent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 44792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44792); }
+    }
 }

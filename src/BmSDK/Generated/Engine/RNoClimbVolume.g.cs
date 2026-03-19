@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RNoClimbVolume<br/>
-/// (size = 472)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RNoClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -68,4 +68,12 @@ public partial class RNoClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<RNoClimbVolume>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// BoolProperty: bDontBlockShimmy
+    /// </summary>
+    public unsafe bool bDontBlockShimmy
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+    }
 }

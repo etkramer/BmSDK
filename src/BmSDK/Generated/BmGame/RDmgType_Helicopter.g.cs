@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Helicopter<br/>
-/// (size = 124)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDmgType_Helicopter : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RDmgType_Helicopter : BmSDK.BmGame.RDmgType_Ranged, BmSDK.I
     /// </summary>
     protected RDmgType_Helicopter(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// FloatProperty: StaggerBatmanRange
+    /// </summary>
+    public unsafe float StaggerBatmanRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+    }
 }

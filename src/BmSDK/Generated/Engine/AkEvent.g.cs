@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkEvent<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class AkEvent : BmSDK.Engine.AkAssetPrep, BmSDK.IGameObject
+public partial class AkEvent : BmSDK.Engine.AkAsset, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -33,4 +33,41 @@ public partial class AkEvent : BmSDK.Engine.AkAssetPrep, BmSDK.IGameObject
     /// </summary>
     protected AkEvent(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// FloatProperty: MaxAttenuation
+    /// </summary>
+    public unsafe float MaxAttenuation
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// IntProperty: MinZeroLatencyPrefetch
+    /// </summary>
+    public unsafe int MinZeroLatencyPrefetch
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+    }
+
+    /// <summary>
+    /// ByteProperty: DurationType
+    /// </summary>
+    public unsafe byte DurationType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+
+    /// <summary>
+    /// Enum: EAkEventDurationType
+    /// </summary>
+    public enum EAkEventDurationType
+    {
+        AK_EVENT_DURATION_UNKNOWN = 0,
+        AK_EVENT_DURATION_ONE_SHOT = 1,
+        AK_EVENT_DURATION_INFINITE = 2,
+        AK_EVENT_DURATION_MAX = 3,
+    }
 }

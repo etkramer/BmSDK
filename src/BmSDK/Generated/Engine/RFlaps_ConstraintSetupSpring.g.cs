@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetupSpring<br/>
-/// (size = 124)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// <summary>
     /// StructProperty: ConstrainedParticle1
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle1
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstrainedParticle1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
     /// StructProperty: ConstrainedParticle2
     /// </summary>
-    public unsafe BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference ConstrainedParticle2
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstrainedParticle2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RFlaps_ConstraintSetup.FRFlapsParticleReference>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float SpringStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float SpringLinearDamping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float SpringQuadraticDamping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float SpringMinLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float SpringMaxLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe float ParticleMassBias
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe bool bEnableMinDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe bool bEnableMaxDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -128,8 +128,8 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe bool bManualCalculateMinDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 
     /// <summary>
@@ -137,7 +137,7 @@ public partial class RFlaps_ConstraintSetupSpring : BmSDK.Engine.RFlaps_Constrai
     /// </summary>
     public unsafe bool bManualCalculateMaxDistance
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 120); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 168); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 168); }
     }
 }

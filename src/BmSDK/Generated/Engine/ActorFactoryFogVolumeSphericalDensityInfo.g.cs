@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryFogVolumeSphericalDensityInfo<br/>
-/// (size = 100)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryFogVolumeSphericalDensityInfo : BmSDK.Engine.ActorFactoryFogVolumeConstantDensityInfo, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class ActorFactoryFogVolumeSphericalDensityInfo : BmSDK.Engine.Ac
     /// </summary>
     protected ActorFactoryFogVolumeSphericalDensityInfo(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ObjectProperty: SelectedMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SelectedMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bNothingSelected
+    /// </summary>
+    public unsafe bool bNothingSelected
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 152); }
+    }
 }

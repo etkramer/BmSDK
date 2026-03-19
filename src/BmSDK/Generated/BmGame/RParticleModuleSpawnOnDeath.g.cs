@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RParticleModuleSpawnOnDeath<br/>
-/// (size = 60)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RParticleModuleSpawnOnDeath : BmSDK.BmGame.RParticleModuleOnDeathBase, BmSDK.IGameObject
 {
@@ -34,24 +34,11 @@ public partial class RParticleModuleSpawnOnDeath : BmSDK.BmGame.RParticleModuleO
     protected RParticleModuleSpawnOnDeath(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SpawnParticles
-    /// </summary>
-    public unsafe void SpawnParticles(BmSDK.Engine.Actor OwningActor, System.Numerics.Vector3 Position)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RParticleModuleSpawnOnDeath.SpawnParticles", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(OwningActor, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Position, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: ParticleEffect
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem ParticleEffect
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

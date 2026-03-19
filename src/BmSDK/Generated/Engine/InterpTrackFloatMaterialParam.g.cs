@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFloatMaterialParam<br/>
-/// (size = 212)
-/// (flags = 142614674)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackFloatMaterialParam : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -34,30 +34,12 @@ public partial class InterpTrackFloatMaterialParam : BmSDK.Engine.InterpTrackFlo
     protected InterpTrackFloatMaterialParam(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ArrayProperty: Materials
+    /// BoolProperty: AllMaterialsOnThisActor
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.EngineTypes.FMaterialReferenceList> Materials
+    public unsafe bool AllMaterialsOnThisActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.EngineTypes.FMaterialReferenceList>>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Material
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface Material
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 196); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
-    }
-
-    /// <summary>
-    /// NameProperty: ParamName
-    /// </summary>
-    public unsafe BmSDK.FName ParamName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -65,7 +47,43 @@ public partial class InterpTrackFloatMaterialParam : BmSDK.Engine.InterpTrackFlo
     /// </summary>
     public unsafe bool bNeedsMaterialRefsUpdate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+    }
+
+    /// <summary>
+    /// BoolProperty: ResetWhenMatineeExits
+    /// </summary>
+    public unsafe bool ResetWhenMatineeExits
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Materials
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks> Materials
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpTrack.SubTracks>>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Material
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Material
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// NameProperty: ParamName
+    /// </summary>
+    public unsafe BmSDK.FName ParamName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 }

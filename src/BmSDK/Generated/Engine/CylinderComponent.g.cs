@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CylinderComponent<br/>
-/// (size = 424)
-/// (flags = 2155884946)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -34,43 +34,12 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     protected CylinderComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetExtent
-    /// </summary>
-    public unsafe System.Numerics.Vector3 GetExtent()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.GetExtent", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: SetCylinderSize
-    /// </summary>
-    public unsafe void SetCylinderSize(float NewRadius, float NewHeight)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.SetCylinderSize", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHeight, paramsPtr + 4);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
     /// FloatProperty: CollisionHeight
     /// </summary>
     public unsafe float CollisionHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
     /// <summary>
@@ -78,8 +47,8 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// </summary>
     public unsafe float CollisionRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
     }
 
     /// <summary>
@@ -87,17 +56,17 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// </summary>
     public unsafe float AABBScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
     /// <summary>
     /// StructProperty: CylinderColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor CylinderColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CylinderColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
     /// <summary>
@@ -105,8 +74,8 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// </summary>
     public unsafe bool bDrawBoundingBox
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 556); }
     }
 
     /// <summary>
@@ -114,8 +83,8 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// </summary>
     public unsafe bool bDrawNonColliding
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 556); }
     }
 
     /// <summary>
@@ -123,7 +92,16 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// </summary>
     public unsafe bool bAlwaysRenderIfSelected
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 420); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 556); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bForceGreenWhenSelected
+    /// </summary>
+    public unsafe bool bForceGreenWhenSelected
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 556); }
     }
 }

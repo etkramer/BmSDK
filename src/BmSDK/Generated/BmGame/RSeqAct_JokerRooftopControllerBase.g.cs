@@ -1,0 +1,395 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RSeqAct_JokerRooftopControllerBase<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class RSeqAct_JokerRooftopControllerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RSeqAct_JokerRooftopControllerBase", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RSeqAct_JokerRooftopControllerBase() { }
+
+    /// <summary>
+    /// Constructs a new RSeqAct_JokerRooftopControllerBase
+    /// </summary>
+    public RSeqAct_JokerRooftopControllerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_JokerRooftopControllerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RSeqAct_JokerRooftopControllerBase(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ObjectProperty: LoadedConversation
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LoadedConversation
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 376); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CurrentJoker
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurrentJoker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
+    }
+
+    /// <summary>
+    /// StrProperty: LoadingPackageName
+    /// </summary>
+    public unsafe BmSDK.FString LoadingPackageName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinTimeBetweenDialogue
+    /// </summary>
+    public unsafe float MinTimeBetweenDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxTimeBetweenDialogue
+    /// </summary>
+    public unsafe float MaxTimeBetweenDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 412); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: MinTimeBetweenJokersNoDialogue
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>> MinTimeBetweenJokersNoDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: MinTimeBetweenJokersAfterDialogue
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>> MinTimeBetweenJokersAfterDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinTimeBetweenJokersAfterFailedChance
+    /// </summary>
+    public unsafe float MinTimeBetweenJokersAfterFailedChance
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 448); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ChanceOfJokerSpawning
+    /// </summary>
+    public unsafe float ChanceOfJokerSpawning
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
+
+    /// <summary>
+    /// FloatProperty: TimeOffscreenForDespawn
+    /// </summary>
+    public unsafe float TimeOffscreenForDespawn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxRangeForDialogue
+    /// </summary>
+    public unsafe float MaxRangeForDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxRangeBeforeDelete
+    /// </summary>
+    public unsafe float MaxRangeBeforeDelete
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxRangeForSpawn
+    /// </summary>
+    public unsafe float MaxRangeForSpawn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxRangeBeforeDeleteAfterSeen
+    /// </summary>
+    public unsafe float MaxRangeBeforeDeleteAfterSeen
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+    }
+
+    /// <summary>
+    /// FloatProperty: RangeForInFrontSpawn
+    /// </summary>
+    public unsafe float RangeForInFrontSpawn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: JokerPoints
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>> JokerPoints
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>>(Ptr + 480); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: DisabledPoints
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>> DisabledPoints
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>>(Ptr + 496); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bThisJokerHasBeenSeen
+    /// </summary>
+    public unsafe bool bThisJokerHasBeenSeen
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bForceNextAppearance
+    /// </summary>
+    public unsafe bool bForceNextAppearance
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bLoadingDialogue
+    /// </summary>
+    public unsafe bool bLoadingDialogue
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bMoreDialogueToPlay
+    /// </summary>
+    public unsafe bool bMoreDialogueToPlay
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUsingChapterDialogueFirst
+    /// </summary>
+    public unsafe bool bUsingChapterDialogueFirst
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCurrentDialogueIsChapter
+    /// </summary>
+    public unsafe bool bCurrentDialogueIsChapter
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCurrentDialogueIsCh7
+    /// </summary>
+    public unsafe bool bCurrentDialogueIsCh7
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAllJokersSpawned
+    /// </summary>
+    public unsafe bool bAllJokersSpawned
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 512); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 512); }
+    }
+
+    /// <summary>
+    /// FloatProperty: JokerSpawnTime
+    /// </summary>
+    public unsafe float JokerSpawnTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 516); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+    }
+
+    /// <summary>
+    /// FloatProperty: TimeTillNextJoker
+    /// </summary>
+    public unsafe float TimeTillNextJoker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 520); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+    }
+
+    /// <summary>
+    /// FloatProperty: TimeTillNextDialogue
+    /// </summary>
+    public unsafe float TimeTillNextDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 524); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+    }
+
+    /// <summary>
+    /// FloatProperty: JokerOnScreenTime
+    /// </summary>
+    public unsafe float JokerOnScreenTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 528); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+    }
+
+    /// <summary>
+    /// FloatProperty: TimeInView
+    /// </summary>
+    public unsafe float TimeInView
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 532); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+    }
+
+    /// <summary>
+    /// IntProperty: CurrentDialogueIndex
+    /// </summary>
+    public unsafe int CurrentDialogueIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+    }
+
+    /// <summary>
+    /// IntProperty: CurrentSideStoryIndex
+    /// </summary>
+    public unsafe int CurrentSideStoryIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+
+    /// <summary>
+    /// IntProperty: MWSideStoryIndex
+    /// </summary>
+    public unsafe int MWSideStoryIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+
+    /// <summary>
+    /// IntProperty: ConversationLineIndex
+    /// </summary>
+    public unsafe int ConversationLineIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SideTotals
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>> SideTotals
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SideNames
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>> SideNames
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SideNamesAdjusted
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>> SideNamesAdjusted
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SidePercForLine
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>> SidePercForLine
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: NumChapterConvsHeardThisSession
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>> NumChapterConvsHeardThisSession
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: NumSideStoryConvsHeardThisSession
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> NumSideStoryConvsHeardThisSession
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 632); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+    }
+}

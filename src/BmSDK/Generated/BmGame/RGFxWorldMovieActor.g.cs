@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxWorldMovieActor<br/>
-/// (size = 436)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -69,31 +69,56 @@ public partial class RGFxWorldMovieActor : BmSDK.Engine.Actor, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: PostBeginPlay
+    /// ComponentProperty: MovieComponent
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MovieComponent
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxWorldMovieActor.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
-    /// ComponentProperty: MovieComponent
+    /// ClassProperty: TheClass
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxWorldMovieComponent MovieComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxWorldMovieComponent>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ObjectProperty: MovieInfo
     /// </summary>
-    public unsafe BmSDK.GFxUI.SwfMovie MovieInfo
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MovieInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// ByteProperty: TimingMode
+    /// </summary>
+    public unsafe byte TimingMode
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bWorldRendered
+    /// </summary>
+    public unsafe bool bWorldRendered
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDepthTested
+    /// </summary>
+    public unsafe bool bDepthTested
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
     }
 }

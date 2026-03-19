@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionScalarParameter<br/>
-/// (size = 108)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionScalarParameter : BmSDK.Engine.MaterialExpressionParameter, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class MaterialExpressionScalarParameter : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float DefaultValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 }

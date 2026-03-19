@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpData<br/>
-/// (size = 204)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject
 {
@@ -34,46 +34,12 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     protected InterpData(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Struct: FAnimSetBakeAndPruneStatus
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 16)]
-    public partial record struct FAnimSetBakeAndPruneStatus
-    {
-        /// <summary>
-        /// StrProperty: AnimSetName
-        /// </summary>
-        public unsafe BmSDK.FString AnimSetName
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: bReferencedButUnused
-        /// </summary>
-        public unsafe bool bReferencedButUnused
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: bSkipBakeAndPrune
-        /// </summary>
-        public unsafe bool bSkipBakeAndPrune
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 2) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
-        }
-    }
-
-    /// <summary>
     /// FloatProperty: InterpLength
     /// </summary>
     public unsafe float InterpLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
     /// <summary>
@@ -81,53 +47,62 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// </summary>
     public unsafe float PathBuildTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
     /// ArrayProperty: InterpGroups
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroup> InterpGroups
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> InterpGroups
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroup>>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>
     /// ObjectProperty: CurveEdSetup
     /// </summary>
-    public unsafe BmSDK.Engine.InterpCurveEdSetup CurveEdSetup
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CurveEdSetup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpCurveEdSetup>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: InterpFilters
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpFilter> InterpFilters
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpFilter>>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 
     /// <summary>
     /// ObjectProperty: SelectedFilter
     /// </summary>
-    public unsafe BmSDK.Engine.InterpFilter SelectedFilter
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SelectedFilter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpFilter>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CachedDirectorGroup
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CachedDirectorGroup
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: InterpFilters
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> InterpFilters
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
     }
 
     /// <summary>
     /// ArrayProperty: DefaultFilters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpFilter> DefaultFilters
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> DefaultFilters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpFilter>>(Ptr + 168); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>
@@ -135,8 +110,8 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// </summary>
     public unsafe float EdSectionStart
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 312); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 
     /// <summary>
@@ -144,8 +119,8 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// </summary>
     public unsafe float EdSectionEnd
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
@@ -153,16 +128,16 @@ public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// </summary>
     public unsafe bool bShouldBakeAndPrune
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 188); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 320); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 320); }
     }
 
     /// <summary>
     /// ArrayProperty: BakeAndPruneStatus
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpData.FAnimSetBakeAndPruneStatus> BakeAndPruneStatus
+    public unsafe BmSDK.TArray<BmSDK.FString> BakeAndPruneStatus
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpData.FAnimSetBakeAndPruneStatus>>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 }

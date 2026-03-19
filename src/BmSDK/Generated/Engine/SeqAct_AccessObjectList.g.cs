@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_AccessObjectList<br/>
-/// (size = 212)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_AccessObjectList : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class SeqAct_AccessObjectList : BmSDK.Engine.SeqAct_SetSequenceVa
     /// <summary>
     /// ObjectProperty: OutputObject
     /// </summary>
-    public unsafe BmSDK.GameObject OutputObject
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OutputObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class SeqAct_AccessObjectList : BmSDK.Engine.SeqAct_SetSequenceVa
     /// </summary>
     public unsafe int ObjectIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 }

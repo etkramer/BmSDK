@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleColorScaleOverLife<br/>
-/// (size = 116)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleMod
     /// <summary>
     /// StructProperty: ColorScaleOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorScaleOverLife
+    public unsafe BmSDK.Engine.ParticleModuleColorScaleOverLife.AlphaScaleOverLife ColorScaleOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleColorScaleOverLife.AlphaScaleOverLife>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: AlphaScaleOverLife
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaScaleOverLife
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlphaScaleOverLife
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class ParticleModuleColorScaleOverLife : BmSDK.Engine.ParticleMod
     /// </summary>
     public unsafe bool bEmitterTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 112); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: InterpTrackAkEvent<br/>
-/// (size = 128)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {
@@ -36,43 +36,70 @@ public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: AkEvents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.AkAudio.InterpTrackAkEvent.FAkEventTrackKey> AkEvents
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> AkEvents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.AkAudio.InterpTrackAkEvent.FAkEventTrackKey>>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
-    /// BoolProperty: bFireEventsWhenForwards
+    /// BoolProperty: FireEventsWhenForwards
     /// </summary>
-    public unsafe bool bFireEventsWhenForwards
+    public unsafe bool FireEventsWhenForwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
-    /// BoolProperty: bFireEventsWhenBackwards
+    /// BoolProperty: FireEventsWhenBackwards
     /// </summary>
-    public unsafe bool bFireEventsWhenBackwards
+    public unsafe bool FireEventsWhenBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
     }
 
     /// <summary>
-    /// BoolProperty: bContinueSoundOnMatineeEnd
+    /// BoolProperty: StopSoundOnMatineeEnd
     /// </summary>
-    public unsafe bool bContinueSoundOnMatineeEnd
+    public unsafe bool StopSoundOnMatineeEnd
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AudioShouldStopOnSkip
+    /// </summary>
+    public unsafe bool AudioShouldStopOnSkip
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DoNotPlayIfGroupActorIsNone
+    /// </summary>
+    public unsafe bool DoNotPlayIfGroupActorIsNone
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 196); }
+    }
+
+    /// <summary>
+    /// NameProperty: OptionalBoneToFollow
+    /// </summary>
+    public unsafe BmSDK.FName OptionalBoneToFollow
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
     /// <summary>
     /// Struct: FAkEventTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 8)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FAkEventTrackKey
     {
         /// <summary>
@@ -87,10 +114,19 @@ public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameO
         /// <summary>
         /// ObjectProperty: Event
         /// </summary>
-        public unsafe BmSDK.Engine.AkEvent Event
+        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Event
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+
+        /// <summary>
+        /// FloatProperty: WwiseDuration
+        /// </summary>
+        public unsafe float WwiseDuration
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 12); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
         }
     }
 }

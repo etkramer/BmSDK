@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetMaxCombatPawns<br/>
-/// (size = 208)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetMaxCombatPawns : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,22 +34,11 @@ public partial class RSeqAct_SetMaxCombatPawns : BmSDK.Engine.SequenceAction, Bm
     protected RSeqAct_SetMaxCombatPawns(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Activated
-    /// </summary>
-    public unsafe void Activated()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetMaxCombatPawns.Activated", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// IntProperty: MaxCombatPawns
     /// </summary>
     public unsafe int MaxCombatPawns
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

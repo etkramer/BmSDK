@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimMetaData_SkelControl<br/>
-/// (size = 68)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
     /// <summary>
     /// ArrayProperty: SkelControlNameList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> SkelControlNameList
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SkelControlNameList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
     /// </summary>
     public unsafe bool bFullControlOverController
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK
     /// </summary>
     public unsafe BmSDK.FName SkelControlName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

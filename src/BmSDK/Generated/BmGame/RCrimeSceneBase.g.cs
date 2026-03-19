@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrimeSceneBase<br/>
-/// (size = 492)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -69,69 +69,138 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: Refresh
+    /// NameProperty: CrimeSceneScreenName
     /// </summary>
-    public unsafe void Refresh(BmSDK.BmGame.RPlayerController PC)
+    public unsafe BmSDK.FName CrimeSceneScreenName
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.Refresh", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
-    /// Function: UnTouch
+    /// NameProperty: OptionalCasefileScreenName
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe BmSDK.FName OptionalCasefileScreenName
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.UnTouch", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
     /// <summary>
-    /// Function: Touch
+    /// StrProperty: OverrideCompletionString
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe BmSDK.FString OverrideCompletionString
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrimeSceneBase.Touch", true);
-        byte* paramsPtr = stackalloc byte[40];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 
     /// <summary>
-    /// ObjectProperty: CrimeSceneAsset
+    /// ArrayProperty: DisallowFlags
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrimeSceneAsset CrimeSceneAsset
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> DisallowFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrimeSceneAsset>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
     /// <summary>
-    /// FloatProperty: InsideTimer
+    /// ArrayProperty: MandatoryFlags
     /// </summary>
-    public unsafe float InsideTimer
+    public unsafe BmSDK.TArray<BmSDK.FString> MandatoryFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
     }
 
     /// <summary>
-    /// FloatProperty: OutsideTimer
+    /// StrProperty: CrimeSceneInternalName
     /// </summary>
-    public unsafe float OutsideTimer
+    public unsafe BmSDK.FString CrimeSceneInternalName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 804); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DoNotEnterScanMode
+    /// </summary>
+    public unsafe bool DoNotEnterScanMode
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: HideCompletionPercentage
+    /// </summary>
+    public unsafe bool HideCompletionPercentage
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: mIsCaseFile
+    /// </summary>
+    public unsafe bool mIsCaseFile
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DeepScanCrimeScene
+    /// </summary>
+    public unsafe bool DeepScanCrimeScene
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DeepScanEnabled
+    /// </summary>
+    public unsafe bool DeepScanEnabled
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DeepScanCrimeSceneInitialised
+    /// </summary>
+    public unsafe bool DeepScanCrimeSceneInitialised
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: PlayerHasChangedLayerAtLeastOnce
+    /// </summary>
+    public unsafe bool PlayerHasChangedLayerAtLeastOnce
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: CrimeSceneVisible
+    /// </summary>
+    public unsafe bool CrimeSceneVisible
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: CrimeSceneComplete
+    /// </summary>
+    public unsafe bool CrimeSceneComplete
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
     }
 
     /// <summary>
@@ -139,16 +208,97 @@ public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 484); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 484); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
     }
 
     /// <summary>
-    /// ComponentProperty: CrimeSceneNoise
+    /// BoolProperty: bIsEngaged
     /// </summary>
-    public unsafe BmSDK.Engine.AudioComponent CrimeSceneNoise
+    public unsafe bool bIsEngaged
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AudioComponent>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bConstrainToArc
+    /// </summary>
+    public unsafe bool bConstrainToArc
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 820); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ActorsToHideWhenLocked
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> ActorsToHideWhenLocked
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 824); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
+    }
+
+    /// <summary>
+    /// IntProperty: DeepScanLevel
+    /// </summary>
+    public unsafe int DeepScanLevel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
+    }
+
+    /// <summary>
+    /// FloatProperty: InsideTimer
+    /// </summary>
+    public unsafe float InsideTimer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 844); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OutsideTimer
+    /// </summary>
+    public unsafe float OutsideTimer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 848); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
+    }
+
+    /// <summary>
+    /// StructProperty: ConstrainToArcCentre
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstrainToArcCentre
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 852); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ConstrainToArcRadius
+    /// </summary>
+    public unsafe float ConstrainToArcRadius
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 864); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 864); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ConstrainToArcAngleMiddle
+    /// </summary>
+    public unsafe float ConstrainToArcAngleMiddle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 868); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 868); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ConstrainToArcAngleRange
+    /// </summary>
+    public unsafe float ConstrainToArcAngleRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 872); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
     }
 }

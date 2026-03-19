@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionConstant3Vector<br/>
-/// (size = 120)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: Colour
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor Colour
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Colour
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float R
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float G
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class MaterialExpressionConstant3Vector : BmSDK.Engine.MaterialEx
     /// </summary>
     public unsafe float B
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: BrushShape<br/>
-/// (size = 464)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class BrushShape : BmSDK.Engine.Brush, BmSDK.IGameObject
 {
@@ -68,4 +68,97 @@ public partial class BrushShape : BmSDK.Engine.Brush, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<BrushShape>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ByteProperty: CsgOper
+    /// </summary>
+    public unsafe byte CsgOper
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// StructProperty: BrushColor
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BrushColor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
+
+    /// <summary>
+    /// IntProperty: PolyFlags
+    /// </summary>
+    public unsafe int PolyFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bColored
+    /// </summary>
+    public unsafe bool bColored
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSolidWhenSelected
+    /// </summary>
+    public unsafe bool bSolidWhenSelected
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlaceableFromClassBrowser
+    /// </summary>
+    public unsafe bool bPlaceableFromClassBrowser
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Brush
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT _Brush
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: BrushComponent
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BrushComponent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SavedSelections
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> SavedSelections
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// Enum: ECsgOper
+    /// </summary>
+    public enum ECsgOper
+    {
+        CSG_Active = 0,
+        CSG_Add = 1,
+        CSG_Subtract = 2,
+        CSG_Intersect = 3,
+        CSG_Deintersect = 4,
+        CSG_MAX = 5,
+    }
 }

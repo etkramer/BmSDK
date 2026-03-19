@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationPrimitiveCylinder<br/>
-/// (size = 177)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationPrimitiveCylinder : BmSDK.Engine.ParticleModuleLocationPrimitiveBase, BmSDK.IGameObject
 {
@@ -34,49 +34,47 @@ public partial class ParticleModuleLocationPrimitiveCylinder : BmSDK.Engine.Part
     protected ParticleModuleLocationPrimitiveCylinder(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: CylinderHeightAxis
-    /// </summary>
-    public enum CylinderHeightAxis
-    {
-        PMLPC_HEIGHTAXIS_X = 0,
-        PMLPC_HEIGHTAXIS_Y = 1,
-        PMLPC_HEIGHTAXIS_Z = 2,
-        PMLPC_HEIGHTAXIS_MAX = 3,
-    }
-
-    /// <summary>
     /// BoolProperty: RadialVelocity
     /// </summary>
     public unsafe bool RadialVelocity
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 116); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAdjustForWorldSpace
+    /// </summary>
+    public unsafe bool bAdjustForWorldSpace
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 200); }
     }
 
     /// <summary>
     /// StructProperty: StartRadius
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartRadius
+    public unsafe BmSDK.Engine.ParticleModuleLocationPrimitiveCylinder.StartHeight StartRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationPrimitiveCylinder.StartHeight>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// StructProperty: StartHeight
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat StartHeight
+    public unsafe BmSDK.Engine.ParticleModuleLocationPrimitiveBase.VelocityScale StartHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationPrimitiveBase.VelocityScale>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>
     /// ByteProperty: HeightAxis
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleLocationPrimitiveCylinder.CylinderHeightAxis HeightAxis
+    public unsafe byte HeightAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationPrimitiveCylinder.CylinderHeightAxis>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 }

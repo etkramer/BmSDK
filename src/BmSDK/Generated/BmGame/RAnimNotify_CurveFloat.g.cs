@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_CurveFloat<br/>
-/// (size = 57)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// </summary>
     public unsafe BmSDK.FName CurveName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,17 +47,17 @@ public partial class RAnimNotify_CurveFloat : BmSDK.Engine.AnimNotify, BmSDK.IGa
     /// </summary>
     public unsafe float NewValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ByteProperty: ControlType
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_CurveFloat.EFloatControlType ControlType
+    public unsafe byte ControlType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_CurveFloat.EFloatControlType>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>

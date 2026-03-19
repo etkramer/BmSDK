@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_PlayCameraAnim<br/>
-/// (size = 236)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,23 +34,21 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     protected SeqAct_PlayCameraAnim(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
+    /// ObjectProperty: CameraAnim
     /// </summary>
-    public unsafe static int GetObjClassVersion()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraAnim
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_PlayCameraAnim.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
-    /// ObjectProperty: CameraAnim
+    /// ObjectProperty: UserDefinedSpaceActor
     /// </summary>
-    public unsafe BmSDK.Engine.CameraAnim CameraAnim
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UserDefinedSpaceActor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraAnim>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -58,8 +56,8 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe bool bLoop
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -67,8 +65,8 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe bool bRandomStartTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
@@ -76,8 +74,8 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe float BlendInTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 372); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
     }
 
     /// <summary>
@@ -85,8 +83,8 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe float BlendOutTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 376); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
@@ -94,8 +92,8 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe float Rate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
@@ -103,25 +101,16 @@ public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.
     /// </summary>
     public unsafe float IntensityScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// ByteProperty: PlaySpace
     /// </summary>
-    public unsafe BmSDK.Engine.Camera.ECameraAnimPlaySpace PlaySpace
+    public unsafe byte PlaySpace
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Camera.ECameraAnimPlaySpace>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: UserDefinedSpaceActor
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor UserDefinedSpaceActor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 388); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 }

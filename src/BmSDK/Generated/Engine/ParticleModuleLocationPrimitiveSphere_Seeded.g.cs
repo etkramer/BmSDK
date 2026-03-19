@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationPrimitiveSphere_Seeded<br/>
-/// (size = 168)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationPrimitiveSphere_Seeded : BmSDK.Engine.ParticleModuleLocationPrimitiveSphere, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleLocationPrimitiveSphere_Seeded : BmSDK.Engine
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModuleLocationPrimitiveSphere.StartRadius RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationPrimitiveSphere.StartRadius>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 }

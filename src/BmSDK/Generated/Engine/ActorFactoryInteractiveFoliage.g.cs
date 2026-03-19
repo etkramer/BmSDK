@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryInteractiveFoliage<br/>
-/// (size = 108)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryInteractiveFoliage : BmSDK.Engine.ActorFactoryStaticMesh, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class ActorFactoryInteractiveFoliage : BmSDK.Engine.ActorFactoryS
     /// </summary>
     protected ActorFactoryInteractiveFoliage(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ObjectProperty: StaticMesh
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// StructProperty: DrawScale3D
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrawScale3D
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
 }

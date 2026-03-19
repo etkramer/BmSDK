@@ -4,114 +4,199 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Interface: OnlineStatsInterface<br/>
-/// (size = 80)
-/// (flags = 16403)
+/// Class: OnlineStatsInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface OnlineStatsInterface : BmSDK.Interface
+public partial class OnlineStatsInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: RegisterStatGuid
-    /// </summary>
-    public unsafe bool RegisterStatGuid(BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, out BmSDK.FString ClientStatGuid);
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlineStatsInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal OnlineStatsInterface() { }
 
     /// <summary>
-    /// Function: GetClientStatGuid
+    /// Constructs a new OnlineStatsInterface
     /// </summary>
-    public unsafe BmSDK.FString GetClientStatGuid();
+    public OnlineStatsInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineStatsInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
-    /// Function: ClearRegisterHostStatGuidCompleteDelegateDelegate
+    /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    public unsafe void ClearRegisterHostStatGuidCompleteDelegateDelegate(System.IntPtr RegisterHostStatGuidCompleteDelegate);
+    protected OnlineStatsInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: AddRegisterHostStatGuidCompleteDelegate
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe void AddRegisterHostStatGuidCompleteDelegate(System.IntPtr RegisterHostStatGuidCompleteDelegate);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
-    /// Function: OnRegisterHostStatGuidComplete
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe void OnRegisterHostStatGuidComplete(bool bWasSuccessful);
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
 
     /// <summary>
-    /// Function: RegisterHostStatGuid
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    public unsafe bool RegisterHostStatGuid(out BmSDK.FString HostStatGuid);
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
 
     /// <summary>
-    /// Function: GetHostStatGuid
+    /// IntProperty: HashIndexPrev
     /// </summary>
-    public unsafe BmSDK.FString GetHostStatGuid();
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
-    /// Function: WriteOnlinePlayerScores
+    /// IntProperty: HashIndexNext
     /// </summary>
-    public unsafe bool WriteOnlinePlayerScores(BmSDK.FName SessionName, int LeaderboardId, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlinePlayerScore> PlayerScores);
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
-    /// Function: OnFlushOnlineStatsComplete
+    /// IntProperty: HashOuterIndexPrev
     /// </summary>
-    public unsafe void OnFlushOnlineStatsComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
 
     /// <summary>
-    /// Function: FlushOnlineStats
+    /// IntProperty: HashOuterIndexNext
     /// </summary>
-    public unsafe bool FlushOnlineStats(BmSDK.FName SessionName);
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
 
     /// <summary>
-    /// Function: WriteOnlineStats
+    /// ObjectProperty: Linker
     /// </summary>
-    public unsafe bool WriteOnlineStats(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId Player, BmSDK.Engine.OnlineStatsWrite StatsWrite);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
 
     /// <summary>
-    /// Function: FreeStats
+    /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe void FreeStats(BmSDK.Engine.OnlineStatsRead StatsRead);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
 
     /// <summary>
-    /// Function: ClearReadOnlineStatsCompleteDelegate
+    /// IntProperty: ObjectInternalInteger
     /// </summary>
-    public unsafe void ClearReadOnlineStatsCompleteDelegate(System.IntPtr ReadOnlineStatsCompleteDelegate);
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
-    /// Function: AddReadOnlineStatsCompleteDelegate
+    /// ObjectProperty: Outer
     /// </summary>
-    public unsafe void AddReadOnlineStatsCompleteDelegate(System.IntPtr ReadOnlineStatsCompleteDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
-    /// Function: OnReadOnlineStatsComplete
+    /// NameProperty: Name
     /// </summary>
-    public unsafe void OnReadOnlineStatsComplete(bool bWasSuccessful);
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
 
     /// <summary>
-    /// Function: ReadOnlineStatsByRankAroundPlayer
+    /// ClassProperty: Class
     /// </summary>
-    public unsafe bool ReadOnlineStatsByRankAroundPlayer(byte LocalUserNum, BmSDK.Engine.OnlineStatsRead StatsRead, int NumRows = default);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
 
     /// <summary>
-    /// Function: ReadOnlineStatsByRank
+    /// ObjectProperty: ObjectArchetype
     /// </summary>
-    public unsafe bool ReadOnlineStatsByRank(BmSDK.Engine.OnlineStatsRead StatsRead, int StartIndex = default, int NumToRead = default);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
 
     /// <summary>
-    /// Function: ReadOnlineStatsForFriends
+    /// Struct: FQWord
     /// </summary>
-    public unsafe bool ReadOnlineStatsForFriends(byte LocalUserNum, BmSDK.Engine.OnlineStatsRead StatsRead);
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
 
     /// <summary>
-    /// Function: ReadOnlineStats
+    /// Struct: FPointer
     /// </summary>
-    public unsafe bool ReadOnlineStats(out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FUniqueNetId> Players, BmSDK.Engine.OnlineStatsRead StatsRead);
-
-    /// <summary>
-    /// Function: ResetOnlineStatsForAllUsers
-    /// </summary>
-    public unsafe bool ResetOnlineStatsForAllUsers(int BoardID);
-
-    /// <summary>
-    /// Function: ResetOnlineStatsForUser
-    /// </summary>
-    public unsafe bool ResetOnlineStatsForUser(byte LocalUserNum, int BoardID);
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
 }

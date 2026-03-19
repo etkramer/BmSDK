@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EdCoordSystem<br/>
-/// (size = 124)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: M
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix M
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT M
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class EdCoordSystem : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString Desc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

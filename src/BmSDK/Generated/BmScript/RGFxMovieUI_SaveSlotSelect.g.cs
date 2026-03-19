@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGFxMovieUI_SaveSlotSelect<br/>
-/// (size = 704)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {
@@ -34,192 +34,138 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     protected RGFxMovieUI_SaveSlotSelect(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: OnTick
+    /// ArrayProperty: SaveSlotInfos
     /// </summary>
-    public unsafe void OnTick()
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> SaveSlotInfos
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.OnTick", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1072); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
-    /// Function: OnFocus
+    /// ObjectProperty: OnlineSub
     /// </summary>
-    public unsafe void OnFocus(int Id)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OnlineSub
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.OnFocus", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1088); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1088); }
     }
 
     /// <summary>
-    /// Function: UpdatePrompts
+    /// ObjectProperty: ActivePopup
     /// </summary>
-    public unsafe void UpdatePrompts()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ActivePopup
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.UpdatePrompts", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1096); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
     }
 
     /// <summary>
-    /// Function: PopupRequester_Callback
+    /// ArrayProperty: SaveFileInfo
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe BmSDK.TArray<BmSDK.FString> SaveFileInfo
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.PopupRequester_Callback", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ThePopUpMsg, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ButtonId, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1104); }
     }
 
     /// <summary>
-    /// Function: DeleteSaveGame
+    /// BoolProperty: bLoadNext
     /// </summary>
-    public unsafe void DeleteSaveGame(BmSDK.FString Ref, int Id)
+    public unsafe bool bLoadNext
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.DeleteSaveGame", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Ref, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: SetData
+    /// BoolProperty: bEnumerating
     /// </summary>
-    public unsafe void SetData(BmSDK.FString Ref, BmSDK.FString Location, BmSDK.FString TimePlayed, BmSDK.FString Difficulty, BmSDK.FString Percentage, int PlayerIcon, bool bNewGame, bool bCorrupt)
+    public unsafe bool bEnumerating
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.SetData", true);
-        byte* paramsPtr = stackalloc byte[72];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Ref, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Location, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(TimePlayed, paramsPtr + 24);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Difficulty, paramsPtr + 36);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Percentage, paramsPtr + 48);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerIcon, paramsPtr + 60);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewGame, paramsPtr + 64);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bCorrupt, paramsPtr + 68);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: GetSaveGameInfo
+    /// BoolProperty: bOverwrite
     /// </summary>
-    public unsafe void GetSaveGameInfo(BmSDK.FString Ref, int Id)
+    public unsafe bool bOverwrite
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.GetSaveGameInfo", true);
-        byte* paramsPtr = stackalloc byte[64];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Ref, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: SaveLoadedContinueOn
+    /// BoolProperty: bShownFutureOnce
     /// </summary>
-    public unsafe void SaveLoadedContinueOn()
+    public unsafe bool bShownFutureOnce
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.SaveLoadedContinueOn", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: OnClicked
+    /// BoolProperty: bDelAll
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe bool bDelAll
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.OnClicked", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: CreateNewEmptyGame
+    /// BoolProperty: bDifficultyMenuActive
     /// </summary>
-    public unsafe void CreateNewEmptyGame()
+    public unsafe bool bDifficultyMenuActive
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.CreateNewEmptyGame", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: IsCorrupt
+    /// BoolProperty: bShowBackups
     /// </summary>
-    public unsafe bool IsCorrupt()
+    public unsafe bool bShowBackups
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.IsCorrupt", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: IsEmpty
+    /// BoolProperty: bSilent
     /// </summary>
-    public unsafe bool IsEmpty()
+    public unsafe bool bSilent
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.IsEmpty", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1120); }
     }
 
     /// <summary>
-    /// Function: OnClosed
+    /// IntProperty: LoadCountIndex
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe int LoadCountIndex
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.OnClosed", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1124); }
     }
 
     /// <summary>
-    /// Function: Init
+    /// IntProperty: MaxSlot
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe int MaxSlot
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_SaveSlotSelect.Init", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// ArrayProperty: SaveInfo
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> SaveInfo
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1128); }
     }
 
     /// <summary>
     /// ByteProperty: PopupType
     /// </summary>
-    public unsafe BmSDK.BmScript.RGFxMovieUI_SaveSlotSelect.SavePopupType PopupType
+    public unsafe byte PopupType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGFxMovieUI_SaveSlotSelect.SavePopupType>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
     }
 
     /// <summary>
@@ -227,8 +173,8 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// </summary>
     public unsafe int DelId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1136); }
     }
 
     /// <summary>
@@ -236,8 +182,17 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// </summary>
     public unsafe int SaveId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1140); }
+    }
+
+    /// <summary>
+    /// IntProperty: FocusId
+    /// </summary>
+    public unsafe int FocusId
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1144); }
     }
 
     /// <summary>
@@ -245,26 +200,274 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     /// </summary>
     public unsafe BmSDK.FString DelRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
     }
 
     /// <summary>
-    /// BoolProperty: bGoingBackNoDevice
+    /// StrProperty: PlatformStr
     /// </summary>
-    public unsafe bool bGoingBackNoDevice
+    public unsafe BmSDK.FString PlatformStr
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 696); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1164); }
     }
 
     /// <summary>
-    /// ObjectProperty: ActivePopup
+    /// StrProperty: SaveSlotMenu
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMoviePopupRequester ActivePopup
+    public unsafe BmSDK.FString SaveSlotMenu
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMoviePopupRequester>(Ptr + 700); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1180); }
+    }
+
+    /// <summary>
+    /// IntProperty: LoadingSlot
+    /// </summary>
+    public unsafe int LoadingSlot
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1196); }
+    }
+
+    /// <summary>
+    /// IntProperty: LoadingSlotxId
+    /// </summary>
+    public unsafe int LoadingSlotxId
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1200); }
+    }
+
+    /// <summary>
+    /// IntProperty: Counter_LB
+    /// </summary>
+    public unsafe int Counter_LB
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1204); }
+    }
+
+    /// <summary>
+    /// StrProperty: FullyLocalisedDialogue
+    /// </summary>
+    public unsafe BmSDK.FString FullyLocalisedDialogue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1208); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __SortByFilename__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __SortByFilename__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __SortByTimeStamp__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __SortByTimeStamp__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __SortByFuture__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __SortByFuture__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 1256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1256); }
+    }
+
+    /// <summary>
+    /// Struct: FSaveSlotInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FSaveSlotInfo
+    {
+        /// <summary>
+        /// ArrayProperty: GameInfos
+        /// </summary>
+        public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT GameInfos
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: SlotID
+        /// </summary>
+        public unsafe int SlotID
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Current
+        /// </summary>
+        public unsafe int Current
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Latest
+        /// </summary>
+        public unsafe int Latest
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bContainsACorruptEntry
+        /// </summary>
+        public unsafe bool bContainsACorruptEntry
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 28); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bContainsAFutureEntry
+        /// </summary>
+        public unsafe bool bContainsAFutureEntry
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 28); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FSaveGameFileInfo
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FSaveGameFileInfo
+    {
+        /// <summary>
+        /// StrProperty: Filename
+        /// </summary>
+        public unsafe BmSDK.FString Filename
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: DLName
+        /// </summary>
+        public unsafe BmSDK.FString DLName
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 16); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: FileSize
+        /// </summary>
+        public unsafe int FileSize
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: SlotID
+        /// </summary>
+        public unsafe int SlotID
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 36); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: xId
+        /// </summary>
+        public unsafe int xId
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 40); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }; }
+        }
+
+        /// <summary>
+        /// StructProperty: TimeStamp
+        /// </summary>
+        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TimeStamp
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 44); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }; }
+        }
+
+        /// <summary>
+        /// StrProperty: Difficulty
+        /// </summary>
+        public unsafe BmSDK.FString Difficulty
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 52); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Percentage
+        /// </summary>
+        public unsafe int Percentage
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: LocationID
+        /// </summary>
+        public unsafe int LocationID
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Day
+        /// </summary>
+        public unsafe int Day
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 76); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Month
+        /// </summary>
+        public unsafe int Month
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: Year
+        /// </summary>
+        public unsafe int Year
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }; }
+        }
+
+        /// <summary>
+        /// BoolProperty: bIsFuture
+        /// </summary>
+        public unsafe bool bIsFuture
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }; }
+        }
     }
 
     /// <summary>
@@ -274,10 +477,11 @@ public partial class RGFxMovieUI_SaveSlotSelect : BmSDK.BmGame.RGFxMovieUI, BmSD
     {
         SavePopupType_FreeSpace = 0,
         SavePopupType_Delete = 1,
-        SavePopupType_Corrupt = 2,
-        SavePopupType_Corrupt2Pre = 3,
-        SavePopupType_Corrupt2 = 4,
-        SavePopupType_NotOwner = 5,
-        SavePopupType_MAX = 6,
+        SavePopupType_Corrupt2 = 2,
+        SavePopupType_CorruptRestore = 3,
+        SavePopupType_CorruptDel = 4,
+        SavePopupType_SaveRetry = 5,
+        SavePopupType_BackupSelected = 6,
+        SavePopupType_MAX = 7,
     }
 }

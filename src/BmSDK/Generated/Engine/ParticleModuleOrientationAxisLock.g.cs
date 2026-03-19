@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleOrientationAxisLock<br/>
-/// (size = 57)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleModuleOrientationBase, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class ParticleModuleOrientationAxisLock : BmSDK.Engine.ParticleMo
     /// <summary>
     /// ByteProperty: LockAxisFlags
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock LockAxisFlags
+    public unsafe byte LockAxisFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>

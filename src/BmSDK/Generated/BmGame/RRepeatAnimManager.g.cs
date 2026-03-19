@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRepeatAnimManager<br/>
-/// (size = 64)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,49 +34,12 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     protected RRepeatAnimManager(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetAnim
-    /// </summary>
-    public unsafe BmSDK.FName GetAnim(float CurrentTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.GetAnim", true);
-        byte* paramsPtr = stackalloc byte[44];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(CurrentTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// Function: AddAnim
-    /// </summary>
-    public unsafe void AddAnim(BmSDK.FName NewAnim)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.AddAnim", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewAnim, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetLockoutTimes
-    /// </summary>
-    public unsafe void SetLockoutTimes(float NewHard, float NewSoft)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRepeatAnimManager.SetLockoutTimes", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHard, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSoft, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ArrayProperty: AnimHistory
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RRepeatAnimManager.FRAM_AnimTime> AnimHistory
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT AnimHistory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RRepeatAnimManager.FRAM_AnimTime>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -84,8 +47,8 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float HardLockoutTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -93,14 +56,14 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float SoftLockoutTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
     /// Struct: FRAM_AnimTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 12)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FRAM_AnimTime
     {
         /// <summary>

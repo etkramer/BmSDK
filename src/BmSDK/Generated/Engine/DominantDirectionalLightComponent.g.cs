@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DominantDirectionalLightComponent<br/>
-/// (size = 620)
-/// (flags = 144707730)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DominantDirectionalLightComponent : BmSDK.Engine.DirectionalLightComponent, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class DominantDirectionalLightComponent : BmSDK.Engine.Directiona
     /// <summary>
     /// StructProperty: DominantLightShadowInfo
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FDominantShadowInfo DominantLightShadowInfo
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DominantLightShadowInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FDominantShadowInfo>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 656); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
     }
 
     /// <summary>
     /// StructProperty: DominantLightShadowMap
     /// </summary>
-    public unsafe BmSDK.GameObject.FArray_Mirror DominantLightShadowMap
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DominantLightShadowMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FArray_Mirror>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 832); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 }

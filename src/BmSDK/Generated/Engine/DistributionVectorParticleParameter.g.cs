@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorParticleParameter<br/>
-/// (size = 144)
-/// (flags = 142618770)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionVectorParticleParameter : BmSDK.Engine.DistributionVectorParameterBase, BmSDK.IGameObject
 {
@@ -33,4 +33,73 @@ public partial class DistributionVectorParticleParameter : BmSDK.Engine.Distribu
     /// </summary>
     protected DistributionVectorParticleParameter(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: ParameterName
+    /// </summary>
+    public unsafe BmSDK.FName ParameterName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+
+    /// <summary>
+    /// StructProperty: MinInput
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MinInput
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
+
+    /// <summary>
+    /// StructProperty: MaxInput
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MaxInput
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
+
+    /// <summary>
+    /// StructProperty: MinOutput
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MinOutput
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// StructProperty: MaxOutput
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MaxOutput
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+    }
+
+    /// <summary>
+    /// ByteProperty: ParamModes
+    /// </summary>
+    public unsafe byte ParamModes_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+    }
+    /// <summary>
+    /// ByteProperty: ParamModes
+    /// </summary>
+    public unsafe byte ParamModes_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 189); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 189); }
+    }
+    /// <summary>
+    /// ByteProperty: ParamModes
+    /// </summary>
+    public unsafe byte ParamModes_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 190); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 190); }
+    }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionAddNormalMap<br/>
-/// (size = 176)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe BmSDK.Engine.Texture Texture
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float AddU
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float AddV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float MultiplyU
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float MultiplyV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float TileU
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
     /// <summary>
@@ -92,25 +92,25 @@ public partial class MaterialExpressionAddNormalMap : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe float TileV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Scale
+    public unsafe BmSDK.Engine.MaterialExpressionAddNormalMap.Base Scale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionAddNormalMap.Base>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
     /// StructProperty: Base
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Base
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Base
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

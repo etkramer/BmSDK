@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRotateActor<br/>
-/// (size = 552)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RRotateActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {
@@ -71,18 +71,18 @@ public partial class RRotateActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: BaseRotation
     /// </summary>
-    public unsafe BmSDK.Rotator BaseRotation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BaseRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 960); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 960); }
     }
 
     /// <summary>
     /// StructProperty: AccumulatedRotation
     /// </summary>
-    public unsafe BmSDK.Rotator AccumulatedRotation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AccumulatedRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 972); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 972); }
     }
 }

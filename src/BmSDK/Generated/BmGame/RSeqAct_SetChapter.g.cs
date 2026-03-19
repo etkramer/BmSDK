@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetChapter<br/>
-/// (size = 212)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// <summary>
     /// ByteProperty: SideStory
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SetChapter.ESideStory SideStory
+    public unsafe byte SideStory
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetChapter.ESideStory>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ByteProperty: SubChapter
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter SubChapter
+    public unsafe byte SubChapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SetChapter.ESubChapter>(Ptr + 205); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 205); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 353); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 353); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
     /// </summary>
     public unsafe int Chapter
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
@@ -93,40 +93,5 @@ public partial class RSeqAct_SetChapter : BmSDK.Engine.SequenceAction, BmSDK.IGa
         ESubChapter_y = 25,
         ESubChapter_z = 26,
         ESubChapter_MAX = 27,
-    }
-
-    /// <summary>
-    /// Enum: ESideStory
-    /// </summary>
-    public enum ESideStory
-    {
-        ESideStory_None = 0,
-        ESideStory_Azrael = 1,
-        ESideStory_Bane = 2,
-        ESideStory_C = 3,
-        ESideStory_DeadShot = 4,
-        ESideStory_E = 5,
-        ESideStory_F = 6,
-        ESideStory_G = 7,
-        ESideStory_Hush = 8,
-        ESideStory_I = 9,
-        ESideStory_AutoJez = 10,
-        ESideStory_K = 11,
-        ESideStory_L = 12,
-        ESideStory_MadHatter = 13,
-        ESideStory_Nora = 14,
-        ESideStory_O = 15,
-        ESideStory_Paths = 16,
-        ESideStory_Q = 17,
-        ESideStory_Races = 18,
-        ESideStory_S = 19,
-        ESideStory_ThugBullies = 20,
-        ESideStory_U = 21,
-        ESideStory_V = 22,
-        ESideStory_W = 23,
-        ESideStory_X = 24,
-        ESideStory_Y = 25,
-        ESideStory_Zsasz = 26,
-        ESideStory_MAX = 27,
     }
 }

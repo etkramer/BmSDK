@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_SwingToVantagePoint<br/>
-/// (size = 380)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {
@@ -34,39 +34,120 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     protected RSpecialMoveConfig_SwingToVantagePoint(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ESwingToVantagePointExtraInfo
-    /// </summary>
-    public enum ESwingToVantagePointExtraInfo
-    {
-        STVPEI_GrappleTarget = 0,
-        STVPEI_MAX = 1,
-    }
-
-    /// <summary>
     /// NameProperty: SwingLaunchAnimName
     /// </summary>
     public unsafe BmSDK.FName SwingLaunchAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 400); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingLaunchLeftAnimName
+    /// </summary>
+    public unsafe BmSDK.FName SwingLaunchLeftAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingLaunchRightAnimName
+    /// </summary>
+    public unsafe BmSDK.FName SwingLaunchRightAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingFromStandingAnim
+    /// </summary>
+    public unsafe BmSDK.FName SwingFromStandingAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 424); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingFromStandingOverRailAnim
+    /// </summary>
+    public unsafe BmSDK.FName SwingFromStandingOverRailAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingChuteAnimName
+    /// </summary>
+    public unsafe BmSDK.FName SwingChuteAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingChuteLeftAnimName
+    /// </summary>
+    public unsafe BmSDK.FName SwingChuteLeftAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 448); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+
+    /// <summary>
+    /// NameProperty: SwingChuteRightAnimName
+    /// </summary>
+    public unsafe BmSDK.FName SwingChuteRightAnimName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ChuteAnimSet
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ChuteAnimSet
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: FireControllerShake
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FireControllerShake
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: LaunchAnimSet
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LaunchAnimSet
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 480); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
     }
 
     /// <summary>
     /// ArrayProperty: SwingLandAnimName
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> SwingLandAnimName
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> SwingLandAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 488); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
     }
 
     /// <summary>
     /// ArrayProperty: BackwardSwingLandAnimName
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> BackwardSwingLandAnimName
+    public unsafe BmSDK.TArray<BmSDK.FString> BackwardSwingLandAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 316); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 504); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
     }
 
     /// <summary>
@@ -74,8 +155,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe BmSDK.FName SwingIdleAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 328); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 520); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
     }
 
     /// <summary>
@@ -83,8 +164,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe BmSDK.FName SwingIdleFrame
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 336); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 528); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
     }
 
     /// <summary>
@@ -92,8 +173,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe BmSDK.FName EndPose
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 536); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
     }
 
     /// <summary>
@@ -101,8 +182,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe float DefaultSwingDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
     }
 
     /// <summary>
@@ -110,8 +191,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe float DefaultSwingRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
     /// <summary>
@@ -119,8 +200,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe float DefaultSwingTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
     /// <summary>
@@ -128,8 +209,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe float VelocityBlendOut
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
     }
 
     /// <summary>
@@ -137,8 +218,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe float DurationScalePower
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
     /// <summary>
@@ -146,8 +227,8 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe bool bAllowMirroring
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 564); }
     }
 
     /// <summary>
@@ -155,16 +236,25 @@ public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpec
     /// </summary>
     public unsafe bool CanLandBackwards
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 372); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 564); }
     }
 
     /// <summary>
-    /// ObjectProperty: FireControllerShake
+    /// BoolProperty: bPlayLaunchAnimRelative
     /// </summary>
-    public unsafe BmSDK.Engine.ForceFeedbackWaveform FireControllerShake
+    public unsafe bool bPlayLaunchAnimRelative
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 376); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 564); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bGrappleToPointAboveTarget
+    /// </summary>
+    public unsafe bool bGrappleToPointAboveTarget
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 564); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 564); }
     }
 }

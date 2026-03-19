@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROnlineStatsWrite<br/>
-/// (size = 120)
-/// (flags = 50)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IGameObject
 {
@@ -34,31 +34,56 @@ public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IG
     protected ROnlineStatsWrite(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: CopyAndWriteAllStats
+    /// ArrayProperty: StatMappings
     /// </summary>
-    public unsafe void CopyAndWriteAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.OnlineSubsystem.FUniqueNetId UniqId, BmSDK.Engine.PlayerReplicationInfo PRI, BmSDK.Engine.OnlineStatsInterface StatsInterface)
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>> StatMappings
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWrite.CopyAndWriteAllStats", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(UniqId, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(StatsInterface, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
-    /// Function: CopyAllStats
+    /// ArrayProperty: Properties
     /// </summary>
-    public unsafe bool CopyAllStats(BmSDK.BmGame.RPlayerController PC, BmSDK.Engine.PlayerReplicationInfo PRI)
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>> Properties
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROnlineStatsWrite.CopyAllStats", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PRI, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
+    /// <summary>
+    /// ArrayProperty: ViewIds
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<System.IntPtr>> ViewIds
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<System.IntPtr>>>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ArbitratedViewIds
+    /// </summary>
+    public unsafe BmSDK.TArray<System.IntPtr> ArbitratedViewIds
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+    }
+
+    /// <summary>
+    /// IntProperty: RatingId
+    /// </summary>
+    public unsafe int RatingId
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __OnStatsWriteComplete__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __OnStatsWriteComplete__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
+    }
 }

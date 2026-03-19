@@ -4,234 +4,199 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Interface: OnlineGameInterface<br/>
-/// (size = 236)
-/// (flags = 16403)
+/// Class: OnlineGameInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface OnlineGameInterface : BmSDK.Interface
+public partial class OnlineGameInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: OnJoinMigratedOnlineGameComplete
-    /// </summary>
-    public unsafe void OnJoinMigratedOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlineGameInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal OnlineGameInterface() { }
 
     /// <summary>
-    /// Function: OnMigrateOnlineGameComplete
+    /// Constructs a new OnlineGameInterface
     /// </summary>
-    public unsafe void OnMigrateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    public OnlineGameInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineGameInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
-    /// Function: OnRecalculateSkillRatingComplete
+    /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    public unsafe void OnRecalculateSkillRatingComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    protected OnlineGameInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: AcceptGameInvite
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe bool AcceptGameInvite(byte LocalUserNum, BmSDK.FName SessionName);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
-    /// Function: ClearGameInviteAcceptedDelegate
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe void ClearGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate);
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
 
     /// <summary>
-    /// Function: AddGameInviteAcceptedDelegate
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    public unsafe void AddGameInviteAcceptedDelegate(byte LocalUserNum, System.IntPtr GameInviteAcceptedDelegate);
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
 
     /// <summary>
-    /// Function: OnGameInviteAccepted
+    /// IntProperty: HashIndexPrev
     /// </summary>
-    public unsafe void OnGameInviteAccepted(out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult InviteResult);
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
-    /// Function: ClearArbitrationRegistrationCompleteDelegate
+    /// IntProperty: HashIndexNext
     /// </summary>
-    public unsafe void ClearArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate);
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
-    /// Function: AddArbitrationRegistrationCompleteDelegate
+    /// IntProperty: HashOuterIndexPrev
     /// </summary>
-    public unsafe void AddArbitrationRegistrationCompleteDelegate(System.IntPtr ArbitrationRegistrationCompleteDelegate);
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
 
     /// <summary>
-    /// Function: OnArbitrationRegistrationComplete
+    /// IntProperty: HashOuterIndexNext
     /// </summary>
-    public unsafe void OnArbitrationRegistrationComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
 
     /// <summary>
-    /// Function: RegisterForArbitration
+    /// ObjectProperty: Linker
     /// </summary>
-    public unsafe bool RegisterForArbitration(BmSDK.FName SessionName);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
 
     /// <summary>
-    /// Function: ClearEndOnlineGameCompleteDelegate
+    /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe void ClearEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
 
     /// <summary>
-    /// Function: AddEndOnlineGameCompleteDelegate
+    /// IntProperty: ObjectInternalInteger
     /// </summary>
-    public unsafe void AddEndOnlineGameCompleteDelegate(System.IntPtr EndOnlineGameCompleteDelegate);
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
-    /// Function: OnEndOnlineGameComplete
+    /// ObjectProperty: Outer
     /// </summary>
-    public unsafe void OnEndOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
-    /// Function: EndOnlineGame
+    /// NameProperty: Name
     /// </summary>
-    public unsafe bool EndOnlineGame(BmSDK.FName SessionName);
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
 
     /// <summary>
-    /// Function: ClearStartOnlineGameCompleteDelegate
+    /// ClassProperty: Class
     /// </summary>
-    public unsafe void ClearStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
 
     /// <summary>
-    /// Function: AddStartOnlineGameCompleteDelegate
+    /// ObjectProperty: ObjectArchetype
     /// </summary>
-    public unsafe void AddStartOnlineGameCompleteDelegate(System.IntPtr StartOnlineGameCompleteDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
 
     /// <summary>
-    /// Function: OnStartOnlineGameComplete
+    /// Struct: FQWord
     /// </summary>
-    public unsafe void OnStartOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
 
     /// <summary>
-    /// Function: StartOnlineGame
+    /// Struct: FPointer
     /// </summary>
-    public unsafe bool StartOnlineGame(BmSDK.FName SessionName);
-
-    /// <summary>
-    /// Function: OnUnregisterPlayerComplete
-    /// </summary>
-    public unsafe void OnUnregisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: UnregisterPlayer
-    /// </summary>
-    public unsafe bool UnregisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID);
-
-    /// <summary>
-    /// Function: OnRegisterPlayerComplete
-    /// </summary>
-    public unsafe void OnRegisterPlayerComplete(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: RegisterPlayer
-    /// </summary>
-    public unsafe bool RegisterPlayer(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID, bool bWasInvited);
-
-    /// <summary>
-    /// Function: GetResolvedConnectString
-    /// </summary>
-    public unsafe bool GetResolvedConnectString(BmSDK.FName SessionName, out BmSDK.FString ConnectInfo);
-
-    /// <summary>
-    /// Function: ClearJoinOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void ClearJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddJoinOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void AddJoinOnlineGameCompleteDelegate(System.IntPtr JoinOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnJoinOnlineGameComplete
-    /// </summary>
-    public unsafe void OnJoinOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: JoinOnlineGame
-    /// </summary>
-    public unsafe bool JoinOnlineGame(byte PlayerNum, BmSDK.FName SessionName, out BmSDK.Engine.OnlineGameSearch.FOnlineGameSearchResult DesiredGame);
-
-    /// <summary>
-    /// Function: FreeSearchResults
-    /// </summary>
-    public unsafe bool FreeSearchResults(BmSDK.Engine.OnlineGameSearch Search = default);
-
-    /// <summary>
-    /// Function: GetGameSearch
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSearch GetGameSearch();
-
-    /// <summary>
-    /// Function: OnQosStatusChanged
-    /// </summary>
-    public unsafe void OnQosStatusChanged(int NumComplete, int NumTotal);
-
-    /// <summary>
-    /// Function: OnCancelFindOnlineGamesComplete
-    /// </summary>
-    public unsafe void OnCancelFindOnlineGamesComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: AddFindOnlineGamesCompleteDelegate
-    /// </summary>
-    public unsafe void AddFindOnlineGamesCompleteDelegate(System.IntPtr FindOnlineGamesCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnFindOnlineGamesComplete
-    /// </summary>
-    public unsafe void OnFindOnlineGamesComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: FindOnlineGames
-    /// </summary>
-    public unsafe bool FindOnlineGames(byte SearchingPlayerNum, BmSDK.Engine.OnlineGameSearch SearchSettings);
-
-    /// <summary>
-    /// Function: ClearDestroyOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void ClearDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddDestroyOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void AddDestroyOnlineGameCompleteDelegate(System.IntPtr DestroyOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnDestroyOnlineGameComplete
-    /// </summary>
-    public unsafe void OnDestroyOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: DestroyOnlineGame
-    /// </summary>
-    public unsafe bool DestroyOnlineGame(BmSDK.FName SessionName);
-
-    /// <summary>
-    /// Function: GetGameSettings
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineGameSettings GetGameSettings(BmSDK.FName SessionName);
-
-    /// <summary>
-    /// Function: OnUpdateOnlineGameComplete
-    /// </summary>
-    public unsafe void OnUpdateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ClearCreateOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void ClearCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddCreateOnlineGameCompleteDelegate
-    /// </summary>
-    public unsafe void AddCreateOnlineGameCompleteDelegate(System.IntPtr CreateOnlineGameCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnCreateOnlineGameComplete
-    /// </summary>
-    public unsafe void OnCreateOnlineGameComplete(BmSDK.FName SessionName, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: CreateOnlineGame
-    /// </summary>
-    public unsafe bool CreateOnlineGame(byte HostingPlayerNum, BmSDK.FName SessionName, BmSDK.Engine.OnlineGameSettings NewGameSettings);
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
 }

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: NavMeshGoal_Filter<br/>
-/// (size = 56)
-/// (flags = 134217875)
+/// Class: NavMeshGoal_Filter<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     internal NavMeshGoal_Filter() { }
 
     /// <summary>
+    /// Constructs a new NavMeshGoal_Filter
+    /// </summary>
+    public NavMeshGoal_Filter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NavMeshGoal_Filter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected NavMeshGoal_Filter(nint ptr) : base(ptr) { }
@@ -33,8 +38,8 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bShowDebug
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
     }
 
     /// <summary>
@@ -42,8 +47,8 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int NumNodesThrownOut
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
@@ -51,7 +56,7 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int NumNodesProcessed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshComponentFactory<br/>
-/// (size = 68)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class StaticMeshComponentFactory : BmSDK.Engine.MeshComponentFactory, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class StaticMeshComponentFactory : BmSDK.Engine.MeshComponentFact
     /// <summary>
     /// ObjectProperty: StaticMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh StaticMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

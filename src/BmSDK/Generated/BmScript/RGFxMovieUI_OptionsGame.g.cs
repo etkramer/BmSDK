@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGFxMovieUI_OptionsGame<br/>
-/// (size = 696)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxMovieUI_OptionsGame : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {
@@ -34,154 +34,327 @@ public partial class RGFxMovieUI_OptionsGame : BmSDK.BmGame.RGFxMovieUI, BmSDK.I
     protected RGFxMovieUI_OptionsGame(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: OnLostFocus
+    /// StrProperty: GFXFact
     /// </summary>
-    public unsafe void OnLostFocus(int Id)
+    public unsafe BmSDK.FString GFXFact
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.OnLostFocus", true);
-        byte* paramsPtr = stackalloc byte[5];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
-    /// Function: OnFocus
+    /// StructProperty: MenuIndex
     /// </summary>
-    public unsafe void OnFocus(int Id)
+    public unsafe BmSDK.BmGame.RGFxMovieUI.MenuPath MenuIndex
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.OnFocus", true);
-        byte* paramsPtr = stackalloc byte[6];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieUI.MenuPath>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 
     /// <summary>
-    /// Function: PopupRequester_Callback
+    /// StrProperty: MenuPath
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe BmSDK.FString MenuPath
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.PopupRequester_Callback", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ThePopUpMsg, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ButtonId, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 
     /// <summary>
-    /// Function: OnClicked
+    /// StrProperty: EventNameOnOut
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe BmSDK.FString EventNameOnOut
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.OnClicked", true);
-        byte* paramsPtr = stackalloc byte[5];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Id, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
     /// <summary>
-    /// Function: GetActiveXboxSaveDevice
+    /// BoolProperty: bIsOptionsDefaults
     /// </summary>
-    public unsafe BmSDK.FString GetActiveXboxSaveDevice()
+    public unsafe bool bIsOptionsDefaults
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.GetActiveXboxSaveDevice", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// Function: SetupScreenPrompts
+    /// BoolProperty: bIdByIndexNotName
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe bool bIdByIndexNotName
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.SetupScreenPrompts", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// Function: RemapMenuItem
+    /// BoolProperty: bInputBlocked
     /// </summary>
-    public unsafe BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem RemapMenuItem(int Index)
+    public unsafe bool bInputBlocked
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.RemapMenuItem", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem>(paramsPtr + 4);
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// Function: CloseScreen
+    /// BoolProperty: bNoMenuSave
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe bool bNoMenuSave
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.CloseScreen", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// Function: Init
+    /// BoolProperty: bInTransition
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe bool bInTransition
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_OptionsGame.Init", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// ArrayProperty: Items_PC
+    /// BoolProperty: bClosing
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem> Items_PC
+    public unsafe bool bClosing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem>>(Ptr + 660); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 660); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// ArrayProperty: Items_PS3
+    /// BoolProperty: bShouldDoApplyCheck
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem> Items_PS3
+    public unsafe bool bShouldDoApplyCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem>>(Ptr + 672); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// ArrayProperty: Items_Xbox
+    /// BoolProperty: bDoingApply
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem> Items_Xbox
+    public unsafe bool bDoingApply
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmScript.RGFxMovieUI_OptionsGame.GOMenuItem>>(Ptr + 684); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
 
     /// <summary>
-    /// Enum: GOMenuItem
+    /// BoolProperty: bShouldCancelChanges
     /// </summary>
-    public enum GOMenuItem
+    public unsafe bool bShouldCancelChanges
     {
-        GOMI_None = 0,
-        GOMI_InvertLook = 1,
-        GOMI_InvertRotation = 2,
-        GOMI_InvertGlide = 3,
-        GOMI_InvertBatarangGlide = 4,
-        GOMI_CameraAssist = 5,
-        GOMI_Hints = 6,
-        GOMI_Vibration = 7,
-        GOMI_SixAxis = 8,
-        GOMI_Brightness = 9,
-        GOMI_StorageDevice = 10,
-        GOMI_MAX = 11,
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
     }
+
+    /// <summary>
+    /// BoolProperty: bSkipped1stFocusSFX
+    /// </summary>
+    public unsafe bool bSkipped1stFocusSFX
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bShowApplyPrompt
+    /// </summary>
+    public unsafe bool bShowApplyPrompt
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 764); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 764); }
+    }
+
+    /// <summary>
+    /// ByteProperty: LastSetPrompt
+    /// </summary>
+    public unsafe byte LastSetPrompt
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: TextFieldFuncs
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> TextFieldFuncs
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: TextFieldFuncPaths
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> TextFieldFuncPaths
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
+    }
+
+    /// <summary>
+    /// StrProperty: IconSetPackage
+    /// </summary>
+    public unsafe BmSDK.FString IconSetPackage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 804); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
+    }
+
+    /// <summary>
+    /// StrProperty: NameBaseRef
+    /// </summary>
+    public unsafe BmSDK.FString NameBaseRef
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 820); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
+    }
+
+    /// <summary>
+    /// IntProperty: SavedButtonId
+    /// </summary>
+    public unsafe int SavedButtonId
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 836); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 836); }
+    }
+
+    /// <summary>
+    /// IntProperty: rowCounter
+    /// </summary>
+    public unsafe int rowCounter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 840); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 840); }
+    }
+
+    /// <summary>
+    /// IntProperty: rowsUsed
+    /// </summary>
+    public unsafe int rowsUsed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 844); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 844); }
+    }
+
+    /// <summary>
+    /// IntProperty: ButtonsX
+    /// </summary>
+    public unsafe int ButtonsX
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 848); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 848); }
+    }
+
+    /// <summary>
+    /// IntProperty: ButtonsY
+    /// </summary>
+    public unsafe int ButtonsY
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 852); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ButtonIds
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> ButtonIds
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 856); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 856); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ButtonStates
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> ButtonStates
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 872); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 872); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ButtonIconNames
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>> ButtonIconNames
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>(Ptr + 888); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 888); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ButtonIconPkgNames
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> ButtonIconPkgNames
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 904); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 904); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: ButtonStringRefs
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> ButtonStringRefs
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 920); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
+    }
+
+    /// <summary>
+    /// StrProperty: MovieName
+    /// </summary>
+    public unsafe BmSDK.FString MovieName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 936); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 936); }
+    }
+
+    /// <summary>
+    /// StrProperty: OnBackCmd
+    /// </summary>
+    public unsafe BmSDK.FString OnBackCmd
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 952); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ApplyChangesOnExitPopup
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ApplyChangesOnExitPopup
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 968); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 968); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ControllerImageRef
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ControllerImageRef
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
+    }
+
+    /// <summary>
+    /// MapProperty: VoicePromptMap
+    /// </summary>
+    public unsafe BmSDK.TMap<object, object> /* TODO */ VoicePromptMap
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TMap<object, object> /* TODO */>(Ptr + 984); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 984); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SwfRefs
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> SwfRefs
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 1056); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
+    }
+
 }

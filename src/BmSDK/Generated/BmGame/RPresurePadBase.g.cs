@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RPresurePadBase<br/>
-/// (size = 428)
-/// (flags = 142606483)
+/// Class: RPresurePadBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RPresurePadBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class RPresurePadBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RPresurePadBase() { }
+
+    /// <summary>
+    /// Constructs a new RPresurePadBase
+    /// </summary>
+    public RPresurePadBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPresurePadBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -63,4 +68,120 @@ public partial class RPresurePadBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<RPresurePadBase>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// StructProperty: VfTable_IRSecretInterface
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IRSecretInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// ByteProperty: CurrentPadType
+    /// </summary>
+    public unsafe byte CurrentPadType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+
+    /// <summary>
+    /// ByteProperty: Zone
+    /// </summary>
+    public unsafe byte Zone
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 677); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 677); }
+    }
+
+    /// <summary>
+    /// ByteProperty: ChapterPresentIn
+    /// </summary>
+    public unsafe byte ChapterPresentIn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 678); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 678); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bIsSecret
+    /// </summary>
+    public unsafe bool bIsSecret
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUseSecretLocation
+    /// </summary>
+    public unsafe bool bUseSecretLocation
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 680); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// IntProperty: SecretIndex
+    /// </summary>
+    public unsafe int SecretIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// IntProperty: SecretX
+    /// </summary>
+    public unsafe int SecretX
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+    }
+
+    /// <summary>
+    /// IntProperty: SecretY
+    /// </summary>
+    public unsafe int SecretY
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// IntProperty: SecretZ
+    /// </summary>
+    public unsafe int SecretZ
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+    }
+
+    /// <summary>
+    /// IntProperty: FloatUpAdjust
+    /// </summary>
+    public unsafe int FloatUpAdjust
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// StrProperty: SecretType
+    /// </summary>
+    public unsafe BmSDK.FString SecretType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+
+    /// <summary>
+    /// StrProperty: MapRevealPreventionFlag
+    /// </summary>
+    public unsafe BmSDK.FString MapRevealPreventionFlag
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
 }

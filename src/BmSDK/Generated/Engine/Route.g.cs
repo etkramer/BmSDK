@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Route<br/>
-/// (size = 456)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelectionInterface, BmSDK.IGameObject
+public partial class Route : BmSDK.Engine.Info, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -69,106 +69,30 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: MoveOntoRoutePath
-    /// </summary>
-    public unsafe int MoveOntoRoutePath(BmSDK.Engine.Pawn P, BmSDK.Engine.Route.ERouteDirection RouteDirection = default, float DistFudgeFactor = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route.MoveOntoRoutePath", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(P, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RouteDirection, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DistFudgeFactor, paramsPtr + 8);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 12);
-    }
-
-    /// <summary>
-    /// Function: ResolveRouteIndex
-    /// </summary>
-    public unsafe int ResolveRouteIndex(int Idx, BmSDK.Engine.Route.ERouteDirection RouteDirection, out byte out_bComplete, out byte out_bReverse)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Route.ResolveRouteIndex", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Idx, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(RouteDirection, paramsPtr + 4);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        out_bComplete = BmSDK.Framework.MarshalUtil.ToManaged<byte>(paramsPtr + 5);
-        out_bReverse = BmSDK.Framework.MarshalUtil.ToManaged<byte>(paramsPtr + 6);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 8);
-    }
-
-    /// <summary>
-    /// Enum: ERouteType
-    /// </summary>
-    public enum ERouteType
-    {
-        ERT_Linear = 0,
-        ERT_Loop = 1,
-        ERT_Circle = 2,
-        ERT_MAX = 3,
-    }
-
-    /// <summary>
-    /// Enum: ERouteDirection
-    /// </summary>
-    public enum ERouteDirection
-    {
-        ERD_Forward = 0,
-        ERD_Reverse = 1,
-        ERD_MAX = 2,
-    }
-
-    /// <summary>
-    /// Enum: ERouteFillAction
-    /// </summary>
-    public enum ERouteFillAction
-    {
-        RFA_Overwrite = 0,
-        RFA_Add = 1,
-        RFA_Remove = 2,
-        RFA_Clear = 3,
-        RFA_MAX = 4,
-    }
-
-    /// <summary>
     /// StructProperty: VfTable_IEditorLinkSelectionInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_IEditorLinkSelectionInterface
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IEditorLinkSelectionInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: RouteType
     /// </summary>
-    public unsafe BmSDK.Engine.Route.ERouteType RouteType
+    public unsafe byte RouteType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Route.ERouteType>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ArrayProperty: RouteList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Actor.FActorReference> RouteList
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> RouteList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor.FActorReference>>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
@@ -176,8 +100,8 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// </summary>
     public unsafe float FudgeFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
     }
 
     /// <summary>
@@ -185,7 +109,7 @@ public partial class Route : BmSDK.Engine.Info, BmSDK.Engine.EditorLinkSelection
     /// </summary>
     public unsafe int RouteIndexOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 }

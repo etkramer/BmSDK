@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDummyTarget_Spawnable<br/>
-/// (size = 428)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDummyTarget_Spawnable : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {
@@ -68,4 +68,12 @@ public partial class RDummyTarget_Spawnable : BmSDK.BmGame.RDummyTarget, BmSDK.I
         where TComponent : class, Framework.IScriptComponent<RDummyTarget_Spawnable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// IntProperty: MatineeControlReferenceCount
+    /// </summary>
+    public unsafe int MatineeControlReferenceCount
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
 }

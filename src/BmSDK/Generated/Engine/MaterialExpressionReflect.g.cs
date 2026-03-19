@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionReflect<br/>
-/// (size = 148)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionReflect : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class MaterialExpressionReflect : BmSDK.Engine.MaterialExpression
     /// <summary>
     /// StructProperty: Ray
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Ray
+    public unsafe BmSDK.Engine.MaterialExpressionReflect.Normal Ray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionReflect.Normal>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Normal
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_DynamicPostProcess<br/>
-/// (size = 220)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_DynamicPostProcess : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -38,16 +38,16 @@ public partial class RSeqAct_DynamicPostProcess : BmSDK.Engine.SequenceAction, B
     /// </summary>
     public unsafe BmSDK.FString PostProcessSlot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ObjectProperty: PostProcessMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface PostProcessMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PostProcessMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

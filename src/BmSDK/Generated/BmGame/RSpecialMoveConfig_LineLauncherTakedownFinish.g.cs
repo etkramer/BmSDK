@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_LineLauncherTakedownFinish<br/>
-/// (size = 364)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_LineLauncherTakedownFinish : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class RSpecialMoveConfig_LineLauncherTakedownFinish : BmSDK.BmGam
     /// <summary>
     /// ArrayProperty: VictimAnimName
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> VictimAnimName
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> VictimAnimName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
     /// ObjectProperty: VictimAnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet VictimAnimSet
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT VictimAnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 472); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
     }
 }

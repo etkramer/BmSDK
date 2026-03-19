@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2LengthUpdater<br/>
-/// (size = 88)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// <summary>
     /// ByteProperty: LengthChangeType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2LengthUpdater.ELengthChangeType LengthChangeType
+    public unsafe byte LengthChangeType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2LengthUpdater.ELengthChangeType>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: LengthChangeEndType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Component.ERope2LengthChangeEndType LengthChangeEndType
+    public unsafe byte LengthChangeEndType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRope2Component.ERope2LengthChangeEndType>(Ptr + 53); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 53); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 97); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 97); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float FinalLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float FinalLengthChangeSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float InitialLengthChangeSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float DelayBeforeStartLengthChange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float LengthChangeDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float LengthChangeSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float InitialLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
@@ -119,8 +119,8 @@ public partial class RRope2LengthUpdater : BmSDK.BmGame.RRope2Updater, BmSDK.IGa
     /// </summary>
     public unsafe float RemainingChangeTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionAntialiasedTextureMask<br/>
-/// (size = 141)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.MaterialExpressionTextureSampleParameter2D, BmSDK.IGameObject
 {
@@ -34,32 +34,20 @@ public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.Mat
     protected MaterialExpressionAntialiasedTextureMask(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ETextureColorChannel
-    /// </summary>
-    public enum ETextureColorChannel
-    {
-        TCC_Red = 0,
-        TCC_Green = 1,
-        TCC_Blue = 2,
-        TCC_Alpha = 3,
-        TCC_MAX = 4,
-    }
-
-    /// <summary>
     /// FloatProperty: Threshold
     /// </summary>
     public unsafe float Threshold
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// ByteProperty: Channel
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionAntialiasedTextureMask.ETextureColorChannel Channel
+    public unsafe byte Channel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionAntialiasedTextureMask.ETextureColorChannel>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 }

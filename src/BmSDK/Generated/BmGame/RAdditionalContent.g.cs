@@ -4,11 +4,11 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RAdditionalContent<br/>
-/// (size = 48)
-/// (flags = 134217875)
+/// Class: RAdditionalContent<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RAdditionalContent : BmSDK.GameObject, BmSDK.IGameObject
+public partial class RAdditionalContent : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -24,6 +24,11 @@ public partial class RAdditionalContent : BmSDK.GameObject, BmSDK.IGameObject
     internal RAdditionalContent() { }
 
     /// <summary>
+    /// Constructs a new RAdditionalContent
+    /// </summary>
+    public RAdditionalContent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAdditionalContent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAdditionalContent(nint ptr) : base(ptr) { }
@@ -33,7 +38,7 @@ public partial class RAdditionalContent : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int TestID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_ForceField<br/>
-/// (size = 68)
-/// (flags = 142618770)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// <summary>
     /// ComponentProperty: ForceFieldComponent
     /// </summary>
-    public unsafe BmSDK.Engine.NxForceFieldComponent ForceFieldComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceFieldComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NxForceFieldComponent>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// </summary>
     public unsafe bool bAttach
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// </summary>
     public unsafe BmSDK.FName SocketName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class AnimNotify_ForceField : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// </summary>
     public unsafe BmSDK.FName BoneName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

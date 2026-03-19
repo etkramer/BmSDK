@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSmokeBombBm<br/>
-/// (size = 1340)
-/// (flags = 8388658)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
 {
@@ -68,4 +68,57 @@ public partial class RSmokeBombBm : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
         where TComponent : class, Framework.IScriptComponent<RSmokeBombBm>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ObjectProperty: SmokeBombGrappleMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombGrappleMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2592); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SmokeBombStandingMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombStandingMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2600); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SmokeBombCoverMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeBombCoverMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2608); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SmokeScreenArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmokeScreenArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2616); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCanToggleDetectiveMode
+    /// </summary>
+    public unsafe bool bCanToggleDetectiveMode
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bHasTurnedOnDetectiveMode
+    /// </summary>
+    public unsafe bool bHasTurnedOnDetectiveMode
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2624); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2624); }
+    }
 }

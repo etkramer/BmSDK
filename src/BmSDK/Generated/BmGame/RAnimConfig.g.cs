@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimConfig<br/>
-/// (size = 44)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,318 +34,168 @@ public partial class RAnimConfig : BmSDK.GameObject, BmSDK.IGameObject
     protected RAnimConfig(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Struct: FCustomAdditiveAnimConfig
+    /// StructProperty: VfTableObject
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 36)]
-    public partial record struct FCustomAdditiveAnimConfig
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
+
+    /// <summary>
+    /// IntProperty: ObjectFlags
+    /// </summary>
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
+
+    /// <summary>
+    /// IntProperty: EditorObjectFlags
+    /// </summary>
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexPrev
+    /// </summary>
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexNext
+    /// </summary>
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexPrev
+    /// </summary>
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexNext
+    /// </summary>
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Linker
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
+
+    /// <summary>
+    /// StructProperty: LinkerIndex
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
+
+    /// <summary>
+    /// IntProperty: ObjectInternalInteger
+    /// </summary>
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Outer
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// NameProperty: Name
+    /// </summary>
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// ClassProperty: Class
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ObjectArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+
+    /// <summary>
+    /// Struct: FQWord
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
     {
         /// <summary>
-        /// NameProperty: AddAnim
+        /// IntProperty: A
         /// </summary>
-        public unsafe BmSDK.FName AddAnim
+        public unsafe int A
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
-        /// ObjectProperty: CustomAddAnim
+        /// IntProperty: B
         /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence CustomAddAnim
+        public unsafe int B
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// NameProperty: SubtractAnim
-        /// </summary>
-        public unsafe BmSDK.FName SubtractAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: CustomSubtractAnim
-        /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence CustomSubtractAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: SubtractMode
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode SubtractMode
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
-        }
-
-        /// <summary>
-        /// StructProperty: Weight
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.FWeight Weight
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.FWeight>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
-        }
-
-        /// <summary>
-        /// StructProperty: HideWeight
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.FWeight HideWeight
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.FWeight>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }
 
     /// <summary>
-    /// Struct: FAdditiveAnimConfig
+    /// Struct: FPointer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 24)]
-    public partial record struct FAdditiveAnimConfig
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
     {
         /// <summary>
-        /// NameProperty: AddAnim
+        /// IntProperty: Dummy
         /// </summary>
-        public unsafe BmSDK.FName AddAnim
+        public unsafe int Dummy
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// NameProperty: SubtractAnim
-        /// </summary>
-        public unsafe BmSDK.FName SubtractAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: SubtractMode
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode SubtractMode
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
-        }
-
-        /// <summary>
-        /// StructProperty: Weight
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.FWeight Weight
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.FWeight>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
-        }
-    }
-
-    /// <summary>
-    /// Struct: FCustomAnimConfig
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 40)]
-    public partial record struct FCustomAnimConfig
-    {
-        /// <summary>
-        /// NameProperty: FullBodyAnim
-        /// </summary>
-        public unsafe BmSDK.FName FullBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: CustomFullBodyAnim
-        /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence CustomFullBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// NameProperty: UpperBodyAnim
-        /// </summary>
-        public unsafe BmSDK.FName UpperBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: CustomUpperBodyAnim
-        /// </summary>
-        public unsafe BmSDK.Engine.AnimSequence CustomUpperBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSequence>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: AimingConfig
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAimingConfig AimingConfig
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: PresetAimingConfig
-        /// </summary>
-        public unsafe BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig PresetAimingConfig
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: Directions
-        /// </summary>
-        public unsafe BmSDK.BmGame.RDirectionalAnimConfig Directions
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDirectionalAnimConfig>(Ptr + 32); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: DontConsumeAdditiveWeight
-        /// </summary>
-        public unsafe bool DontConsumeAdditiveWeight
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 36); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: PerAnimAiming
-        /// </summary>
-        public unsafe bool PerAnimAiming
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36) & 2) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 36); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 36); }; }
-        }
-    }
-
-    /// <summary>
-    /// Struct: FAnimConfig
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 36)]
-    public partial record struct FAnimConfig
-    {
-        /// <summary>
-        /// NameProperty: FullBodyAnim
-        /// </summary>
-        public unsafe BmSDK.FName FullBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// NameProperty: UpperBodyAnim
-        /// </summary>
-        public unsafe BmSDK.FName UpperBodyAnim
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: AimingConfig
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAimingConfig AimingConfig
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAimingConfig>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: PresetAimingConfig
-        /// </summary>
-        public unsafe BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig PresetAimingConfig
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPresetAimingConfigs.EPresetAimingConfig>(Ptr + 20); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
-        }
-
-        /// <summary>
-        /// ObjectProperty: Directions
-        /// </summary>
-        public unsafe BmSDK.BmGame.RDirectionalAnimConfig Directions
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RDirectionalAnimConfig>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: AdditiveSubtractMode
-        /// </summary>
-        public unsafe BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode AdditiveSubtractMode
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimConfig.EAdditiveSubtractMode>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: DontConsumeAdditiveWeight
-        /// </summary>
-        public unsafe bool DontConsumeAdditiveWeight
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 32); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: PerAnimAiming
-        /// </summary>
-        public unsafe bool PerAnimAiming
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32) & 2) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 32); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 32); }; }
-        }
-    }
-
-    /// <summary>
-    /// Enum: EAdditiveSubtractMode
-    /// </summary>
-    public enum EAdditiveSubtractMode
-    {
-        ASM_FirstFrame = 0,
-        ASM_LastFrame = 1,
-        ASM_MAX = 2,
-    }
-
-    /// <summary>
-    /// Enum: EYesNoDefault
-    /// </summary>
-    public enum EYesNoDefault
-    {
-        YND_Default = 0,
-        YND_Yes = 1,
-        YND_No = 2,
-        YND_MAX = 3,
-    }
-
-    /// <summary>
-    /// Struct: FWeight
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 4)]
-    public partial record struct FWeight
-    {
-        /// <summary>
-        /// FloatProperty: Value
-        /// </summary>
-        public unsafe float Value
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
     }

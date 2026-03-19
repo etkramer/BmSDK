@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_TinCan<br/>
-/// (size = 724)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_TinCan : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject
 {
@@ -69,24 +69,11 @@ public partial class RBMCombatThrownObject_TinCan : BmSDK.BmGame.RBMCombatThrown
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: HitCombatPawn
-    /// </summary>
-    public unsafe void HitCombatPawn(BmSDK.BmGame.RPawnCombat HitPawn, float Speed)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCombatThrownObject_TinCan.HitCombatPawn", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitPawn, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Speed, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// FloatProperty: DamageGiven
     /// </summary>
     public unsafe float DamageGiven
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
     }
 }

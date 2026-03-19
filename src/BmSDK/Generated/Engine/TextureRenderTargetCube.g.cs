@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TextureRenderTargetCube<br/>
-/// (size = 241)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TextureRenderTargetCube : BmSDK.Engine.TextureRenderTarget, BmSDK.IGameObject
 {
@@ -38,25 +38,25 @@ public partial class TextureRenderTargetCube : BmSDK.Engine.TextureRenderTarget,
     /// </summary>
     public unsafe int SizeX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 
     /// <summary>
     /// StructProperty: ClearColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FLinearColor ClearColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ClearColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FLinearColor>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
     }
 
     /// <summary>
     /// ByteProperty: Format
     /// </summary>
-    public unsafe BmSDK.Engine.Texture.EPixelFormat Format
+    public unsafe byte Format
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture.EPixelFormat>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 }

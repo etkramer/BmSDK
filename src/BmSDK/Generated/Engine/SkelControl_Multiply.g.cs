@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControl_Multiply<br/>
-/// (size = 176)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkelControl_Multiply : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class SkelControl_Multiply : BmSDK.Engine.SkelControlBase, BmSDK.
     /// </summary>
     public unsafe float Multiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFontSample<br/>
-/// (size = 100)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFontSample : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class MaterialExpressionFontSample : BmSDK.Engine.MaterialExpress
     /// <summary>
     /// ObjectProperty: Font
     /// </summary>
-    public unsafe BmSDK.Engine.Font Font
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Font
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Font>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class MaterialExpressionFontSample : BmSDK.Engine.MaterialExpress
     /// </summary>
     public unsafe int FontTexturePage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 }

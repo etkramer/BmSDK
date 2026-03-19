@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCapture2DComponent<br/>
-/// (size = 288)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject
 {
@@ -34,54 +34,12 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     protected SceneCapture2DComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SetView
-    /// </summary>
-    public unsafe void SetView(System.Numerics.Vector3 NewLocation, BmSDK.Rotator NewRotation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DComponent.SetView", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewLocation, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 12);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetCaptureParameters
-    /// </summary>
-    public unsafe void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewFOV = default, float NewNearPlane = default, float NewFarPlane = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DComponent.SetCaptureParameters", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewTextureTarget, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFOV, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNearPlane, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFarPlane, paramsPtr + 12);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: TextureTarget
     /// </summary>
-    public unsafe BmSDK.Engine.TextureRenderTarget2D TextureTarget
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TextureTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTarget2D>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
     /// <summary>
@@ -89,8 +47,8 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// </summary>
     public unsafe float FieldOfView
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
@@ -98,8 +56,8 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// </summary>
     public unsafe float NearPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
@@ -107,8 +65,8 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// </summary>
     public unsafe float FarPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
@@ -116,25 +74,25 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// </summary>
     public unsafe bool bUpdateMatrices
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
     }
 
     /// <summary>
     /// StructProperty: ViewMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ViewMatrix
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ViewMatrix
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 
     /// <summary>
     /// StructProperty: ProjMatrix
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix ProjMatrix
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ProjMatrix
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 }

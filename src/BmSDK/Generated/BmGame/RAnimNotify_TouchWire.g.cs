@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_TouchWire<br/>
-/// (size = 52)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -34,31 +34,21 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     protected RAnimNotify_TouchWire(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: LimbOnOrOff
-    /// </summary>
-    public enum LimbOnOrOff
-    {
-        LIMB_On = 0,
-        LIMB_Off = 1,
-        LIMB_MAX = 2,
-    }
-
-    /// <summary>
     /// ByteProperty: LimbType
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayer.OverheadRopeControlPointType LimbType
+    public unsafe byte LimbType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.OverheadRopeControlPointType>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: OnOrOff
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_TouchWire.LimbOnOrOff OnOrOff
+    public unsafe byte OnOrOff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_TouchWire.LimbOnOrOff>(Ptr + 45); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 45); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 85); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
     /// <summary>
@@ -66,7 +56,7 @@ public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGam
     /// </summary>
     public unsafe bool CanBeLastLimbToComeOff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
     }
 }

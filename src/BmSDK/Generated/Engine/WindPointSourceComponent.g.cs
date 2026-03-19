@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WindPointSourceComponent<br/>
-/// (size = 100)
-/// (flags = 142618770)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSourceComponent, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSour
     /// <summary>
     /// ComponentProperty: PreviewRadiusComponent
     /// </summary>
-    public unsafe BmSDK.Engine.DrawSphereComponent PreviewRadiusComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewRadiusComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class WindPointSourceComponent : BmSDK.Engine.WindDirectionalSour
     /// </summary>
     public unsafe float Radius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnPlayerCatwomanBase<br/>
-/// (size = 6148)
-/// (flags = 144703670)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameObject
 {
@@ -69,514 +69,156 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: CanJumpOffWallStick
+    /// StructProperty: vOldWallClimbPosition
     /// </summary>
-    public unsafe bool CanJumpOffWallStick(BmSDK.BmGame.RSpecialMoveConfig Config, BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Loc)
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT vOldWallClimbPosition
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.CanJumpOffWallStick", true);
-        byte* paramsPtr = stackalloc byte[120];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Config, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Loc, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 116);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10032); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10032); }
     }
 
     /// <summary>
-    /// Function: FlushDebugDraws
+    /// ObjectProperty: WallClimbingCrawlLeftMoves
     /// </summary>
-    public unsafe void FlushDebugDraws(bool bOnlyOncePerFrame = default)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WallClimbingCrawlLeftMoves
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.FlushDebugDraws", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bOnlyOncePerFrame, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10044); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10044); }
     }
 
     /// <summary>
-    /// Function: OnHelicopterHit
+    /// ObjectProperty: WallClimbingCrawlRightMoves
     /// </summary>
-    public unsafe void OnHelicopterHit(BmSDK.BmGame.RHelicopterBase Heli, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WallClimbingCrawlRightMoves
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.OnHelicopterHit", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Heli, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10052); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10052); }
     }
 
     /// <summary>
-    /// Function: ClampPointToCeilingVolumes
+    /// ObjectProperty: LineLaunchingWithBatmanLaunchTargetMarker
     /// </summary>
-    public unsafe bool ClampPointToCeilingVolumes(out System.Numerics.Vector3 Point, float ExtraShiftInwards = default, bool bDebugDraw = default)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LineLaunchingWithBatmanLaunchTargetMarker
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ClampPointToCeilingVolumes", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExtraShiftInwards, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bDebugDraw, paramsPtr + 16);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        Point = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10060); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10060); }
     }
 
     /// <summary>
-    /// Function: UpdateTouchingCeilingVolume
+    /// ObjectProperty: AttachMoveConfig
     /// </summary>
-    public unsafe void UpdateTouchingCeilingVolume()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AttachMoveConfig
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.UpdateTouchingCeilingVolume", true);
-        byte* paramsPtr = stackalloc byte[0];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10068); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10068); }
     }
 
     /// <summary>
-    /// Function: ButtonMashPenalty
+    /// ObjectProperty: StandingRandomOverlayOverride
     /// </summary>
-    public unsafe void ButtonMashPenalty()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StandingRandomOverlayOverride
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ButtonMashPenalty", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10076); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10076); }
     }
 
     /// <summary>
-    /// Function: ResetAutoSwing
+    /// ObjectProperty: WhipCrackFX
     /// </summary>
-    public unsafe void ResetAutoSwing()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WhipCrackFX
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ResetAutoSwing", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10084); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10084); }
     }
 
     /// <summary>
-    /// Function: TriggerAerialWhipPounce
+    /// ObjectProperty: TouchingCeilingVolume
     /// </summary>
-    public unsafe bool TriggerAerialWhipPounce()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TouchingCeilingVolume
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.TriggerAerialWhipPounce", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10092); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10092); }
     }
 
     /// <summary>
-    /// Function: GetEdgeSwingGrappleLocation
+    /// ObjectProperty: SwingStartEvent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingGrappleLocation()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingStartEvent
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingGrappleLocation", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10100); }
     }
 
     /// <summary>
-    /// Function: GetEdgeSwingWallLocation
+    /// ObjectProperty: SwingStopEvent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingWallLocation(out System.Numerics.Vector3 WallNormal)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SwingStopEvent
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingWallLocation", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        WallNormal = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10108); }
     }
 
     /// <summary>
-    /// Function: GetEdgeSwingStartLocation
+    /// ObjectProperty: JammerTakedownPlayerAnimSet
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetEdgeSwingStartLocation()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammerTakedownPlayerAnimSet
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetEdgeSwingStartLocation", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10116); }
     }
 
     /// <summary>
-    /// Function: IsAutoSwingToGargoyle
+    /// ObjectProperty: JammerTakedownVictimAnimSet
     /// </summary>
-    public unsafe bool IsAutoSwingToGargoyle()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT JammerTakedownVictimAnimSet
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsAutoSwingToGargoyle", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10124); }
     }
 
     /// <summary>
-    /// Function: IsAutoSwing
+    /// ObjectProperty: CollarMat
     /// </summary>
-    public unsafe bool IsAutoSwing()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CollarMat
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsAutoSwing", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10132); }
     }
 
     /// <summary>
-    /// Function: IsConcealedDuringSwing
+    /// ComponentProperty: CollarLight
     /// </summary>
-    public unsafe bool IsConcealedDuringSwing()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CollarLight
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.IsConcealedDuringSwing", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10140); }
     }
 
     /// <summary>
-    /// Function: SetAutoSwingState
+    /// ComponentProperty: CollarMesh
     /// </summary>
-    public unsafe void SetAutoSwingState(BmSDK.BmGame.RPawnPlayerCatwomanBase.EAutoSwingState State)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CollarMesh
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetAutoSwingState", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(State, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10148); }
     }
 
     /// <summary>
-    /// Function: RecalculatePath
+    /// ComponentProperty: WhipMesh
     /// </summary>
-    public unsafe void RecalculatePath()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WhipMesh
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RecalculatePath", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 10156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10156); }
     }
 
     /// <summary>
-    /// Function: HasPath
+    /// StructProperty: OldCeilingTracePosition
     /// </summary>
-    public unsafe bool HasPath()
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OldCeilingTracePosition
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.HasPath", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: ClearPath
-    /// </summary>
-    public unsafe void ClearPath()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.ClearPath", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetAllowAerialWhipPounce
-    /// </summary>
-    public unsafe void SetAllowAerialWhipPounce(bool bAllow)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetAllowAerialWhipPounce", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAllow, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: TriggerHitAndDropFromCeilingMove
-    /// </summary>
-    public unsafe void TriggerHitAndDropFromCeilingMove()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.TriggerHitAndDropFromCeilingMove", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetWhipTargetPose
-    /// </summary>
-    public unsafe void SetWhipTargetPose(System.Numerics.Vector3 NewPosition, BmSDK.Rotator NewRotation = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SetWhipTargetPose", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewPosition, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 12);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetWhipTargetPose
-    /// </summary>
-    public unsafe void GetWhipTargetPose(out System.Numerics.Vector3 OutPosition, out BmSDK.Rotator OutRotation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetWhipTargetPose", true);
-        byte* paramsPtr = stackalloc byte[24];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        OutPosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-        OutRotation = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(paramsPtr + 12);
-        return;
-    }
-
-    /// <summary>
-    /// Function: FindNearbyLedgeFromCeiling
-    /// </summary>
-    public unsafe bool FindNearbyLedgeFromCeiling(System.Numerics.Vector3 PlayerLocation, out BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Locator)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.FindNearbyLedgeFromCeiling", true);
-        byte* paramsPtr = stackalloc byte[128];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PlayerLocation, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        Locator = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator>(paramsPtr + 12);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 124);
-    }
-
-    /// <summary>
-    /// Function: AddEdgeCollisionNormals
-    /// </summary>
-    public unsafe void AddEdgeCollisionNormals(System.Numerics.Vector3 Delta)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.AddEdgeCollisionNormals", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Delta, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: SlideOffCeilingVolumeBorders
-    /// </summary>
-    public unsafe System.Numerics.Vector3 SlideOffCeilingVolumeBorders(System.Numerics.Vector3 Delta)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.SlideOffCeilingVolumeBorders", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Delta, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
-    }
-
-    /// <summary>
-    /// Function: RestrictMoveToCeiling
-    /// </summary>
-    public unsafe System.Numerics.Vector3 RestrictMoveToCeiling(System.Numerics.Vector3 Delta)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.RestrictMoveToCeiling", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Delta, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 12);
-    }
-
-    /// <summary>
-    /// Function: GetThoughts
-    /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.GetThoughts", true);
-        byte* paramsPtr = stackalloc byte[12];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        ThoughtList = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor.FThought>>(paramsPtr + 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: DrawSwingSpot
-    /// </summary>
-    public unsafe void DrawSwingSpot()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.DrawSwingSpot", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: DrawSwingLastFrame
-    /// </summary>
-    public unsafe void DrawSwingLastFrame()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.DrawSwingLastFrame", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: StopSwingFallSound
-    /// </summary>
-    public unsafe void StopSwingFallSound()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.StopSwingFallSound", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: StartSwingFallSound
-    /// </summary>
-    public unsafe void StartSwingFallSound()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnPlayerCatwomanBase.StartSwingFallSound", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Enum: ESwingDirection
-    /// </summary>
-    public enum ESwingDirection
-    {
-        SWD_Default = 0,
-        SWD_Left = 1,
-        SWD_Right = 2,
-        SWD_LeftFar = 3,
-        SWD_RightFar = 4,
-        SWD_MAX = 5,
-    }
-
-    /// <summary>
-    /// Enum: EAutoSwingState
-    /// </summary>
-    public enum EAutoSwingState
-    {
-        ASS_None = 0,
-        ASS_InitialJump = 1,
-        ASS_Swing = 2,
-        ASS_JumpToWall = 3,
-        ASS_WallStick = 4,
-        ASS_MAX = 5,
-    }
-
-    /// <summary>
-    /// Struct: FWhipTrailData
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 32)]
-    public partial record struct FWhipTrailData
-    {
-        /// <summary>
-        /// ComponentProperty: ParticleSystemComp
-        /// </summary>
-        public unsafe BmSDK.Engine.ParticleSystemComponent ParticleSystemComp
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystemComponent>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// NameProperty: BoneAttachName
-        /// </summary>
-        public unsafe BmSDK.FName BoneAttachName
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: bCurrentlyActive
-        /// </summary>
-        public unsafe bool bCurrentlyActive
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 12); }; }
-        }
-
-        /// <summary>
-        /// StructProperty: LastUpdatePosition
-        /// </summary>
-        public unsafe System.Numerics.Vector3 LastUpdatePosition
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
-        }
-
-        /// <summary>
-        /// IntProperty: CachedBoneAttachIndex
-        /// </summary>
-        public unsafe int CachedBoneAttachIndex
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }; }
-        }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10164); }
     }
 
     /// <summary>
@@ -584,8 +226,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bPhysUseCeilingConstraints
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -593,8 +235,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bFlipCeilingCamera
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -602,8 +244,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bAllowAerialWhipPounce
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -611,8 +253,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bAutoSwingEarlyWhip
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -620,8 +262,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bAutoSwingTriggeredFromEdge
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -629,8 +271,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugSwingAllowEarlyWhipIn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -638,8 +280,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugSwingForceEarlyWhipIn
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 64) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 64) : (currentMask & ~64); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -647,8 +289,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugCeilingVisibility
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 128) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 128) : (currentMask & ~128); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -656,8 +298,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugCeilingEdgeDetection
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 256) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 256) : (currentMask & ~256); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -665,8 +307,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bPlayingSwingFallSound
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 512) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 512) : (currentMask & ~512); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -674,8 +316,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugDrawFallSwingSound
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 1024) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 1024) : (currentMask & ~1024); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -683,8 +325,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe bool bDebugJumpOffWalls
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956) & 2048) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 5956); var newMask = value ? (currentMask | 2048) : (currentMask & ~2048); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 5956); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSetCeilingBase
+    /// </summary>
+    public unsafe bool bSetCeilingBase
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 10176); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 10176); }
     }
 
     /// <summary>
@@ -692,8 +343,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe BmSDK.FName WhipSkelControlName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 5960); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5960); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 10180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10180); }
     }
 
     /// <summary>
@@ -701,17 +352,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float MaxDirectPounceHeightToCeilings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 5968); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5968); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: WhipMesh
-    /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent WhipMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 5972); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5972); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10188); }
     }
 
     /// <summary>
@@ -719,8 +361,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float WhipTrailMinAppearSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 5976); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5976); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10192); }
     }
 
     /// <summary>
@@ -728,62 +370,35 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float MinTrailsWhipExtent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 5980); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5980); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10196); }
     }
 
     /// <summary>
     /// ArrayProperty: WhipTrails
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnPlayerCatwomanBase.FWhipTrailData> WhipTrails
+    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC> WhipTrails
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnPlayerCatwomanBase.FWhipTrailData>>(Ptr + 5984); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5984); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RPawnPlayer.XRayBoneMaterialMIC>>(Ptr + 10200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10200); }
     }
 
     /// <summary>
     /// ByteProperty: AutoSwingState
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCatwomanBase.EAutoSwingState AutoSwingState
+    public unsafe byte AutoSwingState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCatwomanBase.EAutoSwingState>(Ptr + 5996); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5996); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 10216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10216); }
     }
 
     /// <summary>
     /// ByteProperty: SwingDirection
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCatwomanBase.ESwingDirection SwingDirection
+    public unsafe byte SwingDirection
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCatwomanBase.ESwingDirection>(Ptr + 5997); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 5997); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: WhipCrackFX
-    /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem WhipCrackFX
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 6000); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6000); }
-    }
-
-    /// <summary>
-    /// ClassProperty: CauseTitanBeserkClass
-    /// </summary>
-    public unsafe BmSDK.Class CauseTitanBeserkClass
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 6004); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6004); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: TouchingCeilingVolume
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCeilingClimbVolume TouchingCeilingVolume
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCeilingClimbVolume>(Ptr + 6008); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6008); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 10217); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10217); }
     }
 
     /// <summary>
@@ -791,8 +406,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float CeilingSuspiciousBodyRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6012); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6012); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10220); }
     }
 
     /// <summary>
@@ -800,35 +415,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float CeilingSuspiciousPredThugsRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6016); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6016); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SwingStartEvent
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent SwingStartEvent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6020); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6020); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: SwingStopEvent
-    /// </summary>
-    public unsafe BmSDK.Engine.AkEvent SwingStopEvent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkEvent>(Ptr + 6024); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6024); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10224); }
     }
 
     /// <summary>
     /// StructProperty: LastSwingSoundLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 LastSwingSoundLocation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LastSwingSoundLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6028); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6028); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10228); }
     }
 
     /// <summary>
@@ -836,8 +433,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float FallSoundStartSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6040); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6040); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10240); }
     }
 
     /// <summary>
@@ -845,8 +442,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float BolasRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6044); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6044); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10244); }
     }
 
     /// <summary>
@@ -854,17 +451,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float BolasHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6048); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6048); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10248); }
     }
 
     /// <summary>
     /// StructProperty: BolasShift
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasShift
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BolasShift
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6052); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6052); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10252); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10252); }
     }
 
     /// <summary>
@@ -872,8 +469,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float BolasRBSpeedFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6064); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6064); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10264); }
     }
 
     /// <summary>
@@ -881,17 +478,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float BolasRBMaxSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6068); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6068); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10268); }
     }
 
     /// <summary>
     /// StructProperty: BolasAngularSpeed
     /// </summary>
-    public unsafe System.Numerics.Vector3 BolasAngularSpeed
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BolasAngularSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6072); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6072); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10272); }
     }
 
     /// <summary>
@@ -899,17 +496,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float LastFlushPersistentLinesFrame
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6084); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6084); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10284); }
     }
 
     /// <summary>
     /// StructProperty: CeilingNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 CeilingNormal
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CeilingNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6088); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6088); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10288); }
     }
 
     /// <summary>
@@ -917,8 +514,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float GrateClimbUpStartCheckDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10300); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10300); }
     }
 
     /// <summary>
@@ -926,8 +523,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float GrateClimbUpTargetCheckDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6104); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10304); }
     }
 
     /// <summary>
@@ -935,8 +532,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float GrateClimbUpTargetFloorCheckDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10308); }
     }
 
     /// <summary>
@@ -944,8 +541,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float GrateClimbDownTargetCheckDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10312); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10312); }
     }
 
     /// <summary>
@@ -953,26 +550,8 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float JumpOffWallCheckDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6116); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: JammerTakedownPlayerAnimSet
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet JammerTakedownPlayerAnimSet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6120); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: JammerTakedownVictimAnimSet
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimSet JammerTakedownVictimAnimSet
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 6124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10316); }
     }
 
     /// <summary>
@@ -980,17 +559,17 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float MaxPullFromCatwalkDistance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10320); }
     }
 
     /// <summary>
     /// StructProperty: PullFromCatwalkEdgeCheckExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 PullFromCatwalkEdgeCheckExtent
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PullFromCatwalkEdgeCheckExtent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 6132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 10324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10324); }
     }
 
     /// <summary>
@@ -998,7 +577,7 @@ public partial class RPawnPlayerCatwomanBase : BmSDK.BmGame.RPawnPlayer, BmSDK.I
     /// </summary>
     public unsafe float PullFromCatwalkEdgeCheckShift
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 10336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 10336); }
     }
 }

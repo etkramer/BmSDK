@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// ABSTRACT Class: DistributionFloat<br/>
-/// (size = 64)
-/// (flags = 134230163)
+/// Class: DistributionFloat<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
 {
@@ -24,52 +24,22 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     internal DistributionFloat() { }
 
     /// <summary>
+    /// Constructs a new DistributionFloat
+    /// </summary>
+    public DistributionFloat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DistributionFloat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected DistributionFloat(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetFloatValue
-    /// </summary>
-    public unsafe float GetFloatValue(float F = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionFloat.GetFloatValue", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(F, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// Struct: FRawDistributionFloat
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 28)]
-    public partial record struct FRawDistributionFloat
-    {
-        /// <summary>
-        /// ComponentProperty: Distribution
-        /// </summary>
-        public unsafe BmSDK.DistributionFloat Distribution
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat>(Ptr + 24); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }; }
-        }
-    }
-
-    /// <summary>
     /// StructProperty: VfTable_FCurveEdInterface
     /// </summary>
-    public unsafe System.IntPtr VfTable_FCurveEdInterface
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FCurveEdInterface
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -77,8 +47,8 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCanBeBaked
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
     }
 
     /// <summary>
@@ -86,7 +56,7 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bIsDirty
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
     }
 }

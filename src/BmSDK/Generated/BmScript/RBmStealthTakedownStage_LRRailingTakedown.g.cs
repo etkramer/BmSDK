@@ -5,10 +5,10 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBmStealthTakedownStage_LRRailingTakedown<br/>
-/// (size = 1136)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RStealthTakeDownStage_RailingAttack, BmSDK.IGameObject
+public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -69,76 +69,83 @@ public partial class RBmStealthTakedownStage_LRRailingTakedown : BmSDK.BmGame.RS
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: Cancel
-    /// </summary>
-    public unsafe void Cancel(bool SetState = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.Cancel", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SetState, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: UnEquipBatclawForTakedown
-    /// </summary>
-    public unsafe void UnEquipBatclawForTakedown()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.UnEquipBatclawForTakedown", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: EquipBatclawForTakedown
-    /// </summary>
-    public unsafe void EquipBatclawForTakedown()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.EquipBatclawForTakedown", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ReleaseClaws
-    /// </summary>
-    public unsafe void ReleaseClaws()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.ReleaseClaws", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: AttachBatclaw
-    /// </summary>
-    public unsafe void AttachBatclaw()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBmStealthTakedownStage_LRRailingTakedown.AttachBatclaw", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// BoolProperty: RopesReleased
     /// </summary>
     public unsafe bool RopesReleased
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1128) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1128); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1128); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AttachRope
+    /// </summary>
+    public unsafe bool AttachRope
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DisableCutRope
+    /// </summary>
+    public unsafe bool DisableCutRope
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1700); }
     }
 
     /// <summary>
     /// ComponentProperty: MyRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RSimpleRopeComponent MyRope
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyRope
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSimpleRopeComponent>(Ptr + 1132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1704); }
+    }
+
+    /// <summary>
+    /// FloatProperty: RopeLength
+    /// </summary>
+    public unsafe float RopeLength
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1712); }
+    }
+
+    /// <summary>
+    /// StructProperty: RopeAttachPoint
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeAttachPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1716); }
+    }
+
+    /// <summary>
+    /// StructProperty: RopeRenderAttachPoint
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeRenderAttachPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1728); }
+    }
+
+    /// <summary>
+    /// StructProperty: RopeRenderStartOffset
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopeRenderStartOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1740); }
+    }
+
+    /// <summary>
+    /// StructProperty: RopePhysStartOffset
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopePhysStartOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1752); }
     }
 }

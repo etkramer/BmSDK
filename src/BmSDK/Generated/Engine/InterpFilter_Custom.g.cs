@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpFilter_Custom<br/>
-/// (size = 68)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpFilter_Custom : BmSDK.Engine.InterpFilter, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class InterpFilter_Custom : BmSDK.Engine.InterpFilter, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: GroupsToInclude
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InterpGroup> GroupsToInclude
+    public unsafe BmSDK.TArray<BmSDK.FString> GroupsToInclude
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InterpGroup>>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeTest<br/>
-/// (size = 556)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,55 +71,91 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: ConnectActor1
     /// </summary>
-    public unsafe BmSDK.Engine.Actor ConnectActor1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConnectActor1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ObjectProperty: ConnectActor2
     /// </summary>
-    public unsafe BmSDK.Engine.Actor ConnectActor2
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConnectActor2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// ObjectProperty: ConnectActor3
     /// </summary>
-    public unsafe BmSDK.Engine.Actor ConnectActor3
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ConnectActor3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Rope
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Rope
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Rope2
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Rope2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: StretchTestActor
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StretchTestActor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: StretchBreakRope
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StretchBreakRope
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
     }
 
     /// <summary>
     /// StructProperty: AttachPos1
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos1
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttachPos1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
     }
 
     /// <summary>
     /// StructProperty: AttachPos2
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos2
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttachPos2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
     /// <summary>
     /// StructProperty: AttachPos3
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachPos3
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttachPos3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 464); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 
     /// <summary>
@@ -127,8 +163,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float MaxLength1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 476); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
@@ -136,8 +172,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float Length1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 764); }
     }
 
     /// <summary>
@@ -145,8 +181,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float ChangeToInstantlyLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 768); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 768); }
     }
 
     /// <summary>
@@ -154,8 +190,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float GradualChangeLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 488); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 488); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 772); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 772); }
     }
 
     /// <summary>
@@ -163,53 +199,26 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float GradualChangeDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 492); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 492); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Rope
-    /// </summary>
-    public unsafe BmSDK.BmGame.RRopeBase Rope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeBase>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Rope2
-    /// </summary>
-    public unsafe BmSDK.BmGame.RRopeBase Rope2
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeBase>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: StretchTestActor
-    /// </summary>
-    public unsafe BmSDK.Engine.Actor StretchTestActor
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 504); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 504); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// StructProperty: StretchActorWorldAttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StretchActorWorldAttachPos
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StretchActorWorldAttachPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 508); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 508); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 780); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
     }
 
     /// <summary>
     /// StructProperty: StretchActorActorAttachPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 StretchActorActorAttachPos
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StretchActorActorAttachPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
@@ -217,17 +226,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float StretchBreakRatio
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: StretchBreakRope
-    /// </summary>
-    public unsafe BmSDK.BmGame.RRopeBase StretchBreakRope
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeBase>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 804); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
     }
 
     /// <summary>
@@ -235,35 +235,35 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float StretchRopeLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 808); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
     }
 
     /// <summary>
     /// ByteProperty: StretchRopeEnd
     /// </summary>
-    public unsafe BmSDK.BmGame.RRopeComponentBase.ERopeEndType StretchRopeEnd
+    public unsafe byte StretchRopeEnd
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeComponentBase.ERopeEndType>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 812); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
     }
 
     /// <summary>
     /// ByteProperty: CurrentTestState
     /// </summary>
-    public unsafe BmSDK.BmGame.RRopeTest.ERopeTestState CurrentTestState
+    public unsafe byte CurrentTestState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeTest.ERopeTestState>(Ptr + 545); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 545); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 813); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 813); }
     }
 
     /// <summary>
     /// ByteProperty: WaitForwardState
     /// </summary>
-    public unsafe BmSDK.BmGame.RRopeTest.ERopeTestState WaitForwardState
+    public unsafe byte WaitForwardState
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRopeTest.ERopeTestState>(Ptr + 546); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 546); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 814); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 814); }
     }
 
     /// <summary>
@@ -271,8 +271,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float waitDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 
     /// <summary>
@@ -280,8 +280,8 @@ public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe float StateWaitDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 820); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
     }
 
     /// <summary>

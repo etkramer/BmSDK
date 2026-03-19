@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2DirectConnectPhysicsUpdater<br/>
-/// (size = 184)
-/// (flags = 8392722)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RRope2DirectConnectPhysicsUpdater : BmSDK.BmGame.RRope2BasePhysicsUpdater, BmSDK.IGameObject
 {
@@ -33,4 +33,92 @@ public partial class RRope2DirectConnectPhysicsUpdater : BmSDK.BmGame.RRope2Base
     /// </summary>
     protected RRope2DirectConnectPhysicsUpdater(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: RopePhysics
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RopePhysics
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCreateBasicRopeJoint
+    /// </summary>
+    public unsafe bool bCreateBasicRopeJoint
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAlignEndAnchorYAxes
+    /// </summary>
+    public unsafe bool bAlignEndAnchorYAxes
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bRestrictEndAnchorTwist
+    /// </summary>
+    public unsafe bool bRestrictEndAnchorTwist
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCreateDirectConnectJoints
+    /// </summary>
+    public unsafe bool bCreateDirectConnectJoints
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCreateEndAnchors
+    /// </summary>
+    public unsafe bool bCreateEndAnchors
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SplitImpulseApplicationMass
+    /// </summary>
+    public unsafe float SplitImpulseApplicationMass
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxSplitImpulseStrength
+    /// </summary>
+    public unsafe float MaxSplitImpulseStrength
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+
+    /// <summary>
+    /// StructProperty: EndInitDatas
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndInitDatas_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+    }
+    /// <summary>
+    /// StructProperty: EndInitDatas
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndInitDatas_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+    }
 }

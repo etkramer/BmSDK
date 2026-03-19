@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkEnvironmentName<br/>
-/// (size = 132)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
 {
@@ -34,12 +34,21 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     protected AkEnvironmentName(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// ByteProperty: EffectType
+    /// </summary>
+    public unsafe byte EffectType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
     /// BoolProperty: EnableRolloff
     /// </summary>
     public unsafe bool EnableRolloff
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -47,62 +56,17 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe bool EnableOcclusionSends
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
-    /// FloatProperty: EnvironmentRolloffDistanceMin
+    /// ObjectProperty: EnvironmentRolloff
     /// </summary>
-    public unsafe float EnvironmentRolloffDistanceMin
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EnvironmentRolloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnvironmentRolloffDistanceMax
-    /// </summary>
-    public unsafe float EnvironmentRolloffDistanceMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnvironmentDryMin
-    /// </summary>
-    public unsafe float EnvironmentDryMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnvironmentDryMax
-    /// </summary>
-    public unsafe float EnvironmentDryMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnvironmentRolloffSendMin
-    /// </summary>
-    public unsafe float EnvironmentRolloffSendMin
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnvironmentRolloffSendMax
-    /// </summary>
-    public unsafe float EnvironmentRolloffSendMax
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -110,8 +74,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentRolloffSendPlayer
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -119,8 +83,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentRolloffSendNoListener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
@@ -128,8 +92,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentRolloffSendOnlyListener
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
@@ -137,44 +101,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentRolloffSend2DMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnhancedWetSendMultiplier
-    /// </summary>
-    public unsafe float EnhancedWetSendMultiplier
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
-
-    /// <summary>
-    /// FloatProperty: EnhancedWetSendFalloff
-    /// </summary>
-    public unsafe float EnhancedWetSendFalloff
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DialogueMeterWetBoost
-    /// </summary>
-    public unsafe float DialogueMeterWetBoost
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
-
-    /// <summary>
-    /// FloatProperty: DialogueMeterWetBoostPlayer
-    /// </summary>
-    public unsafe float DialogueMeterWetBoostPlayer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
@@ -182,8 +110,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentWetSendOccludedMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
@@ -191,8 +119,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentWetSendNotOccludedMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 
     /// <summary>
@@ -200,8 +128,8 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentDrySendOccludedMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
@@ -209,7 +137,18 @@ public partial class AkEnvironmentName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// </summary>
     public unsafe float EnvironmentDrySendNotOccludedMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// Enum: EAuxEffectType
+    /// </summary>
+    public enum EAuxEffectType
+    {
+        AK_AUX_EFFECT_ENVIRONMENT_NORMAL = 0,
+        AK_AUX_EFFECT_ENVIRONMENT_HIGH = 1,
+        AK_AUX_EFFECT_ENVIRONMENT_LOW = 2,
+        AK_AUX_EFFECT_ENVIRONMENT_MAX = 3,
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataMesh<br/>
-/// (size = 80)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {
@@ -34,57 +34,12 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     protected ParticleModuleTypeDataMesh(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EMeshCameraFacingOptions
-    /// </summary>
-    public enum EMeshCameraFacingOptions
-    {
-        XAxisFacing_NoUp = 0,
-        XAxisFacing_ZUp = 1,
-        XAxisFacing_NegativeZUp = 2,
-        XAxisFacing_YUp = 3,
-        XAxisFacing_NegativeYUp = 4,
-        LockedAxis_ZAxisFacing = 5,
-        LockedAxis_NegativeZAxisFacing = 6,
-        LockedAxis_YAxisFacing = 7,
-        LockedAxis_NegativeYAxisFacing = 8,
-        VelocityAligned_ZAxisFacing = 9,
-        VelocityAligned_NegativeZAxisFacing = 10,
-        VelocityAligned_YAxisFacing = 11,
-        VelocityAligned_NegativeYAxisFacing = 12,
-        EMeshCameraFacingOptions_MAX = 13,
-    }
-
-    /// <summary>
-    /// Enum: EMeshCameraFacingUpAxis
-    /// </summary>
-    public enum EMeshCameraFacingUpAxis
-    {
-        CameraFacing_NoneUP = 0,
-        CameraFacing_ZUp = 1,
-        CameraFacing_NegativeZUp = 2,
-        CameraFacing_YUp = 3,
-        CameraFacing_NegativeYUp = 4,
-        CameraFacing_MAX = 5,
-    }
-
-    /// <summary>
-    /// Enum: EMeshScreenAlignment
-    /// </summary>
-    public enum EMeshScreenAlignment
-    {
-        PSMA_MeshFaceCameraWithRoll = 0,
-        PSMA_MeshFaceCameraWithSpin = 1,
-        PSMA_MeshFaceCameraWithLockedAxis = 2,
-        PSMA_MAX = 3,
-    }
-
-    /// <summary>
     /// ObjectProperty: Mesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh Mesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -92,8 +47,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool CastShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -101,8 +56,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool DoCollisions
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -110,8 +65,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool bAllowMotionBlur
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -119,8 +74,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool bOverrideMaterial
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -128,8 +83,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool bCameraFacing
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 16) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 16) : (currentMask & ~16); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
@@ -137,44 +92,44 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe bool bApplyParticleRotationAsSpin
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60) & 32) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); var newMask = value ? (currentMask | 32) : (currentMask & ~32); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 60); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
     }
 
     /// <summary>
     /// ByteProperty: MeshAlignment
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshScreenAlignment MeshAlignment
+    public unsafe byte MeshAlignment
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshScreenAlignment>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ByteProperty: AxisLockOption
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock AxisLockOption
+    public unsafe byte AxisLockOption
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleOrientationAxisLock.EParticleAxisLock>(Ptr + 65); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 65); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 109); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 109); }
     }
 
     /// <summary>
     /// ByteProperty: CameraFacingUpAxisOption
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshCameraFacingUpAxis CameraFacingUpAxisOption
+    public unsafe byte CameraFacingUpAxisOption
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshCameraFacingUpAxis>(Ptr + 66); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 66); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 110); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 110); }
     }
 
     /// <summary>
     /// ByteProperty: CameraFacingOption
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshCameraFacingOptions CameraFacingOption
+    public unsafe byte CameraFacingOption
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTypeDataMesh.EMeshCameraFacingOptions>(Ptr + 67); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 67); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 111); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 111); }
     }
 
     /// <summary>
@@ -182,8 +137,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe float Pitch
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -191,8 +146,8 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe float Roll
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -200,7 +155,7 @@ public partial class ParticleModuleTypeDataMesh : BmSDK.Engine.ParticleModuleTyp
     /// </summary>
     public unsafe float Yaw
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

@@ -5,10 +5,10 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioEventLoop<br/>
-/// (size = 224)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class SeqAct_AkAudioEventLoop : BmSDK.AkAudio.SeqAct_AkAudioEvent, BmSDK.IGameObject
+public partial class SeqAct_AkAudioEventLoop : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,11 +34,20 @@ public partial class SeqAct_AkAudioEventLoop : BmSDK.AkAudio.SeqAct_AkAudioEvent
     protected SeqAct_AkAudioEventLoop(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ArrayProperty: SoundHandles
+    /// ObjectProperty: AudioEvent
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSoundHandle> SoundHandles
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AudioEvent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkWwise.FAkSoundHandle>>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlaying
+    /// </summary>
+    public unsafe bool bPlaying
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
     }
 }

@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Emote<br/>
-/// (size = 69)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RAnimNotify_Emote : BmSDK.BmGame.RAnimNotify_Script, BmSDK.IGameObject
+public partial class RAnimNotify_Emote : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,36 +34,11 @@ public partial class RAnimNotify_Emote : BmSDK.BmGame.RAnimNotify_Script, BmSDK.
     protected RAnimNotify_Emote(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ByteProperty: EmoteType
+    /// ObjectProperty: EmoteType
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_Emote.EEmoteType EmoteType
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EmoteType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Emote.EEmoteType>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
-    }
-
-    /// <summary>
-    /// Enum: EEmoteType
-    /// </summary>
-    public enum EEmoteType
-    {
-        Emote_Dazed = 0,
-        Emote_ExertLight = 1,
-        Emote_ExertMed = 2,
-        Emote_Fall = 3,
-        Emote_HurtCollapse = 4,
-        Emote_HurtLight = 5,
-        Emote_HurtMed = 6,
-        Emote_HurtStrong = 7,
-        Emote_HurtPassout = 8,
-        Emote_Kicked = 9,
-        Emote_Punched = 10,
-        Emote_Laugh = 11,
-        Emote_Muffled = 12,
-        Emote_RoarAngry = 13,
-        Emote_RoarThrown = 14,
-        Emote_StopMuffle = 15,
-        Emote_StopAll = 16,
-        Emote_MAX = 17,
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

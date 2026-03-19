@@ -5,8 +5,8 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxEvent_FSCommand<br/>
-/// (size = 248)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class GFxEvent_FSCommand : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -36,10 +36,19 @@ public partial class GFxEvent_FSCommand : BmSDK.Engine.SequenceEvent, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: Movie
     /// </summary>
-    public unsafe BmSDK.GFxUI.SwfMovie Movie
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Movie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.SwfMovie>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Handler
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Handler
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 388); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 
     /// <summary>
@@ -47,16 +56,7 @@ public partial class GFxEvent_FSCommand : BmSDK.Engine.SequenceEvent, BmSDK.IGam
     /// </summary>
     public unsafe BmSDK.FString FSCommand
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: Handler
-    /// </summary>
-    public unsafe BmSDK.GFxUI.GFxFSCmdHandler_Kismet Handler
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxFSCmdHandler_Kismet>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 }

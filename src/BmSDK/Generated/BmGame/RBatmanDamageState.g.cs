@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmanDamageState<br/>
-/// (size = 72)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBatmanDamageState : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {
@@ -36,63 +36,63 @@ public partial class RBatmanDamageState : BmSDK.BmGame.RConfig, BmSDK.IGameObjec
     /// <summary>
     /// ObjectProperty: BodyMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh BodyMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BodyMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: HeadMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh HeadMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeadMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
     /// ObjectProperty: BodyMaterial0
     /// </summary>
-    public unsafe BmSDK.Engine.Material BodyMaterial0
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BodyMaterial0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// ObjectProperty: BodyMaterial1
     /// </summary>
-    public unsafe BmSDK.Engine.Material BodyMaterial1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BodyMaterial1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
     /// ObjectProperty: HeadMaterial0
     /// </summary>
-    public unsafe BmSDK.Engine.Material HeadMaterial0
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeadMaterial0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
     /// ObjectProperty: HeadMaterial1
     /// </summary>
-    public unsafe BmSDK.Engine.Material HeadMaterial1
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeadMaterial1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
     /// ObjectProperty: CapeMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.Material CapeMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CapeMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Material>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 }

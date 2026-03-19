@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlFootPlacement<br/>
-/// (size = 272)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, BmSDK.IGameObject
 {
@@ -38,26 +38,26 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe float FootOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 
     /// <summary>
     /// ByteProperty: FootUpAxis
     /// </summary>
-    public unsafe BmSDK.GameObject.EAxis FootUpAxis
+    public unsafe byte FootUpAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>
     /// StructProperty: FootRotOffset
     /// </summary>
-    public unsafe BmSDK.Rotator FootRotOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FootRotOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe bool bInvertFootUpAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>
@@ -74,8 +74,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe bool bOrientFootToGround
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>
@@ -83,8 +83,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe bool bOnlyEnableForUpAdjustment
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 356); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 356); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe float MaxUpAdjustment
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe float MaxDownAdjustment
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 364); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 
     /// <summary>
@@ -110,7 +110,7 @@ public partial class SkelControlFootPlacement : BmSDK.Engine.SkelControlLimb, Bm
     /// </summary>
     public unsafe float MaxFootOrientAdjust
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

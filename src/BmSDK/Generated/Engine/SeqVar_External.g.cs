@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_External<br/>
-/// (size = 144)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqVar_External : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class SeqVar_External : BmSDK.Engine.SequenceVariable, BmSDK.IGam
     /// <summary>
     /// ClassProperty: ExpectedType
     /// </summary>
-    public unsafe BmSDK.Class ExpectedType
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ExpectedType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 
     /// <summary>
@@ -47,7 +47,43 @@ public partial class SeqVar_External : BmSDK.Engine.SequenceVariable, BmSDK.IGam
     /// </summary>
     public unsafe BmSDK.FString VariableLabel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUseDefaultValues
+    /// </summary>
+    public unsafe bool bUseDefaultValues
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+    }
+
+    /// <summary>
+    /// BoolProperty: DefaultBool
+    /// </summary>
+    public unsafe bool DefaultBool
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
+    }
+
+    /// <summary>
+    /// IntProperty: DefaultInt
+    /// </summary>
+    public unsafe int DefaultInt
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DefaultFloat
+    /// </summary>
+    public unsafe float DefaultFloat
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 }

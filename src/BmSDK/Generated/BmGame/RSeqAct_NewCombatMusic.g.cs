@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_NewCombatMusic<br/>
-/// (size = 272)
-/// (flags = 8396818)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -34,240 +34,29 @@ public partial class RSeqAct_NewCombatMusic : BmSDK.Engine.SeqAct_Latent, BmSDK.
     protected RSeqAct_NewCombatMusic(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
+    /// ArrayProperty: LatentActors
     /// </summary>
-    public unsafe static int GetObjClassVersion()
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> LatentActors
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
-    /// Function: StopAll
+    /// BoolProperty: bAborted
     /// </summary>
-    public unsafe void StopAll()
+    public unsafe bool bAborted
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.StopAll", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
     }
 
     /// <summary>
-    /// Function: StartIntro
+    /// FloatProperty: LatentActivationTime
     /// </summary>
-    public unsafe void StartIntro()
+    public unsafe float LatentActivationTime
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.StartIntro", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: OnAudioMarker
-    /// </summary>
-    public unsafe void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.OnAudioMarker", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AC, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerName, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: OnAudioMarkerIntro
-    /// </summary>
-    public unsafe void OnAudioMarkerIntro(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.OnAudioMarkerIntro", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AC, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(MarkerName, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: UpdateKOCounter
-    /// </summary>
-    public unsafe void UpdateKOCounter()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.UpdateKOCounter", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CheckForBMDead
-    /// </summary>
-    public unsafe bool CheckForBMDead(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.CheckForBMDead", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// Function: Update
-    /// </summary>
-    public unsafe bool Update(float DeltaTime)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_NewCombatMusic.Update", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// ComponentProperty: MusicAC
-    /// </summary>
-    public unsafe BmSDK.Engine.AudioComponent MusicAC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AudioComponent>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: IntroMusicAC
-    /// </summary>
-    public unsafe BmSDK.Engine.AudioComponent IntroMusicAC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AudioComponent>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
-    }
-
-    /// <summary>
-    /// ComponentProperty: OutroMusicAC
-    /// </summary>
-    public unsafe BmSDK.Engine.AudioComponent OutroMusicAC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AudioComponent>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
-    }
-
-    /// <summary>
-    /// IntProperty: MaxKO
-    /// </summary>
-    public unsafe int MaxKO
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
-
-    /// <summary>
-    /// IntProperty: BMDeadKO
-    /// </summary>
-    public unsafe int BMDeadKO
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
-    }
-
-    /// <summary>
-    /// IntProperty: BMDeadIncrease
-    /// </summary>
-    public unsafe int BMDeadIncrease
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
-    }
-
-    /// <summary>
-    /// FloatProperty: BMDeadIncreaseTimer
-    /// </summary>
-    public unsafe float BMDeadIncreaseTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
-    }
-
-    /// <summary>
-    /// FloatProperty: BMDeadIncreaseTimerCurrent
-    /// </summary>
-    public unsafe float BMDeadIncreaseTimerCurrent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
-    }
-
-    /// <summary>
-    /// IntProperty: WantedKO
-    /// </summary>
-    public unsafe int WantedKO
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
-    }
-
-    /// <summary>
-    /// IntProperty: ResetKoVal
-    /// </summary>
-    public unsafe int ResetKoVal
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bStarted
-    /// </summary>
-    public unsafe bool bStarted
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEndWanted
-    /// </summary>
-    public unsafe bool bEndWanted
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEndStarted
-    /// </summary>
-    public unsafe bool bEndStarted
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bBatmanDead
-    /// </summary>
-    public unsafe bool bBatmanDead
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 8) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 8) : (currentMask & ~8); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: RPC
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPlayerController RPC
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPlayerController>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
-    }
-
-    /// <summary>
-    /// FloatProperty: GameOverTimer
-    /// </summary>
-    public unsafe float GameOverTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 372); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
     }
 }

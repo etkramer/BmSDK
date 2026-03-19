@@ -5,10 +5,10 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCharacter_Robot<br/>
-/// (size = 408)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RCharacter_Robot : BmSDK.BmGame.RCharacter, BmSDK.IGameObject
+public partial class RCharacter_Robot : BmSDK.BmGame.RCharacter_Thug, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -33,4 +33,12 @@ public partial class RCharacter_Robot : BmSDK.BmGame.RCharacter, BmSDK.IGameObje
     /// </summary>
     protected RCharacter_Robot(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: CanOnlyBeHitBy
+    /// </summary>
+    public unsafe BmSDK.FName CanOnlyBeHitBy
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
+    }
 }

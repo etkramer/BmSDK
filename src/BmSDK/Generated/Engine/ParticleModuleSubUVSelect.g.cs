@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSubUVSelect<br/>
-/// (size = 84)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSubUVSelect : BmSDK.Engine.ParticleModuleSubUVBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleSubUVSelect : BmSDK.Engine.ParticleModuleSubU
     /// <summary>
     /// StructProperty: SubImageSelect
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubImageSelect
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SubImageSelect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

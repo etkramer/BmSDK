@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryStaticMesh<br/>
-/// (size = 108)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryStaticMesh : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ActorFactoryStaticMesh : BmSDK.Engine.ActorFactory, BmSDK.I
     /// <summary>
     /// ObjectProperty: StaticMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMesh StaticMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMesh>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// StructProperty: DrawScale3D
     /// </summary>
-    public unsafe System.Numerics.Vector3 DrawScale3D
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DrawScale3D
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 }

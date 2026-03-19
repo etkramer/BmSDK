@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMapPlacementMarker<br/>
-/// (size = 448)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,19 +71,46 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ByteProperty: MarkerType
     /// </summary>
-    public unsafe BmSDK.BmGame.RMapPlacementMarker.MapMarkerType MarkerType
+    public unsafe byte MarkerType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RMapPlacementMarker.MapMarkerType>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
     /// ByteProperty: Zone
     /// </summary>
-    public unsafe BmSDK.BmGame.RPersistentData.ERiddlerLocationName Zone
+    public unsafe byte Zone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.ERiddlerLocationName>(Ptr + 429); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 429); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 669); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 669); }
+    }
+
+    /// <summary>
+    /// ByteProperty: LabelType
+    /// </summary>
+    public unsafe byte LabelType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 670); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 670); }
+    }
+
+    /// <summary>
+    /// ByteProperty: GroupingArea
+    /// </summary>
+    public unsafe byte GroupingArea
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 671); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 671); }
+    }
+
+    /// <summary>
+    /// ByteProperty: GroupingRange
+    /// </summary>
+    public unsafe byte GroupingRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
     /// <summary>
@@ -91,8 +118,8 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe int Index
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
@@ -100,8 +127,186 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString StringName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// StrProperty: SubType
+    /// </summary>
+    public unsafe BmSDK.FString SubType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bLabelAlwaysVisible
+    /// </summary>
+    public unsafe bool bLabelAlwaysVisible
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bLabelSupportsFlip
+    /// </summary>
+    public unsafe bool bLabelSupportsFlip
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUseOxyFromRockHighlightVolume
+    /// </summary>
+    public unsafe bool bUseOxyFromRockHighlightVolume
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlaceHudTargetExactlyHere
+    /// </summary>
+    public unsafe bool bPlaceHudTargetExactlyHere
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bNoProjectedBatSignal
+    /// </summary>
+    public unsafe bool bNoProjectedBatSignal
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bShowParkingMarker
+    /// </summary>
+    public unsafe bool bShowParkingMarker
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSatnavToRoadAtSameHeight
+    /// </summary>
+    public unsafe bool bSatnavToRoadAtSameHeight
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSatnavAllowArmouredRoads
+    /// </summary>
+    public unsafe bool bSatnavAllowArmouredRoads
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSatnavToRoadBelow
+    /// </summary>
+    public unsafe bool bSatnavToRoadBelow
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// IntProperty: FloatUpAdjust
+    /// </summary>
+    public unsafe int FloatUpAdjust
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+
+    /// <summary>
+    /// StrProperty: CustomFlags
+    /// </summary>
+    public unsafe BmSDK.FString CustomFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+
+    /// <summary>
+    /// IntProperty: Oxy
+    /// </summary>
+    public unsafe int Oxy
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
+
+    /// <summary>
+    /// Enum: MMTFlags
+    /// </summary>
+    public enum MMTFlags
+    {
+        MMTFlag_NoHitTest = 0,
+        MMTFlag_NoProjectUp = 1,
+        MMTFlag_AlwaysVisible = 2,
+        MMTFlag_IsNew = 3,
+        MMTFlag_NoYTargetting = 4,
+        MMTFlag_PlaceHudTargetExactlyHere = 5,
+        MMTFlag_LabelFlips = 6,
+        MMTFlag_NoProjectedBatSignal = 7,
+        MMTFlag_ShowParkingMarker = 8,
+        MMTFlag_SatnavToRoadAtSameHeight = 9,
+        MMTFlag_IsInFearGas = 10,
+        MMTFlag_SatnavAllowArmouredRoads = 11,
+        MMTFlag_SatnavToRoadBelow = 12,
+        MMTFlag_RiddlerCameoNoRange = 13,
+        MMTFlag_RiddlerCameoShortRange = 14,
+        MMTFlag_RiddlerCameoLongRange = 15,
+        MMTFlag_MAX = 16,
+    }
+
+    /// <summary>
+    /// Enum: MapGroupRange
+    /// </summary>
+    public enum MapGroupRange
+    {
+        MGR_Always = 0,
+        MGR_NearOnly = 1,
+        MGR_MidOnly = 2,
+        MGR_FarOnly = 3,
+        MGR_MAX = 4,
+    }
+
+    /// <summary>
+    /// Enum: MapGroupArea
+    /// </summary>
+    public enum MapGroupArea
+    {
+        MGA_Any = 0,
+        MGA_CityX = 1,
+        MGA_CityY = 2,
+        MGA_CityZ = 3,
+        MGA_MAX = 4,
+    }
+
+    /// <summary>
+    /// Enum: MapLabelType
+    /// </summary>
+    public enum MapLabelType
+    {
+        MLT_BigArea = 0,
+        MLT_Area = 1,
+        MLT_Road = 2,
+        MLT_Feature1 = 3,
+        MLT_Feature2 = 4,
+        MLT_MAX = 5,
     }
 
     /// <summary>
@@ -110,15 +315,34 @@ public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
     public enum MapMarkerType
     {
         MMT_Objective = 0,
-        MMT_CrimeScene = 1,
-        MMT_Riddle = 2,
-        MMT_RiddleProjectedQ = 3,
-        MMT_Cipher = 4,
-        MMT_Officer = 5,
-        MMT_PointOfInterest = 6,
-        MMT_ARTraining = 7,
-        MMT_ThugAssult = 8,
-        MMT_SecurityCamera = 9,
-        MMT_MAX = 10,
+        MMT_ObjectiveBatmobile = 1,
+        MMT_CrimeScene = 2,
+        MMT_Riddle = 3,
+        MMT_RiddleBomb = 4,
+        MMT_RiddleProjectedQ = 5,
+        MMT_Cipher = 6,
+        MMT_Officer = 7,
+        MMT_PointOfInterest = 8,
+        MMT_ARChallenge = 9,
+        MMT_ThugAssult = 10,
+        MMT_SecurityCamera = 11,
+        MMT_SideStoryIcon = 12,
+        MMT_BuildingMarker = 13,
+        MMT_Label = 14,
+        MMT_RiddlerRace = 15,
+        MMT_MAX = 16,
+    }
+
+    /// <summary>
+    /// Enum: MapFilterType
+    /// </summary>
+    public enum MapFilterType
+    {
+        MFT_None = 0,
+        MFT_Main = 1,
+        MFT_Secret = 2,
+        MFT_Challenge = 3,
+        MFT_Militia = 4,
+        MFT_MAX = 5,
     }
 }

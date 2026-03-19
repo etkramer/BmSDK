@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawLightRadiusComponent<br/>
-/// (size = 424)
-/// (flags = 2155884946)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DrawLightRadiusComponent : BmSDK.Engine.DrawSphereComponent, BmSDK.IGameObject
 {
@@ -33,4 +33,66 @@ public partial class DrawLightRadiusComponent : BmSDK.Engine.DrawSphereComponent
     /// </summary>
     protected DrawLightRadiusComponent(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: SphereColor
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SphereColor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SphereMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SphereMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SphereRadius
+    /// </summary>
+    public unsafe float SphereRadius
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
+
+    /// <summary>
+    /// IntProperty: SphereSides
+    /// </summary>
+    public unsafe int SphereSides
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDrawWireSphere
+    /// </summary>
+    public unsafe bool bDrawWireSphere
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 560); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDrawLitSphere
+    /// </summary>
+    public unsafe bool bDrawLitSphere
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 560); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDrawOnlyIfSelected
+    /// </summary>
+    public unsafe bool bDrawOnlyIfSelected
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 560); }
+    }
 }

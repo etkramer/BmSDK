@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_CatchLedge<br/>
-/// (size = 372)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveCo
     /// </summary>
     public unsafe BmSDK.FName PreCatchPose
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 
     /// <summary>
@@ -47,26 +47,26 @@ public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveCo
     /// </summary>
     public unsafe float MaxCorrectionAccel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 356); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 464); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 464); }
     }
 
     /// <summary>
     /// ObjectProperty: InstantClimbUpMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig InstantClimbUpMove
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstantClimbUpMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 360); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
     }
 
     /// <summary>
     /// ObjectProperty: InstantClimbOntoRailingMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig InstantClimbOntoRailingMove
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT InstantClimbOntoRailingMove
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(Ptr + 364); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 476); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 476); }
     }
 
     /// <summary>
@@ -74,7 +74,7 @@ public partial class RSpecialMoveConfig_CatchLedge : BmSDK.BmGame.RSpecialMoveCo
     /// </summary>
     public unsafe float LongFallAnimSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 368); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 484); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
     }
 }

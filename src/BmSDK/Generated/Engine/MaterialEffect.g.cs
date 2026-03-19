@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialEffect<br/>
-/// (size = 88)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class MaterialEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: Material
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface Material
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Material
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxGenericForceFieldCapsule<br/>
-/// (size = 660)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceField, BmSDK.IGameObject
 {
@@ -71,10 +71,10 @@ public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceFie
     /// <summary>
     /// ComponentProperty: RenderComponent
     /// </summary>
-    public unsafe BmSDK.Engine.DrawCapsuleComponent RenderComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawCapsuleComponent>(Ptr + 648); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 648); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 912); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 912); }
     }
 
     /// <summary>
@@ -82,8 +82,8 @@ public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceFie
     /// </summary>
     public unsafe float CapsuleHeight
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 652); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 920); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 920); }
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceFie
     /// </summary>
     public unsafe float CapsuleRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 656); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 924); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 924); }
     }
 }

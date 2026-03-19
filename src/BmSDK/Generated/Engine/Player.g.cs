@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Player<br/>
-/// (size = 80)
-/// (flags = 134217886)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,40 +34,21 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     protected Player(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SwitchController
-    /// </summary>
-    public unsafe void SwitchController(BmSDK.Engine.PlayerController PC)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Player.SwitchController", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe System.IntPtr VfTable_FExec
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FExec
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: Actor
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerController Actor
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Actor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -75,8 +56,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int CurrentNetSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -84,8 +65,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int ConfiguredInternetSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>
@@ -93,8 +74,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int ConfiguredLanSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -102,8 +83,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float PP_DesaturationMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -111,8 +92,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float PP_HighlightsMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -120,8 +101,8 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float PP_MidTonesMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
@@ -129,7 +110,7 @@ public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float PP_ShadowsMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 }

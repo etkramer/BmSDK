@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Ladder<br/>
-/// (size = 636)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {
@@ -69,32 +69,20 @@ public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: SuggestMovePreparation
-    /// </summary>
-    public unsafe bool SuggestMovePreparation(BmSDK.Engine.Pawn Other)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Ladder.SuggestMovePreparation", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
-
-    /// <summary>
     /// ObjectProperty: MyLadder
     /// </summary>
-    public unsafe BmSDK.Engine.LadderVolume MyLadder
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MyLadder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LadderVolume>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 944); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 944); }
     }
 
     /// <summary>
     /// ObjectProperty: LadderList
     /// </summary>
-    public unsafe BmSDK.Engine.Ladder LadderList
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LadderList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Ladder>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 952); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 952); }
     }
 }

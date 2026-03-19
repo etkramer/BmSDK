@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionSphericalMapping<br/>
-/// (size = 93)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialE
     /// <summary>
     /// ByteProperty: SphericalMappingType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionSphericalMapping.ESphericalMappingType SphericalMappingType
+    public unsafe byte SphericalMappingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSphericalMapping.ESphericalMappingType>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>

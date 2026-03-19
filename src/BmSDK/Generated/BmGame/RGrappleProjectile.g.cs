@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RGrappleProjectile<br/>
-/// (size = 568)
-/// (flags = 8388627)
+/// Class: RGrappleProjectile<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
     }
 
     internal RGrappleProjectile() { }
+
+    /// <summary>
+    /// Constructs a new RGrappleProjectile
+    /// </summary>
+    public RGrappleProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGrappleProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -64,46 +69,11 @@ public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSD
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: Hide
-    /// </summary>
-    public unsafe void Hide(bool NewHidden)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.Hide", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewHidden, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ReachedDest
-    /// </summary>
-    public unsafe void ReachedDest()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.ReachedDest", true);
-        byte* paramsPtr = stackalloc byte[116];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Fire
-    /// </summary>
-    public unsafe void Fire(System.Numerics.Vector3 To)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrappleProjectile.Fire", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(To, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: AttachOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 AttachOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttachOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 556); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 852); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
     }
 }

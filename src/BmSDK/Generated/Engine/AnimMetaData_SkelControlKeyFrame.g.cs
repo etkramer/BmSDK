@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimMetaData_SkelControlKeyFrame<br/>
-/// (size = 80)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimMetaData_SkelControlKeyFrame : BmSDK.Engine.AnimMetaData_SkelControl, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class AnimMetaData_SkelControlKeyFrame : BmSDK.Engine.AnimMetaDat
     /// <summary>
     /// ArrayProperty: KeyFrames
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSequence.FTimeModifier> KeyFrames
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> KeyFrames
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSequence.FTimeModifier>>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

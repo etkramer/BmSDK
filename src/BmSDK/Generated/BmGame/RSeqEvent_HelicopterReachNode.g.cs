@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_HelicopterReachNode<br/>
-/// (size = 232)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_HelicopterReachNode : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RSeqEvent_HelicopterReachNode : BmSDK.Engine.SequenceEvent,
     /// <summary>
     /// ObjectProperty: TargetPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPatrolPoint TargetPoint
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPatrolPoint>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

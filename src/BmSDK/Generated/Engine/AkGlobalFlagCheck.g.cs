@@ -1,0 +1,44 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.Engine;
+
+/// <summary>
+/// Class: AkGlobalFlagCheck<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class AkGlobalFlagCheck : BmSDK.Engine.AkPredicate, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.AkGlobalFlagCheck", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal AkGlobalFlagCheck() { }
+
+    /// <summary>
+    /// Constructs a new AkGlobalFlagCheck
+    /// </summary>
+    public AkGlobalFlagCheck(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkGlobalFlagCheck Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected AkGlobalFlagCheck(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// StructProperty: VfTable_AkEvaluate
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_AkEvaluate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+}

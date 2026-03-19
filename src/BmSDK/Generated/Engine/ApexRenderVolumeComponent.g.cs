@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexRenderVolumeComponent<br/>
-/// (size = 412)
-/// (flags = 2290102418)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ApexRenderVolumeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ApexRenderVolumeComponent : BmSDK.Engine.PrimitiveComponent
     /// <summary>
     /// StructProperty: ApexRenderVolume
     /// </summary>
-    public unsafe System.IntPtr ApexRenderVolume
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ApexRenderVolume
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
     /// <summary>
     /// StructProperty: ViewRelevance
     /// </summary>
-    public unsafe System.IntPtr ViewRelevance
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ViewRelevance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 }

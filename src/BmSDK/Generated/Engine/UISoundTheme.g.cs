@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UISoundTheme<br/>
-/// (size = 56)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,31 +34,18 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     protected UISoundTheme(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: ProcessSoundEvent
-    /// </summary>
-    public unsafe void ProcessSoundEvent(BmSDK.FName SoundEventName, BmSDK.Engine.PlayerController SoundOwner = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UISoundTheme.ProcessSoundEvent", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundEventName, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SoundOwner, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ArrayProperty: SoundEventBindings
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.UISoundTheme.FSoundEventMapping> SoundEventBindings
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SoundEventBindings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.UISoundTheme.FSoundEventMapping>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// Struct: FSoundEventMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 12)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FSoundEventMapping
     {
         /// <summary>
@@ -73,9 +60,9 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: SoundToPlay
         /// </summary>
-        public unsafe BmSDK.Engine.SoundCue SoundToPlay
+        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SoundToPlay
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SoundCue>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }

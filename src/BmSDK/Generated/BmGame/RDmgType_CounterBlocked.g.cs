@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_CounterBlocked<br/>
-/// (size = 148)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDmgType_CounterBlocked : BmSDK.BmGame.RDmgType_CounterWeak, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class RDmgType_CounterBlocked : BmSDK.BmGame.RDmgType_CounterWeak
     /// </summary>
     protected RDmgType_CounterBlocked(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// IntProperty: AlignmentPad
+    /// </summary>
+    public unsafe int AlignmentPad
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+    }
+
+    /// <summary>
+    /// ByteProperty: CounterStrength
+    /// </summary>
+    public unsafe byte CounterStrength
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
 }

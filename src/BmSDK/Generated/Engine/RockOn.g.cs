@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RockOn<br/>
-/// (size = 244)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGameObject
 {
@@ -36,28 +36,28 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// <summary>
     /// StructProperty: SceneShadows
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneShadows
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneShadows
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// StructProperty: SceneHighLights
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneHighLights
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneHighLights
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 192); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
     /// StructProperty: SceneMidTones
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneMidTones
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneMidTones
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
     }
 
     /// <summary>
@@ -65,17 +65,17 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// </summary>
     public unsafe float SceneDesaturation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: SceneColorize
     /// </summary>
-    public unsafe System.Numerics.Vector3 SceneColorize
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneColorize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
@@ -83,25 +83,25 @@ public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGame
     /// </summary>
     public unsafe float MotionBlurSoftEdgeKernelSize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableImageGrain
-    /// </summary>
-    public unsafe bool bEnableImageGrain
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 236); }
-    }
-
-    /// <summary>
-    /// FloatProperty: SceneImageGrainScale
-    /// </summary>
-    public unsafe float SceneImageGrainScale
-    {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 240); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
+    }
+
+    /// <summary>
+    /// FloatProperty: EdgeDetectionThreshold
+    /// </summary>
+    public unsafe float EdgeDetectionThreshold
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+    }
+
+    /// <summary>
+    /// ByteProperty: PostProcessAAType
+    /// </summary>
+    public unsafe byte PostProcessAAType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_GetDistance<br/>
-/// (size = 208)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_GetDistance : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,11 +34,20 @@ public partial class SeqAct_GetDistance : BmSDK.Engine.SequenceAction, BmSDK.IGa
     protected SeqAct_GetDistance(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// BoolProperty: bGet2DDistance
+    /// </summary>
+    public unsafe bool bGet2DDistance
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 352); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 352); }
+    }
+
+    /// <summary>
     /// FloatProperty: Distance
     /// </summary>
     public unsafe float Distance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendByPosture<br/>
-/// (size = 260)
-/// (flags = 144703634)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendByPosture : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGameObject
 {
@@ -33,4 +33,75 @@ public partial class AnimNodeBlendByPosture : BmSDK.Engine.AnimNodeBlendList, Bm
     /// </summary>
     protected AnimNodeBlendByPosture(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: TargetWeight
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> TargetWeight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
+
+    /// <summary>
+    /// FloatProperty: BlendTimeToGo
+    /// </summary>
+    public unsafe float BlendTimeToGo
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 320); }
+    }
+
+    /// <summary>
+    /// IntProperty: ActiveChildIndex
+    /// </summary>
+    public unsafe int ActiveChildIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlayActiveChild
+    /// </summary>
+    public unsafe bool bPlayActiveChild
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bForceChildFullWeightWhenBecomingRelevant
+    /// </summary>
+    public unsafe bool bForceChildFullWeightWhenBecomingRelevant
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSkipBlendWhenNotRendered
+    /// </summary>
+    public unsafe bool bSkipBlendWhenNotRendered
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 328); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SliderPosition
+    /// </summary>
+    public unsafe float SliderPosition
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+    }
+
+    /// <summary>
+    /// IntProperty: EditorActiveChildIndex
+    /// </summary>
+    public unsafe int EditorActiveChildIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+    }
 }

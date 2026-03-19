@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_AlignedPoseTransition<br/>
-/// (size = 352)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_AlignedPoseTransition : BmSDK.BmGame.RSpecialMoveConfig_PoseTransition, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class RSpecialMoveConfig_AlignedPoseTransition : BmSDK.BmGame.RSp
     /// <summary>
     /// StructProperty: Offset
     /// </summary>
-    public unsafe System.Numerics.Vector3 Offset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Offset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RSpecialMoveConfig_AlignedPoseTransition : BmSDK.BmGame.RSp
     /// </summary>
     public unsafe int YawOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class RSpecialMoveConfig_AlignedPoseTransition : BmSDK.BmGame.RSp
     /// </summary>
     public unsafe float CameraLagTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 456); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
     }
 }

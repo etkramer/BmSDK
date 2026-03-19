@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceFieldExcludeVolume<br/>
-/// (size = 476)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RB_ForceFieldExcludeVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -73,7 +73,16 @@ public partial class RB_ForceFieldExcludeVolume : BmSDK.Engine.Volume, BmSDK.IGa
     /// </summary>
     public unsafe int ForceFieldChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+    }
+
+    /// <summary>
+    /// IntProperty: SceneIndex
+    /// </summary>
+    public unsafe int SceneIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGrappleGunBm<br/>
-/// (size = 1732)
-/// (flags = 8388658)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGrappleGunBm : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject
 {
@@ -69,56 +69,29 @@ public partial class RGrappleGunBm : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: SucceedBoost
+    /// ComponentProperty: MuzzleFlash
     /// </summary>
-    public unsafe void SucceedBoost()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MuzzleFlash
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrappleGunBm.SucceedBoost", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 3668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3668); }
     }
 
     /// <summary>
-    /// Function: GrappleBoostFailTimeout
+    /// ArrayProperty: UpgradeMeshes
     /// </summary>
-    public unsafe void GrappleBoostFailTimeout()
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>> UpgradeMeshes
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrappleGunBm.GrappleBoostFailTimeout", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>>>(Ptr + 3676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3676); }
     }
 
     /// <summary>
-    /// Function: FailedBoost
+    /// ArrayProperty: UpgradeMaterials
     /// </summary>
-    public unsafe void FailedBoost()
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>> UpgradeMaterials
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrappleGunBm.FailedBoost", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: AttachToHand
-    /// </summary>
-    public unsafe void AttachToHand(BmSDK.FName CustomBone = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrappleGunBm.AttachToHand", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(CustomBone, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// ObjectProperty: BoostedGrappleGunMesh
-    /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh BoostedGrappleGunMesh
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 1728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.BmGame.RGrappleGun.EscapeHidePoints>>>>>(Ptr + 3692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3692); }
     }
 }

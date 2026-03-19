@@ -4,11 +4,11 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: AkAsset<br/>
-/// (size = 56)
-/// (flags = 134217875)
+/// Class: AkAsset<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class AkAsset : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
+public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -24,16 +24,21 @@ public partial class AkAsset : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     internal AkAsset() { }
 
     /// <summary>
+    /// Constructs a new AkAsset
+    /// </summary>
+    public AkAsset(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkAsset Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected AkAsset(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: RequiredAssetPack
+    /// ObjectProperty: ParentBank
     /// </summary>
-    public unsafe BmSDK.Engine.AkAssetPack RequiredAssetPack
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentBank
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkAssetPack>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

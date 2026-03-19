@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: REnvironmentSpecialMoveWrapperFalling<br/>
-/// (size = 100)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvironmentSpecialMoveWrapper, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvir
     /// </summary>
     public unsafe float MinFallSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
@@ -47,7 +47,16 @@ public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvir
     /// </summary>
     public unsafe float MaxFallSpeed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// NameProperty: RequiredState
+    /// </summary>
+    public unsafe BmSDK.FName RequiredState
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 }

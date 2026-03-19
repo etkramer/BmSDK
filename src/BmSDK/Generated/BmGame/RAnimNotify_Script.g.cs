@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Script<br/>
-/// (size = 68)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Script : BmSDK.Engine.AnimNotify_Script, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class RAnimNotify_Script : BmSDK.Engine.AnimNotify_Script, BmSDK.
     /// </summary>
     protected RAnimNotify_Script(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// BoolProperty: EnableExitNotify
+    /// </summary>
+    public unsafe bool EnableExitNotify
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
+    }
+
+    /// <summary>
+    /// NameProperty: ExitNotifyName
+    /// </summary>
+    public unsafe BmSDK.FName ExitNotifyName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+    }
 }

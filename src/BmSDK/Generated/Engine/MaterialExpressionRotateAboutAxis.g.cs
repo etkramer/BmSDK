@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionRotateAboutAxis<br/>
-/// (size = 176)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionRotateAboutAxis : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,27 +36,27 @@ public partial class MaterialExpressionRotateAboutAxis : BmSDK.Engine.MaterialEx
     /// <summary>
     /// StructProperty: NormalizedRotationAxisAndAngle
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput NormalizedRotationAxisAndAngle
+    public unsafe BmSDK.Engine.MaterialExpressionRotateAboutAxis.PositionOnAxis NormalizedRotationAxisAndAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRotateAboutAxis.PositionOnAxis>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: PositionOnAxis
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput PositionOnAxis
+    public unsafe BmSDK.Engine.MaterialExpressionRotateAboutAxis.Position PositionOnAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRotateAboutAxis.Position>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Position
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Position
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Position
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 }

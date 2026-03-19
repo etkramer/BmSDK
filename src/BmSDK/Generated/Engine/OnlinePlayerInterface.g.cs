@@ -4,334 +4,199 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Interface: OnlinePlayerInterface<br/>
-/// (size = 296)
-/// (flags = 16403)
+/// Class: OnlinePlayerInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface OnlinePlayerInterface : BmSDK.Interface
+public partial class OnlinePlayerInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: GetAchievements
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EOnlineEnumerationReadState GetAchievements(byte LocalUserNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FAchievementDetails> Achievements, int TitleId = default);
-
-    /// <summary>
-    /// Function: ClearReadAchievementsCompleteDelegate
-    /// </summary>
-    public unsafe void ClearReadAchievementsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadAchievementsCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddReadAchievementsCompleteDelegate
-    /// </summary>
-    public unsafe void AddReadAchievementsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadAchievementsCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnReadAchievementsComplete
-    /// </summary>
-    public unsafe void OnReadAchievementsComplete(int TitleId);
-
-    /// <summary>
-    /// Function: ReadAchievements
-    /// </summary>
-    public unsafe bool ReadAchievements(byte LocalUserNum, int TitleId = default, bool bShouldReadText = default, bool bShouldReadImages = default);
-
-    /// <summary>
-    /// Function: ClearUnlockAchievementCompleteDelegate
-    /// </summary>
-    public unsafe void ClearUnlockAchievementCompleteDelegate(byte LocalUserNum, System.IntPtr UnlockAchievementCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddUnlockAchievementCompleteDelegate
-    /// </summary>
-    public unsafe void AddUnlockAchievementCompleteDelegate(byte LocalUserNum, System.IntPtr UnlockAchievementCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnUnlockAchievementComplete
-    /// </summary>
-    public unsafe void OnUnlockAchievementComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: UnlockAchievement
-    /// </summary>
-    public unsafe bool UnlockAchievement(byte LocalUserNum, int AchievementId);
-
-    /// <summary>
-    /// Function: OnFriendMessageReceived
-    /// </summary>
-    public unsafe void OnFriendMessageReceived(byte LocalUserNum, BmSDK.Engine.OnlineSubsystem.FUniqueNetId SendingPlayer, BmSDK.FString SendingNick, BmSDK.FString Message);
-
-    /// <summary>
-    /// Function: OnJoinFriendGameComplete
-    /// </summary>
-    public unsafe void OnJoinFriendGameComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: OnReceivedGameInvite
-    /// </summary>
-    public unsafe void OnReceivedGameInvite(byte LocalUserNum, BmSDK.FString InviterName);
-
-    /// <summary>
-    /// Function: OnFriendInviteReceived
-    /// </summary>
-    public unsafe void OnFriendInviteReceived(byte LocalUserNum, BmSDK.Engine.OnlineSubsystem.FUniqueNetId RequestingPlayer, BmSDK.FString RequestingNick, BmSDK.FString Message);
-
-    /// <summary>
-    /// Function: OnAddFriendByNameComplete
-    /// </summary>
-    public unsafe void OnAddFriendByNameComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: GetKeyboardInputResults
-    /// </summary>
-    public unsafe BmSDK.FString GetKeyboardInputResults(out byte bWasCanceled);
-
-    /// <summary>
-    /// Function: ClearKeyboardInputDoneDelegate
-    /// </summary>
-    public unsafe void ClearKeyboardInputDoneDelegate(System.IntPtr InputDelegate);
-
-    /// <summary>
-    /// Function: AddKeyboardInputDoneDelegate
-    /// </summary>
-    public unsafe void AddKeyboardInputDoneDelegate(System.IntPtr InputDelegate);
-
-    /// <summary>
-    /// Function: OnKeyboardInputComplete
-    /// </summary>
-    public unsafe void OnKeyboardInputComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ShowKeyboardUI
-    /// </summary>
-    public unsafe bool ShowKeyboardUI(byte LocalUserNum, BmSDK.FString TitleText, BmSDK.FString DescriptionText, bool bIsPassword = default, bool bShouldValidate = default, BmSDK.FString DefaultText = default, int MaxResultLength = default);
-
-    /// <summary>
-    /// Function: SetOnlineStatus
-    /// </summary>
-    public unsafe void SetOnlineStatus(byte LocalUserNum, int StatusId, out BmSDK.TArray<BmSDK.Engine.Settings.FLocalizedStringSetting> LocalizedStringSettings, out BmSDK.TArray<BmSDK.Engine.Settings.FSettingsProperty> Properties);
-
-    /// <summary>
-    /// Function: GetFriendsList
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EOnlineEnumerationReadState GetFriendsList(byte LocalUserNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineFriend> Friends, int Count = default, int StartingAt = default);
-
-    /// <summary>
-    /// Function: ClearReadFriendsCompleteDelegate
-    /// </summary>
-    public unsafe void ClearReadFriendsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadFriendsCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddReadFriendsCompleteDelegate
-    /// </summary>
-    public unsafe void AddReadFriendsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadFriendsCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnReadFriendsComplete
-    /// </summary>
-    public unsafe void OnReadFriendsComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ReadFriendsList
-    /// </summary>
-    public unsafe bool ReadFriendsList(byte LocalUserNum, int Count = default, int StartingAt = default);
-
-    /// <summary>
-    /// Function: OnWritePlayerStorageComplete
-    /// </summary>
-    public unsafe void OnWritePlayerStorageComplete(byte LocalUserNum, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: GetPlayerStorage
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlinePlayerStorage GetPlayerStorage(byte LocalUserNum);
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlinePlayerInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
 
-    /// <summary>
-    /// Function: OnReadPlayerStorageForNetIdComplete
-    /// </summary>
-    public unsafe void OnReadPlayerStorageForNetIdComplete(BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetId, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ClearReadPlayerStorageCompleteDelegate
-    /// </summary>
-    public unsafe void ClearReadPlayerStorageCompleteDelegate(byte LocalUserNum, System.IntPtr ReadPlayerStorageCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddReadPlayerStorageCompleteDelegate
-    /// </summary>
-    public unsafe void AddReadPlayerStorageCompleteDelegate(byte LocalUserNum, System.IntPtr ReadPlayerStorageCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnReadPlayerStorageComplete
-    /// </summary>
-    public unsafe void OnReadPlayerStorageComplete(byte LocalUserNum, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ReadPlayerStorage
-    /// </summary>
-    public unsafe bool ReadPlayerStorage(byte LocalUserNum, BmSDK.Engine.OnlinePlayerStorage PlayerStorage, int DeviceID = default);
-
-    /// <summary>
-    /// Function: OnWriteProfileSettingsComplete
-    /// </summary>
-    public unsafe void OnWriteProfileSettingsComplete(byte LocalUserNum, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: GetProfileSettings
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineProfileSettings GetProfileSettings(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: ClearReadProfileSettingsCompleteDelegate
-    /// </summary>
-    public unsafe void ClearReadProfileSettingsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadProfileSettingsCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddReadProfileSettingsCompleteDelegate
-    /// </summary>
-    public unsafe void AddReadProfileSettingsCompleteDelegate(byte LocalUserNum, System.IntPtr ReadProfileSettingsCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnReadProfileSettingsComplete
-    /// </summary>
-    public unsafe void OnReadProfileSettingsComplete(byte LocalUserNum, bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ReadProfileSettings
-    /// </summary>
-    public unsafe bool ReadProfileSettings(byte LocalUserNum, BmSDK.Engine.OnlineProfileSettings ProfileSettings);
-
-    /// <summary>
-    /// Function: ClearFriendsChangeDelegate
-    /// </summary>
-    public unsafe void ClearFriendsChangeDelegate(byte LocalUserNum, System.IntPtr FriendsDelegate);
-
-    /// <summary>
-    /// Function: AddFriendsChangeDelegate
-    /// </summary>
-    public unsafe void AddFriendsChangeDelegate(byte LocalUserNum, System.IntPtr FriendsDelegate);
-
-    /// <summary>
-    /// Function: AddMutingChangeDelegate
-    /// </summary>
-    public unsafe void AddMutingChangeDelegate(System.IntPtr MutingDelegate);
-
-    /// <summary>
-    /// Function: ClearLoginCancelledDelegate
-    /// </summary>
-    public unsafe void ClearLoginCancelledDelegate(System.IntPtr CancelledDelegate);
-
-    /// <summary>
-    /// Function: AddLoginCancelledDelegate
-    /// </summary>
-    public unsafe void AddLoginCancelledDelegate(System.IntPtr CancelledDelegate);
-
-    /// <summary>
-    /// Function: OnLoginStatusChange
-    /// </summary>
-    public unsafe void OnLoginStatusChange(BmSDK.Engine.OnlineSubsystem.ELoginStatus NewStatus, BmSDK.Engine.OnlineSubsystem.FUniqueNetId NewId);
-
-    /// <summary>
-    /// Function: ClearLoginChangeDelegate
-    /// </summary>
-    public unsafe void ClearLoginChangeDelegate(System.IntPtr LoginDelegate);
-
-    /// <summary>
-    /// Function: AddLoginChangeDelegate
-    /// </summary>
-    public unsafe void AddLoginChangeDelegate(System.IntPtr LoginDelegate);
-
-    /// <summary>
-    /// Function: IsFriend
-    /// </summary>
-    public unsafe bool IsFriend(byte LocalUserNum, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID);
-
-    /// <summary>
-    /// Function: CanShowPresenceInformation
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EFeaturePrivilegeLevel CanShowPresenceInformation(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: CanViewPlayerProfiles
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EFeaturePrivilegeLevel CanViewPlayerProfiles(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: CanPurchaseContent
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EFeaturePrivilegeLevel CanPurchaseContent(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: CanDownloadUserContent
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EFeaturePrivilegeLevel CanDownloadUserContent(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: CanPlayOnline
-    /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.EFeaturePrivilegeLevel CanPlayOnline(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: IsOnlineAccount
-    /// </summary>
-    public unsafe bool IsOnlineAccount(byte LocalUserNum);
-
-    /// <summary>
-    /// Function: IsGuestLogin
-    /// </summary>
-    public unsafe bool IsGuestLogin(byte LocalUserNum);
+    internal OnlinePlayerInterface() { }
 
     /// <summary>
-    /// Function: GetPlayerNickname
+    /// Constructs a new OnlinePlayerInterface
     /// </summary>
-    public unsafe BmSDK.FString GetPlayerNickname(byte LocalUserNum);
+    public OnlinePlayerInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlinePlayerInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
-    /// Function: GetUniquePlayerId
+    /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    public unsafe bool GetUniquePlayerId(byte LocalUserNum, out BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID);
+    protected OnlinePlayerInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetLoginStatus
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.ELoginStatus GetLoginStatus(byte LocalUserNum);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
-    /// Function: OnLogoutCompleted
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe void OnLogoutCompleted(bool bWasSuccessful);
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
 
     /// <summary>
-    /// Function: ClearLoginFailedDelegate
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    public unsafe void ClearLoginFailedDelegate(byte LocalUserNum, System.IntPtr LoginDelegate);
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
 
     /// <summary>
-    /// Function: OnLoginFailed
+    /// IntProperty: HashIndexPrev
     /// </summary>
-    public unsafe void OnLoginFailed(byte LocalUserNum, BmSDK.Engine.OnlineSubsystem.EOnlineServerConnectionStatus ErrorCode);
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
-    /// Function: ShowLoginUI
+    /// IntProperty: HashIndexNext
     /// </summary>
-    public unsafe bool ShowLoginUI(bool bShowOnlineOnly = default);
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
-    /// Function: OnFriendsChange
+    /// IntProperty: HashOuterIndexPrev
     /// </summary>
-    public unsafe void OnFriendsChange();
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
 
     /// <summary>
-    /// Function: OnMutingChange
+    /// IntProperty: HashOuterIndexNext
     /// </summary>
-    public unsafe void OnMutingChange();
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
 
     /// <summary>
-    /// Function: OnLoginCancelled
+    /// ObjectProperty: Linker
     /// </summary>
-    public unsafe void OnLoginCancelled();
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
 
     /// <summary>
-    /// Function: OnLoginChange
+    /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe void OnLoginChange(byte LocalUserNum);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
+
+    /// <summary>
+    /// IntProperty: ObjectInternalInteger
+    /// </summary>
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Outer
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// NameProperty: Name
+    /// </summary>
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// ClassProperty: Class
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ObjectArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+
+    /// <summary>
+    /// Struct: FQWord
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FPointer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
 }

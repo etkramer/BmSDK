@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleMaterialByParameter<br/>
-/// (size = 80)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleMaterialByParameter : BmSDK.Engine.ParticleModuleMaterialBase, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ParticleModuleMaterialByParameter : BmSDK.Engine.ParticleMo
     /// <summary>
     /// ArrayProperty: MaterialParameters
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> MaterialParameters
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> MaterialParameters
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ArrayProperty: DefaultMaterials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> DefaultMaterials
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DefaultMaterials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

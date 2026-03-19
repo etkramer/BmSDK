@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_CameraEffect<br/>
-/// (size = 48)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_CameraEffect : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class AnimNotify_CameraEffect : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// <summary>
     /// ClassProperty: CameraLensEffect
     /// </summary>
-    public unsafe BmSDK.Class CameraLensEffect
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraLensEffect
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

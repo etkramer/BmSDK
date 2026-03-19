@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleMeshRotationRateOverLife<br/>
-/// (size = 88)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleMeshRotationRateOverLife : BmSDK.Engine.ParticleModuleRotationRateBase, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class ParticleModuleMeshRotationRateOverLife : BmSDK.Engine.Parti
     /// <summary>
     /// StructProperty: RotRate
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector RotRate
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RotRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class ParticleModuleMeshRotationRateOverLife : BmSDK.Engine.Parti
     /// </summary>
     public unsafe bool bScaleRotRate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 160); }
     }
 }

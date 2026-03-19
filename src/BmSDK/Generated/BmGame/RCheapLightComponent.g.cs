@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCheapLightComponent<br/>
-/// (size = 164)
-/// (flags = 176173202)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCheapLightComponent : BmSDK.Engine.FogVolumeSphericalDensityComponent, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RCheapLightComponent : BmSDK.Engine.FogVolumeSphericalDensi
     /// <summary>
     /// ComponentProperty: AutomaticMeshComponent
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent AutomaticMeshComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AutomaticMeshComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 160); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_RemoveTrivialKeys<br/>
-/// (size = 72)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_RemoveTrivialKeys : BmSDK.Engine.AnimationCompressionAlgorithm, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class AnimationCompressionAlgorithm_RemoveTrivialKeys : BmSDK.Eng
     /// </summary>
     public unsafe float MaxPosDiff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class AnimationCompressionAlgorithm_RemoveTrivialKeys : BmSDK.Eng
     /// </summary>
     public unsafe float MaxAngleDiff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

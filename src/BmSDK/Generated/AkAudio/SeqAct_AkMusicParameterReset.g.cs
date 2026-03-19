@@ -5,8 +5,8 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkMusicParameterReset<br/>
-/// (size = 224)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkMusicParameterReset : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,29 +34,29 @@ public partial class SeqAct_AkMusicParameterReset : BmSDK.Engine.SequenceAction,
     protected SeqAct_AkMusicParameterReset(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// FloatProperty: InterpolationTime
+    /// NameProperty: HandlerName
     /// </summary>
-    public unsafe float InterpolationTime
+    public unsafe BmSDK.FName HandlerName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
-    /// ArrayProperty: ResetParameters
+    /// BoolProperty: bCallHandler
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AkParameterName> ResetParameters
+    public unsafe bool bCallHandler
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AkParameterName>>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
     }
 
     /// <summary>
-    /// BoolProperty: OnlyResetThese
+    /// ArrayProperty: Targets
     /// </summary>
-    public unsafe bool OnlyResetThese
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> Targets
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 220); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 }

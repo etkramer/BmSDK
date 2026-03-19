@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactorySkeletalMesh<br/>
-/// (size = 108)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactorySkeletalMesh : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class ActorFactorySkeletalMesh : BmSDK.Engine.ActorFactory, BmSDK
     /// <summary>
     /// ObjectProperty: SkeletalMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh SkeletalMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SkeletalMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
     /// ObjectProperty: AnimSet
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet AnimSet
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AnimSet
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimSet>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class ActorFactorySkeletalMesh : BmSDK.Engine.ActorFactory, BmSDK
     /// </summary>
     public unsafe BmSDK.FName AnimSequenceName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

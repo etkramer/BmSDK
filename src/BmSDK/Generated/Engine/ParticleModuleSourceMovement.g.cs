@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSourceMovement<br/>
-/// (size = 84)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSourceMovement : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleSourceMovement : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: SourceMovementScale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SourceMovementScale
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SourceMovementScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

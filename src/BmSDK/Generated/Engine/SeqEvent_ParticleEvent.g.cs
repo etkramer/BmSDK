@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_ParticleEvent<br/>
-/// (size = 280)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -34,32 +34,21 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     protected SeqEvent_ParticleEvent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
-    /// </summary>
-    public unsafe static int GetObjClassVersion()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_ParticleEvent.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
-
-    /// <summary>
     /// ByteProperty: EventType
     /// </summary>
-    public unsafe BmSDK.Engine.SeqEvent_ParticleEvent.EParticleEventOutputType EventType
+    public unsafe byte EventType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SeqEvent_ParticleEvent.EParticleEventOutputType>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
     /// StructProperty: EventPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventPosition
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EventPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
@@ -67,17 +56,17 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// </summary>
     public unsafe float EventEmitterTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 244); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 
     /// <summary>
     /// StructProperty: EventVelocity
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventVelocity
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EventVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 248); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 400); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
     }
 
     /// <summary>
@@ -85,17 +74,17 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// </summary>
     public unsafe float EventParticleTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 412); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
     }
 
     /// <summary>
     /// StructProperty: EventNormal
     /// </summary>
-    public unsafe System.Numerics.Vector3 EventNormal
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EventNormal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
     }
 
     /// <summary>
@@ -103,8 +92,8 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
     /// </summary>
     public unsafe bool UseRelfectedImpactVector
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 428); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 428); }
     }
 
     /// <summary>
@@ -115,7 +104,8 @@ public partial class SeqEvent_ParticleEvent : BmSDK.Engine.SequenceEvent, BmSDK.
         ePARTICLEOUT_Spawn = 0,
         ePARTICLEOUT_Death = 1,
         ePARTICLEOUT_Collision = 2,
-        ePARTICLEOUT_Kismet = 3,
-        ePARTICLEOUT_MAX = 4,
+        ePARTICLEOUT_AttractorCollision = 3,
+        ePARTICLEOUT_Kismet = 4,
+        ePARTICLEOUT_MAX = 5,
     }
 }

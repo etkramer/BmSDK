@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdSpawner_FlockingBats<br/>
-/// (size = 512)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCrowdSpawner_FlockingBats : BmSDK.BmGame.RCrowdSpawner, BmSDK.IGameObject
 {
@@ -69,27 +69,209 @@ public partial class RCrowdSpawner_FlockingBats : BmSDK.BmGame.RCrowdSpawner, Bm
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: SpawnAgent
+    /// FloatProperty: SpawnRate
     /// </summary>
-    public unsafe BmSDK.BmGame.RCrowdAgent SpawnAgent()
+    public unsafe float SpawnRate
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner_FlockingBats.SpawnAgent", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCrowdAgent>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
-    /// Function: SpawnCrowd
+    /// IntProperty: SpawnNum
     /// </summary>
-    public unsafe void SpawnCrowd(int NumToSpawn, int NewFlockID = default, BmSDK.BmGame.RCrowdSequence NewCrowdSequence = default)
+    public unsafe int SpawnNum
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrowdSpawner_FlockingBats.SpawnCrowd", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NumToSpawn, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewFlockID, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewCrowdSequence, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Remainder
+    /// </summary>
+    public unsafe float Remainder
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+
+    /// <summary>
+    /// ClassProperty: AgentClass
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AgentClass
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AwareRadius
+    /// </summary>
+    public unsafe float AwareRadius
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AvoidOtherRadius
+    /// </summary>
+    public unsafe float AvoidOtherRadius
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SpeedBlendStart
+    /// </summary>
+    public unsafe float SpeedBlendStart
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 696); }
+    }
+
+    /// <summary>
+    /// FloatProperty: SpeedBlendEnd
+    /// </summary>
+    public unsafe float SpeedBlendEnd
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxYawRate
+    /// </summary>
+    public unsafe float MaxYawRate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+
+    /// <summary>
+    /// IntProperty: Health
+    /// </summary>
+    public unsafe int Health
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+
+    /// <summary>
+    /// IntProperty: SpawnedNum
+    /// </summary>
+    public unsafe int SpawnedNum
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
+    }
+
+    /// <summary>
+    /// FloatProperty: FlockWaveTime
+    /// </summary>
+    public unsafe float FlockWaveTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 716); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 716); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinVelDamping
+    /// </summary>
+    public unsafe float MinVelDamping
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 720); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxVelDamping
+    /// </summary>
+    public unsafe float MaxVelDamping
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 724); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 724); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MoveTowardsFlockForce
+    /// </summary>
+    public unsafe float MoveTowardsFlockForce
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MoveInFlockDirForce
+    /// </summary>
+    public unsafe float MoveInFlockDirForce
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AvoidForce
+    /// </summary>
+    public unsafe float AvoidForce
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSpawnerActivated
+    /// </summary>
+    public unsafe bool bSpawnerActivated
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDrawDebugInfo
+    /// </summary>
+    public unsafe bool bDrawDebugInfo
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSpawnAsNewFlock
+    /// </summary>
+    public unsafe bool bSpawnAsNewFlock
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 740); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 740); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CrowdManager
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrowdManager
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CrowdSequence
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CrowdSequence
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
+    }
+
+    /// <summary>
+    /// IntProperty: FlockID
+    /// </summary>
+    public unsafe int FlockID
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RPawnVillainThug_Robot<br/>
-/// (size = 3568)
-/// (flags = 10485814)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
 {
@@ -69,171 +69,137 @@ public partial class RPawnVillainThug_Robot : BmSDK.BmGame.RPawnVillainThug, BmS
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: CanBlockDamageType
-    /// </summary>
-    public unsafe bool CanBlockDamageType(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.CanBlockDamageType", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Attacker, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
-
-    /// <summary>
-    /// Function: PlaySound_ImpactAI
-    /// </summary>
-    public unsafe void PlaySound_ImpactAI(bool bIsStrike, bool bFinishingBlow, bool bIsHeadImpact, bool bIsPunch, bool bIsStrong, bool bIsBlocked, bool bCanEmote = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.PlaySound_ImpactAI", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsStrike, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bFinishingBlow, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsHeadImpact, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsPunch, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsStrong, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bIsBlocked, paramsPtr + 20);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bCanEmote, paramsPtr + 24);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PlaySoundCounterKO
-    /// </summary>
-    public unsafe void PlaySoundCounterKO()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.PlaySoundCounterKO", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PlaySoundStrikeKO
-    /// </summary>
-    public unsafe void PlaySoundStrikeKO()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.PlaySoundStrikeKO", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CreateWeaponConfigUnarmed
-    /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.CreateWeaponConfigUnarmed", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOwner, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RWeaponConfig>(paramsPtr + 4);
-    }
-
-    /// <summary>
-    /// Function: ShouldGoRagdoll
-    /// </summary>
-    public unsafe bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.ShouldGoRagdoll", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(dmgType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DamageAmount, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
-
-    /// <summary>
-    /// Function: ProcessDamagedBy
-    /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult ProcessDamagedBy(out BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.ProcessDamagedBy", true);
-        byte* paramsPtr = stackalloc byte[268];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        DmgInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.FDamageInfo>(paramsPtr + 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnCombat.DamageResult>(paramsPtr + 244);
-    }
-
-    /// <summary>
-    /// Function: SetHostile
-    /// </summary>
-    public unsafe void SetHostile(bool bNewValue, BmSDK.FName NewNotHostileReason = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.SetHostile", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewValue, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewNotHostileReason, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: CanBlock
-    /// </summary>
-    public unsafe bool CanBlock()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.CanBlock", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: CanPlayBark
-    /// </summary>
-    public unsafe bool CanPlayBark()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.CanPlayBark", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: PostInitCharacter
-    /// </summary>
-    public unsafe void PostInitCharacter()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.PostInitCharacter", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetSmokeBombReactionClass
-    /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.GetSmokeBombReactionClass", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: StartAttackingFX
-    /// </summary>
-    public unsafe void StartAttackingFX(int CTypeInt, BmSDK.BmGame.RPlayerController PC = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainThug_Robot.StartAttackingFX", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(CTypeInt, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PC, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: EyeGlowMIC
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant EyeGlowMIC
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT EyeGlowMIC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 3564); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 3564); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6696); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PfxReviveEmitter
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PfxReviveEmitter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6704); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: HitFx
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HitFx
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6712); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: StomachLight
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StomachLight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 6720); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6720); }
+    }
+
+    /// <summary>
+    /// FloatProperty: PowerUpVal
+    /// </summary>
+    public unsafe float PowerUpVal
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6728); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPoweringUp
+    /// </summary>
+    public unsafe bool bPoweringUp
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bLightsOff
+    /// </summary>
+    public unsafe bool bLightsOff
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bLightsOffPermanently
+    /// </summary>
+    public unsafe bool bLightsOffPermanently
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 6732); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 6732); }
+    }
+
+    /// <summary>
+    /// FloatProperty: StomachLightBrightnessMul
+    /// </summary>
+    public unsafe float StomachLightBrightnessMul
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6736); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DestStomachLightBrightnessMul
+    /// </summary>
+    public unsafe float DestStomachLightBrightnessMul
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6740); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ShowColourChangeTime
+    /// </summary>
+    public unsafe float ShowColourChangeTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6744); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ToggleTime
+    /// </summary>
+    public unsafe float ToggleTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6748); }
+    }
+
+    /// <summary>
+    /// NameProperty: PrevOnlyCanBeHitBy
+    /// </summary>
+    public unsafe BmSDK.FName PrevOnlyCanBeHitBy
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 6752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6752); }
+    }
+
+    /// <summary>
+    /// FloatProperty: InvincibleTime
+    /// </summary>
+    public unsafe float InvincibleTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 6760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6760); }
+    }
+
+    /// <summary>
+    /// ByteProperty: LightCol
+    /// </summary>
+    public unsafe byte LightCol
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 6764); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 6764); }
     }
 }

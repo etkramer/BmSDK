@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCaptureCubeMapActor<br/>
-/// (size = 444)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SceneCaptureCubeMapActor : BmSDK.Engine.SceneCaptureActor, BmSDK.IGameObject
 {
@@ -71,18 +71,18 @@ public partial class SceneCaptureCubeMapActor : BmSDK.Engine.SceneCaptureActor, 
     /// <summary>
     /// ComponentProperty: StaticMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent StaticMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
     }
 
     /// <summary>
     /// ObjectProperty: CubeMaterialInst
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant CubeMaterialInst
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CubeMaterialInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 }

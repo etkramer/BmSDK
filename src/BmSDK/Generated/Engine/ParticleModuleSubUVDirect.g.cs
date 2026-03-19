@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSubUVDirect<br/>
-/// (size = 112)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSubUVDirect : BmSDK.Engine.ParticleModuleSubUVBase, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ParticleModuleSubUVDirect : BmSDK.Engine.ParticleModuleSubU
     /// <summary>
     /// StructProperty: SubUVPosition
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubUVPosition
+    public unsafe BmSDK.Engine.ParticleModuleSubUVDirect.SubUVSize SubUVPosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleSubUVDirect.SubUVSize>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: SubUVSize
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector SubUVSize
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SubUVSize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

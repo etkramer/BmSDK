@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeScalePlayRate<br/>
-/// (size = 232)
-/// (flags = 144703634)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNodeScalePlayRate : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class AnimNodeScalePlayRate : BmSDK.Engine.AnimNodeBlendBase, BmS
     /// </summary>
     public unsafe float ScaleByValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 }

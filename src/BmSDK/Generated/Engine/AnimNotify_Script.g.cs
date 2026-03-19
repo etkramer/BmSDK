@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Script<br/>
-/// (size = 68)
-/// (flags = 201339026)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// </summary>
     public unsafe BmSDK.FName NotifyName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// </summary>
     public unsafe BmSDK.FName NotifyTickName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class AnimNotify_Script : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// </summary>
     public unsafe BmSDK.FName NotifyEndName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

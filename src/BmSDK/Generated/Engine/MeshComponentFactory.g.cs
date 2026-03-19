@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: MeshComponentFactory<br/>
-/// (size = 64)
-/// (flags = 134217875)
+/// Class: MeshComponentFactory<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MeshComponentFactory : BmSDK.Engine.PrimitiveComponentFactory, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class MeshComponentFactory : BmSDK.Engine.PrimitiveComponentFacto
     internal MeshComponentFactory() { }
 
     /// <summary>
+    /// Constructs a new MeshComponentFactory
+    /// </summary>
+    public MeshComponentFactory(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MeshComponentFactory Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MeshComponentFactory(nint ptr) : base(ptr) { }
@@ -31,9 +36,9 @@ public partial class MeshComponentFactory : BmSDK.Engine.PrimitiveComponentFacto
     /// <summary>
     /// ArrayProperty: Materials
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> Materials
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Materials
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

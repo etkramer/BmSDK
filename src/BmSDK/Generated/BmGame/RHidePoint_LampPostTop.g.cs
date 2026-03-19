@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHidePoint_LampPostTop<br/>
-/// (size = 940)
-/// (flags = 2290090642)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
+public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -69,63 +69,101 @@ public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint, BmSDK.IGa
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: SetPerfectConcealment
+    /// ComponentProperty: CollisionShape
     /// </summary>
-    public unsafe void SetPerfectConcealment(bool bNewPerfectConcealment)
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CollisionShape
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.SetPerfectConcealment", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bNewPerfectConcealment, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1288); }
     }
 
     /// <summary>
-    /// Function: GetCatwomanPerchPosition
+    /// FloatProperty: ChanceOfJokerHallucination
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCatwomanPerchPosition()
+    public unsafe float ChanceOfJokerHallucination
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetCatwomanPerchPosition", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1296); }
     }
 
     /// <summary>
-    /// Function: GetBatmanPerchPosition
+    /// FloatProperty: TimeBetweenJokerHallucinationOverlays
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatmanPerchPosition()
+    public unsafe float TimeBetweenJokerHallucinationOverlays
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.GetBatmanPerchPosition", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1300); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1300); }
     }
 
     /// <summary>
-    /// Function: UnTouch
+    /// BoolProperty: bJokerInNervousPose
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe bool bJokerInNervousPose
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.UnTouch", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1304) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1304); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1304); }
     }
 
     /// <summary>
-    /// Function: Touch
+    /// StructProperty: BeamEnd1
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BeamEnd1
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHidePoint_LampPostTop.Touch", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Other, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(OtherComp, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitLocation, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HitNormal, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1308); }
+    }
+
+    /// <summary>
+    /// StructProperty: BeamEnd2
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BeamEnd2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1320); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: AxisMatinee
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT AxisMatinee
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1332); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CurrentSpeed
+    /// </summary>
+    public unsafe float CurrentSpeed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1340); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DesiredAnimSpeed
+    /// </summary>
+    public unsafe float DesiredAnimSpeed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1344); }
+    }
+
+    /// <summary>
+    /// FloatProperty: XAxisSpeed
+    /// </summary>
+    public unsafe float XAxisSpeed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1348); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AccelTime
+    /// </summary>
+    public unsafe float AccelTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1352); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCameraEmitterBloodSplat<br/>
-/// (size = 456)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMCameraEmitterBloodSplat : BmSDK.BmGame.RBMCameraEmitter, BmSDK.IGameObject
 {
@@ -68,4 +68,30 @@ public partial class RBMCameraEmitterBloodSplat : BmSDK.BmGame.RBMCameraEmitter,
         where TComponent : class, Framework.IScriptComponent<RBMCameraEmitterBloodSplat>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ObjectProperty: Cam
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Cam
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ParticleSystem
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleSystem
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DistFromCamera
+    /// </summary>
+    public unsafe float DistFromCamera
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
+    }
 }

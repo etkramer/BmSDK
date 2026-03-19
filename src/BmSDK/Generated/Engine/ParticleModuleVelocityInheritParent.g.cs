@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleVelocityInheritParent<br/>
-/// (size = 88)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleVelocityInheritParent : BmSDK.Engine.ParticleModuleVelocityBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleVelocityInheritParent : BmSDK.Engine.Particle
     /// <summary>
     /// StructProperty: Scale
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Scale
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Scale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

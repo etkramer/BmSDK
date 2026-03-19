@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_BeginFixGroup<br/>
-/// (size = 52)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_BeginFixGroup : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RAnimNotify_BeginFixGroup : BmSDK.Engine.AnimNotify, BmSDK.
     /// </summary>
     public unsafe BmSDK.FName GroupName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

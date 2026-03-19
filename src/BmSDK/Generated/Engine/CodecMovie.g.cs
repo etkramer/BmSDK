@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: CodecMovie<br/>
-/// (size = 48)
-/// (flags = 134217883)
+/// Class: CodecMovie<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class CodecMovie : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class CodecMovie : BmSDK.GameObject, BmSDK.IGameObject
     internal CodecMovie() { }
 
     /// <summary>
+    /// Constructs a new CodecMovie
+    /// </summary>
+    public CodecMovie(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, CodecMovie Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected CodecMovie(nint ptr) : base(ptr) { }
@@ -33,7 +38,7 @@ public partial class CodecMovie : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float PlaybackDuration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

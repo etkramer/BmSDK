@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlSpline<br/>
-/// (size = 192)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {
@@ -34,41 +34,30 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     protected SkelControlSpline(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ESplineControlRotMode
-    /// </summary>
-    public enum ESplineControlRotMode
-    {
-        SCR_NoChange = 0,
-        SCR_AlongSpline = 1,
-        SCR_Interpolate = 2,
-        SCR_MAX = 3,
-    }
-
-    /// <summary>
     /// IntProperty: SplineLength
     /// </summary>
     public unsafe int SplineLength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 
     /// <summary>
     /// ByteProperty: SplineBoneAxis
     /// </summary>
-    public unsafe BmSDK.GameObject.EAxis SplineBoneAxis
+    public unsafe byte SplineBoneAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 252); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
     }
 
     /// <summary>
     /// ByteProperty: BoneRotMode
     /// </summary>
-    public unsafe BmSDK.Engine.SkelControlSpline.ESplineControlRotMode BoneRotMode
+    public unsafe byte BoneRotMode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkelControlSpline.ESplineControlRotMode>(Ptr + 177); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 177); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 253); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 253); }
     }
 
     /// <summary>
@@ -76,8 +65,8 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe bool bInvertSplineBoneAxis
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 180); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 256); }
     }
 
     /// <summary>
@@ -85,8 +74,8 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe float EndSplineTension
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 
     /// <summary>
@@ -94,7 +83,7 @@ public partial class SkelControlSpline : BmSDK.Engine.SkelControlBase, BmSDK.IGa
     /// </summary>
     public unsafe float StartSplineTension
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 }

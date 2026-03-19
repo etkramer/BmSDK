@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkyLightComponent<br/>
-/// (size = 416)
-/// (flags = 144707730)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkyLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject
 {
@@ -38,16 +38,16 @@ public partial class SkyLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGam
     /// </summary>
     public unsafe float LowerBrightness
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 612); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
     }
 
     /// <summary>
     /// StructProperty: LowerColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LowerColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LowerColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
 }

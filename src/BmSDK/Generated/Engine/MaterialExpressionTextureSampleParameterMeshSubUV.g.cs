@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTextureSampleParameterMeshSubUV<br/>
-/// (size = 136)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameterMeshSubUV : BmSDK.Engine.MaterialExpressionTextureSampleParameter2D, BmSDK.IGameObject
 {
@@ -33,4 +33,30 @@ public partial class MaterialExpressionTextureSampleParameterMeshSubUV : BmSDK.E
     /// </summary>
     protected MaterialExpressionTextureSampleParameterMeshSubUV(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: ParameterName
+    /// </summary>
+    public unsafe BmSDK.FName ParameterName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
+    }
+
+    /// <summary>
+    /// StructProperty: ExpressionGUID
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
+    }
+
+    /// <summary>
+    /// NameProperty: Group
+    /// </summary>
+    public unsafe BmSDK.FName Group
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
+    }
 }

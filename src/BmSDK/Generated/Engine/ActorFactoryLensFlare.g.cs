@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryLensFlare<br/>
-/// (size = 96)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryLensFlare : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ActorFactoryLensFlare : BmSDK.Engine.ActorFactory, BmSDK.IG
     /// <summary>
     /// ObjectProperty: LensFlareObject
     /// </summary>
-    public unsafe BmSDK.Engine.LensFlare LensFlareObject
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LensFlareObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LensFlare>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

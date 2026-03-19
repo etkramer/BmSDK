@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicCameraActor<br/>
-/// (size = 852)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DynamicCameraActor : BmSDK.Engine.CameraActor, BmSDK.IGameObject
 {
@@ -68,4 +68,75 @@ public partial class DynamicCameraActor : BmSDK.Engine.CameraActor, BmSDK.IGameO
         where TComponent : class, Framework.IScriptComponent<DynamicCameraActor>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// BoolProperty: bConstrainAspectRatio
+    /// </summary>
+    public unsafe bool bConstrainAspectRatio
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCamOverridePostProcess
+    /// </summary>
+    public unsafe bool bCamOverridePostProcess
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 668); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 668); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AspectRatio
+    /// </summary>
+    public unsafe float AspectRatio
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
+    }
+
+    /// <summary>
+    /// FloatProperty: FOVAngle
+    /// </summary>
+    public unsafe float FOVAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CamOverridePostProcessAlpha
+    /// </summary>
+    public unsafe float CamOverridePostProcessAlpha
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 680); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 680); }
+    }
+
+    /// <summary>
+    /// StructProperty: CamOverridePostProcess
+    /// </summary>
+    public unsafe BmSDK.Engine.Actor.Components CamOverridePostProcess
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor.Components>(Ptr + 684); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 684); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: DrawFrustum
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DrawFrustum
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1208); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: MeshComp
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MeshComp
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1216); }
+    }
 }

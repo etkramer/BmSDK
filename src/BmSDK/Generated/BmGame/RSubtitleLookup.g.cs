@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSubtitleLookup<br/>
-/// (size = 56)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,16 +36,16 @@ public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: Subtitles
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RSubtitleLookup.FRSubtitleLookupEntry> Subtitles
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Subtitles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSubtitleLookup.FRSubtitleLookupEntry>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// Struct: FRSubtitleLookupEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 8)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FRSubtitleLookupEntry
     {
         /// <summary>
@@ -60,9 +60,9 @@ public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
         /// <summary>
         /// ObjectProperty: Subtitle
         /// </summary>
-        public unsafe BmSDK.BmGame.RSubtitle Subtitle
+        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Subtitle
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSubtitle>(Ptr + 4); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
         }
     }

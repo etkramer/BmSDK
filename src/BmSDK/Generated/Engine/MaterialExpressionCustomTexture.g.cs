@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionCustomTexture<br/>
-/// (size = 96)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionCustomTexture : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class MaterialExpressionCustomTexture : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// ObjectProperty: Texture
     /// </summary>
-    public unsafe BmSDK.Engine.Texture Texture
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

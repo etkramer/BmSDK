@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: MorphNodeBase<br/>
-/// (size = 92)
-/// (flags = 142606483)
+/// Class: MorphNodeBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     internal MorphNodeBase() { }
 
     /// <summary>
+    /// Constructs a new MorphNodeBase
+    /// </summary>
+    public MorphNodeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MorphNodeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MorphNodeBase(nint ptr) : base(ptr) { }
@@ -33,8 +38,8 @@ public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FName NodeName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
     }
 
     /// <summary>
@@ -42,7 +47,7 @@ public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bDrawSlider
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 88); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 136); }
     }
 }

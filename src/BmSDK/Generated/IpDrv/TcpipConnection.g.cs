@@ -5,8 +5,8 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: TcpipConnection<br/>
-/// (size = 20080)
-/// (flags = 268435596)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// </summary>
     protected TcpipConnection(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: Children
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Children
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 44740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44740); }
+    }
 }

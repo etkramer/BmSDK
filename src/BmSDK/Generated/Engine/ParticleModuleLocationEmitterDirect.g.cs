@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationEmitterDirect<br/>
-/// (size = 64)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationEmitterDirect : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class ParticleModuleLocationEmitterDirect : BmSDK.Engine.Particle
     /// </summary>
     public unsafe BmSDK.FName EmitterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

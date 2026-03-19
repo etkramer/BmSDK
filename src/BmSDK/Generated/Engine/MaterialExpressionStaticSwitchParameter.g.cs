@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionStaticSwitchParameter<br/>
-/// (size = 168)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.MaterialExpressionParameter, BmSDK.IGameObject
+public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.MaterialExpressionStaticBoolParameter, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,47 +34,20 @@ public partial class MaterialExpressionStaticSwitchParameter : BmSDK.Engine.Mate
     protected MaterialExpressionStaticSwitchParameter(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// BoolProperty: DefaultValue
-    /// </summary>
-    public unsafe bool DefaultValue
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
-    }
-
-    /// <summary>
-    /// BoolProperty: ExtendedCaptionDisplay
-    /// </summary>
-    public unsafe bool ExtendedCaptionDisplay
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 104); }
-    }
-
-    /// <summary>
     /// StructProperty: A
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput A
+    public unsafe BmSDK.Engine.MaterialExpressionStaticSwitchParameter.B A
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionStaticSwitchParameter.B>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
     }
 
     /// <summary>
     /// StructProperty: B
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput B
+    public unsafe BmSDK.Engine.MaterialExpression.Desc B
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
-
-    /// <summary>
-    /// StructProperty: InstanceOverride
-    /// </summary>
-    public unsafe System.IntPtr InstanceOverride
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 164); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 }

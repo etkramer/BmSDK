@@ -5,8 +5,8 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: ClientBeaconAddressResolver<br/>
-/// (size = 56)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ClientBeaconAddressResolver : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class ClientBeaconAddressResolver : BmSDK.GameObject, BmSDK.IGame
     /// </summary>
     public unsafe int BeaconPort
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class ClientBeaconAddressResolver : BmSDK.GameObject, BmSDK.IGame
     /// </summary>
     public unsafe BmSDK.FName BeaconName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

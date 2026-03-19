@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Throw<br/>
-/// (size = 68)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Throw : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RAnimNotify_Throw : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// <summary>
     /// StructProperty: ThrowInfo
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo ThrowInfo
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ThrowInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPawnPlayerCombat.FThrowInfo>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

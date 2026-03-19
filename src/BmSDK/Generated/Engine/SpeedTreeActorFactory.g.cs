@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpeedTreeActorFactory<br/>
-/// (size = 96)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SpeedTreeActorFactory : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class SpeedTreeActorFactory : BmSDK.Engine.ActorFactory, BmSDK.IG
     /// <summary>
     /// ObjectProperty: SpeedTree
     /// </summary>
-    public unsafe BmSDK.Engine.SpeedTree SpeedTree
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpeedTree
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpeedTree>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

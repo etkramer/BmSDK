@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ToggleCanJumpOffVantagePoint<br/>
-/// (size = 208)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ToggleCanJumpOffVantagePoint : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,22 +34,11 @@ public partial class RSeqAct_ToggleCanJumpOffVantagePoint : BmSDK.Engine.Sequenc
     protected RSeqAct_ToggleCanJumpOffVantagePoint(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Activated
-    /// </summary>
-    public unsafe void Activated()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ToggleCanJumpOffVantagePoint.Activated", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint Target
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RHidePoint>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

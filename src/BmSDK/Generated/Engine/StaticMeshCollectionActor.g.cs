@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshCollectionActor<br/>
-/// (size = 448)
-/// (flags = 142606998)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.IGameObject
 {
@@ -71,10 +71,10 @@ public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBas
     /// <summary>
     /// ArrayProperty: StaticMeshComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMeshComponent> StaticMeshComponents
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> StaticMeshComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMeshComponent>>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
@@ -82,7 +82,16 @@ public partial class StaticMeshCollectionActor : BmSDK.Engine.StaticMeshActorBas
     /// </summary>
     public unsafe int MaxStaticMeshComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
+    }
+
+    /// <summary>
+    /// StructProperty: SMCPoolHandle
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SMCPoolHandle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 712); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 712); }
     }
 }

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: UIDataStore_OnlineStats<br/>
-/// (size = 108)
-/// (flags = 27)
+/// Class: UIDataStore_OnlineStats<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, BmSDK.IGameObject
 {
@@ -24,19 +24,39 @@ public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, 
     internal UIDataStore_OnlineStats() { }
 
     /// <summary>
+    /// Constructs a new UIDataStore_OnlineStats
+    /// </summary>
+    public UIDataStore_OnlineStats(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIDataStore_OnlineStats Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected UIDataStore_OnlineStats(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EStatsFetchType
+    /// NameProperty: Tag
     /// </summary>
-    public enum EStatsFetchType
+    public unsafe BmSDK.FName Tag
     {
-        SFT_Player = 0,
-        SFT_CenteredOnPlayer = 1,
-        SFT_Friends = 2,
-        SFT_TopRankings = 3,
-        SFT_MAX = 4,
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: RefreshSubscriberNotifies
+    /// </summary>
+    public unsafe BmSDK.TArray<System.IntPtr> RefreshSubscriberNotifies
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __OnDataStoreValueUpdated__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __OnDataStoreValueUpdated__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 }

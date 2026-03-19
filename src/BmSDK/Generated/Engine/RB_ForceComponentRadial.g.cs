@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceComponentRadial<br/>
-/// (size = 457)
-/// (flags = 2290102418)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, BmSDK.IGameObject
 {
@@ -34,23 +34,12 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     protected RB_ForceComponentRadial(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Clone
-    /// </summary>
-    public unsafe BmSDK.Engine.RB_ForceComponent Clone()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponentRadial.Clone", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RB_ForceComponent>(paramsPtr + 0);
-    }
-
-    /// <summary>
     /// ComponentProperty: RenderComponentSphere
     /// </summary>
-    public unsafe BmSDK.Engine.DrawSphereComponent RenderComponentSphere
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RenderComponentSphere
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawSphereComponent>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
 
     /// <summary>
@@ -58,8 +47,8 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     /// </summary>
     public unsafe float ForceStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 592); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
     }
 
     /// <summary>
@@ -67,8 +56,8 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     /// </summary>
     public unsafe float ForceRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 596); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 596); }
     }
 
     /// <summary>
@@ -76,8 +65,8 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     /// </summary>
     public unsafe float SwirlStrength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
     /// <summary>
@@ -85,16 +74,16 @@ public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, B
     /// </summary>
     public unsafe float SpinTorque
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 452); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 604); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
     }
 
     /// <summary>
     /// ByteProperty: ForceFalloff
     /// </summary>
-    public unsafe BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff ForceFalloff
+    public unsafe byte ForceFalloff
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PrimitiveComponent.ERadialImpulseFalloff>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 608); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
     }
 }

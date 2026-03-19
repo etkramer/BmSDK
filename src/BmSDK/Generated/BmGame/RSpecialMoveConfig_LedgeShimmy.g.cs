@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_LedgeShimmy<br/>
-/// (size = 348)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_LedgeShimmy : BmSDK.BmGame.RSpecialMoveConfig_ActivePoseTransitionWithOffset, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class RSpecialMoveConfig_LedgeShimmy : BmSDK.BmGame.RSpecialMoveC
     /// </summary>
     protected RSpecialMoveConfig_LedgeShimmy(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: MoveOffset
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+    }
+
+    /// <summary>
+    /// IntProperty: YawOffset
+    /// </summary>
+    public unsafe int YawOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
 }

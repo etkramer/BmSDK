@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DOFAndBloomEffect<br/>
-/// (size = 160)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObject
 {
@@ -34,39 +34,21 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     protected DOFAndBloomEffect(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// FloatProperty: BloomScale
+    /// FloatProperty: BloomOverload
     /// </summary>
-    public unsafe float BloomScale
+    public unsafe float BloomOverload
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 132); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
-    /// FloatProperty: BloomThreshold
+    /// FloatProperty: BloomLowerCut
     /// </summary>
-    public unsafe float BloomThreshold
+    public unsafe float BloomLowerCut
     {
         get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 136); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
-    }
-
-    /// <summary>
-    /// StructProperty: BloomTint
-    /// </summary>
-    public unsafe BmSDK.GameObject.FColor BloomTint
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
-    }
-
-    /// <summary>
-    /// FloatProperty: BloomScreenBlendThreshold
-    /// </summary>
-    public unsafe float BloomScreenBlendThreshold
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
@@ -74,43 +56,34 @@ public partial class DOFAndBloomEffect : BmSDK.Engine.DOFEffect, BmSDK.IGameObje
     /// </summary>
     public unsafe float SceneMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
+
+    /// <summary>
+    /// ByteProperty: DepthOfFieldType
+    /// </summary>
+    public unsafe byte DepthOfFieldType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
+
+    /// <summary>
+    /// ByteProperty: DepthOfFieldQuality
+    /// </summary>
+    public unsafe byte DepthOfFieldQuality
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 145); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 145); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: BokehTexture
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT BokehTexture
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
-    }
-
-    /// <summary>
-    /// FloatProperty: BlurBloomKernelSize
-    /// </summary>
-    public unsafe float BlurBloomKernelSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableSeparateBloom
-    /// </summary>
-    public unsafe bool bEnableSeparateBloom
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableReferenceDOF
-    /// </summary>
-    public unsafe bool bEnableReferenceDOF
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableDepthOfFieldHQ
-    /// </summary>
-    public unsafe bool bEnableDepthOfFieldHQ
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 156); }
     }
 }

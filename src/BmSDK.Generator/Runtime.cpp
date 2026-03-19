@@ -70,6 +70,7 @@ void Runtime::OnAttach()
 }
 
 void Runtime::LoadClassesIntoMemory() {
+    // BM4: Might need a smarter approach given large package sizes.
     // TRACE("Loading all UPKs into memory");
 
     // const wregex packageFilter(
@@ -116,7 +117,7 @@ void Runtime::GenerateSDK()
         bool isValid = obj != nullptr && (Runtime::GObjects->ElementAt(obj->Index) == obj);
         if (!isValid)
         {
-            TRACE("Skipping invalid object {} ({})", obj->GetName(), obj->Index);
+            TRACE("Skipping invalid object {}", obj->Index);
             continue;
         }
 

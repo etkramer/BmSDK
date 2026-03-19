@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionFloatUniform<br/>
-/// (size = 72)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionFloatUniform : BmSDK.DistributionFloat, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class DistributionFloatUniform : BmSDK.DistributionFloat, BmSDK.I
     /// </summary>
     public unsafe float Min
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class DistributionFloatUniform : BmSDK.DistributionFloat, BmSDK.I
     /// </summary>
     public unsafe float Max
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 }

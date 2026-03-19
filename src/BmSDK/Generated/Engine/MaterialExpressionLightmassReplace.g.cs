@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLightmassReplace<br/>
-/// (size = 148)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLightmassReplace : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class MaterialExpressionLightmassReplace : BmSDK.Engine.MaterialE
     /// <summary>
     /// StructProperty: Realtime
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Realtime
+    public unsafe BmSDK.Engine.MaterialExpressionLightmassReplace.Lightmass Realtime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionLightmassReplace.Lightmass>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Lightmass
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Lightmass
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Lightmass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

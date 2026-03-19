@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_CompareInt<br/>
-/// (size = 188)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqCond_CompareInt : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class SeqCond_CompareInt : BmSDK.Engine.SequenceCondition, BmSDK.
     /// </summary>
     public unsafe int ValueA
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class SeqCond_CompareInt : BmSDK.Engine.SequenceCondition, BmSDK.
     /// </summary>
     public unsafe int ValueB
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 }

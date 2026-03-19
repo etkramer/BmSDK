@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGrappleProjectileBm<br/>
-/// (size = 568)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGrappleProjectileBm : BmSDK.BmGame.RGrappleProjectile, BmSDK.IGameObject
 {
@@ -68,4 +68,12 @@ public partial class RGrappleProjectileBm : BmSDK.BmGame.RGrappleProjectile, BmS
         where TComponent : class, Framework.IScriptComponent<RGrappleProjectileBm>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// StructProperty: AttachOffset
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AttachOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 852); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 852); }
+    }
 }

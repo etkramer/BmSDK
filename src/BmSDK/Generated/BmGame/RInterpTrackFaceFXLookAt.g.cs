@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackFaceFXLookAt<br/>
-/// (size = 212)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RInterpTrackFaceFXLookAt : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -34,12 +34,21 @@ public partial class RInterpTrackFaceFXLookAt : BmSDK.Engine.InterpTrackFloatBas
     protected RInterpTrackFaceFXLookAt(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// NameProperty: TargetGroupName
+    /// </summary>
+    public unsafe BmSDK.FName TargetGroupName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+    }
+
+    /// <summary>
     /// ObjectProperty: Target
     /// </summary>
-    public unsafe BmSDK.Engine.Actor Target
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Target
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
     }
 
     /// <summary>
@@ -47,8 +56,8 @@ public partial class RInterpTrackFaceFXLookAt : BmSDK.Engine.InterpTrackFloatBas
     /// </summary>
     public unsafe BmSDK.FString YawRegisterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
     }
 
     /// <summary>
@@ -56,7 +65,7 @@ public partial class RInterpTrackFaceFXLookAt : BmSDK.Engine.InterpTrackFloatBas
     /// </summary>
     public unsafe BmSDK.FString PitchRegisterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 200); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 }

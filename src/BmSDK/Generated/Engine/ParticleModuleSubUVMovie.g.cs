@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleSubUVMovie<br/>
-/// (size = 120)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSubUVMovie : BmSDK.Engine.ParticleModuleSubUV, BmSDK.IGameObject
 {
@@ -38,17 +38,17 @@ public partial class ParticleModuleSubUVMovie : BmSDK.Engine.ParticleModuleSubUV
     /// </summary>
     public unsafe bool bUseEmitterTime
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 136); }
     }
 
     /// <summary>
     /// StructProperty: FrameRate
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat FrameRate
+    public unsafe BmSDK.Engine.ParticleModuleSubUV.SubImageIndex FrameRate
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleSubUV.SubImageIndex>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class ParticleModuleSubUVMovie : BmSDK.Engine.ParticleModuleSubUV
     /// </summary>
     public unsafe int StartingFrame
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 }

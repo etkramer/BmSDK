@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_AnimSpeech<br/>
-/// (size = 84)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_AnimSpeech : BmSDK.BmGame.RAnimNotify_Script, BmSDK.IGameObject
 {
@@ -34,47 +34,20 @@ public partial class RAnimNotify_AnimSpeech : BmSDK.BmGame.RAnimNotify_Script, B
     protected RAnimNotify_AnimSpeech(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ObjectProperty: Line
+    /// BoolProperty: EnableExitNotify
     /// </summary>
-    public unsafe BmSDK.Engine.RDialogueLine Line
+    public unsafe bool EnableExitNotify
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RDialogueLine>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 108); }
     }
 
     /// <summary>
-    /// BoolProperty: IsEmote
+    /// NameProperty: ExitNotifyName
     /// </summary>
-    public unsafe bool IsEmote
+    public unsafe BmSDK.FName ExitNotifyName
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }
-    }
-
-    /// <summary>
-    /// BoolProperty: CharacterFilter_Enabled
-    /// </summary>
-    public unsafe bool CharacterFilter_Enabled
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 72); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 72); }
-    }
-
-    /// <summary>
-    /// IntProperty: Chance
-    /// </summary>
-    public unsafe int Chance
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// StructProperty: CharacterFilter
-    /// </summary>
-    public unsafe BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter CharacterFilter
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AnimNotify_Sound.FSoundCharacterFilter>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

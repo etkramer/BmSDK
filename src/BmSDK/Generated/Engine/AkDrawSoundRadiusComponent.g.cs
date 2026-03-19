@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDrawSoundRadiusComponent<br/>
-/// (size = 428)
-/// (flags = 2290102418)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class AkDrawSoundRadiusComponent : BmSDK.Engine.DrawSphereComponent, BmSDK.IGameObject
+public partial class AkDrawSoundRadiusComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,11 +34,11 @@ public partial class AkDrawSoundRadiusComponent : BmSDK.Engine.DrawSphereCompone
     protected AkDrawSoundRadiusComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// FloatProperty: DrawScale
+    /// IntProperty: SphereSides
     /// </summary>
-    public unsafe float DrawScale
+    public unsafe int SphereSides
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

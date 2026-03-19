@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSeqAct_SetMaterialInstance<br/>
-/// (size = 216)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetMaterialInstance : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,23 +34,21 @@ public partial class RSeqAct_SetMaterialInstance : BmSDK.Engine.SequenceAction, 
     protected RSeqAct_SetMaterialInstance(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: CreateInstance
+    /// ObjectProperty: MaterialToInstance
     /// </summary>
-    public unsafe void CreateInstance()
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MaterialToInstance
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RSeqAct_SetMaterialInstance.CreateInstance", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
-    /// ObjectProperty: MaterialToInstance
+    /// ObjectProperty: NewMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstance MaterialToInstance
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NewMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstance>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -58,16 +56,7 @@ public partial class RSeqAct_SetMaterialInstance : BmSDK.Engine.SequenceAction, 
     /// </summary>
     public unsafe int MaterialIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: NewMaterial
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant NewMaterial
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 }

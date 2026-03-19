@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstColorProp<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstColorProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class InterpTrackInstColorProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: ColorProp
     /// </summary>
-    public unsafe System.IntPtr ColorProp
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ColorProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: ResetColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor ResetColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResetColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

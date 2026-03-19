@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexGenericAsset<br/>
-/// (size = 132)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ApexGenericAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObject
 {
@@ -34,38 +34,65 @@ public partial class ApexGenericAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObjec
     protected ApexGenericAsset(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: MApexAsset
+    /// ByteProperty: CollideChannel
     /// </summary>
-    public unsafe System.IntPtr MApexAsset
+    public unsafe byte CollideChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 
     /// <summary>
-    /// ArrayProperty: Materials
+    /// StructProperty: CollideWithChannels
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.MaterialInterface> Materials
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollideWithChannels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.MaterialInterface>>(Ptr + 96); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 208); }
+    }
+
+    /// <summary>
+    /// StructProperty: GroupsMask
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GroupsMask
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+    }
+
+    /// <summary>
+    /// StructProperty: GroupsMask64
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT GroupsMask64
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
     /// ArrayProperty: AssetDependencies
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ApexGenericAsset> AssetDependencies
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> AssetDependencies
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexGenericAsset>>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 
     /// <summary>
     /// ArrayProperty: MeshDependencies
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.StaticMesh> MeshDependencies
+    public unsafe BmSDK.TArray<BmSDK.FString> MeshDependencies
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.StaticMesh>>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+    }
+
+    /// <summary>
+    /// StrProperty: OriginalIofxName
+    /// </summary>
+    public unsafe BmSDK.FString OriginalIofxName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
     }
 }

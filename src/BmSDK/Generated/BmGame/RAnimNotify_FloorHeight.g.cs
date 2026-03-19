@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_FloorHeight<br/>
-/// (size = 48)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_FloorHeight : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject
 {
@@ -33,4 +33,22 @@ public partial class RAnimNotify_FloorHeight : BmSDK.BmGame.RAnimNotify_BeginEnd
     /// </summary>
     protected RAnimNotify_FloorHeight(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ByteProperty: Type
+    /// </summary>
+    public unsafe byte Type
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// Enum: EBeginEndType
+    /// </summary>
+    public enum EBeginEndType
+    {
+        BET_Begin = 0,
+        BET_End = 1,
+        BET_MAX = 2,
+    }
 }

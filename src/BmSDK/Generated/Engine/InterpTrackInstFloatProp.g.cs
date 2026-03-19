@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstFloatProp<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
     /// <summary>
     /// StructProperty: FloatProp
     /// </summary>
-    public unsafe System.IntPtr FloatProp
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT FloatProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -47,7 +47,16 @@ public partial class InterpTrackInstFloatProp : BmSDK.Engine.InterpTrackInstProp
     /// </summary>
     public unsafe float ResetFloat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+
+    /// <summary>
+    /// StructProperty: DistributionProp
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT DistributionProp
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

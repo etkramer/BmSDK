@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Footstep<br/>
-/// (size = 47)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,28 +36,28 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// ByteProperty: Foot
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot
+    public unsafe byte Foot
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EFoot>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ByteProperty: Contact
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact
+    public unsafe byte Contact
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EContactType>(Ptr + 45); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 45); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 85); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
     }
 
     /// <summary>
     /// ByteProperty: SurfaceFinder
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder SurfaceFinder
+    public unsafe byte SurfaceFinder
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Footstep.EFootstepSurfaceFinder>(Ptr + 46); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 46); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 86); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 86); }
     }
 
     /// <summary>
@@ -100,7 +100,9 @@ public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGame
         Contact_WalkBack = 19,
         Contact_HandSlide = 20,
         Contact_Body = 21,
-        Contact_MAX = 22,
+        Contact_Normal_Wet = 22,
+        Contact_Land_Wet = 23,
+        Contact_MAX = 24,
     }
 
     /// <summary>

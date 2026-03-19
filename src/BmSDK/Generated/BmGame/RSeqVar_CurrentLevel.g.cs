@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_CurrentLevel<br/>
-/// (size = 140)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqVar_CurrentLevel : BmSDK.Engine.SeqVar_String, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RSeqVar_CurrentLevel : BmSDK.Engine.SeqVar_String, BmSDK.IG
     /// </summary>
     protected RSeqVar_CurrentLevel(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StrProperty: StrValue
+    /// </summary>
+    public unsafe BmSDK.FString StrValue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
 }

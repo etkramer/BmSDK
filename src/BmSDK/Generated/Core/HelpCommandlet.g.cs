@@ -5,8 +5,8 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: HelpCommandlet<br/>
-/// (size = 108)
-/// (flags = 134217914)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class HelpCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
 {
@@ -34,14 +34,92 @@ public partial class HelpCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
     protected HelpCommandlet(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Main
+    /// StrProperty: HelpDescription
     /// </summary>
-    public unsafe int Main(BmSDK.FString Params)
+    public unsafe BmSDK.FString HelpDescription
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.HelpCommandlet.Main", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Params, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 12);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// StrProperty: HelpUsage
+    /// </summary>
+    public unsafe BmSDK.FString HelpUsage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// StrProperty: HelpWebLink
+    /// </summary>
+    public unsafe BmSDK.FString HelpWebLink
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: HelpParamNames
+    /// </summary>
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> HelpParamNames
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: HelpParamDescriptions
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT HelpParamDescriptions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+    }
+
+    /// <summary>
+    /// BoolProperty: IsServer
+    /// </summary>
+    public unsafe bool IsServer
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// BoolProperty: IsClient
+    /// </summary>
+    public unsafe bool IsClient
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// BoolProperty: IsEditor
+    /// </summary>
+    public unsafe bool IsEditor
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// BoolProperty: LogToConsole
+    /// </summary>
+    public unsafe bool LogToConsole
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// BoolProperty: ShowErrorCount
+    /// </summary>
+    public unsafe bool ShowErrorCount
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 164); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 164); }
     }
 }

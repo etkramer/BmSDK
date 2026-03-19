@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: WaveFormBase<br/>
-/// (size = 48)
-/// (flags = 134217875)
+/// Class: WaveFormBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
     internal WaveFormBase() { }
 
     /// <summary>
+    /// Constructs a new WaveFormBase
+    /// </summary>
+    public WaveFormBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, WaveFormBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected WaveFormBase(nint ptr) : base(ptr) { }
@@ -31,9 +36,9 @@ public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: TheWaveForm
     /// </summary>
-    public unsafe BmSDK.Engine.ForceFeedbackWaveform TheWaveForm
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TheWaveForm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

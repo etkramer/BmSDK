@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KismetBookMark<br/>
-/// (size = 68)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class KismetBookMark : BmSDK.Engine.BookMark2D, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class KismetBookMark : BmSDK.Engine.BookMark2D, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FString BookMarkSequencePathName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

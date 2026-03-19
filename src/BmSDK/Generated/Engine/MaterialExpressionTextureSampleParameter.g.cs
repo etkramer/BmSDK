@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: MaterialExpressionTextureSampleParameter<br/>
-/// (size = 136)
-/// (flags = 134226067)
+/// Class: MaterialExpressionTextureSampleParameter<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameter : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class MaterialExpressionTextureSampleParameter : BmSDK.Engine.Mat
     internal MaterialExpressionTextureSampleParameter() { }
 
     /// <summary>
+    /// Constructs a new MaterialExpressionTextureSampleParameter
+    /// </summary>
+    public MaterialExpressionTextureSampleParameter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MaterialExpressionTextureSampleParameter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MaterialExpressionTextureSampleParameter(nint ptr) : base(ptr) { }
@@ -33,16 +38,25 @@ public partial class MaterialExpressionTextureSampleParameter : BmSDK.Engine.Mat
     /// </summary>
     public unsafe BmSDK.FName ParameterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
     /// StructProperty: ExpressionGUID
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid ExpressionGUID
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 292); }
+    }
+
+    /// <summary>
+    /// NameProperty: Group
+    /// </summary>
+    public unsafe BmSDK.FName Group
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
     }
 }

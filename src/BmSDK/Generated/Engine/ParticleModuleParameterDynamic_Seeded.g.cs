@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleParameterDynamic_Seeded<br/>
-/// (size = 92)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleParameterDynamic_Seeded : BmSDK.Engine.ParticleModuleParameterDynamic, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ParticleModuleParameterDynamic_Seeded : BmSDK.Engine.Partic
     /// <summary>
     /// StructProperty: RandomSeedInfo
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo RandomSeedInfo
+    public unsafe BmSDK.Engine.ParticleModuleParameterDynamic.DynamicParams RandomSeedInfo
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModule.FParticleRandomSeedInfo>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleParameterDynamic.DynamicParams>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 }

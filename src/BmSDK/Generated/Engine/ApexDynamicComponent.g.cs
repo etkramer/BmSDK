@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDynamicComponent<br/>
-/// (size = 440)
-/// (flags = 2290094226)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ApexDynamicComponent : BmSDK.Engine.ApexComponentBase, BmSD
     /// <summary>
     /// StructProperty: ComponentDynamicResources
     /// </summary>
-    public unsafe System.IntPtr ComponentDynamicResources
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ComponentDynamicResources
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

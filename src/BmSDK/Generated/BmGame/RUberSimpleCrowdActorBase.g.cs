@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RUberSimpleCrowdActorBase<br/>
-/// (size = 436)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RUberSimpleCrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,10 +71,10 @@ public partial class RUberSimpleCrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// ComponentProperty: Mesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent Mesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Mesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class RUberSimpleCrowdActorBase : BmSDK.Engine.Actor, BmSDK.IGame
     /// </summary>
     public unsafe float AnimStartTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_RandomInt<br/>
-/// (size = 140)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObje
     /// </summary>
     public unsafe int Min
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObje
     /// </summary>
     public unsafe int Max
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 240); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSprite<br/>
-/// (size = 432)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSprite : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class RSprite : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: SpriteComponent
     /// </summary>
-    public unsafe BmSDK.Engine.SpriteComponent SpriteComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpriteComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

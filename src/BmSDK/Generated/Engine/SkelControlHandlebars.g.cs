@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlHandlebars<br/>
-/// (size = 240)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// <summary>
     /// ByteProperty: WheelRollAxis
     /// </summary>
-    public unsafe BmSDK.GameObject.EAxis WheelRollAxis
+    public unsafe byte WheelRollAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 220); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
     }
 
     /// <summary>
     /// ByteProperty: HandlebarRotateAxis
     /// </summary>
-    public unsafe BmSDK.GameObject.EAxis HandlebarRotateAxis
+    public unsafe byte HandlebarRotateAxis
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EAxis>(Ptr + 221); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 221); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 297); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 297); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// </summary>
     public unsafe BmSDK.FName WheelBoneName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 224); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 300); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// </summary>
     public unsafe bool bInvertRotation
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 232); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 308); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 308); }
     }
 
     /// <summary>
@@ -74,7 +74,7 @@ public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone,
     /// </summary>
     public unsafe int SteerWheelBoneIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 236); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 312); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 312); }
     }
 }

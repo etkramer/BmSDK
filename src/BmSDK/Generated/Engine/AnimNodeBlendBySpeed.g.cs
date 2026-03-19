@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendBySpeed<br/>
-/// (size = 308)
-/// (flags = 144703634)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float Speed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 260); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe int LastChannel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 264); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 264); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendUpTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 268); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
     }
 
     /// <summary>
@@ -65,8 +65,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendDownTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 272); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 272); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -74,17 +74,17 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendDownPerc
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 276); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
     }
 
     /// <summary>
     /// ArrayProperty: Constraints
     /// </summary>
-    public unsafe BmSDK.TArray<float> Constraints
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> Constraints
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<float>>(Ptr + 280); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 360); }
     }
 
     /// <summary>
@@ -92,8 +92,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe bool bUseAcceleration
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 292) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 292); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 292); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 376); }
     }
 
     /// <summary>
@@ -101,8 +101,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendUpDelay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 296); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
@@ -110,8 +110,8 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendDownDelay
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 300); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 300); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
@@ -119,7 +119,7 @@ public partial class AnimNodeBlendBySpeed : BmSDK.Engine.AnimNodeBlendList, BmSD
     /// </summary>
     public unsafe float BlendDelayRemaining
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 304); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 388); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
     }
 }

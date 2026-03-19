@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocationDirect<br/>
-/// (size = 168)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocationDirect : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {
@@ -36,36 +36,36 @@ public partial class ParticleModuleLocationDirect : BmSDK.Engine.ParticleModuleL
     /// <summary>
     /// StructProperty: Location
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Location
+    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.LocationOffset Location
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.LocationOffset>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: LocationOffset
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector LocationOffset
+    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.ScaleFactor LocationOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.ScaleFactor>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
     /// StructProperty: ScaleFactor
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ScaleFactor
+    public unsafe BmSDK.Engine.ParticleModuleLocationDirect.Direction ScaleFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleLocationDirect.Direction>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: Direction
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector Direction
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 }

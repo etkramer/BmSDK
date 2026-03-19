@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceTimeVaryingActor<br/>
-/// (size = 432)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceTimeVaryingActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class MaterialInstanceTimeVaryingActor : BmSDK.Engine.Actor, BmSD
     /// <summary>
     /// ObjectProperty: MatInst
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceTimeVarying MatInst
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MatInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceTimeVarying>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

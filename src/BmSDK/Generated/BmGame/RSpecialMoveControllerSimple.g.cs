@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveControllerSimple<br/>
-/// (size = 60)
-/// (flags = 2101266)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveControllerSimple : BmSDK.BmGame.RSpecialMoveController, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class RSpecialMoveControllerSimple : BmSDK.BmGame.RSpecialMoveCon
     /// </summary>
     protected RSpecialMoveControllerSimple(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: SpecialMoves
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpecialMoves
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSimpleController
+    /// </summary>
+    public unsafe bool bSimpleController
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
+    }
 }

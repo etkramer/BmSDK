@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorUniformCurve<br/>
-/// (size = 89)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// <summary>
     /// StructProperty: ConstantCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveTwoVectors ConstantCurve
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstantCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveTwoVectors>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// </summary>
     public unsafe bool bLockAxes1
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 80); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 132); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// </summary>
     public unsafe bool bLockAxes2
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 80); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 132); }
     }
 
     /// <summary>
@@ -65,49 +65,49 @@ public partial class DistributionVectorUniformCurve : BmSDK.DistributionVector, 
     /// </summary>
     public unsafe bool bUseExtremes
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 80); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 80); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 132); }
     }
 
     /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_0
+    public unsafe byte LockedAxes_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
     /// <summary>
     /// ByteProperty: LockedAxes
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorLockFlags LockedAxes_1
+    public unsafe byte LockedAxes_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorLockFlags>(Ptr + 85); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 85); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 137); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 137); }
     }
 
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_0
+    public unsafe byte MirrorFlags_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 86); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 86); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 138); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 138); }
     }
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_1
+    public unsafe byte MirrorFlags_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 87); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 87); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 139); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 139); }
     }
     /// <summary>
     /// ByteProperty: MirrorFlags
     /// </summary>
-    public unsafe BmSDK.DistributionVector.EDistributionVectorMirrorFlags MirrorFlags_2
+    public unsafe byte MirrorFlags_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.EDistributionVectorMirrorFlags>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
     }
 }

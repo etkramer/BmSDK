@@ -5,8 +5,8 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkMultipointEmitterLineComponent<br/>
-/// (size = 408)
-/// (flags = 2290090130)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AkMultipointEmitterLineComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -36,9 +36,18 @@ public partial class AkMultipointEmitterLineComponent : BmSDK.Engine.PrimitiveCo
     /// <summary>
     /// StructProperty: LineColor
     /// </summary>
-    public unsafe BmSDK.GameObject.FColor LineColor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LineColor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FColor>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+
+    /// <summary>
+    /// StructProperty: CircleColor
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CircleColor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
     }
 }

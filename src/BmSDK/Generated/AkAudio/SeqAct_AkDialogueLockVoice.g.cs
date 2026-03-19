@@ -1,0 +1,71 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.AkAudio;
+
+/// <summary>
+/// Class: SeqAct_AkDialogueLockVoice<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class SeqAct_AkDialogueLockVoice : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "AkAudio.SeqAct_AkDialogueLockVoice", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal SeqAct_AkDialogueLockVoice() { }
+
+    /// <summary>
+    /// Constructs a new SeqAct_AkDialogueLockVoice
+    /// </summary>
+    public SeqAct_AkDialogueLockVoice(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_AkDialogueLockVoice Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected SeqAct_AkDialogueLockVoice(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ArrayProperty: Voices
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Voices
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bFullyUnlock
+    /// </summary>
+    public unsafe bool bFullyUnlock
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bInterruptExisting
+    /// </summary>
+    public unsafe bool bInterruptExisting
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 368); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 368); }
+    }
+
+    /// <summary>
+    /// IntProperty: LockCount
+    /// </summary>
+    public unsafe int LockCount
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 372); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
+    }
+}

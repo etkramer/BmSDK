@@ -5,10 +5,10 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponPipe<br/>
-/// (size = 968)
-/// (flags = 8388658)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RBMWeaponPipe : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.IGameObject
+public partial class RBMWeaponPipe : BmSDK.BmScript.RBMWeaponBaton, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -68,4 +68,21 @@ public partial class RBMWeaponPipe : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.IGame
         where TComponent : class, Framework.IScriptComponent<RBMWeaponPipe>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ObjectProperty: PoseConfig
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PoseConfig_CombatPose
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PoseConfig_CombatPose
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1756); }
+    }
 }

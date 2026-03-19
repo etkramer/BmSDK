@@ -1,0 +1,44 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.AkAudio;
+
+/// <summary>
+/// Class: SeqAct_AkDialogueResetTypePriority<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class SeqAct_AkDialogueResetTypePriority : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "AkAudio.SeqAct_AkDialogueResetTypePriority", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal SeqAct_AkDialogueResetTypePriority() { }
+
+    /// <summary>
+    /// Constructs a new SeqAct_AkDialogueResetTypePriority
+    /// </summary>
+    public SeqAct_AkDialogueResetTypePriority(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_AkDialogueResetTypePriority Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected SeqAct_AkDialogueResetTypePriority(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ObjectProperty: DialogueType
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DialogueType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
+    }
+}

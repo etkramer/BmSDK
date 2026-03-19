@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Sniper<br/>
-/// (size = 124)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDmgType_Sniper : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RDmgType_Sniper : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGame
     /// </summary>
     protected RDmgType_Sniper(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// FloatProperty: StaggerBatmanRange
+    /// </summary>
+    public unsafe float StaggerBatmanRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+    }
 }

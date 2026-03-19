@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AutoNavMeshPathObstacleUnregister<br/>
-/// (size = 52)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AutoNavMeshPathObstacleUnregister : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class AutoNavMeshPathObstacleUnregister : BmSDK.GameObject, BmSDK
     /// <summary>
     /// InterfaceProperty: PathObstacleRef
     /// </summary>
-    public unsafe BmSDK.Engine.Interface_NavMeshPathObstacle PathObstacleRef
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PathObstacleRef
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Interface_NavMeshPathObstacle>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

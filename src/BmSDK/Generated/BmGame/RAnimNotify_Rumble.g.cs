@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Rumble<br/>
-/// (size = 52)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class RAnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// <summary>
     /// ObjectProperty: WaveForm
     /// </summary>
-    public unsafe BmSDK.Engine.ForceFeedbackWaveform WaveForm
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WaveForm
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RAnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// </summary>
     public unsafe bool bPlayIfNotOnPlayer
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 92); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 92); }
     }
 }

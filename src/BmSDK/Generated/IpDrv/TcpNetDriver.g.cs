@@ -5,8 +5,8 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: TcpNetDriver<br/>
-/// (size = 416)
-/// (flags = 268435596)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TcpNetDriver : BmSDK.Engine.NetDriver, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class TcpNetDriver : BmSDK.Engine.NetDriver, BmSDK.IGameObject
     /// </summary>
     protected TcpNetDriver(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// BoolProperty: LogPortUnreach
+    /// </summary>
+    public unsafe bool LogPortUnreach
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 400); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 400); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AllowPlayerPortUnreach
+    /// </summary>
+    public unsafe bool AllowPlayerPortUnreach
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 396); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 396); }
+    }
 }

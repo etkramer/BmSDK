@@ -1,0 +1,88 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmScript;
+
+/// <summary>
+/// Class: RTurret_Watchtower<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmScript.RTurret_Watchtower", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RTurret_Watchtower() { }
+
+    /// <summary>
+    /// Constructs a new RTurret_Watchtower
+    /// </summary>
+    public RTurret_Watchtower(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTurret_Watchtower Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RTurret_Watchtower(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>, new()
+        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
+    public void DetachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RTurret_Watchtower>
+        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+
+    /// <summary>
+    /// BoolProperty: bDMVisThroughWalls_Suppressed
+    /// </summary>
+    public unsafe bool bDMVisThroughWalls_Suppressed
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDMVisThroughWalls_Old
+    /// </summary>
+    public unsafe bool bDMVisThroughWalls_Old
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1692); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1692); }
+    }
+}

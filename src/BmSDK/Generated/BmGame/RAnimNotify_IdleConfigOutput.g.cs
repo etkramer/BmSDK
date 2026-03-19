@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_IdleConfigOutput<br/>
-/// (size = 80)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Script, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Scri
     /// <summary>
     /// StructProperty: Gid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid Gid
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Gid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Scri
     /// </summary>
     public unsafe BmSDK.FName KismetOutputName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 }

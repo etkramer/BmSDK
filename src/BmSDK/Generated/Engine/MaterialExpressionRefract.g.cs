@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionRefract<br/>
-/// (size = 180)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionRefract : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,28 +36,28 @@ public partial class MaterialExpressionRefract : BmSDK.Engine.MaterialExpression
     /// <summary>
     /// StructProperty: Ray
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Ray
+    public unsafe BmSDK.Engine.MaterialExpressionRefract.Normal Ray
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRefract.Normal>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// StructProperty: Normal
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Normal
+    public unsafe BmSDK.Engine.MaterialExpressionRefract.IOR Normal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionRefract.IOR>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: IOR
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput IOR
+    public unsafe BmSDK.Engine.MaterialExpression.Desc IOR
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class MaterialExpressionRefract : BmSDK.Engine.MaterialExpression
     /// </summary>
     public unsafe float DefaultIOR
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 176); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 }

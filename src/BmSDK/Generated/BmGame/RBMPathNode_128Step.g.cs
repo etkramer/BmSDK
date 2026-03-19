@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_128Step<br/>
-/// (size = 752)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.Engine.Interface_NavMeshPathObject, BmSDK.IGameObject
+public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -69,27 +69,12 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: Use128Step
-    /// </summary>
-    public unsafe void Use128Step(BmSDK.BmGame.RBMPawnAI User, int EdgeType, System.Numerics.Vector3 JumpDirection, System.Numerics.Vector3 JumpLocation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_128Step.Use128Step", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(EdgeType, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(JumpDirection, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(JumpLocation, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: VfTable_IInterface_NavMeshPathObject
     /// </summary>
-    public unsafe System.IntPtr VfTable_IInterface_NavMeshPathObject
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IInterface_NavMeshPathObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1056); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1056); }
     }
 
     /// <summary>
@@ -97,16 +82,43 @@ public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePosi
     /// </summary>
     public unsafe float LastLockTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1064); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1064); }
     }
 
     /// <summary>
     /// StructProperty: StepLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 StepLocation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StepLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 740); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 1068); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1068); }
+    }
+
+    /// <summary>
+    /// FloatProperty: StepHeight
+    /// </summary>
+    public unsafe float StepHeight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1080); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1080); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxHeightCheck
+    /// </summary>
+    public unsafe float MaxHeightCheck
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1084); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1084); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAnyHeight
+    /// </summary>
+    public unsafe bool bAnyHeight
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1088) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1088); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1088); }
     }
 }

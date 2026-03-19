@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpotLightComponent<br/>
-/// (size = 548)
-/// (flags = 144707730)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSDK.IGameObject
 {
@@ -34,52 +34,12 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     protected SpotLightComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SetAngleAndRadius
-    /// </summary>
-    public unsafe void SetAngleAndRadius(float NewInnerConeAngle, float NewOuterConeAngle, float NewRadius)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetAngleAndRadius", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewInnerConeAngle, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewOuterConeAngle, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRadius, paramsPtr + 8);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetRotation
-    /// </summary>
-    public unsafe void SetRotation(BmSDK.Rotator NewRotation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SpotLightComponent.SetRotation", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewRotation, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
     /// FloatProperty: InnerConeAngle
     /// </summary>
     public unsafe float InnerConeAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 516); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 516); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 732); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 732); }
     }
 
     /// <summary>
@@ -87,8 +47,8 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// </summary>
     public unsafe float OuterConeAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 520); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 520); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
     }
 
     /// <summary>
@@ -96,34 +56,169 @@ public partial class SpotLightComponent : BmSDK.Engine.PointLightComponent, BmSD
     /// </summary>
     public unsafe float LightShaftConeAngle
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 524); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 524); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ComponentProperty: PreviewInnerCone
     /// </summary>
-    public unsafe BmSDK.Engine.DrawLightConeComponent PreviewInnerCone
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewInnerCone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawLightConeComponent>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
     /// ComponentProperty: PreviewOuterCone
     /// </summary>
-    public unsafe BmSDK.Engine.DrawLightConeComponent PreviewOuterCone
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewOuterCone
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DrawLightConeComponent>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 752); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 752); }
     }
 
     /// <summary>
     /// StructProperty: Rotation
     /// </summary>
-    public unsafe BmSDK.Rotator Rotation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Rotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Rotator>(Ptr + 536); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 536); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAbsoluteRotation
+    /// </summary>
+    public unsafe bool bAbsoluteRotation
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bNvidiaLightShafts
+    /// </summary>
+    public unsafe bool bNvidiaLightShafts
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCastOpacityShadows
+    /// </summary>
+    public unsafe bool bCastOpacityShadows
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 772); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 772); }
+    }
+
+    /// <summary>
+    /// ByteProperty: QualityLevel
+    /// </summary>
+    public unsafe byte QualityLevel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
+    }
+
+    /// <summary>
+    /// ByteProperty: PhaseFunction
+    /// </summary>
+    public unsafe byte PhaseFunction
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 777); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 777); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DistanceScale
+    /// </summary>
+    public unsafe float DistanceScale
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 780); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 780); }
+    }
+
+    /// <summary>
+    /// FloatProperty: GelThreshold
+    /// </summary>
+    public unsafe float GelThreshold
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 784); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Scatter
+    /// </summary>
+    public unsafe float Scatter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 788); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 788); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Absorption
+    /// </summary>
+    public unsafe float Absorption
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Phase
+    /// </summary>
+    public unsafe float Phase
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 796); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
+    }
+
+    /// <summary>
+    /// FloatProperty: NvLightShaftsBrightness
+    /// </summary>
+    public unsafe float NvLightShaftsBrightness
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 800); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 800); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OpacityShadowNearDepth
+    /// </summary>
+    public unsafe float OpacityShadowNearDepth
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 804); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OpacityShadowOpacityMultiplier
+    /// </summary>
+    public unsafe float OpacityShadowOpacityMultiplier
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 808); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 808); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OpacityShadowAmbientSelf
+    /// </summary>
+    public unsafe float OpacityShadowAmbientSelf
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 812); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+    }
+
+    /// <summary>
+    /// FloatProperty: OpacityShadowAmbientProjected
+    /// </summary>
+    public unsafe float OpacityShadowAmbientProjected
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
 }

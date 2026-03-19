@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RLineLauncherBm<br/>
-/// (size = 1264)
-/// (flags = 8388658)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameObject
 {
@@ -69,24 +69,531 @@ public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameOb
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: FireDualProjectiles
+    /// FloatProperty: LineLauncherRange
     /// </summary>
-    public unsafe void FireDualProjectiles()
+    public unsafe float LineLauncherRange
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherBm.FireDualProjectiles", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2068); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2068); }
     }
 
     /// <summary>
-    /// Function: PostBeginPlay
+    /// FloatProperty: LineLauncherBackRange
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe float LineLauncherBackRange
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RLineLauncherBm.PostBeginPlay", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2072); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2072); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LineLauncherHeight
+    /// </summary>
+    public unsafe float LineLauncherHeight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2076); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2076); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LineLauncherPlayerHeight
+    /// </summary>
+    public unsafe float LineLauncherPlayerHeight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2080); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2080); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinLineLauncherRange
+    /// </summary>
+    public unsafe float MinLineLauncherRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2084); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2084); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinLineLauncherBackRange
+    /// </summary>
+    public unsafe float MinLineLauncherBackRange
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2088); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2088); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LineLauncherFireRightOffset
+    /// </summary>
+    public unsafe float LineLauncherFireRightOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2092); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2092); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SuccessfulFireMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SuccessfulFireMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2096); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2096); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SuccessfulFire2ndLineLeftMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SuccessfulFire2ndLineLeftMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2104); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SuccessfulFire2ndLineRightMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SuccessfulFire2ndLineRightMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2112); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: FailedFireMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FailedFireMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2120); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: LineLauncherGlideStopMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LineLauncherGlideStopMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2128); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2128); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Projectile
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Projectile_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2136); }
+    }
+    /// <summary>
+    /// ObjectProperty: Projectile
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Projectile_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2144); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: RescueVolume
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RescueVolume
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2152); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: HostageVolume
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HostageVolume
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2160); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: TargetedHostage
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TargetedHostage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2168); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: GrabbedVillain
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrabbedVillain
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2176); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: GrabbedHostage
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GrabbedHostage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2184); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: LineLauncherWire
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LineLauncherWire
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2192); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: FlipUpOntoTightropeMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FlipUpOntoTightropeMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2200); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CameraAnimSet
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CameraAnimSet
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2208); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2208); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: DiveSwingMove
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DiveSwingMove
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2216); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: FailedFireSound
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FailedFireSound
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2224); }
+    }
+
+    /// <summary>
+    /// ClassProperty: RopeSpawnClass
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RopeSpawnClass
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2232); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: MuzzleFlash
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MuzzleFlash
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2240); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2240); }
+    }
+
+    /// <summary>
+    /// ComponentProperty: ProjectileRope
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileRope_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2248); }
+    }
+    /// <summary>
+    /// ComponentProperty: ProjectileRope
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ProjectileRope_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2256); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ZipForwardMaxSpeed
+    /// </summary>
+    public unsafe float ZipForwardMaxSpeed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2264); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2264); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ZipForwardAccel
+    /// </summary>
+    public unsafe float ZipForwardAccel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2268); }
+    }
+
+    /// <summary>
+    /// IntProperty: YawRangeToCheck
+    /// </summary>
+    public unsafe int YawRangeToCheck
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2272); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2272); }
+    }
+
+    /// <summary>
+    /// IntProperty: NumChecksOnEachSide
+    /// </summary>
+    public unsafe int NumChecksOnEachSide
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2276); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LineLauncherAttachAngle
+    /// </summary>
+    public unsafe float LineLauncherAttachAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2280); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LowLineLauncherHeightOffset
+    /// </summary>
+    public unsafe float LowLineLauncherHeightOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2284); }
+    }
+
+    /// <summary>
+    /// FloatProperty: LowLineLauncherPlayerHeightOffset
+    /// </summary>
+    public unsafe float LowLineLauncherPlayerHeightOffset
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2288); }
+    }
+
+    /// <summary>
+    /// StructProperty: CurrentWinchUpPosition
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentWinchUpPosition
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2292); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2292); }
+    }
+
+    /// <summary>
+    /// StructProperty: CurrentEndPosition
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CurrentEndPosition
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2304); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CurrentZipSpeed
+    /// </summary>
+    public unsafe float CurrentZipSpeed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2316); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CosLineLauncherAttachAngle
+    /// </summary>
+    public unsafe float CosLineLauncherAttachAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2320); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2320); }
+    }
+
+    /// <summary>
+    /// StructProperty: EndRopePos
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndRopePos
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2324); }
+    }
+
+    /// <summary>
+    /// StructProperty: BackRopePos
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BackRopePos
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2336); }
+    }
+
+    /// <summary>
+    /// StructProperty: BatmanStartPoint
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanStartPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2348); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2348); }
+    }
+
+    /// <summary>
+    /// StructProperty: BatmanEndPoint
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanEndPoint
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2360); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2360); }
+    }
+
+    /// <summary>
+    /// StructProperty: EndRopePosAim
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EndRopePosAim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2372); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2372); }
+    }
+
+    /// <summary>
+    /// StructProperty: BackRopePosAim
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BackRopePosAim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2384); }
+    }
+
+    /// <summary>
+    /// StructProperty: BatmanStartPointAim
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanStartPointAim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2396); }
+    }
+
+    /// <summary>
+    /// StructProperty: BatmanEndPointAim
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BatmanEndPointAim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 2408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2408); }
+    }
+
+    /// <summary>
+    /// IntProperty: RopeInitTimer
+    /// </summary>
+    public unsafe int RopeInitTimer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2420); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2420); }
+    }
+
+    /// <summary>
+    /// IntProperty: RopesFired
+    /// </summary>
+    public unsafe int RopesFired
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2424); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2424); }
+    }
+
+    /// <summary>
+    /// FloatProperty: FirstRopePlayerHeight
+    /// </summary>
+    public unsafe float FirstRopePlayerHeight
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2428); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MinAimAngle
+    /// </summary>
+    public unsafe float MinAimAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2432); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CosMinAimAngle
+    /// </summary>
+    public unsafe float CosMinAimAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2436); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2436); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bGrabHostageMode
+    /// </summary>
+    public unsafe bool bGrabHostageMode
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2440); }
+    }
+
+    /// <summary>
+    /// BoolProperty: BlockedByHostageTaker
+    /// </summary>
+    public unsafe bool BlockedByHostageTaker
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2440); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bFailedLaunch
+    /// </summary>
+    public unsafe bool bFailedLaunch
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2440); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AlwaysAllowLineLauncherTightrope
+    /// </summary>
+    public unsafe bool AlwaysAllowLineLauncherTightrope
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 2440); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 2440); }
+    }
+
+    /// <summary>
+    /// NameProperty: CameraFire2ndLineLeftAnim
+    /// </summary>
+    public unsafe BmSDK.FName CameraFire2ndLineLeftAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 2444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2444); }
+    }
+
+    /// <summary>
+    /// NameProperty: CameraFire2ndLineRightAnim
+    /// </summary>
+    public unsafe BmSDK.FName CameraFire2ndLineRightAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 2452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2452); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CameraAnimFactor
+    /// </summary>
+    public unsafe float CameraAnimFactor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2460); }
     }
 }

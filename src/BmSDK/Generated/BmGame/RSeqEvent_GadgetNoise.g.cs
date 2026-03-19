@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_GadgetNoise<br/>
-/// (size = 240)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -34,22 +34,20 @@ public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.I
     protected RSeqEvent_GadgetNoise(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Activated
+    /// StructProperty: LocationOfNoise
     /// </summary>
-    public unsafe void Activated()
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LocationOfNoise
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_GadgetNoise.Activated", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 
     /// <summary>
-    /// StructProperty: LocationOfNoise
+    /// ClassProperty: OptionalSpecificWeapon
     /// </summary>
-    public unsafe System.Numerics.Vector3 LocationOfNoise
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OptionalSpecificWeapon
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
     }
 }

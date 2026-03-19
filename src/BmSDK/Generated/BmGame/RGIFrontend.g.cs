@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGIFrontend<br/>
-/// (size = 1468)
-/// (flags = 142606518)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
 {
@@ -69,54 +69,20 @@ public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// ArrayProperty: TheCharacterList
+    /// ObjectProperty: WBIDOverlayManager
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RGIFrontend.FCharacterItem> TheCharacterList
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT WBIDOverlayManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RGIFrontend.FCharacterItem>>(Ptr + 1456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 4544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4544); }
     }
 
     /// <summary>
-    /// Struct: FCharacterItem
+    /// StrProperty: ScreenTransitionData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 32)]
-    public partial record struct FCharacterItem
+    public unsafe BmSDK.FString ScreenTransitionData
     {
-        /// <summary>
-        /// ByteProperty: Character
-        /// </summary>
-        public unsafe BmSDK.BmGame.RPersistentData.ECharacterViewer Character
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPersistentData.ECharacterViewer>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// StrProperty: Start
-        /// </summary>
-        public unsafe BmSDK.FString Start
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
-
-        /// <summary>
-        /// StrProperty: NameRef
-        /// </summary>
-        public unsafe BmSDK.FString NameRef
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 16); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }; }
-        }
-
-        /// <summary>
-        /// BoolProperty: bLoadPackage
-        /// </summary>
-        public unsafe bool bLoadPackage
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28) & 1) != 0; }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 28); }; }
-        }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 4552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4552); }
     }
 }

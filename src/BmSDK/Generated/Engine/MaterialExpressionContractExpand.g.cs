@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionContractExpand<br/>
-/// (size = 121)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -34,30 +34,20 @@ public partial class MaterialExpressionContractExpand : BmSDK.Engine.MaterialExp
     protected MaterialExpressionContractExpand(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EContractOrExpandInput
-    /// </summary>
-    public enum EContractOrExpandInput
-    {
-        Contract_Input = 0,
-        Expand_Input = 1,
-        EContractOrExpandInput_MAX = 2,
-    }
-
-    /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: ContractOrExpandInput
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionContractExpand.EContractOrExpandInput ContractOrExpandInput
+    public unsafe byte ContractOrExpandInput
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionContractExpand.EContractOrExpandInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Ranged<br/>
-/// (size = 124)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDmgType_Ranged : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RDmgType_Ranged : BmSDK.BmGame.RDamageType, BmSDK.IGameObje
     /// </summary>
     public unsafe float StaggerBatmanRange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 216); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
     }
 }

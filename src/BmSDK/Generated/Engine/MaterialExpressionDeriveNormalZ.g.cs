@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDeriveNormalZ<br/>
-/// (size = 120)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDeriveNormalZ : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class MaterialExpressionDeriveNormalZ : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: InXY
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput InXY
+    public unsafe BmSDK.Engine.MaterialExpression.Desc InXY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 }

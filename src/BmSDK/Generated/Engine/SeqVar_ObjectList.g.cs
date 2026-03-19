@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_ObjectList<br/>
-/// (size = 168)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqVar_ObjectList : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
 {
@@ -34,34 +34,11 @@ public partial class SeqVar_ObjectList : BmSDK.Engine.SeqVar_Object, BmSDK.IGame
     protected SeqVar_ObjectList(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: SetObjectValue
-    /// </summary>
-    public unsafe void SetObjectValue(BmSDK.GameObject NewValue)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_ObjectList.SetObjectValue", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewValue, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetObjectValue
-    /// </summary>
-    public unsafe BmSDK.GameObject GetObjectValue()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_ObjectList.GetObjectValue", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(paramsPtr + 0);
-    }
-
-    /// <summary>
     /// ArrayProperty: ObjList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> ObjList
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> ObjList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WindDirectionalSourceComponent<br/>
-/// (size = 92)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {
@@ -36,45 +36,63 @@ public partial class WindDirectionalSourceComponent : BmSDK.Engine.ActorComponen
     /// <summary>
     /// StructProperty: SceneProxy
     /// </summary>
-    public unsafe System.IntPtr SceneProxy
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT SceneProxy
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 72); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 72); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 
     /// <summary>
-    /// FloatProperty: Strength
+    /// StructProperty: Wind1Direction
     /// </summary>
-    public unsafe float Strength
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Wind1Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
     }
 
     /// <summary>
-    /// FloatProperty: Phase
+    /// FloatProperty: Wind1Strength
     /// </summary>
-    public unsafe float Phase
+    public unsafe float Wind1Strength
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 
     /// <summary>
-    /// FloatProperty: Frequency
+    /// FloatProperty: Wind1Frequency
     /// </summary>
-    public unsafe float Frequency
+    public unsafe float Wind1Frequency
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
     }
 
     /// <summary>
-    /// FloatProperty: Speed
+    /// StructProperty: Wind2Direction
     /// </summary>
-    public unsafe float Speed
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Wind2Direction
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 152); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Wind2Strength
+    /// </summary>
+    public unsafe float Wind2Strength
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// FloatProperty: Wind2Frequency
+    /// </summary>
+    public unsafe float Wind2Frequency
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 }

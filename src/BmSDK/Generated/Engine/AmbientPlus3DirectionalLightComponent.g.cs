@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AmbientPlus3DirectionalLightComponent<br/>
-/// (size = 496)
-/// (flags = 144707730)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject
 {
@@ -38,66 +38,66 @@ public partial class AmbientPlus3DirectionalLightComponent : BmSDK.Engine.LightC
     /// </summary>
     public unsafe bool bRenderBeforeModShadows
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 408); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 612); }
     }
 
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_0
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightDirections_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 616); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
     }
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_1
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightDirections_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 628); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
     }
     /// <summary>
     /// StructProperty: LightDirections
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightDirections_2
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightDirections_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 436); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 436); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 640); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
     }
 
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_0
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightColours_0
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 652); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 652); }
     }
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_1
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightColours_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 664); }
     }
     /// <summary>
     /// StructProperty: LightColours
     /// </summary>
-    public unsafe System.Numerics.Vector3 LightColours_2
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightColours_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 
     /// <summary>
     /// StructProperty: Ambient
     /// </summary>
-    public unsafe System.Numerics.Vector3 Ambient
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Ambient
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 688); }
     }
 }

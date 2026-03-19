@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionReliefMapping<br/>
-/// (size = 164)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -36,28 +36,46 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     /// <summary>
     /// StructProperty: UV
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput UV
+    public unsafe BmSDK.Engine.MaterialExpressionReliefMapping.HeightMapUV UV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionReliefMapping.HeightMapUV>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
+
+    /// <summary>
+    /// StructProperty: HeightMapUV
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialExpressionReliefMapping.HeightMul HeightMapUV
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionReliefMapping.HeightMul>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: HeightMul
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput HeightMul
+    public unsafe BmSDK.Engine.MaterialExpression.Desc HeightMul
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 276); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 276); }
     }
 
     /// <summary>
     /// ObjectProperty: HeightTexture
     /// </summary>
-    public unsafe BmSDK.Engine.Texture HeightTexture
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeightTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
+    }
+
+    /// <summary>
+    /// ByteProperty: HeightTextureChannel
+    /// </summary>
+    public unsafe byte HeightTextureChannel
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 
     /// <summary>
@@ -65,8 +83,8 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     /// </summary>
     public unsafe float HeightMultiplier
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
     }
 
     /// <summary>
@@ -74,8 +92,8 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     /// </summary>
     public unsafe int LSteps
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
     }
 
     /// <summary>
@@ -83,7 +101,16 @@ public partial class MaterialExpressionReliefMapping : BmSDK.Engine.MaterialExpr
     /// </summary>
     public unsafe bool bOffsetLimiting
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 160); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 160); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 348) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 348); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 348); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bOutputOffsetsOnly
+    /// </summary>
+    public unsafe bool bOutputOffsetsOnly
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 348) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 348); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 348); }
     }
 }

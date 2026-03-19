@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetGunFiring<br/>
-/// (size = 204)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetGunFiring : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -33,4 +33,30 @@ public partial class RSeqAct_SetGunFiring : BmSDK.Engine.SequenceAction, BmSDK.I
     /// </summary>
     protected RSeqAct_SetGunFiring(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: HandlerName
+    /// </summary>
+    public unsafe BmSDK.FName HandlerName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCallHandler
+    /// </summary>
+    public unsafe bool bCallHandler
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: Targets
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> Targets
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
+    }
 }

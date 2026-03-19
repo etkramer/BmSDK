@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_RemoveEverySecondKey<br/>
-/// (size = 72)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_RemoveEverySecondKey : BmSDK.Engine.AnimationCompressionAlgorithm, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class AnimationCompressionAlgorithm_RemoveEverySecondKey : BmSDK.
     /// </summary>
     public unsafe int MinKeys
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class AnimationCompressionAlgorithm_RemoveEverySecondKey : BmSDK.
     /// </summary>
     public unsafe bool bStartAtSecondKey
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 68); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 112); }
     }
 }

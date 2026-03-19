@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackInstRumble<br/>
-/// (size = 52)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RInterpTrackInstRumble : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RInterpTrackInstRumble : BmSDK.Engine.InterpTrackInst, BmSD
     /// </summary>
     public unsafe float LastUpdatePosition
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RInterpTrackInstRumble : BmSDK.Engine.InterpTrackInst, BmSD
     /// </summary>
     public unsafe float fSeekPos
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

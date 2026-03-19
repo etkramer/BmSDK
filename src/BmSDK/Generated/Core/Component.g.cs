@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// ABSTRACT Class: Component<br/>
-/// (size = 56)
-/// (flags = 134217875)
+/// Class: Component<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class Component : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class Component : BmSDK.GameObject, BmSDK.IGameObject
     internal Component() { }
 
     /// <summary>
+    /// Constructs a new Component
+    /// </summary>
+    public Component(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Component Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Component(nint ptr) : base(ptr) { }
@@ -31,10 +36,10 @@ public partial class Component : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ClassProperty: TemplateOwnerClass
     /// </summary>
-    public unsafe BmSDK.Class TemplateOwnerClass
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TemplateOwnerClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -42,7 +47,7 @@ public partial class Component : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FName TemplateName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

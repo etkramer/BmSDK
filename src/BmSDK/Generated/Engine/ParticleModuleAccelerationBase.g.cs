@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: ParticleModuleAccelerationBase<br/>
-/// (size = 60)
-/// (flags = 134221971)
+/// Class: ParticleModuleAccelerationBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleAccelerationBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class ParticleModuleAccelerationBase : BmSDK.Engine.ParticleModul
     internal ParticleModuleAccelerationBase() { }
 
     /// <summary>
+    /// Constructs a new ParticleModuleAccelerationBase
+    /// </summary>
+    public ParticleModuleAccelerationBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleAccelerationBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleAccelerationBase(nint ptr) : base(ptr) { }
@@ -33,7 +38,7 @@ public partial class ParticleModuleAccelerationBase : BmSDK.Engine.ParticleModul
     /// </summary>
     public unsafe bool bAlwaysInWorldSpace
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 }

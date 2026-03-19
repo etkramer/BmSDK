@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Kismet<br/>
-/// (size = 52)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Kismet : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class AnimNotify_Kismet : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     /// </summary>
     public unsafe BmSDK.FName NotifyName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

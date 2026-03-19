@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// ABSTRACT Class: Subsystem<br/>
-/// (size = 48)
-/// (flags = 134217883)
+/// Class: Subsystem<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
     internal Subsystem() { }
 
     /// <summary>
+    /// Constructs a new Subsystem
+    /// </summary>
+    public Subsystem(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Subsystem Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Subsystem(nint ptr) : base(ptr) { }
@@ -31,9 +36,9 @@ public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FExec
     /// </summary>
-    public unsafe System.IntPtr VfTable_FExec
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FExec
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

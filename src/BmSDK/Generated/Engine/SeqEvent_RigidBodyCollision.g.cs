@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_RigidBodyCollision<br/>
-/// (size = 232)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqEvent_RigidBodyCollision : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class SeqEvent_RigidBodyCollision : BmSDK.Engine.SequenceEvent, B
     /// </summary>
     public unsafe float MinCollisionVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

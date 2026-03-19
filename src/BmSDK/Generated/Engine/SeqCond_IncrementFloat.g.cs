@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_IncrementFloat<br/>
-/// (size = 192)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, Bm
     /// </summary>
     public unsafe float IncrementAmount
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, Bm
     /// </summary>
     public unsafe float ValueA
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 328); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 328); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, Bm
     /// </summary>
     public unsafe float ValueB
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 188); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 332); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveController<br/>
-/// (size = 60)
-/// (flags = 136319122)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveController : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,35 +34,12 @@ public partial class RSpecialMoveController : BmSDK.GameObject, BmSDK.IGameObjec
     protected RSpecialMoveController(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: FindBestSpecialMove
-    /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig FindBestSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator Feature, BmSDK.Engine.Pawn Instigator, float DeltaTime, BmSDK.Rotator CheckDirection, System.Numerics.Vector3 StickDir = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveController.FindBestSpecialMove", true);
-        byte* paramsPtr = stackalloc byte[148];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Feature, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Instigator, paramsPtr + 112);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DeltaTime, paramsPtr + 116);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(CheckDirection, paramsPtr + 120);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(StickDir, paramsPtr + 132);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSpecialMoveConfig>(paramsPtr + 144);
-    }
-
-    /// <summary>
     /// ArrayProperty: SpecialMoves
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.REnvironmentSpecialMoveWrapper> SpecialMoves
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT SpecialMoves
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.REnvironmentSpecialMoveWrapper>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -70,7 +47,7 @@ public partial class RSpecialMoveController : BmSDK.GameObject, BmSDK.IGameObjec
     /// </summary>
     public unsafe bool bSimpleController
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 100); }
     }
 }

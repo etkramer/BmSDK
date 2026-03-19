@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentMap<br/>
-/// (size = 52)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAddContentMap : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RAddContentMap : BmSDK.BmGame.RAdditionalContent, BmSDK.IGa
     /// </summary>
     public unsafe int IntTest
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

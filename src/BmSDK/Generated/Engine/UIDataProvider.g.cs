@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: UIDataProvider<br/>
-/// (size = 76)
-/// (flags = 134217883)
+/// Class: UIDataProvider<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
 {
@@ -24,245 +24,32 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     internal UIDataProvider() { }
 
     /// <summary>
+    /// Constructs a new UIDataProvider
+    /// </summary>
+    public UIDataProvider(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIDataProvider Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected UIDataProvider(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: RemovePropertyNotificationChangeRequest
+    /// ArrayProperty: BadCapsLocContexts
     /// </summary>
-    public unsafe bool RemovePropertyNotificationChangeRequest(System.IntPtr InDelegate)
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BadCapsLocContexts
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.RemovePropertyNotificationChangeRequest", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
-    /// Function: AddPropertyNotificationChangeRequest
+    /// Enum: EInputPlatformType
     /// </summary>
-    public unsafe bool AddPropertyNotificationChangeRequest(System.IntPtr InDelegate, bool bAllowDuplicates = default)
+    public enum EInputPlatformType
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.AddPropertyNotificationChangeRequest", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InDelegate, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bAllowDuplicates, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
-
-    /// <summary>
-    /// Function: NotifyPropertyChanged
-    /// </summary>
-    public unsafe void NotifyPropertyChanged(BmSDK.FName PropTag = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.NotifyPropertyChanged", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PropTag, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GenerateFillerData
-    /// </summary>
-    public unsafe BmSDK.FString GenerateFillerData(BmSDK.FString DataTag)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GenerateFillerData", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DataTag, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 12);
-    }
-
-    /// <summary>
-    /// Function: GenerateScriptMarkupString
-    /// </summary>
-    public unsafe BmSDK.FString GenerateScriptMarkupString(BmSDK.FName DataTag)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GenerateScriptMarkupString", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DataTag, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 8);
-    }
-
-    /// <summary>
-    /// Function: SetFieldValue
-    /// </summary>
-    public unsafe bool SetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.SetFieldValue", true);
-        byte* paramsPtr = stackalloc byte[104];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FieldName, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayIndex, paramsPtr + 96);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        FieldValue = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue>(paramsPtr + 12);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 100);
-    }
-
-    /// <summary>
-    /// Function: GetFieldValue
-    /// </summary>
-    public unsafe bool GetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetFieldValue", true);
-        byte* paramsPtr = stackalloc byte[104];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FieldName, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayIndex, paramsPtr + 96);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        FieldValue = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue>(paramsPtr + 12);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 100);
-    }
-
-    /// <summary>
-    /// Function: AllowPublishingToField
-    /// </summary>
-    public unsafe bool AllowPublishingToField(BmSDK.FString FieldName, int ArrayIndex = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.AllowPublishingToField", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(FieldName, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ArrayIndex, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
-
-    /// <summary>
-    /// Function: GetSupportedScriptFields
-    /// </summary>
-    public unsafe void GetSupportedScriptFields(out BmSDK.TArray<BmSDK.Engine.UIDataProvider.FUIDataProviderField> out_Fields)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetSupportedScriptFields", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        out_Fields = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.UIDataProvider.FUIDataProviderField>>(paramsPtr + 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ParseArrayDelimiter
-    /// </summary>
-    public unsafe int ParseArrayDelimiter(out BmSDK.FString DataTag)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.ParseArrayDelimiter", true);
-        byte* paramsPtr = stackalloc byte[16];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        DataTag = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 12);
-    }
-
-    /// <summary>
-    /// Function: GetProviderFieldType
-    /// </summary>
-    public unsafe bool GetProviderFieldType(BmSDK.FString DataTag, out BmSDK.Engine.UIRoot.EUIDataProviderFieldType out_ProviderFieldType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetProviderFieldType", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DataTag, paramsPtr + 0);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        out_ProviderFieldType = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.EUIDataProviderFieldType>(paramsPtr + 12);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
-
-    /// <summary>
-    /// Function: OnDataProviderPropertyChange
-    /// </summary>
-    public unsafe void OnDataProviderPropertyChange(BmSDK.Engine.UIDataProvider SourceProvider, BmSDK.FName PropTag = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.OnDataProviderPropertyChange", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SourceProvider, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PropTag, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// ByteProperty: WriteAccessType
-    /// </summary>
-    public unsafe BmSDK.Engine.UIDataProvider.EProviderAccessType WriteAccessType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIDataProvider.EProviderAccessType>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: ProviderChangedNotifies
-    /// </summary>
-    public unsafe BmSDK.TArray<System.IntPtr> ProviderChangedNotifies
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
-    }
-
-    /// <summary>
-    /// DelegateProperty: __OnDataProviderPropertyChange__Delegate
-    /// </summary>
-    public unsafe System.IntPtr __OnDataProviderPropertyChange__Delegate
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
-    }
-
-    /// <summary>
-    /// Enum: EProviderAccessType
-    /// </summary>
-    public enum EProviderAccessType
-    {
-        ACCESS_ReadOnly = 0,
-        ACCESS_PerField = 1,
-        ACCESS_WriteAll = 2,
-        ACCESS_MAX = 3,
-    }
-
-    /// <summary>
-    /// Struct: FUIDataProviderField
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 24)]
-    public partial record struct FUIDataProviderField
-    {
-        /// <summary>
-        /// NameProperty: FieldTag
-        /// </summary>
-        public unsafe BmSDK.FName FieldTag
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: FieldType
-        /// </summary>
-        public unsafe BmSDK.Engine.UIRoot.EUIDataProviderFieldType FieldType
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UIRoot.EUIDataProviderFieldType>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// ArrayProperty: FieldProviders
-        /// </summary>
-        public unsafe BmSDK.TArray<BmSDK.Engine.UIDataProvider> FieldProviders
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.UIDataProvider>>(Ptr + 12); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }; }
-        }
+        IPT_PC = 0,
+        IPT = 1,
+        IPT_PS3 = 2,
+        IPT_MAX = 3,
     }
 }

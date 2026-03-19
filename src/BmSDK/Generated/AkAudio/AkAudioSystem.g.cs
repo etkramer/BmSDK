@@ -5,8 +5,8 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkAudioSystem<br/>
-/// (size = 48)
-/// (flags = 268435596)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AkAudioSystem : BmSDK.Subsystem, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class AkAudioSystem : BmSDK.Subsystem, BmSDK.IGameObject
     /// </summary>
     protected AkAudioSystem(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: VfTable_FExec
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FExec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkeletalMeshActorMATWalkable<br/>
-/// (size = 508)
-/// (flags = 8388626)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkeletalMeshActorMATWalkable : BmSDK.Engine.SkeletalMeshActorMAT, BmSDK.IGameObject
 {
@@ -68,4 +68,12 @@ public partial class SkeletalMeshActorMATWalkable : BmSDK.Engine.SkeletalMeshAct
         where TComponent : class, Framework.IScriptComponent<SkeletalMeshActorMATWalkable>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ArrayProperty: SlotNodes
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>> SlotNodes
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>>(Ptr + 736); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 736); }
+    }
 }

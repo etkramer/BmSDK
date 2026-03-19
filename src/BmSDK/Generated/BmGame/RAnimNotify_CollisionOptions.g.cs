@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_CollisionOptions<br/>
-/// (size = 48)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RAnimNotify_CollisionOptions : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject
+public partial class RAnimNotify_CollisionOptions : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -33,4 +33,12 @@ public partial class RAnimNotify_CollisionOptions : BmSDK.BmGame.RAnimNotify_Beg
     /// </summary>
     protected RAnimNotify_CollisionOptions(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: CollisionOptions
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollisionOptions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PathGoalEvaluator<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,32 +34,21 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
     protected PathGoalEvaluator(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: Recycle
-    /// </summary>
-    public unsafe void Recycle()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathGoalEvaluator.Recycle", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: NextEvaluator
     /// </summary>
-    public unsafe BmSDK.Engine.PathGoalEvaluator NextEvaluator
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NextEvaluator
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PathGoalEvaluator>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: GeneratedGoal
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint GeneratedGoal
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT GeneratedGoal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NavigationPoint>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -67,8 +56,8 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int MaxPathVisits
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -76,7 +65,7 @@ public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int CacheIdx
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

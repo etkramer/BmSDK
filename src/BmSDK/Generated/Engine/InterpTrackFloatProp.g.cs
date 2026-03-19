@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFloatProp<br/>
-/// (size = 192)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackFloatProp : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackFloatProp : BmSDK.Engine.InterpTrackFloatBase, B
     /// </summary>
     public unsafe BmSDK.FName PropertyName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

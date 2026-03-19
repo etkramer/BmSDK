@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticLightCollectionActor<br/>
-/// (size = 460)
-/// (flags = 142606998)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGameObject
 {
@@ -71,10 +71,10 @@ public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGam
     /// <summary>
     /// ArrayProperty: LightComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.LightComponent> LightComponents
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> LightComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LightComponent>>(Ptr + 444); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGam
     /// </summary>
     public unsafe int MaxLightComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 456); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 456); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 708); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 708); }
     }
 }

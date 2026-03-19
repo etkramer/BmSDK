@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_FootPassing<br/>
-/// (size = 45)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_FootPassing : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class RAnimNotify_FootPassing : BmSDK.Engine.AnimNotify, BmSDK.IG
     /// <summary>
     /// ByteProperty: Passing
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_FootPassing.EFootPassing Passing
+    public unsafe byte Passing
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_FootPassing.EFootPassing>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>

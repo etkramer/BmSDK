@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGameViewportClient<br/>
-/// (size = 280)
-/// (flags = 62)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGameViewportClient : BmSDK.Engine.GameViewportClient, BmSDK.IGameObject
 {
@@ -33,4 +33,380 @@ public partial class RGameViewportClient : BmSDK.Engine.GameViewportClient, BmSD
     /// </summary>
     protected RGameViewportClient(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: VfTable_FExec
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FExec
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+
+    /// <summary>
+    /// StructProperty: Viewport
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Viewport
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// StructProperty: ViewportFrame
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ViewportFrame
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: GlobalInteractions
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> GlobalInteractions
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+    }
+
+    /// <summary>
+    /// ClassProperty: UIControllerClass
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UIControllerClass
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: UIController
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT UIController
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 140); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ViewportConsole
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ViewportConsole
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: CanvasObject
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT CanvasObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 156); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+    }
+
+    /// <summary>
+    /// StructProperty: ShowFlags
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ShowFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
+    }
+
+    /// <summary>
+    /// StructProperty: RockShowFlags
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT RockShowFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
+
+    /// <summary>
+    /// ByteProperty: ShowCollisionFilter
+    /// </summary>
+    public unsafe byte ShowCollisionFilter
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
+    }
+
+    /// <summary>
+    /// ByteProperty: DesiredSplitscreenType
+    /// </summary>
+    public unsafe byte DesiredSplitscreenType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 189); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 189); }
+    }
+
+    /// <summary>
+    /// ByteProperty: ActiveSplitscreenType
+    /// </summary>
+    public unsafe byte ActiveSplitscreenType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 190); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 190); }
+    }
+
+    /// <summary>
+    /// ByteProperty: Default2PSplitType
+    /// </summary>
+    public unsafe byte Default2PSplitType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 191); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 191); }
+    }
+
+    /// <summary>
+    /// ByteProperty: Default3PSplitType
+    /// </summary>
+    public unsafe byte Default3PSplitType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+    }
+
+    /// <summary>
+    /// StrProperty: LoadingMessage
+    /// </summary>
+    public unsafe BmSDK.FString LoadingMessage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
+    }
+
+    /// <summary>
+    /// StrProperty: SavingMessage
+    /// </summary>
+    public unsafe BmSDK.FString SavingMessage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+    }
+
+    /// <summary>
+    /// StrProperty: ConnectingMessage
+    /// </summary>
+    public unsafe BmSDK.FString ConnectingMessage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+    }
+
+    /// <summary>
+    /// StrProperty: PausedMessage
+    /// </summary>
+    public unsafe BmSDK.FString PausedMessage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
+    }
+
+    /// <summary>
+    /// StrProperty: PrecachingMessage
+    /// </summary>
+    public unsafe BmSDK.FString PrecachingMessage
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 260); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 260); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bShowTitleSafeZone
+    /// </summary>
+    public unsafe bool bShowTitleSafeZone
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDisplayHardwareMouseCursor
+    /// </summary>
+    public unsafe bool bDisplayHardwareMouseCursor
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bOverrideDiffuseAndSpecular
+    /// </summary>
+    public unsafe bool bOverrideDiffuseAndSpecular
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bIsPlayInEditorViewport
+    /// </summary>
+    public unsafe bool bIsPlayInEditorViewport
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bShowSystemMouseCursor
+    /// </summary>
+    public unsafe bool bShowSystemMouseCursor
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCollisionLight
+    /// </summary>
+    public unsafe bool bCollisionLight
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDisableWorldRendering
+    /// </summary>
+    public unsafe bool bDisableWorldRendering
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDebugNoGFxUI
+    /// </summary>
+    public unsafe bool bDebugNoGFxUI
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 276); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 276); }
+    }
+
+    /// <summary>
+    /// StructProperty: TitleSafeZone
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TitleSafeZone
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 280); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 280); }
+    }
+
+    /// <summary>
+    /// IntProperty: ReflectionVolumeMode
+    /// </summary>
+    public unsafe int ReflectionVolumeMode
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
+
+    /// <summary>
+    /// StructProperty: CollisionLightSavedShowFlags
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CollisionLightSavedShowFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 308); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 308); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: SplitscreenInfo
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> SplitscreenInfo
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
+    }
+
+    /// <summary>
+    /// StrProperty: ProgressMessage
+    /// </summary>
+    public unsafe BmSDK.FString ProgressMessage_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 340); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 340); }
+    }
+    /// <summary>
+    /// StrProperty: ProgressMessage
+    /// </summary>
+    public unsafe BmSDK.FString ProgressMessage_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 356); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 356); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ProgressTimeOut
+    /// </summary>
+    public unsafe float ProgressTimeOut
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 372); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 372); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ProgressFadeTime
+    /// </summary>
+    public unsafe float ProgressFadeTime
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 376); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: DebugProperties
+    /// </summary>
+    public unsafe BmSDK.TArray<System.IntPtr> DebugProperties
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<System.IntPtr>>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// StructProperty: ScaleformInteraction
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ScaleformInteraction
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
+    }
+
+    /// <summary>
+    /// StructProperty: ViewFamily
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ViewFamily
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 404); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __HandleInputKey__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __HandleInputKey__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 412); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __HandleInputAxis__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __HandleInputAxis__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 428); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+    }
+
+    /// <summary>
+    /// DelegateProperty: __HandleInputChar__Delegate
+    /// </summary>
+    public unsafe System.IntPtr __HandleInputChar__Delegate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+    }
 }

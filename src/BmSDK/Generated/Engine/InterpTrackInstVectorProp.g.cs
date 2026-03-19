@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstVectorProp<br/>
-/// (size = 68)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstVectorProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class InterpTrackInstVectorProp : BmSDK.Engine.InterpTrackInstPro
     /// <summary>
     /// StructProperty: VectorProp
     /// </summary>
-    public unsafe System.IntPtr VectorProp
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VectorProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
     /// StructProperty: ResetVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 ResetVector
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ResetVector
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

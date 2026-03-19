@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTransform<br/>
-/// (size = 122)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -34,52 +34,29 @@ public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpressi
     protected MaterialExpressionTransform(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EMaterialVectorCoordTransform
-    /// </summary>
-    public enum EMaterialVectorCoordTransform
-    {
-        TRANSFORM_World = 0,
-        TRANSFORM_View = 1,
-        TRANSFORM_Local = 2,
-        TRANSFORM_Tangent = 3,
-        TRANSFORM_MAX = 4,
-    }
-
-    /// <summary>
-    /// Enum: EMaterialVectorCoordTransformSource
-    /// </summary>
-    public enum EMaterialVectorCoordTransformSource
-    {
-        TRANSFORMSOURCE_World = 0,
-        TRANSFORMSOURCE_Local = 1,
-        TRANSFORMSOURCE_Tangent = 2,
-        TRANSFORMSOURCE_MAX = 3,
-    }
-
-    /// <summary>
     /// StructProperty: Input
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Input
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: TransformSourceType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransformSource TransformSourceType
+    public unsafe byte TransformSourceType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransformSource>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// ByteProperty: TransformType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransform TransformType
+    public unsafe byte TransformType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTransform.EMaterialVectorCoordTransform>(Ptr + 121); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 121); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 225); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 225); }
     }
 }

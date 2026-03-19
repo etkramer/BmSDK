@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkSwitchName<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class AkSwitchName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
+public partial class AkSwitchName : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -36,9 +36,9 @@ public partial class AkSwitchName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: ParentSwitchGroup
     /// </summary>
-    public unsafe BmSDK.Engine.AkSwitchGroupName ParentSwitchGroup
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParentSwitchGroup
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkSwitchGroupName>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

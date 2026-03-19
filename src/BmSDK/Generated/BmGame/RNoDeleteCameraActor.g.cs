@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNoDeleteCameraActor<br/>
-/// (size = 864)
-/// (flags = 10485778)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {
@@ -68,4 +68,84 @@ public partial class RNoDeleteCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGa
         where TComponent : class, Framework.IScriptComponent<RNoDeleteCameraActor>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ObjectProperty: ScreenShakeModifier
+    /// </summary>
+    public unsafe BmSDK.BmGame.RCameraActor.OverlayPlayer ScreenShakeModifier
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCameraActor.OverlayPlayer>(Ptr + 1224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1224); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: OverlayPlayer
+    /// </summary>
+    public unsafe BmSDK.Engine.CameraActor.CamOverridePostProcess OverlayPlayer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.CameraActor.CamOverridePostProcess>(Ptr + 1232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1232); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bRunning
+    /// </summary>
+    public unsafe bool bRunning
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCullsPawns
+    /// </summary>
+    public unsafe bool bCullsPawns
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bEnableMotionBlur
+    /// </summary>
+    public unsafe bool bEnableMotionBlur
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bUseAspectRatioCorretion
+    /// </summary>
+    public unsafe bool bUseAspectRatioCorretion
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDisallowOverlays
+    /// </summary>
+    public unsafe bool bDisallowOverlays
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bCullPawnsTillClearOfBatmobile
+    /// </summary>
+    public unsafe bool bCullPawnsTillClearOfBatmobile
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1240); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1240); }
+    }
+
+    /// <summary>
+    /// FloatProperty: AuthoredAspectRatio
+    /// </summary>
+    public unsafe float AuthoredAspectRatio
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1244); }
+    }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTrailTaper<br/>
-/// (size = 88)
-/// (flags = 142618770)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrailBase, BmSDK.IGameObject
 {
@@ -36,19 +36,19 @@ public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// ByteProperty: TaperMethod
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleTrailTaper.ETrailTaperMethod TaperMethod
+    public unsafe byte TaperMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleTrailTaper.ETrailTaperMethod>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: TaperFactor
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat TaperFactor
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT TaperFactor
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_SequenceActivated<br/>
-/// (size = 240)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqEvent_SequenceActivated : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class SeqEvent_SequenceActivated : BmSDK.Engine.SequenceEvent, Bm
     /// </summary>
     public unsafe BmSDK.FString InputLabel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 380); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 380); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionSceneTexture<br/>
-/// (size = 128)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -34,30 +34,21 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     protected MaterialExpressionSceneTexture(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ESceneTextureType
-    /// </summary>
-    public enum ESceneTextureType
-    {
-        SceneTex_Lighting = 0,
-        SceneTex_MAX = 1,
-    }
-
-    /// <summary>
     /// StructProperty: Coordinates
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Coordinates
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Coordinates
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
     /// ByteProperty: SceneTextureType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionSceneTexture.ESceneTextureType SceneTextureType
+    public unsafe byte SceneTextureType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionSceneTexture.ESceneTextureType>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
@@ -65,7 +56,7 @@ public partial class MaterialExpressionSceneTexture : BmSDK.Engine.MaterialExpre
     /// </summary>
     public unsafe bool ScreenAlign
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 124); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 228); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 228); }
     }
 }

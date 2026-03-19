@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeComponent<br/>
-/// (size = 648)
-/// (flags = 2290090130)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -34,87 +34,12 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     protected LandscapeComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ETerrainComponentNeighbors
-    /// </summary>
-    public enum ETerrainComponentNeighbors
-    {
-        TCN_NW = 0,
-        TCN_N = 1,
-        TCN_NE = 2,
-        TCN_W = 3,
-        TCN_E = 4,
-        TCN_SW = 5,
-        TCN_S = 6,
-        TCN_SE = 7,
-        TCN_MAX = 8,
-    }
-
-    /// <summary>
-    /// Struct: FWeightmapLayerAllocationInfo
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 10)]
-    public partial record struct FWeightmapLayerAllocationInfo
-    {
-        /// <summary>
-        /// NameProperty: LayerName
-        /// </summary>
-        public unsafe BmSDK.FName LayerName
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: WeightmapTextureIndex
-        /// </summary>
-        public unsafe byte WeightmapTextureIndex
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 8); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
-        }
-
-        /// <summary>
-        /// ByteProperty: WeightmapTextureChannel
-        /// </summary>
-        public unsafe byte WeightmapTextureChannel
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 9); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 9); }; }
-        }
-    }
-
-    /// <summary>
-    /// Struct: FLandscapeComponentAlphaInfo
-    /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 16)]
-    public partial record struct FLandscapeComponentAlphaInfo
-    {
-        /// <summary>
-        /// IntProperty: LayerIndex
-        /// </summary>
-        public unsafe int LayerIndex
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
-        }
-
-        /// <summary>
-        /// ArrayProperty: AlphaValues
-        /// </summary>
-        public unsafe BmSDK.TArray<byte> AlphaValues
-        {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<byte>>(Ptr + 4); }; }
-            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
-        }
-    }
-
-    /// <summary>
     /// IntProperty: SectionBaseX
     /// </summary>
     public unsafe int SectionBaseX
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 
     /// <summary>
@@ -122,8 +47,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe int SectionBaseY
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 408); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
     }
 
     /// <summary>
@@ -131,8 +56,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe int ComponentSizeQuads
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 412); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 412); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
     }
 
     /// <summary>
@@ -140,8 +65,8 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe int SubsectionSizeQuads
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 416); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
     }
 
     /// <summary>
@@ -149,62 +74,62 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe int NumSubsections
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 420); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 420); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 556); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 556); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: OverrideMaterial
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideMaterial
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 560); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
     }
 
     /// <summary>
     /// ObjectProperty: MaterialInstance
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialInstance
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT MaterialInstance
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 424); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 424); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 568); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 568); }
     }
 
     /// <summary>
-    /// ArrayProperty: EditingAlphaLayerData
+    /// ObjectProperty: HeightmapTexture
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.LandscapeComponent.FLandscapeComponentAlphaInfo> EditingAlphaLayerData
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT HeightmapTexture
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LandscapeComponent.FLandscapeComponentAlphaInfo>>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
-    }
-
-    /// <summary>
-    /// NameProperty: EditingAlphaLayerName
-    /// </summary>
-    public unsafe BmSDK.FName EditingAlphaLayerName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 440); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 576); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
     }
 
     /// <summary>
     /// ArrayProperty: WeightmapLayerAllocations
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.LandscapeComponent.FWeightmapLayerAllocationInfo> WeightmapLayerAllocations
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>> WeightmapLayerAllocations
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.LandscapeComponent.FWeightmapLayerAllocationInfo>>(Ptr + 448); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>>(Ptr + 584); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 584); }
     }
 
     /// <summary>
     /// ArrayProperty: WeightmapTextures
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Texture2D> WeightmapTextures
+    public unsafe BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>> WeightmapTextures
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Texture2D>>(Ptr + 460); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>>(Ptr + 600); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 600); }
     }
 
     /// <summary>
     /// StructProperty: WeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 WeightmapScaleBias
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WeightmapScaleBias
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 480); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 480); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 624); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
     }
 
     /// <summary>
@@ -212,107 +137,80 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe float WeightmapSubsectionOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 640); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
     }
 
     /// <summary>
     /// StructProperty: HeightmapScaleBias
     /// </summary>
-    public unsafe System.Numerics.Vector4 HeightmapScaleBias
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT HeightmapScaleBias
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector4>(Ptr + 512); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
-    }
-
-    /// <summary>
-    /// FloatProperty: HeightmapSubsectionOffset
-    /// </summary>
-    public unsafe float HeightmapSubsectionOffset
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 528); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 528); }
-    }
-
-    /// <summary>
-    /// StructProperty: LayerUVPan
-    /// </summary>
-    public unsafe System.Numerics.Vector2 LayerUVPan
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector2>(Ptr + 532); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 532); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: HeightmapTexture
-    /// </summary>
-    public unsafe BmSDK.Engine.Texture2D HeightmapTexture
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 540); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 656); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 656); }
     }
 
     /// <summary>
     /// StructProperty: CachedBoxSphereBounds
     /// </summary>
-    public unsafe BmSDK.GameObject.FBoxSphereBounds CachedBoxSphereBounds
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CachedBoxSphereBounds
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FBoxSphereBounds>(Ptr + 544); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 672); }
     }
 
     /// <summary>
-    /// IntProperty: StaticLightingResolution
+    /// StructProperty: CachedLocalBox
     /// </summary>
-    public unsafe int StaticLightingResolution
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CachedLocalBox
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 572); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 572); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 700); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 700); }
     }
 
     /// <summary>
     /// StructProperty: LightingGuid
     /// </summary>
-    public unsafe BmSDK.GameObject.FGuid LightingGuid
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightingGuid
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FGuid>(Ptr + 576); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 576); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 728); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 728); }
     }
 
     /// <summary>
     /// ArrayProperty: ShadowMaps
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ShadowMap2D> ShadowMaps
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> ShadowMaps
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ShadowMap2D>>(Ptr + 580); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 580); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 744); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 744); }
     }
 
     /// <summary>
     /// ArrayProperty: IrrelevantLights
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject.FGuid> IrrelevantLights
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT IrrelevantLights
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject.FGuid>>(Ptr + 592); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 592); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 760); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 760); }
     }
 
     /// <summary>
     /// StructProperty: LightMap
     /// </summary>
-    public unsafe BmSDK.Engine.EngineTypes.FLightMapRef LightMap
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LightMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.EngineTypes.FLightMapRef>(Ptr + 604); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 604); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 776); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 776); }
     }
 
     /// <summary>
     /// StructProperty: EditToolRenderData
     /// </summary>
-    public unsafe System.IntPtr EditToolRenderData
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT EditToolRenderData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 608); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 608); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 784); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 784); }
     }
 
     /// <summary>
@@ -320,72 +218,182 @@ public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK
     /// </summary>
     public unsafe int CollisionMipLevel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 612); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 612); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 792); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 792); }
     }
 
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// StructProperty: PlatformData
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_0
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT PlatformData
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 616); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 616); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 796); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 796); }
+    }
+
+    /// <summary>
+    /// IntProperty: PlatformDataSize
+    /// </summary>
+    public unsafe int PlatformDataSize
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 804); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 804); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bNeedPostUndo
+    /// </summary>
+    public unsafe bool bNeedPostUndo
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 808); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 808); }
+    }
+
+    /// <summary>
+    /// IntProperty: ForcedLOD
+    /// </summary>
+    public unsafe int ForcedLOD
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 812); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 812); }
+    }
+
+    /// <summary>
+    /// ByteProperty: NeighborLOD
+    /// </summary>
+    public unsafe byte NeighborLOD_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 816); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 816); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_1
+    public unsafe byte NeighborLOD_1
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 620); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 620); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 817); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 817); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_2
+    public unsafe byte NeighborLOD_2
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 624); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 624); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 818); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 818); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_3
+    public unsafe byte NeighborLOD_3
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 628); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 628); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 819); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 819); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_4
+    public unsafe byte NeighborLOD_4
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 632); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 632); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 820); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 820); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_5
+    public unsafe byte NeighborLOD_5
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 636); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 636); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 821); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 821); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_6
+    public unsafe byte NeighborLOD_6
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 640); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 640); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 822); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 822); }
     }
     /// <summary>
-    /// ComponentProperty: Neighbors
+    /// ByteProperty: NeighborLOD
     /// </summary>
-    public unsafe BmSDK.Engine.LandscapeComponent Neighbors_7
+    public unsafe byte NeighborLOD_7
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.LandscapeComponent>(Ptr + 644); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 644); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 823); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 823); }
+    }
+
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_0
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 824); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 824); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_1
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 825); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 825); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_2
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 826); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 826); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_3
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 827); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 827); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_4
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 828); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 828); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_5
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 829); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 829); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_6
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 830); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 830); }
+    }
+    /// <summary>
+    /// ByteProperty: NeighborLODBias
+    /// </summary>
+    public unsafe byte NeighborLODBias_7
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 831); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 831); }
+    }
+
+    /// <summary>
+    /// IntProperty: LODBias
+    /// </summary>
+    public unsafe int LODBias
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 832); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 832); }
     }
 }

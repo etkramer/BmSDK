@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphTarget<br/>
-/// (size = 72)
-/// (flags = 402)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: MorphLODModels
     /// </summary>
-    public unsafe BmSDK.TArray<int> MorphLODModels
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT MorphLODModels
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe int MaterialSlotId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 
     /// <summary>
@@ -56,16 +56,7 @@ public partial class MorphTarget : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FName ScalarParameterName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
-    }
-
-    /// <summary>
-    /// ObjectProperty: MaterialInstanceConstant
-    /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant MaterialInstanceConstant
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 68); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 }

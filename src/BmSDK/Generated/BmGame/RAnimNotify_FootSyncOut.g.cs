@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_FootSyncOut<br/>
-/// (size = 46)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_FootSyncOut : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -34,20 +34,47 @@ public partial class RAnimNotify_FootSyncOut : BmSDK.Engine.AnimNotify, BmSDK.IG
     protected RAnimNotify_FootSyncOut(nint ptr) : base(ptr) { }
 
     /// <summary>
+    /// BoolProperty: AutomaticSyncPoint
+    /// </summary>
+    public unsafe bool AutomaticSyncPoint
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: AutomaticSpeedAndDirection
+    /// </summary>
+    public unsafe bool AutomaticSpeedAndDirection
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
     /// ByteProperty: SyncPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil.EFootSyncPoint SyncPoint
+    public unsafe byte SyncPoint
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimUtil.EFootSyncPoint>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
     /// ByteProperty: Speed
     /// </summary>
-    public unsafe BmSDK.BmGame.RPoseConfig.EMovementSpeed Speed
+    public unsafe byte Speed
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RPoseConfig.EMovementSpeed>(Ptr + 45); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 45); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 89); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 89); }
+    }
+
+    /// <summary>
+    /// ByteProperty: Direction
+    /// </summary>
+    public unsafe byte Direction
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 90); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 90); }
     }
 }

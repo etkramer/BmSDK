@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RBMPathNode_VariablePositionTraverseProxy<br/>
-/// (size = 680)
-/// (flags = 142606995)
+/// Class: RBMPathNode_VariablePositionTraverseProxy<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
     }
 
     internal RBMPathNode_VariablePositionTraverseProxy() { }
+
+    /// <summary>
+    /// Constructs a new RBMPathNode_VariablePositionTraverseProxy
+    /// </summary>
+    public RBMPathNode_VariablePositionTraverseProxy(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMPathNode_VariablePositionTraverseProxy Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -64,57 +69,11 @@ public partial class RBMPathNode_VariablePositionTraverseProxy : BmSDK.BmGame.RB
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Function: UnlockSlot
-    /// </summary>
-    public unsafe void UnlockSlot(BmSDK.BmGame.RPawn User)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.UnlockSlot", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetDynamicMoveSlotFor
-    /// </summary>
-    public unsafe bool GetDynamicMoveSlotFor(BmSDK.BmGame.RPawn User, System.Numerics.Vector3 DestPoint, out System.Numerics.Vector3 SlotLocation)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.GetDynamicMoveSlotFor", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(User, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DestPoint, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        SlotLocation = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 16);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 28);
-    }
-
-    /// <summary>
-    /// Function: GetIntersectionPoint
-    /// </summary>
-    public unsafe System.Numerics.Vector3 GetIntersectionPoint(System.Numerics.Vector3 PawnLoc, System.Numerics.Vector3 DestLoc)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMPathNode_VariablePositionTraverseProxy.GetIntersectionPoint", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PawnLoc, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DestLoc, paramsPtr + 12);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 24);
-    }
-
-    /// <summary>
     /// ObjectProperty: FenceJumpNode
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPathNode_VariablePositionTraverse FenceJumpNode
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FenceJumpNode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPathNode_VariablePositionTraverse>(Ptr + 676); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 976); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 976); }
     }
 }

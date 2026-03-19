@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CodecMovieBink<br/>
-/// (size = 48)
-/// (flags = 268435592)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class CodecMovieBink : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class CodecMovieBink : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
     /// </summary>
     protected CodecMovieBink(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// FloatProperty: PlaybackDuration
+    /// </summary>
+    public unsafe float PlaybackDuration
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
 }

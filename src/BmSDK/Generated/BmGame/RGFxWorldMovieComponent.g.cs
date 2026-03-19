@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxWorldMovieComponent<br/>
-/// (size = 408)
-/// (flags = 2290090130)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, 
     /// <summary>
     /// ObjectProperty: ScaleformObject
     /// </summary>
-    public unsafe BmSDK.GFxUI.GFxMoviePlayer ScaleformObject
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ScaleformObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GFxUI.GFxMoviePlayer>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

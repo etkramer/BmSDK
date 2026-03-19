@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_ClothingMaxDistanceScale<br/>
-/// (size = 60)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNoti
     /// </summary>
     public unsafe float StartScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,17 +47,8 @@ public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNoti
     /// </summary>
     public unsafe float EndScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
-    }
-
-    /// <summary>
-    /// ByteProperty: ScaleMode
-    /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMeshComponent.EMaxDistanceScaleMode ScaleMode
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent.EMaxDistanceScaleMode>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
@@ -65,7 +56,7 @@ public partial class AnimNotify_ClothingMaxDistanceScale : BmSDK.Engine.AnimNoti
     /// </summary>
     public unsafe float Duration
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

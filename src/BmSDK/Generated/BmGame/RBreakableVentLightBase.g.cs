@@ -1,0 +1,133 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RBreakableVentLightBase<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class RBreakableVentLightBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RBreakableVentLightBase", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RBreakableVentLightBase() { }
+
+    /// <summary>
+    /// Constructs a new RBreakableVentLightBase
+    /// </summary>
+    public RBreakableVentLightBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBreakableVentLightBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RBreakableVentLightBase(nint ptr) : base(ptr) { }
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Framework.IScriptComponent)"/>
+    public void AttachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => ((Engine.Actor)this).AttachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.AttachScriptComponent(Type)"/>
+    public TComponent AttachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>, new()
+        => (TComponent)((Engine.Actor)this).AttachScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Framework.IScriptComponent)"/>
+    public bool HasScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => ((Engine.Actor)this).HasScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.HasScriptComponent(Type)"/>
+    public bool HasScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => ((Engine.Actor)this).HasScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.GetScriptComponent(Type)"/>
+    public TComponent GetScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => (TComponent)((Engine.Actor)this).GetScriptComponent(typeof(TComponent));
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Framework.IScriptComponent)"/>
+    public void DetachScriptComponent<TComponent>(TComponent component)
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => ((Engine.Actor)this).DetachScriptComponent((Framework.IScriptComponent)component);
+
+    /// <inheritdoc cref="Engine.Actor.DetachScriptComponent(Type)"/>
+    public void DetachScriptComponent<TComponent>()
+        where TComponent : class, Framework.IScriptComponent<RBreakableVentLightBase>
+        => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
+
+    /// <summary>
+    /// ComponentProperty: StaticMeshComponent
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StaticMeshComponent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bDisableAutoBaseOnProcBuilding
+    /// </summary>
+    public unsafe bool bDisableAutoBaseOnProcBuilding
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bProxy
+    /// </summary>
+    public unsafe bool bProxy
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bHiddenByProxy
+    /// </summary>
+    public unsafe bool bHiddenByProxy
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: OldCastShadow
+    /// </summary>
+    public unsafe bool OldCastShadow
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// BoolProperty: OldAcceptsLights
+    /// </summary>
+    public unsafe bool OldAcceptsLights
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 700); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 700); }
+    }
+
+    /// <summary>
+    /// ByteProperty: OldCollisionType
+    /// </summary>
+    public unsafe byte OldCollisionType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 704); }
+    }
+}

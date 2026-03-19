@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDisplacementSampleLerp<br/>
-/// (size = 132)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDisplacementSampleLerp : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class MaterialExpressionDisplacementSampleLerp : BmSDK.Engine.Mat
     /// </summary>
     public unsafe float Min
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 284); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 284); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class MaterialExpressionDisplacementSampleLerp : BmSDK.Engine.Mat
     /// </summary>
     public unsafe float Max
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 288); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 288); }
     }
 }

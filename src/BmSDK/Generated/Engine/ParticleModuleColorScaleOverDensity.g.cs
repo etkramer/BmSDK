@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleColorScaleOverDensity<br/>
-/// (size = 112)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleColorScaleOverDensity : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class ParticleModuleColorScaleOverDensity : BmSDK.Engine.Particle
     /// <summary>
     /// StructProperty: ColorScaleOverDensity
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector ColorScaleOverDensity
+    public unsafe BmSDK.Engine.ParticleModuleColorScaleOverDensity.AlphaScaleOverDensity ColorScaleOverDensity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleColorScaleOverDensity.AlphaScaleOverDensity>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// StructProperty: AlphaScaleOverDensity
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat AlphaScaleOverDensity
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT AlphaScaleOverDensity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 }

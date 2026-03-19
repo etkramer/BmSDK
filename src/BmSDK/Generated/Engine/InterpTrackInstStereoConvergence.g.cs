@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstStereoConvergence<br/>
-/// (size = 48)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstStereoConvergence : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackInstStereoConvergence : BmSDK.Engine.InterpTrack
     /// </summary>
     public unsafe float storedStereoConvergence
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

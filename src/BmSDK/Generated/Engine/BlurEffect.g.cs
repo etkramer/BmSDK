@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: BlurEffect<br/>
-/// (size = 88)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class BlurEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class BlurEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObj
     /// </summary>
     public unsafe int BlurKernelSize
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 124); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
     }
 }

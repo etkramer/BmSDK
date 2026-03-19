@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_RandomVector<br/>
-/// (size = 164)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqVar_RandomVector : BmSDK.Engine.SeqVar_Vector, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class RSeqVar_RandomVector : BmSDK.Engine.SeqVar_Vector, BmSDK.IG
     /// <summary>
     /// StructProperty: Min
     /// </summary>
-    public unsafe System.Numerics.Vector3 Min
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Min
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 
     /// <summary>
     /// StructProperty: Max
     /// </summary>
-    public unsafe System.Numerics.Vector3 Max
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Max
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

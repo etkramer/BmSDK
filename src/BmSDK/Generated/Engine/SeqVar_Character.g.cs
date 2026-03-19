@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: SeqVar_Character<br/>
-/// (size = 160)
-/// (flags = 134217875)
+/// Class: SeqVar_Character<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameO
     internal SeqVar_Character() { }
 
     /// <summary>
+    /// Constructs a new SeqVar_Character
+    /// </summary>
+    public SeqVar_Character(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqVar_Character Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SeqVar_Character(nint ptr) : base(ptr) { }
@@ -31,9 +36,9 @@ public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameO
     /// <summary>
     /// ClassProperty: PawnClass
     /// </summary>
-    public unsafe BmSDK.Class PawnClass
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnClass
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 156); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 156); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 268); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 268); }
     }
 }

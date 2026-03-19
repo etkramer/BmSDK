@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PersistentDebugData<br/>
-/// (size = 48)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class PersistentDebugData : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -38,7 +38,97 @@ public partial class PersistentDebugData : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe bool Debug_Disable_RFlaps_Update
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 44); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Record_RFlaps_History
+    /// </summary>
+    public unsafe bool Debug_Record_RFlaps_History
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Draw_RFlaps_History
+    /// </summary>
+    public unsafe bool Debug_Draw_RFlaps_History
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Disable_NavMesh_Streaming_Batching
+    /// </summary>
+    public unsafe bool Disable_NavMesh_Streaming_Batching
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Disable_kDOP_Batching
+    /// </summary>
+    public unsafe bool Disable_kDOP_Batching
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Draw_Depth_Bias_Calculation
+    /// </summary>
+    public unsafe bool Debug_Draw_Depth_Bias_Calculation
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Draw_OceanSMActor_Buoyancy
+    /// </summary>
+    public unsafe bool Debug_Draw_OceanSMActor_Buoyancy
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Draw_Ocean_Points
+    /// </summary>
+    public unsafe bool Debug_Draw_Ocean_Points
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_Draw_Ocean_CullBoxes
+    /// </summary>
+    public unsafe bool Debug_Draw_Ocean_CullBoxes
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// BoolProperty: Debug_ApexCloth_ApexClothProfile
+    /// </summary>
+    public unsafe bool Debug_ApexCloth_ApexClothProfile
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// IntProperty: Debug_RFlaps_History_Frame_Number
+    /// </summary>
+    public unsafe int Debug_RFlaps_History_Frame_Number
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 }

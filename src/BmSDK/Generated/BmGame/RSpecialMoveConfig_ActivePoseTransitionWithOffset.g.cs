@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_ActivePoseTransitionWithOffset<br/>
-/// (size = 348)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.BmGame.RSpecialMoveConfig_ActivePoseTransition, BmSDK.IGameObject
 {
@@ -34,27 +34,12 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
     protected RSpecialMoveConfig_ActivePoseTransitionWithOffset(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetEndPositionAndYaw
-    /// </summary>
-    public unsafe void GetEndPositionAndYaw(BmSDK.Engine.Pawn Player, BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation, out System.Numerics.Vector3 EndPosition, out int EndYaw)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_ActivePoseTransitionWithOffset.GetEndPositionAndYaw", true);
-        byte* paramsPtr = stackalloc byte[132];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Player, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(MoveLocation, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        EndPosition = BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 116);
-        EndYaw = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 128);
-        return;
-    }
-
-    /// <summary>
     /// StructProperty: MoveOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT MoveOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 332); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 332); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
     }
 
     /// <summary>
@@ -62,7 +47,7 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
     /// </summary>
     public unsafe int YawOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 344); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 344); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ConstraintDrawComponent<br/>
-/// (size = 408)
-/// (flags = 2290090130)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RB_ConstraintDrawComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RB_ConstraintDrawComponent : BmSDK.Engine.PrimitiveComponen
     /// <summary>
     /// ObjectProperty: LimitMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface LimitMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LimitMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 404); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 404); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
     }
 }

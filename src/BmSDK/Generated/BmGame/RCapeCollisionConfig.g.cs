@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeCollisionConfig<br/>
-/// (size = 56)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCapeCollisionConfig : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class RCapeCollisionConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: CollisionShapeConfigs
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RCapeCollisionShapeConfig> CollisionShapeConfigs
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT CollisionShapeConfigs
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RCapeCollisionShapeConfig>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

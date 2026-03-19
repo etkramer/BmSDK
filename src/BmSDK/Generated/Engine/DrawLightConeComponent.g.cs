@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawLightConeComponent<br/>
-/// (size = 420)
-/// (flags = 2290102418)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DrawLightConeComponent : BmSDK.Engine.DrawConeComponent, BmSDK.IGameObject
 {
@@ -33,4 +33,39 @@ public partial class DrawLightConeComponent : BmSDK.Engine.DrawConeComponent, Bm
     /// </summary>
     protected DrawLightConeComponent(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: ConeColor
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConeColor
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 540); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 540); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ConeRadius
+    /// </summary>
+    public unsafe float ConeRadius
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 544); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 544); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ConeAngle
+    /// </summary>
+    public unsafe float ConeAngle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
+    }
+
+    /// <summary>
+    /// IntProperty: ConeSides
+    /// </summary>
+    public unsafe int ConeSides
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 552); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
+    }
 }

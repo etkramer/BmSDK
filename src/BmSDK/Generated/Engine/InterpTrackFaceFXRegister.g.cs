@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFaceFXRegister<br/>
-/// (size = 196)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackFaceFXRegister : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackFaceFXRegister : BmSDK.Engine.InterpTrackFloatBa
     /// </summary>
     public unsafe BmSDK.FString Register
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

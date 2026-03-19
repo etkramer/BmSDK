@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryEmitter<br/>
-/// (size = 96)
-/// (flags = 134230166)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryEmitter : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class ActorFactoryEmitter : BmSDK.Engine.ActorFactory, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: ParticleSystem
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem ParticleSystem
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ParticleSystem
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleSystem>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
     }
 }

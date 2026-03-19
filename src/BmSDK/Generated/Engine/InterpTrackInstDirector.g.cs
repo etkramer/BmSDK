@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstDirector<br/>
-/// (size = 48)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstDirector : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -36,9 +36,18 @@ public partial class InterpTrackInstDirector : BmSDK.Engine.InterpTrackInst, BmS
     /// <summary>
     /// ObjectProperty: OldViewTarget
     /// </summary>
-    public unsafe BmSDK.Engine.Actor OldViewTarget
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OldViewTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Actor>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+    }
+
+    /// <summary>
+    /// StructProperty: OldRenderingOverrides
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT OldRenderingOverrides
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

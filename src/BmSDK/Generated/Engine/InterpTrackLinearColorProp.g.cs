@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackLinearColorProp<br/>
-/// (size = 140)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackLinearColorProp : BmSDK.Engine.InterpTrackLinearColorBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackLinearColorProp : BmSDK.Engine.InterpTrackLinear
     /// </summary>
     public unsafe BmSDK.FName PropertyName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
     }
 }

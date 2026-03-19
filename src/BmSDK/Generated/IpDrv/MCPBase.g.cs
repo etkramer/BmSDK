@@ -4,11 +4,11 @@
 namespace BmSDK.IpDrv;
 
 /// <summary>
-/// ABSTRACT Class: MCPBase<br/>
-/// (size = 48)
-/// (flags = 134217875)
+/// Class: MCPBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class MCPBase : BmSDK.GameObject, BmSDK.IGameObject
+public partial class MCPBase : BmSDK.IpDrv.McpServiceBase, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -24,6 +24,11 @@ public partial class MCPBase : BmSDK.GameObject, BmSDK.IGameObject
     internal MCPBase() { }
 
     /// <summary>
+    /// Constructs a new MCPBase
+    /// </summary>
+    public MCPBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MCPBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected MCPBase(nint ptr) : base(ptr) { }
@@ -31,9 +36,9 @@ public partial class MCPBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// StructProperty: VfTable_FTickableObject
     /// </summary>
-    public unsafe System.IntPtr VfTable_FTickableObject
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_FTickableObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 }

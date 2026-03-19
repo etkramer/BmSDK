@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: SequenceAction<br/>
-/// (size = 204)
-/// (flags = 134226067)
+/// Class: SequenceAction<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SequenceAction : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class SequenceAction : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     internal SequenceAction() { }
 
     /// <summary>
+    /// Constructs a new SequenceAction
+    /// </summary>
+    public SequenceAction(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SequenceAction Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected SequenceAction(nint ptr) : base(ptr) { }
@@ -33,8 +38,8 @@ public partial class SequenceAction : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// </summary>
     public unsafe BmSDK.FName HandlerName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 324); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 324); }
     }
 
     /// <summary>
@@ -42,16 +47,16 @@ public partial class SequenceAction : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
     /// </summary>
     public unsafe bool bCallHandler
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 188); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 188); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 332); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 332); }
     }
 
     /// <summary>
     /// ArrayProperty: Targets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.GameObject> Targets
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>> Targets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.GameObject>>(Ptr + 192); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>(Ptr + 336); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 336); }
     }
 }

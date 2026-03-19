@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryPointLightMovable<br/>
-/// (size = 96)
-/// (flags = 8400918)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ActorFactoryPointLightMovable : BmSDK.Engine.ActorFactoryLight, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class ActorFactoryPointLightMovable : BmSDK.Engine.ActorFactoryLi
     /// </summary>
     protected ActorFactoryPointLightMovable(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ComponentProperty: LightComponent
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LightComponent
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 144); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+    }
 }

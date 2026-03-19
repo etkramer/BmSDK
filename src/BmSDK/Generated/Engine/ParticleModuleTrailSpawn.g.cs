@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTrailSpawn<br/>
-/// (size = 64)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTrailSpawn : BmSDK.Engine.ParticleModuleTrailBase, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class ParticleModuleTrailSpawn : BmSDK.Engine.ParticleModuleTrail
     /// <summary>
     /// ComponentProperty: SpawnDistanceMap
     /// </summary>
-    public unsafe BmSDK.Engine.DistributionFloatParticleParameter SpawnDistanceMap
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpawnDistanceMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DistributionFloatParticleParameter>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class ParticleModuleTrailSpawn : BmSDK.Engine.ParticleModuleTrail
     /// </summary>
     public unsafe float MinSpawnVelocity
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 60); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 104); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 104); }
     }
 
     /// <summary>

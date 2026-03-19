@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleCameraOffset<br/>
-/// (size = 89)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCameraBase, BmSDK.IGameObject
 {
@@ -34,23 +34,12 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
     protected ParticleModuleCameraOffset(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EParticleCameraOffsetUpdateMethod
-    /// </summary>
-    public enum EParticleCameraOffsetUpdateMethod
-    {
-        EPCOUM_DirectSet = 0,
-        EPCOUM_Additive = 1,
-        EPCOUM_Scalar = 2,
-        EPCOUM_MAX = 3,
-    }
-
-    /// <summary>
     /// StructProperty: CameraOffset
     /// </summary>
-    public unsafe BmSDK.DistributionFloat.FRawDistributionFloat CameraOffset
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT CameraOffset
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionFloat.FRawDistributionFloat>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
@@ -58,16 +47,16 @@ public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCam
     /// </summary>
     public unsafe bool bSpawnTimeOnly
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 84); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 132); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 132); }
     }
 
     /// <summary>
     /// ByteProperty: UpdateMethod
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleModuleCameraOffset.EParticleCameraOffsetUpdateMethod UpdateMethod
+    public unsafe byte UpdateMethod
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ParticleModuleCameraOffset.EParticleCameraOffsetUpdateMethod>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 }

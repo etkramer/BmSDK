@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoalFilter_MinPathDistance<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NavMeshGoalFilter_MinPathDistance : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class NavMeshGoalFilter_MinPathDistance : BmSDK.Engine.NavMeshGoa
     /// </summary>
     public unsafe int MinDistancePathShouldBe
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 }

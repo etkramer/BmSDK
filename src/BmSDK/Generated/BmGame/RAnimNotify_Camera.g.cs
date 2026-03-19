@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_Camera<br/>
-/// (size = 56)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// <summary>
     /// ByteProperty: NotifyType
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_Camera.CamNotifyType NotifyType
+    public unsafe byte NotifyType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_Camera.CamNotifyType>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// </summary>
     public unsafe float DesiredValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 88); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
     }
 
     /// <summary>
@@ -56,8 +56,8 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
     /// </summary>
     public unsafe float TimeToChange
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 
     /// <summary>
@@ -69,6 +69,7 @@ public partial class RAnimNotify_Camera : BmSDK.Engine.AnimNotify, BmSDK.IGameOb
         CNT_SetGameSpeed = 1,
         CNT_SetFOV = 2,
         CNT_SetMotionBlur = 3,
-        CNT_MAX = 4,
+        CNT_SetFinalBlowPostProcess = 4,
+        CNT_MAX = 5,
     }
 }

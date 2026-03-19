@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieGenericError<br/>
-/// (size = 512)
-/// (flags = 18)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
+public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,85 +34,12 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     protected RGFxMovieGenericError(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: PressedB
-    /// </summary>
-    public unsafe void PressedB()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.PressedB", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: PressedA
-    /// </summary>
-    public unsafe void PressedA()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.PressedA", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: ExitThePlayer
-    /// </summary>
-    public unsafe void ExitThePlayer(BmSDK.FString ToHere, bool bPS3Only = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.ExitThePlayer", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ToHere, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bPS3Only, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetData
-    /// </summary>
-    public unsafe void SetData(BmSDK.BmGame.RGFxMovieGenericError.GE_Type typeID, BmSDK.FString Message, BmSDK.FString PromptA, BmSDK.FString PromptB = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.SetData", true);
-        byte* paramsPtr = stackalloc byte[40];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(typeID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Message, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PromptA, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(PromptB, paramsPtr + 28);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: RestoreFocus
-    /// </summary>
-    public unsafe void RestoreFocus()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.RestoreFocus", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: Init
-    /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieGenericError.Init", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(LocPlay, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
     /// ByteProperty: CurrentType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGFxMovieGenericError.GE_Type CurrentType
+    public unsafe byte CurrentType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RGFxMovieGenericError.GE_Type>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 1072); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1072); }
     }
 
     /// <summary>
@@ -120,8 +47,62 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
     /// </summary>
     public unsafe BmSDK.FString LastFocusMovie
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1076); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1076); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bMonitorPS3
+    /// </summary>
+    public unsafe bool bMonitorPS3
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1092); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1092); }
+    }
+
+    /// <summary>
+    /// IntProperty: ButtonSelected
+    /// </summary>
+    public unsafe int ButtonSelected
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1096); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
+    }
+
+    /// <summary>
+    /// StrProperty: TitleString
+    /// </summary>
+    public unsafe BmSDK.FString TitleString
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1100); }
+    }
+
+    /// <summary>
+    /// StrProperty: MessageString
+    /// </summary>
+    public unsafe BmSDK.FString MessageString
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 1116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1116); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: MenuItems
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.FString>> MenuItems
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>(Ptr + 1132); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1132); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: BufferedPrompts
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> BufferedPrompts
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 1148); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1148); }
     }
 
     /// <summary>
@@ -133,11 +114,14 @@ public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovie, BmSDK.IGame
         GE_DeviceSelectorRetry = 1,
         GE_OverwriteCheck = 2,
         GE_LoginStatusError = 3,
-        GE_CorruptDLCError = 4,
-        GE_PS3NotConnected = 5,
-        GE_PS3NotLoggedIn = 6,
-        GE_PS3NotConnectedRetry = 7,
+        GE_MsgOnlyError = 4,
+        GE_CorruptDLCError = 5,
+        GE_PS3NotConnected = 6,
+        GE_PS3NotLoggedIn = 7,
         GE_PS3StatsWriteError = 8,
-        GE_MAX = 9,
+        GE_NotLoggedIn_ReturnToMainMenu = 9,
+        GE_SaveRetry = 10,
+        GE_DLC_ContentInstalledMsg = 11,
+        GE_MAX = 12,
     }
 }

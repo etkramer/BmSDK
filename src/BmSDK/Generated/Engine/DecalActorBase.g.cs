@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: DecalActorBase<br/>
-/// (size = 432)
-/// (flags = 142606483)
+/// Class: DecalActorBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal DecalActorBase() { }
+
+    /// <summary>
+    /// Constructs a new DecalActorBase
+    /// </summary>
+    public DecalActorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DecalActorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -64,11 +69,20 @@ public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
+    /// StructProperty: VfTable_IEditorLinkSelectionInterface
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTable_IEditorLinkSelectionInterface
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
+    }
+
+    /// <summary>
     /// ComponentProperty: Decal
     /// </summary>
-    public unsafe BmSDK.Engine.DecalComponent Decal
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Decal
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.DecalComponent>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 676); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 676); }
     }
 }

@@ -4,175 +4,199 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Interface: RDisruptableInterface<br/>
-/// (size = 44)
-/// (flags = 16403)
+/// Class: RDisruptableInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface RDisruptableInterface : BmSDK.Interface
+public partial class RDisruptableInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: DisallowLongRangeResonator
-    /// </summary>
-    public unsafe bool DisallowLongRangeResonator();
-
-    /// <summary>
-    /// Function: GetNumFakePasswordsToUse
-    /// </summary>
-    public unsafe int GetNumFakePasswordsToUse();
-
-    /// <summary>
-    /// Function: GetFakePassword
-    /// </summary>
-    public unsafe BmSDK.FString GetFakePassword(int Index);
-
-    /// <summary>
-    /// Function: GetPassword
-    /// </summary>
-    public unsafe BmSDK.FString GetPassword(int Index);
-
-    /// <summary>
-    /// Function: GetFakePasswordArrayLength
-    /// </summary>
-    public unsafe int GetFakePasswordArrayLength();
-
-    /// <summary>
-    /// Function: GetPasswordArrayLength
-    /// </summary>
-    public unsafe int GetPasswordArrayLength();
-
-    /// <summary>
-    /// Function: GetResonatorMinigameStringReference
-    /// </summary>
-    public unsafe BmSDK.FString GetResonatorMinigameStringReference();
-
-    /// <summary>
-    /// Function: GetResonatorWinScreenStringReference
-    /// </summary>
-    public unsafe BmSDK.FString GetResonatorWinScreenStringReference();
-
-    /// <summary>
-    /// Function: GetRawDifficulty
-    /// </summary>
-    public unsafe int GetRawDifficulty();
-
-    /// <summary>
-    /// Function: GetHackingTargetType
-    /// </summary>
-    public unsafe BmSDK.BmGame.RDisruptableInterface.DisruptableObjectTargetType GetHackingTargetType();
-
-    /// <summary>
-    /// Function: GetHackingNetworkType
-    /// </summary>
-    public unsafe BmSDK.BmGame.RDisruptableInterface.DisruptableObjectNetworkType GetHackingNetworkType();
-
-    /// <summary>
-    /// Function: GetActiveFlag
-    /// </summary>
-    public unsafe BmSDK.FName GetActiveFlag();
-
-    /// <summary>
-    /// Function: GetNoCodesFailedDialogueLine
-    /// </summary>
-    public unsafe BmSDK.Engine.RDialogueLine GetNoCodesFailedDialogueLine();
-
-    /// <summary>
-    /// Function: StopAlarmSound
-    /// </summary>
-    public unsafe void StopAlarmSound();
-
-    /// <summary>
-    /// Function: PlayAlarmSound
-    /// </summary>
-    public unsafe void PlayAlarmSound();
-
-    /// <summary>
-    /// Function: IsAlarmed
-    /// </summary>
-    public unsafe bool IsAlarmed();
-
-    /// <summary>
-    /// Function: RequiresHighSecurityResonator
-    /// </summary>
-    public unsafe bool RequiresHighSecurityResonator();
-
-    /// <summary>
-    /// Function: GetDifficultyLevel
-    /// </summary>
-    public unsafe int GetDifficultyLevel();
-
-    /// <summary>
-    /// Function: HasMultipleStages
-    /// </summary>
-    public unsafe bool HasMultipleStages();
-
-    /// <summary>
-    /// Function: StartResonatorMiniGame
-    /// </summary>
-    public unsafe void StartResonatorMiniGame();
-
-    /// <summary>
-    /// Function: FailedToDisrupt
-    /// </summary>
-    public unsafe void FailedToDisrupt();
-
-    /// <summary>
-    /// Function: WillExplode
-    /// </summary>
-    public unsafe bool WillExplode();
-
-    /// <summary>
-    /// Function: StillDisruptable
-    /// </summary>
-    public unsafe bool StillDisruptable();
-
-    /// <summary>
-    /// Function: GetIconLocation
-    /// </summary>
-    public unsafe System.Numerics.Vector3 GetIconLocation();
-
-    /// <summary>
-    /// Function: SuccessfullyDisrupted
-    /// </summary>
-    public unsafe void SuccessfullyDisrupted();
-
-    /// <summary>
-    /// Function: GetDifficulty
-    /// </summary>
-    public unsafe void GetDifficulty(out float Threshold, out float BuildUpTime, out float LeftMaxAngVelocity, out float RightMaxAngVelocity, int DifficultyMod = default);
-
-    /// <summary>
-    /// Enum: DisruptableObjectTargetType
-    /// </summary>
-    public enum DisruptableObjectTargetType
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
     {
-        DOTT_AccessDoor = 0,
-        DOTT_ElevatorControlCall = 1,
-        DOTT_ElevatorControlLower = 2,
-        DOTT_ElevatorControlRaise = 3,
-        DOTT_ElectrifiedFenceDeactivate = 4,
-        DOTT_ElectrifiedFenceActivate = 5,
-        DOTT_SecurityDoor = 6,
-        DOTT_DisplayCabinet = 7,
-        DOTT_ControlBox = 8,
-        DOTT_TunnelAccess = 9,
-        DOTT_TowerMaintenanceHatch = 10,
-        DOTT_MaintenanceAccess = 11,
-        DOTT_AccessBridge = 12,
-        DOTT_DeadshotPda = 13,
-        DOTT_RiddlerBarrier = 14,
-        DOTT_RiddlerElectricFloor = 15,
-        DOTT_MAX = 16,
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RDisruptableInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RDisruptableInterface() { }
+
+    /// <summary>
+    /// Constructs a new RDisruptableInterface
+    /// </summary>
+    public RDisruptableInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDisruptableInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RDisruptableInterface(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// StructProperty: VfTableObject
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
     }
 
     /// <summary>
-    /// Enum: DisruptableObjectNetworkType
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public enum DisruptableObjectNetworkType
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
     {
-        DONT_GothamMunicipalNetwork = 0,
-        DONT_TygerMcpMainframe = 1,
-        DONT_RiddlerMatrix = 2,
-        DONT_MobileElectronicDevice = 3,
-        DONT_MAX = 4,
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
+
+    /// <summary>
+    /// IntProperty: EditorObjectFlags
+    /// </summary>
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexPrev
+    /// </summary>
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashIndexNext
+    /// </summary>
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexPrev
+    /// </summary>
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
+
+    /// <summary>
+    /// IntProperty: HashOuterIndexNext
+    /// </summary>
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Linker
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
+
+    /// <summary>
+    /// StructProperty: LinkerIndex
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
+
+    /// <summary>
+    /// IntProperty: ObjectInternalInteger
+    /// </summary>
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: Outer
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
+
+    /// <summary>
+    /// NameProperty: Name
+    /// </summary>
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
+
+    /// <summary>
+    /// ClassProperty: Class
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: ObjectArchetype
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
+
+    /// <summary>
+    /// Struct: FQWord
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
+
+    /// <summary>
+    /// Struct: FPointer
+    /// </summary>
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
     }
 }

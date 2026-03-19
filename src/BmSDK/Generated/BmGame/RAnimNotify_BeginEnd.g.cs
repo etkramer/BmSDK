@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RAnimNotify_BeginEnd<br/>
-/// (size = 45)
-/// (flags = 134230163)
+/// Class: RAnimNotify_BeginEnd<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGame
     internal RAnimNotify_BeginEnd() { }
 
     /// <summary>
+    /// Constructs a new RAnimNotify_BeginEnd
+    /// </summary>
+    public RAnimNotify_BeginEnd(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimNotify_BeginEnd Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected RAnimNotify_BeginEnd(nint ptr) : base(ptr) { }
@@ -31,10 +36,10 @@ public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGame
     /// <summary>
     /// ByteProperty: Type
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType Type
+    public unsafe byte Type
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RAnimNotify_BeginEnd.EBeginEndType>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>

@@ -4,134 +4,199 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Interface: OnlineCommunityContentInterface<br/>
-/// (size = 104)
-/// (flags = 16403)
+/// Class: OnlineCommunityContentInterface<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial interface OnlineCommunityContentInterface : BmSDK.Interface
+public partial class OnlineCommunityContentInterface : BmSDK.Interface, BmSDK.IGameObject
 {
-    /// <summary>
-    /// Function: RateContent
-    /// </summary>
-    public unsafe void RateContent(byte PlayerNum, out BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileToRate, int NewRating);
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlineCommunityContentInterface", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal OnlineCommunityContentInterface() { }
 
     /// <summary>
-    /// Function: ClearGetContentPayloadCompleteDelegate
+    /// Constructs a new OnlineCommunityContentInterface
     /// </summary>
-    public unsafe void ClearGetContentPayloadCompleteDelegate(System.IntPtr GetContentPayloadCompleteDelegate);
+    public OnlineCommunityContentInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineCommunityContentInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
-    /// Function: AddGetContentPayloadCompleteDelegate
+    /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
-    public unsafe void AddGetContentPayloadCompleteDelegate(System.IntPtr GetContentPayloadCompleteDelegate);
+    protected OnlineCommunityContentInterface(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: OnGetContentPayloadComplete
+    /// StructProperty: VfTableObject
     /// </summary>
-    public unsafe void OnGetContentPayloadComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileDownloaded, out BmSDK.TArray<byte> Payload);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT VfTableObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 0); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }
+    }
 
     /// <summary>
-    /// Function: GetContentPayload
+    /// IntProperty: ObjectFlags
     /// </summary>
-    public unsafe bool GetContentPayload(byte PlayerNum, out BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileDownloaded);
+    public unsafe BmSDK.GameObject.EObjectFlags ObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.EObjectFlags>(Ptr + 8); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }
+    }
 
     /// <summary>
-    /// Function: ClearDownloadContentCompleteDelegate
+    /// IntProperty: EditorObjectFlags
     /// </summary>
-    public unsafe void ClearDownloadContentCompleteDelegate(System.IntPtr DownloadContentCompleteDelegate);
+    public unsafe int EditorObjectFlags
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 12); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 12); }
+    }
 
     /// <summary>
-    /// Function: AddDownloadContentCompleteDelegate
+    /// IntProperty: HashIndexPrev
     /// </summary>
-    public unsafe void AddDownloadContentCompleteDelegate(System.IntPtr DownloadContentCompleteDelegate);
+    public unsafe int HashIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 16); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 16); }
+    }
 
     /// <summary>
-    /// Function: OnDownloadContentComplete
+    /// IntProperty: HashIndexNext
     /// </summary>
-    public unsafe void OnDownloadContentComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileDownloaded);
+    public unsafe int HashIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 20); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }
+    }
 
     /// <summary>
-    /// Function: DownloadContent
+    /// IntProperty: HashOuterIndexPrev
     /// </summary>
-    public unsafe bool DownloadContent(byte PlayerNum, out BmSDK.Engine.OnlineSubsystem.FCommunityContentFile FileToDownload);
+    public unsafe int HashOuterIndexPrev
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 24); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 24); }
+    }
 
     /// <summary>
-    /// Function: ClearUploadContentCompleteDelegate
+    /// IntProperty: HashOuterIndexNext
     /// </summary>
-    public unsafe void ClearUploadContentCompleteDelegate(System.IntPtr UploadContentCompleteDelegate);
+    public unsafe int HashOuterIndexNext
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 28); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 28); }
+    }
 
     /// <summary>
-    /// Function: AddUploadContentCompleteDelegate
+    /// ObjectProperty: Linker
     /// </summary>
-    public unsafe void AddUploadContentCompleteDelegate(System.IntPtr UploadContentCompleteDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Linker
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 32); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 32); }
+    }
 
     /// <summary>
-    /// Function: OnUploadContentComplete
+    /// StructProperty: LinkerIndex
     /// </summary>
-    public unsafe void OnUploadContentComplete(bool bWasSuccessful, BmSDK.Engine.OnlineSubsystem.FCommunityContentFile UploadedFile);
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LinkerIndex
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 40); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 40); }
+    }
 
     /// <summary>
-    /// Function: UploadContent
+    /// IntProperty: ObjectInternalInteger
     /// </summary>
-    public unsafe bool UploadContent(byte PlayerNum, out BmSDK.TArray<byte> Payload, out BmSDK.Engine.OnlineSubsystem.FCommunityContentMetadata MetaData);
+    public unsafe int ObjectInternalInteger
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+    }
 
     /// <summary>
-    /// Function: GetFriendsContentList
+    /// ObjectProperty: Outer
     /// </summary>
-    public unsafe bool GetFriendsContentList(byte PlayerNum, out BmSDK.Engine.OnlineSubsystem.FOnlineFriend Friend, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FCommunityContentFile> ContentFiles);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Outer
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 52); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+    }
 
     /// <summary>
-    /// Function: ClearReadFriendsContentListCompleteDelegate
+    /// NameProperty: Name
     /// </summary>
-    public unsafe void ClearReadFriendsContentListCompleteDelegate(System.IntPtr ReadFriendsContentListCompleteDelegate);
+    public unsafe BmSDK.FName Name
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 60); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 60); }
+    }
 
     /// <summary>
-    /// Function: AddReadFriendsContentListCompleteDelegate
+    /// ClassProperty: Class
     /// </summary>
-    public unsafe void AddReadFriendsContentListCompleteDelegate(System.IntPtr ReadFriendsContentListCompleteDelegate);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Class
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 68); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 68); }
+    }
 
     /// <summary>
-    /// Function: OnReadFriendsContentListComplete
+    /// ObjectProperty: ObjectArchetype
     /// </summary>
-    public unsafe void OnReadFriendsContentListComplete(bool bWasSuccessful);
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ObjectArchetype
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 76); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
+    }
 
     /// <summary>
-    /// Function: ReadFriendsContentList
+    /// Struct: FQWord
     /// </summary>
-    public unsafe bool ReadFriendsContentList(byte PlayerNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FOnlineFriend> Friends, int StartAt = default, int NumToRead = default);
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FQWord
+    {
+        /// <summary>
+        /// IntProperty: A
+        /// </summary>
+        public unsafe int A
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+
+        /// <summary>
+        /// IntProperty: B
+        /// </summary>
+        public unsafe int B
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 4); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 4); }; }
+        }
+    }
 
     /// <summary>
-    /// Function: GetContentList
+    /// Struct: FPointer
     /// </summary>
-    public unsafe bool GetContentList(byte PlayerNum, out BmSDK.TArray<BmSDK.Engine.OnlineSubsystem.FCommunityContentFile> ContentFiles);
-
-    /// <summary>
-    /// Function: ClearReadContentListCompleteDelegate
-    /// </summary>
-    public unsafe void ClearReadContentListCompleteDelegate(System.IntPtr ReadContentListCompleteDelegate);
-
-    /// <summary>
-    /// Function: AddReadContentListCompleteDelegate
-    /// </summary>
-    public unsafe void AddReadContentListCompleteDelegate(System.IntPtr ReadContentListCompleteDelegate);
-
-    /// <summary>
-    /// Function: OnReadContentListComplete
-    /// </summary>
-    public unsafe void OnReadContentListComplete(bool bWasSuccessful);
-
-    /// <summary>
-    /// Function: ReadContentList
-    /// </summary>
-    public unsafe bool ReadContentList(byte PlayerNum, int StartAt = default, int NumToRead = default);
-
-    /// <summary>
-    /// Function: Exit
-    /// </summary>
-    public unsafe void Exit();
-
-    /// <summary>
-    /// Function: Init
-    /// </summary>
-    public unsafe bool Init();
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    public partial record struct FPointer
+    {
+        /// <summary>
+        /// IntProperty: Dummy
+        /// </summary>
+        public unsafe int Dummy
+        {
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 0); }; }
+            set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
+        }
+    }
 }

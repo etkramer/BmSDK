@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackAudioMaster<br/>
-/// (size = 232)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackAudioMaster : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {
@@ -33,4 +33,30 @@ public partial class InterpTrackAudioMaster : BmSDK.Engine.InterpTrackVectorBase
     /// </summary>
     protected InterpTrackAudioMaster(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: VectorTrack
+    /// </summary>
+    public unsafe BmSDK.Engine.InterpTrack.SubTracks VectorTrack
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.InterpTrack.SubTracks>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
+
+    /// <summary>
+    /// FloatProperty: CurveTension
+    /// </summary>
+    public unsafe float CurveTension
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
+    }
+
+    /// <summary>
+    /// StructProperty: Randomiser
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Randomiser
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+    }
 }

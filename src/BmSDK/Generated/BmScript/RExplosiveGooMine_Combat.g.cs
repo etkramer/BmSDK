@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RExplosiveGooMine_Combat<br/>
-/// (size = 676)
-/// (flags = 10486290)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RExplosiveGooMine_Combat : BmSDK.BmScript.RExplosiveGooMineBm, BmSDK.IGameObject
 {
@@ -68,4 +68,30 @@ public partial class RExplosiveGooMine_Combat : BmSDK.BmScript.RExplosiveGooMine
         where TComponent : class, Framework.IScriptComponent<RExplosiveGooMine_Combat>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// ComponentProperty: ForceField
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT ForceField
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1096); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1096); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bMovePerformed
+    /// </summary>
+    public unsafe bool bMovePerformed
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1104) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1104); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 1104); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: LethalExplosion
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT LethalExplosion
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1108); }
+    }
 }

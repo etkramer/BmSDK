@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RForcedReachSpec<br/>
-/// (size = 116)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RForcedReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class RForcedReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.IGameObje
     /// </summary>
     protected RForcedReachSpec(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: PathBlockers
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT PathBlockers
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
 }

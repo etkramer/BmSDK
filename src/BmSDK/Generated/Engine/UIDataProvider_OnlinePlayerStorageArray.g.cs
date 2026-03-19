@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataProvider_OnlinePlayerStorageArray<br/>
-/// (size = 124)
-/// (flags = 134217882)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDataProvider, BmSDK.Engine.UIListElementProvider, BmSDK.Engine.UIListElementCellProvider, BmSDK.IGameObject
+public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDataProvider, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,30 +34,12 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     protected UIDataProvider_OnlinePlayerStorageArray(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// StructProperty: VfTable_IUIListElementProvider
-    /// </summary>
-    public unsafe System.IntPtr VfTable_IUIListElementProvider
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 76); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 76); }
-    }
-
-    /// <summary>
-    /// StructProperty: VfTable_IUIListElementCellProvider
-    /// </summary>
-    public unsafe System.IntPtr VfTable_IUIListElementCellProvider
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 80); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 80); }
-    }
-
-    /// <summary>
     /// ObjectProperty: PlayerStorage
     /// </summary>
-    public unsafe BmSDK.Engine.OnlinePlayerStorage PlayerStorage
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PlayerStorage
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlinePlayerStorage>(Ptr + 84); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -65,17 +47,8 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     /// </summary>
     public unsafe int PlayerStorageId
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 88); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 88); }
-    }
-
-    /// <summary>
-    /// NameProperty: PlayerStorageName
-    /// </summary>
-    public unsafe BmSDK.FName PlayerStorageName
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 116); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
     }
 
     /// <summary>
@@ -83,16 +56,16 @@ public partial class UIDataProvider_OnlinePlayerStorageArray : BmSDK.Engine.UIDa
     /// </summary>
     public unsafe BmSDK.FString ColumnHeaderText
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 120); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
     }
 
     /// <summary>
     /// ArrayProperty: Values
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FName> Values
+    public unsafe BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT> Values
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FName>>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>>(Ptr + 136); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
     }
 }

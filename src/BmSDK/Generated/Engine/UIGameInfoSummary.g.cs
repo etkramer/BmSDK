@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIGameInfoSummary<br/>
-/// (size = 76)
-/// (flags = 1050)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class UIGameInfoSummary : BmSDK.Engine.UIResourceDataProvider, BmSDK.IGameObject
 {
@@ -33,4 +33,23 @@ public partial class UIGameInfoSummary : BmSDK.Engine.UIResourceDataProvider, Bm
     /// </summary>
     protected UIGameInfoSummary(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: BadCapsLocContexts
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT BadCapsLocContexts
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+
+    /// <summary>
+    /// Enum: EInputPlatformType
+    /// </summary>
+    public enum EInputPlatformType
+    {
+        IPT_PC = 0,
+        IPT = 1,
+        IPT_PS3 = 2,
+        IPT_MAX = 3,
+    }
 }

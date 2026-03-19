@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionFluidNormal<br/>
-/// (size = 92)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionFluidNormal : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -33,4 +33,12 @@ public partial class MaterialExpressionFluidNormal : BmSDK.Engine.MaterialExpres
     /// </summary>
     protected MaterialExpressionFluidNormal(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// StructProperty: Coordinates
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Coordinates
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
 }

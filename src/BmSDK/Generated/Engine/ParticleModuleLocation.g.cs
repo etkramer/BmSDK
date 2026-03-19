@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLocation<br/>
-/// (size = 84)
-/// (flags = 142610578)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLocation : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {
@@ -36,9 +36,27 @@ public partial class ParticleModuleLocation : BmSDK.Engine.ParticleModuleLocatio
     /// <summary>
     /// StructProperty: StartLocation
     /// </summary>
-    public unsafe BmSDK.DistributionVector.FRawDistributionVector StartLocation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT StartLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.DistributionVector.FRawDistributionVector>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DistributeOverNPoints
+    /// </summary>
+    public unsafe float DistributeOverNPoints
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DistributeThreshold
+    /// </summary>
+    public unsafe float DistributeThreshold
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionFloatUniformCurve<br/>
-/// (size = 80)
-/// (flags = 134230162)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class DistributionFloatUniformCurve : BmSDK.DistributionFloat, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class DistributionFloatUniformCurve : BmSDK.DistributionFloat, Bm
     /// <summary>
     /// StructProperty: ConstantCurve
     /// </summary>
-    public unsafe BmSDK.GameObject.FInterpCurveVector2D ConstantCurve
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ConstantCurve
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FInterpCurveVector2D>(Ptr + 64); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 64); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 112); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
     }
 }

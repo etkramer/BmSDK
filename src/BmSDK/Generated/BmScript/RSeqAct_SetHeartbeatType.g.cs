@@ -5,8 +5,8 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_SetHeartbeatType<br/>
-/// (size = 213)
-/// (flags = 8210)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,60 +34,12 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
     protected RSeqAct_SetHeartbeatType(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
-    /// </summary>
-    public unsafe static int GetObjClassVersion()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHeartbeatType.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
-
-    /// <summary>
-    /// Function: Activated
-    /// </summary>
-    public unsafe void Activated()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetHeartbeatType.Activated", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Enum: EHeartBeatType2
-    /// </summary>
-    public enum EHeartBeatType2
-    {
-        EHeartBeatType_Fine = 0,
-        EHeartBeatType_Nervous = 1,
-        EHeartBeatType_Terrified = 2,
-        EHeartBeatType_Unconscious = 3,
-        EHeartBeatType_Crazy = 4,
-        EHeartBeatType_Undead = 5,
-        EHeartBeatType_Injured = 6,
-        EHeartBeatType_Frozen = 7,
-        EHeartBeatType_MrFreezeWithoutSuit = 8,
-        EHeartBeatType_MrFreezeNormal = 9,
-        EHeartBeatType_RobotDead = 10,
-        EHeartBeatType_RobotDormant = 11,
-        EHeartBeatType_RobotActive = 12,
-        EHeartBeatType_Agitated = 13,
-        EHeartBeatType_GrundyDead = 14,
-        EHeartBeatType_GrundyNormal = 15,
-        EHeartBeatType_GrundyOnFire = 16,
-        EHeartBeatType_Unknown = 17,
-        EHeartBeatType_MAX = 18,
-    }
-
-    /// <summary>
     /// ObjectProperty: NPC
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI NPC
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT NPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMPawnAI>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
@@ -95,16 +47,16 @@ public partial class RSeqAct_SetHeartbeatType : BmSDK.Engine.SequenceAction, BmS
     /// </summary>
     public unsafe bool bSetOverrideHeartbeat
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 208); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 208); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 360); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 360); }
     }
 
     /// <summary>
-    /// ByteProperty: HBT
+    /// ByteProperty: HeartBeat
     /// </summary>
-    public unsafe BmSDK.BmScript.RSeqAct_SetHeartbeatType.EHeartBeatType2 HBT
+    public unsafe byte HeartBeat
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmScript.RSeqAct_SetHeartbeatType.EHeartBeatType2>(Ptr + 212); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 364); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 364); }
     }
 }

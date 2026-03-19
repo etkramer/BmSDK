@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSnowVolume<br/>
-/// (size = 476)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSnowVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class RSnowVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: RainComponent
     /// </summary>
-    public unsafe BmSDK.Engine.RRainComponent RainComponent
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RainComponent
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.RRainComponent>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 }

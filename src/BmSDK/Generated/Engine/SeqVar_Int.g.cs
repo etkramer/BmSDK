@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_Int<br/>
-/// (size = 132)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SeqVar_Int : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class SeqVar_Int : BmSDK.Engine.SequenceVariable, BmSDK.IGameObje
     /// </summary>
     public unsafe int IntValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
     }
 }

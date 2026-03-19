@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackMorphWeight<br/>
-/// (size = 192)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackMorphWeight : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackMorphWeight : BmSDK.Engine.InterpTrackFloatBase,
     /// </summary>
     public unsafe BmSDK.FName MorphNodeName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

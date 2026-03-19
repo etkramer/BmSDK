@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: NetConnection<br/>
-/// (size = 20052)
-/// (flags = 268435597)
+/// Class: NetConnection<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class NetConnection : BmSDK.Engine.Player, BmSDK.IGameObject
 {
@@ -24,8 +24,21 @@ public partial class NetConnection : BmSDK.Engine.Player, BmSDK.IGameObject
     internal NetConnection() { }
 
     /// <summary>
+    /// Constructs a new NetConnection
+    /// </summary>
+    public NetConnection(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NetConnection Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected NetConnection(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ArrayProperty: Children
+    /// </summary>
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Children
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 44740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44740); }
+    }
 }

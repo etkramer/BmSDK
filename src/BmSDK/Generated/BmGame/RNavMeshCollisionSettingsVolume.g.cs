@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshCollisionSettingsVolume<br/>
-/// (size = 485)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -69,31 +69,20 @@ public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSD
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// Enum: ENavMeshCollisionSettings
-    /// </summary>
-    public enum ENavMeshCollisionSettings
-    {
-        ENavColl_None = 0,
-        ENavColl_BlockAllRagdolls = 1,
-        ENavColl_BlockNoRagdolls = 2,
-        ENavColl_MAX = 3,
-    }
-
-    /// <summary>
     /// ArrayProperty: PolyRefList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.Pylon.FPolyReference> PolyRefList
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> PolyRefList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Pylon.FPolyReference>>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
     }
 
     /// <summary>
     /// ByteProperty: CollisionSettings
     /// </summary>
-    public unsafe BmSDK.BmGame.RNavMeshCollisionSettingsVolume.ENavMeshCollisionSettings CollisionSettings
+    public unsafe byte CollisionSettings
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RNavMeshCollisionSettingsVolume.ENavMeshCollisionSettings>(Ptr + 484); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 484); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 756); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 756); }
     }
 }

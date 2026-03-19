@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_Footstep<br/>
-/// (size = 48)
-/// (flags = 167784594)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class AnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class AnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGameO
     /// </summary>
     public unsafe int FootDown
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

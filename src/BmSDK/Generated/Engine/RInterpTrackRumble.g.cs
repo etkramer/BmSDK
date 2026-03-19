@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackRumble<br/>
-/// (size = 132)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {
@@ -36,34 +36,43 @@ public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameO
     /// <summary>
     /// ArrayProperty: Rumbles
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.RInterpTrackRumble.FRumbleTrackKey> Rumbles
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>> Rumbles
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.RInterpTrackRumble.FRumbleTrackKey>>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// ObjectProperty: previewPC
     /// </summary>
-    public unsafe BmSDK.Engine.PlayerController previewPC
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT previewPC
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.PlayerController>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
     /// <summary>
     /// ObjectProperty: FFManager
     /// </summary>
-    public unsafe BmSDK.Engine.ForceFeedbackManager FFManager
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT FFManager
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackManager>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 204); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bPlayInEditor
+    /// </summary>
+    public unsafe bool bPlayInEditor
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 212); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 212); }
     }
 
     /// <summary>
     /// Struct: FRumbleTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 21)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FRumbleTrackKey
     {
         /// <summary>
@@ -114,9 +123,9 @@ public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameO
         /// <summary>
         /// ByteProperty: rumbleFunction
         /// </summary>
-        public unsafe BmSDK.Engine.ForceFeedbackWaveform.EWaveformFunction rumbleFunction
+        public unsafe byte rumbleFunction
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ForceFeedbackWaveform.EWaveformFunction>(Ptr + 20); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 20); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 20); }; }
         }
     }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDistributionVectorParticleArrayParameter<br/>
-/// (size = 156)
-/// (flags = 142618770)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDistributionVectorParticleArrayParameter : BmSDK.Engine.DistributionVectorParameterBase, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RDistributionVectorParticleArrayParameter : BmSDK.Engine.Di
     /// </summary>
     public unsafe float LastRenderTime
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 192); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 192); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class RDistributionVectorParticleArrayParameter : BmSDK.Engine.Di
     /// </summary>
     public unsafe int ParticleIndex
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public partial class RDistributionVectorParticleArrayParameter : BmSDK.Engine.Di
     /// </summary>
     public unsafe int DynamicCount
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 200); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 200); }
     }
 }

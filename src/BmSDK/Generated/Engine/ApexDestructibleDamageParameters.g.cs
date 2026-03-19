@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexDestructibleDamageParameters<br/>
-/// (size = 56)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,33 +36,33 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// ArrayProperty: DamageMap
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.ApexDestructibleDamageParameters.FDamagePair> DamageMap
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT DamageMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.ApexDestructibleDamageParameters.FDamagePair>>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// Struct: FDamagePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 24)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FDamagePair
     {
         /// <summary>
-        /// NameProperty: DamageCauserName
+        /// ClassProperty: DamageType
         /// </summary>
-        public unsafe BmSDK.FName DamageCauserName
+        public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DamageType
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
         /// <summary>
         /// StructProperty: Params
         /// </summary>
-        public unsafe BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters Params
+        public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT Params
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleDamageParameters.FDamageParameters>(Ptr + 8); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 8); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 8); }; }
         }
     }
@@ -70,15 +70,15 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FDamageParameters
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 16)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FDamageParameters
     {
         /// <summary>
         /// ByteProperty: OverrideMode
         /// </summary>
-        public unsafe BmSDK.Engine.ApexDestructibleDamageParameters.EDamageParameterOverrideMode OverrideMode
+        public unsafe byte OverrideMode
         {
-            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.ApexDestructibleDamageParameters.EDamageParameterOverrideMode>(Ptr + 0); }; }
+            get { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 0); }; }
             set { fixed (void* thisPtr = &this) { IntPtr Ptr = (IntPtr)thisPtr; BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 0); }; }
         }
 
@@ -115,8 +115,9 @@ public partial class ApexDestructibleDamageParameters : BmSDK.GameObject, BmSDK.
     /// </summary>
     public enum EDamageParameterOverrideMode
     {
-        DPOM_Absolute = 0,
-        DPOM_Multiplier = 1,
-        DPOM_MAX = 2,
+        DPOM_NoDamage = 0,
+        DPOM_Absolute = 1,
+        DPOM_Multiplier = 2,
+        DPOM_MAX = 3,
     }
 }

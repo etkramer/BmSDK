@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDialogueLocationVolume<br/>
-/// (size = 484)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RDialogueLocationVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -69,11 +69,20 @@ public partial class RDialogueLocationVolume : BmSDK.Engine.Volume, BmSDK.IGameO
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
     /// <summary>
-    /// StrProperty: DialogueTag
+    /// NameProperty: DialogueTagName
     /// </summary>
-    public unsafe BmSDK.FString DialogueTag
+    public unsafe BmSDK.FName DialogueTagName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 472); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 472); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 740); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 740); }
+    }
+
+    /// <summary>
+    /// IntProperty: Priority
+    /// </summary>
+    public unsafe int Priority
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 748); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 748); }
     }
 }

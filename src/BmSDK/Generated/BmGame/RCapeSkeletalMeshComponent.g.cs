@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeSkeletalMeshComponent<br/>
-/// (size = 1760)
-/// (flags = 2292191382)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshComponent, BmSDK.IGameObject
 {
@@ -34,85 +34,21 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     protected RCapeSkeletalMeshComponent(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: InternalUpdateMaterial
-    /// </summary>
-    public unsafe void InternalUpdateMaterial()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.InternalUpdateMaterial", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: SetupMaterialConstants
-    /// </summary>
-    public unsafe void SetupMaterialConstants()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.SetupMaterialConstants", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: UpdateOverrideMaterial
-    /// </summary>
-    public unsafe void UpdateOverrideMaterial(BmSDK.Engine.MaterialInterface NewMat)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.UpdateOverrideMaterial", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMat, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: UpdateDefaultMaterial
-    /// </summary>
-    public unsafe void UpdateDefaultMaterial(BmSDK.Engine.MaterialInterface NewMat)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.UpdateDefaultMaterial", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewMat, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
-
-    /// <summary>
-    /// Function: GetCapeComponent
-    /// </summary>
-    public unsafe BmSDK.BmGame.RCapeComponent GetCapeComponent()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCapeSkeletalMeshComponent.GetCapeComponent", true);
-        byte* paramsPtr = stackalloc byte[4];
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeComponent>(paramsPtr + 0);
-    }
-
-    /// <summary>
     /// ArrayProperty: CoreAnimSets
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.AnimSet> CoreAnimSets
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>> CoreAnimSets
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.AnimSet>>(Ptr + 1716); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1716); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>>>(Ptr + 2648); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2648); }
     }
 
     /// <summary>
     /// ByteProperty: CapeBoundsCalculationType
     /// </summary>
-    public unsafe BmSDK.BmGame.RCapeSkeletalMeshComponent.ECapeBoundsCalculationType CapeBoundsCalculationType
+    public unsafe byte CapeBoundsCalculationType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RCapeSkeletalMeshComponent.ECapeBoundsCalculationType>(Ptr + 1728); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1728); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 2664); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2664); }
     }
 
     /// <summary>
@@ -120,44 +56,44 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     /// </summary>
     public unsafe float LooseCapeBoundsRadius
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 1732); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1732); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 2668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2668); }
     }
 
     /// <summary>
     /// ArrayProperty: BoneUseComponentReferenceRotationFlags
     /// </summary>
-    public unsafe BmSDK.TArray<int> BoneUseComponentReferenceRotationFlags
+    public unsafe BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations> BoneUseComponentReferenceRotationFlags
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 1736); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1736); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.SkeletalMeshComponent.Animations>>(Ptr + 2672); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2672); }
     }
 
     /// <summary>
     /// ObjectProperty: MatInstConst
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant MatInstConst
+    public unsafe BmSDK.Engine.SkeletalMeshComponent.Animations MatInstConst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInstanceConstant>(Ptr + 1748); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1748); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMeshComponent.Animations>(Ptr + 2688); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2688); }
     }
 
     /// <summary>
     /// ObjectProperty: DefaultMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface DefaultMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DefaultMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 1752); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1752); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2696); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2696); }
     }
 
     /// <summary>
     /// ObjectProperty: OverrideMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface OverrideMaterial
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OverrideMaterial
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 1756); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1756); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 2704); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 2704); }
     }
 
     /// <summary>
@@ -167,6 +103,7 @@ public partial class RCapeSkeletalMeshComponent : BmSDK.Engine.SkeletalMeshCompo
     {
         CAPEBOUNDSCALCULATION_Tight = 0,
         CAPEBOUNDSCALCULATION_Loose = 1,
-        CAPEBOUNDSCALCULATION_MAX = 2,
+        CAPEBOUNDSCALCULATION_Standard = 2,
+        CAPEBOUNDSCALCULATION_MAX = 3,
     }
 }

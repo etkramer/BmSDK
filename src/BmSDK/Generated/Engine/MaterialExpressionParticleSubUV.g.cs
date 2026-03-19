@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionParticleSubUV<br/>
-/// (size = 124)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionParticleSubUV : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject
 {
@@ -33,4 +33,30 @@ public partial class MaterialExpressionParticleSubUV : BmSDK.Engine.MaterialExpr
     /// </summary>
     protected MaterialExpressionParticleSubUV(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// ObjectProperty: Texture
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Texture
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+    }
+
+    /// <summary>
+    /// StructProperty: Coordinates
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialExpressionTextureSample.TextureObject Coordinates
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTextureSample.TextureObject>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
+
+    /// <summary>
+    /// StructProperty: TextureObject
+    /// </summary>
+    public unsafe BmSDK.Engine.MaterialExpression.Desc TextureObject
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 232); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+    }
 }

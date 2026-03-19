@@ -5,10 +5,10 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_Baton<br/>
-/// (size = 720)
-/// (flags = 8389138)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject
+public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownObject_BatDestroyed, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -68,4 +68,12 @@ public partial class RBMCombatThrownObject_Baton : BmSDK.BmGame.RBMCombatThrownO
         where TComponent : class, Framework.IScriptComponent<RBMCombatThrownObject_Baton>
         => ((Engine.Actor)this).DetachScriptComponent(typeof(TComponent));
 
+    /// <summary>
+    /// IntProperty: MaxTimesCanBeUsed
+    /// </summary>
+    public unsafe int MaxTimesCanBeUsed
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 1184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1184); }
+    }
 }

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: ParticleModuleSpawnBase<br/>
-/// (size = 60)
-/// (flags = 134221971)
+/// Class: ParticleModuleSpawnBase<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ParticleModuleSpawnBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -24,6 +24,11 @@ public partial class ParticleModuleSpawnBase : BmSDK.Engine.ParticleModule, BmSD
     internal ParticleModuleSpawnBase() { }
 
     /// <summary>
+    /// Constructs a new ParticleModuleSpawnBase
+    /// </summary>
+    public ParticleModuleSpawnBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleSpawnBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected ParticleModuleSpawnBase(nint ptr) : base(ptr) { }
@@ -33,8 +38,8 @@ public partial class ParticleModuleSpawnBase : BmSDK.Engine.ParticleModule, BmSD
     /// </summary>
     public unsafe bool bProcessSpawnRate
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 
     /// <summary>
@@ -42,7 +47,7 @@ public partial class ParticleModuleSpawnBase : BmSDK.Engine.ParticleModule, BmSD
     /// </summary>
     public unsafe bool bProcessBurstList
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 96); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 96); }
     }
 }

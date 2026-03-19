@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackSkelControlScale<br/>
-/// (size = 192)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackSkelControlScale : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackSkelControlScale : BmSDK.Engine.InterpTrackFloat
     /// </summary>
     public unsafe BmSDK.FName SkelControlName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 184); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

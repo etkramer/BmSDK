@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainMaterial<br/>
-/// (size = 144)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,33 +34,21 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     protected TerrainMaterial(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: ETerrainMappingType
-    /// </summary>
-    public enum ETerrainMappingType
-    {
-        TMT_Auto = 0,
-        TMT_XY = 1,
-        TMT_XZ = 2,
-        TMT_YZ = 3,
-        TMT_MAX = 4,
-    }
-
-    /// <summary>
     /// StructProperty: LocalToMapping
     /// </summary>
-    public unsafe BmSDK.GameObject.FMatrix LocalToMapping
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT LocalToMapping
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject.FMatrix>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
     }
 
     /// <summary>
     /// ByteProperty: MappingType
     /// </summary>
-    public unsafe BmSDK.Engine.TerrainMaterial.ETerrainMappingType MappingType
+    public unsafe byte MappingType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TerrainMaterial.ETerrainMappingType>(Ptr + 112); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 112); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 160); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 160); }
     }
 
     /// <summary>
@@ -68,8 +56,8 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float MappingScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 116); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 116); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 164); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 164); }
     }
 
     /// <summary>
@@ -77,8 +65,8 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float MappingRotation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 168); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 168); }
     }
 
     /// <summary>
@@ -86,8 +74,8 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float MappingPanU
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 124); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 124); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
@@ -95,26 +83,26 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float MappingPanV
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 128); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 128); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 176); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 176); }
     }
 
     /// <summary>
     /// ObjectProperty: Material
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface Material
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT Material
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialInterface>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
     }
 
     /// <summary>
     /// ObjectProperty: DisplacementMap
     /// </summary>
-    public unsafe BmSDK.Engine.Texture2D DisplacementMap
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT DisplacementMap
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Texture2D>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 188); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 188); }
     }
 
     /// <summary>
@@ -122,7 +110,7 @@ public partial class TerrainMaterial : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     public unsafe float DisplacementScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 196); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 196); }
     }
 }

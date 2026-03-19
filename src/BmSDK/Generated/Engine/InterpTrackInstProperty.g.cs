@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstProperty<br/>
-/// (size = 52)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstProperty : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class InterpTrackInstProperty : BmSDK.Engine.InterpTrackInst, BmS
     /// <summary>
     /// ObjectProperty: PropertyUpdateCallback
     /// </summary>
-    public unsafe BmSDK.Function PropertyUpdateCallback
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PropertyUpdateCallback
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Function>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ObjectProperty: PropertyOuterObjectInst
     /// </summary>
-    public unsafe BmSDK.GameObject PropertyOuterObjectInst
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PropertyOuterObjectInst
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

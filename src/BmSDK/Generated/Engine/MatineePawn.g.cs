@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MatineePawn<br/>
-/// (size = 1096)
-/// (flags = 142607030)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MatineePawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class MatineePawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// ObjectProperty: PreviewMesh
     /// </summary>
-    public unsafe BmSDK.Engine.SkeletalMesh PreviewMesh
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PreviewMesh
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SkeletalMesh>(Ptr + 1092); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1092); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 1480); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 1480); }
     }
 }

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// ABSTRACT Class: Keypoint<br/>
-/// (size = 432)
-/// (flags = 142606995)
+/// Class: Keypoint<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal Keypoint() { }
+
+    /// <summary>
+    /// Constructs a new Keypoint
+    /// </summary>
+    public Keypoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Keypoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -66,9 +71,9 @@ public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ComponentProperty: SpriteComp
     /// </summary>
-    public unsafe BmSDK.Engine.SpriteComponent SpriteComp
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SpriteComp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.SpriteComponent>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

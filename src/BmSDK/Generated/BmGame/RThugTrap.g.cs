@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// ABSTRACT Class: RThugTrap<br/>
-/// (size = 440)
-/// (flags = 142606483)
+/// Class: RThugTrap<br/>
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,6 +22,11 @@ public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RThugTrap() { }
+
+    /// <summary>
+    /// Constructs a new RThugTrap
+    /// </summary>
+    public RThugTrap(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RThugTrap Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -66,9 +71,9 @@ public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// ArrayProperty: ComponentsToCheck
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.PrimitiveComponent> ComponentsToCheck
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>> ComponentsToCheck
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.PrimitiveComponent>>(Ptr + 428); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 428); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>(Ptr + 668); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 668); }
     }
 }

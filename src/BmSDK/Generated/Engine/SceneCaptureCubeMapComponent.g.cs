@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCaptureCubeMapComponent<br/>
-/// (size = 164)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject
 {
@@ -36,10 +36,10 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// <summary>
     /// ObjectProperty: TextureTarget
     /// </summary>
-    public unsafe BmSDK.Engine.TextureRenderTargetCube TextureTarget
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT TextureTarget
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.TextureRenderTargetCube>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 212); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 212); }
     }
 
     /// <summary>
@@ -47,8 +47,8 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// </summary>
     public unsafe float NearPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 144); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 144); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 220); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 220); }
     }
 
     /// <summary>
@@ -56,16 +56,16 @@ public partial class SceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCom
     /// </summary>
     public unsafe float FarPlane
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 148); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 148); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// StructProperty: WorldLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 WorldLocation
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WorldLocation
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(Ptr + 152); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 152); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 228); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
     }
 }

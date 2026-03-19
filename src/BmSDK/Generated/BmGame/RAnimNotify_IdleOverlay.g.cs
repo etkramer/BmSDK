@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_IdleOverlay<br/>
-/// (size = 72)
-/// (flags = 201339026)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_IdleOverlay : BmSDK.BmGame.RAnimNotify_Script, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class RAnimNotify_IdleOverlay : BmSDK.BmGame.RAnimNotify_Script, 
     /// </summary>
     public unsafe bool bInUse
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 68); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 68); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 120); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 120); }
     }
 }

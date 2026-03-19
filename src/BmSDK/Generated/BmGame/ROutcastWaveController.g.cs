@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROutcastWaveController<br/>
-/// (size = 264)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class ROutcastWaveController : BmSDK.BmGame.RBMWaveController, BmSDK.IGameObject
 {
@@ -34,58 +34,128 @@ public partial class ROutcastWaveController : BmSDK.BmGame.RBMWaveController, Bm
     protected ROutcastWaveController(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: GetObjClassVersion
+    /// IntProperty: PreviousDeadPawns
     /// </summary>
-    public unsafe static int GetObjClassVersion()
+    public unsafe int PreviousDeadPawns
     {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROutcastWaveController.GetObjClassVersion", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(StaticClass().DefaultObject.Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 376); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 376); }
     }
 
     /// <summary>
-    /// IntProperty: FleeingOutcasts_Min
+    /// BoolProperty: bExitWaveController
     /// </summary>
-    public unsafe int FleeingOutcasts_Min
+    public unsafe bool bExitWaveController
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 252); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 252); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
     }
 
     /// <summary>
-    /// IntProperty: FleeingOutcasts_Max
+    /// BoolProperty: bCanRespawnPartialWave
     /// </summary>
-    public unsafe int FleeingOutcasts_Max
+    public unsafe bool bCanRespawnPartialWave
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 256); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
     }
 
     /// <summary>
-    /// BoolProperty: bSetFleeFlags
+    /// BoolProperty: bPawnsSpawned
     /// </summary>
-    public unsafe bool bSetFleeFlags
+    public unsafe bool bPawnsSpawned
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
     }
 
     /// <summary>
-    /// BoolProperty: bForceAllToFleePoints
+    /// BoolProperty: bStaggerPawnSpawning
     /// </summary>
-    public unsafe bool bForceAllToFleePoints
+    public unsafe bool bStaggerPawnSpawning
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 2) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 2) : (currentMask & ~2); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
     }
 
     /// <summary>
-    /// BoolProperty: bForceAllToIdlePoints
+    /// BoolProperty: bSpawningPawns
     /// </summary>
-    public unsafe bool bForceAllToIdlePoints
+    public unsafe bool bSpawningPawns
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260) & 4) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 260); var newMask = value ? (currentMask | 4) : (currentMask & ~4); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 260); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bWaitForPawnsToBeActuallyDead
+    /// </summary>
+    public unsafe bool bWaitForPawnsToBeActuallyDead
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bOnlyDelayRespawnIfAllDead
+    /// </summary>
+    public unsafe bool bOnlyDelayRespawnIfAllDead
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bAddToSpawnedPawnCount
+    /// </summary>
+    public unsafe bool bAddToSpawnedPawnCount
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// BoolProperty: bSyncPawnsIntoCombat
+    /// </summary>
+    public unsafe bool bSyncPawnsIntoCombat
+    {
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 380); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 380); }
+    }
+
+    /// <summary>
+    /// IntProperty: CurrPawnToSpawn
+    /// </summary>
+    public unsafe int CurrPawnToSpawn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
+    }
+
+    /// <summary>
+    /// IntProperty: FramesUntilNextSpawn
+    /// </summary>
+    public unsafe int FramesUntilNextSpawn
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 388); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 388); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DelayBetweenSpawns
+    /// </summary>
+    public unsafe float DelayBetweenSpawns
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 392); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 392); }
+    }
+
+    /// <summary>
+    /// StrProperty: AllDeadFlagName
+    /// </summary>
+    public unsafe BmSDK.FString AllDeadFlagName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 396); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 396); }
     }
 }

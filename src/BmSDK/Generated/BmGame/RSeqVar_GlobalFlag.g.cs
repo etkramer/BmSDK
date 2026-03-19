@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_GlobalFlag<br/>
-/// (size = 152)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqVar_GlobalFlag : BmSDK.Engine.SeqVar_Bool, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class RSeqVar_GlobalFlag : BmSDK.Engine.SeqVar_Bool, BmSDK.IGameO
     /// </summary>
     public unsafe BmSDK.FName FlagName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 132); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 132); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 236); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 236); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class RSeqVar_GlobalFlag : BmSDK.Engine.SeqVar_Bool, BmSDK.IGameO
     /// </summary>
     public unsafe BmSDK.FString FlagNameAsString
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 140); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 140); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(Ptr + 244); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 244); }
     }
 }

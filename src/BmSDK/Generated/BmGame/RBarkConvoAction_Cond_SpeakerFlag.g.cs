@@ -1,0 +1,53 @@
+#pragma warning disable CS0108
+#pragma warning disable CS1591
+
+namespace BmSDK.BmGame;
+
+/// <summary>
+/// Class: RBarkConvoAction_Cond_SpeakerFlag<br/>
+/// (size = 0)
+/// (flags = 0)
+/// </summary>
+public partial class RBarkConvoAction_Cond_SpeakerFlag : BmSDK.BmGame.RBarkConvoActionCond, BmSDK.IGameObject
+{
+    static BmSDK.Class s_staticClass = null;
+    public static BmSDK.Class StaticClass()
+    {
+        if (s_staticClass is null)
+        {
+            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RBarkConvoAction_Cond_SpeakerFlag", false);
+            s_staticClass.AddToRoot();
+        }
+        return s_staticClass;
+    }
+
+    internal RBarkConvoAction_Cond_SpeakerFlag() { }
+
+    /// <summary>
+    /// Constructs a new RBarkConvoAction_Cond_SpeakerFlag
+    /// </summary>
+    public RBarkConvoAction_Cond_SpeakerFlag(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBarkConvoAction_Cond_SpeakerFlag Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
+
+    /// <summary>
+    /// Constructs a new wrapper instance from the given object pointer.
+    /// </summary>
+    protected RBarkConvoAction_Cond_SpeakerFlag(nint ptr) : base(ptr) { }
+
+    /// <summary>
+    /// ByteProperty: FlagType
+    /// </summary>
+    public unsafe byte FlagType
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 180); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PawnRef
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PawnRef
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 184); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 184); }
+    }
+}

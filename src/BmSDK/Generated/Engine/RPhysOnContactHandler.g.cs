@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPhysOnContactHandler<br/>
-/// (size = 52)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -34,42 +34,11 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
     protected RPhysOnContactHandler(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Function: OnContact
-    /// </summary>
-    public unsafe void OnContact(BmSDK.Engine.RB_BodyInstance BodyInst0, BmSDK.Engine.RB_BodyInstance BodyInst1, System.Numerics.Vector3 SumNormalForce, System.Numerics.Vector3 SumFrictionForce)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysOnContactHandler.OnContact", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst0, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(BodyInst1, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SumNormalForce, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SumFrictionForce, paramsPtr + 20);
-        var oldFlags = funcManaged.FunctionFlags;
-        var oldNative = funcManaged.iNative;
-        funcManaged.FunctionFlags &= ~BmSDK.Function.EFunctionFlags.FUNC_Native;
-        funcManaged.FunctionFlags |= BmSDK.Function.EFunctionFlags.FUNC_Defined;
-        funcManaged.iNative = 0;
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        funcManaged.iNative = oldNative;
-        funcManaged.FunctionFlags = oldFlags;
-        return;
-    }
-
-    /// <summary>
     /// ObjectProperty: OwnerObject
     /// </summary>
-    public unsafe BmSDK.GameObject OwnerObject
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT OwnerObject
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.GameObject>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
-    }
-
-    /// <summary>
-    /// BoolProperty: bEnableCapeSpam
-    /// </summary>
-    public unsafe bool bEnableCapeSpam
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 48); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 }

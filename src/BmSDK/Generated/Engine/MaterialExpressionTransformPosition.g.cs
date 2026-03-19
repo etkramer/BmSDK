@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTransformPosition<br/>
-/// (size = 121)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTransformPosition : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {
@@ -34,29 +34,29 @@ public partial class MaterialExpressionTransformPosition : BmSDK.Engine.Material
     protected MaterialExpressionTransformPosition(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EMaterialPositionTransform
+    /// StructProperty: Input
     /// </summary>
-    public enum EMaterialPositionTransform
+    public unsafe BmSDK.Engine.MaterialExpression.Desc Input
     {
-        TRANSFORMPOS_World = 0,
-        TRANSFORMPOS_MAX = 1,
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.Desc>(Ptr + 172); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
     }
 
     /// <summary>
-    /// StructProperty: Input
+    /// ByteProperty: TransformSourceType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpression.FExpressionInput Input
+    public unsafe byte TransformSourceType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpression.FExpressionInput>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 224); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 224); }
     }
 
     /// <summary>
     /// ByteProperty: TransformType
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialExpressionTransformPosition.EMaterialPositionTransform TransformType
+    public unsafe byte TransformType
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.MaterialExpressionTransformPosition.EMaterialPositionTransform>(Ptr + 120); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 120); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 225); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 225); }
     }
 }

@@ -5,10 +5,10 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkParameterName<br/>
-/// (size = 57)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class AkParameterName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
+public partial class AkParameterName : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,11 +34,29 @@ public partial class AkParameterName : BmSDK.Engine.AkAsset, BmSDK.IGameObject
     protected AkParameterName(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// ByteProperty: ParameterType
+    /// FloatProperty: MinValue
     /// </summary>
-    public unsafe BmSDK.Engine.AkWwise.EAkGameSyncType ParameterType
+    public unsafe float MinValue
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkWwise.EAkGameSyncType>(Ptr + 56); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 56); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxValue
+    /// </summary>
+    public unsafe float MaxValue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 96); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 96); }
+    }
+
+    /// <summary>
+    /// FloatProperty: DefaultValue
+    /// </summary>
+    public unsafe float DefaultValue
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
     }
 }

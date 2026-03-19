@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_HarpoonDragTrigger<br/>
-/// (size = 356)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_HarpoonDragTrigger : BmSDK.BmGame.RSpecialMoveConfig_HarpoonDragObject, BmSDK.IGameObject
 {
@@ -33,4 +33,93 @@ public partial class RSpecialMoveConfig_HarpoonDragTrigger : BmSDK.BmGame.RSpeci
     /// </summary>
     protected RSpecialMoveConfig_HarpoonDragTrigger(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: BraceAnim
+    /// </summary>
+    public unsafe BmSDK.FName BraceAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 400); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 400); }
+    }
+
+    /// <summary>
+    /// NameProperty: BraceIdle
+    /// </summary>
+    public unsafe BmSDK.FName BraceIdle
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 408); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 408); }
+    }
+
+    /// <summary>
+    /// ArrayProperty: PullAnim
+    /// </summary>
+    public unsafe BmSDK.TArray<BmSDK.FString> PullAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 416); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 416); }
+    }
+
+    /// <summary>
+    /// NameProperty: PullEndAnim
+    /// </summary>
+    public unsafe BmSDK.FName PullEndAnim
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 432); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+    }
+
+    /// <summary>
+    /// FloatProperty: MaxAnimRate
+    /// </summary>
+    public unsafe float MaxAnimRate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 440); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 440); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ButtonPressScoreBonus
+    /// </summary>
+    public unsafe float ButtonPressScoreBonus
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 444); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 444); }
+    }
+
+    /// <summary>
+    /// FloatProperty: ScoreDecayRate
+    /// </summary>
+    public unsafe float ScoreDecayRate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 448); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 448); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: RopePullTension
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT RopePullTension
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 452); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 452); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: PullTensionParam
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT PullTensionParam
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 460); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 460); }
+    }
+
+    /// <summary>
+    /// FloatProperty: RopePullTensionRate
+    /// </summary>
+    public unsafe float RopePullTensionRate
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 468); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 468); }
+    }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SwitchFlags<br/>
-/// (size = 229)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -34,52 +34,36 @@ public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IG
     protected RSeqAct_SwitchFlags(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: SFModeType
-    /// </summary>
-    public enum SFModeType
-    {
-        SFMode_All_True = 0,
-        SFMode_All_False = 1,
-        SFMode_First_True = 2,
-        SFMode_First_False = 3,
-        SFMode_LastSequential_True = 4,
-        SFMode_LastSequential_False = 5,
-        SFMode_Last_True = 6,
-        SFMode_Last_False = 7,
-        SFMode_MAX = 8,
-    }
-
-    /// <summary>
     /// ArrayProperty: FlagList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchFlags.FFlagItem> FlagList
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>> FlagList
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.RSeqAct_SwitchFlags.FFlagItem>>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 
     /// <summary>
     /// ArrayProperty: Comments
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> Comments
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>> Comments
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 216); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 216); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.FString>>>>>>>(Ptr + 368); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 368); }
     }
 
     /// <summary>
     /// ByteProperty: Mode
     /// </summary>
-    public unsafe BmSDK.BmGame.RSeqAct_SwitchFlags.SFModeType Mode
+    public unsafe byte Mode
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RSeqAct_SwitchFlags.SFModeType>(Ptr + 228); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 228); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<byte>(Ptr + 384); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 384); }
     }
 
     /// <summary>
     /// Struct: FFlagItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 8)]
+    [StructLayout(LayoutKind.Explicit, Size = 0)]
     public partial record struct FFlagItem
     {
         /// <summary>

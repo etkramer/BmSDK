@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionBlurTextureSampleParameter2D<br/>
-/// (size = 176)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionBlurTextureSampleParameter2D : BmSDK.Engine.MaterialExpressionBlurTextureSampleParameter, BmSDK.IGameObject
 {
@@ -33,4 +33,21 @@ public partial class MaterialExpressionBlurTextureSampleParameter2D : BmSDK.Engi
     /// </summary>
     protected MaterialExpressionBlurTextureSampleParameter2D(nint ptr) : base(ptr) { }
 
+    /// <summary>
+    /// NameProperty: ParameterName
+    /// </summary>
+    public unsafe BmSDK.FName ParameterName
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 296); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 296); }
+    }
+
+    /// <summary>
+    /// StructProperty: ExpressionGUID
+    /// </summary>
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT ExpressionGUID
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
+    }
 }

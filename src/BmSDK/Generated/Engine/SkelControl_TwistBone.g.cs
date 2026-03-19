@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControl_TwistBone<br/>
-/// (size = 184)
-/// (flags = 142606482)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class SkelControl_TwistBone : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {
@@ -38,8 +38,8 @@ public partial class SkelControl_TwistBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe BmSDK.FName SourceBoneName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 172); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 172); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 248); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 248); }
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public partial class SkelControl_TwistBone : BmSDK.Engine.SkelControlBase, BmSDK
     /// </summary>
     public unsafe float TwistAngleScale
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 180); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 180); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 256); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 256); }
     }
 }

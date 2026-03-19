@@ -5,10 +5,10 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_GlideKick<br/>
-/// (size = 504)
-/// (flags = 4114)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class RSpecialMoveConfig_GlideKick : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject
+public partial class RSpecialMoveConfig_GlideKick : BmSDK.BmGame.RSpecialMoveConfig_RunningRelativeAnimMove, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -34,47 +34,20 @@ public partial class RSpecialMoveConfig_GlideKick : BmSDK.BmGame.RSpecialMoveCon
     protected RSpecialMoveConfig_GlideKick(nint ptr) : base(ptr) { }
 
     /// <summary>
-    /// Enum: EGlideKickMoveExtraInfo
+    /// StructProperty: WindowAttackOffset
     /// </summary>
-    public enum EGlideKickMoveExtraInfo
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT WindowAttackOffset
     {
-        GKMEI_GlideVelocity = 0,
-        GKMEI_MAX = 1,
-    }
-
-    /// <summary>
-    /// FloatProperty: SmashRadius
-    /// </summary>
-    public unsafe float SmashRadius
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 348); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 348); }
-    }
-
-    /// <summary>
-    /// StructProperty: SmashScreenShake
-    /// </summary>
-    public unsafe BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct SmashScreenShake
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RBMScreenShakeModifier.FBMScreenShakeStruct>(Ptr + 352); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
-    }
-
-    /// <summary>
-    /// ClassProperty: SmashDamageType
-    /// </summary>
-    public unsafe BmSDK.Class SmashDamageType
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 496); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 496); }
-    }
-
-    /// <summary>
-    /// FloatProperty: ContinueCombatTimer
-    /// </summary>
-    public unsafe float ContinueCombatTimer
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 500); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 500); }
         set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
+    }
+
+    /// <summary>
+    /// ObjectProperty: SmashWindowRumble
+    /// </summary>
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SmashWindowRumble
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 512); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 512); }
     }
 }

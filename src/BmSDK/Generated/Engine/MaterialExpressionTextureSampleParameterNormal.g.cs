@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionTextureSampleParameterNormal<br/>
-/// (size = 140)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameterNormal : BmSDK.Engine.MaterialExpressionTextureSampleParameter, BmSDK.IGameObject
 {
@@ -36,9 +36,9 @@ public partial class MaterialExpressionTextureSampleParameterNormal : BmSDK.Engi
     /// <summary>
     /// StructProperty: InstanceOverride
     /// </summary>
-    public unsafe System.IntPtr InstanceOverride
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT InstanceOverride
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 136); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 136); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 316); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 316); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LightmappedSurfaceCollection<br/>
-/// (size = 60)
-/// (flags = 134221970)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class LightmappedSurfaceCollection : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -36,18 +36,18 @@ public partial class LightmappedSurfaceCollection : BmSDK.GameObject, BmSDK.IGam
     /// <summary>
     /// ObjectProperty: SourceModel
     /// </summary>
-    public unsafe BmSDK.Engine.Model SourceModel
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT SourceModel
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.Model>(Ptr + 44); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 84); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 84); }
     }
 
     /// <summary>
     /// ArrayProperty: Surfaces
     /// </summary>
-    public unsafe BmSDK.TArray<int> Surfaces
+    public unsafe NEED_UPDATE_ARRAYPROPERTY_LAYOUT Surfaces
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<int>>(Ptr + 48); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 48); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_ARRAYPROPERTY_LAYOUT>(Ptr + 92); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInstancedStaticMeshActor<br/>
-/// (size = 444)
-/// (flags = 142606994)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class RInstancedStaticMeshActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.IGameObject
 {
@@ -71,9 +71,9 @@ public partial class RInstancedStaticMeshActor : BmSDK.Engine.StaticMeshActorBas
     /// <summary>
     /// ArrayProperty: InstancedComponents
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Engine.InstancedStaticMeshComponent> InstancedComponents
+    public unsafe BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>> InstancedComponents
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.InstancedStaticMeshComponent>>(Ptr + 432); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 432); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.TArray<BmSDK.Engine.Actor.Timers>>>>>(Ptr + 692); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 692); }
     }
 }

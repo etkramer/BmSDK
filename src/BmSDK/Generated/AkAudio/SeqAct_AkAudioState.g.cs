@@ -5,10 +5,10 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioState<br/>
-/// (size = 208)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
-public partial class SeqAct_AkAudioState : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
+public partial class SeqAct_AkAudioState : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {
     static BmSDK.Class s_staticClass = null;
     public static BmSDK.Class StaticClass()
@@ -36,9 +36,9 @@ public partial class SeqAct_AkAudioState : BmSDK.Engine.SequenceAction, BmSDK.IG
     /// <summary>
     /// ObjectProperty: StateName
     /// </summary>
-    public unsafe BmSDK.Engine.AkStateName StateName
+    public unsafe NEED_UPDATE_OBJECTPROPERTY_LAYOUT StateName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.AkStateName>(Ptr + 204); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 204); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_OBJECTPROPERTY_LAYOUT>(Ptr + 352); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 352); }
     }
 }

@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackVectorProp<br/>
-/// (size = 240)
-/// (flags = 134226066)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackVectorProp : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {
@@ -38,7 +38,7 @@ public partial class InterpTrackVectorProp : BmSDK.Engine.InterpTrackVectorBase,
     /// </summary>
     public unsafe BmSDK.FName PropertyName
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 232); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 232); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(Ptr + 304); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 304); }
     }
 }

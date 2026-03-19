@@ -5,8 +5,8 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstBoolProp<br/>
-/// (size = 60)
-/// (flags = 134217874)
+/// (size = 0)
+/// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstBoolProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject
 {
@@ -36,10 +36,19 @@ public partial class InterpTrackInstBoolProp : BmSDK.Engine.InterpTrackInstPrope
     /// <summary>
     /// StructProperty: BoolProp
     /// </summary>
-    public unsafe System.IntPtr BoolProp
+    public unsafe NEED_UPDATE_STRUCTPROPERTY_LAYOUT BoolProp
     {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<System.IntPtr>(Ptr + 52); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 52); }
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<NEED_UPDATE_STRUCTPROPERTY_LAYOUT>(Ptr + 100); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
+    }
+
+    /// <summary>
+    /// IntProperty: BitMask
+    /// </summary>
+    public unsafe int BitMask
+    {
+        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 108); }
+        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
     }
 
     /// <summary>
@@ -47,7 +56,7 @@ public partial class InterpTrackInstBoolProp : BmSDK.Engine.InterpTrackInstPrope
     /// </summary>
     public unsafe bool ResetBool
     {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56) & 1) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 56); var newMask = value ? (currentMask | 1) : (currentMask & ~1); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 56); }
+        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112) & 0) != 0; }
+        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 112); var newMask = value ? (currentMask | 0) : (currentMask & ~0); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 112); }
     }
 }
