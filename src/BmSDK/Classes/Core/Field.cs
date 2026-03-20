@@ -9,6 +9,6 @@ public partial class Field
     /// </summary>
     public unsafe Field Next
     {
-        get => MarshalUtil.ToManaged<Field>(Ptr + 44);
+        get => MarshalUtil.ToManaged<Field>(Ptr + 84);
     }
 }

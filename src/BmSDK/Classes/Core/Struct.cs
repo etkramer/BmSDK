@@ -9,7 +9,7 @@ public partial class Struct
     /// </summary>
     public Struct SuperStruct
     {
-        get => MarshalUtil.ToManaged<Struct>(Ptr + 56);
+        get => MarshalUtil.ToManaged<Struct>(Ptr + 92);
     }
 
     /// <summary>
@@ -17,7 +17,7 @@ public partial class Struct
     /// </summary>
     public Field Children
     {
-        get => MarshalUtil.ToManaged<Field>(Ptr + 60);
+        get => MarshalUtil.ToManaged<Field>(Ptr + 100);
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ public partial class Struct
     /// </summary>
     public short PropertiesSize
     {
-        get => MarshalUtil.ToManaged<short>(Ptr + 64);
+        get => MarshalUtil.ToManaged<short>(Ptr + 120);
     }
 
     public IEnumerable<Field> EnumerateFields()
