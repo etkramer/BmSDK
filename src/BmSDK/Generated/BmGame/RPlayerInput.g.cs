@@ -145,7 +145,7 @@ public partial class RPlayerInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerInput
     /// </summary>
-    public unsafe override void PlayerInput(float DeltaTime)
+    public unsafe override void _PlayerInput(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerInput.PlayerInput", true);
         byte* paramsPtr = stackalloc byte[4];
