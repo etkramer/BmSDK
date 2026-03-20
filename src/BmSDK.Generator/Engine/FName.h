@@ -10,10 +10,7 @@ class FNameEntry
 	INT HashNext;
 
 	SHORT NameLen;
-
-	// This alignment is strange - there's a chance that the last bit of the GNames pointer
-	// is used for something else, causing us to read 1 byte ahead.
-	BYTE Pad;
+    SHORT Pad;
 
 	union
 	{
@@ -30,6 +27,8 @@ class FNameEntry
 public:
 	string ToString() const
 	{
+        // Mirrored in FName.cs
+
 		// Sometimes this struct stores a pointer to a string, instead of having it inline.
 		// It's not clear how to check this properly yet, so we implement a heuristic
 		// to try and detect pointers.

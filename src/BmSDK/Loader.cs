@@ -56,11 +56,11 @@ internal static class Loader
         //     EngineTickDetour
         // );
 
-        // _ConditionalPostLoadDetourBase =
-        //     DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
-        //         GameInfo.FuncOffsets.ConditionalPostLoad,
-        //         ConditionalPostLoadDetour
-        //     );
+        _ConditionalPostLoadDetourBase =
+            DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
+                GameInfo.FuncOffsets.ConditionalPostLoad,
+                ConditionalPostLoadDetour
+            );
 
         // _ConditionalDestroyDetourBase =
         //     DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(

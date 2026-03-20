@@ -48,24 +48,64 @@ public struct FName
         var GNames = (FNameEntry***)MemUtil.GetPointer<byte>(GameInfo.GlobalOffsets.GNames);
         var GNamesData = *GNames;
 
-#if BATMAN2
-        return Guard.NotNull(Marshal.PtrToStringUni((IntPtr)GNamesData[Index]->UniName));
-#elif BATMAN3
-        return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)GNamesData[Index]->UniName));
-#endif
+        var nameEntry = GNamesData[Index];
+
+        // Mirrored in FName.h
+
+        // Sometimes this struct stores a pointer to a string, instead of having it inline.
+        // It's not clear how to check this properly yet, so we implement a heuristic
+        // to try and detect pointers.
+
+        // Short inline names (e.g. "HUD\0") can look like valid pointers when
+        // read as 8 bytes. Check for valid name chars followed by a null first.
+        var shortInline = false;
+        for (var i = 0; i < 8; i++)
+        {
+            var c = Convert.ToChar(nameEntry->AnsiName[i]);
+            if (c == '\0')
+            {
+                shortInline = i > 0;
+                break;
+            }
+
+            if (!char.IsAsciiLetterOrDigit(c) && c != '_')
+            {
+                break;
+            }
+        }
+
+        if (!shortInline)
+        {
+            if ((nameEntry->AnsiNamePtr > 0x10000) && ((nameEntry->AnsiNamePtr >> 48) == 0))
+            {
+                return Guard.NotNull(Marshal.PtrToStringAnsi(nameEntry->AnsiNamePtr));
+            }
+        }
+
+        return Guard.NotNull(Marshal.PtrToStringAnsi((IntPtr)nameEntry->AnsiName));
     }
 
 #pragma warning disable CS0649
+    [StructLayout(LayoutKind.Explicit)]
     private unsafe struct FNameEntry
     {
-#if BATMAN2
-        public ulong Flags;
-#elif BATMAN3
-        public int Flags;
-#endif
+        [FieldOffset(0)]
         public int Index;
-        public FNameEntry* HashNext;
-        public fixed char UniName[128];
+
+        [FieldOffset(4)]
+        public int HashNext;
+
+        [FieldOffset(8)]
+        public short NameLen;
+
+        [FieldOffset(10)]
+        public short Pad;
+
+        [FieldOffset(12)]
+        public fixed byte AnsiName[128];
+
+        [FieldOffset(12)]
+        public IntPtr AnsiNamePtr;
     }
 #pragma warning restore CS0649
 }

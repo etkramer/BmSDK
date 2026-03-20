@@ -38,7 +38,6 @@ internal static class GameFunctions
     );
 
     // UObject::ProcessInternal()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ProcessInternalDelegate(IntPtr self, IntPtr Stack, IntPtr Result);
 
     // UObject::CallFunction()
@@ -109,7 +108,6 @@ internal static class GameFunctions
     public delegate IntPtr EngineTickDelegate(IntPtr self);
 
     // UObject::ConditionalPostLoad()
-    [UnmanagedFunctionPointer(CallingConvention.ThisCall)]
     public delegate void ConditionalPostLoadDelegate(IntPtr self);
 
     private static StaticConstructObjectDelegate? _StaticConstructObject = null;
