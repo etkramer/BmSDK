@@ -11,11 +11,14 @@ enum class EFunctionFlags : DWORD
 	FUNC_Static = 0x2000,
 };
 
+CLASS(UFunction, 196)
 class UFunction : public UStruct
 {
-	// TODO
 	FIELD(EFunctionFlags, FunctionFlags)
+    BYTE UNK1[28];
 
 public:
 	STATIC_CLASS("Core.Function")
 };
+
+CHECK_CLASS(UFunction)
