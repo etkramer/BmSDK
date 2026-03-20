@@ -6,7 +6,6 @@
 CLASS(UField, 92)
 class UField : public UObject
 {
-	BYTE UNK0[8];
 	FIELD(UField*, Next)
 
 public:

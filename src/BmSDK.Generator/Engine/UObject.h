@@ -6,18 +6,22 @@
 #define PROPERTY_ALIGNMENT 4
 #pragma pack(push, PROPERTY_ALIGNMENT)
 
-CLASS(UObject, 76)
+CLASS(UObject, 84)
 class UObject
 {
-	BYTE UNK0[8];
-	BYTE UNK1[8];
-	BYTE UNK2[8];
-	BYTE UNK3[8];
-	BYTE UNK4[8];
+	INT ObjectFlags;
+	INT EditorObjectFlags;
+	INT HashIndexPrev;
+	INT HashIndexNext;
+	INT HashOuterIndexPrev;
+	INT HashOuterIndexNext;
+	UObject* Linker;
+	void* LinkerIndex;
 	FIELD(INT, Index)
 	FIELD(UObject*, Outer)
 	FIELD(FName, Name)
 	FIELD(UObject*, Class)
+	UObject* ObjectArchetype;
 
 private:
 	// Dummy function so a vtable will be created.
@@ -31,11 +35,11 @@ public:
 	};
 	string GetPathName() const;
 	string GetPackageName() const;
-    string GetPackageNameManaged() const;
+	string GetPackageNameManaged() const;
 
 	bool IsA(class UClass* classObj) const;
 
-    static class UClass* FindClass(const string& classPath);
+	static class UClass* FindClass(const string& classPath);
 
 public:
 	STATIC_CLASS("Core.Object")
