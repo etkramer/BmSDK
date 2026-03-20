@@ -9,7 +9,7 @@ enum class EFunctionFlags : DWORD
     FUNC_Event = 0x800,
     FUNC_Operator = 0x1000,
     FUNC_Static = 0x2000,
-    FUNC_Private = 0x00040000,
+    FUNC_Private = 0x40000,
 };
 
 class UFunction : public UStruct
