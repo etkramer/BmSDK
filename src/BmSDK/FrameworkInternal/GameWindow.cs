@@ -6,6 +6,12 @@ namespace BmSDK.Framework;
 
 internal static class GameWindow
 {
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, EntryPoint = "FindWindowW")]
+    private static extern HWND FindWindow(string? lpClassName, string? lpWindowName);
+
+    [DllImport("user32.dll", EntryPoint = "SetWindowLongPtrW")]
+    private static extern nint SetWindowLongPtr(HWND hWnd, int nIndex, nint dwNewLong);
+
     private static HWND s_gameHwnd = default;
     private static WNDPROC? s_wndProc;
     private static WNDPROC? s_wndProcBase;
@@ -27,63 +33,28 @@ internal static class GameWindow
 
     internal static void Tick()
     {
-        // BM4: GameWindow.Tick() causes a crash
-        
-        // // Do we know which window is ours?
-        // if (s_gameHwnd == default)
-        // {
-        //     // If not, keep trying to find it.
-        //     if (TryFindGameWindow(out s_gameHwnd))
-        //     {
-        //         // Subclass the window procedure
-        //         s_wndProc = CustomWndProc;
-        //         var originalWndProc = PInvoke.SetWindowLong(
-        //            s_gameHwnd,
-        //            WINDOW_LONG_PTR_INDEX.GWL_WNDPROC,
-        //            (int)Marshal.GetFunctionPointerForDelegate(s_wndProc)
-        //         );
+        // Do we know which window is ours?
+        if (s_gameHwnd == default)
+        {
+            // If not, keep trying to find it.
+            if (TryFindGameWindow(out s_gameHwnd))
+            {
+                // Subclass the window procedure
+                s_wndProc = CustomWndProc;
+                var originalWndProc = SetWindowLongPtr(
+                    s_gameHwnd,
+                    (int)WINDOW_LONG_PTR_INDEX.GWL_WNDPROC,
+                    Marshal.GetFunctionPointerForDelegate(s_wndProc)
+                );
 
-        //         s_wndProcBase = Marshal.GetDelegateForFunctionPointer<WNDPROC>(originalWndProc);
-        //     }
-        // }
+                s_wndProcBase = Marshal.GetDelegateForFunctionPointer<WNDPROC>(originalWndProc);
+            }
+        }
     }
 
     private static bool TryFindGameWindow(out HWND result)
     {
-        var foundHwnd = default(HWND);
-        var processId = Environment.ProcessId;
-
-        // Enumerate all windows in existence until one belongs to us.
-        PInvoke.EnumWindows(
-            (hwnd, lParam) =>
-            {
-                uint winProcId = 0;
-                unsafe
-                {
-                    _ = PInvoke.GetWindowThreadProcessId(hwnd, &winProcId);
-                }
-
-                if (winProcId == processId && PInvoke.IsWindowVisible(hwnd))
-                {
-                    foundHwnd = hwnd;
-                    return false;
-                }
-
-                return true;
-            },
-            0
-        );
-
-        // Just found it!
-        if (foundHwnd != default)
-        {
-            result = foundHwnd;
-            return true;
-        }
-        else
-        {
-            result = default;
-            return false;
-        }
+        result = FindWindow("LaunchUnrealUWindowsClient", null);
+        return result != default;
     }
 }
