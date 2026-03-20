@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ModelComponent<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 2155872722)
 /// </summary>
 public partial class ModelComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

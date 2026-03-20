@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Path_TowardGoal<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class Path_TowardGoal : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkDialogueConversationDynamic<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
 {

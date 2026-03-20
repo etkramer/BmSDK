@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDebugLabel<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDebugLabel : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

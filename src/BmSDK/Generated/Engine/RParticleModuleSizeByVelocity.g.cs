@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RParticleModuleSizeByVelocity<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RParticleModuleSizeByVelocity : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject
 {

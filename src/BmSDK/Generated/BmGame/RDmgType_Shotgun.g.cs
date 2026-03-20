@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_Shotgun<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_Shotgun : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject
 {

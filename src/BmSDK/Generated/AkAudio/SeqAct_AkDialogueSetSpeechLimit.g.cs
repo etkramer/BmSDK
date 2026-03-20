@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialogueSetSpeechLimit<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialogueSetSpeechLimit : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

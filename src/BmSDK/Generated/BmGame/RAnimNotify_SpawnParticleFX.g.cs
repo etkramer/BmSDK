@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_SpawnParticleFX<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_SpawnParticleFX : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_FearGasPanic<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_FearGasPanic : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

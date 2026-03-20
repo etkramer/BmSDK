@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVehicleNPCWeapon<br/>
+/// ABSTRACT Class: RVehicleNPCWeapon<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVehicleNPCWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RVehicleNPCWeapon() { }
-
-    /// <summary>
-    /// Constructs a new RVehicleNPCWeapon
-    /// </summary>
-    public RVehicleNPCWeapon(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicleNPCWeapon Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

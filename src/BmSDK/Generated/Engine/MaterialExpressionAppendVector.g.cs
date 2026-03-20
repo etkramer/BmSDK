@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionAppendVector<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionAppendVector : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

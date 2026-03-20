@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MSeqAct_IsSharedFlagSet<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class MSeqAct_IsSharedFlagSet : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

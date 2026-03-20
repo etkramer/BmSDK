@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialogueGetSpeechDuration<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialogueGetSpeechDuration : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

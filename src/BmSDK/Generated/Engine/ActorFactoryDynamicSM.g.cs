@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ActorFactoryDynamicSM<br/>
+/// ABSTRACT Class: ActorFactoryDynamicSM<br/>
 /// (size = 169)
-/// (flags = 0)
+/// (flags = 134230167)
 /// </summary>
 public partial class ActorFactoryDynamicSM : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ActorFactoryDynamicSM : BmSDK.Engine.ActorFactory, BmSDK.IG
     }
 
     internal ActorFactoryDynamicSM() { }
-
-    /// <summary>
-    /// Constructs a new ActorFactoryDynamicSM
-    /// </summary>
-    public ActorFactoryDynamicSM(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ActorFactoryDynamicSM Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

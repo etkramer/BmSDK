@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGlideOutOfBoundsVolume<br/>
 /// (size = 816)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGlideOutOfBoundsVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameObject
 {

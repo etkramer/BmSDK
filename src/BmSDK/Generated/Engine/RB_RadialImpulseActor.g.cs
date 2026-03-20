@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_RadialImpulseActor<br/>
 /// (size = 685)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RB_RadialImpulseActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
 {

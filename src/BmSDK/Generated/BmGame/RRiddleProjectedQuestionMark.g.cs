@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRiddleProjectedQuestionMark<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRiddleProjectedQuestionMark : BmSDK.BmGame.RRiddleBase, BmSDK.IGameObject
 {

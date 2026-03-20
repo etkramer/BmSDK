@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_AttackFromGarg<br/>
 /// (size = 888)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_AttackFromGarg : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MorphNodeWeightByBoneAngle<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class MorphNodeWeightByBoneAngle : BmSDK.Engine.MorphNodeWeightBase, BmSDK.IGameObject
 {

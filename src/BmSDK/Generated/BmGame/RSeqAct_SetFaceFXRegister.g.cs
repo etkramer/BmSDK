@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetFaceFXRegister<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetFaceFXRegister : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

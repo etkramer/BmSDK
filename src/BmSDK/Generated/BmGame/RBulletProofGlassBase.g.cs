@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBulletProofGlassBase<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RBulletProofGlassBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

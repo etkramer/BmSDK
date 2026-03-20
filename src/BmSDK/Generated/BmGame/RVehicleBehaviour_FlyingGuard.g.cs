@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_FlyingGuard<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_FlyingGuard : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_FromAbove<br/>
 /// (size = 1824)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_FromAbove : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

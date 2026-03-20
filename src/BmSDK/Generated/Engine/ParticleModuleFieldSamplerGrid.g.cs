@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleFieldSamplerGrid<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 8392722)
 /// </summary>
 public partial class ParticleModuleFieldSamplerGrid : BmSDK.Engine.ParticleModuleFieldSamplerBase, BmSDK.IGameObject
 {

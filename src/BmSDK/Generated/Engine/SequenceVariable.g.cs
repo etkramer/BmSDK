@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SequenceVariable<br/>
+/// ABSTRACT Class: SequenceVariable<br/>
 /// (size = 232)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SequenceVariable : BmSDK.Engine.SequenceObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SequenceVariable : BmSDK.Engine.SequenceObject, BmSDK.IGame
     }
 
     internal SequenceVariable() { }
-
-    /// <summary>
-    /// Constructs a new SequenceVariable
-    /// </summary>
-    public SequenceVariable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SequenceVariable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

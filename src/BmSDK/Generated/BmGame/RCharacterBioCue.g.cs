@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCharacterBioCue<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RCharacterBioCue : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

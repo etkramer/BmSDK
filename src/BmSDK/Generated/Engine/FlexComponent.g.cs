@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FlexComponent<br/>
 /// (size = 828)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class FlexComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
 {

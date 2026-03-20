@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoAction_AKMulti<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkConvoAction_AKMulti : BmSDK.BmGame.RBarkConvoAction_SpeechBase, BmSDK.IGameObject
 {

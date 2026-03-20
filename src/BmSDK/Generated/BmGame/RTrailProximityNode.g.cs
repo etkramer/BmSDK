@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTrailProximityNode<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RTrailProximityNode : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

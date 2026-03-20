@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimUtil_FloorCorrection<br/>
 /// (size = 248)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameObject
 {

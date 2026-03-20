@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LocalPlayer<br/>
 /// (size = 1400)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class LocalPlayer : BmSDK.Engine.Player, BmSDK.IGameObject
 {

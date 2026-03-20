@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UIRoot<br/>
+/// ABSTRACT Class: UIRoot<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217879)
 /// </summary>
 public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject
     }
 
     internal UIRoot() { }
-
-    /// <summary>
-    /// Constructs a new UIRoot
-    /// </summary>
-    public UIRoot(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIRoot Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPickup_ScarecrowBase<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RPickup_ScarecrowBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

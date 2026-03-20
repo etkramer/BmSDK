@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPollenStaticMeshActor<br/>
 /// (size = 798)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPollenStaticMeshActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
 {

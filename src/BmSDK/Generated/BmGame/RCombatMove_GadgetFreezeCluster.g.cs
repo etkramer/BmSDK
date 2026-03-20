@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetFreezeCluster<br/>
+/// ABSTRACT Class: RCombatMove_GadgetFreezeCluster<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetFreezeCluster : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetFreezeCluster : BmSDK.BmGame.RCombatMove_
     }
 
     internal RCombatMove_GadgetFreezeCluster() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetFreezeCluster
-    /// </summary>
-    public RCombatMove_GadgetFreezeCluster(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetFreezeCluster Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: ROnlineStatsRead<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 50)
 /// </summary>
 public partial class ROnlineStatsRead : BmSDK.Engine.OnlineStatsRead, BmSDK.IGameObject
 {

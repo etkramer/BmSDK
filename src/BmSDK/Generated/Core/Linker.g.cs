@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: Linker<br/>
 /// (size = 456)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class Linker : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDestructibleDebrisCrumbleVolume<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDestructibleDebrisCrumbleVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

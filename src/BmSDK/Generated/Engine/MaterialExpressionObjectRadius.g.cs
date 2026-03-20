@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionObjectRadius<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionObjectRadius : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

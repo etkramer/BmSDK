@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatclawPipeCoverBase<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBatclawPipeCoverBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

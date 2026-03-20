@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdSequence_BatAttract<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCrowdSequence_BatAttract : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObject
 {

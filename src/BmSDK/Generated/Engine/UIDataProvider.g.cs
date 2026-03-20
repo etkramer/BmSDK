@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UIDataProvider<br/>
+/// ABSTRACT Class: UIDataProvider<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217887)
 /// </summary>
 public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     }
 
     internal UIDataProvider() { }
-
-    /// <summary>
-    /// Constructs a new UIDataProvider
-    /// </summary>
-    public UIDataProvider(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIDataProvider Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

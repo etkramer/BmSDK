@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MorphNodeWeightBase<br/>
+/// ABSTRACT Class: MorphNodeWeightBase<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 142606483)
 /// </summary>
 public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGa
     }
 
     internal MorphNodeWeightBase() { }
-
-    /// <summary>
-    /// Constructs a new MorphNodeWeightBase
-    /// </summary>
-    public MorphNodeWeightBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MorphNodeWeightBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

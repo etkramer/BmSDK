@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PlaceMineVent<br/>
 /// (size = 956)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PlaceMineVent : BmSDK.BmGame.RBMAIAction_MoveAndTransition, BmSDK.IGameObject
 {

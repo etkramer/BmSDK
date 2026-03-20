@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Attack_FilmA1Tut<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Attack_FilmA1Tut : BmSDK.BmGame.RAEC_Attack_Base, BmSDK.IGameObject
 {

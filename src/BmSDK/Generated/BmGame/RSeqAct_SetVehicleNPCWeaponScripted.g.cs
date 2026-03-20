@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetVehicleNPCWeaponScripted<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetVehicleNPCWeaponScripted : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

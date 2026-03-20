@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleMine<br/>
 /// (size = 864)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RVehicleMine : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
 {

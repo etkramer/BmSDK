@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_LineLauncherRescueFinish<br/>
 /// (size = 472)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_LineLauncherRescueFinish : BmSDK.BmGame.RSpecialMoveConfig_RelativeAnimMove, BmSDK.IGameObject
 {

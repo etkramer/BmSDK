@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ActivateRemoteEvent<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_ActivateRemoteEvent : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

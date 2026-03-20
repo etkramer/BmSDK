@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RLedgeSetup<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RLedgeSetup : BmSDK.GameObject, BmSDK.IGameObject
 {

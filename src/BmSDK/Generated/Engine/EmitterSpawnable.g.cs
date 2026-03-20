@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: EmitterSpawnable<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class EmitterSpawnable : BmSDK.Engine.Emitter, BmSDK.IGameObject
 {

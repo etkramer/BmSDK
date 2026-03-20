@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSaveGameManager<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
 {

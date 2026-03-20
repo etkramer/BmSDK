@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: OnlineImageDownloaderWeb<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObject
 {

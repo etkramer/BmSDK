@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHUDPrompt<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RHUDPrompt : BmSDK.GameObject, BmSDK.IGameObject
 {

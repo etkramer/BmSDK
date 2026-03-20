@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: InternetLink<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 144703642)
 /// </summary>
 public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileSonar<br/>
 /// (size = 3084)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class RBatmobileSonar : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

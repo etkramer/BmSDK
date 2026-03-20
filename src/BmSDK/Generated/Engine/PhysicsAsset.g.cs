@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PhysicsAsset<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 136315026)
 /// </summary>
 public partial class PhysicsAsset : BmSDK.GameObject, BmSDK.IGameObject
 {

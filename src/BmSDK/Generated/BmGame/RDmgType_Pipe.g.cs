@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_Pipe<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_Pipe : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject
 {

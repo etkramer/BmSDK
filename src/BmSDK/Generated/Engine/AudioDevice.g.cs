@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AudioDevice<br/>
 /// (size = 428)
-/// (flags = 0)
+/// (flags = 142606494)
 /// </summary>
 public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
 {

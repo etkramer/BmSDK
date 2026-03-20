@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanFloorTakedown<br/>
 /// (size = 968)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_BatmanFloorTakedown : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {

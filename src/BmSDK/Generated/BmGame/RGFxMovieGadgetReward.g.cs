@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieGadgetReward<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieGadgetReward : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {

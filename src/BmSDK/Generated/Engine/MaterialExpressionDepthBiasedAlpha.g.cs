@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionDepthBiasedAlpha<br/>
 /// (size = 284)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionDepthBiasedAlpha : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

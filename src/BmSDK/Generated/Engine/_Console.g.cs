@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: _Console<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
 {

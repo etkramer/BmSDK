@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_SniperSearch<br/>
 /// (size = 1012)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_SniperSearch : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

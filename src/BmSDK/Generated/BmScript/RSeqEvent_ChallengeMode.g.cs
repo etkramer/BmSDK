@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqEvent_ChallengeMode<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_ChallengeMode : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

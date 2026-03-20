@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Path_WithinDistanceEnvelope<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class Path_WithinDistanceEnvelope : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
 {

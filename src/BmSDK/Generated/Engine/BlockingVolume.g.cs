@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: BlockingVolume<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class BlockingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

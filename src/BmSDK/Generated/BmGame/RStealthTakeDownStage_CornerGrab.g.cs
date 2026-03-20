@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_CornerGrab<br/>
 /// (size = 1673)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_CornerGrab : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

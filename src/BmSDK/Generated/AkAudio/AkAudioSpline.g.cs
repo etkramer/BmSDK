@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkAudioSpline<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkAudioSpline : BmSDK.Engine.SplineActor, BmSDK.IGameObject
 {

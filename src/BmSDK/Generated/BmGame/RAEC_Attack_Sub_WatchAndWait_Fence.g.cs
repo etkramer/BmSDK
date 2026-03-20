@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Attack_Sub_WatchAndWait_Fence<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Attack_Sub_WatchAndWait_Fence : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

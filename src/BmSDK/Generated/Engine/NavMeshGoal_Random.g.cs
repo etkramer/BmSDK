@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshGoal_Random<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshGoal_Random : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
 {

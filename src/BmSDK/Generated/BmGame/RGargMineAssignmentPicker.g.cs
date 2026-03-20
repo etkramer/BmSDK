@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGargMineAssignmentPicker<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 8388626)
 /// </summary>
 public partial class RGargMineAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPicker, BmSDK.IGameObject
 {

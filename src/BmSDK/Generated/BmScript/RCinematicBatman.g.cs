@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCinematicBatman<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RCinematicBatman : BmSDK.BmGame.RCinematicBatmanBase, BmSDK.IGameObject
 {

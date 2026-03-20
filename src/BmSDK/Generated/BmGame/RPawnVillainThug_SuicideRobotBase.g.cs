@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnVillainThug_SuicideRobotBase<br/>
+/// ABSTRACT Class: RPawnVillainThug_SuicideRobotBase<br/>
 /// (size = 6676)
-/// (flags = 0)
+/// (flags = 10485815)
 /// </summary>
 public partial class RPawnVillainThug_SuicideRobotBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnVillainThug_SuicideRobotBase : BmSDK.BmGame.RPawnVilla
     }
 
     internal RPawnVillainThug_SuicideRobotBase() { }
-
-    /// <summary>
-    /// Constructs a new RPawnVillainThug_SuicideRobotBase
-    /// </summary>
-    public RPawnVillainThug_SuicideRobotBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainThug_SuicideRobotBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

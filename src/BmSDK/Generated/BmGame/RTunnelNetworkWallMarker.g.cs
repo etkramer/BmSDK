@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTunnelNetworkWallMarker<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RTunnelNetworkWallMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

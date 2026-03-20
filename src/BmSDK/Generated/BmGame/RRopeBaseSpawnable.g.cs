@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRopeBaseSpawnable<br/>
 /// (size = 732)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRopeBaseSpawnable : BmSDK.BmGame.RRopeBase, BmSDK.IGameObject
 {

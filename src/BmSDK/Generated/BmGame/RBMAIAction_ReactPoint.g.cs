@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_ReactPoint<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_ReactPoint : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

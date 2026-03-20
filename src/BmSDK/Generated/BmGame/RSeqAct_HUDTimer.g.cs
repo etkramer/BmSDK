@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_HUDTimer<br/>
 /// (size = 456)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_HUDTimer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

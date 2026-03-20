@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGameInfoBase<br/>
 /// (size = 1912)
-/// (flags = 0)
+/// (flags = 144703670)
 /// </summary>
 public partial class RGameInfoBase : BmSDK.Engine.GameInfo, BmSDK.IGameObject
 {

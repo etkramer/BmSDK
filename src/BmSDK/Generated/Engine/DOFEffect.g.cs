@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DOFEffect<br/>
+/// ABSTRACT Class: DOFEffect<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObje
     }
 
     internal DOFEffect() { }
-
-    /// <summary>
-    /// Constructs a new DOFEffect
-    /// </summary>
-    public DOFEffect(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DOFEffect Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

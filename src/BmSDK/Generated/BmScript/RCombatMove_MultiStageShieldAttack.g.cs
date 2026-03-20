@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCombatMove_MultiStageShieldAttack<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_MultiStageShieldAttack : BmSDK.BmGame.RCombatMove_VillainShieldAttack, BmSDK.IGameObject
 {

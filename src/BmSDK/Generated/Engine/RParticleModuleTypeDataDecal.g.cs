@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RParticleModuleTypeDataDecal<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class RParticleModuleTypeDataDecal : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {

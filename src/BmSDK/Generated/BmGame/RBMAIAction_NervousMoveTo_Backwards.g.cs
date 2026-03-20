@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_NervousMoveTo_Backwards<br/>
 /// (size = 916)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_NervousMoveTo_Backwards : BmSDK.BmGame.RBMAIAction_NervousMoveTo, BmSDK.IGameObject
 {

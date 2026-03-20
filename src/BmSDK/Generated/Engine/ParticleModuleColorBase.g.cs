@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleColorBase<br/>
+/// ABSTRACT Class: ParticleModuleColorBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleColorBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleColorBase : BmSDK.Engine.ParticleModule, BmSD
     }
 
     internal ParticleModuleColorBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleColorBase
-    /// </summary>
-    public ParticleModuleColorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleColorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

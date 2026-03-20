@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleSpawnPerUnit<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleSpawnPerUnit : BmSDK.Engine.ParticleModuleSpawnBase, BmSDK.IGameObject
 {

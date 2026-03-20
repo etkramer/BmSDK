@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqVar_NamedPawn<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqVar_NamedPawn : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
 {

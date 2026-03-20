@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: InterpTrackLinearColorBase<br/>
+/// ABSTRACT Class: InterpTrackLinearColorBase<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class InterpTrackLinearColorBase : BmSDK.Engine.InterpTrack, BmSD
     }
 
     internal InterpTrackLinearColorBase() { }
-
-    /// <summary>
-    /// Constructs a new InterpTrackLinearColorBase
-    /// </summary>
-    public InterpTrackLinearColorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, InterpTrackLinearColorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

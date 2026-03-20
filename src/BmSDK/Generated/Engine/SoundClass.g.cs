@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SoundClass<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SoundClass : BmSDK.GameObject, BmSDK.IGameObject
 {

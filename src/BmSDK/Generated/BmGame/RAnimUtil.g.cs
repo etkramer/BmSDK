@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimUtil<br/>
+/// ABSTRACT Class: RAnimUtil<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimUtil : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal RAnimUtil() { }
-
-    /// <summary>
-    /// Constructs a new RAnimUtil
-    /// </summary>
-    public RAnimUtil(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimUtil Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

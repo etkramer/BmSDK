@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimUtil_PosePlayer<br/>
+/// ABSTRACT Class: RAnimUtil_PosePlayer<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimUtil_PosePlayer : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal RAnimUtil_PosePlayer() { }
-
-    /// <summary>
-    /// Constructs a new RAnimUtil_PosePlayer
-    /// </summary>
-    public RAnimUtil_PosePlayer(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimUtil_PosePlayer Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

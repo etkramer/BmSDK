@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Selection<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class Selection : BmSDK.GameObject, BmSDK.IGameObject
 {

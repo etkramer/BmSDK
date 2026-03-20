@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDestructibleProp_FractureWall<br/>
 /// (size = 1916)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDestructibleProp_FractureWall : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject
 {

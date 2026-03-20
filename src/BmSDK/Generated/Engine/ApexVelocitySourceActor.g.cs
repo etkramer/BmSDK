@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexVelocitySourceActor<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ApexVelocitySourceActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject
 {

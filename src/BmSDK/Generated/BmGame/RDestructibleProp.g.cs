@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDestructibleProp<br/>
 /// (size = 1724)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDestructibleProp : BmSDK.Engine.ApexDestructibleActor, BmSDK.IGameObject
 {

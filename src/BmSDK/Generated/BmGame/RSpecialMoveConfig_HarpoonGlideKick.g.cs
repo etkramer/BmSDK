@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_HarpoonGlideKick<br/>
 /// (size = 644)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_HarpoonGlideKick : BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug, BmSDK.IGameObject
 {

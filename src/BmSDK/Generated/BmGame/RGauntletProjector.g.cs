@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGauntletProjector<br/>
 /// (size = 432)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RGauntletProjector : BmSDK.GameObject, BmSDK.IGameObject
 {

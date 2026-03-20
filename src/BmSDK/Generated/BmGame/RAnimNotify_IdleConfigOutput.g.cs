@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_IdleConfigOutput<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_IdleConfigOutput : BmSDK.Engine.AnimNotify_Script, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UIResourceDataProvider<br/>
+/// ABSTRACT Class: UIResourceDataProvider<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 31)
 /// </summary>
 public partial class UIResourceDataProvider : BmSDK.Engine.UIPropertyDataProvider, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UIResourceDataProvider : BmSDK.Engine.UIPropertyDataProvide
     }
 
     internal UIResourceDataProvider() { }
-
-    /// <summary>
-    /// Constructs a new UIResourceDataProvider
-    /// </summary>
-    public UIResourceDataProvider(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIResourceDataProvider Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

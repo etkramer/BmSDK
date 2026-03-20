@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryPylon<br/>
 /// (size = 144)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryPylon : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

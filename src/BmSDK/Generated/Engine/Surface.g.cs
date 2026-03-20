@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Surface<br/>
+/// ABSTRACT Class: Surface<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class Surface : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Surface : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Surface() { }
-
-    /// <summary>
-    /// Constructs a new Surface
-    /// </summary>
-    public Surface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Surface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

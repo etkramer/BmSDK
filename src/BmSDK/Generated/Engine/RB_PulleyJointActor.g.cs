@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_PulleyJointActor<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RB_PulleyJointActor : BmSDK.Engine.RB_ConstraintActor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PrefabSequenceContainer<br/>
 /// (size = 528)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class PrefabSequenceContainer : BmSDK.Engine.Sequence, BmSDK.IGameObject
 {

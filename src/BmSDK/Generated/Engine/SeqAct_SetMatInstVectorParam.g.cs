@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_SetMatInstVectorParam<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_SetMatInstVectorParam : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

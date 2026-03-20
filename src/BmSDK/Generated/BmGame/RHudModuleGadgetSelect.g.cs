@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleGadgetSelect<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleGadgetSelect : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

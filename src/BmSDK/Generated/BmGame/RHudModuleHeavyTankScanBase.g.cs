@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleHeavyTankScanBase<br/>
 /// (size = 240)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleHeavyTankScanBase : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAIBrain_RedHood<br/>
 /// (size = 504)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RAIBrain_RedHood : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGameObject
 {

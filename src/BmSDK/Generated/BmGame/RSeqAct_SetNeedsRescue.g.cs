@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetNeedsRescue<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SetNeedsRescue : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: LevelBase<br/>
+/// ABSTRACT Class: LevelBase<br/>
 /// (size = 196)
-/// (flags = 0)
+/// (flags = 268435585)
 /// </summary>
 public partial class LevelBase : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class LevelBase : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal LevelBase() { }
-
-    /// <summary>
-    /// Constructs a new LevelBase
-    /// </summary>
-    public LevelBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, LevelBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

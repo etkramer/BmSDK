@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ActorFactoryRigidBody<br/>
+/// ABSTRACT Class: ActorFactoryRigidBody<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 142618775)
 /// </summary>
 public partial class ActorFactoryRigidBody : BmSDK.Engine.ActorFactoryDynamicSM, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ActorFactoryRigidBody : BmSDK.Engine.ActorFactoryDynamicSM,
     }
 
     internal ActorFactoryRigidBody() { }
-
-    /// <summary>
-    /// Constructs a new ActorFactoryRigidBody
-    /// </summary>
-    public ActorFactoryRigidBody(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ActorFactoryRigidBody Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

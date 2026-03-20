@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DebugCameraInput<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 30)
 /// </summary>
 public partial class DebugCameraInput : BmSDK.Engine.PlayerInput, BmSDK.IGameObject
 {

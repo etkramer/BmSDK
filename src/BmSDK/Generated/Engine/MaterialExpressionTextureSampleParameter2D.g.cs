@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionTextureSampleParameter2D<br/>
 /// (size = 316)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameter2D : BmSDK.Engine.MaterialExpressionTextureSampleParameter, BmSDK.IGameObject
 {

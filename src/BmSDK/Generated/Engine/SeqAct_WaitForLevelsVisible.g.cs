@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_WaitForLevelsVisible<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_WaitForLevelsVisible : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

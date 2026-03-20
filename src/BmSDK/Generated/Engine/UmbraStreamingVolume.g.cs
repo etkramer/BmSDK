@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UmbraStreamingVolume<br/>
+/// ABSTRACT Class: UmbraStreamingVolume<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class UmbraStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UmbraStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     }
 
     internal UmbraStreamingVolume() { }
-
-    /// <summary>
-    /// Constructs a new UmbraStreamingVolume
-    /// </summary>
-    public UmbraStreamingVolume(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UmbraStreamingVolume Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

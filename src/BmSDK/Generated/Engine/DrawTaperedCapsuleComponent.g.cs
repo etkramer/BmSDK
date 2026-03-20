@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DrawTaperedCapsuleComponent<br/>
 /// (size = 568)
-/// (flags = 0)
+/// (flags = 2155885010)
 /// </summary>
 public partial class DrawTaperedCapsuleComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

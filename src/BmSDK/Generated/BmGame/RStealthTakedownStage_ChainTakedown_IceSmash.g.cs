@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_IceSmash<br/>
 /// (size = 1844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_IceSmash : BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_Base, BmSDK.IGameObject
 {

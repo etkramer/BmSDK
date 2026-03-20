@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_PlayNPCDialogue<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqAct_PlayNPCDialogue : BmSDK.BmGame.RSeqAct_PlaySpeechBase, BmSDK.IGameObject
 {

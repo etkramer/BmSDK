@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TextureFlipBook<br/>
 /// (size = 568)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class TextureFlipBook : BmSDK.Engine.Texture2D, BmSDK.IGameObject
 {

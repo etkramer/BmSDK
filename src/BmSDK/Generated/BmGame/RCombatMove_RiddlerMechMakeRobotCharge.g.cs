@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_RiddlerMechMakeRobotCharge<br/>
 /// (size = 804)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RCombatMove_RiddlerMechMakeRobotCharge : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject
 {

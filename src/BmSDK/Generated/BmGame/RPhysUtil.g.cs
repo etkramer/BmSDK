@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPhysUtil<br/>
+/// ABSTRACT Class: RPhysUtil<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPhysUtil : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal RPhysUtil() { }
-
-    /// <summary>
-    /// Constructs a new RPhysUtil
-    /// </summary>
-    public RPhysUtil(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPhysUtil Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

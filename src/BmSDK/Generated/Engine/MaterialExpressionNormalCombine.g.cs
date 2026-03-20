@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionNormalCombine<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionNormalCombine : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

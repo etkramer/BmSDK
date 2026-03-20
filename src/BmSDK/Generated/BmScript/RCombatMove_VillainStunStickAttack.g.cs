@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCombatMove_VillainStunStickAttack<br/>
 /// (size = 856)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_VillainStunStickAttack : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject
 {

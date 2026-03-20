@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RLadder<br/>
+/// ABSTRACT Class: RLadder<br/>
 /// (size = 868)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RLadder : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK
     }
 
     internal RLadder() { }
-
-    /// <summary>
-    /// Constructs a new RLadder
-    /// </summary>
-    public RLadder(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RLadder Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

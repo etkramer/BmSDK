@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTransitionFromRunConfig<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RTransitionFromRunConfig : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_CityRunAwayBase<br/>
 /// (size = 1008)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CityRunAwayBase : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject
 {

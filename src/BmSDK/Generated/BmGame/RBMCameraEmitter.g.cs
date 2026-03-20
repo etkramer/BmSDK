@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMCameraEmitter<br/>
+/// ABSTRACT Class: RBMCameraEmitter<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RBMCameraEmitter : BmSDK.Engine.REmitter, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCameraEmitter : BmSDK.Engine.REmitter, BmSDK.IGameObject
     }
 
     internal RBMCameraEmitter() { }
-
-    /// <summary>
-    /// Constructs a new RBMCameraEmitter
-    /// </summary>
-    public RBMCameraEmitter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCameraEmitter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_Ocean<br/>
 /// (size = 484)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_Ocean : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

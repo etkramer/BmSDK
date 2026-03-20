@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionSphericalMapping<br/>
 /// (size = 173)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionSphericalMapping : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_JokerRooftopController<br/>
 /// (size = 652)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_JokerRooftopController : BmSDK.BmGame.RSeqAct_JokerRooftopControllerBase, BmSDK.IGameObject
 {

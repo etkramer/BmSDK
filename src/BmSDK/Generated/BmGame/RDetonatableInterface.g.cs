@@ -4,76 +4,29 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RDetonatableInterface<br/>
+/// Interface: RDetonatableInterface<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 16403)
 /// </summary>
-public partial class RDetonatableInterface : BmSDK.Interface, BmSDK.IGameObject
+public partial interface RDetonatableInterface : BmSDK.Interface
 {
-    static BmSDK.Class s_staticClass = null;
-    public static BmSDK.Class StaticClass()
-    {
-        if (s_staticClass is null)
-        {
-            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RDetonatableInterface", false);
-            s_staticClass.AddToRoot();
-        }
-        return s_staticClass;
-    }
-
-    internal RDetonatableInterface() { }
-
-    /// <summary>
-    /// Constructs a new RDetonatableInterface
-    /// </summary>
-    public RDetonatableInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDetonatableInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
-
-    /// <summary>
-    /// Constructs a new wrapper instance from the given object pointer.
-    /// </summary>
-    protected RDetonatableInterface(nint ptr) : base(ptr) { }
-
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDetonatableInterface.Detonate", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void Detonate();
 
     /// <summary>
     /// Function: GetDetonatePrompt
     /// </summary>
-    public unsafe BmSDK.FString GetDetonatePrompt()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDetonatableInterface.GetDetonatePrompt", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.FString GetDetonatePrompt();
 
     /// <summary>
     /// Function: PlayDetonateAnim
     /// </summary>
-    public unsafe bool PlayDetonateAnim()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDetonatableInterface.PlayDetonateAnim", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool PlayDetonateAnim();
 
     /// <summary>
     /// Function: ReadyToDetonate
     /// </summary>
-    public unsafe bool ReadyToDetonate()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDetonatableInterface.ReadyToDetonate", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool ReadyToDetonate();
 }

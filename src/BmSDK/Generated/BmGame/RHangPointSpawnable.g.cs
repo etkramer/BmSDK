@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHangPointSpawnable<br/>
 /// (size = 1300)
-/// (flags = 0)
+/// (flags = 2157969938)
 /// </summary>
 public partial class RHangPointSpawnable : BmSDK.BmGame.RHangAttackHook, BmSDK.IGameObject
 {

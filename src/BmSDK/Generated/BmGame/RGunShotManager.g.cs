@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGunShotManager<br/>
 /// (size = 1064)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

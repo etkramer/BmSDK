@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqCond_Increment<br/>
 /// (size = 336)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqCond_Increment : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

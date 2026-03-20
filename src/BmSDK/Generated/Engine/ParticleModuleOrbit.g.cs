@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleOrbit<br/>
 /// (size = 308)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleOrbit : BmSDK.Engine.ParticleModuleOrbitBase, BmSDK.IGameObject
 {

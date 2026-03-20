@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DisableCombatBarksOnCurrentThugs<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DisableCombatBarksOnCurrentThugs : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

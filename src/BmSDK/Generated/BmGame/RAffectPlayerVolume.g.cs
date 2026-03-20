@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAffectPlayerVolume<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RAffectPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

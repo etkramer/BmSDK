@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDummyTarget_Dialogue<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDummyTarget_Dialogue : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

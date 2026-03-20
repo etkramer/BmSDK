@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MBMAIAction_JackInBoxAttraction_Stage2<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MBMAIAction_JackInBoxAttraction_Stage2 : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

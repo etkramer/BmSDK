@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ApplyForceToUnfixedBones<br/>
 /// (size = 416)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ApplyForceToUnfixedBones : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

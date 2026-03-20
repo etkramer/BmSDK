@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DecalActorBase<br/>
+/// ABSTRACT Class: DecalActorBase<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DecalActorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal DecalActorBase() { }
-
-    /// <summary>
-    /// Constructs a new DecalActorBase
-    /// </summary>
-    public DecalActorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DecalActorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

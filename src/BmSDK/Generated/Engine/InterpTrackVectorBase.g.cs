@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: InterpTrackVectorBase<br/>
+/// ABSTRACT Class: InterpTrackVectorBase<br/>
 /// (size = 304)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class InterpTrackVectorBase : BmSDK.Engine.InterpTrack, BmSDK.IGa
     }
 
     internal InterpTrackVectorBase() { }
-
-    /// <summary>
-    /// Constructs a new InterpTrackVectorBase
-    /// </summary>
-    public InterpTrackVectorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, InterpTrackVectorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_GrabOnFloor<br/>
 /// (size = 1689)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RStealthTakeDownStage_GrabOnFloor : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

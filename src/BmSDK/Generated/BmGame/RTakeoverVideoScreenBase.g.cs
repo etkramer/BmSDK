@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTakeoverVideoScreenBase<br/>
+/// ABSTRACT Class: RTakeoverVideoScreenBase<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTakeoverVideoScreenBase : BmSDK.Engine.StaticMeshActor, Bm
     }
 
     internal RTakeoverVideoScreenBase() { }
-
-    /// <summary>
-    /// Constructs a new RTakeoverVideoScreenBase
-    /// </summary>
-    public RTakeoverVideoScreenBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTakeoverVideoScreenBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqEvent_TouchInput<br/>
+/// ABSTRACT Class: SeqEvent_TouchInput<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SeqEvent_TouchInput : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqEvent_TouchInput : BmSDK.Engine.SequenceEvent, BmSDK.IGa
     }
 
     internal SeqEvent_TouchInput() { }
-
-    /// <summary>
-    /// Constructs a new SeqEvent_TouchInput
-    /// </summary>
-    public SeqEvent_TouchInput(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqEvent_TouchInput Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

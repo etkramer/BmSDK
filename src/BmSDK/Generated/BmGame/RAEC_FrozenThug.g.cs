@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_FrozenThug<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_FrozenThug : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

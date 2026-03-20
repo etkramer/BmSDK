@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Attack_Sub_ChaseAvoidLadder<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Attack_Sub_ChaseAvoidLadder : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJobAssignment_Minelayer<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RJobAssignment_Minelayer : BmSDK.BmGame.RJobAssignment, BmSDK.IGameObject
 {

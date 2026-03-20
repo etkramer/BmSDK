@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDEntityFactConversation<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class AkSDEntityFactConversation : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject
 {

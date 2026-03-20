@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkCurve<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RGangInteractChineseStandGlass<br/>
 /// (size = 1348)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RGangInteractChineseStandGlass : BmSDK.BmGame.RGangInteractPointBreakableBase, BmSDK.IGameObject
 {

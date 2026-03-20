@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PatrolWalk<br/>
 /// (size = 928)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PatrolWalk : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {

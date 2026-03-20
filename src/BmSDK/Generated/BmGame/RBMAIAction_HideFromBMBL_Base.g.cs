@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_HideFromBMBL_Base<br/>
+/// ABSTRACT Class: RBMAIAction_HideFromBMBL_Base<br/>
 /// (size = 896)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_HideFromBMBL_Base : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_HideFromBMBL_Base : BmSDK.BmGame.RBMAIAction, B
     }
 
     internal RBMAIAction_HideFromBMBL_Base() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_HideFromBMBL_Base
-    /// </summary>
-    public RBMAIAction_HideFromBMBL_Base(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_HideFromBMBL_Base Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

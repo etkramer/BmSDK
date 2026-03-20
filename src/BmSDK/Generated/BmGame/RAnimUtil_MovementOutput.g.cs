@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimUtil_MovementOutput<br/>
+/// ABSTRACT Class: RAnimUtil_MovementOutput<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimUtil_MovementOutput : BmSDK.GameObject, BmSDK.IGameObj
     }
 
     internal RAnimUtil_MovementOutput() { }
-
-    /// <summary>
-    /// Constructs a new RAnimUtil_MovementOutput
-    /// </summary>
-    public RAnimUtil_MovementOutput(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimUtil_MovementOutput Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

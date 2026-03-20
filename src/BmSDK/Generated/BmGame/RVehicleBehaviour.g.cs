@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVehicleBehaviour<br/>
+/// ABSTRACT Class: RVehicleBehaviour<br/>
 /// (size = 608)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class RVehicleBehaviour : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVehicleBehaviour : BmSDK.Engine.SequenceAction, BmSDK.IGam
     }
 
     internal RVehicleBehaviour() { }
-
-    /// <summary>
-    /// Constructs a new RVehicleBehaviour
-    /// </summary>
-    public RVehicleBehaviour(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicleBehaviour Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMCombatThrownObject<br/>
+/// ABSTRACT Class: RBMCombatThrownObject<br/>
 /// (size = 1184)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatThrownObject : BmSDK.Engine.KAsset, BmSDK.IGameObj
     }
 
     internal RBMCombatThrownObject() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatThrownObject
-    /// </summary>
-    public RBMCombatThrownObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

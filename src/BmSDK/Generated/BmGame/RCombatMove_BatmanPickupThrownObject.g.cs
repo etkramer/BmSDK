@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanPickupThrownObject<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_BatmanPickupThrownObject : BmSDK.BmGame.RCombatMove_BatmanWeaponAttack, BmSDK.IGameObject
 {

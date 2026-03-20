@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleOrientationBase<br/>
+/// ABSTRACT Class: ParticleModuleOrientationBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleOrientationBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleOrientationBase : BmSDK.Engine.ParticleModule
     }
 
     internal ParticleModuleOrientationBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleOrientationBase
-    /// </summary>
-    public ParticleModuleOrientationBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleOrientationBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

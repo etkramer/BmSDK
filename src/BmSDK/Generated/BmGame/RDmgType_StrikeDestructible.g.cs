@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_StrikeDestructible<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDmgType_StrikeDestructible : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject
 {

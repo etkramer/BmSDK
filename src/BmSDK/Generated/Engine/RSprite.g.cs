@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RSprite<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RSprite : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

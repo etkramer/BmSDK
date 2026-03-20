@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSideStoryManager<br/>
 /// (size = 312)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSideStoryManager : BmSDK.GameObject, BmSDK.IGameObject
 {

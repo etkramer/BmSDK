@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFlagManager<br/>
 /// (size = 188)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
 {

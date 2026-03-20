@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_VillainChargeUpVillain<br/>
 /// (size = 812)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_VillainChargeUpVillain : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAEC_CasualtyBase<br/>
+/// ABSTRACT Class: RAEC_CasualtyBase<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RAEC_CasualtyBase : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAEC_CasualtyBase : BmSDK.BmGame.RAlertEventCoordinatorBase
     }
 
     internal RAEC_CasualtyBase() { }
-
-    /// <summary>
-    /// Constructs a new RAEC_CasualtyBase
-    /// </summary>
-    public RAEC_CasualtyBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_CasualtyBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

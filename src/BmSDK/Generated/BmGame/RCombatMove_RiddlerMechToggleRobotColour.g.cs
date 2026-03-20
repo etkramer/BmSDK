@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_RiddlerMechToggleRobotColour<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_RiddlerMechToggleRobotColour : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

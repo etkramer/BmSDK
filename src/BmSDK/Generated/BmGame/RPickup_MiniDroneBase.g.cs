@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPickup_MiniDroneBase<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RPickup_MiniDroneBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

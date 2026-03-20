@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexForceFieldRadialComponent<br/>
 /// (size = 617)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class ApexForceFieldRadialComponent : BmSDK.Engine.ApexForceFieldComponent, BmSDK.IGameObject
 {

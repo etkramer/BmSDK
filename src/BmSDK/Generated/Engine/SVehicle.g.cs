@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SVehicle<br/>
+/// ABSTRACT Class: SVehicle<br/>
 /// (size = 2072)
-/// (flags = 0)
+/// (flags = 144706231)
 /// </summary>
 public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SVehicle : BmSDK.Engine.Vehicle, BmSDK.IGameObject
     }
 
     internal SVehicle() { }
-
-    /// <summary>
-    /// Constructs a new SVehicle
-    /// </summary>
-    public SVehicle(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SVehicle Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

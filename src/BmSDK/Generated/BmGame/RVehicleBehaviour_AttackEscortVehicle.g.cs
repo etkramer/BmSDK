@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_AttackEscortVehicle<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 2109458)
 /// </summary>
 public partial class RVehicleBehaviour_AttackEscortVehicle : BmSDK.BmGame.RVehicleBehaviour_EscortVehicle, BmSDK.IGameObject
 {

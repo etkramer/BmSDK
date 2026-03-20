@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryArchetype<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryArchetype : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

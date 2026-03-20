@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetMaxCombatPawns<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetMaxCombatPawns : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

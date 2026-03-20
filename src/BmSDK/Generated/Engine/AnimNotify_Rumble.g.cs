@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimNotify_Rumble<br/>
+/// ABSTRACT Class: AnimNotify_Rumble<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class AnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimNotify_Rumble : BmSDK.Engine.AnimNotify, BmSDK.IGameObj
     }
 
     internal AnimNotify_Rumble() { }
-
-    /// <summary>
-    /// Constructs a new AnimNotify_Rumble
-    /// </summary>
-    public AnimNotify_Rumble(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimNotify_Rumble Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

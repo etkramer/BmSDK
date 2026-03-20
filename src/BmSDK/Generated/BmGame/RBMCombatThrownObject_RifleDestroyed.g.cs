@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCombatThrownObject_RifleDestroyed<br/>
 /// (size = 1196)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBMCombatThrownObject_RifleDestroyed : BmSDK.BmGame.RBMCombatThrownObject_GunDestroyed, BmSDK.IGameObject
 {

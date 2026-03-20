@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialogueResetDucking<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialogueResetDucking : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

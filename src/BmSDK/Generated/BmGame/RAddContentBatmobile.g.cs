@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAddContentBatmobile<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAddContentBatmobile : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
 {

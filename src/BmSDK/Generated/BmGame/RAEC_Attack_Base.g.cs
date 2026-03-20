@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAEC_Attack_Base<br/>
+/// ABSTRACT Class: RAEC_Attack_Base<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAEC_Attack_Base : BmSDK.BmGame.RAlertEventCoordinatorBase,
     }
 
     internal RAEC_Attack_Base() { }
-
-    /// <summary>
-    /// Constructs a new RAEC_Attack_Base
-    /// </summary>
-    public RAEC_Attack_Base(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Attack_Base Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

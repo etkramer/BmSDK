@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_ConstraintSetup<br/>
 /// (size = 300)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RB_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
 {

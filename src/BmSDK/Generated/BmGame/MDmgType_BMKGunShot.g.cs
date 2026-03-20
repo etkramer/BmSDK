@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MDmgType_BMKGunShot<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MDmgType_BMKGunShot : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCombatMove_MultiStageRepel<br/>
 /// (size = 812)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_MultiStageRepel : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

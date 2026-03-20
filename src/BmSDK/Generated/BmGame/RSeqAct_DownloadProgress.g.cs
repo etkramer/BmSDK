@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DownloadProgress<br/>
 /// (size = 424)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DownloadProgress : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

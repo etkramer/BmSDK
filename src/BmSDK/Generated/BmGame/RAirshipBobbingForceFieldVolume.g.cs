@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAirshipBobbingForceFieldVolume<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RAirshipBobbingForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmSDK.IGameObject
 {

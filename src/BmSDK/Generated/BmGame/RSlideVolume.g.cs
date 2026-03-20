@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSlideVolume<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RSlideVolume : BmSDK.BmGame.REvadeOverrideVolume, BmSDK.IGameObject
 {

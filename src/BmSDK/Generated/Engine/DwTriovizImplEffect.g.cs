@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DwTriovizImplEffect<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class DwTriovizImplEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {

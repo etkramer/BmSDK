@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LadderVolume<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class LadderVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
 {

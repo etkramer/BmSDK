@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_DetectiveModeDetector<br/>
 /// (size = 893)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_DetectiveModeDetector : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

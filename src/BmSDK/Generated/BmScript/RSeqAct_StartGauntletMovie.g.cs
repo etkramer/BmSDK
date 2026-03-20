@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_StartGauntletMovie<br/>
 /// (size = 401)
-/// (flags = 0)
+/// (flags = 2105362)
 /// </summary>
 public partial class RSeqAct_StartGauntletMovie : BmSDK.BmGame.RSeqAct_StartGauntletMovieBase, BmSDK.IGameObject
 {

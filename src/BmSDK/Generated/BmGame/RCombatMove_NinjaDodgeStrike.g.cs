@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_NinjaDodgeStrike<br/>
 /// (size = 817)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_NinjaDodgeStrike : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

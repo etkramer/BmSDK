@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDebugCameraHUD<br/>
 /// (size = 1468)
-/// (flags = 0)
+/// (flags = 10485790)
 /// </summary>
 public partial class RDebugCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject
 {

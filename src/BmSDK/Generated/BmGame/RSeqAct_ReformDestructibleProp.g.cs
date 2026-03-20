@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ReformDestructibleProp<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ReformDestructibleProp : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_ShootGen<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_ShootGen : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

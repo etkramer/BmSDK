@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAltitudeVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RAltitudeVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

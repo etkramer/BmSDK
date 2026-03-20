@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDummyTarget_LookAt<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDummyTarget_LookAt : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

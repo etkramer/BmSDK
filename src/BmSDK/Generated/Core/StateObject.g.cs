@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: StateObject<br/>
+/// ABSTRACT Class: StateObject<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class StateObject : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal StateObject() { }
-
-    /// <summary>
-    /// Constructs a new StateObject
-    /// </summary>
-    public StateObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, StateObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

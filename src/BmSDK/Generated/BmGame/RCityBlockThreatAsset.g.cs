@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCityBlockThreatAsset<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RCityBlockThreatAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

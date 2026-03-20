@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RHidePoint_LineLauncherWire<br/>
 /// (size = 1392)
-/// (flags = 0)
+/// (flags = 2157969426)
 /// </summary>
 public partial class RHidePoint_LineLauncherWire : BmSDK.BmGame.RHidePoint_RopeBase, BmSDK.IGameObject
 {

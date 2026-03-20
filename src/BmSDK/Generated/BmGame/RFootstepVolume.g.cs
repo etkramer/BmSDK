@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFootstepVolume<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RFootstepVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DmgType_Fell<br/>
+/// ABSTRACT Class: DmgType_Fell<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class DmgType_Fell : BmSDK.Engine.DamageType, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DmgType_Fell : BmSDK.Engine.DamageType, BmSDK.IGameObject
     }
 
     internal DmgType_Fell() { }
-
-    /// <summary>
-    /// Constructs a new DmgType_Fell
-    /// </summary>
-    public DmgType_Fell(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DmgType_Fell Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

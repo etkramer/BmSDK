@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UIDataStore_OnlineStats<br/>
+/// ABSTRACT Class: UIDataStore_OnlineStats<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 31)
 /// </summary>
 public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UIDataStore_OnlineStats : BmSDK.Engine.UIDataStore_Remote, 
     }
 
     internal UIDataStore_OnlineStats() { }
-
-    /// <summary>
-    /// Constructs a new UIDataStore_OnlineStats
-    /// </summary>
-    public UIDataStore_OnlineStats(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIDataStore_OnlineStats Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

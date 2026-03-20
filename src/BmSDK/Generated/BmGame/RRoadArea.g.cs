@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRoadArea<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

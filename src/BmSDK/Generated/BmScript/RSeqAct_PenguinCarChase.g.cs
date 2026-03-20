@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_PenguinCarChase<br/>
 /// (size = 584)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class RSeqAct_PenguinCarChase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

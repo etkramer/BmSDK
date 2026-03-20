@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_PickupProp<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_PickupProp : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

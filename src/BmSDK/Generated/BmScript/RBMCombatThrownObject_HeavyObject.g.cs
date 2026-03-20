@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RBMCombatThrownObject_HeavyObject<br/>
+/// ABSTRACT Class: RBMCombatThrownObject_HeavyObject<br/>
 /// (size = 1196)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatThrownObject_HeavyObject : BmSDK.BmGame.RBMCombatT
     }
 
     internal RBMCombatThrownObject_HeavyObject() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatThrownObject_HeavyObject
-    /// </summary>
-    public RBMCombatThrownObject_HeavyObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatThrownObject_HeavyObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

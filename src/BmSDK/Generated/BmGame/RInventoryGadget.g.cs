@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RInventoryGadget<br/>
+/// ABSTRACT Class: RInventoryGadget<br/>
 /// (size = 2068)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RInventoryGadget : BmSDK.Engine.Inventory, BmSDK.IGameObjec
     }
 
     internal RInventoryGadget() { }
-
-    /// <summary>
-    /// Constructs a new RInventoryGadget
-    /// </summary>
-    public RInventoryGadget(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RInventoryGadget Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_GetVectorComponents<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_GetVectorComponents : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

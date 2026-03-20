@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_HitReactionMultiWeaponREC<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class RBMBehaviour_HitReactionMultiWeaponREC : BmSDK.BmGame.RBMBehaviour_HitReaction, BmSDK.IGameObject
 {

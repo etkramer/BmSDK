@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionDesaturation<br/>
 /// (size = 292)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionDesaturation : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

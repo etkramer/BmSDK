@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AttachRopeToActor<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_AttachRopeToActor : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

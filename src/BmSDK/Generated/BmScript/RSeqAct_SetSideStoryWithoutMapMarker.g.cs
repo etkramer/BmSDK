@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_SetSideStoryWithoutMapMarker<br/>
 /// (size = 354)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetSideStoryWithoutMapMarker : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

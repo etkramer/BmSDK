@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_ElectricityRagdollKO<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_ElectricityRagdollKO : BmSDK.BmGame.RDmgType_ElectricityKO, BmSDK.IGameObject
 {

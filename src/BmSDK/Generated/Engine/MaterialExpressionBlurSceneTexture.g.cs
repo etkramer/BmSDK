@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionBlurSceneTexture<br/>
 /// (size = 292)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionBlurSceneTexture : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

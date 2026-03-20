@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionConstantBiasScale<br/>
 /// (size = 232)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionConstantBiasScale : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

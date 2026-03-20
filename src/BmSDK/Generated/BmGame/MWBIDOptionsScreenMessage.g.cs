@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MWBIDOptionsScreenMessage<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MWBIDOptionsScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject
 {

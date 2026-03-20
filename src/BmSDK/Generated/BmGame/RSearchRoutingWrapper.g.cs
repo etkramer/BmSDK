@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSearchRoutingWrapper<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
 {

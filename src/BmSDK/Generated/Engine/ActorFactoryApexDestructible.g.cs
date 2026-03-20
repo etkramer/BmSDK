@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryApexDestructible<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryApexDestructible : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

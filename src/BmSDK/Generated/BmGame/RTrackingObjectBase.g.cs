@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTrackingObjectBase<br/>
+/// ABSTRACT Class: RTrackingObjectBase<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IG
     }
 
     internal RTrackingObjectBase() { }
-
-    /// <summary>
-    /// Constructs a new RTrackingObjectBase
-    /// </summary>
-    public RTrackingObjectBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTrackingObjectBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

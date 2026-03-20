@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBreakableVentLightBase<br/>
+/// ABSTRACT Class: RBreakableVentLightBase<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RBreakableVentLightBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBreakableVentLightBase : BmSDK.Engine.StaticMeshActor, BmS
     }
 
     internal RBreakableVentLightBase() { }
-
-    /// <summary>
-    /// Constructs a new RBreakableVentLightBase
-    /// </summary>
-    public RBreakableVentLightBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBreakableVentLightBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

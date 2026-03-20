@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RThugTrap<br/>
+/// ABSTRACT Class: RThugTrap<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RThugTrap : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RThugTrap() { }
-
-    /// <summary>
-    /// Constructs a new RThugTrap
-    /// </summary>
-    public RThugTrap(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RThugTrap Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

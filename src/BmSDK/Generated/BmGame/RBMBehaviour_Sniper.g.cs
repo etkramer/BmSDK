@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_Sniper<br/>
 /// (size = 929)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_Sniper : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

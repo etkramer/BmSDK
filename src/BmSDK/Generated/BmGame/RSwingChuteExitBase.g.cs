@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSwingChuteExitBase<br/>
 /// (size = 716)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSwingChuteExitBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

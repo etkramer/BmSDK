@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RNinjaSpawnPointBase<br/>
+/// ABSTRACT Class: RNinjaSpawnPointBase<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RNinjaSpawnPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RNinjaSpawnPointBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     }
 
     internal RNinjaSpawnPointBase() { }
-
-    /// <summary>
-    /// Constructs a new RNinjaSpawnPointBase
-    /// </summary>
-    public RNinjaSpawnPointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RNinjaSpawnPointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

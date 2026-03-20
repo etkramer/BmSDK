@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_VillainReviveCasualty<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_VillainReviveCasualty : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

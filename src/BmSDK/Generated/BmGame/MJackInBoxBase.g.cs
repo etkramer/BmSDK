@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MJackInBoxBase<br/>
+/// ABSTRACT Class: MJackInBoxBase<br/>
 /// (size = 2172)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     }
 
     internal MJackInBoxBase() { }
-
-    /// <summary>
-    /// Constructs a new MJackInBoxBase
-    /// </summary>
-    public MJackInBoxBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MJackInBoxBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

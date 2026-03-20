@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SVehicleSimBase<br/>
 /// (size = 196)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SVehicleSimBase : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

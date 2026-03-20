@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Pawn<br/>
+/// ABSTRACT Class: Pawn<br/>
 /// (size = 1480)
-/// (flags = 0)
+/// (flags = 144706231)
 /// </summary>
 public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal Pawn() { }
-
-    /// <summary>
-    /// Constructs a new Pawn
-    /// </summary>
-    public Pawn(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Pawn Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
@@ -3916,14 +3911,14 @@ public partial class Pawn : BmSDK.Engine.Actor, BmSDK.IGameObject
         set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 536870912) : (currentMask & ~536870912); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
     }
 
-    /// <summary>
-    /// BoolProperty: bRootMotionOverridesFallingXY
-    /// </summary>
-    public unsafe bool bRootMotionOverridesFallingXY
-    {
-        get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 1073741824) != 0; }
-        set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
-    }
+    // /// <summary>
+    // /// BoolProperty: bRootMotionOverridesFallingXY
+    // /// </summary>
+    // public unsafe bool bRootMotionOverridesFallingXY
+    // {
+    //     get { return (BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936) & 1073741824) != 0; }
+    //     set { var currentMask = BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 936); var newMask = value ? (currentMask | 1073741824) : (currentMask & ~1073741824); BmSDK.Framework.MarshalUtil.ToUnmanaged<int>(newMask, Ptr + 936); }
+    // }
 
     /// <summary>
     /// BoolProperty: bCanMantle

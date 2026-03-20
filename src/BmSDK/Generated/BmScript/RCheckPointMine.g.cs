@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCheckPointMine<br/>
 /// (size = 900)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RCheckPointMine : BmSDK.BmGame.RCheckPointMineBase, BmSDK.IGameObject
 {

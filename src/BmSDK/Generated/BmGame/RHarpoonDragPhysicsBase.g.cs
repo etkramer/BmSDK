@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHarpoonDragPhysicsBase<br/>
 /// (size = 1184)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RHarpoonDragPhysicsBase : BmSDK.BmGame.RSmashableProp, BmSDK.IGameObject
 {

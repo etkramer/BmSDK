@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MCombatMove_RedhoodCounterBlackMask<br/>
 /// (size = 1304)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class MCombatMove_RedhoodCounterBlackMask : BmSDK.BmGame.RCombatMove_BatmanCounter, BmSDK.IGameObject
 {

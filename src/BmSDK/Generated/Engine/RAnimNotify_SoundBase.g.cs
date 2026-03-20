@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RAnimNotify_SoundBase<br/>
+/// ABSTRACT Class: RAnimNotify_SoundBase<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class RAnimNotify_SoundBase : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimNotify_SoundBase : BmSDK.Engine.AnimNotify, BmSDK.IGam
     }
 
     internal RAnimNotify_SoundBase() { }
-
-    /// <summary>
-    /// Constructs a new RAnimNotify_SoundBase
-    /// </summary>
-    public RAnimNotify_SoundBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimNotify_SoundBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

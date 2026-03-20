@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_HeavyTankTracker<br/>
 /// (size = 408)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_HeavyTankTracker : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

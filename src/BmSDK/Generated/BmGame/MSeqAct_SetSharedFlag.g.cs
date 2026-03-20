@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MSeqAct_SetSharedFlag<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class MSeqAct_SetSharedFlag : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {

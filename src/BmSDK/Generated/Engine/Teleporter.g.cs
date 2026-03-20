@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Teleporter<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class Teleporter : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {

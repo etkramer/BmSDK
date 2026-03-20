@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_AssignController<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_AssignController : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

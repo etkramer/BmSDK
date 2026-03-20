@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionDepthOfFieldFunction<br/>
 /// (size = 228)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionDepthOfFieldFunction : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

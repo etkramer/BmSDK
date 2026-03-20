@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_SetObject<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_SetObject : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {

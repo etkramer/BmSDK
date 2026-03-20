@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_BatmobileForensicsSideStory<br/>
 /// (size = 560)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_BatmobileForensicsSideStory : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

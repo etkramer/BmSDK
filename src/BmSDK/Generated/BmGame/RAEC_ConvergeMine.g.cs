@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_ConvergeMine<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_ConvergeMine : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

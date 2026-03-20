@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleFirefly<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleFirefly : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

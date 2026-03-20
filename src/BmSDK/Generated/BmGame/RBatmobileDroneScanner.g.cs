@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileDroneScanner<br/>
 /// (size = 2432)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileDroneScanner : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

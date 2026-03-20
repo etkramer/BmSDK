@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: NavMeshGoal_Filter<br/>
+/// ABSTRACT Class: NavMeshGoal_Filter<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal NavMeshGoal_Filter() { }
-
-    /// <summary>
-    /// Constructs a new NavMeshGoal_Filter
-    /// </summary>
-    public NavMeshGoal_Filter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NavMeshGoal_Filter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

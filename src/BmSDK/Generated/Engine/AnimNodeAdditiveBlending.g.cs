@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeAdditiveBlending<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimNodeAdditiveBlending : BmSDK.Engine.AnimNodeBlend, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_MoveToMultiplePoints<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_MoveToMultiplePoints : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject
 {

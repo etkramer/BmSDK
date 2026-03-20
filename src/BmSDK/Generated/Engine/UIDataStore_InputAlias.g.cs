@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: UIDataStore_InputAlias<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBase, BmSDK.IGameObject
 {

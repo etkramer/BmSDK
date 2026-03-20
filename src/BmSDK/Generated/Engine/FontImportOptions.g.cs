@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FontImportOptions<br/>
 /// (size = 252)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class FontImportOptions : BmSDK.GameObject, BmSDK.IGameObject
 {

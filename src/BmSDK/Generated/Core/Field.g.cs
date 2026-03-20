@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Field<br/>
+/// ABSTRACT Class: Field<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 268435585)
 /// </summary>
 public partial class Field : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Field : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Field() { }
-
-    /// <summary>
-    /// Constructs a new Field
-    /// </summary>
-    public Field(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Field Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

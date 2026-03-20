@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimNode<br/>
+/// ABSTRACT Class: AnimNode<br/>
 /// (size = 280)
-/// (flags = 0)
+/// (flags = 142606483)
 /// </summary>
 public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     }
 
     internal AnimNode() { }
-
-    /// <summary>
-    /// Constructs a new AnimNode
-    /// </summary>
-    public AnimNode(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimNode Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

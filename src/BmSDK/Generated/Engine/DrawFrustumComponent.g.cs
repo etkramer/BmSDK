@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DrawFrustumComponent<br/>
 /// (size = 568)
-/// (flags = 0)
+/// (flags = 2155885010)
 /// </summary>
 public partial class DrawFrustumComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

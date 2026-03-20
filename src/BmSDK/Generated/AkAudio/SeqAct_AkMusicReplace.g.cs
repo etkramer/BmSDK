@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkMusicReplace<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkMusicReplace : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

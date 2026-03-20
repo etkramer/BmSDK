@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRCBatarangViewPostProcess<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RRCBatarangViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject
 {

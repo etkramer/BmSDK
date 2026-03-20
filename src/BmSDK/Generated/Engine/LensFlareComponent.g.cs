@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LensFlareComponent<br/>
 /// (size = 640)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class LensFlareComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

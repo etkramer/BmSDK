@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NxCylindricalForceFieldCapsule<br/>
 /// (size = 808)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class NxCylindricalForceFieldCapsule : BmSDK.Engine.NxCylindricalForceField, BmSDK.IGameObject
 {

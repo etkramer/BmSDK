@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: ROnlineStatsReadMostWanted<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 50)
 /// </summary>
 public partial class ROnlineStatsReadMostWanted : BmSDK.Engine.OnlineStatsRead, BmSDK.IGameObject
 {

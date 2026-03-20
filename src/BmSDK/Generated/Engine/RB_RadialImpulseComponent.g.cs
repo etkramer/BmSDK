@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_RadialImpulseComponent<br/>
 /// (size = 580)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class RB_RadialImpulseComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

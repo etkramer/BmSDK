@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_DiveOverRailing<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_DiveOverRailing : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponPipeBase<br/>
+/// ABSTRACT Class: RBMWeaponPipeBase<br/>
 /// (size = 1764)
-/// (flags = 0)
+/// (flags = 10485811)
 /// </summary>
 public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponPipeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGam
     }
 
     internal RBMWeaponPipeBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponPipeBase
-    /// </summary>
-    public RBMWeaponPipeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponPipeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

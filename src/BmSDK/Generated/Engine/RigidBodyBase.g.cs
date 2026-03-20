@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RigidBodyBase<br/>
+/// ABSTRACT Class: RigidBodyBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RigidBodyBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RigidBodyBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RigidBodyBase() { }
-
-    /// <summary>
-    /// Constructs a new RigidBodyBase
-    /// </summary>
-    public RigidBodyBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RigidBodyBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

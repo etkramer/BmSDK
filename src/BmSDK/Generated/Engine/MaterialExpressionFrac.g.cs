@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionFrac<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionFrac : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

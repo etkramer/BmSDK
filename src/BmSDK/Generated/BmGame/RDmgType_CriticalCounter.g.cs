@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_CriticalCounter<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_CriticalCounter : BmSDK.BmGame.RDmgType_Counter, BmSDK.IGameObject
 {

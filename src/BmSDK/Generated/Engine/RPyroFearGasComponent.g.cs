@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPyroFearGasComponent<br/>
 /// (size = 800)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RPyroFearGasComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: NxForceField<br/>
+/// ABSTRACT Class: NxForceField<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class NxForceField : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal NxForceField() { }
-
-    /// <summary>
-    /// Constructs a new NxForceField
-    /// </summary>
-    public NxForceField(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NxForceField Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

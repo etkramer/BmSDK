@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_OmnitronPasswordCracking<br/>
 /// (size = 460)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_OmnitronPasswordCracking : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

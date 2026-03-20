@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkelControl_CantileverBeam<br/>
 /// (size = 468)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RSkelControl_CantileverBeam : BmSDK.Engine.SkelControlLookAt, BmSDK.IGameObject
 {

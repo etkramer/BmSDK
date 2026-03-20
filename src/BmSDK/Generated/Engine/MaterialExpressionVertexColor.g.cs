@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionVertexColor<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionVertexColor : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

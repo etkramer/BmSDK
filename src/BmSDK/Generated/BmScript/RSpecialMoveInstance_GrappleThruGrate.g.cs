@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSpecialMoveInstance_GrappleThruGrate<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_GrappleThruGrate : BmSDK.BmGame.RSpecialMoveInstance_RelativeAnimMove, BmSDK.IGameObject
 {

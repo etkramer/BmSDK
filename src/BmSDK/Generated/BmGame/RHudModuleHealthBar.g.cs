@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleHealthBar<br/>
 /// (size = 520)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleHealthBar : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleEventSendToGame<br/>
+/// ABSTRACT Class: ParticleModuleEventSendToGame<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleEventSendToGame : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleEventSendToGame : BmSDK.GameObject, BmSDK.IGa
     }
 
     internal ParticleModuleEventSendToGame() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleEventSendToGame
-    /// </summary>
-    public ParticleModuleEventSendToGame(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleEventSendToGame Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: EmitterPool<br/>
 /// (size = 780)
-/// (flags = 0)
+/// (flags = 144703646)
 /// </summary>
 public partial class EmitterPool : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

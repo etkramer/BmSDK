@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleExtraSequence<br/>
 /// (size = 308)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleExtraSequence : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

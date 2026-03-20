@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleExclusionVolume<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RVehicleExclusionVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

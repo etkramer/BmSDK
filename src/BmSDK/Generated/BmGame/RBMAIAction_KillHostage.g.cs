@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_KillHostage<br/>
 /// (size = 892)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_KillHostage : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

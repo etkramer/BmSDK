@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleApexEmitterShareVolume<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleApexEmitterShareVolume : BmSDK.Engine.ParticleModuleApexEmitterBase, BmSDK.IGameObject
 {

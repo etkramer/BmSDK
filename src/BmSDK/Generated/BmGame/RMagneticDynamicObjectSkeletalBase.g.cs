@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMagneticDynamicObjectSkeletalBase<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RMagneticDynamicObjectSkeletalBase : BmSDK.Engine.SkeletalMeshActor, BmSDK.IGameObject
 {

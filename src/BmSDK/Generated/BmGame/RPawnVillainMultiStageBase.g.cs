@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnVillainMultiStageBase<br/>
+/// ABSTRACT Class: RPawnVillainMultiStageBase<br/>
 /// (size = 6800)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnVillainMultiStageBase : BmSDK.BmGame.RPawnVillain, BmS
     }
 
     internal RPawnVillainMultiStageBase() { }
-
-    /// <summary>
-    /// Constructs a new RPawnVillainMultiStageBase
-    /// </summary>
-    public RPawnVillainMultiStageBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainMultiStageBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

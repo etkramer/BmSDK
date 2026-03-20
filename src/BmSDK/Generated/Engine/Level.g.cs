@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Level<br/>
 /// (size = 2256)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class Level : BmSDK.Engine.LevelBase, BmSDK.IGameObject
 {
@@ -33,21 +33,4 @@ public partial class Level : BmSDK.Engine.LevelBase, BmSDK.IGameObject
     /// </summary>
     protected Level(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// FloatProperty: ShadowmapTotalSize
-    /// </summary>
-    public unsafe float ShadowmapTotalSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 552); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 552); }
-    }
-
-    /// <summary>
-    /// FloatProperty: LightmapTotalSize
-    /// </summary>
-    public unsafe float LightmapTotalSize
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<float>(Ptr + 548); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 548); }
-    }
 }

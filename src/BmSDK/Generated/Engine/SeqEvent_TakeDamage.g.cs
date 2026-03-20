@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqEvent_TakeDamage<br/>
 /// (size = 428)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqEvent_TakeDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

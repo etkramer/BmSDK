@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RJammerGadget<br/>
+/// ABSTRACT Class: RJammerGadget<br/>
 /// (size = 2348)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RJammerGadget : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     }
 
     internal RJammerGadget() { }
-
-    /// <summary>
-    /// Constructs a new RJammerGadget
-    /// </summary>
-    public RJammerGadget(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RJammerGadget Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

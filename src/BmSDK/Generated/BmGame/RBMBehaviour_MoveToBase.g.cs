@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour_MoveToBase<br/>
+/// ABSTRACT Class: RBMBehaviour_MoveToBase<br/>
 /// (size = 645)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_MoveToBase : BmSDK.BmGame.RBMBehaviour_ActionQ
     }
 
     internal RBMBehaviour_MoveToBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_MoveToBase
-    /// </summary>
-    public RBMBehaviour_MoveToBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_MoveToBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

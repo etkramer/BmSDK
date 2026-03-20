@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: DistributionVector<br/>
+/// ABSTRACT Class: DistributionVector<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject
     }
 
     internal DistributionVector() { }
-
-    /// <summary>
-    /// Constructs a new DistributionVector
-    /// </summary>
-    public DistributionVector(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DistributionVector Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

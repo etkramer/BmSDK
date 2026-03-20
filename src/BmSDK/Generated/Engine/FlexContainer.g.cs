@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FlexContainer<br/>
 /// (size = 248)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class FlexContainer : BmSDK.GameObject, BmSDK.IGameObject
 {

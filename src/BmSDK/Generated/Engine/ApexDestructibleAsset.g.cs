@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexDestructibleAsset<br/>
 /// (size = 813)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class ApexDestructibleAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObject
 {

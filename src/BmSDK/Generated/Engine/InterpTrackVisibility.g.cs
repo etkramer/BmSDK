@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackVisibility<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

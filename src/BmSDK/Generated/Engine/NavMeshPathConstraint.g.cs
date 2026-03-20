@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshPathConstraint<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshPathConstraint : BmSDK.GameObject, BmSDK.IGameObject
 {

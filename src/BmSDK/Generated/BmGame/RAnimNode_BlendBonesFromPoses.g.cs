@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNode_BlendBonesFromPoses<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

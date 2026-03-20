@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: InterpTrackAkEvent<br/>
 /// (size = 208)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_JokerRooftopControllerBase<br/>
+/// ABSTRACT Class: RSeqAct_JokerRooftopControllerBase<br/>
 /// (size = 648)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_JokerRooftopControllerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_JokerRooftopControllerBase : BmSDK.Engine.SeqAct_La
     }
 
     internal RSeqAct_JokerRooftopControllerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_JokerRooftopControllerBase
-    /// </summary>
-    public RSeqAct_JokerRooftopControllerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_JokerRooftopControllerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

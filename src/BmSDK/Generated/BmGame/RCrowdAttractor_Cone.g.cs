@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdAttractor_Cone<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCrowdAttractor_Cone : BmSDK.BmGame.RCrowdAttractor, BmSDK.IGameObject
 {

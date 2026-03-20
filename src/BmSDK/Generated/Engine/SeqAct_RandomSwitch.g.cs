@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_RandomSwitch<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_RandomSwitch : BmSDK.Engine.SeqAct_Switch, BmSDK.IGameObject
 {

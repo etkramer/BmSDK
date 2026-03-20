@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: JsonObject<br/>
 /// (size = 260)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class JsonObject : BmSDK.GameObject, BmSDK.IGameObject
 {

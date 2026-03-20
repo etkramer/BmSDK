@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCharacter<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 201326738)
 /// </summary>
 public partial class RCharacter : BmSDK.GameObject, BmSDK.IGameObject
 {

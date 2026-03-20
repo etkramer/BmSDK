@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RDesignerWarning<br/>
+/// ABSTRACT Class: RDesignerWarning<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RDesignerWarning : BmSDK.Engine.LocalMessage, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RDesignerWarning : BmSDK.Engine.LocalMessage, BmSDK.IGameOb
     }
 
     internal RDesignerWarning() { }
-
-    /// <summary>
-    /// Constructs a new RDesignerWarning
-    /// </summary>
-    public RDesignerWarning(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDesignerWarning Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

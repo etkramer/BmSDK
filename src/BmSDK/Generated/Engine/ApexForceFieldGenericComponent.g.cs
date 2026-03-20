@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexForceFieldGenericComponent<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class ApexForceFieldGenericComponent : BmSDK.Engine.ApexForceFieldComponent, BmSDK.IGameObject
 {

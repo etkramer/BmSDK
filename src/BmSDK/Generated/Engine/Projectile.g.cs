@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Projectile<br/>
+/// ABSTRACT Class: Projectile<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal Projectile() { }
-
-    /// <summary>
-    /// Constructs a new Projectile
-    /// </summary>
-    public Projectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Projectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

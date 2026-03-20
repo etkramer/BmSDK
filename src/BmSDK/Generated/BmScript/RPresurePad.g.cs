@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPresurePad<br/>
 /// (size = 984)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPresurePad : BmSDK.BmGame.RPresurePadBase, BmSDK.IGameObject
 {

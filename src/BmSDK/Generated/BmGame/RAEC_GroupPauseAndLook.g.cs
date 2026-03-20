@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_GroupPauseAndLook<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_GroupPauseAndLook : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

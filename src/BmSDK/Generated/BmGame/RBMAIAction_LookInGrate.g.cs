@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_LookInGrate<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_LookInGrate : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

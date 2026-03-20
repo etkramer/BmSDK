@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Input<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
 {

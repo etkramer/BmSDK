@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTimeTrialWaypointRenderingComponent<br/>
 /// (size = 540)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class RTimeTrialWaypointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

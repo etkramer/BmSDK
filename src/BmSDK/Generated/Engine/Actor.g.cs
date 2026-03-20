@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Actor<br/>
+/// ABSTRACT Class: Actor<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144705683)
 /// </summary>
 public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Actor : BmSDK.StateObject, BmSDK.IGameObject
     }
 
     internal Actor() { }
-
-    /// <summary>
-    /// Constructs a new Actor
-    /// </summary>
-    public Actor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Actor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

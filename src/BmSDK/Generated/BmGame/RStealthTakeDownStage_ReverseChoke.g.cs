@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_ReverseChoke<br/>
 /// (size = 1736)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_ReverseChoke : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject
 {

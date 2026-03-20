@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RAnimZip_Settings<br/>
 /// (size = 480)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RAnimZip_Settings : BmSDK.GameObject, BmSDK.IGameObject
 {

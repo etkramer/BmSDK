@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVehicleHushBase<br/>
+/// ABSTRACT Class: RVehicleHushBase<br/>
 /// (size = 7732)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVehicleHushBase : BmSDK.BmGame.RVehicleCar, BmSDK.IGameObj
     }
 
     internal RVehicleHushBase() { }
-
-    /// <summary>
-    /// Constructs a new RVehicleHushBase
-    /// </summary>
-    public RVehicleHushBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicleHushBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

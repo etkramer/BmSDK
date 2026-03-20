@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPlaceableCombatDroppedWeapon<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPlaceableCombatDroppedWeapon : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

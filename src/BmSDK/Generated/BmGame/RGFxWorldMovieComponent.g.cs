@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxWorldMovieComponent<br/>
 /// (size = 548)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RGFxWorldMovieComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

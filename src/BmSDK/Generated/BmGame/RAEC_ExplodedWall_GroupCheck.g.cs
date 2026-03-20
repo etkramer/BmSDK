@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_ExplodedWall_GroupCheck<br/>
 /// (size = 824)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_ExplodedWall_GroupCheck : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MBMBehaviour_ScarecrowBase<br/>
+/// ABSTRACT Class: MBMBehaviour_ScarecrowBase<br/>
 /// (size = 608)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class MBMBehaviour_ScarecrowBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MBMBehaviour_ScarecrowBase : BmSDK.BmGame.RBMBehaviour, BmS
     }
 
     internal MBMBehaviour_ScarecrowBase() { }
-
-    /// <summary>
-    /// Constructs a new MBMBehaviour_ScarecrowBase
-    /// </summary>
-    public MBMBehaviour_ScarecrowBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MBMBehaviour_ScarecrowBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

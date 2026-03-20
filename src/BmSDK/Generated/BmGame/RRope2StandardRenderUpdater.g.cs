@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRope2StandardRenderUpdater<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class RRope2StandardRenderUpdater : BmSDK.BmGame.RRope2RenderUpdater, BmSDK.IGameObject
 {

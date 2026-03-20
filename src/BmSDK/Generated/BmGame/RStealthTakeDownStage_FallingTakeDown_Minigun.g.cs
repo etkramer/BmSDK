@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_FallingTakeDown_Minigun<br/>
 /// (size = 1664)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_FallingTakeDown_Minigun : BmSDK.BmGame.RStealthTakeDownStage_FallingTakeDown, BmSDK.IGameObject
 {

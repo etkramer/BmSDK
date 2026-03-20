@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RAnimNotify_SoundInterruptable<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_SoundInterruptable : BmSDK.Engine.RAnimNotify_SoundBase, BmSDK.IGameObject
 {

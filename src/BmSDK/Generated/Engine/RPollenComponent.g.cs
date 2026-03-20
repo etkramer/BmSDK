@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPollenComponent<br/>
 /// (size = 572)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RPollenComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

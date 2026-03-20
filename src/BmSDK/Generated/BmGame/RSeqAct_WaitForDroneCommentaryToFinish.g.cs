@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_WaitForDroneCommentaryToFinish<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_WaitForDroneCommentaryToFinish : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

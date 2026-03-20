@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleCameraBase<br/>
+/// ABSTRACT Class: ParticleModuleCameraBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleCameraBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleCameraBase : BmSDK.Engine.ParticleModule, BmS
     }
 
     internal ParticleModuleCameraBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleCameraBase
-    /// </summary>
-    public ParticleModuleCameraBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleCameraBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

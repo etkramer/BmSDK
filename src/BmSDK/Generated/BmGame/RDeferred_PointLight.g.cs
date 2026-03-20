@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDeferred_PointLight<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDeferred_PointLight : BmSDK.Engine.PointLight, BmSDK.IGameObject
 {

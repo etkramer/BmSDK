@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MHarleyForensicsInvestigator<br/>
 /// (size = 364)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class MHarleyForensicsInvestigator : BmSDK.BmGame.RForensicsInvestigator, BmSDK.IGameObject
 {

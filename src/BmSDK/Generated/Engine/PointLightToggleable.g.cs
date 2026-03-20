@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PointLightToggleable<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class PointLightToggleable : BmSDK.Engine.PointLight, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MatineeActor<br/>
 /// (size = 892)
-/// (flags = 0)
+/// (flags = 144705682)
 /// </summary>
 public partial class MatineeActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

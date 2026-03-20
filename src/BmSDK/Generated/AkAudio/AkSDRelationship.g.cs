@@ -4,9 +4,9 @@
 namespace BmSDK.AkAudio;
 
 /// <summary>
-/// Class: AkSDRelationship<br/>
+/// ABSTRACT Class: AkSDRelationship<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class AkSDRelationship : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkSDRelationship : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObjec
     }
 
     internal AkSDRelationship() { }
-
-    /// <summary>
-    /// Constructs a new AkSDRelationship
-    /// </summary>
-    public AkSDRelationship(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkSDRelationship Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

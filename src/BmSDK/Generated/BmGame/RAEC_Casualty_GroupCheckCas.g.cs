@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Casualty_GroupCheckCas<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Casualty_GroupCheckCas : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

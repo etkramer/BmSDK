@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: InterpTrackAkParameter<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackAkParameter : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {

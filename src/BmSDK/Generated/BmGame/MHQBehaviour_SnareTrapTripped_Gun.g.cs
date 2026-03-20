@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MHQBehaviour_SnareTrapTripped_Gun<br/>
 /// (size = 636)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class MHQBehaviour_SnareTrapTripped_Gun : BmSDK.BmGame.MHQBehaviour_SnareTrapTripped, BmSDK.IGameObject
 {

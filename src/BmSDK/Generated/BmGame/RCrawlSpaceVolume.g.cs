@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrawlSpaceVolume<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCrawlSpaceVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

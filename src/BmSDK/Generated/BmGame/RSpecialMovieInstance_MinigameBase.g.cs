@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSpecialMovieInstance_MinigameBase<br/>
+/// ABSTRACT Class: RSpecialMovieInstance_MinigameBase<br/>
 /// (size = 896)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialM
     }
 
     internal RSpecialMovieInstance_MinigameBase() { }
-
-    /// <summary>
-    /// Constructs a new RSpecialMovieInstance_MinigameBase
-    /// </summary>
-    public RSpecialMovieInstance_MinigameBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMovieInstance_MinigameBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

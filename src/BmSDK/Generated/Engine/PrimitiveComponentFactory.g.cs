@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: PrimitiveComponentFactory<br/>
+/// ABSTRACT Class: PrimitiveComponentFactory<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class PrimitiveComponentFactory : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class PrimitiveComponentFactory : BmSDK.GameObject, BmSDK.IGameOb
     }
 
     internal PrimitiveComponentFactory() { }
-
-    /// <summary>
-    /// Constructs a new PrimitiveComponentFactory
-    /// </summary>
-    public PrimitiveComponentFactory(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PrimitiveComponentFactory Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

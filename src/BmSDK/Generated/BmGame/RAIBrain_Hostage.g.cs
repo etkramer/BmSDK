@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAIBrain_Hostage<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RAIBrain_Hostage : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
 {

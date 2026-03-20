@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGameRI<br/>
 /// (size = 3260)
-/// (flags = 0)
+/// (flags = 144703638)
 /// </summary>
 public partial class RGameRI : BmSDK.Engine.GameReplicationInfo, BmSDK.IGameObject
 {

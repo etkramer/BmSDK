@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdSpawner_XPCutsceneBats<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCrowdSpawner_XPCutsceneBats : BmSDK.BmGame.RCrowdSpawner, BmSDK.IGameObject
 {

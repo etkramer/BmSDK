@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RInteractionComponent<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RInteractionComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

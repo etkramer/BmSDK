@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerHallucinationPointBase<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RJokerHallucinationPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd<br/>
 /// (size = 1844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_FearFromAboveOnSpotEnd : BmSDK.BmScript.RStealthTakedownStage_ChainTakedown_FearFromAboveEnd, BmSDK.IGameObject
 {

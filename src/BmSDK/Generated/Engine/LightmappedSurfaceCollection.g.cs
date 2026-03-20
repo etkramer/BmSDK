@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LightmappedSurfaceCollection<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class LightmappedSurfaceCollection : BmSDK.GameObject, BmSDK.IGameObject
 {

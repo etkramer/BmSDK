@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MAEC_LaughingGas_Inside<br/>
 /// (size = 736)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MAEC_LaughingGas_Inside : BmSDK.BmGame.RAEC_Smoke_Inside, BmSDK.IGameObject
 {

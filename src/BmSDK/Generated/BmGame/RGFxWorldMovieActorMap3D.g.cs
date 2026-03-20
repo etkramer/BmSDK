@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxWorldMovieActorMap3D<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RGFxWorldMovieActorMap3D : BmSDK.BmGame.RGFxWorldMovieActor, BmSDK.IGameObject
 {

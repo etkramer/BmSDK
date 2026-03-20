@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MultiProviderAnalytics<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class MultiProviderAnalytics : BmSDK.Engine.AnalyticEventsBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ProcBuildingRuleset<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 136315026)
 /// </summary>
 public partial class ProcBuildingRuleset : BmSDK.GameObject, BmSDK.IGameObject
 {

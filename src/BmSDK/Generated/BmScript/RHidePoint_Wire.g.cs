@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RHidePoint_Wire<br/>
 /// (size = 1392)
-/// (flags = 0)
+/// (flags = 2157969938)
 /// </summary>
 public partial class RHidePoint_Wire : BmSDK.BmScript.RHidePoint_Rope, BmSDK.IGameObject
 {

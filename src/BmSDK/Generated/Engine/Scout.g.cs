@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Scout<br/>
 /// (size = 1636)
-/// (flags = 0)
+/// (flags = 144703678)
 /// </summary>
 public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
 {

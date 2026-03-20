@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleLocationBoneSocket<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleLocationBoneSocket : BmSDK.Engine.ParticleModuleLocationBase, BmSDK.IGameObject
 {

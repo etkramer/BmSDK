@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVoiceSynthesiser<br/>
+/// ABSTRACT Class: RVoiceSynthesiser<br/>
 /// (size = 2625)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVoiceSynthesiser : BmSDK.BmGame.RInventoryGadget, BmSDK.IG
     }
 
     internal RVoiceSynthesiser() { }
-
-    /// <summary>
-    /// Constructs a new RVoiceSynthesiser
-    /// </summary>
-    public RVoiceSynthesiser(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVoiceSynthesiser Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

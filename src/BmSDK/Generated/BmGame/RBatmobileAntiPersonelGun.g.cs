@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileAntiPersonelGun<br/>
 /// (size = 2472)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileAntiPersonelGun : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

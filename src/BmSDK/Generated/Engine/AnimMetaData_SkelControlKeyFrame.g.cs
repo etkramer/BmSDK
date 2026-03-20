@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimMetaData_SkelControlKeyFrame<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class AnimMetaData_SkelControlKeyFrame : BmSDK.Engine.AnimMetaData_SkelControl, BmSDK.IGameObject
 {

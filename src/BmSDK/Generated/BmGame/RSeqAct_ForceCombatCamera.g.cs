@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ForceCombatCamera<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ForceCombatCamera : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

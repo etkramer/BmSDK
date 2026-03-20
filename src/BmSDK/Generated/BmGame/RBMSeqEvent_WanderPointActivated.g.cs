@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqEvent_WanderPointActivated<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBMSeqEvent_WanderPointActivated : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject
 {

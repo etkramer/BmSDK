@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SoundNode<br/>
+/// ABSTRACT Class: SoundNode<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SoundNode : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal SoundNode() { }
-
-    /// <summary>
-    /// Constructs a new SoundNode
-    /// </summary>
-    public SoundNode(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SoundNode Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

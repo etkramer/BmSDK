@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RB_ConstraintActor<br/>
+/// ABSTRACT Class: RB_ConstraintActor<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     }
 
     internal RB_ConstraintActor() { }
-
-    /// <summary>
-    /// Constructs a new RB_ConstraintActor
-    /// </summary>
-    public RB_ConstraintActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RB_ConstraintActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

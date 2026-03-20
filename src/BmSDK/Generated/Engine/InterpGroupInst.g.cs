@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpGroupInst<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class InterpGroupInst : BmSDK.GameObject, BmSDK.IGameObject
 {

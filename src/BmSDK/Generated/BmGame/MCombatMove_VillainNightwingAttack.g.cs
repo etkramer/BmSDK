@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MCombatMove_VillainNightwingAttack<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MCombatMove_VillainNightwingAttack : BmSDK.BmGame.RCombatMove_VillainKnifeAttack, BmSDK.IGameObject
 {

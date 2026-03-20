@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_BatClawedMultiWeapon<br/>
 /// (size = 916)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class RBMBehaviour_BatClawedMultiWeapon : BmSDK.BmGame.RBMBehaviour_BatClawed, BmSDK.IGameObject
 {

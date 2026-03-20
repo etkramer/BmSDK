@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_LedgeAttack<br/>
 /// (size = 1724)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_LedgeAttack : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject
 {

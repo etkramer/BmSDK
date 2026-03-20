@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_ShowVehicleOnHUD<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ShowVehicleOnHUD : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

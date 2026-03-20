@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_GlideKick<br/>
 /// (size = 1004)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_GlideKick : BmSDK.BmGame.RSpecialMoveInstance_RunningRelativeAnimMove, BmSDK.IGameObject
 {

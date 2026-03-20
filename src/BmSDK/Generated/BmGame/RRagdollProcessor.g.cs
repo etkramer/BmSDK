@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRagdollProcessor<br/>
 /// (size = 509)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RRagdollProcessor : BmSDK.GameObject, BmSDK.IGameObject
 {

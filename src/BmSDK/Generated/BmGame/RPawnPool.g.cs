@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnPool<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RPawnPool : BmSDK.GameObject, BmSDK.IGameObject
 {

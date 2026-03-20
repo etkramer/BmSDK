@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimNotify_BeginEnd<br/>
+/// ABSTRACT Class: RAnimNotify_BeginEnd<br/>
 /// (size = 85)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGame
     }
 
     internal RAnimNotify_BeginEnd() { }
-
-    /// <summary>
-    /// Constructs a new RAnimNotify_BeginEnd
-    /// </summary>
-    public RAnimNotify_BeginEnd(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimNotify_BeginEnd Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

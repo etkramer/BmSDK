@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RRadarTowerBase<br/>
+/// ABSTRACT Class: RRadarTowerBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RRadarTowerBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RRadarTowerBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RRadarTowerBase() { }
-
-    /// <summary>
-    /// Constructs a new RRadarTowerBase
-    /// </summary>
-    public RRadarTowerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRadarTowerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

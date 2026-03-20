@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqEvent_BatmobileStuck<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_BatmobileStuck : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

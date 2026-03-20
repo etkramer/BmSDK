@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetExplosiveGel<br/>
+/// ABSTRACT Class: RCombatMove_GadgetExplosiveGel<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetExplosiveGel : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetExplosiveGel : BmSDK.BmGame.RCombatMove_B
     }
 
     internal RCombatMove_GadgetExplosiveGel() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetExplosiveGel
-    /// </summary>
-    public RCombatMove_GadgetExplosiveGel(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetExplosiveGel Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

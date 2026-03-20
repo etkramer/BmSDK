@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NxGenericForceFieldCapsule<br/>
 /// (size = 928)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class NxGenericForceFieldCapsule : BmSDK.Engine.NxGenericForceField, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RAnimSet_Skeleton<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAnimSet_Skeleton : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_NinjaSingleSwordAttack<br/>
 /// (size = 888)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_NinjaSingleSwordAttack : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject
 {

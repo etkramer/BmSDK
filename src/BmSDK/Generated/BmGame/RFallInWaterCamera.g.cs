@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFallInWaterCamera<br/>
 /// (size = 1300)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RFallInWaterCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

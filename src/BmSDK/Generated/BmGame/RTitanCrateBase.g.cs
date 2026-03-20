@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTitanCrateBase<br/>
+/// ABSTRACT Class: RTitanCrateBase<br/>
 /// (size = 992)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObje
     }
 
     internal RTitanCrateBase() { }
-
-    /// <summary>
-    /// Constructs a new RTitanCrateBase
-    /// </summary>
-    public RTitanCrateBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTitanCrateBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RSeqAct_SetMaterialInstance<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SetMaterialInstance : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_IsInCombo<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_IsInCombo : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

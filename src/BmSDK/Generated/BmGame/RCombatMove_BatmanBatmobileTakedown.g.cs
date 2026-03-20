@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanBatmobileTakedown<br/>
 /// (size = 920)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_BatmanBatmobileTakedown : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

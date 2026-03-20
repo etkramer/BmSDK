@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: StaticMeshLODActor<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class StaticMeshLODActor : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

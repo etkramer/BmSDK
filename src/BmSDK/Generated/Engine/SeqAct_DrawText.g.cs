@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_DrawText<br/>
 /// (size = 424)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_DrawText : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

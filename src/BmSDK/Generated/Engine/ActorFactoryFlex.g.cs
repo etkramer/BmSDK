@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryFlex<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryFlex : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

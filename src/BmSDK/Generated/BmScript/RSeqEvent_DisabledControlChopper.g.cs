@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqEvent_DisabledControlChopper<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_DisabledControlChopper : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

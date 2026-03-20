@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SoundCue<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SoundCue : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshCollisionSettingsVolume<br/>
 /// (size = 757)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RNavMeshCollisionSettingsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

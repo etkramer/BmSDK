@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LevelGridVolume<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFadeManager<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

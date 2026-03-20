@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RDmgType_PredatorMiniDrone<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_PredatorMiniDrone : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject
 {

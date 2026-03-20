@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_CombatJokerBoxer<br/>
 /// (size = 1044)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_CombatJokerBoxer : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject
 {

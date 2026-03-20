@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DamageType<br/>
+/// ABSTRACT Class: DamageType<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DamageType : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal DamageType() { }
-
-    /// <summary>
-    /// Constructs a new DamageType
-    /// </summary>
-    public DamageType(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DamageType Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

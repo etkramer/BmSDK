@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNPCCrowdSpawner<br/>
 /// (size = 488)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RNPCCrowdSpawner : BmSDK.BmGame.RSeqAct_CombatSpawnerBase, BmSDK.IGameObject
 {

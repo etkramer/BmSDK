@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWeaponImpactEffectVolume<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RWeaponImpactEffectVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

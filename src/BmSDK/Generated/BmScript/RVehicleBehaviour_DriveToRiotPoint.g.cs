@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RVehicleBehaviour_DriveToRiotPoint<br/>
 /// (size = 660)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_DriveToRiotPoint : BmSDK.BmGame.RVehicleBehaviour_DriveToGoalPoint, BmSDK.IGameObject
 {

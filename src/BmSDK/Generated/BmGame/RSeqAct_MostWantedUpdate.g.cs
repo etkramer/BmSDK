@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_MostWantedUpdate<br/>
 /// (size = 432)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_MostWantedUpdate : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PathNode<br/>
 /// (size = 944)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class PathNode : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {

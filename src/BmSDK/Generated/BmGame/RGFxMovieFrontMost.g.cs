@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieFrontMost<br/>
 /// (size = 788)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieFrontMost : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {

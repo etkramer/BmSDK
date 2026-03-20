@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RThickFearGasComponent<br/>
 /// (size = 600)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RThickFearGasComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

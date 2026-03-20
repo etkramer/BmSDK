@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMIncapacitatedPawnCounter<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMIncapacitatedPawnCounter : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

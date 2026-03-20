@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DrawConeComponent<br/>
 /// (size = 556)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class DrawConeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

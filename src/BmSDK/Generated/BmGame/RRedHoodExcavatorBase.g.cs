@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRedHoodExcavatorBase<br/>
 /// (size = 1080)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

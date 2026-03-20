@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AudioCombatNotify<br/>
 /// (size = 413)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_AudioCombatNotify : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

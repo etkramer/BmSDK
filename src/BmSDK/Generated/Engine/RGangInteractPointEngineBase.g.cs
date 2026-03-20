@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RGangInteractPointEngineBase<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RGangInteractPointEngineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

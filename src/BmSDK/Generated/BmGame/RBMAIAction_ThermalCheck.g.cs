@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_ThermalCheck<br/>
+/// ABSTRACT Class: RBMAIAction_ThermalCheck<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_ThermalCheck : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_ThermalCheck : BmSDK.BmGame.RBMAIAction, BmSDK.
     }
 
     internal RBMAIAction_ThermalCheck() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_ThermalCheck
-    /// </summary>
-    public RBMAIAction_ThermalCheck(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_ThermalCheck Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

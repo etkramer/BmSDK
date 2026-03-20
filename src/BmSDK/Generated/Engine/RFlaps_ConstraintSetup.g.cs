@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RFlaps_ConstraintSetup<br/>
+/// ABSTRACT Class: RFlaps_ConstraintSetup<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RFlaps_ConstraintSetup : BmSDK.GameObject, BmSDK.IGameObjec
     }
 
     internal RFlaps_ConstraintSetup() { }
-
-    /// <summary>
-    /// Constructs a new RFlaps_ConstraintSetup
-    /// </summary>
-    public RFlaps_ConstraintSetup(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFlaps_ConstraintSetup Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

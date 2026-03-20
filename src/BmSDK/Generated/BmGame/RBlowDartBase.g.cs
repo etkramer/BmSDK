@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBlowDartBase<br/>
+/// ABSTRACT Class: RBlowDartBase<br/>
 /// (size = 2068)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     }
 
     internal RBlowDartBase() { }
-
-    /// <summary>
-    /// Constructs a new RBlowDartBase
-    /// </summary>
-    public RBlowDartBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBlowDartBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

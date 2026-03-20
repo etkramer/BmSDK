@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanAerialToBeatdown<br/>
 /// (size = 1100)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RCombatMove_BatmanAerialToBeatdown : BmSDK.BmGame.RCombatMove_BatmanAerial, BmSDK.IGameObject
 {

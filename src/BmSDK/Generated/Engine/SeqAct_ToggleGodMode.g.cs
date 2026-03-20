@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ToggleGodMode<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_ToggleGodMode : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

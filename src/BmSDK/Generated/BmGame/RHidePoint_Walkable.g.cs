@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RHidePoint_Walkable<br/>
+/// ABSTRACT Class: RHidePoint_Walkable<br/>
 /// (size = 1288)
-/// (flags = 0)
+/// (flags = 2292187795)
 /// </summary>
 public partial class RHidePoint_Walkable : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RHidePoint_Walkable : BmSDK.BmGame.RHidePoint, BmSDK.IGameO
     }
 
     internal RHidePoint_Walkable() { }
-
-    /// <summary>
-    /// Constructs a new RHidePoint_Walkable
-    /// </summary>
-    public RHidePoint_Walkable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHidePoint_Walkable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

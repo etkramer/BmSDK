@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: MSeqCond_IsDetectiveVisionActivated<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class MSeqCond_IsDetectiveVisionActivated : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

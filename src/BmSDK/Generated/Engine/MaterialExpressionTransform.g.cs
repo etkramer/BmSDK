@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionTransform<br/>
 /// (size = 226)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionTransform : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

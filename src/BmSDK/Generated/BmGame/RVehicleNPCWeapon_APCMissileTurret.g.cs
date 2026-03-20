@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleNPCWeapon_APCMissileTurret<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RVehicleNPCWeapon_APCMissileTurret : BmSDK.BmGame.RVehicleNPCWeapon, BmSDK.IGameObject
 {

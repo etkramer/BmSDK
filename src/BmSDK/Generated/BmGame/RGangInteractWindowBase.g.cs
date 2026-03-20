@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGangInteractWindowBase<br/>
 /// (size = 1384)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGangInteractWindowBase : BmSDK.BmGame.RGangInteractPointBreakableBase, BmSDK.IGameObject
 {

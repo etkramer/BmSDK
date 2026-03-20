@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkDialogueSpeech<br/>
+/// ABSTRACT Class: AkDialogueSpeech<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject
     }
 
     internal AkDialogueSpeech() { }
-
-    /// <summary>
-    /// Constructs a new AkDialogueSpeech
-    /// </summary>
-    public AkDialogueSpeech(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkDialogueSpeech Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

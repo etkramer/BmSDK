@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStopBatmanFromUsingAirshipTiltVolume<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RStopBatmanFromUsingAirshipTiltVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

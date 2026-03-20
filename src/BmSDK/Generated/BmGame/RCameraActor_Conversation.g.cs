@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCameraActor_Conversation<br/>
 /// (size = 1256)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RCameraActor_Conversation : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

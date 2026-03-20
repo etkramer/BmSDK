@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AICommandBase<br/>
+/// ABSTRACT Class: AICommandBase<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AICommandBase : BmSDK.StateObject, BmSDK.IGameObject
     }
 
     internal AICommandBase() { }
-
-    /// <summary>
-    /// Constructs a new AICommandBase
-    /// </summary>
-    public AICommandBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AICommandBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

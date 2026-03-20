@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: KillZDamageType<br/>
+/// ABSTRACT Class: KillZDamageType<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class KillZDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class KillZDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObjec
     }
 
     internal KillZDamageType() { }
-
-    /// <summary>
-    /// Constructs a new KillZDamageType
-    /// </summary>
-    public KillZDamageType(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, KillZDamageType Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

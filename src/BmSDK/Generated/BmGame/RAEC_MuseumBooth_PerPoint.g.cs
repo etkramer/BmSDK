@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_MuseumBooth_PerPoint<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_MuseumBooth_PerPoint : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

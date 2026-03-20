@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatAttractor<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCombatAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

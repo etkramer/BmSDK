@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCarriableObjectBagBase<br/>
+/// ABSTRACT Class: RCarriableObjectBagBase<br/>
 /// (size = 944)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase
     }
 
     internal RCarriableObjectBagBase() { }
-
-    /// <summary>
-    /// Constructs a new RCarriableObjectBagBase
-    /// </summary>
-    public RCarriableObjectBagBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCarriableObjectBagBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

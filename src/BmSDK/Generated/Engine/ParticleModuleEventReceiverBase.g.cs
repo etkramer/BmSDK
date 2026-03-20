@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleEventReceiverBase<br/>
+/// ABSTRACT Class: ParticleModuleEventReceiverBase<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleEventReceiverBase : BmSDK.Engine.ParticleModuleEventBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleEventReceiverBase : BmSDK.Engine.ParticleModu
     }
 
     internal ParticleModuleEventReceiverBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleEventReceiverBase
-    /// </summary>
-    public ParticleModuleEventReceiverBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleEventReceiverBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

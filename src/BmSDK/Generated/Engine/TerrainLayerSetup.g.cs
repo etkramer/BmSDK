@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TerrainLayerSetup<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
 {

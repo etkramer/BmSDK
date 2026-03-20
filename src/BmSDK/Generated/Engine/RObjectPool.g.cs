@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RObjectPool<br/>
 /// (size = 9408)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
 {

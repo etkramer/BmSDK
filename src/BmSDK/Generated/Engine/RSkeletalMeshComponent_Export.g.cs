@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RSkeletalMeshComponent_Export<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSkeletalMeshComponent_Export : BmSDK.GameObject, BmSDK.IGameObject
 {

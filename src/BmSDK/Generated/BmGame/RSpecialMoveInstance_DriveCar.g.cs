@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_DriveCar<br/>
 /// (size = 1024)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSpecialMoveInstance_DriveCar : BmSDK.BmGame.RSpecialMoveInstance_RunningRelativeAnimMove, BmSDK.IGameObject
 {

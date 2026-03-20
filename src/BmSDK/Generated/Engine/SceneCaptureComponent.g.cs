@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SceneCaptureComponent<br/>
+/// ABSTRACT Class: SceneCaptureComponent<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     }
 
     internal SceneCaptureComponent() { }
-
-    /// <summary>
-    /// Constructs a new SceneCaptureComponent
-    /// </summary>
-    public SceneCaptureComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SceneCaptureComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

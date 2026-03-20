@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetPawnsREvidence<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SetPawnsREvidence : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

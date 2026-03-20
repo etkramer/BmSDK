@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVehicleWalkerBase<br/>
+/// ABSTRACT Class: RVehicleWalkerBase<br/>
 /// (size = 7644)
-/// (flags = 0)
+/// (flags = 144704183)
 /// </summary>
 public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVehicleWalkerBase : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameO
     }
 
     internal RVehicleWalkerBase() { }
-
-    /// <summary>
-    /// Constructs a new RVehicleWalkerBase
-    /// </summary>
-    public RVehicleWalkerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicleWalkerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ProcBuilding<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

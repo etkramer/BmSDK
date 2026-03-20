@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionMeshEmitterDynamicParameter<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionMeshEmitterDynamicParameter : BmSDK.Engine.MaterialExpressionDynamicParameter, BmSDK.IGameObject
 {

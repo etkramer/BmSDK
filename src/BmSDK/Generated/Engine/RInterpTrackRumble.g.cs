@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RInterpTrackRumble<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RInterpTrackRumble : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

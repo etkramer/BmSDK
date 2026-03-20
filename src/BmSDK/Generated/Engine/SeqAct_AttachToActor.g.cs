@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_AttachToActor<br/>
 /// (size = 389)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_AttachToActor : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

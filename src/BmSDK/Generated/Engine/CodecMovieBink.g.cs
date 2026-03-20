@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CodecMovieBink<br/>
 /// (size = 88)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class CodecMovieBink : BmSDK.Engine.CodecMovie, BmSDK.IGameObject
 {

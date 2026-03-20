@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_UpdateBatmanDamageLevel<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_UpdateBatmanDamageLevel : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

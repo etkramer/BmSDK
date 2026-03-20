@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_GetZoneWithMostSecretsLeft<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_GetZoneWithMostSecretsLeft : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

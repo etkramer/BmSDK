@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ForceVehicleLand<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ForceVehicleLand : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DecalManager<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144703638)
 /// </summary>
 public partial class DecalManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

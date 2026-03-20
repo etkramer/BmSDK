@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: Const<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class Const : BmSDK.Field, BmSDK.IGameObject
 {

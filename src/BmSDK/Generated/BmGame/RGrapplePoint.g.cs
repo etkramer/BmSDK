@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGrapplePoint<br/>
 /// (size = 958)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IGameObject
 {

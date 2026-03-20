@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_BossHudBase<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_BossHudBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

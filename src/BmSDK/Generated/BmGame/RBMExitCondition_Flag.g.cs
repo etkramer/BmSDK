@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMExitCondition_Flag<br/>
 /// (size = 448)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMExitCondition_Flag : BmSDK.BmGame.RBMExitCondition, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RAggGeomCollisionComponent<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RAggGeomCollisionComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

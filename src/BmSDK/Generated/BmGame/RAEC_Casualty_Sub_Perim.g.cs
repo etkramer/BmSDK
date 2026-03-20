@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Casualty_Sub_Perim<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Casualty_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDoorDefinition<br/>
 /// (size = 264)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RDoorDefinition : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

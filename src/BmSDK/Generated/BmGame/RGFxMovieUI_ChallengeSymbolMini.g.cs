@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieUI_ChallengeSymbolMini<br/>
 /// (size = 1108)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieUI_ChallengeSymbolMini : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {

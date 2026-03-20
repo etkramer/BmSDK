@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileAbseilHookBase<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBatmobileAbseilHookBase : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.IGameObject
 {

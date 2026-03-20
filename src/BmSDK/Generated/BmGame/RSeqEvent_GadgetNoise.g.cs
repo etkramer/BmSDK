@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_GadgetNoise<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_GadgetNoise : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DisableCombatLock<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DisableCombatLock : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

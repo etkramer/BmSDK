@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: MGFxWidgetOverlayScreenEmailForm<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class MGFxWidgetOverlayScreenEmailForm : BmSDK.BmScript.MGFxWidgetOverlayScreen, BmSDK.IGameObject
 {

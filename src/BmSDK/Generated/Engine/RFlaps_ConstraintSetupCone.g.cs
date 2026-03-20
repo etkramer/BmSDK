@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RFlaps_ConstraintSetupCone<br/>
 /// (size = 256)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RFlaps_ConstraintSetupCone : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject
 {

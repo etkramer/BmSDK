@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBlockingCylinder<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RBlockingCylinder : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

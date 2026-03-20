@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MHackableObjectBase<br/>
+/// ABSTRACT Class: MHackableObjectBase<br/>
 /// (size = 1096)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal MHackableObjectBase() { }
-
-    /// <summary>
-    /// Constructs a new MHackableObjectBase
-    /// </summary>
-    public MHackableObjectBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MHackableObjectBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

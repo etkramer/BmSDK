@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModulePhysicsVolumes<br/>
 /// (size = 133)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModulePhysicsVolumes : BmSDK.Engine.ParticleModuleWorldForcesBase, BmSDK.IGameObject
 {

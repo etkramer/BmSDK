@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVoiceLockBase<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RVoiceLockBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

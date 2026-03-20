@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPhysicalMaterialProperty<br/>
 /// (size = 508)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RPhysicalMaterialProperty : BmSDK.Engine.PhysicalMaterialPropertyBase, BmSDK.IGameObject
 {

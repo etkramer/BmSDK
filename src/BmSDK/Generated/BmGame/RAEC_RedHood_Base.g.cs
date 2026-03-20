@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_RedHood_Base<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_RedHood_Base : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

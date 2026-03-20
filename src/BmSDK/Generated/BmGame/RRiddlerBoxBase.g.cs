@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRiddlerBoxBase<br/>
 /// (size = 1308)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRiddlerBoxBase : BmSDK.BmGame.RMagneticDynamicObjectBase, BmSDK.IGameObject
 {

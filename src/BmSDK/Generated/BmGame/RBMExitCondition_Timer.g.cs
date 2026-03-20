@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMExitCondition_Timer<br/>
 /// (size = 456)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMExitCondition_Timer : BmSDK.BmGame.RBMExitCondition, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoPawnRef_BestForFlagType<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkConvoPawnRef_BestForFlagType : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject
 {

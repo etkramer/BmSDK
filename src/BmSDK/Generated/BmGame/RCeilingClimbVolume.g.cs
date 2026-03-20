@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCeilingClimbVolume<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RCeilingClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

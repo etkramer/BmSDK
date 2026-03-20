@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFakeTacticianVolume<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RFakeTacticianVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

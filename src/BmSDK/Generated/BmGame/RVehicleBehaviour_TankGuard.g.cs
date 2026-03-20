@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_TankGuard<br/>
 /// (size = 656)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_TankGuard : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

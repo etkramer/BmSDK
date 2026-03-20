@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_StandingTalk<br/>
 /// (size = 600)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_StandingTalk : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

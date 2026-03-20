@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFullTape<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134226098)
 /// </summary>
 public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
 {

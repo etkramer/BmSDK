@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_StopCasualtyBeeps<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RSeqAct_StopCasualtyBeeps : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

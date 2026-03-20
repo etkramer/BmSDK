@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHelicopterPointOfInterest<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RHelicopterPointOfInterest : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -4,382 +4,166 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RRemoteControlHighSecurityInterface<br/>
+/// Interface: RRemoteControlHighSecurityInterface<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 16403)
 /// </summary>
-public partial class RRemoteControlHighSecurityInterface : BmSDK.Interface, BmSDK.IGameObject
+public partial interface RRemoteControlHighSecurityInterface : BmSDK.Interface
 {
-    static BmSDK.Class s_staticClass = null;
-    public static BmSDK.Class StaticClass()
-    {
-        if (s_staticClass is null)
-        {
-            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.RRemoteControlHighSecurityInterface", false);
-            s_staticClass.AddToRoot();
-        }
-        return s_staticClass;
-    }
-
-    internal RRemoteControlHighSecurityInterface() { }
-
-    /// <summary>
-    /// Constructs a new RRemoteControlHighSecurityInterface
-    /// </summary>
-    public RRemoteControlHighSecurityInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRemoteControlHighSecurityInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
-
-    /// <summary>
-    /// Constructs a new wrapper instance from the given object pointer.
-    /// </summary>
-    protected RRemoteControlHighSecurityInterface(nint ptr) : base(ptr) { }
-
     /// <summary>
     /// Function: ShouldPlayBombBarks
     /// </summary>
-    public unsafe bool ShouldPlayBombBarks()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.ShouldPlayBombBarks", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool ShouldPlayBombBarks();
 
     /// <summary>
     /// Function: DisallowLongRangeResonator
     /// </summary>
-    public unsafe bool DisallowLongRangeResonator()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.DisallowLongRangeResonator", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool DisallowLongRangeResonator();
 
     /// <summary>
     /// Function: GetDisplayIconName
     /// </summary>
-    public unsafe BmSDK.FString GetDisplayIconName()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetDisplayIconName", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.FString GetDisplayIconName();
 
     /// <summary>
     /// Function: GetInputDialSeed
     /// </summary>
-    public unsafe int GetInputDialSeed()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetInputDialSeed", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
+    public unsafe int GetInputDialSeed();
 
     /// <summary>
     /// Function: GetPassword
     /// </summary>
-    public unsafe BmSDK.FString GetPassword(int Index)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetPassword", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Index, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 4);
-    }
+    public unsafe BmSDK.FString GetPassword(int Index);
 
     /// <summary>
     /// Function: GetPasswordArrayLength
     /// </summary>
-    public unsafe int GetPasswordArrayLength()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetPasswordArrayLength", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
+    public unsafe int GetPasswordArrayLength();
 
     /// <summary>
     /// Function: GetResonatorMinigameStringReference
     /// </summary>
-    public unsafe BmSDK.FString GetResonatorMinigameStringReference()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetResonatorMinigameStringReference", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.FString GetResonatorMinigameStringReference();
 
     /// <summary>
     /// Function: GetResonatorWinScreenStringReference
     /// </summary>
-    public unsafe BmSDK.FString GetResonatorWinScreenStringReference()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetResonatorWinScreenStringReference", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.FString GetResonatorWinScreenStringReference();
 
     /// <summary>
     /// Function: GetRawDifficulty
     /// </summary>
-    public unsafe int GetRawDifficulty()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetRawDifficulty", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
+    public unsafe int GetRawDifficulty();
 
     /// <summary>
     /// Function: GetHackingTargetType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectTargetType GetHackingTargetType()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetHackingTargetType", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectTargetType>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectTargetType GetHackingTargetType();
 
     /// <summary>
     /// Function: GetHackingNetworkType
     /// </summary>
-    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectNetworkType GetHackingNetworkType()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetHackingNetworkType", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectNetworkType>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.RRemoteControlHighSecurityInterface.DisruptableObjectNetworkType GetHackingNetworkType();
 
     /// <summary>
     /// Function: GetActiveFlag
     /// </summary>
-    public unsafe BmSDK.FName GetActiveFlag()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetActiveFlag", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FName>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.FName GetActiveFlag();
 
     /// <summary>
     /// Function: StopAlarmSound
     /// </summary>
-    public unsafe void StopAlarmSound()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.StopAlarmSound", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void StopAlarmSound();
 
     /// <summary>
     /// Function: PlayAlarmSound
     /// </summary>
-    public unsafe void PlayAlarmSound()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.PlayAlarmSound", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void PlayAlarmSound();
 
     /// <summary>
     /// Function: IsAlarmed
     /// </summary>
-    public unsafe bool IsAlarmed()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.IsAlarmed", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool IsAlarmed();
 
     /// <summary>
     /// Function: GetMaximumInteractionDistance
     /// </summary>
-    public unsafe float GetMaximumInteractionDistance()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetMaximumInteractionDistance", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
+    public unsafe float GetMaximumInteractionDistance();
 
     /// <summary>
     /// Function: VeryLowSecurity
     /// </summary>
-    public unsafe bool VeryLowSecurity()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.VeryLowSecurity", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool VeryLowSecurity();
 
     /// <summary>
     /// Function: RequiresHighSecurityResonator
     /// </summary>
-    public unsafe bool RequiresHighSecurityResonator()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.RequiresHighSecurityResonator", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool RequiresHighSecurityResonator();
 
     /// <summary>
     /// Function: GetLeftResonantPosition
     /// </summary>
-    public unsafe float GetLeftResonantPosition()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetLeftResonantPosition", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
+    public unsafe float GetLeftResonantPosition();
 
     /// <summary>
     /// Function: GetRightResonantPosition
     /// </summary>
-    public unsafe float GetRightResonantPosition()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetRightResonantPosition", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-    }
+    public unsafe float GetRightResonantPosition();
 
     /// <summary>
     /// Function: GetDifficultyLevel
     /// </summary>
-    public unsafe int GetDifficultyLevel()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetDifficultyLevel", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
+    public unsafe int GetDifficultyLevel();
 
     /// <summary>
     /// Function: HasMultipleStages
     /// </summary>
-    public unsafe bool HasMultipleStages()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.HasMultipleStages", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool HasMultipleStages();
 
     /// <summary>
     /// Function: InResonatorThreshold
     /// </summary>
-    public unsafe void InResonatorThreshold(bool InThreshold)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.InResonatorThreshold", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(InThreshold, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void InResonatorThreshold(bool InThreshold);
 
     /// <summary>
     /// Function: StartResonatorMinigame
     /// </summary>
-    public unsafe void StartResonatorMinigame()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.StartResonatorMinigame", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void StartResonatorMinigame();
 
     /// <summary>
     /// Function: FailedToDisrupt
     /// </summary>
-    public unsafe void FailedToDisrupt()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.FailedToDisrupt", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void FailedToDisrupt();
 
     /// <summary>
     /// Function: NextStage
     /// </summary>
-    public unsafe bool NextStage()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.NextStage", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool NextStage();
 
     /// <summary>
     /// Function: WillExplode
     /// </summary>
-    public unsafe bool WillExplode()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.WillExplode", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool WillExplode();
 
     /// <summary>
     /// Function: StillDisruptable
     /// </summary>
-    public unsafe bool StillDisruptable()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.StillDisruptable", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool StillDisruptable();
 
     /// <summary>
     /// Function: GetIconLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetIconLocation()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetIconLocation", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-    }
+    public unsafe System.Numerics.Vector3 GetIconLocation();
 
     /// <summary>
     /// Function: SuccessfullyDisrupted
     /// </summary>
-    public unsafe void SuccessfullyDisrupted()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.SuccessfullyDisrupted", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void SuccessfullyDisrupted();
 
     /// <summary>
     /// Function: GetDifficulty
     /// </summary>
-    public unsafe void GetDifficulty(out float Threshold, out float BuildUpTime, out float LeftMaxAngVelocity, out float RightMaxAngVelocity, int DifficultyMod = default)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRemoteControlHighSecurityInterface.GetDifficulty", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(DifficultyMod, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        Threshold = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 0);
-        BuildUpTime = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 4);
-        LeftMaxAngVelocity = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 8);
-        RightMaxAngVelocity = BmSDK.Framework.MarshalUtil.ToManaged<float>(paramsPtr + 12);
-        return;
-    }
+    public unsafe void GetDifficulty(out float Threshold, out float BuildUpTime, out float LeftMaxAngVelocity, out float RightMaxAngVelocity, int DifficultyMod = default);
 
     /// <summary>
     /// Enum: DisruptableObjectTargetType

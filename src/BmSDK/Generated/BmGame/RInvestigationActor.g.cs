@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RInvestigationActor<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RInvestigationActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ModifyRandomPopulation<br/>
 /// (size = 385)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ModifyRandomPopulation : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

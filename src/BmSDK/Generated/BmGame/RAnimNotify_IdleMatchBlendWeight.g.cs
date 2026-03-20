@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_IdleMatchBlendWeight<br/>
 /// (size = 88)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_IdleMatchBlendWeight : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

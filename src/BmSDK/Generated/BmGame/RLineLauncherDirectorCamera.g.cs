@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLineLauncherDirectorCamera<br/>
 /// (size = 1336)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RLineLauncherDirectorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

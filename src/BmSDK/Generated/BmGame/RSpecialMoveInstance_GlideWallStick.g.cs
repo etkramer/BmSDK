@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_GlideWallStick<br/>
 /// (size = 1004)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSpecialMoveInstance_GlideWallStick : BmSDK.BmGame.RSpecialMoveInstance_RelativeAnimMove, BmSDK.IGameObject
 {

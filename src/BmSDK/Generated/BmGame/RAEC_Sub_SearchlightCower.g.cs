@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Sub_SearchlightCower<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Sub_SearchlightCower : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

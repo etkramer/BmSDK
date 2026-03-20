@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Attack_GuardPerimWatch_Solo<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Attack_GuardPerimWatch_Solo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

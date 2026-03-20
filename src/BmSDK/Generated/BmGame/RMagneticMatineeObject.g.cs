@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMagneticMatineeObject<br/>
 /// (size = 1276)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RMagneticMatineeObject : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {

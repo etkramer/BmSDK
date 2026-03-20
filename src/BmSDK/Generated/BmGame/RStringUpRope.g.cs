@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStringUpRope<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RStringUpRope : BmSDK.BmGame.RRopeBaseSpawnable, BmSDK.IGameObject
 {

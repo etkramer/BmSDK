@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSwordProjectile<br/>
 /// (size = 924)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSwordProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
 {

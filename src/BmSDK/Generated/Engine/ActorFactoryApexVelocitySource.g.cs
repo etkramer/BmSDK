@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryApexVelocitySource<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 134221974)
 /// </summary>
 public partial class ActorFactoryApexVelocitySource : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

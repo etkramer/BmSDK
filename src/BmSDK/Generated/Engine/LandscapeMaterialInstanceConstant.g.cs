@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LandscapeMaterialInstanceConstant<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class LandscapeMaterialInstanceConstant : BmSDK.Engine.MaterialInstanceConstant, BmSDK.IGameObject
 {

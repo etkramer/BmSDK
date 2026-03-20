@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkSet<br/>
 /// (size = 196)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBarkSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

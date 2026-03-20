@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDEntityFactOverworld<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class AkSDEntityFactOverworld : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject
 {

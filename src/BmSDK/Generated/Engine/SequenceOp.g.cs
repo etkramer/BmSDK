@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SequenceOp<br/>
+/// ABSTRACT Class: SequenceOp<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SequenceOp : BmSDK.Engine.SequenceObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SequenceOp : BmSDK.Engine.SequenceObject, BmSDK.IGameObject
     }
 
     internal SequenceOp() { }
-
-    /// <summary>
-    /// Constructs a new SequenceOp
-    /// </summary>
-    public SequenceOp(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SequenceOp Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

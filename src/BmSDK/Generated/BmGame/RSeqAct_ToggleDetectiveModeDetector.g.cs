@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ToggleDetectiveModeDetector<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class RSeqAct_ToggleDetectiveModeDetector : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

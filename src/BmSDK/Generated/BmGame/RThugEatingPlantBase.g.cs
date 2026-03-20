@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RThugEatingPlantBase<br/>
+/// ABSTRACT Class: RThugEatingPlantBase<br/>
 /// (size = 820)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RThugEatingPlantBase : BmSDK.Engine.Actor, BmSDK.IGameObjec
     }
 
     internal RThugEatingPlantBase() { }
-
-    /// <summary>
-    /// Constructs a new RThugEatingPlantBase
-    /// </summary>
-    public RThugEatingPlantBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RThugEatingPlantBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

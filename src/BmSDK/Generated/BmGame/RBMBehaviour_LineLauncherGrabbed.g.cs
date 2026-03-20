@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_LineLauncherGrabbed<br/>
 /// (size = 600)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_LineLauncherGrabbed : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject
 {

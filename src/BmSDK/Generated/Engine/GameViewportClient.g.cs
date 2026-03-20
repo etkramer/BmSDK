@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: GameViewportClient<br/>
 /// (size = 460)
-/// (flags = 0)
+/// (flags = 134217918)
 /// </summary>
 public partial class GameViewportClient : BmSDK.Engine.ScriptViewportClient, BmSDK.IGameObject
 {

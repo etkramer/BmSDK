@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAIBrain_Pred<br/>
+/// ABSTRACT Class: RAIBrain_Pred<br/>
 /// (size = 504)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RAIBrain_Pred : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAIBrain_Pred : BmSDK.BmGame.RAIBrain, BmSDK.IGameObject
     }
 
     internal RAIBrain_Pred() { }
-
-    /// <summary>
-    /// Constructs a new RAIBrain_Pred
-    /// </summary>
-    public RAIBrain_Pred(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAIBrain_Pred Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

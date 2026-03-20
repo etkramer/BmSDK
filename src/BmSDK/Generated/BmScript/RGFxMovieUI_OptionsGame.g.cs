@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RGFxMovieUI_OptionsGame<br/>
 /// (size = 1072)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieUI_OptionsGame : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {

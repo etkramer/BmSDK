@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RStaticMeshActorDamageable<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RStaticMeshActorDamageable : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

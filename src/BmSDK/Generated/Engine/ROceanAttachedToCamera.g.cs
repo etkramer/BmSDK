@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ROceanAttachedToCamera<br/>
 /// (size = 868)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ROceanAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

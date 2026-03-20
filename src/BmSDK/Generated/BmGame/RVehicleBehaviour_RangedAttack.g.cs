@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_RangedAttack<br/>
 /// (size = 608)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_RangedAttack : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

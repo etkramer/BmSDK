@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Sub_Follower<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Sub_Follower : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

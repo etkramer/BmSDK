@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBatDistractProjectile_Detonatable<br/>
 /// (size = 1404)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBatDistractProjectile_Detonatable : BmSDK.BmScript.RBatDistractProjectileBm, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPhysicalEvidenceBase<br/>
 /// (size = 812)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPhysicalEvidenceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AddRemoveMobileObjective<br/>
 /// (size = 448)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_AddRemoveMobileObjective : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_FollowRoute<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_FollowRoute : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RThugMineBase<br/>
+/// ABSTRACT Class: RThugMineBase<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 211812499)
 /// </summary>
 public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RThugMineBase() { }
-
-    /// <summary>
-    /// Constructs a new RThugMineBase
-    /// </summary>
-    public RThugMineBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RThugMineBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNotify_PawnMaterialParam<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 201339026)
 /// </summary>
 public partial class AnimNotify_PawnMaterialParam : BmSDK.Engine.AnimNotify_Scripted, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_Interp<br/>
 /// (size = 828)
-/// (flags = 0)
+/// (flags = 136315030)
 /// </summary>
 public partial class SeqAct_Interp : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

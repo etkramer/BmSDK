@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AddOrRemovePersistentHudTarget<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_AddOrRemovePersistentHudTarget : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

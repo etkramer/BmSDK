@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_Idle<br/>
 /// (size = 624)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_Idle : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

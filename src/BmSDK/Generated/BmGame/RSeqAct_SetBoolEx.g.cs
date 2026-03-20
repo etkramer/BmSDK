@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetBoolEx<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SetBoolEx : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {

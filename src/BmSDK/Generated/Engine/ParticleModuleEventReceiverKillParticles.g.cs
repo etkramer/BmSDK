@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleEventReceiverKillParticles<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleEventReceiverKillParticles : BmSDK.Engine.ParticleModuleEventReceiverBase, BmSDK.IGameObject
 {

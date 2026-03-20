@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionScreenSize<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionScreenSize : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RGooSpray<br/>
+/// ABSTRACT Class: RGooSpray<br/>
 /// (size = 2908)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RGooSpray : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGame
     }
 
     internal RGooSpray() { }
-
-    /// <summary>
-    /// Constructs a new RGooSpray
-    /// </summary>
-    public RGooSpray(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGooSpray Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

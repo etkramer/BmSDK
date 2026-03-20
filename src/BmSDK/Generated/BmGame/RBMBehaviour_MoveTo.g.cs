@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_MoveTo<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_MoveTo : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject
 {

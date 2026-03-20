@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RDummyTarget_ChinookBase<br/>
+/// ABSTRACT Class: RDummyTarget_ChinookBase<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RDummyTarget_ChinookBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RDummyTarget_ChinookBase : BmSDK.BmGame.RDummyTarget, BmSDK
     }
 
     internal RDummyTarget_ChinookBase() { }
-
-    /// <summary>
-    /// Constructs a new RDummyTarget_ChinookBase
-    /// </summary>
-    public RDummyTarget_ChinookBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDummyTarget_ChinookBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSearchTreeFinder<br/>
+/// ABSTRACT Class: RSearchTreeFinder<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, Bm
     }
 
     internal RSearchTreeFinder() { }
-
-    /// <summary>
-    /// Constructs a new RSearchTreeFinder
-    /// </summary>
-    public RSearchTreeFinder(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSearchTreeFinder Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

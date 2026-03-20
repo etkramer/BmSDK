@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackInstHeadTracking<br/>
 /// (size = 188)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class InterpTrackInstHeadTracking : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {

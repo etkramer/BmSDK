@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: StringsTag<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class StringsTag : BmSDK.Engine.TranslatorTag, BmSDK.IGameObject
 {

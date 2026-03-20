@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDebugMenu<br/>
 /// (size = 1052)
-/// (flags = 0)
+/// (flags = 144703638)
 /// </summary>
 public partial class RDebugMenu : BmSDK.BmGame.RDynamicMenu, BmSDK.IGameObject
 {

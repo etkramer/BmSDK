@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_DroneComFixDisruption<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_DroneComFixDisruption : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

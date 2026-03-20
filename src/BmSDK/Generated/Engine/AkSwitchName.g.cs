@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkSwitchName<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkSwitchName : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

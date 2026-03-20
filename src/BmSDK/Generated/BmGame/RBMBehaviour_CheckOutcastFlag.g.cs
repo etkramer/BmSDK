@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_CheckOutcastFlag<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CheckOutcastFlag : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

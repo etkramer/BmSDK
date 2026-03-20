@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPathNode<br/>
 /// (size = 964)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
 {

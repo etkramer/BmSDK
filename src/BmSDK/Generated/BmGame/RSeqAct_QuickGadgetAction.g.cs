@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_QuickGadgetAction<br/>
+/// ABSTRACT Class: RSeqAct_QuickGadgetAction<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_QuickGadgetAction : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_QuickGadgetAction : BmSDK.Engine.SeqAct_Latent, BmS
     }
 
     internal RSeqAct_QuickGadgetAction() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_QuickGadgetAction
-    /// </summary>
-    public RSeqAct_QuickGadgetAction(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_QuickGadgetAction Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

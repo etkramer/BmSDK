@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpActor_ForCinematic<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class InterpActor_ForCinematic : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {

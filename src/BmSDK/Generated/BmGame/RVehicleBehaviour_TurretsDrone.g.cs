@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_TurretsDrone<br/>
 /// (size = 640)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_TurretsDrone : BmSDK.BmGame.RVehicleBehaviour_Idle, BmSDK.IGameObject
 {

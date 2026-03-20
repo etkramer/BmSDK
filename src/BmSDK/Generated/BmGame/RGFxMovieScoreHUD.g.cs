@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieScoreHUD<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieScoreHUD : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {

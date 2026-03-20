@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ArrowComponent<br/>
 /// (size = 560)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class ArrowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

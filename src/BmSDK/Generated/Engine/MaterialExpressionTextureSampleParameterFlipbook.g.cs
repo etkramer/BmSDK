@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionTextureSampleParameterFlipbook<br/>
 /// (size = 316)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameterFlipbook : BmSDK.Engine.MaterialExpressionTextureSampleParameter2D, BmSDK.IGameObject
 {

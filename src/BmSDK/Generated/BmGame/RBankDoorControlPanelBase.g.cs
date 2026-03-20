@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBankDoorControlPanelBase<br/>
+/// ABSTRACT Class: RBankDoorControlPanelBase<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGame
     }
 
     internal RBankDoorControlPanelBase() { }
-
-    /// <summary>
-    /// Constructs a new RBankDoorControlPanelBase
-    /// </summary>
-    public RBankDoorControlPanelBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBankDoorControlPanelBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

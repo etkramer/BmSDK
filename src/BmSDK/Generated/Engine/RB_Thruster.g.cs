@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_Thruster<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RB_Thruster : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
 {

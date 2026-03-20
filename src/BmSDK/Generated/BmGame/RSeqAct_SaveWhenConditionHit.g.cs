@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SaveWhenConditionHit<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SaveWhenConditionHit : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

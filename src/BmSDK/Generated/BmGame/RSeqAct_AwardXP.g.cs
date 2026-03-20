@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AwardXP<br/>
 /// (size = 364)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_AwardXP : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

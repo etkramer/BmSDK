@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_ChasingCop<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 2109458)
 /// </summary>
 public partial class RVehicleBehaviour_ChasingCop : BmSDK.BmGame.RVehicleBehaviour_AttackEscortVehicle, BmSDK.IGameObject
 {

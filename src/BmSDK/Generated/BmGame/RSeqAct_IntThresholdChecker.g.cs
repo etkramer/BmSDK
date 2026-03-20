@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_IntThresholdChecker<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_IntThresholdChecker : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

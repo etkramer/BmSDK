@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAIBrain_PredFull<br/>
 /// (size = 564)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RAIBrain_PredFull : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGameObject
 {

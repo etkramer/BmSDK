@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCharacter_MultiStageMilitia<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RCharacter_MultiStageMilitia : BmSDK.BmScript.RCharacter_MultiStage, BmSDK.IGameObject
 {

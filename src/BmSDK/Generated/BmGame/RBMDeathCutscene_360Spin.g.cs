@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMDeathCutscene_360Spin<br/>
 /// (size = 408)
-/// (flags = 0)
+/// (flags = 8388626)
 /// </summary>
 public partial class RBMDeathCutscene_360Spin : BmSDK.BmGame.RBMDeathCutscene_ShoulderCam, BmSDK.IGameObject
 {

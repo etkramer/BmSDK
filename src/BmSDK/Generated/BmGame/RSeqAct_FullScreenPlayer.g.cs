@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_FullScreenPlayer<br/>
 /// (size = 428)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_FullScreenPlayer : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

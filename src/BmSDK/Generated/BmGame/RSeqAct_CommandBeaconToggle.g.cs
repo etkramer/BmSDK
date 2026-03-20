@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_CommandBeaconToggle<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_CommandBeaconToggle : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

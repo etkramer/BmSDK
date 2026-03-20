@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Canvas<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
 {

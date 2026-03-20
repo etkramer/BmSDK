@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_Strangle<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_Strangle : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
 {

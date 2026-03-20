@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MStickyConcussionGrenadeProjectile<br/>
 /// (size = 1008)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class MStickyConcussionGrenadeProjectile : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject
 {

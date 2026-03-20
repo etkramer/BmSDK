@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoData_FlagNode<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkConvoData_FlagNode : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

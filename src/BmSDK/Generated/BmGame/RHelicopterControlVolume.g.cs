@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHelicopterControlVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RHelicopterControlVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

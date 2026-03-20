@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCarriableObjectBase<br/>
+/// ABSTRACT Class: RCarriableObjectBase<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshA
     }
 
     internal RCarriableObjectBase() { }
-
-    /// <summary>
-    /// Constructs a new RCarriableObjectBase
-    /// </summary>
-    public RCarriableObjectBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCarriableObjectBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

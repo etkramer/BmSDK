@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DynamicLightEnvironmentComponent<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 176160914)
 /// </summary>
 public partial class DynamicLightEnvironmentComponent : BmSDK.Engine.LightEnvironmentComponent, BmSDK.IGameObject
 {

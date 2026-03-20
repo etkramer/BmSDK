@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPredatorGunLockerBase<br/>
+/// ABSTRACT Class: RPredatorGunLockerBase<br/>
 /// (size = 964)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     }
 
     internal RPredatorGunLockerBase() { }
-
-    /// <summary>
-    /// Constructs a new RPredatorGunLockerBase
-    /// </summary>
-    public RPredatorGunLockerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPredatorGunLockerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

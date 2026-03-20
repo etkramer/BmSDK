@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: TextureRenderTarget<br/>
+/// ABSTRACT Class: TextureRenderTarget<br/>
 /// (size = 316)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObje
     }
 
     internal TextureRenderTarget() { }
-
-    /// <summary>
-    /// Constructs a new TextureRenderTarget
-    /// </summary>
-    public TextureRenderTarget(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, TextureRenderTarget Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

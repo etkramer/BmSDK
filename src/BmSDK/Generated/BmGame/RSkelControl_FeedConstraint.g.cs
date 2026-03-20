@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkelControl_FeedConstraint<br/>
 /// (size = 332)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RSkelControl_FeedConstraint : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

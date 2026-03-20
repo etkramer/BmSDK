@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGunStartleNoise_AlertProxy<br/>
 /// (size = 864)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RGunStartleNoise_AlertProxy : BmSDK.BmGame.RStartlePoint, BmSDK.IGameObject
 {

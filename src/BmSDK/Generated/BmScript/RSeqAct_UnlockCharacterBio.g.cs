@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_UnlockCharacterBio<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_UnlockCharacterBio : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

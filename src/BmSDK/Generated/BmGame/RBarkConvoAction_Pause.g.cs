@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoAction_Pause<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBarkConvoAction_Pause : BmSDK.BmGame.RBarkConvoAction, BmSDK.IGameObject
 {

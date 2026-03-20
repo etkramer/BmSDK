@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshGoalFilter_PolyEncompassesAI<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshGoalFilter_PolyEncompassesAI : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
 {

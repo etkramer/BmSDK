@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRemoveableGrate<br/>
 /// (size = 1064)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RRemoveableGrate : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_DisruptedJammerReaction_Solo<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAEC_DisruptedJammerReaction_Solo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

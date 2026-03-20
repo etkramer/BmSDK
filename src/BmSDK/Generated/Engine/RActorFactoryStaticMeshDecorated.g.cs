@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RActorFactoryStaticMeshDecorated<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class RActorFactoryStaticMeshDecorated : BmSDK.Engine.ActorFactoryStaticMesh, BmSDK.IGameObject
 {

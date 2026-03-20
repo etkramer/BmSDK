@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RApexClothBlockingVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RApexClothBlockingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MapInfo<br/>
+/// ABSTRACT Class: MapInfo<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class MapInfo : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MapInfo : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal MapInfo() { }
-
-    /// <summary>
-    /// Constructs a new MapInfo
-    /// </summary>
-    public MapInfo(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MapInfo Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

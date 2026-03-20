@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_RadialImpulse<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class RAnimNotify_RadialImpulse : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqCond_SwitchObject<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 134218386)
 /// </summary>
 public partial class SeqCond_SwitchObject : BmSDK.Engine.SeqCond_SwitchBase, BmSDK.IGameObject
 {

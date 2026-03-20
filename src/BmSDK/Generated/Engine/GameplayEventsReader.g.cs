@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: GameplayEventsReader<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.IGameObject
 {

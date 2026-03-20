@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_EnemyTankMissile<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_EnemyTankMissile : BmSDK.BmGame.RDmgType_EnemyExplosiveWeapons, BmSDK.IGameObject
 {

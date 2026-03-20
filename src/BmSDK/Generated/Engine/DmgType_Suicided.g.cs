@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DmgType_Suicided<br/>
+/// ABSTRACT Class: DmgType_Suicided<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class DmgType_Suicided : BmSDK.Engine.KillZDamageType, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DmgType_Suicided : BmSDK.Engine.KillZDamageType, BmSDK.IGam
     }
 
     internal DmgType_Suicided() { }
-
-    /// <summary>
-    /// Constructs a new DmgType_Suicided
-    /// </summary>
-    public DmgType_Suicided(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DmgType_Suicided Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

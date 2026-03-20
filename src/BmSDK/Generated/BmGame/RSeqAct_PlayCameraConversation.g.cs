@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_PlayCameraConversation<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqAct_PlayCameraConversation : BmSDK.BmGame.RSeqAct_PlaySpeechBase, BmSDK.IGameObject
 {

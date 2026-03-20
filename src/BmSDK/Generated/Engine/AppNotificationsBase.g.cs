@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AppNotificationsBase<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
 {

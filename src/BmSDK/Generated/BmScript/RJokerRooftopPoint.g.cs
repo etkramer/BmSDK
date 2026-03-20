@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RJokerRooftopPoint<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RJokerRooftopPoint : BmSDK.BmGame.RJokerRooftopPointBase, BmSDK.IGameObject
 {

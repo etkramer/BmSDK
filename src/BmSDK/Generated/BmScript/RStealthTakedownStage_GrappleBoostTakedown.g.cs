@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RStealthTakedownStage_GrappleBoostTakedown<br/>
 /// (size = 1664)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_GrappleBoostTakedown : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

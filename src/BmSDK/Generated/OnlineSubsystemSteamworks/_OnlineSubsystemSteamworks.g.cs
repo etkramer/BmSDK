@@ -6,7 +6,7 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 /// <summary>
 /// Class: _OnlineSubsystemSteamworks<br/>
 /// (size = 3088)
-/// (flags = 0)
+/// (flags = 134217910)
 /// </summary>
 public partial class _OnlineSubsystemSteamworks : BmSDK.IpDrv.OnlineSubsystemCommonImpl, BmSDK.IGameObject
 {

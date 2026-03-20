@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMBehaviour_CombatRobot<br/>
 /// (size = 1024)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CombatRobot : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject
 {

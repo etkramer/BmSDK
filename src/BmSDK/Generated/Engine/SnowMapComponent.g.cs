@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SnowMapComponent<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SnowMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

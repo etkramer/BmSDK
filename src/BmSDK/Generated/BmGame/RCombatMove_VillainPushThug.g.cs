@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_VillainPushThug<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RCombatMove_VillainPushThug : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

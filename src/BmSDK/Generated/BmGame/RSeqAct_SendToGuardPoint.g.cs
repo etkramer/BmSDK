@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SendToGuardPoint<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RSeqAct_SendToGuardPoint : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

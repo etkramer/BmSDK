@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPhysicsTriggerVolume<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPhysicsTriggerVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrimeSceneBase<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RCrimeSceneBase : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

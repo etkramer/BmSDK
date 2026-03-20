@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Sub_PlaceSentryGun<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Sub_PlaceSentryGun : BmSDK.BmGame.RAEC_Search_Sub_FormationLeader, BmSDK.IGameObject
 {

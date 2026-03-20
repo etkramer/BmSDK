@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InAppMessageBase<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTauntVolume<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RTauntVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

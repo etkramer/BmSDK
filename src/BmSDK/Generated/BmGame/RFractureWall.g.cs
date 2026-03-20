@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFractureWall<br/>
 /// (size = 1152)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RFractureWall : BmSDK.BmGame.RFractureWallBase, BmSDK.IGameObject
 {

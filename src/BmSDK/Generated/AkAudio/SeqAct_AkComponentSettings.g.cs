@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkComponentSettings<br/>
 /// (size = 544)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqAct_AkComponentSettings : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

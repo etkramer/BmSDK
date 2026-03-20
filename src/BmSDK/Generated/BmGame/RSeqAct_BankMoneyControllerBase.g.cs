@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_BankMoneyControllerBase<br/>
+/// ABSTRACT Class: RSeqAct_BankMoneyControllerBase<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_BankMoneyControllerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_BankMoneyControllerBase : BmSDK.Engine.SeqAct_Laten
     }
 
     internal RSeqAct_BankMoneyControllerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_BankMoneyControllerBase
-    /// </summary>
-    public RSeqAct_BankMoneyControllerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_BankMoneyControllerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

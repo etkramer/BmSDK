@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIManager<br/>
 /// (size = 1460)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBMAIManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

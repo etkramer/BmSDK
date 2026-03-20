@@ -6,7 +6,7 @@ namespace BmSDK.GFxUI;
 /// <summary>
 /// Class: GFxEngine<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class GFxEngine : BmSDK.GameObject, BmSDK.IGameObject
 {

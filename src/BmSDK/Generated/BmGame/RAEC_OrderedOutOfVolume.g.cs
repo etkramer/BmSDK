@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_OrderedOutOfVolume<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_OrderedOutOfVolume : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

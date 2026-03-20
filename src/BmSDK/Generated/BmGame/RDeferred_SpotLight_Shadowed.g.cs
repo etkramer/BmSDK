@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDeferred_SpotLight_Shadowed<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDeferred_SpotLight_Shadowed : BmSDK.BmGame.RDeferred_SpotLight, BmSDK.IGameObject
 {

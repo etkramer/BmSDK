@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetCombatParams<br/>
 /// (size = 357)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetCombatParams : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

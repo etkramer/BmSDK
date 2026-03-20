@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_BMBLUpgradeConversation<br/>
 /// (size = 1061)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqAct_BMBLUpgradeConversation : BmSDK.BmGame.RSeqAct_PlayRadioOrThoughtDialogue, BmSDK.IGameObject
 {

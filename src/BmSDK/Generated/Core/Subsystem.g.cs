@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Subsystem<br/>
+/// ABSTRACT Class: Subsystem<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217883)
 /// </summary>
 public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Subsystem : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Subsystem() { }
-
-    /// <summary>
-    /// Constructs a new Subsystem
-    /// </summary>
-    public Subsystem(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Subsystem Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

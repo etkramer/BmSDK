@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetBatClaw<br/>
+/// ABSTRACT Class: RCombatMove_GadgetBatClaw<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetBatClaw : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetBatClaw : BmSDK.BmGame.RCombatMove_Batman
     }
 
     internal RCombatMove_GadgetBatClaw() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetBatClaw
-    /// </summary>
-    public RCombatMove_GadgetBatClaw(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetBatClaw Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

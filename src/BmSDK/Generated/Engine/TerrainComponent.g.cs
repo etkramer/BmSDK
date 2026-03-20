@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TerrainComponent<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class TerrainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMCombatPoint_LoFuseBox<br/>
 /// (size = 996)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBMCombatPoint_LoFuseBox : BmSDK.BmGame.RBMCombatPoint_EnvironmentAttackObject, BmSDK.IGameObject
 {

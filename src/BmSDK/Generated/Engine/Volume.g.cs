@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Volume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 144705682)
 /// </summary>
 public partial class Volume : BmSDK.Engine.Brush, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_TriggerManDownCountResponse<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_TriggerManDownCountResponse : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

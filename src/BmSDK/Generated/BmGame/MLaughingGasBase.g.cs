@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MLaughingGasBase<br/>
+/// ABSTRACT Class: MLaughingGasBase<br/>
 /// (size = 2628)
-/// (flags = 0)
+/// (flags = 10485811)
 /// </summary>
 public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObje
     }
 
     internal MLaughingGasBase() { }
-
-    /// <summary>
-    /// Constructs a new MLaughingGasBase
-    /// </summary>
-    public MLaughingGasBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MLaughingGasBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

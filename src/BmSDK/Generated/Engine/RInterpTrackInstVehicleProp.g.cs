@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RInterpTrackInstVehicleProp<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RInterpTrackInstVehicleProp : BmSDK.Engine.InterpTrackInstProperty, BmSDK.IGameObject
 {

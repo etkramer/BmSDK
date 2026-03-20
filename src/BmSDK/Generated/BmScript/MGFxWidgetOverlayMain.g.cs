@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: MGFxWidgetOverlayMain<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class MGFxWidgetOverlayMain : BmSDK.GFxUI.GFxObject, BmSDK.IGameObject
 {

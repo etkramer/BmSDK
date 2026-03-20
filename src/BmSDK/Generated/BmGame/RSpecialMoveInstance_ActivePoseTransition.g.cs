@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_ActivePoseTransition<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_ActivePoseTransition : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_CounterBlocked<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_CounterBlocked : BmSDK.BmGame.RDmgType_CounterWeak, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: IniLocPatcher<br/>
 /// (size = 188)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
 {

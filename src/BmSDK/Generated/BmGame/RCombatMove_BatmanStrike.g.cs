@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_BatmanStrike<br/>
+/// ABSTRACT Class: RCombatMove_BatmanStrike<br/>
 /// (size = 1564)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanWeaponAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_BatmanStrike : BmSDK.BmGame.RCombatMove_BatmanW
     }
 
     internal RCombatMove_BatmanStrike() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_BatmanStrike
-    /// </summary>
-    public RCombatMove_BatmanStrike(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_BatmanStrike Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

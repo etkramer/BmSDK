@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DisableCombatIfFarFromThugs<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DisableCombatIfFarFromThugs : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

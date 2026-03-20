@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMagneticDynamicObjectBase<br/>
 /// (size = 1292)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RMagneticDynamicObjectBase : BmSDK.BmGame.RHarpoonDragPhysicsBase, BmSDK.IGameObject
 {

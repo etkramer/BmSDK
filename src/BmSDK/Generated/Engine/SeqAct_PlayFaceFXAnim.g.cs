@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqAct_PlayFaceFXAnim<br/>
+/// ABSTRACT Class: SeqAct_PlayFaceFXAnim<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class SeqAct_PlayFaceFXAnim : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqAct_PlayFaceFXAnim : BmSDK.Engine.SequenceAction, BmSDK.
     }
 
     internal SeqAct_PlayFaceFXAnim() { }
-
-    /// <summary>
-    /// Constructs a new SeqAct_PlayFaceFXAnim
-    /// </summary>
-    public SeqAct_PlayFaceFXAnim(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_PlayFaceFXAnim Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

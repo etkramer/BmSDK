@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MPawnScarecrowBase<br/>
+/// ABSTRACT Class: MPawnScarecrowBase<br/>
 /// (size = 6696)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     }
 
     internal MPawnScarecrowBase() { }
-
-    /// <summary>
-    /// Constructs a new MPawnScarecrowBase
-    /// </summary>
-    public MPawnScarecrowBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MPawnScarecrowBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RParticleModuleGPUSpawn<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RParticleModuleGPUSpawn : BmSDK.Engine.RParticleModuleGPURecycleSpawn, BmSDK.IGameObject
 {

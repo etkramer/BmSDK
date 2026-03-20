@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_IK_Offset_Predict<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 33566738)
 /// </summary>
 public partial class RAnimNotify_IK_Offset_Predict : BmSDK.BmGame.RAnimNotify_IK, BmSDK.IGameObject
 {

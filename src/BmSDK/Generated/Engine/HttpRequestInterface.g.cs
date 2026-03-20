@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: HttpRequestInterface<br/>
+/// ABSTRACT Class: HttpRequestInterface<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class HttpRequestInterface : BmSDK.Engine.HttpBaseInterface, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class HttpRequestInterface : BmSDK.Engine.HttpBaseInterface, BmSD
     }
 
     internal HttpRequestInterface() { }
-
-    /// <summary>
-    /// Constructs a new HttpRequestInterface
-    /// </summary>
-    public HttpRequestInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, HttpRequestInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

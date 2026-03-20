@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHangAttackHook<br/>
 /// (size = 1292)
-/// (flags = 0)
+/// (flags = 2157969938)
 /// </summary>
 public partial class RHangAttackHook : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
 {

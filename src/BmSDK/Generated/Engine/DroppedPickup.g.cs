@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DroppedPickup<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class DroppedPickup : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

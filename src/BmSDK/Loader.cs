@@ -43,28 +43,30 @@ internal static class Loader
         // Find/load scripts
         ScriptManager.Init();
 
+        Debug.Log("Hello from BmSDK");
+
         // Create function detours
-        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
-            GameInfo.FuncOffsets.ProcessInternal,
-            ProcessInternalDetour
-        );
+        // _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+        //     GameInfo.FuncOffsets.ProcessInternal,
+        //     ProcessInternalDetour
+        // );
 
-        _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
-            GameInfo.FuncOffsets.EngineTick,
-            EngineTickDetour
-        );
+        // _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
+        //     GameInfo.FuncOffsets.EngineTick,
+        //     EngineTickDetour
+        // );
 
-        _ConditionalPostLoadDetourBase =
-            DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
-                GameInfo.FuncOffsets.ConditionalPostLoad,
-                ConditionalPostLoadDetour
-            );
+        // _ConditionalPostLoadDetourBase =
+        //     DetourUtil.NewDetour<GameFunctions.ConditionalPostLoadDelegate>(
+        //         GameInfo.FuncOffsets.ConditionalPostLoad,
+        //         ConditionalPostLoadDetour
+        //     );
 
-        _ConditionalDestroyDetourBase =
-            DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
-                GameInfo.FuncOffsets.ConditionalDestroy,
-                ConditionalDestroyDetour
-            );
+        // _ConditionalDestroyDetourBase =
+        //     DetourUtil.NewDetour<GameFunctions.ConditionalDestroyDelegate>(
+        //         GameInfo.FuncOffsets.ConditionalDestroy,
+        //         ConditionalDestroyDetour
+        //     );
     }
 
     private static IntPtr EngineTickDetour(IntPtr self)

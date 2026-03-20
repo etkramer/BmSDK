@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_StealthBatarang<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_StealthBatarang : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IGameObject
 {

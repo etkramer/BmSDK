@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: OnlineStatsRead<br/>
+/// ABSTRACT Class: OnlineStatsRead<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 134217907)
 /// </summary>
 public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class OnlineStatsRead : BmSDK.Engine.OnlineStats, BmSDK.IGameObje
     }
 
     internal OnlineStatsRead() { }
-
-    /// <summary>
-    /// Constructs a new OnlineStatsRead
-    /// </summary>
-    public OnlineStatsRead(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineStatsRead Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

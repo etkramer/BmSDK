@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDEntityPawns<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkSDEntityPawns : BmSDK.AkAudio.AkSDEntityValue, BmSDK.IGameObject
 {

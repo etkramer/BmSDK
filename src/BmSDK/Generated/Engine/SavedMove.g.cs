@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SavedMove<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SavedMove : BmSDK.GameObject, BmSDK.IGameObject
 {

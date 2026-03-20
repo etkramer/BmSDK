@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LightEnvironmentComponent<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 176160914)
 /// </summary>
 public partial class LightEnvironmentComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

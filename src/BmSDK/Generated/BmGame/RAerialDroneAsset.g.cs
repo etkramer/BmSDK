@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAerialDroneAsset<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RAerialDroneAsset : BmSDK.BmGame.RThreatBaseAsset, BmSDK.IGameObject
 {

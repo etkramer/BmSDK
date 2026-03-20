@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_NervousSearchMove_Tree<br/>
 /// (size = 968)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_NervousSearchMove_Tree : BmSDK.BmGame.RBMAIAction_NervousSearchMove, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: PBRuleNodeBase<br/>
+/// ABSTRACT Class: PBRuleNodeBase<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 136319123)
 /// </summary>
 public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class PBRuleNodeBase : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal PBRuleNodeBase() { }
-
-    /// <summary>
-    /// Constructs a new PBRuleNodeBase
-    /// </summary>
-    public PBRuleNodeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PBRuleNodeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

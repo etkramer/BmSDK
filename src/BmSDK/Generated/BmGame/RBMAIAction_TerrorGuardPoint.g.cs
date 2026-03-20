@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_TerrorGuardPoint<br/>
 /// (size = 920)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RBMAIAction_TerrorGuardPoint : BmSDK.BmGame.RBMAIAction_HoldGuardPointBase, BmSDK.IGameObject
 {

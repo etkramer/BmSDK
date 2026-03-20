@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_CaseFileControl<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_CaseFileControl : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_RiddlerMechRevive<br/>
 /// (size = 1028)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_RiddlerMechRevive : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

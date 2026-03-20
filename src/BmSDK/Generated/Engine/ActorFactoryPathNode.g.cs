@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ActorFactoryPathNode<br/>
+/// ABSTRACT Class: ActorFactoryPathNode<br/>
 /// (size = 144)
-/// (flags = 0)
+/// (flags = 134230167)
 /// </summary>
 public partial class ActorFactoryPathNode : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ActorFactoryPathNode : BmSDK.Engine.ActorFactory, BmSDK.IGa
     }
 
     internal ActorFactoryPathNode() { }
-
-    /// <summary>
-    /// Constructs a new ActorFactoryPathNode
-    /// </summary>
-    public ActorFactoryPathNode(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ActorFactoryPathNode Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

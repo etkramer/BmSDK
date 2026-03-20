@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexStaticDestructibleComponent<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class ApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticComponent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqEvent_CustomBackscreenRequestedBase<br/>
+/// ABSTRACT Class: RSeqEvent_CustomBackscreenRequestedBase<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RSeqEvent_CustomBackscreenRequestedBase : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqEvent_CustomBackscreenRequestedBase : BmSDK.Engine.Sequ
     }
 
     internal RSeqEvent_CustomBackscreenRequestedBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqEvent_CustomBackscreenRequestedBase
-    /// </summary>
-    public RSeqEvent_CustomBackscreenRequestedBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqEvent_CustomBackscreenRequestedBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

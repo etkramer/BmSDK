@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PostProcessVolume<br/>
 /// (size = 1292)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

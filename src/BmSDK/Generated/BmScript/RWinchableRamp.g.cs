@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RWinchableRamp<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RWinchableRamp : BmSDK.BmGame.RWinchableWallBase, BmSDK.IGameObject
 {

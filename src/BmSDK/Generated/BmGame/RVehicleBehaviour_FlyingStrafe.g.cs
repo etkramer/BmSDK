@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_FlyingStrafe<br/>
 /// (size = 697)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_FlyingStrafe : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ChangeCape<br/>
 /// (size = 436)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ChangeCape : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

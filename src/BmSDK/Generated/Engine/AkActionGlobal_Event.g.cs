@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkActionGlobal_Event<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkActionGlobal_Event : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject
 {

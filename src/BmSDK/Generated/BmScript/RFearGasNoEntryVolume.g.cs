@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RFearGasNoEntryVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RFearGasNoEntryVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

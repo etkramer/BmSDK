@@ -52,7 +52,7 @@ internal static class ScriptManager
     );
     public static readonly CSharpCompilationOptions CompilerOptions = new(
         OutputKind.DynamicallyLinkedLibrary,
-        platform: Platform.X86,
+        platform: Platform.X64,
         allowUnsafe: true
     );
     public const string TargetName = "Scripts.dll";

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshPath_AvoidPathObjects<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RNavMeshPath_AvoidPathObjects : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
 {

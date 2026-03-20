@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoAction_Cond_Flag<br/>
 /// (size = 181)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkConvoAction_Cond_Flag : BmSDK.BmGame.RBarkConvoActionCond, BmSDK.IGameObject
 {

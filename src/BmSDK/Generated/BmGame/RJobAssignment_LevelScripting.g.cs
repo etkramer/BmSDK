@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJobAssignment_LevelScripting<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RJobAssignment_LevelScripting : BmSDK.BmGame.RJobAssignment, BmSDK.IGameObject
 {

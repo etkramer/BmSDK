@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RRainComponent<br/>
 /// (size = 656)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RRainComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

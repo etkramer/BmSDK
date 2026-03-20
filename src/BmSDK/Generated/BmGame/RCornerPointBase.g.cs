@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCornerPointBase<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCornerPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

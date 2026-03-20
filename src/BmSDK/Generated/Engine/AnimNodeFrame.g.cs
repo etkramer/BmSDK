@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeFrame<br/>
 /// (size = 184)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class AnimNodeFrame : BmSDK.Engine.AnimObject, BmSDK.IGameObject
 {

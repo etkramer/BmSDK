@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DmgType_Crushed<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class DmgType_Crushed : BmSDK.Engine.DamageType, BmSDK.IGameObject
 {

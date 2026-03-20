@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockAtmos<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RockAtmos : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_Stopping<br/>
 /// (size = 612)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_Stopping : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

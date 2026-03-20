@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DistributionFloatUniformCurve<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class DistributionFloatUniformCurve : BmSDK.DistributionFloat, BmSDK.IGameObject
 {

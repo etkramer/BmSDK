@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkActionGlobal_State<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkActionGlobal_State : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject
 {

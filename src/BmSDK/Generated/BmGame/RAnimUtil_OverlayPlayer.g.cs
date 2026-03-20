@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimUtil_OverlayPlayer<br/>
+/// ABSTRACT Class: RAnimUtil_OverlayPlayer<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimUtil_OverlayPlayer : BmSDK.GameObject, BmSDK.IGameObje
     }
 
     internal RAnimUtil_OverlayPlayer() { }
-
-    /// <summary>
-    /// Constructs a new RAnimUtil_OverlayPlayer
-    /// </summary>
-    public RAnimUtil_OverlayPlayer(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimUtil_OverlayPlayer Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_FollowSearch<br/>
 /// (size = 952)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_FollowSearch : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {

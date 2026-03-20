@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSpecialMoveInstance<br/>
+/// ABSTRACT Class: RSpecialMoveInstance<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RSpecialMoveInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSpecialMoveInstance : BmSDK.Engine.Actor, BmSDK.IGameObjec
     }
 
     internal RSpecialMoveInstance() { }
-
-    /// <summary>
-    /// Constructs a new RSpecialMoveInstance
-    /// </summary>
-    public RSpecialMoveInstance(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

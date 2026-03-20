@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBatmobilePredictor<br/>
 /// (size = 7664)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class RVehicleBatmobilePredictor : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject
 {

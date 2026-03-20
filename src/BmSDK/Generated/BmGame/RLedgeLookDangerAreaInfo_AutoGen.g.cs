@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLedgeLookDangerAreaInfo_AutoGen<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RLedgeLookDangerAreaInfo_AutoGen : BmSDK.BmGame.RLedgeLookDangerAreaInfo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Trigger_PawnsOnly<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class Trigger_PawnsOnly : BmSDK.Engine.Trigger, BmSDK.IGameObject
 {

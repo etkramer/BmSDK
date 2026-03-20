@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGargoyleBombBase<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RGargoyleBombBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

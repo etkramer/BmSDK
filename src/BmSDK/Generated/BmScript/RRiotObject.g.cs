@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RRiotObject<br/>
 /// (size = 848)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRiotObject : BmSDK.BmGame.RRiotObjectBase, BmSDK.IGameObject
 {

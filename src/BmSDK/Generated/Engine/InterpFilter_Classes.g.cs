@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpFilter_Classes<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class InterpFilter_Classes : BmSDK.Engine.InterpFilter, BmSDK.IGameObject
 {

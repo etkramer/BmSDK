@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkLightEmitter<br/>
 /// (size = 804)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkLightEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObject
 {

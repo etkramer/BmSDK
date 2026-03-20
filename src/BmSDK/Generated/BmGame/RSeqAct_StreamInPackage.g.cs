@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_StreamInPackage<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_StreamInPackage : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

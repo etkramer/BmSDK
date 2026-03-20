@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackFade<br/>
 /// (size = 260)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackFade : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject
 {

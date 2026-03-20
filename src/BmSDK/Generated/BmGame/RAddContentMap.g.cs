@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAddContentMap<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RAddContentMap : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPawnPlayerBm<br/>
 /// (size = 10360)
-/// (flags = 0)
+/// (flags = 10486326)
 /// </summary>
 public partial class RPawnPlayerBm : BmSDK.BmGame.RPawnPlayerBmBase, BmSDK.IGameObject
 {

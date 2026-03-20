@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieModularHud_Disposable<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieModularHud_Disposable : BmSDK.BmGame.RGFxMovieModularHudBase, BmSDK.IGameObject
 {

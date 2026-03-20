@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorChannel<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class ActorChannel : BmSDK.Engine.Channel, BmSDK.IGameObject
 {

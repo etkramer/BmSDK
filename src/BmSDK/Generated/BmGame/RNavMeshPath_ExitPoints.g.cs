@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshPath_ExitPoints<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RNavMeshPath_ExitPoints : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
 {

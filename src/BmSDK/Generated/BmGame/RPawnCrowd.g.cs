@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnCrowd<br/>
 /// (size = 4640)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class RPawnCrowd : BmSDK.BmGame.RBMPawnAI, BmSDK.IGameObject
 {

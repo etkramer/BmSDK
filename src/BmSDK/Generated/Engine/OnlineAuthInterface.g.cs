@@ -4,111 +4,41 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: OnlineAuthInterface<br/>
+/// Interface: OnlineAuthInterface<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134234259)
 /// </summary>
-public partial class OnlineAuthInterface : BmSDK.Interface, BmSDK.IGameObject
+public partial interface OnlineAuthInterface : BmSDK.Interface
 {
-    static BmSDK.Class s_staticClass = null;
-    public static BmSDK.Class StaticClass()
-    {
-        if (s_staticClass is null)
-        {
-            s_staticClass = StaticFindObjectChecked<Class>(null, null, "Engine.OnlineAuthInterface", false);
-            s_staticClass.AddToRoot();
-        }
-        return s_staticClass;
-    }
-
-    internal OnlineAuthInterface() { }
-
-    /// <summary>
-    /// Constructs a new OnlineAuthInterface
-    /// </summary>
-    public OnlineAuthInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineAuthInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
-
-    /// <summary>
-    /// Constructs a new wrapper instance from the given object pointer.
-    /// </summary>
-    protected OnlineAuthInterface(nint ptr) : base(ptr) { }
-
     /// <summary>
     /// Function: GetServerAddr
     /// </summary>
-    public unsafe bool GetServerAddr(out int OutServerIP, out int OutServerPort)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.GetServerAddr", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutServerIP = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-        OutServerPort = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 4);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
+    public unsafe bool GetServerAddr(out int OutServerIP, out int OutServerPort);
 
     /// <summary>
     /// Function: GetServerUniqueId
     /// </summary>
-    public unsafe bool GetServerUniqueId(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId OutServerUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.GetServerUniqueId", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutServerUID = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineSubsystem.FUniqueNetId>(paramsPtr + 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
+    public unsafe bool GetServerUniqueId(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId OutServerUID);
 
     /// <summary>
     /// Function: FindLocalServerAuthSession
     /// </summary>
-    public unsafe bool FindLocalServerAuthSession(BmSDK.Engine.Player ClientConnection, out BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession OutSessionInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.FindLocalServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutSessionInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession>(paramsPtr + 8);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 28);
-    }
+    public unsafe bool FindLocalServerAuthSession(BmSDK.Engine.Player ClientConnection, out BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession OutSessionInfo);
 
     /// <summary>
     /// Function: FindServerAuthSession
     /// </summary>
-    public unsafe bool FindServerAuthSession(BmSDK.Engine.Player ServerConnection, out BmSDK.Engine.OnlineAuthInterface.FAuthSession OutSessionInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.FindServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutSessionInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineAuthInterface.FAuthSession>(paramsPtr + 8);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
-    }
+    public unsafe bool FindServerAuthSession(BmSDK.Engine.Player ServerConnection, out BmSDK.Engine.OnlineAuthInterface.FAuthSession OutSessionInfo);
 
     /// <summary>
     /// Function: FindLocalClientAuthSession
     /// </summary>
-    public unsafe bool FindLocalClientAuthSession(BmSDK.Engine.Player ServerConnection, out BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession OutSessionInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.FindLocalClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[32];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutSessionInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession>(paramsPtr + 8);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 28);
-    }
+    public unsafe bool FindLocalClientAuthSession(BmSDK.Engine.Player ServerConnection, out BmSDK.Engine.OnlineAuthInterface.FLocalAuthSession OutSessionInfo);
 
     /// <summary>
     /// Function: FindClientAuthSession
     /// </summary>
-    public unsafe bool FindClientAuthSession(BmSDK.Engine.Player ClientConnection, out BmSDK.Engine.OnlineAuthInterface.FAuthSession OutSessionInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.FindClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutSessionInfo = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.OnlineAuthInterface.FAuthSession>(paramsPtr + 8);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 32);
-    }
+    public unsafe bool FindClientAuthSession(BmSDK.Engine.Player ClientConnection, out BmSDK.Engine.OnlineAuthInterface.FAuthSession OutSessionInfo);
 
 
 
@@ -117,654 +47,262 @@ public partial class OnlineAuthInterface : BmSDK.Interface, BmSDK.IGameObject
     /// <summary>
     /// Function: EndAllRemoteServerAuthSessions
     /// </summary>
-    public unsafe void EndAllRemoteServerAuthSessions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndAllRemoteServerAuthSessions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndAllRemoteServerAuthSessions();
 
     /// <summary>
     /// Function: EndAllLocalServerAuthSessions
     /// </summary>
-    public unsafe void EndAllLocalServerAuthSessions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndAllLocalServerAuthSessions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndAllLocalServerAuthSessions();
 
     /// <summary>
     /// Function: EndRemoteServerAuthSession
     /// </summary>
-    public unsafe void EndRemoteServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndRemoteServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndRemoteServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP);
 
     /// <summary>
     /// Function: EndLocalServerAuthSession
     /// </summary>
-    public unsafe void EndLocalServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndLocalServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndLocalServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP);
 
     /// <summary>
     /// Function: VerifyServerAuthSession
     /// </summary>
-    public unsafe bool VerifyServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.VerifyServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
+    public unsafe bool VerifyServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID);
 
     /// <summary>
     /// Function: CreateServerAuthSession
     /// </summary>
-    public unsafe bool CreateServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, out int OutAuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.CreateServerAuthSession", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientPort, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutAuthTicketUID = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 16);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
-    }
+    public unsafe bool CreateServerAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, out int OutAuthTicketUID);
 
     /// <summary>
     /// Function: EndAllRemoteClientAuthSessions
     /// </summary>
-    public unsafe void EndAllRemoteClientAuthSessions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndAllRemoteClientAuthSessions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndAllRemoteClientAuthSessions();
 
     /// <summary>
     /// Function: EndAllLocalClientAuthSessions
     /// </summary>
-    public unsafe void EndAllLocalClientAuthSessions()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndAllLocalClientAuthSessions", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndAllLocalClientAuthSessions();
 
     /// <summary>
     /// Function: EndRemoteClientAuthSession
     /// </summary>
-    public unsafe void EndRemoteClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndRemoteClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndRemoteClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP);
 
     /// <summary>
     /// Function: EndLocalClientAuthSession
     /// </summary>
-    public unsafe void EndLocalClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.EndLocalClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerPort, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void EndLocalClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort);
 
     /// <summary>
     /// Function: VerifyClientAuthSession
     /// </summary>
-    public unsafe bool VerifyClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.VerifyClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientPort, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 20);
-    }
+    public unsafe bool VerifyClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort, int AuthTicketUID);
 
     /// <summary>
     /// Function: CreateClientAuthSession
     /// </summary>
-    public unsafe bool CreateClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure, out int OutAuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.CreateClientAuthSession", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerPort, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSecure, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        OutAuthTicketUID = BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 20);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 24);
-    }
+    public unsafe bool CreateClientAuthSession(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure, out int OutAuthTicketUID);
 
     /// <summary>
     /// Function: SendServerAuthRetryRequest
     /// </summary>
-    public unsafe bool SendServerAuthRetryRequest()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendServerAuthRetryRequest", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool SendServerAuthRetryRequest();
 
     /// <summary>
     /// Function: SendClientAuthEndSessionRequest
     /// </summary>
-    public unsafe bool SendClientAuthEndSessionRequest(BmSDK.Engine.Player ClientConnection)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendClientAuthEndSessionRequest", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
+    public unsafe bool SendClientAuthEndSessionRequest(BmSDK.Engine.Player ClientConnection);
 
     /// <summary>
     /// Function: SendServerAuthResponse
     /// </summary>
-    public unsafe bool SendServerAuthResponse(BmSDK.Engine.Player ClientConnection, int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendServerAuthResponse", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
-    }
+    public unsafe bool SendServerAuthResponse(BmSDK.Engine.Player ClientConnection, int AuthTicketUID);
 
     /// <summary>
     /// Function: SendClientAuthResponse
     /// </summary>
-    public unsafe bool SendClientAuthResponse(int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendClientAuthResponse", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool SendClientAuthResponse(int AuthTicketUID);
 
     /// <summary>
     /// Function: SendServerAuthRequest
     /// </summary>
-    public unsafe bool SendServerAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendServerAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 8);
-    }
+    public unsafe bool SendServerAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID);
 
     /// <summary>
     /// Function: SendClientAuthRequest
     /// </summary>
-    public unsafe bool SendClientAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.SendClientAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 16);
-    }
+    public unsafe bool SendClientAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID);
 
     /// <summary>
     /// Function: ClearServerConnectionCloseDelegate
     /// </summary>
-    public unsafe void ClearServerConnectionCloseDelegate(System.IntPtr ServerConnectionCloseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearServerConnectionCloseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnectionCloseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearServerConnectionCloseDelegate(System.IntPtr ServerConnectionCloseDelegate);
 
     /// <summary>
     /// Function: AddServerConnectionCloseDelegate
     /// </summary>
-    public unsafe void AddServerConnectionCloseDelegate(System.IntPtr ServerConnectionCloseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddServerConnectionCloseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnectionCloseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddServerConnectionCloseDelegate(System.IntPtr ServerConnectionCloseDelegate);
 
     /// <summary>
     /// Function: OnServerConnectionClose
     /// </summary>
-    public unsafe void OnServerConnectionClose(BmSDK.Engine.Player ServerConnection)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnServerConnectionClose", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnServerConnectionClose(BmSDK.Engine.Player ServerConnection);
 
     /// <summary>
     /// Function: ClearClientConnectionCloseDelegate
     /// </summary>
-    public unsafe void ClearClientConnectionCloseDelegate(System.IntPtr ClientConnectionCloseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearClientConnectionCloseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnectionCloseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearClientConnectionCloseDelegate(System.IntPtr ClientConnectionCloseDelegate);
 
     /// <summary>
     /// Function: AddClientConnectionCloseDelegate
     /// </summary>
-    public unsafe void AddClientConnectionCloseDelegate(System.IntPtr ClientConnectionCloseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddClientConnectionCloseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnectionCloseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddClientConnectionCloseDelegate(System.IntPtr ClientConnectionCloseDelegate);
 
     /// <summary>
     /// Function: OnClientConnectionClose
     /// </summary>
-    public unsafe void OnClientConnectionClose(BmSDK.Engine.Player ClientConnection)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnClientConnectionClose", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnClientConnectionClose(BmSDK.Engine.Player ClientConnection);
 
     /// <summary>
     /// Function: ClearServerAuthRetryRequestDelegate
     /// </summary>
-    public unsafe void ClearServerAuthRetryRequestDelegate(System.IntPtr ServerAuthRetryRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearServerAuthRetryRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthRetryRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearServerAuthRetryRequestDelegate(System.IntPtr ServerAuthRetryRequestDelegate);
 
     /// <summary>
     /// Function: AddServerAuthRetryRequestDelegate
     /// </summary>
-    public unsafe void AddServerAuthRetryRequestDelegate(System.IntPtr ServerAuthRetryRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddServerAuthRetryRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthRetryRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddServerAuthRetryRequestDelegate(System.IntPtr ServerAuthRetryRequestDelegate);
 
     /// <summary>
     /// Function: OnServerAuthRetryRequest
     /// </summary>
-    public unsafe void OnServerAuthRetryRequest(BmSDK.Engine.Player ClientConnection)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnServerAuthRetryRequest", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnServerAuthRetryRequest(BmSDK.Engine.Player ClientConnection);
 
     /// <summary>
     /// Function: ClearClientAuthEndSessionRequestDelegate
     /// </summary>
-    public unsafe void ClearClientAuthEndSessionRequestDelegate(System.IntPtr ClientAuthEndSessionRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearClientAuthEndSessionRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthEndSessionRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearClientAuthEndSessionRequestDelegate(System.IntPtr ClientAuthEndSessionRequestDelegate);
 
     /// <summary>
     /// Function: AddClientAuthEndSessionRequestDelegate
     /// </summary>
-    public unsafe void AddClientAuthEndSessionRequestDelegate(System.IntPtr ClientAuthEndSessionRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddClientAuthEndSessionRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthEndSessionRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddClientAuthEndSessionRequestDelegate(System.IntPtr ClientAuthEndSessionRequestDelegate);
 
     /// <summary>
     /// Function: OnClientAuthEndSessionRequest
     /// </summary>
-    public unsafe void OnClientAuthEndSessionRequest(BmSDK.Engine.Player ServerConnection)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnClientAuthEndSessionRequest", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnection, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnClientAuthEndSessionRequest(BmSDK.Engine.Player ServerConnection);
 
     /// <summary>
     /// Function: ClearServerAuthCompleteDelegate
     /// </summary>
-    public unsafe void ClearServerAuthCompleteDelegate(System.IntPtr ServerAuthCompleteDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearServerAuthCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthCompleteDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearServerAuthCompleteDelegate(System.IntPtr ServerAuthCompleteDelegate);
 
     /// <summary>
     /// Function: AddServerAuthCompleteDelegate
     /// </summary>
-    public unsafe void AddServerAuthCompleteDelegate(System.IntPtr ServerAuthCompleteDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddServerAuthCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthCompleteDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddServerAuthCompleteDelegate(System.IntPtr ServerAuthCompleteDelegate);
 
     /// <summary>
     /// Function: OnServerAuthComplete
     /// </summary>
-    public unsafe void OnServerAuthComplete(bool bSuccess, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, BmSDK.Engine.Player ServerConnection, BmSDK.FString ExtraInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnServerAuthComplete", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSuccess, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerConnection, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExtraInfo, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnServerAuthComplete(bool bSuccess, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, BmSDK.Engine.Player ServerConnection, BmSDK.FString ExtraInfo);
 
     /// <summary>
     /// Function: ClearClientAuthCompleteDelegate
     /// </summary>
-    public unsafe void ClearClientAuthCompleteDelegate(System.IntPtr ClientAuthCompleteDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearClientAuthCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthCompleteDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearClientAuthCompleteDelegate(System.IntPtr ClientAuthCompleteDelegate);
 
     /// <summary>
     /// Function: AddClientAuthCompleteDelegate
     /// </summary>
-    public unsafe void AddClientAuthCompleteDelegate(System.IntPtr ClientAuthCompleteDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddClientAuthCompleteDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthCompleteDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddClientAuthCompleteDelegate(System.IntPtr ClientAuthCompleteDelegate);
 
     /// <summary>
     /// Function: OnClientAuthComplete
     /// </summary>
-    public unsafe void OnClientAuthComplete(bool bSuccess, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, BmSDK.Engine.Player ClientConnection, BmSDK.FString ExtraInfo)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnClientAuthComplete", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSuccess, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ExtraInfo, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnClientAuthComplete(bool bSuccess, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, BmSDK.Engine.Player ClientConnection, BmSDK.FString ExtraInfo);
 
     /// <summary>
     /// Function: ClearServerAuthResponseDelegate
     /// </summary>
-    public unsafe void ClearServerAuthResponseDelegate(System.IntPtr ServerAuthResponseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearServerAuthResponseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthResponseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearServerAuthResponseDelegate(System.IntPtr ServerAuthResponseDelegate);
 
     /// <summary>
     /// Function: AddServerAuthResponseDelegate
     /// </summary>
-    public unsafe void AddServerAuthResponseDelegate(System.IntPtr ServerAuthResponseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddServerAuthResponseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthResponseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddServerAuthResponseDelegate(System.IntPtr ServerAuthResponseDelegate);
 
     /// <summary>
     /// Function: OnServerAuthResponse
     /// </summary>
-    public unsafe void OnServerAuthResponse(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnServerAuthResponse", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnServerAuthResponse(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int AuthTicketUID);
 
     /// <summary>
     /// Function: ClearClientAuthResponseDelegate
     /// </summary>
-    public unsafe void ClearClientAuthResponseDelegate(System.IntPtr ClientAuthResponseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearClientAuthResponseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthResponseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearClientAuthResponseDelegate(System.IntPtr ClientAuthResponseDelegate);
 
     /// <summary>
     /// Function: AddClientAuthResponseDelegate
     /// </summary>
-    public unsafe void AddClientAuthResponseDelegate(System.IntPtr ClientAuthResponseDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddClientAuthResponseDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthResponseDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddClientAuthResponseDelegate(System.IntPtr ClientAuthResponseDelegate);
 
     /// <summary>
     /// Function: OnClientAuthResponse
     /// </summary>
-    public unsafe void OnClientAuthResponse(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int AuthTicketUID)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnClientAuthResponse", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthTicketUID, paramsPtr + 12);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnClientAuthResponse(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int AuthTicketUID);
 
     /// <summary>
     /// Function: ClearServerAuthRequestDelegate
     /// </summary>
-    public unsafe void ClearServerAuthRequestDelegate(System.IntPtr ServerAuthRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearServerAuthRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearServerAuthRequestDelegate(System.IntPtr ServerAuthRequestDelegate);
 
     /// <summary>
     /// Function: AddServerAuthRequestDelegate
     /// </summary>
-    public unsafe void AddServerAuthRequestDelegate(System.IntPtr ServerAuthRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddServerAuthRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerAuthRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddServerAuthRequestDelegate(System.IntPtr ServerAuthRequestDelegate);
 
     /// <summary>
     /// Function: OnServerAuthRequest
     /// </summary>
-    public unsafe void OnServerAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnServerAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[24];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientConnection, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientUID, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientIP, paramsPtr + 16);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientPort, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnServerAuthRequest(BmSDK.Engine.Player ClientConnection, BmSDK.Engine.OnlineSubsystem.FUniqueNetId ClientUID, int ClientIP, int ClientPort);
 
     /// <summary>
     /// Function: ClearClientAuthRequestDelegate
     /// </summary>
-    public unsafe void ClearClientAuthRequestDelegate(System.IntPtr ClientAuthRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearClientAuthRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearClientAuthRequestDelegate(System.IntPtr ClientAuthRequestDelegate);
 
     /// <summary>
     /// Function: AddClientAuthRequestDelegate
     /// </summary>
-    public unsafe void AddClientAuthRequestDelegate(System.IntPtr ClientAuthRequestDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddClientAuthRequestDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ClientAuthRequestDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddClientAuthRequestDelegate(System.IntPtr ClientAuthRequestDelegate);
 
     /// <summary>
     /// Function: OnClientAuthRequest
     /// </summary>
-    public unsafe void OnClientAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnClientAuthRequest", true);
-        byte* paramsPtr = stackalloc byte[20];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerUID, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerIP, paramsPtr + 8);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(ServerPort, paramsPtr + 12);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bSecure, paramsPtr + 16);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnClientAuthRequest(BmSDK.Engine.OnlineSubsystem.FUniqueNetId ServerUID, int ServerIP, int ServerPort, bool bSecure);
 
     /// <summary>
     /// Function: ClearAuthReadyDelegate
     /// </summary>
-    public unsafe void ClearAuthReadyDelegate(System.IntPtr AuthReadyDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.ClearAuthReadyDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthReadyDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void ClearAuthReadyDelegate(System.IntPtr AuthReadyDelegate);
 
     /// <summary>
     /// Function: AddAuthReadyDelegate
     /// </summary>
-    public unsafe void AddAuthReadyDelegate(System.IntPtr AuthReadyDelegate)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.AddAuthReadyDelegate", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(AuthReadyDelegate, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void AddAuthReadyDelegate(System.IntPtr AuthReadyDelegate);
 
     /// <summary>
     /// Function: OnAuthReady
     /// </summary>
-    public unsafe void OnAuthReady()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.OnAuthReady", true);
-        byte* paramsPtr = stackalloc byte[0];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnAuthReady();
 
     /// <summary>
     /// Function: IsReady
     /// </summary>
-    public unsafe bool IsReady()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineAuthInterface.IsReady", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool IsReady();
 
     /// <summary>
     /// Struct: FAuthSession

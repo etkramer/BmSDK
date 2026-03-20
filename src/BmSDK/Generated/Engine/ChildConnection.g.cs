@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ChildConnection<br/>
 /// (size = 44800)
-/// (flags = 0)
+/// (flags = 268435596)
 /// </summary>
 public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameObject
 {
@@ -33,12 +33,4 @@ public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameOb
     /// </summary>
     protected ChildConnection(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: Parent
-    /// </summary>
-    public unsafe BmSDK.Engine.NetConnection Parent
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.NetConnection>(Ptr + 44792); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 44792); }
-    }
 }

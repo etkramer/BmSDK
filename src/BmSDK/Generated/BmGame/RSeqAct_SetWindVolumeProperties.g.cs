@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetWindVolumeProperties<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SetWindVolumeProperties : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

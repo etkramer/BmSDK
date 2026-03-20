@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_TakenDownDirectlyFromGrate<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_TakenDownDirectlyFromGrate : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ROceanHeightBlockingVolume<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ROceanHeightBlockingVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMagneticBlastVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RMagneticBlastVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

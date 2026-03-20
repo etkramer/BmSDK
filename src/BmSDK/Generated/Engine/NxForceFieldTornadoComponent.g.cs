@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NxForceFieldTornadoComponent<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 2292199634)
 /// </summary>
 public partial class NxForceFieldTornadoComponent : BmSDK.Engine.NxForceFieldComponent, BmSDK.IGameObject
 {

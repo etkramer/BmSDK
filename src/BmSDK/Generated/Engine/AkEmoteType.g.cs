@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkEmoteType<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkEmoteType : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

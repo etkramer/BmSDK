@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqVar_RandomInt<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject
 {

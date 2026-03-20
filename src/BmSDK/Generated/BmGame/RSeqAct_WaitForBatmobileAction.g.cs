@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_WaitForBatmobileAction<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_WaitForBatmobileAction : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

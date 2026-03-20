@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour_JokerRooftopBase<br/>
+/// ABSTRACT Class: RBMBehaviour_JokerRooftopBase<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RBMBehaviour_JokerRooftopBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_JokerRooftopBase : BmSDK.BmGame.RBMBehaviour, 
     }
 
     internal RBMBehaviour_JokerRooftopBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_JokerRooftopBase
-    /// </summary>
-    public RBMBehaviour_JokerRooftopBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_JokerRooftopBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

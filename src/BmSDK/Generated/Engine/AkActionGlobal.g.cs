@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkActionGlobal<br/>
+/// ABSTRACT Class: AkActionGlobal<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class AkActionGlobal : BmSDK.Engine.AkAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkActionGlobal : BmSDK.Engine.AkAction, BmSDK.IGameObject
     }
 
     internal AkActionGlobal() { }
-
-    /// <summary>
-    /// Constructs a new AkActionGlobal
-    /// </summary>
-    public AkActionGlobal(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkActionGlobal Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

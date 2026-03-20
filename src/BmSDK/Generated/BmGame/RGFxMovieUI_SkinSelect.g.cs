@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieUI_SkinSelect<br/>
 /// (size = 1224)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieUI_SkinSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CameraModifier<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class CameraModifier : BmSDK.GameObject, BmSDK.IGameObject
 {

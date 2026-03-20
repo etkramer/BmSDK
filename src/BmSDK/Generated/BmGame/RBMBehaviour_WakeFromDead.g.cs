@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_WakeFromDead<br/>
 /// (size = 644)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_WakeFromDead : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.WinDrv;
 /// <summary>
 /// Class: WindowsClient<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 268435596)
 /// </summary>
 public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject
 {
@@ -33,21 +33,4 @@ public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject
     /// </summary>
     protected WindowsClient(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// IntProperty: AllowJoystickInput
-    /// </summary>
-    public unsafe int AllowJoystickInput
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<int>(Ptr + 560); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 560); }
-    }
-
-    /// <summary>
-    /// ClassProperty: AudioDeviceClass
-    /// </summary>
-    public unsafe BmSDK.Class AudioDeviceClass
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Class>(Ptr + 500); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 500); }
-    }
 }

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_KillPawnsInVolume<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_KillPawnsInVolume : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

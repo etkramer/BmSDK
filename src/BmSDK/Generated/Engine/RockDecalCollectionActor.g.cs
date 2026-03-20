@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockDecalCollectionActor<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703638)
 /// </summary>
 public partial class RockDecalCollectionActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

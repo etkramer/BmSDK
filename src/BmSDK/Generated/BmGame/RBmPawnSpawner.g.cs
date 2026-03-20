@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBmPawnSpawner<br/>
 /// (size = 732)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RBmPawnSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

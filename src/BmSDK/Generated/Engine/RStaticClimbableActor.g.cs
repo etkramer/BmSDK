@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RStaticClimbableActor<br/>
+/// ABSTRACT Class: RStaticClimbableActor<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObje
     }
 
     internal RStaticClimbableActor() { }
-
-    /// <summary>
-    /// Constructs a new RStaticClimbableActor
-    /// </summary>
-    public RStaticClimbableActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStaticClimbableActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

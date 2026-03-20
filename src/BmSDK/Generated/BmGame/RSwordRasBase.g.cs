@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSwordRasBase<br/>
+/// ABSTRACT Class: RSwordRasBase<br/>
 /// (size = 2112)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     }
 
     internal RSwordRasBase() { }
-
-    /// <summary>
-    /// Constructs a new RSwordRasBase
-    /// </summary>
-    public RSwordRasBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSwordRasBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

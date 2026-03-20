@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UISceneClient<br/>
+/// ABSTRACT Class: UISceneClient<br/>
 /// (size = 292)
-/// (flags = 0)
+/// (flags = 134217887)
 /// </summary>
 public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     }
 
     internal UISceneClient() { }
-
-    /// <summary>
-    /// Constructs a new UISceneClient
-    /// </summary>
-    public UISceneClient(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UISceneClient Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

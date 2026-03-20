@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAutoRescueCamera<br/>
 /// (size = 1276)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAutoRescueCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

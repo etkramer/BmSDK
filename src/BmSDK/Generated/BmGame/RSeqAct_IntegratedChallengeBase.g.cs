@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_IntegratedChallengeBase<br/>
+/// ABSTRACT Class: RSeqAct_IntegratedChallengeBase<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Laten
     }
 
     internal RSeqAct_IntegratedChallengeBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_IntegratedChallengeBase
-    /// </summary>
-    public RSeqAct_IntegratedChallengeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_IntegratedChallengeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

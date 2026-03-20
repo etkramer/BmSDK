@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCornerWallMarkerBase<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCornerWallMarkerBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

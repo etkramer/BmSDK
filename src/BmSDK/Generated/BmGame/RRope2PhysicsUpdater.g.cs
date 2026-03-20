@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RRope2PhysicsUpdater<br/>
+/// ABSTRACT Class: RRope2PhysicsUpdater<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 142610579)
 /// </summary>
 public partial class RRope2PhysicsUpdater : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RRope2PhysicsUpdater : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal RRope2PhysicsUpdater() { }
-
-    /// <summary>
-    /// Constructs a new RRope2PhysicsUpdater
-    /// </summary>
-    public RRope2PhysicsUpdater(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRope2PhysicsUpdater Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

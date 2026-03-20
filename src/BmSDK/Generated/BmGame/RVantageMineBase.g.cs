@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVantageMineBase<br/>
 /// (size = 856)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RVantageMineBase : BmSDK.BmGame.RMineBase, BmSDK.IGameObject
 {

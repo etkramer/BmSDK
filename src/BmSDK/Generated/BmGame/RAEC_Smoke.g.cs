@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Smoke<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Smoke : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

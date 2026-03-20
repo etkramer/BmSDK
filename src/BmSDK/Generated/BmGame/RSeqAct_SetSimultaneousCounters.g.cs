@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetSimultaneousCounters<br/>
 /// (size = 353)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetSimultaneousCounters : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

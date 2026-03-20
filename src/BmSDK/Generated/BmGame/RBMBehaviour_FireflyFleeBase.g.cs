@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour_FireflyFleeBase<br/>
+/// ABSTRACT Class: RBMBehaviour_FireflyFleeBase<br/>
 /// (size = 864)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_Mo
     }
 
     internal RBMBehaviour_FireflyFleeBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_FireflyFleeBase
-    /// </summary>
-    public RBMBehaviour_FireflyFleeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_FireflyFleeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

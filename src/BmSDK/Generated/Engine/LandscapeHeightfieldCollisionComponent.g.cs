@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LandscapeHeightfieldCollisionComponent<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class LandscapeHeightfieldCollisionComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

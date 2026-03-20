@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove<br/>
+/// ABSTRACT Class: RCombatMove<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCombatMove : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RCombatMove() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove
-    /// </summary>
-    public RCombatMove(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

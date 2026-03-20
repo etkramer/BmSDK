@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_CylindricalForceActor<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RB_CylindricalForceActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
 {

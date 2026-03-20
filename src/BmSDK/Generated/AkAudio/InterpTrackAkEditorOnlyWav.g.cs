@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: InterpTrackAkEditorOnlyWav<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackAkEditorOnlyWav : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

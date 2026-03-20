@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ToggleConstraintDrive<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_ToggleConstraintDrive : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

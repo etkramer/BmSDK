@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_TakeoverVideoScreenVisibleBase<br/>
+/// ABSTRACT Class: RSeqAct_TakeoverVideoScreenVisibleBase<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_TakeoverVideoScreenVisibleBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_TakeoverVideoScreenVisibleBase : BmSDK.Engine.Seque
     }
 
     internal RSeqAct_TakeoverVideoScreenVisibleBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_TakeoverVideoScreenVisibleBase
-    /// </summary>
-    public RSeqAct_TakeoverVideoScreenVisibleBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_TakeoverVideoScreenVisibleBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

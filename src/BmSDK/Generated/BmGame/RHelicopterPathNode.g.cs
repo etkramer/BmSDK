@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHelicopterPathNode<br/>
 /// (size = 952)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RHelicopterPathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
 {

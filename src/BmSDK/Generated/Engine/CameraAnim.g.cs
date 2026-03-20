@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CameraAnim<br/>
 /// (size = 664)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class CameraAnim : BmSDK.GameObject, BmSDK.IGameObject
 {

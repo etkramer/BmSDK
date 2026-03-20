@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NxForceFieldCylindricalComponent<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 2292199634)
 /// </summary>
 public partial class NxForceFieldCylindricalComponent : BmSDK.Engine.NxForceFieldComponent, BmSDK.IGameObject
 {

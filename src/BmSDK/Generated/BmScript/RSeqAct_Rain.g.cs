@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_Rain<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_Rain : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

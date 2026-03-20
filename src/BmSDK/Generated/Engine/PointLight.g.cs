@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PointLight<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class PointLight : BmSDK.Engine.Light, BmSDK.IGameObject
 {

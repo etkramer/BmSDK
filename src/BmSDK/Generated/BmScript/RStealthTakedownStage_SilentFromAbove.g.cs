@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RStealthTakedownStage_SilentFromAbove<br/>
 /// (size = 1700)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_SilentFromAbove : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

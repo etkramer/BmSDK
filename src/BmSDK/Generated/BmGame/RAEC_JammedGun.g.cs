@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_JammedGun<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_JammedGun : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

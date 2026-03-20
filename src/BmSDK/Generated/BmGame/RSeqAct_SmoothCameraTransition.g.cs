@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SmoothCameraTransition<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SmoothCameraTransition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

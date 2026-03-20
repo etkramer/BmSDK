@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdSpawner_BatAttract<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCrowdSpawner_BatAttract : BmSDK.BmGame.RCrowdSpawner_XPBats, BmSDK.IGameObject
 {

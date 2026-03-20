@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFireExtinguisherTrapBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RFireExtinguisherTrapBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

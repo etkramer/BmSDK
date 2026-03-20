@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMultiCharacterCinematicActor<br/>
 /// (size = 860)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
 {

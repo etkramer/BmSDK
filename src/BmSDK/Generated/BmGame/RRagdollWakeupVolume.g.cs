@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRagdollWakeupVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRagdollWakeupVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

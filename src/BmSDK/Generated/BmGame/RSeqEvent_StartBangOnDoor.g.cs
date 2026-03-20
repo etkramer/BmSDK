@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqEvent_StartBangOnDoor<br/>
+/// ABSTRACT Class: RSeqEvent_StartBangOnDoor<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RSeqEvent_StartBangOnDoor : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqEvent_StartBangOnDoor : BmSDK.BmGame.RBMSeqEvent_Behavi
     }
 
     internal RSeqEvent_StartBangOnDoor() { }
-
-    /// <summary>
-    /// Constructs a new RSeqEvent_StartBangOnDoor
-    /// </summary>
-    public RSeqEvent_StartBangOnDoor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqEvent_StartBangOnDoor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Sub_IceBreaker<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Sub_IceBreaker : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_FriendlyPatrolNavMesh<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_FriendlyPatrolNavMesh : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject
 {

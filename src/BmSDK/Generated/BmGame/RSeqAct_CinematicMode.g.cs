@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_CinematicMode<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqAct_CinematicMode : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

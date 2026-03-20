@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLevelVolumeOW<br/>
 /// (size = 1168)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RLevelVolumeOW : BmSDK.BmGame.RLevelVolume, BmSDK.IGameObject
 {

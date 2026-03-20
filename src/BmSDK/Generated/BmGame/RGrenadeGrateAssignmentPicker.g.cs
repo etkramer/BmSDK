@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGrenadeGrateAssignmentPicker<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 8388626)
 /// </summary>
 public partial class RGrenadeGrateAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPicker, BmSDK.IGameObject
 {

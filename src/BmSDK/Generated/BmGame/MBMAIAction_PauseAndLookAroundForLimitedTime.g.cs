@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MBMAIAction_PauseAndLookAroundForLimitedTime<br/>
 /// (size = 872)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MBMAIAction_PauseAndLookAroundForLimitedTime : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

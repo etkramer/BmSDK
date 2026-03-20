@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqCond_CompareInt<br/>
 /// (size = 332)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqCond_CompareInt : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

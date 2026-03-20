@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_StartInterrogation<br/>
 /// (size = 512)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_StartInterrogation : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

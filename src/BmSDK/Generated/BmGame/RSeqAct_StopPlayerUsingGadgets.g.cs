@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_StopPlayerUsingGadgets<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_StopPlayerUsingGadgets : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

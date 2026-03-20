@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCombatDamageProxy<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBMCombatDamageProxy : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

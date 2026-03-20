@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieUI_PauseOptionsGraphics<br/>
 /// (size = 1708)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieUI_PauseOptionsGraphics : BmSDK.BmGame.RGFxMovieUI_PauseBase, BmSDK.IGameObject
 {

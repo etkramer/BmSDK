@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: FracturedBaseComponent<br/>
+/// ABSTRACT Class: FracturedBaseComponent<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 2290094291)
 /// </summary>
 public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class FracturedBaseComponent : BmSDK.Engine.StaticMeshComponent, 
     }
 
     internal FracturedBaseComponent() { }
-
-    /// <summary>
-    /// Constructs a new FracturedBaseComponent
-    /// </summary>
-    public FracturedBaseComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, FracturedBaseComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

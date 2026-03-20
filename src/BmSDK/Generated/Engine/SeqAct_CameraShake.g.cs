@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_CameraShake<br/>
 /// (size = 389)
-/// (flags = 0)
+/// (flags = 136323218)
 /// </summary>
 public partial class SeqAct_CameraShake : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

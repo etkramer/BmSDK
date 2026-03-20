@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_MatineeControlled<br/>
 /// (size = 592)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_MatineeControlled : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject
 {

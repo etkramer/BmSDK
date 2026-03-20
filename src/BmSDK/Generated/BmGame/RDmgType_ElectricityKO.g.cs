@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_ElectricityKO<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_ElectricityKO : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject
 {

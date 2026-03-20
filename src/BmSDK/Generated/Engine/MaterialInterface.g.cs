@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MaterialInterface<br/>
+/// ABSTRACT Class: MaterialInterface<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject
     }
 
     internal MaterialInterface() { }
-
-    /// <summary>
-    /// Constructs a new MaterialInterface
-    /// </summary>
-    public MaterialInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MaterialInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

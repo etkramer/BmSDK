@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PauseCheckVerts<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PauseCheckVerts : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

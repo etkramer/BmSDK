@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPredHideFromBatmobilePoint<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPredHideFromBatmobilePoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

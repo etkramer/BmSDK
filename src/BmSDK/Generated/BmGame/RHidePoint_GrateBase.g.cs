@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHidePoint_GrateBase<br/>
 /// (size = 1560)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RHidePoint_GrateBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVisualDamageComponent<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

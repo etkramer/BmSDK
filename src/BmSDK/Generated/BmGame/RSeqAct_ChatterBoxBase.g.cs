@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_ChatterBoxBase<br/>
+/// ABSTRACT Class: RSeqAct_ChatterBoxBase<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 201334935)
 /// </summary>
 public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_ChatterBoxBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     }
 
     internal RSeqAct_ChatterBoxBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_ChatterBoxBase
-    /// </summary>
-    public RSeqAct_ChatterBoxBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_ChatterBoxBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPatrolPoint<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPatrolPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

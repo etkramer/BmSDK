@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_Ragdoll<br/>
 /// (size = 900)
-/// (flags = 0)
+/// (flags = 142614674)
 /// </summary>
 public partial class RBMBehaviour_Ragdoll : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

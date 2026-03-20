@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_BeingTakenDown<br/>
 /// (size = 596)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_BeingTakenDown : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject
 {

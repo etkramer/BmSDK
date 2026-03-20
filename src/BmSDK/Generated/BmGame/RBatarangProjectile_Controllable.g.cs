@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBatarangProjectile_Controllable<br/>
+/// ABSTRACT Class: RBatarangProjectile_Controllable<br/>
 /// (size = 1632)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangProjectile, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBatarangProjectile_Controllable : BmSDK.BmGame.RBatarangPr
     }
 
     internal RBatarangProjectile_Controllable() { }
-
-    /// <summary>
-    /// Constructs a new RBatarangProjectile_Controllable
-    /// </summary>
-    public RBatarangProjectile_Controllable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatarangProjectile_Controllable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

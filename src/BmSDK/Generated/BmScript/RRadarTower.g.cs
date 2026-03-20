@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RRadarTower<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRadarTower : BmSDK.BmGame.RRadarTowerBase, BmSDK.IGameObject
 {

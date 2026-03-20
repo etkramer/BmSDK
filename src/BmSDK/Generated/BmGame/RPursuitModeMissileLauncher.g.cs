@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPursuitModeMissileLauncher<br/>
 /// (size = 2468)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class RPursuitModeMissileLauncher : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

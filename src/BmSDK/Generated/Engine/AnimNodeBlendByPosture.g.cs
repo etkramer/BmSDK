@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeBlendByPosture<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimNodeBlendByPosture : BmSDK.Engine.AnimNodeBlendList, BmSDK.IGameObject
 {

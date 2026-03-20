@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMWaveController<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMWaveController : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

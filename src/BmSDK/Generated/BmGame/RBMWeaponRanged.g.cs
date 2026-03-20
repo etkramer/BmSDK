@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponRanged<br/>
+/// ABSTRACT Class: RBMWeaponRanged<br/>
 /// (size = 1913)
-/// (flags = 0)
+/// (flags = 211812531)
 /// </summary>
 public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponRanged : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
     }
 
     internal RBMWeaponRanged() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponRanged
-    /// </summary>
-    public RBMWeaponRanged(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponRanged Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqEvent_LOS<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class SeqEvent_LOS : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

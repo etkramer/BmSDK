@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGIFrontend<br/>
 /// (size = 4568)
-/// (flags = 0)
+/// (flags = 144703670)
 /// </summary>
 public partial class RGIFrontend : BmSDK.BmGame.RGameInfo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVantagePointMovementCamera<br/>
 /// (size = 1372)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RVantagePointMovementCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

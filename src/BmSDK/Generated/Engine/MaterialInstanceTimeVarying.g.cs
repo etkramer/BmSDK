@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialInstanceTimeVarying<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance, BmSDK.IGameObject
 {

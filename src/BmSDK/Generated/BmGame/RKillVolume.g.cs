@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RKillVolume<br/>
 /// (size = 816)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

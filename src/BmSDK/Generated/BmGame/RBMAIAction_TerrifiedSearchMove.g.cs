@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_TerrifiedSearchMove<br/>
 /// (size = 936)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_TerrifiedSearchMove : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {

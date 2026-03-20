@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CylinderComponent<br/>
 /// (size = 560)
-/// (flags = 0)
+/// (flags = 2155885010)
 /// </summary>
 public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

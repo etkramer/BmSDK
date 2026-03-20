@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Sub_Hostage<br/>
 /// (size = 716)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Sub_Hostage : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

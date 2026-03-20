@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHelicopterIntermediateBase<br/>
 /// (size = 2496)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase, BmSDK.IGameObject
 {

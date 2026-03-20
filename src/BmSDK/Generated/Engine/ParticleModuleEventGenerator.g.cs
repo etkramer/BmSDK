@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleEventGenerator<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleEventGenerator : BmSDK.Engine.ParticleModuleEventBase, BmSDK.IGameObject
 {

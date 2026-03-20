@@ -4,9 +4,9 @@
 namespace BmSDK.IpDrv;
 
 /// <summary>
-/// Class: OnlineSubsystemCommonImpl<br/>
+/// ABSTRACT Class: OnlineSubsystemCommonImpl<br/>
 /// (size = 632)
-/// (flags = 0)
+/// (flags = 134217879)
 /// </summary>
 public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     }
 
     internal OnlineSubsystemCommonImpl() { }
-
-    /// <summary>
-    /// Constructs a new OnlineSubsystemCommonImpl
-    /// </summary>
-    public OnlineSubsystemCommonImpl(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineSubsystemCommonImpl Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

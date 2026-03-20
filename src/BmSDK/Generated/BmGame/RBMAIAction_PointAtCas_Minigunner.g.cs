@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PointAtCas_Minigunner<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PointAtCas_Minigunner : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

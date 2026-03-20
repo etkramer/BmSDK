@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour_MultiPositionalTalkingBase<br/>
+/// ABSTRACT Class: RBMBehaviour_MultiPositionalTalkingBase<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RBMBehaviour_MultiPositionalTalkingBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_MultiPositionalTalkingBase : BmSDK.BmGame.RBMB
     }
 
     internal RBMBehaviour_MultiPositionalTalkingBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_MultiPositionalTalkingBase
-    /// </summary>
-    public RBMBehaviour_MultiPositionalTalkingBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_MultiPositionalTalkingBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

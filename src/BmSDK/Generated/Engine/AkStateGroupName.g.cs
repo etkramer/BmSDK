@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkStateGroupName<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkStateGroupName : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

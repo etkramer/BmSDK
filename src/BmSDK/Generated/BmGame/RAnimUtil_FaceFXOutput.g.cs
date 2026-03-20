@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimUtil_FaceFXOutput<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAnimUtil_FaceFXOutput : BmSDK.GameObject, BmSDK.IGameObject
 {

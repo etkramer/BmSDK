@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_IdleConfigSolo<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_IdleConfigSolo : BmSDK.BmGame.RAEC_DummySolo, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieGenericError<br/>
 /// (size = 1164)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieGenericError : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject
 {

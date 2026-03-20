@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLevelTransitionDoorBunkerNativeBase<br/>
 /// (size = 796)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RLevelTransitionDoorBunkerNativeBase : BmSDK.BmGame.RLevelTransition, BmSDK.IGameObject
 {

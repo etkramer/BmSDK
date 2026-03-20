@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkAsset<br/>
+/// ABSTRACT Class: AkAsset<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkAsset : BmSDK.Engine.AkHash, BmSDK.IGameObject
     }
 
     internal AkAsset() { }
-
-    /// <summary>
-    /// Constructs a new AkAsset
-    /// </summary>
-    public AkAsset(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkAsset Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

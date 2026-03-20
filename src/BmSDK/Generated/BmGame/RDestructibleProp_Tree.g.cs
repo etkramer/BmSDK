@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDestructibleProp_Tree<br/>
 /// (size = 1740)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDestructibleProp_Tree : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject
 {

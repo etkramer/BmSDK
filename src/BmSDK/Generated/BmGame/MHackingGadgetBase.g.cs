@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MHackingGadgetBase<br/>
 /// (size = 2244)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {

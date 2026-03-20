@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAbandonedVehicle<br/>
 /// (size = 2568)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RAbandonedVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
 {

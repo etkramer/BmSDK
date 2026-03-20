@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeapon<br/>
+/// ABSTRACT Class: RBMWeapon<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     }
 
     internal RBMWeapon() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeapon
-    /// </summary>
-    public RBMWeapon(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeapon Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

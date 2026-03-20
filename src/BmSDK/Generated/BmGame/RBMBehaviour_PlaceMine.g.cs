@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_PlaceMine<br/>
 /// (size = 596)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_PlaceMine : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

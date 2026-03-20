@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RainMapComponent<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RainMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

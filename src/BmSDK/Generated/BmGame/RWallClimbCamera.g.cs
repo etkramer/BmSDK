@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWallClimbCamera<br/>
 /// (size = 1596)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RWallClimbCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

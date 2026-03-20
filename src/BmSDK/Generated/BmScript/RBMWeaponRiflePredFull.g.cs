@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMWeaponRiflePredFull<br/>
 /// (size = 1940)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBMWeaponRiflePredFull : BmSDK.BmGame.RBMWeaponRiflePredThug, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCharacterRandom<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 201326738)
 /// </summary>
 public partial class RCharacterRandom : BmSDK.BmGame.RCharacter, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_OverworldSpawnerBase<br/>
+/// ABSTRACT Class: RSeqAct_OverworldSpawnerBase<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 167780499)
 /// </summary>
 public partial class RSeqAct_OverworldSpawnerBase : BmSDK.BmGame.RSeqAct_CombatSpawnerBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_OverworldSpawnerBase : BmSDK.BmGame.RSeqAct_CombatS
     }
 
     internal RSeqAct_OverworldSpawnerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_OverworldSpawnerBase
-    /// </summary>
-    public RSeqAct_OverworldSpawnerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_OverworldSpawnerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

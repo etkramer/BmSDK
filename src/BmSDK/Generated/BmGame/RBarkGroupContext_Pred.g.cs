@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkGroupContext_Pred<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 8388626)
 /// </summary>
 public partial class RBarkGroupContext_Pred : BmSDK.BmGame.RBarkGroupContext, BmSDK.IGameObject
 {

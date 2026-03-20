@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPlayerControllerCombat<br/>
 /// (size = 9000)
-/// (flags = 0)
+/// (flags = 144703638)
 /// </summary>
 public partial class RPlayerControllerCombat : BmSDK.BmGame.RPlayerController, BmSDK.IGameObject
 {

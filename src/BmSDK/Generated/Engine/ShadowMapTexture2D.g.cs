@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ShadowMapTexture2D<br/>
 /// (size = 500)
-/// (flags = 0)
+/// (flags = 402)
 /// </summary>
 public partial class ShadowMapTexture2D : BmSDK.Engine.Texture2D, BmSDK.IGameObject
 {

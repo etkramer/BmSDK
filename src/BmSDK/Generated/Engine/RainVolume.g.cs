@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RainVolume<br/>
 /// (size = 964)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RainVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IGameObject
 {

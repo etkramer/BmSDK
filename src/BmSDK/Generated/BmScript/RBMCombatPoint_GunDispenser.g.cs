@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RBMCombatPoint_GunDispenser<br/>
+/// ABSTRACT Class: RBMCombatPoint_GunDispenser<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_GunDispenserBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatPoint_GunDispenser : BmSDK.BmGame.RBMCombatPoint_G
     }
 
     internal RBMCombatPoint_GunDispenser() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatPoint_GunDispenser
-    /// </summary>
-    public RBMCombatPoint_GunDispenser(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_GunDispenser Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

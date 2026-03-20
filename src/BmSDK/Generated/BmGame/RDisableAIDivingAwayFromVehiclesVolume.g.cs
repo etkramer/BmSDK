@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDisableAIDivingAwayFromVehiclesVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDisableAIDivingAwayFromVehiclesVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

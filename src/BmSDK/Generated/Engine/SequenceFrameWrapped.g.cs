@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SequenceFrameWrapped<br/>
 /// (size = 264)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SequenceFrameWrapped : BmSDK.Engine.SequenceFrame, BmSDK.IGameObject
 {

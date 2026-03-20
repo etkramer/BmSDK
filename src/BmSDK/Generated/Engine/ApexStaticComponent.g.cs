@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexStaticComponent<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class ApexStaticComponent : BmSDK.Engine.ApexComponentBase, BmSDK.IGameObject
 {

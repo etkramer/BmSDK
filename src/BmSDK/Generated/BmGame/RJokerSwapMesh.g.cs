@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerSwapMesh<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RJokerSwapMesh : BmSDK.BmGame.RJokerSwappableBase, BmSDK.IGameObject
 {

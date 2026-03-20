@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLockinVolume<br/>
 /// (size = 804)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RLockinVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

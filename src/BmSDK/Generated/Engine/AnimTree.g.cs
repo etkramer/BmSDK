@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimTree<br/>
 /// (size = 636)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionRound<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionRound : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

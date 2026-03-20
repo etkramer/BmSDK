@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDestructibleProp_LampPost<br/>
 /// (size = 1744)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDestructibleProp_LampPost : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject
 {

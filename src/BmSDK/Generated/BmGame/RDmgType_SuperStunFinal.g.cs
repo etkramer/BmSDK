@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_SuperStunFinal<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_SuperStunFinal : BmSDK.BmGame.RDmgType_SuperStun, BmSDK.IGameObject
 {

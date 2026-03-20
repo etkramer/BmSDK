@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieModularHud_TargetsEtc<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieModularHud_TargetsEtc : BmSDK.BmGame.RGFxMovieModularHudBase, BmSDK.IGameObject
 {

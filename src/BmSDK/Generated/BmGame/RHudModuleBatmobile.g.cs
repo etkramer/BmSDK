@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleBatmobile<br/>
 /// (size = 660)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleBatmobile : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

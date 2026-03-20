@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_ChatterBox<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 8214)
 /// </summary>
 public partial class RSeqAct_ChatterBox : BmSDK.BmGame.RSeqAct_ChatterBoxBase, BmSDK.IGameObject
 {

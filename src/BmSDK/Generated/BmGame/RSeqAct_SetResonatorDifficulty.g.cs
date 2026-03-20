@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetResonatorDifficulty<br/>
 /// (size = 364)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetResonatorDifficulty : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

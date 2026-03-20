@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_VoiceControl<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class RBMBehaviour_VoiceControl : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

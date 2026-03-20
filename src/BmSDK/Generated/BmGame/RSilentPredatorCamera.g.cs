@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSilentPredatorCamera<br/>
 /// (size = 1308)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSilentPredatorCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

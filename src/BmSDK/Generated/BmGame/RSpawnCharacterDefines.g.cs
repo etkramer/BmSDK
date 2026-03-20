@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpawnCharacterDefines<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RSpawnCharacterDefines : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

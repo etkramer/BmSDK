@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_MoveAndTransition<br/>
 /// (size = 948)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_MoveAndTransition : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {

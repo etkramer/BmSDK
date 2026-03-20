@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMDeathCutscene_FinalTakedownCam<br/>
 /// (size = 284)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBMDeathCutscene_FinalTakedownCam : BmSDK.BmGame.RBMDeathCutscene_Cam, BmSDK.IGameObject
 {

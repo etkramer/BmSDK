@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionParticleMacroUV<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionParticleMacroUV : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

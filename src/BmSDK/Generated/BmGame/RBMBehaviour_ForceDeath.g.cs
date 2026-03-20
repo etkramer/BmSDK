@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_ForceDeath<br/>
 /// (size = 592)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_ForceDeath : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

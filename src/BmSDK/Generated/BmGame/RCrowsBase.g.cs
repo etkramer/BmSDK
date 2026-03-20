@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCrowsBase<br/>
+/// ABSTRACT Class: RCrowsBase<br/>
 /// (size = 736)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCrowsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RCrowsBase() { }
-
-    /// <summary>
-    /// Constructs a new RCrowsBase
-    /// </summary>
-    public RCrowsBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCrowsBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

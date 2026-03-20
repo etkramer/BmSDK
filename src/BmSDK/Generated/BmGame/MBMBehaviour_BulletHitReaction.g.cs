@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MBMBehaviour_BulletHitReaction<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class MBMBehaviour_BulletHitReaction : BmSDK.BmGame.RBMBehaviour_HitReaction, BmSDK.IGameObject
 {

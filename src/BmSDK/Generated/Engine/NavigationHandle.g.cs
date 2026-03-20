@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavigationHandle<br/>
 /// (size = 444)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
 {

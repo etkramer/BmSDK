@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RSkeletalMeshDrivenMaterialParameterInstance<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSkeletalMeshDrivenMaterialParameterInstance : BmSDK.GameObject, BmSDK.IGameObject
 {

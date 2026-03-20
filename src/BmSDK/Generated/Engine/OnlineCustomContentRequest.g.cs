@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: OnlineCustomContentRequest<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class OnlineCustomContentRequest : BmSDK.GameObject, BmSDK.IGameObject
 {

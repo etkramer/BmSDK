@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MSpecialMoveConfig_PlaceJackInBox<br/>
 /// (size = 504)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class MSpecialMoveConfig_PlaceJackInBox : BmSDK.BmGame.RSpecialMoveConfig_PlaceActor, BmSDK.IGameObject
 {

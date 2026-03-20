@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Casualty_Sub_ShootCasDown<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Casualty_Sub_ShootCasDown : BmSDK.BmGame.RAEC_Casualty_Sub_Medic, BmSDK.IGameObject
 {

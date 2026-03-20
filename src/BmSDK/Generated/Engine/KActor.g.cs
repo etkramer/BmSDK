@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: KActor<br/>
 /// (size = 989)
-/// (flags = 0)
+/// (flags = 144706194)
 /// </summary>
 public partial class KActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
 {

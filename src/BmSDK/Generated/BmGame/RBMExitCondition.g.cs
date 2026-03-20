@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMExitCondition<br/>
+/// ABSTRACT Class: RBMExitCondition<br/>
 /// (size = 444)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     }
 
     internal RBMExitCondition() { }
-
-    /// <summary>
-    /// Constructs a new RBMExitCondition
-    /// </summary>
-    public RBMExitCondition(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMExitCondition Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

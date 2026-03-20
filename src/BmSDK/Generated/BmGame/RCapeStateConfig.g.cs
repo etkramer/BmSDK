@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCapeStateConfig<br/>
 /// (size = 296)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
 {

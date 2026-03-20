@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialogueSetTypePriority<br/>
 /// (size = 364)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialogueSetTypePriority : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

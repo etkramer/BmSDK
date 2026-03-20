@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPickupBaseBase<br/>
+/// ABSTRACT Class: RPickupBaseBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RPickupBaseBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPickupBaseBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RPickupBaseBase() { }
-
-    /// <summary>
-    /// Constructs a new RPickupBaseBase
-    /// </summary>
-    public RPickupBaseBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPickupBaseBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

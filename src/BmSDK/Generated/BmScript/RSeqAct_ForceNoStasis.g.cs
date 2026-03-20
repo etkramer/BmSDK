@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_ForceNoStasis<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ForceNoStasis : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

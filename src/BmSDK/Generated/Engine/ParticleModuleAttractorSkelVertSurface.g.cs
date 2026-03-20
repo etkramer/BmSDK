@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleAttractorSkelVertSurface<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleAttractorSkelVertSurface : BmSDK.Engine.ParticleModuleAttractorBase, BmSDK.IGameObject
 {

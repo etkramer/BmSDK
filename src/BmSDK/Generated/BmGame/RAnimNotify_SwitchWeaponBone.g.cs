@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_SwitchWeaponBone<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_SwitchWeaponBone : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

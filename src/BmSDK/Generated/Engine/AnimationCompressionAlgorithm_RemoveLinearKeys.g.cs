@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_RemoveLinearKeys<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_RemoveLinearKeys : BmSDK.Engine.AnimationCompressionAlgorithm, BmSDK.IGameObject
 {

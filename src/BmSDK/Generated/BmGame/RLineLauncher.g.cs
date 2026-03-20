@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RLineLauncher<br/>
+/// ABSTRACT Class: RLineLauncher<br/>
 /// (size = 2464)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RLineLauncher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     }
 
     internal RLineLauncher() { }
-
-    /// <summary>
-    /// Constructs a new RLineLauncher
-    /// </summary>
-    public RLineLauncher(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RLineLauncher Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkDialogueConversation<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
 {

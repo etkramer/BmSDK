@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LandscapeProxy<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class LandscapeProxy : BmSDK.Engine.Info, BmSDK.IGameObject
 {

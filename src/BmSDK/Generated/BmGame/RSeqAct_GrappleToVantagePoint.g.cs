@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_GrappleToVantagePoint<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_GrappleToVantagePoint : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

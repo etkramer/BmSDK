@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LocHelper<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class LocHelper : BmSDK.GameObject, BmSDK.IGameObject
 {

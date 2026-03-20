@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_EscapeStumble<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_EscapeStumble : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

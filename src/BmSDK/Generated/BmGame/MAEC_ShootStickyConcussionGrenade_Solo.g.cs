@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MAEC_ShootStickyConcussionGrenade_Solo<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MAEC_ShootStickyConcussionGrenade_Solo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBatDistractProjectile<br/>
+/// ABSTRACT Class: RBatDistractProjectile<br/>
 /// (size = 1404)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBatDistractProjectile : BmSDK.BmGame.RBatarangProjectile, 
     }
 
     internal RBatDistractProjectile() { }
-
-    /// <summary>
-    /// Constructs a new RBatDistractProjectile
-    /// </summary>
-    public RBatDistractProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatDistractProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

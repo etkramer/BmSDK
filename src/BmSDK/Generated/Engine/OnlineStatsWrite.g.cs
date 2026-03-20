@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: OnlineStatsWrite<br/>
+/// ABSTRACT Class: OnlineStatsWrite<br/>
 /// (size = 184)
-/// (flags = 0)
+/// (flags = 134217907)
 /// </summary>
 public partial class OnlineStatsWrite : BmSDK.Engine.OnlineStats, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class OnlineStatsWrite : BmSDK.Engine.OnlineStats, BmSDK.IGameObj
     }
 
     internal OnlineStatsWrite() { }
-
-    /// <summary>
-    /// Constructs a new OnlineStatsWrite
-    /// </summary>
-    public OnlineStatsWrite(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineStatsWrite Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

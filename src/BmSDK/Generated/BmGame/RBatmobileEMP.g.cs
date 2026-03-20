@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileEMP<br/>
 /// (size = 2552)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileEMP : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBatarangCameraVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBatarangCameraVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

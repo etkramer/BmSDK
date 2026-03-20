@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCheckpointBlockade<br/>
 /// (size = 856)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RCheckpointBlockade : BmSDK.BmGame.RCheckpointBlockadeBase, BmSDK.IGameObject
 {

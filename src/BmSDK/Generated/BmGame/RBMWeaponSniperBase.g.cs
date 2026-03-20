@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponSniperBase<br/>
+/// ABSTRACT Class: RBMWeaponSniperBase<br/>
 /// (size = 1916)
-/// (flags = 0)
+/// (flags = 10485811)
 /// </summary>
 public partial class RBMWeaponSniperBase : BmSDK.BmGame.RBMWeaponRanged, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponSniperBase : BmSDK.BmGame.RBMWeaponRanged, BmSDK.I
     }
 
     internal RBMWeaponSniperBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponSniperBase
-    /// </summary>
-    public RBMWeaponSniperBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponSniperBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

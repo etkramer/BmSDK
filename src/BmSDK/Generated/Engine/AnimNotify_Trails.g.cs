@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNotify_Trails<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 201339026)
 /// </summary>
 public partial class AnimNotify_Trails : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

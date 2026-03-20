@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleKillBase<br/>
+/// ABSTRACT Class: ParticleModuleKillBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleKillBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleKillBase : BmSDK.Engine.ParticleModule, BmSDK
     }
 
     internal ParticleModuleKillBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleKillBase
-    /// </summary>
-    public ParticleModuleKillBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleKillBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

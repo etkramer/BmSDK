@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMBehaviour_JokerRooftop<br/>
 /// (size = 600)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_JokerRooftop : BmSDK.BmGame.RBMBehaviour_JokerRooftopBase, BmSDK.IGameObject
 {

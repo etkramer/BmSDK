@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkDialogueTape<br/>
 /// (size = 260)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkDialogueTape : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

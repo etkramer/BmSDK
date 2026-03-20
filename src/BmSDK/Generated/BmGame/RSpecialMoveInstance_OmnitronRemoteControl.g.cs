@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_OmnitronRemoteControl<br/>
 /// (size = 964)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSpecialMoveInstance_OmnitronRemoteControl : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

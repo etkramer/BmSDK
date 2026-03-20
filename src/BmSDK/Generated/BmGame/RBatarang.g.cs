@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBatarang<br/>
+/// ABSTRACT Class: RBatarang<br/>
 /// (size = 2640)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBatarang : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     }
 
     internal RBatarang() { }
-
-    /// <summary>
-    /// Constructs a new RBatarang
-    /// </summary>
-    public RBatarang(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatarang Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Path_MinDistBetweenSpecsOfType<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class Path_MinDistBetweenSpecsOfType : BmSDK.Engine.PathConstraint, BmSDK.IGameObject
 {

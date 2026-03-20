@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGrinderVolume<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGrinderVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameObject
 {

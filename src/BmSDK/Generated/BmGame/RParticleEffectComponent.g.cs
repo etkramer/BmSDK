@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RParticleEffectComponent<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RParticleEffectComponent : BmSDK.BmGame.RPawnEffectComponent, BmSDK.IGameObject
 {

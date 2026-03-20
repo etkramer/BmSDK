@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: HUD<br/>
 /// (size = 1468)
-/// (flags = 0)
+/// (flags = 144703646)
 /// </summary>
 public partial class HUD : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

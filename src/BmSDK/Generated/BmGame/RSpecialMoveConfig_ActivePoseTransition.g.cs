@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSpecialMoveConfig_ActivePoseTransition<br/>
+/// ABSTRACT Class: RSpecialMoveConfig_ActivePoseTransition<br/>
 /// (size = 437)
-/// (flags = 0)
+/// (flags = 4115)
 /// </summary>
 public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSpecialMoveConfig_ActivePoseTransition : BmSDK.BmGame.RSpe
     }
 
     internal RSpecialMoveConfig_ActivePoseTransition() { }
-
-    /// <summary>
-    /// Constructs a new RSpecialMoveConfig_ActivePoseTransition
-    /// </summary>
-    public RSpecialMoveConfig_ActivePoseTransition(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveConfig_ActivePoseTransition Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

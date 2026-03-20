@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNode_Pose<br/>
 /// (size = 1640)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAnimNode_Pose : BmSDK.Engine.AnimNode, BmSDK.IGameObject
 {

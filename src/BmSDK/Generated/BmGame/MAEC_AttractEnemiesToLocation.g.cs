@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MAEC_AttractEnemiesToLocation<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MAEC_AttractEnemiesToLocation : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimSet<br/>
 /// (size = 532)
-/// (flags = 0)
+/// (flags = 136315026)
 /// </summary>
 public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkelControlDeformVehicle<br/>
 /// (size = 284)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RSkelControlDeformVehicle : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCinematicActor<br/>
+/// ABSTRACT Class: RCinematicActor<br/>
 /// (size = 948)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IG
     }
 
     internal RCinematicActor() { }
-
-    /// <summary>
-    /// Constructs a new RCinematicActor
-    /// </summary>
-    public RCinematicActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCinematicActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

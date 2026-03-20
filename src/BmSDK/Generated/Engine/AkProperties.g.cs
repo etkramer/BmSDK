@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkProperties<br/>
 /// (size = 184)
-/// (flags = 0)
+/// (flags = 136319122)
 /// </summary>
 public partial class AkProperties : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: WaterVolume<br/>
 /// (size = 860)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class WaterVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
 {

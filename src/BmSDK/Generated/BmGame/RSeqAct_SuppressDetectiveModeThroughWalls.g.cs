@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SuppressDetectiveModeThroughWalls<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SuppressDetectiveModeThroughWalls : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

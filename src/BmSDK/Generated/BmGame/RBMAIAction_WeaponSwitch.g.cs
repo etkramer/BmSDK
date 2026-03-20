@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_WeaponSwitch<br/>
+/// ABSTRACT Class: RBMAIAction_WeaponSwitch<br/>
 /// (size = 864)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_WeaponSwitch : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_WeaponSwitch : BmSDK.BmGame.RBMAIAction, BmSDK.
     }
 
     internal RBMAIAction_WeaponSwitch() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_WeaponSwitch
-    /// </summary>
-    public RBMAIAction_WeaponSwitch(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_WeaponSwitch Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

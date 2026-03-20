@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RIncendiaryGrenadeCharge_Base<br/>
+/// ABSTRACT Class: RIncendiaryGrenadeCharge_Base<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RIncendiaryGrenadeCharge_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RIncendiaryGrenadeCharge_Base : BmSDK.Engine.Actor, BmSDK.I
     }
 
     internal RIncendiaryGrenadeCharge_Base() { }
-
-    /// <summary>
-    /// Constructs a new RIncendiaryGrenadeCharge_Base
-    /// </summary>
-    public RIncendiaryGrenadeCharge_Base(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RIncendiaryGrenadeCharge_Base Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

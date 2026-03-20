@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_FireExSmokeBomb<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_FireExSmokeBomb : BmSDK.BmGame.RDmgType_SmokeBomb, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ApexForceFieldComponent<br/>
+/// ABSTRACT Class: ApexForceFieldComponent<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 2290094291)
 /// </summary>
 public partial class ApexForceFieldComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ApexForceFieldComponent : BmSDK.Engine.ApexFieldSamplerComp
     }
 
     internal ApexForceFieldComponent() { }
-
-    /// <summary>
-    /// Constructs a new ApexForceFieldComponent
-    /// </summary>
-    public ApexForceFieldComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ApexForceFieldComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

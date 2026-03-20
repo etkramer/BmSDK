@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkDrawBoundsComponent<br/>
 /// (size = 616)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class AkDrawBoundsComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

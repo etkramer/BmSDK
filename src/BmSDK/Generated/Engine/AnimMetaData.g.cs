@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimMetaData<br/>
+/// ABSTRACT Class: AnimMetaData<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class AnimMetaData : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimMetaData : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal AnimMetaData() { }
-
-    /// <summary>
-    /// Constructs a new AnimMetaData
-    /// </summary>
-    public AnimMetaData(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimMetaData Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

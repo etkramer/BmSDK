@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_StunPlayer<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_StunPlayer : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleSizeMultiplyVelocity<br/>
 /// (size = 188)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleSizeMultiplyVelocity : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject
 {

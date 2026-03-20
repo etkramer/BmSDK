@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileAllegianceSwitcher<br/>
 /// (size = 2592)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class RBatmobileAllegianceSwitcher : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_SetRandomPopulationBase<br/>
+/// ABSTRACT Class: RSeqAct_SetRandomPopulationBase<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_SetRandomPopulationBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_SetRandomPopulationBase : BmSDK.Engine.SequenceActi
     }
 
     internal RSeqAct_SetRandomPopulationBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_SetRandomPopulationBase
-    /// </summary>
-    public RSeqAct_SetRandomPopulationBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_SetRandomPopulationBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

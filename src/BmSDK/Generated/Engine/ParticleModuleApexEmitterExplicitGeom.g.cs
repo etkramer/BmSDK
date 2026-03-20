@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleApexEmitterExplicitGeom<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.ParticleModuleApexEmitterBase, BmSDK.IGameObject
 {

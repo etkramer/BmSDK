@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkCharacterDefInstance<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkCharacterDefInstance : BmSDK.GameObject, BmSDK.IGameObject
 {

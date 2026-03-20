@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionStaticSwitch<br/>
 /// (size = 332)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionStaticSwitch : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

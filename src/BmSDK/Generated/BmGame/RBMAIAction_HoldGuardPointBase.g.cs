@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_HoldGuardPointBase<br/>
+/// ABSTRACT Class: RBMAIAction_HoldGuardPointBase<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_HoldGuardPointBase : BmSDK.BmGame.RBMAIAction, 
     }
 
     internal RBMAIAction_HoldGuardPointBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_HoldGuardPointBase
-    /// </summary>
-    public RBMAIAction_HoldGuardPointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_HoldGuardPointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

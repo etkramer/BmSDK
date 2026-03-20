@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Sub_VantageResponse<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Sub_VantageResponse : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

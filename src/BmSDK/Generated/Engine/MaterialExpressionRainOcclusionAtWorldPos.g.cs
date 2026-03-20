@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionRainOcclusionAtWorldPos<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionRainOcclusionAtWorldPos : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

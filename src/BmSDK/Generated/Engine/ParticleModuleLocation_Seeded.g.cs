@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleLocation_Seeded<br/>
 /// (size = 196)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleLocation_Seeded : BmSDK.Engine.ParticleModuleLocation, BmSDK.IGameObject
 {

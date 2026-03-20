@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexDestructibleActor<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ApexDestructibleActor : BmSDK.Engine.RStaticClimbableActor, BmSDK.IGameObject
 {

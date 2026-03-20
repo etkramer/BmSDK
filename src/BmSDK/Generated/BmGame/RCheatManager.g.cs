@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCheatManager<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 54)
 /// </summary>
 public partial class RCheatManager : BmSDK.Engine.CheatManager, BmSDK.IGameObject
 {

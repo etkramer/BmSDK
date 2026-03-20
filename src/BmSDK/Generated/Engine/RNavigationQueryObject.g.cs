@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RNavigationQueryObject<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RNavigationQueryObject : BmSDK.GameObject, BmSDK.IGameObject
 {

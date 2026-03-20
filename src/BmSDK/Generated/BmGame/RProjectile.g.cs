@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RProjectile<br/>
+/// ABSTRACT Class: RProjectile<br/>
 /// (size = 840)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject
     }
 
     internal RProjectile() { }
-
-    /// <summary>
-    /// Constructs a new RProjectile
-    /// </summary>
-    public RProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

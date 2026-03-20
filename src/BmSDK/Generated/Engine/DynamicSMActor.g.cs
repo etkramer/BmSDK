@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DynamicSMActor<br/>
+/// ABSTRACT Class: DynamicSMActor<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class DynamicSMActor : BmSDK.Engine.RStaticClimbableActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DynamicSMActor : BmSDK.Engine.RStaticClimbableActor, BmSDK.
     }
 
     internal DynamicSMActor() { }
-
-    /// <summary>
-    /// Constructs a new DynamicSMActor
-    /// </summary>
-    public DynamicSMActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DynamicSMActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

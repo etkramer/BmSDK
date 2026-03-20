@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleCameraOffset<br/>
 /// (size = 137)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleCameraOffset : BmSDK.Engine.ParticleModuleCameraBase, BmSDK.IGameObject
 {

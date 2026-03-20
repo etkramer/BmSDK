@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ConsoleCommand<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_ConsoleCommand : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

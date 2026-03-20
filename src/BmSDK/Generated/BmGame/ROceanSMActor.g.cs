@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: ROceanSMActor<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ROceanSMActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
 {

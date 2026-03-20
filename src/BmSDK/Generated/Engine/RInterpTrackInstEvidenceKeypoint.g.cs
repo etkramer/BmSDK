@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RInterpTrackInstEvidenceKeypoint<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RInterpTrackInstEvidenceKeypoint : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {

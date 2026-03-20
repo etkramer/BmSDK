@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetJokerBillboardFrequency<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetJokerBillboardFrequency : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

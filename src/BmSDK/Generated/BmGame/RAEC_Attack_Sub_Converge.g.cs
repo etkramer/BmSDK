@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAEC_Attack_Sub_Converge<br/>
+/// ABSTRACT Class: RAEC_Attack_Sub_Converge<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RAEC_Attack_Sub_Converge : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAEC_Attack_Sub_Converge : BmSDK.BmGame.RAlertEventCoordina
     }
 
     internal RAEC_Attack_Sub_Converge() { }
-
-    /// <summary>
-    /// Constructs a new RAEC_Attack_Sub_Converge
-    /// </summary>
-    public RAEC_Attack_Sub_Converge(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Attack_Sub_Converge Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

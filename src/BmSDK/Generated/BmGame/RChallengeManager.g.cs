@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RChallengeManager<br/>
 /// (size = 428)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
 {

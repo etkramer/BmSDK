@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_SuicideDroneAttack<br/>
 /// (size = 689)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class RVehicleBehaviour_SuicideDroneAttack : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAnimUtil_AnimAccumulator<br/>
+/// ABSTRACT Class: RAnimUtil_AnimAccumulator<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAnimUtil_AnimAccumulator : BmSDK.GameObject, BmSDK.IGameOb
     }
 
     internal RAnimUtil_AnimAccumulator() { }
-
-    /// <summary>
-    /// Constructs a new RAnimUtil_AnimAccumulator
-    /// </summary>
-    public RAnimUtil_AnimAccumulator(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAnimUtil_AnimAccumulator Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

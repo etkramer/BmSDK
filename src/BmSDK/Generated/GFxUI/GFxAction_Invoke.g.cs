@@ -6,7 +6,7 @@ namespace BmSDK.GFxUI;
 /// <summary>
 /// Class: GFxAction_Invoke<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class GFxAction_Invoke : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

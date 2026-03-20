@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDroneCommanderTannoy<br/>
 /// (size = 832)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDroneCommanderTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleScanLaser<br/>
 /// (size = 248)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RVehicleScanLaser : BmSDK.GameObject, BmSDK.IGameObject
 {

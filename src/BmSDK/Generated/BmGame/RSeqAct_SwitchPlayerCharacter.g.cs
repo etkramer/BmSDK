@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SwitchPlayerCharacter<br/>
 /// (size = 432)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SwitchPlayerCharacter : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

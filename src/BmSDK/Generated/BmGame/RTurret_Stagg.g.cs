@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTurret_Stagg<br/>
+/// ABSTRACT Class: RTurret_Stagg<br/>
 /// (size = 1424)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
     }
 
     internal RTurret_Stagg() { }
-
-    /// <summary>
-    /// Constructs a new RTurret_Stagg
-    /// </summary>
-    public RTurret_Stagg(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTurret_Stagg Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

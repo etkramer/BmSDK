@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTemperatureViewPostProcess<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RTemperatureViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject
 {

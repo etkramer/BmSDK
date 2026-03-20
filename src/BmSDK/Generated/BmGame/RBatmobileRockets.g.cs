@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileRockets<br/>
 /// (size = 2452)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileRockets : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject
 {

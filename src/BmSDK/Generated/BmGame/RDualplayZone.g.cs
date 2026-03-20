@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDualplayZone<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RDualplayZone : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

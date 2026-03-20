@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_HingeActor<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RB_HingeActor : BmSDK.Engine.RB_ConstraintActor, BmSDK.IGameObject
 {

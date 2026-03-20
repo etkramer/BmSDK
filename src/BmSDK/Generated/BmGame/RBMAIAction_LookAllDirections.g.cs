@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_LookAllDirections<br/>
 /// (size = 916)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_LookAllDirections : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

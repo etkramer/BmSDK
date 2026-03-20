@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ToggleRobinLieutenantAssist<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ToggleRobinLieutenantAssist : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

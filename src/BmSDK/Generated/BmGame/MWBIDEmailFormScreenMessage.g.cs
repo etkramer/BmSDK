@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MWBIDEmailFormScreenMessage<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject
 {

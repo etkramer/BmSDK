@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AreSnipersActive<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RSeqAct_AreSnipersActive : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

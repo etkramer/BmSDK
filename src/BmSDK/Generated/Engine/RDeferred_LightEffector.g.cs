@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RDeferred_LightEffector<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 33554450)
 /// </summary>
 public partial class RDeferred_LightEffector : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

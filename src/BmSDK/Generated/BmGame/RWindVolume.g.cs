@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWindVolume<br/>
 /// (size = 892)
-/// (flags = 0)
+/// (flags = 178258066)
 /// </summary>
 public partial class RWindVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

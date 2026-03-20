@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshObstacleForLockinVol<br/>
 /// (size = 840)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RNavMeshObstacleForLockinVol : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject
 {

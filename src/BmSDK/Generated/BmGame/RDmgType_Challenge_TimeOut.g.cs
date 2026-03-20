@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_Challenge_TimeOut<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_Challenge_TimeOut : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
 {

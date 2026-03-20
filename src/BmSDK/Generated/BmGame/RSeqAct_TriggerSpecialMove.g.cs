@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_TriggerSpecialMove<br/>
 /// (size = 416)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_TriggerSpecialMove : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

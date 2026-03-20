@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_SetBatmobilePassenger<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetBatmobilePassenger : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

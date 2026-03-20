@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_EjectIntoFirefly<br/>
 /// (size = 984)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_EjectIntoFirefly : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

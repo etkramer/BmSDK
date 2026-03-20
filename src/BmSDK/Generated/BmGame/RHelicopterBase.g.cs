@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RHelicopterBase<br/>
+/// ABSTRACT Class: RHelicopterBase<br/>
 /// (size = 2348)
-/// (flags = 0)
+/// (flags = 144704183)
 /// </summary>
 public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject
     }
 
     internal RHelicopterBase() { }
-
-    /// <summary>
-    /// Constructs a new RHelicopterBase
-    /// </summary>
-    public RHelicopterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHelicopterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

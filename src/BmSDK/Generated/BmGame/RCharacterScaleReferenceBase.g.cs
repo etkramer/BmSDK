@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCharacterScaleReferenceBase<br/>
+/// ABSTRACT Class: RCharacterScaleReferenceBase<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     }
 
     internal RCharacterScaleReferenceBase() { }
-
-    /// <summary>
-    /// Constructs a new RCharacterScaleReferenceBase
-    /// </summary>
-    public RCharacterScaleReferenceBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCharacterScaleReferenceBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

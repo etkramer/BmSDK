@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Disarmed<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Disarmed : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

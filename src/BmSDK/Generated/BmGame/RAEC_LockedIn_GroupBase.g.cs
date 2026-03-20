@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAEC_LockedIn_GroupBase<br/>
+/// ABSTRACT Class: RAEC_LockedIn_GroupBase<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RAEC_LockedIn_GroupBase : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAEC_LockedIn_GroupBase : BmSDK.BmGame.RAlertEventCoordinat
     }
 
     internal RAEC_LockedIn_GroupBase() { }
-
-    /// <summary>
-    /// Constructs a new RAEC_LockedIn_GroupBase
-    /// </summary>
-    public RAEC_LockedIn_GroupBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_LockedIn_GroupBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

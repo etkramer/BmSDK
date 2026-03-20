@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ModifyDoor<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ModifyDoor : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

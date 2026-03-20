@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_FixedJointSetup<br/>
 /// (size = 300)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RB_FixedJointSetup : BmSDK.Engine.RB_BSJointSetup, BmSDK.IGameObject
 {

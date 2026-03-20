@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: WaveFormBase<br/>
+/// ABSTRACT Class: WaveFormBase<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class WaveFormBase : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal WaveFormBase() { }
-
-    /// <summary>
-    /// Constructs a new WaveFormBase
-    /// </summary>
-    public WaveFormBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, WaveFormBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

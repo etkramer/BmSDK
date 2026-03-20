@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPreventNonMedicManDownVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPreventNonMedicManDownVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

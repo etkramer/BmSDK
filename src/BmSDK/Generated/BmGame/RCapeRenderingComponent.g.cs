@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCapeRenderingComponent<br/>
 /// (size = 144)
-/// (flags = 0)
+/// (flags = 142606486)
 /// </summary>
 public partial class RCapeRenderingComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

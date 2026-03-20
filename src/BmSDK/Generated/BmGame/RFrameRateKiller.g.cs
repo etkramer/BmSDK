@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFrameRateKiller<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RFrameRateKiller : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

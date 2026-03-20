@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRemoteSwitchBase<br/>
 /// (size = 1120)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRemoteSwitchBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_StayUprightSetup<br/>
 /// (size = 300)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RB_StayUprightSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqCond_IsAlive<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqCond_IsAlive : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RBMBehaviour_GangMovementBase<br/>
+/// ABSTRACT Class: RBMBehaviour_GangMovementBase<br/>
 /// (size = 924)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_GangMovementBase : BmSDK.BmGame.RBMBehaviour_G
     }
 
     internal RBMBehaviour_GangMovementBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_GangMovementBase
-    /// </summary>
-    public RBMBehaviour_GangMovementBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_GangMovementBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

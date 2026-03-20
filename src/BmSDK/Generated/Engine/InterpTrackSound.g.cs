@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackSound<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackSound : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {

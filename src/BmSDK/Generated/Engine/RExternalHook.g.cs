@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RExternalHook<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RExternalHook : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

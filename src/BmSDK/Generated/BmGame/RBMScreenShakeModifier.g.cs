@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMScreenShakeModifier<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObject
 {

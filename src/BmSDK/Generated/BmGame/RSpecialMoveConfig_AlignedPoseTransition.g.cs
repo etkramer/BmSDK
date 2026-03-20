@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_AlignedPoseTransition<br/>
 /// (size = 460)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_AlignedPoseTransition : BmSDK.BmGame.RSpecialMoveConfig_PoseTransition, BmSDK.IGameObject
 {

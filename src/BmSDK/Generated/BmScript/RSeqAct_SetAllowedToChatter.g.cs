@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_SetAllowedToChatter<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetAllowedToChatter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

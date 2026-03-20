@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_AssignToGuardVolume<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_AssignToGuardVolume : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

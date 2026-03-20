@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RLootPointBase<br/>
+/// ABSTRACT Class: RLootPointBase<br/>
 /// (size = 872)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RLootPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RLootPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RLootPointBase() { }
-
-    /// <summary>
-    /// Constructs a new RLootPointBase
-    /// </summary>
-    public RLootPointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RLootPointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleLocalRadar<br/>
 /// (size = 596)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RHudModuleLocalRadar : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

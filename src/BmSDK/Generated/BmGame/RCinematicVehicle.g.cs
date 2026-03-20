@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCinematicVehicle<br/>
 /// (size = 976)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCinematicVehicle : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
 {

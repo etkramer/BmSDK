@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Startle_Sub<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Startle_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_StartGauntletMovieBase<br/>
+/// ABSTRACT Class: RSeqAct_StartGauntletMovieBase<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 136323219)
 /// </summary>
 public partial class RSeqAct_StartGauntletMovieBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_StartGauntletMovieBase : BmSDK.Engine.SequenceActio
     }
 
     internal RSeqAct_StartGauntletMovieBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_StartGauntletMovieBase
-    /// </summary>
-    public RSeqAct_StartGauntletMovieBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_StartGauntletMovieBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

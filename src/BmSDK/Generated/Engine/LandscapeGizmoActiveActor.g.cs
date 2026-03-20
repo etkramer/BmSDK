@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LandscapeGizmoActiveActor<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class LandscapeGizmoActiveActor : BmSDK.Engine.LandscapeGizmoActor, BmSDK.IGameObject
 {

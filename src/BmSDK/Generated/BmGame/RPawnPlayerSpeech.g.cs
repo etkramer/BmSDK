@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnPlayerSpeech<br/>
+/// ABSTRACT Class: RPawnPlayerSpeech<br/>
 /// (size = 4396)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RPawnPlayerSpeech : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnPlayerSpeech : BmSDK.BmGame.RPawnPlayerCombat, BmSDK.I
     }
 
     internal RPawnPlayerSpeech() { }
-
-    /// <summary>
-    /// Constructs a new RPawnPlayerSpeech
-    /// </summary>
-    public RPawnPlayerSpeech(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnPlayerSpeech Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

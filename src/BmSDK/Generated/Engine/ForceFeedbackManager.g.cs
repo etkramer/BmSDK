@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ForceFeedbackManager<br/>
+/// ABSTRACT Class: ForceFeedbackManager<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134217883)
 /// </summary>
 public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal ForceFeedbackManager() { }
-
-    /// <summary>
-    /// Constructs a new ForceFeedbackManager
-    /// </summary>
-    public ForceFeedbackManager(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ForceFeedbackManager Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

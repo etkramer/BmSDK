@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: PickupFactory<br/>
+/// ABSTRACT Class: PickupFactory<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 144706195)
 /// </summary>
 public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class PickupFactory : BmSDK.Engine.NavigationPoint, BmSDK.IGameOb
     }
 
     internal PickupFactory() { }
-
-    /// <summary>
-    /// Constructs a new PickupFactory
-    /// </summary>
-    public PickupFactory(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PickupFactory Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

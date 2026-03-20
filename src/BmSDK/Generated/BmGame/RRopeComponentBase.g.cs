@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRopeComponentBase<br/>
 /// (size = 716)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RRopeComponentBase : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LineBatchComponent<br/>
 /// (size = 632)
-/// (flags = 0)
+/// (flags = 2155872722)
 /// </summary>
 public partial class LineBatchComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

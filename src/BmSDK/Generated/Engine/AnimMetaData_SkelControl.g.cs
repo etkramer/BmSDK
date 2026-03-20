@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimMetaData_SkelControl<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class AnimMetaData_SkelControl : BmSDK.Engine.AnimMetaData, BmSDK.IGameObject
 {

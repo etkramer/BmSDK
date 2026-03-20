@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockOn<br/>
 /// (size = 249)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RockOn : BmSDK.Engine.DOFBloomMotionBlurEffect, BmSDK.IGameObject
 {

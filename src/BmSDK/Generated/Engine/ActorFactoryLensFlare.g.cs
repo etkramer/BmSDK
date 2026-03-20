@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryLensFlare<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryLensFlare : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_BodyInstance<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RB_BodyInstance : BmSDK.GameObject, BmSDK.IGameObject
 {

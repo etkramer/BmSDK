@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RFreezeClusterGrenadeProjectile<br/>
+/// ABSTRACT Class: RFreezeClusterGrenadeProjectile<br/>
 /// (size = 1096)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RFreezeGrenadeCommonProjectile, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RFreezeClusterGrenadeProjectile : BmSDK.BmGame.RFreezeGrena
     }
 
     internal RFreezeClusterGrenadeProjectile() { }
-
-    /// <summary>
-    /// Constructs a new RFreezeClusterGrenadeProjectile
-    /// </summary>
-    public RFreezeClusterGrenadeProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFreezeClusterGrenadeProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

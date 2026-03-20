@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponRocketLauncherBase<br/>
+/// ABSTRACT Class: RBMWeaponRocketLauncherBase<br/>
 /// (size = 1768)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponRocketLauncherBase : BmSDK.BmGame.RBMWeapon, BmSDK
     }
 
     internal RBMWeaponRocketLauncherBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponRocketLauncherBase
-    /// </summary>
-    public RBMWeaponRocketLauncherBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponRocketLauncherBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPresurePadBase<br/>
+/// ABSTRACT Class: RPresurePadBase<br/>
 /// (size = 736)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RPresurePadBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPresurePadBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RPresurePadBase() { }
-
-    /// <summary>
-    /// Constructs a new RPresurePadBase
-    /// </summary>
-    public RPresurePadBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPresurePadBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

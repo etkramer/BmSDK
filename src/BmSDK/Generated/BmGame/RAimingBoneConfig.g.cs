@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAimingBoneConfig<br/>
 /// (size = 484)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

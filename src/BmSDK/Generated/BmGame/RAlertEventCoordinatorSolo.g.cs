@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAlertEventCoordinatorSolo<br/>
+/// ABSTRACT Class: RAlertEventCoordinatorSolo<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAlertEventCoordinatorSolo : BmSDK.Engine.Actor, BmSDK.IGam
     }
 
     internal RAlertEventCoordinatorSolo() { }
-
-    /// <summary>
-    /// Constructs a new RAlertEventCoordinatorSolo
-    /// </summary>
-    public RAlertEventCoordinatorSolo(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAlertEventCoordinatorSolo Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

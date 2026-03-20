@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SceneCaptureReflectComponent<br/>
 /// (size = 232)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SceneCaptureReflectComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject
 {

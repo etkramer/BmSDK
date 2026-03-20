@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: HeadTrackingComponent<br/>
 /// (size = 312)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class HeadTrackingComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleColorOverLife<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleColorOverLife : BmSDK.Engine.ParticleModuleColorBase, BmSDK.IGameObject
 {

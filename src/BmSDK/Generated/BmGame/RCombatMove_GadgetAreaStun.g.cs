@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetAreaStun<br/>
+/// ABSTRACT Class: RCombatMove_GadgetAreaStun<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetAreaStun : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetAreaStun : BmSDK.BmGame.RCombatMove_Batma
     }
 
     internal RCombatMove_GadgetAreaStun() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetAreaStun
-    /// </summary>
-    public RCombatMove_GadgetAreaStun(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetAreaStun Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

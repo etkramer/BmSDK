@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RElectrifiedFloorPanel_RobotSpawnerBase<br/>
+/// ABSTRACT Class: RElectrifiedFloorPanel_RobotSpawnerBase<br/>
 /// (size = 989)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.RElectrifiedFloorPanel, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.REle
     }
 
     internal RElectrifiedFloorPanel_RobotSpawnerBase() { }
-
-    /// <summary>
-    /// Constructs a new RElectrifiedFloorPanel_RobotSpawnerBase
-    /// </summary>
-    public RElectrifiedFloorPanel_RobotSpawnerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RElectrifiedFloorPanel_RobotSpawnerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

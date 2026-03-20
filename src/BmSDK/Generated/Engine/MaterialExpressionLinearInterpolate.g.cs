@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionLinearInterpolate<br/>
 /// (size = 328)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionLinearInterpolate : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqEvent_LevelLoaded<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqEvent_LevelLoaded : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

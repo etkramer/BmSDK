@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_TouchWire<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_TouchWire : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

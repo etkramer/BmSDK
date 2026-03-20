@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ForceFeedbackWaveform<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ForceFeedbackWaveform : BmSDK.GameObject, BmSDK.IGameObject
 {

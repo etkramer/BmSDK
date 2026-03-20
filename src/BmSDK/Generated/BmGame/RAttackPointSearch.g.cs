@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAttackPointSearch<br/>
 /// (size = 196)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
 {

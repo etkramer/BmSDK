@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWinchableWallBase<br/>
 /// (size = 788)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RWinchableWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

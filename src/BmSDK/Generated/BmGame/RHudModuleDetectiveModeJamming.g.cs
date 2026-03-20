@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleDetectiveModeJamming<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleDetectiveModeJamming : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

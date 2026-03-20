@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MCombatMove_GadgetLaughingGas<br/>
+/// ABSTRACT Class: MCombatMove_GadgetLaughingGas<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class MCombatMove_GadgetLaughingGas : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MCombatMove_GadgetLaughingGas : BmSDK.BmGame.RCombatMove_Ba
     }
 
     internal MCombatMove_GadgetLaughingGas() { }
-
-    /// <summary>
-    /// Constructs a new MCombatMove_GadgetLaughingGas
-    /// </summary>
-    public MCombatMove_GadgetLaughingGas(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MCombatMove_GadgetLaughingGas Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

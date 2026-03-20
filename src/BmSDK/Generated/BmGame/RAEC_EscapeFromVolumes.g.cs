@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_EscapeFromVolumes<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_EscapeFromVolumes : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

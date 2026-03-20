@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: OnlineGameSearch<br/>
 /// (size = 320)
-/// (flags = 0)
+/// (flags = 134217906)
 /// </summary>
 public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
 {

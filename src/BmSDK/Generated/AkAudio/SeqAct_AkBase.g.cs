@@ -4,9 +4,9 @@
 namespace BmSDK.AkAudio;
 
 /// <summary>
-/// Class: SeqAct_AkBase<br/>
+/// ABSTRACT Class: SeqAct_AkBase<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class SeqAct_AkBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqAct_AkBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObj
     }
 
     internal SeqAct_AkBase() { }
-
-    /// <summary>
-    /// Constructs a new SeqAct_AkBase
-    /// </summary>
-    public SeqAct_AkBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_AkBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

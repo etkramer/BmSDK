@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryMover<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class ActorFactoryMover : BmSDK.Engine.ActorFactoryDynamicSM, BmSDK.IGameObject
 {

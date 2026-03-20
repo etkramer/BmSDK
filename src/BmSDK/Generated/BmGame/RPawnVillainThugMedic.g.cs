@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnVillainThugMedic<br/>
 /// (size = 6752)
-/// (flags = 0)
+/// (flags = 10485814)
 /// </summary>
 public partial class RPawnVillainThugMedic : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
 {

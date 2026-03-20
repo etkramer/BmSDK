@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: ObjectRedirector<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class ObjectRedirector : BmSDK.GameObject, BmSDK.IGameObject
 {

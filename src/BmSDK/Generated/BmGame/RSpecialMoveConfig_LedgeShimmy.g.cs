@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_LedgeShimmy<br/>
 /// (size = 456)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_LedgeShimmy : BmSDK.BmGame.RSpecialMoveConfig_ActivePoseTransitionWithOffset, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RLevelTransitionShutterDoorsRiddler<br/>
 /// (size = 976)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RLevelTransitionShutterDoorsRiddler : BmSDK.BmScript.RLevelTransitionShutterDoors, BmSDK.IGameObject
 {

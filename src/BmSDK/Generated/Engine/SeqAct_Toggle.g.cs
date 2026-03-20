@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_Toggle<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_Toggle : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

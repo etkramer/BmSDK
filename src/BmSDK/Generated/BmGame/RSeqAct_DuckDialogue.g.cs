@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DuckDialogue<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RSeqAct_DuckDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

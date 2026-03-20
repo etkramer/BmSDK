@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_PairGangPoints<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_PairGangPoints : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

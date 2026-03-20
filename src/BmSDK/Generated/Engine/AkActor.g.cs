@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkActor<br/>
+/// ABSTRACT Class: AkActor<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class AkActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal AkActor() { }
-
-    /// <summary>
-    /// Constructs a new AkActor
-    /// </summary>
-    public AkActor(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkActor Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

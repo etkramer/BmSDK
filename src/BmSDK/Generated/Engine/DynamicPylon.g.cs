@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DynamicPylon<br/>
 /// (size = 1320)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
 {

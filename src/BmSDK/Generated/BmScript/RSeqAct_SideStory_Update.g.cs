@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_SideStory_Update<br/>
 /// (size = 512)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SideStory_Update : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

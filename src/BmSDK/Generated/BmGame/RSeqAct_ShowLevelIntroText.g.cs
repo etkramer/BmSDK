@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ShowLevelIntroText<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ShowLevelIntroText : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

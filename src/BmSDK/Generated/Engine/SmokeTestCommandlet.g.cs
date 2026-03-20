@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SmokeTestCommandlet<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 268435624)
 /// </summary>
 public partial class SmokeTestCommandlet : BmSDK.Commandlet, BmSDK.IGameObject
 {

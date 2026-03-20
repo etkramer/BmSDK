@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DominantDirectionalLightComponent<br/>
 /// (size = 848)
-/// (flags = 0)
+/// (flags = 136319122)
 /// </summary>
 public partial class DominantDirectionalLightComponent : BmSDK.Engine.DirectionalLightComponent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetWristDart<br/>
+/// ABSTRACT Class: RCombatMove_GadgetWristDart<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetWristDart : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetWristDart : BmSDK.BmGame.RCombatMove_Batm
     }
 
     internal RCombatMove_GadgetWristDart() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetWristDart
-    /// </summary>
-    public RCombatMove_GadgetWristDart(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetWristDart Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

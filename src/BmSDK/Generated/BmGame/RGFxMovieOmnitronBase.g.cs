@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieOmnitronBase<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMovieOmnitronBase : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {

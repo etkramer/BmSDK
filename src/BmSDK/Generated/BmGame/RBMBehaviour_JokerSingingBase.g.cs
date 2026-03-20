@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_JokerSingingBase<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_JokerSingingBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

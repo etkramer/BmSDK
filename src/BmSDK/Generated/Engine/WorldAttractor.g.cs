@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: WorldAttractor<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class WorldAttractor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

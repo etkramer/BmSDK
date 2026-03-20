@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_SonicBatarang_Sub<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_SonicBatarang_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

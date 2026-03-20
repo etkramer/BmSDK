@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshGoalFilter_NotNearOtherAI<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshGoalFilter_NotNearOtherAI : BmSDK.Engine.NavMeshGoal_Filter, BmSDK.IGameObject
 {

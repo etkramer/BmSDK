@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RObjectiveMarker<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RObjectiveMarker : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

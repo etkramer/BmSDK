@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_GrabFromLocker<br/>
 /// (size = 888)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_GrabFromLocker : BmSDK.BmGame.RBMAIAction_WeaponSwitch, BmSDK.IGameObject
 {

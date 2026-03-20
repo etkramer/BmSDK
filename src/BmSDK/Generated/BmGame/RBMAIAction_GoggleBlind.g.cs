@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_GoggleBlind<br/>
 /// (size = 872)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_GoggleBlind : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

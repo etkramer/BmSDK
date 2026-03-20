@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBotController<br/>
 /// (size = 1136)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBotController : BmSDK.Engine.Controller, BmSDK.IGameObject
 {

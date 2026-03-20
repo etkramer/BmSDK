@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleSuicideCars<br/>
 /// (size = 264)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleSuicideCars : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

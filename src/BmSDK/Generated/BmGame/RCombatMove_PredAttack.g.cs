@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_PredAttack<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_PredAttack : BmSDK.BmGame.RCombatMove_VillainCloseAttack, BmSDK.IGameObject
 {

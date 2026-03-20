@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBankDoorBase<br/>
+/// ABSTRACT Class: RBankDoorBase<br/>
 /// (size = 820)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameOb
     }
 
     internal RBankDoorBase() { }
-
-    /// <summary>
-    /// Constructs a new RBankDoorBase
-    /// </summary>
-    public RBankDoorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBankDoorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

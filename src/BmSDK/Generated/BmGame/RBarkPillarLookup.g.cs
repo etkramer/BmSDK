@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkPillarLookup<br/>
 /// (size = 144)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

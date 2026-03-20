@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleEventManager<br/>
+/// ABSTRACT Class: ParticleEventManager<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class ParticleEventManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleEventManager : BmSDK.Engine.Actor, BmSDK.IGameObjec
     }
 
     internal ParticleEventManager() { }
-
-    /// <summary>
-    /// Constructs a new ParticleEventManager
-    /// </summary>
-    public ParticleEventManager(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleEventManager Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

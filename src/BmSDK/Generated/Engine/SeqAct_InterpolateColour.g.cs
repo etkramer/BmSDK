@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_InterpolateColour<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_InterpolateColour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMWeaponKnife<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBMWeaponKnife : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.IGameObject
 {

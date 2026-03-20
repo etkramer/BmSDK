@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PlayerReplicationInfo<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 144705714)
 /// </summary>
 public partial class PlayerReplicationInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject
 {

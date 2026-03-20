@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SoundMode<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SoundMode : BmSDK.GameObject, BmSDK.IGameObject
 {

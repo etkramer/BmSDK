@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_FireBatClaw<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_FireBatClaw : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

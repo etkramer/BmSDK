@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RGangFleePressPointBase<br/>
+/// ABSTRACT Class: RGangFleePressPointBase<br/>
 /// (size = 780)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RGangFleePressPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.
     }
 
     internal RGangFleePressPointBase() { }
-
-    /// <summary>
-    /// Constructs a new RGangFleePressPointBase
-    /// </summary>
-    public RGangFleePressPointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGangFleePressPointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

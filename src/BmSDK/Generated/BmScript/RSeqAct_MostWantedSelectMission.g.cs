@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_MostWantedSelectMission<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_MostWantedSelectMission : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

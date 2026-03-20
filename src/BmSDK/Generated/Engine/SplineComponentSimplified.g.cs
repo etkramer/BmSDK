@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SplineComponentSimplified<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 2155872338)
 /// </summary>
 public partial class SplineComponentSimplified : BmSDK.Engine.SplineComponent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleEmitter<br/>
+/// ABSTRACT Class: ParticleEmitter<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 136319123)
 /// </summary>
 public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleEmitter : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal ParticleEmitter() { }
-
-    /// <summary>
-    /// Constructs a new ParticleEmitter
-    /// </summary>
-    public ParticleEmitter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleEmitter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

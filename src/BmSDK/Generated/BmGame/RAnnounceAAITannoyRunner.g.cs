@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnnounceAAITannoyRunner<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RAnnounceAAITannoyRunner : BmSDK.GameObject, BmSDK.IGameObject
 {

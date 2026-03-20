@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTunnelGrateBase<br/>
 /// (size = 1088)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RTunnelGrateBase : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK.IGameObject
 {

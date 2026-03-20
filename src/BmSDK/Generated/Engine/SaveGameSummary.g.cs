@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SaveGameSummary<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 167772306)
 /// </summary>
 public partial class SaveGameSummary : BmSDK.GameObject, BmSDK.IGameObject
 {

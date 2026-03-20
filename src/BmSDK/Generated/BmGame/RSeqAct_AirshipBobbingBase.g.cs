@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_AirshipBobbingBase<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_AirshipBobbingBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

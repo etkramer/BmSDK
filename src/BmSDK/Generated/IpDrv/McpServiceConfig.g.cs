@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: McpServiceConfig<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class McpServiceConfig : BmSDK.GameObject, BmSDK.IGameObject
 {

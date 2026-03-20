@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FaceFXAsset<br/>
 /// (size = 292)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class FaceFXAsset : BmSDK.GameObject, BmSDK.IGameObject
 {

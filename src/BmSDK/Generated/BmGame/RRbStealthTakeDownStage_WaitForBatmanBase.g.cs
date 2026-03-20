@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRbStealthTakeDownStage_WaitForBatmanBase<br/>
 /// (size = 1688)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RRbStealthTakeDownStage_WaitForBatmanBase : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

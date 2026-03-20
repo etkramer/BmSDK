@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: UIDataProvider_OnlinePlayerStorage<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataProvider_OnlinePlayerDataBase, BmSDK.IGameObject
 {

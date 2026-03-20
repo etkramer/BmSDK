@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGroupOverlookNavHandleWrapper<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RGroupOverlookNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObject
 {

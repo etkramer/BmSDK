@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCombatManager<br/>
 /// (size = 2004)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBMCombatManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

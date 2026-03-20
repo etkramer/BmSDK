@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Sub_WaitForBuddy<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Sub_WaitForBuddy : BmSDK.BmGame.RAEC_Search_Sub_FormationLeader, BmSDK.IGameObject
 {

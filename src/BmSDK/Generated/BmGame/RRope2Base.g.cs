@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRope2Base<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RRope2Base : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

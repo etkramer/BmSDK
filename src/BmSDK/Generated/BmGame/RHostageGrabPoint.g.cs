@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHostageGrabPoint<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RHostageGrabPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

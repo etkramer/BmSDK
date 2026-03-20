@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdSpawner<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCrowdSpawner : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

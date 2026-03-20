@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Keypoint<br/>
+/// ABSTRACT Class: Keypoint<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Keypoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal Keypoint() { }
-
-    /// <summary>
-    /// Constructs a new Keypoint
-    /// </summary>
-    public Keypoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Keypoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

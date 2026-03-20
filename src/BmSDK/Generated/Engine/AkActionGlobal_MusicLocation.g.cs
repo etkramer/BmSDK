@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkActionGlobal_MusicLocation<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkActionGlobal_MusicLocation : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: PendingLevel<br/>
+/// ABSTRACT Class: PendingLevel<br/>
 /// (size = 256)
-/// (flags = 0)
+/// (flags = 268435593)
 /// </summary>
 public partial class PendingLevel : BmSDK.Engine.LevelBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class PendingLevel : BmSDK.Engine.LevelBase, BmSDK.IGameObject
     }
 
     internal PendingLevel() { }
-
-    /// <summary>
-    /// Constructs a new PendingLevel
-    /// </summary>
-    public PendingLevel(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PendingLevel Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

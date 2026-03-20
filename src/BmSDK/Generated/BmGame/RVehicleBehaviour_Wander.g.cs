@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_Wander<br/>
 /// (size = 1016)
-/// (flags = 0)
+/// (flags = 2109458)
 /// </summary>
 public partial class RVehicleBehaviour_Wander : BmSDK.BmGame.RVehicleBehaviour_RunAway, BmSDK.IGameObject
 {

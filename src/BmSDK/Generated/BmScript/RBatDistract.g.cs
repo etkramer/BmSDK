@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBatDistract<br/>
 /// (size = 2728)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatDistract : BmSDK.BmScript.RBatarangBm, BmSDK.IGameObject
 {

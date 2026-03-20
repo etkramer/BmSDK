@@ -6,7 +6,7 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 /// <summary>
 /// Class: OnlineAuthInterfaceSteamworks<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class OnlineAuthInterfaceSteamworks : BmSDK.IpDrv.OnlineAuthInterfaceImpl, BmSDK.IGameObject
 {

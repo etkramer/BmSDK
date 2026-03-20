@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMCombatPoint_GunDispenserBase<br/>
+/// ABSTRACT Class: RBMCombatPoint_GunDispenserBase<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoint, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatPoint_GunDispenserBase : BmSDK.BmGame.RBMCombatPoi
     }
 
     internal RBMCombatPoint_GunDispenserBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatPoint_GunDispenserBase
-    /// </summary>
-    public RBMCombatPoint_GunDispenserBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_GunDispenserBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

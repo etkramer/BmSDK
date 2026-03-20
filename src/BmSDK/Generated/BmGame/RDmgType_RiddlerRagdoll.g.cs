@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_RiddlerRagdoll<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_RiddlerRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, BmSDK.IGameObject
 {

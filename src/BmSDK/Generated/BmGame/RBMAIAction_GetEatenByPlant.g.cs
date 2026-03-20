@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_GetEatenByPlant<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_GetEatenByPlant : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

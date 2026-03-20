@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_MinigunnerLookInGrate<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_MinigunnerLookInGrate : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

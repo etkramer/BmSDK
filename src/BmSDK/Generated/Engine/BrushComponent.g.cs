@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: BrushComponent<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class BrushComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

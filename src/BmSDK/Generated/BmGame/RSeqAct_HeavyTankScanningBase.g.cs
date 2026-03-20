@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_HeavyTankScanningBase<br/>
+/// ABSTRACT Class: RSeqAct_HeavyTankScanningBase<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_HeavyTankScanningBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_HeavyTankScanningBase : BmSDK.Engine.SeqAct_Latent,
     }
 
     internal RSeqAct_HeavyTankScanningBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_HeavyTankScanningBase
-    /// </summary>
-    public RSeqAct_HeavyTankScanningBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_HeavyTankScanningBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_InfiniteCombatSpawnerBase<br/>
+/// ABSTRACT Class: RSeqAct_InfiniteCombatSpawnerBase<br/>
 /// (size = 432)
-/// (flags = 0)
+/// (flags = 201334931)
 /// </summary>
 public partial class RSeqAct_InfiniteCombatSpawnerBase : BmSDK.BmGame.RSeqAct_CombatSpawnerBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_InfiniteCombatSpawnerBase : BmSDK.BmGame.RSeqAct_Co
     }
 
     internal RSeqAct_InfiniteCombatSpawnerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_InfiniteCombatSpawnerBase
-    /// </summary>
-    public RSeqAct_InfiniteCombatSpawnerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_InfiniteCombatSpawnerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

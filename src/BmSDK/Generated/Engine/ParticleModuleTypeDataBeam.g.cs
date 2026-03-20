@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleTypeDataBeam<br/>
 /// (size = 348)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class ParticleModuleTypeDataBeam : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {

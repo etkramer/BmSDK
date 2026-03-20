@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PlatformInterfaceWebResponse<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class PlatformInterfaceWebResponse : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMCombatPoint_LoSpotLight<br/>
 /// (size = 1012)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBMCombatPoint_LoSpotLight : BmSDK.BmGame.RBMCombatPoint_EnvironmentAttackObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionBumpOffset<br/>
 /// (size = 336)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionBumpOffset : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

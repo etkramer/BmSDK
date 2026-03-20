@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RLevelTransitionP<br/>
+/// ABSTRACT Class: RLevelTransitionP<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     }
 
     internal RLevelTransitionP() { }
-
-    /// <summary>
-    /// Constructs a new RLevelTransitionP
-    /// </summary>
-    public RLevelTransitionP(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RLevelTransitionP Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

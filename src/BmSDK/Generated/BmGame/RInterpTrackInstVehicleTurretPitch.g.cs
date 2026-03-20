@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RInterpTrackInstVehicleTurretPitch<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RInterpTrackInstVehicleTurretPitch : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
 {

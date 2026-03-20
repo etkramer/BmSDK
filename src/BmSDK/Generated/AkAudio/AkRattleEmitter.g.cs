@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkRattleEmitter<br/>
 /// (size = 776)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkRattleEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMWeaponMelee<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 211812530)
 /// </summary>
 public partial class RBMWeaponMelee : BmSDK.BmGame.RBMWeapon, BmSDK.IGameObject
 {

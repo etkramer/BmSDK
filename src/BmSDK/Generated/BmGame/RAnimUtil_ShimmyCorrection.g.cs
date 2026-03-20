@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimUtil_ShimmyCorrection<br/>
 /// (size = 532)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameObject
 {

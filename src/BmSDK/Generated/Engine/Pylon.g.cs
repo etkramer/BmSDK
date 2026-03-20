@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Pylon<br/>
 /// (size = 1316)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {

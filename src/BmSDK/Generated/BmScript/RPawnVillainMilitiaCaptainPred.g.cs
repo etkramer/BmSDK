@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPawnVillainMilitiaCaptainPred<br/>
 /// (size = 6860)
-/// (flags = 0)
+/// (flags = 10485814)
 /// </summary>
 public partial class RPawnVillainMilitiaCaptainPred : BmSDK.BmScript.RPawnVillainGunPredFull, BmSDK.IGameObject
 {

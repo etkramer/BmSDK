@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_LineLauncherTakedown<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_LineLauncherTakedown : BmSDK.BmGame.RSeqEvent_TakedownBase, BmSDK.IGameObject
 {

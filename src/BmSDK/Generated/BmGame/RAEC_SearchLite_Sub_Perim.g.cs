@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_SearchLite_Sub_Perim<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_SearchLite_Sub_Perim : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

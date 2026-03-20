@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAlertEventCoordinatorBase<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAlertEventCoordinatorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

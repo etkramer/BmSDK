@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryPointLightMovable<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 8400918)
 /// </summary>
 public partial class ActorFactoryPointLightMovable : BmSDK.Engine.ActorFactoryLight, BmSDK.IGameObject
 {

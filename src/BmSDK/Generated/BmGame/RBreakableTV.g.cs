@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBreakableTV<br/>
 /// (size = 796)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBreakableTV : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK.IGameObject
 {

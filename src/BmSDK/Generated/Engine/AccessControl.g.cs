@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AccessControl<br/>
 /// (size = 1024)
-/// (flags = 0)
+/// (flags = 10485814)
 /// </summary>
 public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
 {

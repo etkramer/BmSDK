@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkAudioSwitch<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkAudioSwitch : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AIController<br/>
 /// (size = 1144)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
 {

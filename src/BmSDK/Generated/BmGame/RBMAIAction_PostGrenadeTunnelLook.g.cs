@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PostGrenadeTunnelLook<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PostGrenadeTunnelLook : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

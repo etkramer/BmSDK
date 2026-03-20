@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DistributionVectorConstant<br/>
 /// (size = 129)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class DistributionVectorConstant : BmSDK.DistributionVector, BmSDK.IGameObject
 {

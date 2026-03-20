@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DistanceTracker<br/>
 /// (size = 444)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_DistanceTracker : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

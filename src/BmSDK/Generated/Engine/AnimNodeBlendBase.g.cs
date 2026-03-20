@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimNodeBlendBase<br/>
+/// ABSTRACT Class: AnimNodeBlendBase<br/>
 /// (size = 301)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimNodeBlendBase : BmSDK.Engine.AnimNode, BmSDK.IGameObjec
     }
 
     internal AnimNodeBlendBase() { }
-
-    /// <summary>
-    /// Constructs a new AnimNodeBlendBase
-    /// </summary>
-    public AnimNodeBlendBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimNodeBlendBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

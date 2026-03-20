@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_UpdateBatmobileDamageLevel<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_UpdateBatmobileDamageLevel : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

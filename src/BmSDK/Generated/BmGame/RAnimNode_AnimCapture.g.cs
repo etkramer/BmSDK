@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNode_AnimCapture<br/>
 /// (size = 320)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAnimNode_AnimCapture : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MSeqAct_HackingUpdate<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class MSeqAct_HackingUpdate : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

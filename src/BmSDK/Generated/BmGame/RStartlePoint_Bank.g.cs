@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStartlePoint_Bank<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RStartlePoint_Bank : BmSDK.BmGame.RStartlePoint, BmSDK.IGameObject
 {

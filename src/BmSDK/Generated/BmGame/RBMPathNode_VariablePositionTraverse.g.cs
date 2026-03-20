@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMPathNode_VariablePositionTraverse<br/>
+/// ABSTRACT Class: RBMPathNode_VariablePositionTraverse<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPath
     }
 
     internal RBMPathNode_VariablePositionTraverse() { }
-
-    /// <summary>
-    /// Constructs a new RBMPathNode_VariablePositionTraverse
-    /// </summary>
-    public RBMPathNode_VariablePositionTraverse(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMPathNode_VariablePositionTraverse Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

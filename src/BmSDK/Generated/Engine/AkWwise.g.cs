@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkWwise<br/>
+/// ABSTRACT Class: AkWwise<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkWwise : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal AkWwise() { }
-
-    /// <summary>
-    /// Constructs a new AkWwise
-    /// </summary>
-    public AkWwise(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkWwise Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

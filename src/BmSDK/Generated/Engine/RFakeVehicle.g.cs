@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RFakeVehicle<br/>
 /// (size = 2160)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class RFakeVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
 {

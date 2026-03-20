@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LevelStreamingDistance<br/>
 /// (size = 300)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class LevelStreamingDistance : BmSDK.Engine.LevelStreaming, BmSDK.IGameObject
 {

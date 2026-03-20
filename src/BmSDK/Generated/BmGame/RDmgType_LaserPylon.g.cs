@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_LaserPylon<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_LaserPylon : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject
 {

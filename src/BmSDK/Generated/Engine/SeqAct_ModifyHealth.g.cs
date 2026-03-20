@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ModifyHealth<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_ModifyHealth : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

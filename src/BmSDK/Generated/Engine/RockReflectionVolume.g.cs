@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockReflectionVolume<br/>
 /// (size = 1000)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

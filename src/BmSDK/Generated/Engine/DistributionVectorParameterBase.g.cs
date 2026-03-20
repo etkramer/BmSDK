@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DistributionVectorParameterBase<br/>
+/// ABSTRACT Class: DistributionVectorParameterBase<br/>
 /// (size = 191)
-/// (flags = 0)
+/// (flags = 142618771)
 /// </summary>
 public partial class DistributionVectorParameterBase : BmSDK.Engine.DistributionVectorConstant, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DistributionVectorParameterBase : BmSDK.Engine.Distribution
     }
 
     internal DistributionVectorParameterBase() { }
-
-    /// <summary>
-    /// Constructs a new DistributionVectorParameterBase
-    /// </summary>
-    public DistributionVectorParameterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DistributionVectorParameterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

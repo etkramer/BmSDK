@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_DriveToGCPD<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_DriveToGCPD : BmSDK.BmGame.RVehicleBehaviour_DriveToGoalPoint, BmSDK.IGameObject
 {

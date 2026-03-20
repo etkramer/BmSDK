@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RResonatorDisruptor<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RResonatorDisruptor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

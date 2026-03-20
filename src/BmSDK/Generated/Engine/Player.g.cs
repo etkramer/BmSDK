@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Player<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class Player : BmSDK.GameObject, BmSDK.IGameObject
 {

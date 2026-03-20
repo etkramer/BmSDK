@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TwitterIntegrationBase<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class TwitterIntegrationBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
 {

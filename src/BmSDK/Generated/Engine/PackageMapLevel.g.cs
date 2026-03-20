@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PackageMapLevel<br/>
 /// (size = 252)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class PackageMapLevel : BmSDK.PackageMap, BmSDK.IGameObject
 {

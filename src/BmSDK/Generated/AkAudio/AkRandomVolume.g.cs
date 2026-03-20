@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkRandomVolume<br/>
 /// (size = 800)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkRandomVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

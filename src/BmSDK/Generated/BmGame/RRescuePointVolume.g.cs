@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRescuePointVolume<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRescuePointVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

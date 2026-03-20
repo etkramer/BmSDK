@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RFlapsAssetInstance<br/>
 /// (size = 220)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RFlapsAssetInstance : BmSDK.GameObject, BmSDK.IGameObject
 {

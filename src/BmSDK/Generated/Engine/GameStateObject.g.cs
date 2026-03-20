@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: GameStateObject<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK.IGameObject
 {

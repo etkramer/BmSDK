@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLevelVolume<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RLevelVolume : BmSDK.Engine.UmbraStreamingVolume, BmSDK.IGameObject
 {

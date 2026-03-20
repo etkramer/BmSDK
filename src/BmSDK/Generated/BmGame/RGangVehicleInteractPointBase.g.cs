@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGangVehicleInteractPointBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

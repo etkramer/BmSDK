@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_HeadTrackingControl<br/>
 /// (size = 508)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_HeadTrackingControl : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

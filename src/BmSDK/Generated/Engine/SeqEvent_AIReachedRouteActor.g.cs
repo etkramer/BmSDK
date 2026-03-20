@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqEvent_AIReachedRouteActor<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class SeqEvent_AIReachedRouteActor : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

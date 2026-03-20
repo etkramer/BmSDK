@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAudioHornSpeakerPoint<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RAudioHornSpeakerPoint : BmSDK.BmGame.RAudioPoint, BmSDK.IGameObject
 {

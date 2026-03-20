@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMCombatPoint<br/>
+/// ABSTRACT Class: RBMCombatPoint<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMCombatPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RBMCombatPoint() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatPoint
-    /// </summary>
-    public RBMCombatPoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

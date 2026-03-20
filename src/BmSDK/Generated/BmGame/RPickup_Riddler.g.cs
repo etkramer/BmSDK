@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPickup_Riddler<br/>
 /// (size = 820)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObject
 {

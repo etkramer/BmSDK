@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ApexFieldSamplerComponent<br/>
+/// ABSTRACT Class: ApexFieldSamplerComponent<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 2290094291)
 /// </summary>
 public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent
     }
 
     internal ApexFieldSamplerComponent() { }
-
-    /// <summary>
-    /// Constructs a new ApexFieldSamplerComponent
-    /// </summary>
-    public ApexFieldSamplerComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ApexFieldSamplerComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

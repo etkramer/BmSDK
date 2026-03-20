@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleDownloadProgress<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleDownloadProgress : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

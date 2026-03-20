@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_DriveBatmobileToLocation<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DriveBatmobileToLocation : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

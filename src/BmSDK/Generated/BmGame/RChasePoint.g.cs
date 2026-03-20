@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RChasePoint<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RChasePoint : BmSDK.GameObject, BmSDK.IGameObject
 {

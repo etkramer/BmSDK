@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_TwoFaceLairThugSpawnerBase<br/>
+/// ABSTRACT Class: RSeqAct_TwoFaceLairThugSpawnerBase<br/>
 /// (size = 496)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_CombatSpawnerBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_TwoFaceLairThugSpawnerBase : BmSDK.BmGame.RSeqAct_C
     }
 
     internal RSeqAct_TwoFaceLairThugSpawnerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_TwoFaceLairThugSpawnerBase
-    /// </summary>
-    public RSeqAct_TwoFaceLairThugSpawnerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_TwoFaceLairThugSpawnerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RArenaCamera<br/>
 /// (size = 1352)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RArenaCamera : BmSDK.BmGame.RMultiTargetCamera, BmSDK.IGameObject
 {

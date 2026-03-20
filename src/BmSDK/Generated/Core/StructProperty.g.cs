@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: StructProperty<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class StructProperty : BmSDK.Property, BmSDK.IGameObject
 {

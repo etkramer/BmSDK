@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_BreakablePropDamage<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 33554450)
 /// </summary>
 public partial class RSeqEvent_BreakablePropDamage : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

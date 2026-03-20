@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ControlMovieTexture<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_ControlMovieTexture : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MCombatMove_GadgetJackInBox<br/>
+/// ABSTRACT Class: MCombatMove_GadgetJackInBox<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class MCombatMove_GadgetJackInBox : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MCombatMove_GadgetJackInBox : BmSDK.BmGame.RCombatMove_Batm
     }
 
     internal MCombatMove_GadgetJackInBox() { }
-
-    /// <summary>
-    /// Constructs a new MCombatMove_GadgetJackInBox
-    /// </summary>
-    public MCombatMove_GadgetJackInBox(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MCombatMove_GadgetJackInBox Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

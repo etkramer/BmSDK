@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkEmoteSet<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkEmoteSet : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

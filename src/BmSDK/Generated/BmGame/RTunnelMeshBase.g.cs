@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTunnelMeshBase<br/>
 /// (size = 720)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RTunnelMeshBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

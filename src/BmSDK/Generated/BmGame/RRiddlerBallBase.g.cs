@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRiddlerBallBase<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RRiddlerBallBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

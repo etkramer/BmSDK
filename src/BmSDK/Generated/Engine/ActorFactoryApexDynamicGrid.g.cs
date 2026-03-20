@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryApexDynamicGrid<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134221974)
 /// </summary>
 public partial class ActorFactoryApexDynamicGrid : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

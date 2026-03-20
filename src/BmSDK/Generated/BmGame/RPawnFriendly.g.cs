@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnFriendly<br/>
 /// (size = 4740)
-/// (flags = 0)
+/// (flags = 144703670)
 /// </summary>
 public partial class RPawnFriendly : BmSDK.BmGame.RPawnSpeech, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSentryGunBase<br/>
+/// ABSTRACT Class: RSentryGunBase<br/>
 /// (size = 1548)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSentryGunBase : BmSDK.BmGame.RNavMeshObstacle_Queue, BmSDK
     }
 
     internal RSentryGunBase() { }
-
-    /// <summary>
-    /// Constructs a new RSentryGunBase
-    /// </summary>
-    public RSentryGunBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSentryGunBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDRelationshipGreaterThan<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkSDRelationshipGreaterThan : BmSDK.AkAudio.AkSDRelationship, BmSDK.IGameObject
 {

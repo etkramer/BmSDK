@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvoPawnRef_Indexed<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBarkConvoPawnRef_Indexed : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject
 {

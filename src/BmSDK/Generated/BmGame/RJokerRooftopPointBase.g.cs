@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerRooftopPointBase<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RJokerRooftopPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqCond_InLevel<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqCond_InLevel : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {

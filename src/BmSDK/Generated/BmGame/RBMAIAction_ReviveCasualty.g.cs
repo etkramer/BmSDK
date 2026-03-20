@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_ReviveCasualty<br/>
 /// (size = 1388)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_ReviveCasualty : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ExponentialHeightFogComponent<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLedgeLookDangerAreaInfo<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RLedgeLookDangerAreaInfo : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

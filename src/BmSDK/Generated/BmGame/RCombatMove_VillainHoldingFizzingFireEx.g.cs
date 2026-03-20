@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_VillainHoldingFizzingFireEx<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_VillainHoldingFizzingFireEx : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

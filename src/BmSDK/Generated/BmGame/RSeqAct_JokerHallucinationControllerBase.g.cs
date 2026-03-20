@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_JokerHallucinationControllerBase<br/>
+/// ABSTRACT Class: RSeqAct_JokerHallucinationControllerBase<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_JokerHallucinationControllerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_JokerHallucinationControllerBase : BmSDK.Engine.Seq
     }
 
     internal RSeqAct_JokerHallucinationControllerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_JokerHallucinationControllerBase
-    /// </summary>
-    public RSeqAct_JokerHallucinationControllerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_JokerHallucinationControllerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

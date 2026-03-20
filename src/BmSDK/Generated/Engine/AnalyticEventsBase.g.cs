@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnalyticEventsBase<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
 {

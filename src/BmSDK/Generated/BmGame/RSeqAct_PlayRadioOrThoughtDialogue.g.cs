@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_PlayRadioOrThoughtDialogue<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqAct_PlayRadioOrThoughtDialogue : BmSDK.BmGame.RSeqAct_PlaySpeechBase, BmSDK.IGameObject
 {

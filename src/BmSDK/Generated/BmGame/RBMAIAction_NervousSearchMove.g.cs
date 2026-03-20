@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_NervousSearchMove<br/>
+/// ABSTRACT Class: RBMAIAction_NervousSearchMove<br/>
 /// (size = 952)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_NervousSearchMove : BmSDK.BmGame.RBMAIAction_Ba
     }
 
     internal RBMAIAction_NervousSearchMove() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_NervousSearchMove
-    /// </summary>
-    public RBMAIAction_NervousSearchMove(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_NervousSearchMove Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

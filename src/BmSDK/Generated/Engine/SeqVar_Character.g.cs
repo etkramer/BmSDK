@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqVar_Character<br/>
+/// ABSTRACT Class: SeqVar_Character<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqVar_Character : BmSDK.Engine.SeqVar_Object, BmSDK.IGameO
     }
 
     internal SeqVar_Character() { }
-
-    /// <summary>
-    /// Constructs a new SeqVar_Character
-    /// </summary>
-    public SeqVar_Character(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqVar_Character Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

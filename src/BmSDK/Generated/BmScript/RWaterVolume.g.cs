@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RWaterVolume<br/>
 /// (size = 896)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RWaterVolume : BmSDK.BmGame.RWaterVolumeBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_DoorHandler<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_DoorHandler : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: OnlineCustomContentRequestHydra<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class OnlineCustomContentRequestHydra : BmSDK.Engine.OnlineCustomContentRequest, BmSDK.IGameObject
 {

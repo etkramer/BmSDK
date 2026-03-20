@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkFlagBase<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMSeqEvent_BehaviourRoot<br/>
+/// ABSTRACT Class: RBMSeqEvent_BehaviourRoot<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RBMSeqEvent_BehaviourRoot : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMSeqEvent_BehaviourRoot : BmSDK.Engine.SequenceEvent, BmS
     }
 
     internal RBMSeqEvent_BehaviourRoot() { }
-
-    /// <summary>
-    /// Constructs a new RBMSeqEvent_BehaviourRoot
-    /// </summary>
-    public RBMSeqEvent_BehaviourRoot(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMSeqEvent_BehaviourRoot Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

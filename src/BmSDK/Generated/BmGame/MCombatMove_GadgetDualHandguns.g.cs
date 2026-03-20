@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MCombatMove_GadgetDualHandguns<br/>
+/// ABSTRACT Class: MCombatMove_GadgetDualHandguns<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class MCombatMove_GadgetDualHandguns : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MCombatMove_GadgetDualHandguns : BmSDK.BmGame.RCombatMove_B
     }
 
     internal MCombatMove_GadgetDualHandguns() { }
-
-    /// <summary>
-    /// Constructs a new MCombatMove_GadgetDualHandguns
-    /// </summary>
-    public MCombatMove_GadgetDualHandguns(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MCombatMove_GadgetDualHandguns Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

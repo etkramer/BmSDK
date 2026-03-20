@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_SetBatmobileForensicsBase<br/>
+/// ABSTRACT Class: RSeqAct_SetBatmobileForensicsBase<br/>
 /// (size = 408)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_SetBatmobileForensicsBase : BmSDK.Engine.SeqAct_Lat
     }
 
     internal RSeqAct_SetBatmobileForensicsBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_SetBatmobileForensicsBase
-    /// </summary>
-    public RSeqAct_SetBatmobileForensicsBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_SetBatmobileForensicsBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

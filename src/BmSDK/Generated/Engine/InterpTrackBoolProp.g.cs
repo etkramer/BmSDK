@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackBoolProp<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackBoolProp : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

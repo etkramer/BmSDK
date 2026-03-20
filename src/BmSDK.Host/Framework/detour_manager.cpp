@@ -2,9 +2,9 @@
 #include "offsets.h"
 #include "../runtime.h"
 
-DECLARE_DETOUR(EngineLoopPreInit, int, __fastcall, void*, void*, void*)
+DECLARE_DETOUR(EngineLoopPreInit, void*, __fastcall, void*, void*)
 
-static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) {
+static void* __fastcall EngineLoopPreInitDetour(void* a1, void* Source) {
     // Init .NET and BmSDK.dll if not yet done
     static bool isRuntimeReady = false;
     if (!isRuntimeReady) {
@@ -13,7 +13,7 @@ static int __fastcall EngineLoopPreInitDetour(void* a1, void* a2, void* Source) 
     }
 
     // Call original
-    return EngineLoopPreInit(a1, a2, Source);
+    return EngineLoopPreInit(a1, Source);
 }
 
 void DetourManager::RegisterEngineLoopPreInitDetour() {

@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkMultipointEmitter<br/>
 /// (size = 860)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkMultipointEmitter : BmSDK.AkAudio.AkEmitter, BmSDK.IGameObject
 {

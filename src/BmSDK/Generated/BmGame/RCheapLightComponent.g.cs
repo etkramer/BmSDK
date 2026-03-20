@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCheapLightComponent<br/>
 /// (size = 248)
-/// (flags = 0)
+/// (flags = 176173202)
 /// </summary>
 public partial class RCheapLightComponent : BmSDK.Engine.FogVolumeSphericalDensityComponent, BmSDK.IGameObject
 {

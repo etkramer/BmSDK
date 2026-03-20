@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_RestrictDisruptorTargets<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_RestrictDisruptorTargets : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCinematicLookAtTarget<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCinematicLookAtTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

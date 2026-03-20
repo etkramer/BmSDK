@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMPathNode_FenceJumpProxy<br/>
 /// (size = 996)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RBMPathNode_FenceJumpProxy : BmSDK.BmGame.RBMPathNode_VariablePositionTraverseProxy, BmSDK.IGameObject
 {

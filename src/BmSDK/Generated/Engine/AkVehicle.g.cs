@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkVehicle<br/>
 /// (size = 2128)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class AkVehicle : BmSDK.Engine.SVehicle, BmSDK.IGameObject
 {

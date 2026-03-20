@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleThreatComponent<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RVehicleThreatComponent : BmSDK.Engine.RInteractionComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpCurveEdSetup<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
 {

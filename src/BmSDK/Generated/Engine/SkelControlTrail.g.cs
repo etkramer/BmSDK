@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SkelControlTrail<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class SkelControlTrail : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

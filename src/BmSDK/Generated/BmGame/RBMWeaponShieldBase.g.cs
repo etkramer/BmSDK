@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponShieldBase<br/>
+/// ABSTRACT Class: RBMWeaponShieldBase<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 77594675)
 /// </summary>
 public partial class RBMWeaponShieldBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponShieldBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IG
     }
 
     internal RBMWeaponShieldBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponShieldBase
-    /// </summary>
-    public RBMWeaponShieldBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponShieldBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

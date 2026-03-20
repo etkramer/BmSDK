@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVentChuteCamera<br/>
 /// (size = 1292)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RVentChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

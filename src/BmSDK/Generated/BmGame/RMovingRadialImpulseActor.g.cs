@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMovingRadialImpulseActor<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RMovingRadialImpulseActor : BmSDK.Engine.RB_RadialImpulseActor, BmSDK.IGameObject
 {

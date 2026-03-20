@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_VillainGetWeaponFromEnvironment<br/>
 /// (size = 900)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_VillainGetWeaponFromEnvironment : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

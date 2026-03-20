@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshInspector<br/>
 /// (size = 2172)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class RNavMeshInspector : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {

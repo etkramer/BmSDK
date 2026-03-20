@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_SetIdleStance<br/>
 /// (size = 596)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_SetIdleStance : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

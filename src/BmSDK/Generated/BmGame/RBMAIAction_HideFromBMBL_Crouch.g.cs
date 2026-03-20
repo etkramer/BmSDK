@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_HideFromBMBL_Crouch<br/>
 /// (size = 896)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_HideFromBMBL_Crouch : BmSDK.BmGame.RBMAIAction_HideFromBMBL_Base, BmSDK.IGameObject
 {

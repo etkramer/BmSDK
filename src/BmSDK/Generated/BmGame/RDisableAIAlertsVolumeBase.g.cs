@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RDisableAIAlertsVolumeBase<br/>
+/// ABSTRACT Class: RDisableAIAlertsVolumeBase<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RDisableAIAlertsVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RDisableAIAlertsVolumeBase : BmSDK.Engine.Volume, BmSDK.IGa
     }
 
     internal RDisableAIAlertsVolumeBase() { }
-
-    /// <summary>
-    /// Constructs a new RDisableAIAlertsVolumeBase
-    /// </summary>
-    public RDisableAIAlertsVolumeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDisableAIAlertsVolumeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGadgetSelect<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
 {

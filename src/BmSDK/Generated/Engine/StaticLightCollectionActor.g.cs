@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: StaticLightCollectionActor<br/>
 /// (size = 712)
-/// (flags = 0)
+/// (flags = 144704150)
 /// </summary>
 public partial class StaticLightCollectionActor : BmSDK.Engine.Light, BmSDK.IGameObject
 {

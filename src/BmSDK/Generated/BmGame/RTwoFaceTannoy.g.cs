@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTwoFaceTannoy<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RTwoFaceTannoy : BmSDK.BmGame.RPredator_Tannoy, BmSDK.IGameObject
 {

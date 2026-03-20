@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMortarProjectile<br/>
 /// (size = 1080)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RMortarProjectile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
 {

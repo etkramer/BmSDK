@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkelControlWhip<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

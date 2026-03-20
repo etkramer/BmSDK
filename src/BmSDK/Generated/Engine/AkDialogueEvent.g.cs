@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkDialogueEvent<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkDialogueEvent : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

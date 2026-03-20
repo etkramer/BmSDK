@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakeDownStage_DoubleGrabFromHang<br/>
 /// (size = 1844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakeDownStage_DoubleGrabFromHang : BmSDK.BmGame.RStealthTakeDownStageDoubleBase, BmSDK.IGameObject
 {

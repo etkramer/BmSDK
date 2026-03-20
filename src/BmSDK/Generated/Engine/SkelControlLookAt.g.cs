@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SkelControlLookAt<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class SkelControlLookAt : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_ChallengeVehicleKilled<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_ChallengeVehicleKilled : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

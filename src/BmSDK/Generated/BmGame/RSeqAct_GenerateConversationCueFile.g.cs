@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_GenerateConversationCueFile<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_GenerateConversationCueFile : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

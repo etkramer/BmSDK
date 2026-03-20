@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMagicGunStartle<br/>
 /// (size = 2068)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RMagicGunStartle : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {

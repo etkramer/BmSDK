@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_DodgeProjectile<br/>
 /// (size = 624)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_DodgeProjectile : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

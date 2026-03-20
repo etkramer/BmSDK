@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkeletalMeshActor<br/>
 /// (size = 824)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RSkeletalMeshActor : BmSDK.Engine.SkeletalMeshActor, BmSDK.IGameObject
 {

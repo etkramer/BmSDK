@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPredator_Tannoy<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPredator_Tannoy : BmSDK.BmGame.RJokerTannoy, BmSDK.IGameObject
 {

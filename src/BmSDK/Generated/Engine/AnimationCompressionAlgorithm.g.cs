@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimationCompressionAlgorithm<br/>
+/// ABSTRACT Class: AnimationCompressionAlgorithm<br/>
 /// (size = 106)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AnimationCompressionAlgorithm : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimationCompressionAlgorithm : BmSDK.GameObject, BmSDK.IGa
     }
 
     internal AnimationCompressionAlgorithm() { }
-
-    /// <summary>
-    /// Constructs a new AnimationCompressionAlgorithm
-    /// </summary>
-    public AnimationCompressionAlgorithm(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimationCompressionAlgorithm Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

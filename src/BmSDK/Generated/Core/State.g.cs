@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: State<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class State : BmSDK.Struct, BmSDK.IGameObject
 {

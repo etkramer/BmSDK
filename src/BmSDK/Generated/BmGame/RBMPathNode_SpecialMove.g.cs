@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMPathNode_SpecialMove<br/>
+/// ABSTRACT Class: RBMPathNode_SpecialMove<br/>
 /// (size = 976)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMPathNode_SpecialMove : BmSDK.BmGame.RPathNode, BmSDK.IGa
     }
 
     internal RBMPathNode_SpecialMove() { }
-
-    /// <summary>
-    /// Constructs a new RBMPathNode_SpecialMove
-    /// </summary>
-    public RBMPathNode_SpecialMove(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMPathNode_SpecialMove Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RCombatMove_MinigunThugClash<br/>
 /// (size = 948)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_MinigunThugClash : BmSDK.BmGame.RCombatMove_VillainClash, BmSDK.IGameObject
 {

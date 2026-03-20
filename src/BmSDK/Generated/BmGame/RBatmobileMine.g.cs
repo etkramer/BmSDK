@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileMine<br/>
 /// (size = 1088)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBatmobileMine : BmSDK.BmGame.RMortarProjectile, BmSDK.IGameObject
 {

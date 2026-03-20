@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqAct_PlaySound<br/>
+/// ABSTRACT Class: SeqAct_PlaySound<br/>
 /// (size = 416)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class SeqAct_PlaySound : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqAct_PlaySound : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameO
     }
 
     internal SeqAct_PlaySound() { }
-
-    /// <summary>
-    /// Constructs a new SeqAct_PlaySound
-    /// </summary>
-    public SeqAct_PlaySound(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_PlaySound Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

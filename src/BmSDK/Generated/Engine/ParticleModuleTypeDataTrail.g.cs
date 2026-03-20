@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleTypeDataTrail<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class ParticleModuleTypeDataTrail : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_StrikeContact<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_StrikeContact : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

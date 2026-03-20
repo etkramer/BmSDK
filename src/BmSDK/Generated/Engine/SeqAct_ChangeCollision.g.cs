@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ChangeCollision<br/>
 /// (size = 357)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_ChangeCollision : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

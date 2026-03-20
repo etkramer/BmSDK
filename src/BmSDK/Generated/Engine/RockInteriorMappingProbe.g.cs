@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockInteriorMappingProbe<br/>
 /// (size = 1000)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RockInteriorMappingProbe : BmSDK.Engine.RockReflectionVolume, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Attack_WatchAndWait<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Attack_WatchAndWait : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

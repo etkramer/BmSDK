@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCapeComponent<br/>
 /// (size = 956)
-/// (flags = 0)
+/// (flags = 2292187350)
 /// </summary>
 public partial class RCapeComponent : BmSDK.Engine.MeshComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleCrimeSceneInfo<br/>
 /// (size = 240)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleCrimeSceneInfo : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

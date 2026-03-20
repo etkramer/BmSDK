@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_GrabHostage<br/>
 /// (size = 604)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_GrabHostage : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

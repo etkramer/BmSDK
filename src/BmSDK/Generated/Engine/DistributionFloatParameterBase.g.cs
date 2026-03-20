@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: DistributionFloatParameterBase<br/>
+/// ABSTRACT Class: DistributionFloatParameterBase<br/>
 /// (size = 141)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionFloatConstant, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class DistributionFloatParameterBase : BmSDK.Engine.DistributionF
     }
 
     internal DistributionFloatParameterBase() { }
-
-    /// <summary>
-    /// Constructs a new DistributionFloatParameterBase
-    /// </summary>
-    public DistributionFloatParameterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, DistributionFloatParameterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DeadThugOnscreenCounter<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_DeadThugOnscreenCounter : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

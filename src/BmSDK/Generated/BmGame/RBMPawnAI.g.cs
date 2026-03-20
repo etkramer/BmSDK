@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMPawnAI<br/>
+/// ABSTRACT Class: RBMPawnAI<br/>
 /// (size = 4632)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMPawnAI : BmSDK.BmGame.RBMPawnAIAnim, BmSDK.IGameObject
     }
 
     internal RBMPawnAI() { }
-
-    /// <summary>
-    /// Constructs a new RBMPawnAI
-    /// </summary>
-    public RBMPawnAI(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMPawnAI Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

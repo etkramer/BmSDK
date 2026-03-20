@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RChapterLineSet<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 33554450)
 /// </summary>
 public partial class RChapterLineSet : BmSDK.GameObject, BmSDK.IGameObject
 {

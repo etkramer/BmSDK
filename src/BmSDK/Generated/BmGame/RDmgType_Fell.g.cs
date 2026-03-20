@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RDmgType_Fell<br/>
+/// ABSTRACT Class: RDmgType_Fell<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RDmgType_Fell : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RDmgType_Fell : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
     }
 
     internal RDmgType_Fell() { }
-
-    /// <summary>
-    /// Constructs a new RDmgType_Fell
-    /// </summary>
-    public RDmgType_Fell(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDmgType_Fell Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_FindMostAwareThug<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_FindMostAwareThug : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

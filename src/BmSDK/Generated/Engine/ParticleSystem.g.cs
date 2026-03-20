@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleSystem<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class ParticleSystem : BmSDK.GameObject, BmSDK.IGameObject
 {

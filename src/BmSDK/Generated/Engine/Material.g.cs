@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Material<br/>
 /// (size = 2272)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class Material : BmSDK.Engine.MaterialInterface, BmSDK.IGameObject
 {

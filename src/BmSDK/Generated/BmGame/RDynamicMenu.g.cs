@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDynamicMenu<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

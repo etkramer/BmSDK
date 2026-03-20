@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackToggle<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackToggle : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

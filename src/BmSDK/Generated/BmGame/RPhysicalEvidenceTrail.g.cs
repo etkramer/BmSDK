@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPhysicalEvidenceTrail<br/>
 /// (size = 813)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPhysicalEvidenceTrail : BmSDK.BmGame.RPhysicalEvidenceBase, BmSDK.IGameObject
 {

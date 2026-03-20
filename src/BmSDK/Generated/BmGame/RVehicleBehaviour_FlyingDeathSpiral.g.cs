@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_FlyingDeathSpiral<br/>
 /// (size = 636)
-/// (flags = 0)
+/// (flags = 12306)
 /// </summary>
 public partial class RVehicleBehaviour_FlyingDeathSpiral : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCutscene_SilentPredatorFinale<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBMCutscene_SilentPredatorFinale : BmSDK.BmGame.RBMCutscene_Cam, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockMapHighlight<br/>
 /// (size = 1044)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RockMapHighlight : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

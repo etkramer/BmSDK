@@ -4,9 +4,9 @@
 namespace BmSDK.AkAudio;
 
 /// <summary>
-/// Class: AkSDEntityValue<br/>
+/// ABSTRACT Class: AkSDEntityValue<br/>
 /// (size = 252)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class AkSDEntityValue : BmSDK.AkAudio.AkSDEntity, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkSDEntityValue : BmSDK.AkAudio.AkSDEntity, BmSDK.IGameObje
     }
 
     internal AkSDEntityValue() { }
-
-    /// <summary>
-    /// Constructs a new AkSDEntityValue
-    /// </summary>
-    public AkSDEntityValue(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkSDEntityValue Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

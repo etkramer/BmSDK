@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: LightComponent<br/>
+/// ABSTRACT Class: LightComponent<br/>
 /// (size = 612)
-/// (flags = 0)
+/// (flags = 2097555)
 /// </summary>
 public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class LightComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameOb
     }
 
     internal LightComponent() { }
-
-    /// <summary>
-    /// Constructs a new LightComponent
-    /// </summary>
-    public LightComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, LightComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

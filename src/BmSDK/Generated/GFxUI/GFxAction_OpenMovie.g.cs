@@ -6,7 +6,7 @@ namespace BmSDK.GFxUI;
 /// <summary>
 /// Class: GFxAction_OpenMovie<br/>
 /// (size = 424)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class GFxAction_OpenMovie : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

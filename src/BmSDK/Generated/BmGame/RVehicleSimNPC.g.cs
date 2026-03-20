@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleSimNPC<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RVehicleSimNPC : BmSDK.Engine.SVehicleSimBase, BmSDK.IGameObject
 {

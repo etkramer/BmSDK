@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RInterpTrackVectorParticleParam<br/>
 /// (size = 312)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RInterpTrackVectorParticleParam : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {

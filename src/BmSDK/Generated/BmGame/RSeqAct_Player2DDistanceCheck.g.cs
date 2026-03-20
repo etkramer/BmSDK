@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_Player2DDistanceCheck<br/>
 /// (size = 396)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_Player2DDistanceCheck : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

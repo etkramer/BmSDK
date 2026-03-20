@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DrawVolumeBox<br/>
 /// (size = 561)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class DrawVolumeBox : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PairedCorner<br/>
 /// (size = 1336)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PairedCorner : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

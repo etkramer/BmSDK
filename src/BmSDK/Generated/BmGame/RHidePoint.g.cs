@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHidePoint<br/>
 /// (size = 1288)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RHidePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

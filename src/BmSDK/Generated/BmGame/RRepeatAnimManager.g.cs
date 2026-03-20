@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRepeatAnimManager<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_RunToWithDecellerate<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_RunToWithDecellerate : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject
 {

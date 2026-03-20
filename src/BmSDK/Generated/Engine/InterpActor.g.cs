@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpActor<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class InterpActor : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject
 {

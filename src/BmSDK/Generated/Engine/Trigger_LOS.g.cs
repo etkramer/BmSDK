@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Trigger_LOS<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class Trigger_LOS : BmSDK.Engine.Trigger, BmSDK.IGameObject
 {

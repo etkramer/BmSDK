@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Commandlet<br/>
+/// ABSTRACT Class: Commandlet<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 134217915)
 /// </summary>
 public partial class Commandlet : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Commandlet : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Commandlet() { }
-
-    /// <summary>
-    /// Constructs a new Commandlet
-    /// </summary>
-    public Commandlet(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Commandlet Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

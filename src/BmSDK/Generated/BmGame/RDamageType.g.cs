@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDamageType<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDamageType : BmSDK.Engine.DamageType, BmSDK.IGameObject
 {

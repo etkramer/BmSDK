@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDownloadableContentManager<br/>
 /// (size = 336)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDownloadableContentManager : BmSDK.Engine.DownloadableContentManager, BmSDK.IGameObject
 {

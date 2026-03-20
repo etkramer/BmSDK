@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleUberLTISIVCLIL<br/>
 /// (size = 476)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class ParticleModuleUberLTISIVCLIL : BmSDK.Engine.ParticleModuleUberBase, BmSDK.IGameObject
 {

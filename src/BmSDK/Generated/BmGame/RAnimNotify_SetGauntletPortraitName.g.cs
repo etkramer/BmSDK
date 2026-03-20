@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_SetGauntletPortraitName<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_SetGauntletPortraitName : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

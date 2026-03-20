@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkWhooshAnchor<br/>
 /// (size = 676)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AkWhooshAnchor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

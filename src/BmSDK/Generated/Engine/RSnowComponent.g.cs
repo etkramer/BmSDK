@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RSnowComponent<br/>
 /// (size = 636)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RSnowComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

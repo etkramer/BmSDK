@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_CombatShield<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CombatShield : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject
 {

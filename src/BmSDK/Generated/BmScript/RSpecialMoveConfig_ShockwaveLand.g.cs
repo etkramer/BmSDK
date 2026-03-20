@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSpecialMoveConfig_ShockwaveLand<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_ShockwaveLand : BmSDK.BmGame.RSpecialMoveConfig_Land, BmSDK.IGameObject
 {

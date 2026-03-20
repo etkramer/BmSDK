@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNode_Cape<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

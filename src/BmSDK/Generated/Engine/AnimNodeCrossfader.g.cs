@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeCrossfader<br/>
 /// (size = 336)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimNodeCrossfader : BmSDK.Engine.AnimNodeBlend, BmSDK.IGameObject
 {

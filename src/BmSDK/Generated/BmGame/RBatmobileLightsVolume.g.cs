@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileLightsVolume<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBatmobileLightsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

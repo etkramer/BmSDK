@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RStealthTakeDownStageDoubleBase<br/>
+/// ABSTRACT Class: RStealthTakeDownStageDoubleBase<br/>
 /// (size = 1844)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_Base, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RStealthTakeDownStageDoubleBase : BmSDK.BmGame.RStealthTake
     }
 
     internal RStealthTakeDownStageDoubleBase() { }
-
-    /// <summary>
-    /// Constructs a new RStealthTakeDownStageDoubleBase
-    /// </summary>
-    public RStealthTakeDownStageDoubleBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStealthTakeDownStageDoubleBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

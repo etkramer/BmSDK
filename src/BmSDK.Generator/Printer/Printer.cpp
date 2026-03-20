@@ -159,6 +159,7 @@ void Printer::PrintClass(UClass* _class, ostream& out)
 
         // Print main ctor (unless abstract)
         if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract))
+        // if (!((DWORD)_class->ClassFlags & (DWORD)EClassFlags::CLASS_Abstract) && _class->GetName() != "Object")
         {
             Printer::Indent(out) << "/// <summary>" << endl;
             Printer::Indent(out) << "/// Constructs a new " << _class->GetNameManaged() << endl;

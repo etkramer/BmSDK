@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMCombatPoint_EnvironmentAttackObject<br/>
+/// ABSTRACT Class: RBMCombatPoint_EnvironmentAttackObject<br/>
 /// (size = 956)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCombatPoint_EnvironmentAttackObjectBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMCombatPoint_EnvironmentAttackObject : BmSDK.BmGame.RBMCo
     }
 
     internal RBMCombatPoint_EnvironmentAttackObject() { }
-
-    /// <summary>
-    /// Constructs a new RBMCombatPoint_EnvironmentAttackObject
-    /// </summary>
-    public RBMCombatPoint_EnvironmentAttackObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMCombatPoint_EnvironmentAttackObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLocalLightContainer<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RLocalLightContainer : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

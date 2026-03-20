@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveControllerCW<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 136319122)
 /// </summary>
 public partial class RSpecialMoveControllerCW : BmSDK.BmGame.RSpecialMoveController, BmSDK.IGameObject
 {

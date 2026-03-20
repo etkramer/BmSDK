@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshPath_EnforceTwoWayEdges<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshPath_EnforceTwoWayEdges : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
 {

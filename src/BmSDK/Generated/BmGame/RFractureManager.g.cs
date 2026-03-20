@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFractureManager<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RFractureManager : BmSDK.Engine.FractureManager, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqEvent_AnalogInput<br/>
+/// ABSTRACT Class: SeqEvent_AnalogInput<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SeqEvent_AnalogInput : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqEvent_AnalogInput : BmSDK.Engine.SequenceEvent, BmSDK.IG
     }
 
     internal SeqEvent_AnalogInput() { }
-
-    /// <summary>
-    /// Constructs a new SeqEvent_AnalogInput
-    /// </summary>
-    public SeqEvent_AnalogInput(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqEvent_AnalogInput Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDamagePawnVolume<br/>
 /// (size = 1044)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RDamagePawnVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

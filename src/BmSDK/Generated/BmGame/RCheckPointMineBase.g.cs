@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCheckPointMineBase<br/>
+/// ABSTRACT Class: RCheckPointMineBase<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCheckPointMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCheckPointMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RCheckPointMineBase() { }
-
-    /// <summary>
-    /// Constructs a new RCheckPointMineBase
-    /// </summary>
-    public RCheckPointMineBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCheckPointMineBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

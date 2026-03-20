@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_PlaceGooMine<br/>
 /// (size = 540)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_PlaceGooMine : BmSDK.BmGame.RSpecialMoveConfig_PlaceActor, BmSDK.IGameObject
 {

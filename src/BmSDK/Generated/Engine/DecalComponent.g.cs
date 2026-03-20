@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DecalComponent<br/>
 /// (size = 928)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class DecalComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

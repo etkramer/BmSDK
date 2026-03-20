@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: EmitterCameraLensEffectBase<br/>
+/// ABSTRACT Class: EmitterCameraLensEffectBase<br/>
 /// (size = 784)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class EmitterCameraLensEffectBase : BmSDK.Engine.Emitter, BmSDK.I
     }
 
     internal EmitterCameraLensEffectBase() { }
-
-    /// <summary>
-    /// Constructs a new EmitterCameraLensEffectBase
-    /// </summary>
-    public EmitterCameraLensEffectBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, EmitterCameraLensEffectBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

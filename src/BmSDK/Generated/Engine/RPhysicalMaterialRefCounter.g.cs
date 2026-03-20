@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPhysicalMaterialRefCounter<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 33554450)
 /// </summary>
 public partial class RPhysicalMaterialRefCounter : BmSDK.GameObject, BmSDK.IGameObject
 {

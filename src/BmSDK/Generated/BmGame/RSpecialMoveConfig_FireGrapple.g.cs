@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_FireGrapple<br/>
 /// (size = 512)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RSpecialMoveConfig_FireGrapple : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

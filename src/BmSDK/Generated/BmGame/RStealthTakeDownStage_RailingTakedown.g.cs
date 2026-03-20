@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStealthTakedownStage_RailingTakedown<br/>
 /// (size = 1820)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_RailingTakedown : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

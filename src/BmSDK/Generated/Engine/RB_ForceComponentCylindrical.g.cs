@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_ForceComponentCylindrical<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class RB_ForceComponentCylindrical : BmSDK.Engine.RB_ForceComponent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialoguePlayTape<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialoguePlayTape : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleTypeDataBase<br/>
+/// ABSTRACT Class: ParticleModuleTypeDataBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleTypeDataBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleTypeDataBase : BmSDK.Engine.ParticleModule, B
     }
 
     internal ParticleModuleTypeDataBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleTypeDataBase
-    /// </summary>
-    public ParticleModuleTypeDataBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleTypeDataBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

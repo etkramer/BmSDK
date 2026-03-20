@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RGrappleGun<br/>
+/// ABSTRACT Class: RGrappleGun<br/>
 /// (size = 3668)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObj
     }
 
     internal RGrappleGun() { }
-
-    /// <summary>
-    /// Constructs a new RGrappleGun
-    /// </summary>
-    public RGrappleGun(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RGrappleGun Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

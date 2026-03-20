@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkActionTargeted<br/>
+/// ABSTRACT Class: AkActionTargeted<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class AkActionTargeted : BmSDK.Engine.AkAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkActionTargeted : BmSDK.Engine.AkAction, BmSDK.IGameObject
     }
 
     internal AkActionTargeted() { }
-
-    /// <summary>
-    /// Constructs a new AkActionTargeted
-    /// </summary>
-    public AkActionTargeted(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkActionTargeted Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

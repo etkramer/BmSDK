@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPawnPlayer_Azrael<br/>
 /// (size = 10380)
-/// (flags = 0)
+/// (flags = 10486326)
 /// </summary>
 public partial class RPawnPlayer_Azrael : BmSDK.BmScript.RPawnPlayerBm, BmSDK.IGameObject
 {

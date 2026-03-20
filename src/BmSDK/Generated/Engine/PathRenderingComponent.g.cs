@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PathRenderingComponent<br/>
 /// (size = 540)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class PathRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

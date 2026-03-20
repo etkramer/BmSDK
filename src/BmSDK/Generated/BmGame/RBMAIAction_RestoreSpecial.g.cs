@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_RestoreSpecial<br/>
+/// ABSTRACT Class: RBMAIAction_RestoreSpecial<br/>
 /// (size = 888)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_RestoreSpecial : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_RestoreSpecial : BmSDK.BmGame.RBMAIAction, BmSD
     }
 
     internal RBMAIAction_RestoreSpecial() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_RestoreSpecial
-    /// </summary>
-    public RBMAIAction_RestoreSpecial(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_RestoreSpecial Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

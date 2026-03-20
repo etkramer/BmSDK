@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: LocalMessage<br/>
+/// ABSTRACT Class: LocalMessage<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class LocalMessage : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class LocalMessage : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal LocalMessage() { }
-
-    /// <summary>
-    /// Constructs a new LocalMessage
-    /// </summary>
-    public LocalMessage(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, LocalMessage Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

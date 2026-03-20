@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkStopMusic<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class SeqAct_AkStopMusic : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MWBIDOverlayManager<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MWBIDOverlayManager : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqEvent_ManBatGrabStart<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBMSeqEvent_ManBatGrabStart : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

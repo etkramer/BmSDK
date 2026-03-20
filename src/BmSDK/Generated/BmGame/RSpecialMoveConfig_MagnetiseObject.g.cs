@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_MagnetiseObject<br/>
 /// (size = 580)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_MagnetiseObject : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

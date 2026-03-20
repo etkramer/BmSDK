@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_FlashTextureMovieControl<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_FlashTextureMovieControl : BmSDK.BmGame.RSeqAct_FlashTextureMovieControlBase, BmSDK.IGameObject
 {

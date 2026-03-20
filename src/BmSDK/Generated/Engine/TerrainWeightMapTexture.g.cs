@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TerrainWeightMapTexture<br/>
 /// (size = 520)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class TerrainWeightMapTexture : BmSDK.Engine.Texture2D, BmSDK.IGameObject
 {

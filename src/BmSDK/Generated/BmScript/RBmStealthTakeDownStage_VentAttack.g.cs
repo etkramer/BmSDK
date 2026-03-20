@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBmStealthTakeDownStage_VentAttack<br/>
 /// (size = 1688)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBmStealthTakeDownStage_VentAttack : BmSDK.BmGame.RStealthTakedownStage_VentAttack, BmSDK.IGameObject
 {

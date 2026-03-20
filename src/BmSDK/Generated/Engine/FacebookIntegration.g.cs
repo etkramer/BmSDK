@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FacebookIntegration<br/>
 /// (size = 212)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class FacebookIntegration : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
 {

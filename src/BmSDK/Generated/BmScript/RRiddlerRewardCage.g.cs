@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RRiddlerRewardCage<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RRiddlerRewardCage : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

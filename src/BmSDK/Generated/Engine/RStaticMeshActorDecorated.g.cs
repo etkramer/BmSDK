@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RStaticMeshActorDecorated<br/>
 /// (size = 840)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RStaticMeshActorDecorated : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

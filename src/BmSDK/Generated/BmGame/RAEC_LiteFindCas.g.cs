@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_LiteFindCas<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_LiteFindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

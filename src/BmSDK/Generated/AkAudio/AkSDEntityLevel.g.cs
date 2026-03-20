@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDEntityLevel<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkSDEntityLevel : BmSDK.AkAudio.AkSDEntitySymbol, BmSDK.IGameObject
 {

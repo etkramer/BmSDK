@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Casualty_Sub_PointAtCas<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Casualty_Sub_PointAtCas : BmSDK.BmGame.RAEC_Casualty_Sub_Centre, BmSDK.IGameObject
 {

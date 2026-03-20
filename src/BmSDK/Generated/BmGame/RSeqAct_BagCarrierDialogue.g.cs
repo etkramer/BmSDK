@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_BagCarrierDialogue<br/>
+/// ABSTRACT Class: RSeqAct_BagCarrierDialogue<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 8396819)
 /// </summary>
 public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_BagCarrierDialogue : BmSDK.Engine.SeqAct_Latent, Bm
     }
 
     internal RSeqAct_BagCarrierDialogue() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_BagCarrierDialogue
-    /// </summary>
-    public RSeqAct_BagCarrierDialogue(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_BagCarrierDialogue Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

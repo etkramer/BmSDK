@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_EnterVehicle<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_EnterVehicle : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ActorFactoryApexAttractor<br/>
 /// (size = 169)
-/// (flags = 0)
+/// (flags = 134221974)
 /// </summary>
 public partial class ActorFactoryApexAttractor : BmSDK.Engine.ActorFactory, BmSDK.IGameObject
 {

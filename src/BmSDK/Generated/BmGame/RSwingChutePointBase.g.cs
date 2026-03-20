@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSwingChutePointBase<br/>
 /// (size = 1348)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
 {

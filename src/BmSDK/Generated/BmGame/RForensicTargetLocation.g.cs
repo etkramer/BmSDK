@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RForensicTargetLocation<br/>
 /// (size = 673)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RForensicTargetLocation : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_LevelStreaming<br/>
 /// (size = 428)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_LevelStreaming : BmSDK.Engine.SeqAct_LevelStreamingBase, BmSDK.IGameObject
 {

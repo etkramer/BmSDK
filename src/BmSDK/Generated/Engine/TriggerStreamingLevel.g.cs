@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: TriggerStreamingLevel<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class TriggerStreamingLevel : BmSDK.Engine.Trigger, BmSDK.IGameObject
 {

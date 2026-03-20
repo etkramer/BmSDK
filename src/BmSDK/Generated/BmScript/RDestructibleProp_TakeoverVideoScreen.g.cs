@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RDestructibleProp_TakeoverVideoScreen<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDestructibleProp_TakeoverVideoScreen : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkProximityTracker<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkProximityTracker : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

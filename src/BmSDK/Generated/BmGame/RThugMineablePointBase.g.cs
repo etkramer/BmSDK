@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RThugMineablePointBase<br/>
+/// ABSTRACT Class: RThugMineablePointBase<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RThugMineablePointBase : BmSDK.Engine.Actor, BmSDK.IGameObj
     }
 
     internal RThugMineablePointBase() { }
-
-    /// <summary>
-    /// Constructs a new RThugMineablePointBase
-    /// </summary>
-    public RThugMineablePointBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RThugMineablePointBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: R3rdPersonCamera<br/>
 /// (size = 23876)
-/// (flags = 0)
+/// (flags = 144703646)
 /// </summary>
 public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
 {

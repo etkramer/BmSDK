@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkVehicleSoundInfo<br/>
 /// (size = 1464)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
 {

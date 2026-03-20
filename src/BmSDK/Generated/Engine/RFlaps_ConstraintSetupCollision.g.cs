@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RFlaps_ConstraintSetupCollision<br/>
 /// (size = 200)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RFlaps_ConstraintSetupCollision : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject
 {

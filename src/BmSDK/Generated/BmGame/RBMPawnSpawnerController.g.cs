@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMPawnSpawnerController<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

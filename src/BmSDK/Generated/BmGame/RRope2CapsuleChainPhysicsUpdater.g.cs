@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRope2CapsuleChainPhysicsUpdater<br/>
 /// (size = 308)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class RRope2CapsuleChainPhysicsUpdater : BmSDK.BmGame.RRope2BasePhysicsUpdater, BmSDK.IGameObject
 {

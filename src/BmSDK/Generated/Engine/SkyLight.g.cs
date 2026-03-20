@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SkyLight<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class SkyLight : BmSDK.Engine.Light, BmSDK.IGameObject
 {

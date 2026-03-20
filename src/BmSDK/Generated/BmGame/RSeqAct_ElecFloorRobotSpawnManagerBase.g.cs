@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_ElecFloorRobotSpawnManagerBase<br/>
+/// ABSTRACT Class: RSeqAct_ElecFloorRobotSpawnManagerBase<br/>
 /// (size = 464)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAc
     }
 
     internal RSeqAct_ElecFloorRobotSpawnManagerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_ElecFloorRobotSpawnManagerBase
-    /// </summary>
-    public RSeqAct_ElecFloorRobotSpawnManagerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_ElecFloorRobotSpawnManagerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

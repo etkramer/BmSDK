@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SwitchDate<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SwitchDate : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

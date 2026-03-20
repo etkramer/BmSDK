@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_StartWandering<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RBMBehaviour_StartWandering : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

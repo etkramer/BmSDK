@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: HttpFactory<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class HttpFactory : BmSDK.GameObject, BmSDK.IGameObject
 {

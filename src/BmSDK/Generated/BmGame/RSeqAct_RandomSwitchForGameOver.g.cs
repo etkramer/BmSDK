@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_RandomSwitchForGameOver<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_RandomSwitchForGameOver : BmSDK.Engine.SeqAct_Switch, BmSDK.IGameObject
 {

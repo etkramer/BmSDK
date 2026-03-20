@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnPlayerFPS<br/>
+/// ABSTRACT Class: RPawnPlayerFPS<br/>
 /// (size = 3200)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameO
     }
 
     internal RPawnPlayerFPS() { }
-
-    /// <summary>
-    /// Constructs a new RPawnPlayerFPS
-    /// </summary>
-    public RPawnPlayerFPS(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnPlayerFPS Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

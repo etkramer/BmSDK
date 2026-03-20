@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: R2DCombatCamera<br/>
 /// (size = 1296)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class R2DCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleSizeMultiplyLife<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleSizeMultiplyLife : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCurvedFencePoint<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCurvedFencePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

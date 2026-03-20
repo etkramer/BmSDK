@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFixedCombatCamera<br/>
 /// (size = 1248)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RFixedCombatCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

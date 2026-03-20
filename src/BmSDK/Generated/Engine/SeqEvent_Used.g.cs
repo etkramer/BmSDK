@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqEvent_Used<br/>
 /// (size = 444)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqEvent_Used : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: EngineBaseTypes<br/>
+/// ABSTRACT Class: EngineBaseTypes<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class EngineBaseTypes : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class EngineBaseTypes : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal EngineBaseTypes() { }
-
-    /// <summary>
-    /// Constructs a new EngineBaseTypes
-    /// </summary>
-    public EngineBaseTypes(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, EngineBaseTypes Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

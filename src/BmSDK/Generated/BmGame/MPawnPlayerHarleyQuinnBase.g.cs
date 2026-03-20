@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MPawnPlayerHarleyQuinnBase<br/>
+/// ABSTRACT Class: MPawnPlayerHarleyQuinnBase<br/>
 /// (size = 10664)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwomanBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MPawnPlayerHarleyQuinnBase : BmSDK.BmGame.RPawnPlayerCatwom
     }
 
     internal MPawnPlayerHarleyQuinnBase() { }
-
-    /// <summary>
-    /// Constructs a new MPawnPlayerHarleyQuinnBase
-    /// </summary>
-    public MPawnPlayerHarleyQuinnBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MPawnPlayerHarleyQuinnBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

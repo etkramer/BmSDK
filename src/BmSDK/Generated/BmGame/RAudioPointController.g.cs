@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAudioPointController<br/>
 /// (size = 2660)
-/// (flags = 0)
+/// (flags = 44040246)
 /// </summary>
 public partial class RAudioPointController : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObject
 {

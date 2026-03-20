@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_TakedownMinigun<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDmgType_TakedownMinigun : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject
 {

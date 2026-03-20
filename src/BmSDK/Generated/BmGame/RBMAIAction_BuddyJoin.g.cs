@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_BuddyJoin<br/>
 /// (size = 940)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_BuddyJoin : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

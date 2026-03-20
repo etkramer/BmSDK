@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqAct_LevelStreamingBase<br/>
+/// ABSTRACT Class: SeqAct_LevelStreamingBase<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class SeqAct_LevelStreamingBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqAct_LevelStreamingBase : BmSDK.Engine.SeqAct_Latent, BmS
     }
 
     internal SeqAct_LevelStreamingBase() { }
-
-    /// <summary>
-    /// Constructs a new SeqAct_LevelStreamingBase
-    /// </summary>
-    public SeqAct_LevelStreamingBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_LevelStreamingBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: REnvironmentSpecialMoveWrapper<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class REnvironmentSpecialMoveWrapper : BmSDK.GameObject, BmSDK.IGameObject
 {

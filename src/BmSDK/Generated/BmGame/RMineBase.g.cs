@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RMineBase<br/>
+/// ABSTRACT Class: RMineBase<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 211812499)
 /// </summary>
 public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RMineBase() { }
-
-    /// <summary>
-    /// Constructs a new RMineBase
-    /// </summary>
-    public RMineBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RMineBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionAntialiasedTextureMask<br/>
 /// (size = 321)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionAntialiasedTextureMask : BmSDK.Engine.MaterialExpressionTextureSampleParameter2D, BmSDK.IGameObject
 {

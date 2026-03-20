@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLevelTransitionPath<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RLevelTransitionPath : BmSDK.BmGame.RLevelTransition, BmSDK.IGameObject
 {

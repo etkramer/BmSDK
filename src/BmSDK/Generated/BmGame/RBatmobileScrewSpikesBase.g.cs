@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBatmobileScrewSpikesBase<br/>
+/// ABSTRACT Class: RBatmobileScrewSpikesBase<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBatmobileScrewSpikesBase : BmSDK.Engine.InterpActor, BmSDK
     }
 
     internal RBatmobileScrewSpikesBase() { }
-
-    /// <summary>
-    /// Constructs a new RBatmobileScrewSpikesBase
-    /// </summary>
-    public RBatmobileScrewSpikesBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBatmobileScrewSpikesBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

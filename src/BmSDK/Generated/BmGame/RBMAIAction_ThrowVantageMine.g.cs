@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_ThrowVantageMine<br/>
 /// (size = 892)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_ThrowVantageMine : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RResonatorTuner<br/>
+/// ABSTRACT Class: RResonatorTuner<br/>
 /// (size = 2460)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RResonatorTuner : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RResonatorTuner : BmSDK.BmGame.RInventoryGadget, BmSDK.IGam
     }
 
     internal RResonatorTuner() { }
-
-    /// <summary>
-    /// Constructs a new RResonatorTuner
-    /// </summary>
-    public RResonatorTuner(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RResonatorTuner Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

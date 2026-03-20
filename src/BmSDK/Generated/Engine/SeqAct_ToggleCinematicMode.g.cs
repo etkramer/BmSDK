@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ToggleCinematicMode<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_ToggleCinematicMode : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

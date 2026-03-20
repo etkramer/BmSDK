@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkDialogueLineSingle<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkDialogueLineSingle : BmSDK.Engine.AkDialogueLine, BmSDK.IGameObject
 {

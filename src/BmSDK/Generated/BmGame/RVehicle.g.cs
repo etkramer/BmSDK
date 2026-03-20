@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVehicle<br/>
+/// ABSTRACT Class: RVehicle<br/>
 /// (size = 4560)
-/// (flags = 0)
+/// (flags = 144704183)
 /// </summary>
 public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVehicle : BmSDK.Engine.AkVehicle, BmSDK.IGameObject
     }
 
     internal RVehicle() { }
-
-    /// <summary>
-    /// Constructs a new RVehicle
-    /// </summary>
-    public RVehicle(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVehicle Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

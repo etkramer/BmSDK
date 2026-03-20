@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: UmbraReference<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 2415919232)
 /// </summary>
 public partial class UmbraReference : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -33,12 +33,4 @@ public partial class UmbraReference : BmSDK.GameObject, BmSDK.IGameObject
     /// </summary>
     protected UmbraReference(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ObjectProperty: VisibilityData
-    /// </summary>
-    public unsafe BmSDK.Engine.UmbraData VisibilityData
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.UmbraData>(Ptr + 100); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 100); }
-    }
 }

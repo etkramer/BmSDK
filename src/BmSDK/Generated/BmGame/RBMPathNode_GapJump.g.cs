@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMPathNode_GapJump<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RBMPathNode_GapJump : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.IGameObject
 {

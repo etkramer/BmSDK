@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCrowdManager<br/>
 /// (size = 716)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RCrowdManager : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

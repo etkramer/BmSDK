@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRiotBrain<br/>
 /// (size = 208)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RRiotBrain : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshGoal_WithinVolume<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RNavMeshGoal_WithinVolume : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
 {

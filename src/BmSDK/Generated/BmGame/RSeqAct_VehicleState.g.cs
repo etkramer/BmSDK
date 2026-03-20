@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_VehicleState<br/>
 /// (size = 385)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_VehicleState : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

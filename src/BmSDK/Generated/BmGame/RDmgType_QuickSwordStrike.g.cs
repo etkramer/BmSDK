@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_QuickSwordStrike<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_QuickSwordStrike : BmSDK.BmGame.RDmgType_QuickStrike, BmSDK.IGameObject
 {

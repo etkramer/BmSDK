@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: NxTornadoForceField<br/>
+/// ABSTRACT Class: NxTornadoForceField<br/>
 /// (size = 800)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class NxTornadoForceField : BmSDK.Engine.NxForceField, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class NxTornadoForceField : BmSDK.Engine.NxForceField, BmSDK.IGam
     }
 
     internal NxTornadoForceField() { }
-
-    /// <summary>
-    /// Constructs a new NxTornadoForceField
-    /// </summary>
-    public NxTornadoForceField(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NxTornadoForceField Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHarpoonProjectile<br/>
 /// (size = 940)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RHarpoonProjectile : BmSDK.BmGame.RProjectileWithRope, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_CornerActionTest<br/>
 /// (size = 617)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CornerActionTest : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour<br/>
+/// ABSTRACT Class: RBMBehaviour<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RBMBehaviour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObjec
     }
 
     internal RBMBehaviour() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour
-    /// </summary>
-    public RBMBehaviour(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

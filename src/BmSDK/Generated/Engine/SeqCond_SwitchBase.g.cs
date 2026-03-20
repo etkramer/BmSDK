@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqCond_SwitchBase<br/>
+/// ABSTRACT Class: SeqCond_SwitchBase<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 134218387)
 /// </summary>
 public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqCond_SwitchBase : BmSDK.Engine.SequenceCondition, BmSDK.
     }
 
     internal SeqCond_SwitchBase() { }
-
-    /// <summary>
-    /// Constructs a new SeqCond_SwitchBase
-    /// </summary>
-    public SeqCond_SwitchBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqCond_SwitchBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

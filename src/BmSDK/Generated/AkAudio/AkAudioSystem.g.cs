@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkAudioSystem<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 268435596)
 /// </summary>
 public partial class AkAudioSystem : BmSDK.Subsystem, BmSDK.IGameObject
 {

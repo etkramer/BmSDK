@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: NxCylindricalForceField<br/>
+/// ABSTRACT Class: NxCylindricalForceField<br/>
 /// (size = 800)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class NxCylindricalForceField : BmSDK.Engine.NxForceField, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class NxCylindricalForceField : BmSDK.Engine.NxForceField, BmSDK.
     }
 
     internal NxCylindricalForceField() { }
-
-    /// <summary>
-    /// Constructs a new NxCylindricalForceField
-    /// </summary>
-    public NxCylindricalForceField(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NxCylindricalForceField Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

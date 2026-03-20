@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatarangCamera<br/>
 /// (size = 1728)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RBatarangCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

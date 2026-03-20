@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RProjectileGadgetBase<br/>
+/// ABSTRACT Class: RProjectileGadgetBase<br/>
 /// (size = 2592)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RProjectileGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSD
     }
 
     internal RProjectileGadgetBase() { }
-
-    /// <summary>
-    /// Constructs a new RProjectileGadgetBase
-    /// </summary>
-    public RProjectileGadgetBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RProjectileGadgetBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDisruptableLaserGridRiddlerPylonBase<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RDisruptableLaserGridRiddlerPylonBase : BmSDK.BmGame.RDisruptableLaserGridBase, BmSDK.IGameObject
 {

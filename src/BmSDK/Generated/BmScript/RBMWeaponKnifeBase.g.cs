@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RBMWeaponKnifeBase<br/>
+/// ABSTRACT Class: RBMWeaponKnifeBase<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 10485811)
 /// </summary>
 public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponKnifeBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGa
     }
 
     internal RBMWeaponKnifeBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponKnifeBase
-    /// </summary>
-    public RBMWeaponKnifeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponKnifeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

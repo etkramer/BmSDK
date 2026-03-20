@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatArea_GuardPoint<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RCombatArea_GuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

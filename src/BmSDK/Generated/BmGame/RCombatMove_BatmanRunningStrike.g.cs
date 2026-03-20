@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanRunningStrike<br/>
 /// (size = 1564)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_BatmanRunningStrike : BmSDK.BmGame.RCombatMove_BatmanStrike, BmSDK.IGameObject
 {

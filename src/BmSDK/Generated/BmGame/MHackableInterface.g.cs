@@ -4,357 +4,146 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MHackableInterface<br/>
+/// Interface: MHackableInterface<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 16403)
 /// </summary>
-public partial class MHackableInterface : BmSDK.Interface, BmSDK.IGameObject
+public partial interface MHackableInterface : BmSDK.Interface
 {
-    static BmSDK.Class s_staticClass = null;
-    public static BmSDK.Class StaticClass()
-    {
-        if (s_staticClass is null)
-        {
-            s_staticClass = StaticFindObjectChecked<Class>(null, null, "BmGame.MHackableInterface", false);
-            s_staticClass.AddToRoot();
-        }
-        return s_staticClass;
-    }
-
-    internal MHackableInterface() { }
-
-    /// <summary>
-    /// Constructs a new MHackableInterface
-    /// </summary>
-    public MHackableInterface(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MHackableInterface Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
-
-    /// <summary>
-    /// Constructs a new wrapper instance from the given object pointer.
-    /// </summary>
-    protected MHackableInterface(nint ptr) : base(ptr) { }
-
     /// <summary>
     /// Function: SpawnPreviewSubroutine
     /// </summary>
-    public unsafe void SpawnPreviewSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.SpawnPreviewSubroutine", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HackType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineClass, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void SpawnPreviewSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass);
 
     /// <summary>
     /// Function: DisableSubroutineType
     /// </summary>
-    public unsafe void DisableSubroutineType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, bool NewIsDisable)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.DisableSubroutineType", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewIsDisable, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void DisableSubroutineType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, bool NewIsDisable);
 
     /// <summary>
     /// Function: SetSubroutineNameAndDescriptionModifiedByKismet
     /// </summary>
-    public unsafe void SetSubroutineNameAndDescriptionModifiedByKismet(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, BmSDK.FString NewSubroutineName, BmSDK.FString NewSubroutineDescription)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.SetSubroutineNameAndDescriptionModifiedByKismet", true);
-        byte* paramsPtr = stackalloc byte[36];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSubroutineName, paramsPtr + 4);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(NewSubroutineDescription, paramsPtr + 20);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void SetSubroutineNameAndDescriptionModifiedByKismet(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType, BmSDK.FString NewSubroutineName, BmSDK.FString NewSubroutineDescription);
 
     /// <summary>
     /// Function: CreateHackMaskMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent CreateHackMaskMesh()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.CreateHackMaskMesh", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.Engine.StaticMeshComponent>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.Engine.StaticMeshComponent CreateHackMaskMesh();
 
     /// <summary>
     /// Function: SetInHackableMode
     /// </summary>
-    public unsafe void SetInHackableMode(bool On, bool bForce)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.SetInHackableMode", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(On, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(bForce, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void SetInHackableMode(bool On, bool bForce);
 
     /// <summary>
     /// Function: NotifyOnHack
     /// </summary>
-    public unsafe void NotifyOnHack(BmSDK.Engine.Actor HackedObject, BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.NotifyOnHack", true);
-        byte* paramsPtr = stackalloc byte[9];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HackedObject, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 8);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void NotifyOnHack(BmSDK.Engine.Actor HackedObject, BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: GetAffectedActors
     /// </summary>
-    public unsafe void GetAffectedActors(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass, out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetAffectedActors", true);
-        byte* paramsPtr = stackalloc byte[28];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HackType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineClass, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        AffectedActors = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.Engine.Actor>>(paramsPtr + 12);
-        return;
-    }
+    public unsafe void GetAffectedActors(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass, out BmSDK.TArray<BmSDK.Engine.Actor> AffectedActors);
 
     /// <summary>
     /// Function: GetPossibleSubroutineTypes
     /// </summary>
-    public unsafe void GetPossibleSubroutineTypes(out BmSDK.TArray<BmSDK.BmGame.MHackableInterface.EHackSubroutineType> PossibleTypes)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetPossibleSubroutineTypes", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        PossibleTypes = BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.BmGame.MHackableInterface.EHackSubroutineType>>(paramsPtr + 0);
-        return;
-    }
+    public unsafe void GetPossibleSubroutineTypes(out BmSDK.TArray<BmSDK.BmGame.MHackableInterface.EHackSubroutineType> PossibleTypes);
 
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.OnToggle", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Action, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return;
-    }
+    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action);
 
     /// <summary>
     /// Function: GetSubroutineDefinitionForType
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.FSubroutineDefinition GetSubroutineDefinitionForType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetSubroutineDefinitionForType", true);
-        byte* paramsPtr = stackalloc byte[76];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackableInterface.FSubroutineDefinition>(paramsPtr + 4);
-    }
+    public unsafe BmSDK.BmGame.MHackableInterface.FSubroutineDefinition GetSubroutineDefinitionForType(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: GetPreviewSubroutine
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackSubroutine GetPreviewSubroutine()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetPreviewSubroutine", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackSubroutine>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.MHackSubroutine GetPreviewSubroutine();
 
     /// <summary>
     /// Function: GetCurrentSubroutine
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackSubroutine GetCurrentSubroutine()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetCurrentSubroutine", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackSubroutine>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.MHackSubroutine GetCurrentSubroutine();
 
     /// <summary>
     /// Function: GetCurrentSubroutineType
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.EHackSubroutineType GetCurrentSubroutineType()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetCurrentSubroutineType", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackableInterface.EHackSubroutineType>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.MHackableInterface.EHackSubroutineType GetCurrentSubroutineType();
 
     /// <summary>
     /// Function: GetHackableState
     /// </summary>
-    public unsafe BmSDK.BmGame.MHackableInterface.EHackableObjectState GetHackableState()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetHackableState", true);
-        byte* paramsPtr = stackalloc byte[1];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.BmGame.MHackableInterface.EHackableObjectState>(paramsPtr + 0);
-    }
+    public unsafe BmSDK.BmGame.MHackableInterface.EHackableObjectState GetHackableState();
 
     /// <summary>
     /// Function: GetDisplayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetDisplayTargetLocation", true);
-        byte* paramsPtr = stackalloc byte[12];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<System.Numerics.Vector3>(paramsPtr + 0);
-    }
+    public unsafe System.Numerics.Vector3 GetDisplayTargetLocation();
 
     /// <summary>
     /// Function: GetSubroutineDescription
     /// </summary>
-    public unsafe BmSDK.FString GetSubroutineDescription(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetSubroutineDescription", true);
-        byte* paramsPtr = stackalloc byte[88];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Definition, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 72);
-    }
+    public unsafe BmSDK.FString GetSubroutineDescription(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition);
 
     /// <summary>
     /// Function: GetSubroutineName
     /// </summary>
-    public unsafe BmSDK.FString GetSubroutineName(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetSubroutineName", true);
-        byte* paramsPtr = stackalloc byte[88];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(Definition, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.FString>(paramsPtr + 72);
-    }
+    public unsafe BmSDK.FString GetSubroutineName(BmSDK.BmGame.MHackableInterface.FSubroutineDefinition Definition);
 
     /// <summary>
     /// Function: GetNumberOfSubroutineTypes
     /// </summary>
-    public unsafe int GetNumberOfSubroutineTypes()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.GetNumberOfSubroutineTypes", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<int>(paramsPtr + 0);
-    }
+    public unsafe int GetNumberOfSubroutineTypes();
 
     /// <summary>
     /// Function: TriggerCancelEvent
     /// </summary>
-    public unsafe bool TriggerCancelEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.TriggerCancelEvent", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool TriggerCancelEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: TriggerCompleteEvent
     /// </summary>
-    public unsafe bool TriggerCompleteEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.TriggerCompleteEvent", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool TriggerCompleteEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: TriggerEvent
     /// </summary>
-    public unsafe bool TriggerEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.TriggerEvent", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool TriggerEvent(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: NeedToDisplayNumberOfTargets
     /// </summary>
-    public unsafe bool NeedToDisplayNumberOfTargets()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.NeedToDisplayNumberOfTargets", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool NeedToDisplayNumberOfTargets();
 
     /// <summary>
     /// Function: IsSubroutineTypeDisable
     /// </summary>
-    public unsafe bool IsSubroutineTypeDisable(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.IsSubroutineTypeDisable", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool IsSubroutineTypeDisable(BmSDK.BmGame.MHackableInterface.EHackSubroutineType SubroutineType);
 
     /// <summary>
     /// Function: IsObjectEnable
     /// </summary>
-    public unsafe bool IsObjectEnable()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.IsObjectEnable", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool IsObjectEnable();
 
     /// <summary>
     /// Function: CanBeExecuted
     /// </summary>
-    public unsafe bool CanBeExecuted()
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.CanBeExecuted", true);
-        byte* paramsPtr = stackalloc byte[4];
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 0);
-    }
+    public unsafe bool CanBeExecuted();
 
     /// <summary>
     /// Function: CanInterrupt
     /// </summary>
-    public unsafe bool CanInterrupt(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.CanInterrupt", true);
-        byte* paramsPtr = stackalloc byte[8];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HackType, paramsPtr + 0);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 4);
-    }
+    public unsafe bool CanInterrupt(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType);
 
     /// <summary>
     /// Function: ExecuteSubroutine
     /// </summary>
-    public unsafe bool ExecuteSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass)
-    {
-        var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.MHackableInterface.ExecuteSubroutine", true);
-        byte* paramsPtr = stackalloc byte[16];
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(HackType, paramsPtr + 0);
-        BmSDK.Framework.MarshalUtil.ToUnmanaged(SubroutineClass, paramsPtr + 4);
-        BmSDK.Framework.GameFunctions.ProcessEvent(Ptr, funcManaged.Ptr, (nint)paramsPtr, 0);
-        return BmSDK.Framework.MarshalUtil.ToManaged<bool>(paramsPtr + 12);
-    }
+    public unsafe bool ExecuteSubroutine(BmSDK.BmGame.MHackableInterface.EHackSubroutineType HackType, BmSDK.Class SubroutineClass);
 
     /// <summary>
     /// Struct: FSubroutineDefinition

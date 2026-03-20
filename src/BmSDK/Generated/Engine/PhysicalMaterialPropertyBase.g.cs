@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: PhysicalMaterialPropertyBase<br/>
+/// ABSTRACT Class: PhysicalMaterialPropertyBase<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class PhysicalMaterialPropertyBase : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class PhysicalMaterialPropertyBase : BmSDK.GameObject, BmSDK.IGam
     }
 
     internal PhysicalMaterialPropertyBase() { }
-
-    /// <summary>
-    /// Constructs a new PhysicalMaterialPropertyBase
-    /// </summary>
-    public PhysicalMaterialPropertyBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, PhysicalMaterialPropertyBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

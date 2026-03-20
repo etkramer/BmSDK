@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCharacterSelect<br/>
 /// (size = 909)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RCharacterSelect : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

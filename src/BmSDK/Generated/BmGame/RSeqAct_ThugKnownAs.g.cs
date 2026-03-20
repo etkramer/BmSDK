@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ThugKnownAs<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RSeqAct_ThugKnownAs : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RInterpTrackCape<br/>
 /// (size = 276)
-/// (flags = 0)
+/// (flags = 142614674)
 /// </summary>
 public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
 {

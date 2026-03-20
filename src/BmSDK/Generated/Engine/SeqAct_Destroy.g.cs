@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_Destroy<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_Destroy : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

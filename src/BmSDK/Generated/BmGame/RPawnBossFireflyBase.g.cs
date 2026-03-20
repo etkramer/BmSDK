@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnBossFireflyBase<br/>
+/// ABSTRACT Class: RPawnBossFireflyBase<br/>
 /// (size = 7076)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGa
     }
 
     internal RPawnBossFireflyBase() { }
-
-    /// <summary>
-    /// Constructs a new RPawnBossFireflyBase
-    /// </summary>
-    public RPawnBossFireflyBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnBossFireflyBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

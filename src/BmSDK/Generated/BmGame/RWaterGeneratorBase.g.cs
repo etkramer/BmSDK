@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWaterGeneratorBase<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RWaterGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: _Engine<br/>
+/// ABSTRACT Class: _Engine<br/>
 /// (size = 2648)
-/// (flags = 0)
+/// (flags = 142606495)
 /// </summary>
 public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     }
 
     internal _Engine() { }
-
-    /// <summary>
-    /// Constructs a new _Engine
-    /// </summary>
-    public _Engine(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, _Engine Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

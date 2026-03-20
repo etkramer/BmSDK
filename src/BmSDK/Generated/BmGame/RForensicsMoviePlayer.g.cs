@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RForensicsMoviePlayer<br/>
 /// (size = 280)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RForensicsMoviePlayer : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

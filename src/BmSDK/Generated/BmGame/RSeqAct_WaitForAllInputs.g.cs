@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_WaitForAllInputs<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_WaitForAllInputs : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

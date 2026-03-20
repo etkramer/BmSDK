@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_OverrideWalkCamera<br/>
 /// (size = 584)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_OverrideWalkCamera : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

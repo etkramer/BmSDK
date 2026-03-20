@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetCaltrops<br/>
+/// ABSTRACT Class: RCombatMove_GadgetCaltrops<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetCaltrops : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetCaltrops : BmSDK.BmGame.RCombatMove_Batma
     }
 
     internal RCombatMove_GadgetCaltrops() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetCaltrops
-    /// </summary>
-    public RCombatMove_GadgetCaltrops(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetCaltrops Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

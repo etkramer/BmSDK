@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SpriteComponent<br/>
 /// (size = 580)
-/// (flags = 0)
+/// (flags = 2290102482)
 /// </summary>
 public partial class SpriteComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

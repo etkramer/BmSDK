@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ROceanComponent<br/>
 /// (size = 884)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class ROceanComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

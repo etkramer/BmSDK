@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimUtil_AnimAccumulatorAsyncData<br/>
 /// (size = 928)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RAnimUtil_AnimAccumulatorAsyncData : BmSDK.GameObject, BmSDK.IGameObject
 {

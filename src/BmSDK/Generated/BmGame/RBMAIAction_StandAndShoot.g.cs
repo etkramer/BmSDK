@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_StandAndShoot<br/>
 /// (size = 888)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_StandAndShoot : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

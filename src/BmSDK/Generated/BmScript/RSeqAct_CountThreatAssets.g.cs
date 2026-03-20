@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_CountThreatAssets<br/>
 /// (size = 361)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_CountThreatAssets : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

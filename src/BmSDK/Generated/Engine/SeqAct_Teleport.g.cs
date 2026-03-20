@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_Teleport<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class SeqAct_Teleport : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

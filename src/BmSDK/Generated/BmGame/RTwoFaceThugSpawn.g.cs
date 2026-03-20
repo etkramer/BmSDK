@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTwoFaceThugSpawn<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RTwoFaceThugSpawn : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

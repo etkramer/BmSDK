@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Weapon<br/>
+/// ABSTRACT Class: Weapon<br/>
 /// (size = 992)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject
     }
 
     internal Weapon() { }
-
-    /// <summary>
-    /// Constructs a new Weapon
-    /// </summary>
-    public Weapon(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Weapon Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

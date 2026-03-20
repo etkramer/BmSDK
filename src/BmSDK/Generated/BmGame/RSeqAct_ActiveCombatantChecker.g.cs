@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ActiveCombatantChecker<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

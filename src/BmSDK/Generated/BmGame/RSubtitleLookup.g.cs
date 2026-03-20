@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSubtitleLookup<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSubtitleLookup : BmSDK.GameObject, BmSDK.IGameObject
 {

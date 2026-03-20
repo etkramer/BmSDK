@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_PatrolWaitBase<br/>
+/// ABSTRACT Class: RBMAIAction_PatrolWaitBase<br/>
 /// (size = 896)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_PatrolWaitBase : BmSDK.BmGame.RBMAIAction, BmSD
     }
 
     internal RBMAIAction_PatrolWaitBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_PatrolWaitBase
-    /// </summary>
-    public RBMAIAction_PatrolWaitBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_PatrolWaitBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

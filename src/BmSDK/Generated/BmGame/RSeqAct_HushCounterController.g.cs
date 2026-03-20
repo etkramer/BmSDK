@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_HushCounterController<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_HushCounterController : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

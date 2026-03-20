@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackColorProp<br/>
 /// (size = 312)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackColorProp : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {

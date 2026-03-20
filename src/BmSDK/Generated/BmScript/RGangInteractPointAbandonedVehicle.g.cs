@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RGangInteractPointAbandonedVehicle<br/>
 /// (size = 1396)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RGangInteractPointAbandonedVehicle : BmSDK.BmGame.RGangInteractPointAbandonedVehicleBase, BmSDK.IGameObject
 {

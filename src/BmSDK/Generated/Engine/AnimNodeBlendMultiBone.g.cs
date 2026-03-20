@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeBlendMultiBone<br/>
 /// (size = 336)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimNodeBlendMultiBone : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

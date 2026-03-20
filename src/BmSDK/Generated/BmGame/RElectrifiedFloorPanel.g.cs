@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RElectrifiedFloorPanel<br/>
+/// ABSTRACT Class: RElectrifiedFloorPanel<br/>
 /// (size = 988)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSD
     }
 
     internal RElectrifiedFloorPanel() { }
-
-    /// <summary>
-    /// Constructs a new RElectrifiedFloorPanel
-    /// </summary>
-    public RElectrifiedFloorPanel(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RElectrifiedFloorPanel Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

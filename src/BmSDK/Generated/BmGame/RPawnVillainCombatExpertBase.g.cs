@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnVillainCombatExpertBase<br/>
+/// ABSTRACT Class: RPawnVillainCombatExpertBase<br/>
 /// (size = 6780)
-/// (flags = 0)
+/// (flags = 10485815)
 /// </summary>
 public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNinjaBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnVillainCombatExpertBase : BmSDK.BmGame.RPawnVillainNin
     }
 
     internal RPawnVillainCombatExpertBase() { }
-
-    /// <summary>
-    /// Constructs a new RPawnVillainCombatExpertBase
-    /// </summary>
-    public RPawnVillainCombatExpertBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainCombatExpertBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

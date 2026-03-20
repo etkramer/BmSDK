@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ExitVehicleWithAnim<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ExitVehicleWithAnim : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

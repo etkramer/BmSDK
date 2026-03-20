@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimNotify_Scripted<br/>
+/// ABSTRACT Class: AnimNotify_Scripted<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class AnimNotify_Scripted : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimNotify_Scripted : BmSDK.Engine.AnimNotify, BmSDK.IGameO
     }
 
     internal AnimNotify_Scripted() { }
-
-    /// <summary>
-    /// Constructs a new AnimNotify_Scripted
-    /// </summary>
-    public AnimNotify_Scripted(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimNotify_Scripted Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_StrikeFloor<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDmgType_StrikeFloor : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject
 {

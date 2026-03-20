@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RStartlePoint_TwoFaceDLC<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RStartlePoint_TwoFaceDLC : BmSDK.BmGame.RStartlePoint_Bank, BmSDK.IGameObject
 {

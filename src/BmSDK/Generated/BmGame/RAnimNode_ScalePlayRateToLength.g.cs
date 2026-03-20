@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNode_ScalePlayRateToLength<br/>
 /// (size = 308)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAnimNode_ScalePlayRateToLength : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

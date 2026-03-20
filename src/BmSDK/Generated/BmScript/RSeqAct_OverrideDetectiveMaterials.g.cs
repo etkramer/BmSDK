@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_OverrideDetectiveMaterials<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_OverrideDetectiveMaterials : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

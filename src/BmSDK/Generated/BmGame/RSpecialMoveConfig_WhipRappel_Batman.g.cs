@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_WhipRappel_Batman<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_WhipRappel_Batman : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

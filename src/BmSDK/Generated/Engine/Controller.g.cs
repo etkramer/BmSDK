@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Controller<br/>
+/// ABSTRACT Class: Controller<br/>
 /// (size = 1136)
-/// (flags = 0)
+/// (flags = 144705683)
 /// </summary>
 public partial class Controller : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Controller : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal Controller() { }
-
-    /// <summary>
-    /// Constructs a new Controller
-    /// </summary>
-    public Controller(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Controller Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

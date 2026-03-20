@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ModifyPostProcess<br/>
 /// (size = 900)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

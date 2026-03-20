@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_ThermalCheck<br/>
 /// (size = 616)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_ThermalCheck : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

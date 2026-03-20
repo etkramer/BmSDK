@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RXPSequence_Teeth<br/>
 /// (size = 780)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RXPSequence_Teeth : BmSDK.BmGame.RXPSequence, BmSDK.IGameObject
 {

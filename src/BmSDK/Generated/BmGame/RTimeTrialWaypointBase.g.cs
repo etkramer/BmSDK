@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTimeTrialWaypointBase<br/>
 /// (size = 796)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RTimeTrialWaypointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

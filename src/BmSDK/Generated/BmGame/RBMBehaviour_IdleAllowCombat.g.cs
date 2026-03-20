@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_IdleAllowCombat<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_IdleAllowCombat : BmSDK.BmGame.RBMBehaviour_Idle, BmSDK.IGameObject
 {

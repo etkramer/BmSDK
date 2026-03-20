@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDisableEvadeVolume<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RDisableEvadeVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

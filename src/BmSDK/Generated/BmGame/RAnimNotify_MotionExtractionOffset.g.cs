@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_MotionExtractionOffset<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_MotionExtractionOffset : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

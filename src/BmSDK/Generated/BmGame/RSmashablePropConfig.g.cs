@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSmashablePropConfig<br/>
 /// (size = 184)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSmashablePropConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RIncendiaryGrenadeCharge<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RIncendiaryGrenadeCharge : BmSDK.BmGame.RIncendiaryGrenadeCharge_Base, BmSDK.IGameObject
 {

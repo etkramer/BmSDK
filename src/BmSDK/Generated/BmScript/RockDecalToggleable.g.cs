@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RockDecalToggleable<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10486354)
 /// </summary>
 public partial class RockDecalToggleable : BmSDK.Engine.RockDecal, BmSDK.IGameObject
 {

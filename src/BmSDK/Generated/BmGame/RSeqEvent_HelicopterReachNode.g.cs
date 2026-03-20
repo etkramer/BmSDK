@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_HelicopterReachNode<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_HelicopterReachNode : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCutscene_Cam<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: UIDataStore_GameState<br/>
+/// ABSTRACT Class: UIDataStore_GameState<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 134217887)
 /// </summary>
 public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     }
 
     internal UIDataStore_GameState() { }
-
-    /// <summary>
-    /// Constructs a new UIDataStore_GameState
-    /// </summary>
-    public UIDataStore_GameState(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, UIDataStore_GameState Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

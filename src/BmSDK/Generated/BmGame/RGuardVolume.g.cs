@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGuardVolume<br/>
 /// (size = 797)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGuardVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

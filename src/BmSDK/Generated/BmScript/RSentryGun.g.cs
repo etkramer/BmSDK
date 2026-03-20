@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSentryGun<br/>
 /// (size = 1564)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RSentryGun : BmSDK.BmGame.RSentryGunBase, BmSDK.IGameObject
 {

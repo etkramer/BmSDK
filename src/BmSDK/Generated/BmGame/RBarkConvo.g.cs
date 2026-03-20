@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkConvo<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 136315026)
 /// </summary>
 public partial class RBarkConvo : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

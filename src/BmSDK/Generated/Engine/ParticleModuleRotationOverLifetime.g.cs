@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleRotationOverLifetime<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleRotationOverLifetime : BmSDK.Engine.ParticleModuleRotationBase, BmSDK.IGameObject
 {

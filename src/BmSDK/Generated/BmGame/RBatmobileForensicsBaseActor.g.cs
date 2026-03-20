@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileForensicsBaseActor<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBatmobileForensicsBaseActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RRHD<br/>
+/// ABSTRACT Class: RRHD<br/>
 /// (size = 2560)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RRHD : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RRHD : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
     }
 
     internal RRHD() { }
-
-    /// <summary>
-    /// Constructs a new RRHD
-    /// </summary>
-    public RRHD(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RRHD Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

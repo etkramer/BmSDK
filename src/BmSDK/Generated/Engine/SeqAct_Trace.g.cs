@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_Trace<br/>
 /// (size = 416)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_Trace : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

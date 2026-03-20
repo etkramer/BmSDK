@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGadgetProjectileBase<br/>
 /// (size = 928)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RGadgetProjectileBase : BmSDK.BmGame.RProjectile, BmSDK.IGameObject
 {

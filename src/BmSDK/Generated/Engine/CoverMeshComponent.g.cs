@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CoverMeshComponent<br/>
 /// (size = 804)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class CoverMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
 {

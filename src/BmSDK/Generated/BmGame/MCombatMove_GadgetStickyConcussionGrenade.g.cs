@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MCombatMove_GadgetStickyConcussionGrenade<br/>
+/// ABSTRACT Class: MCombatMove_GadgetStickyConcussionGrenade<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class MCombatMove_GadgetStickyConcussionGrenade : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MCombatMove_GadgetStickyConcussionGrenade : BmSDK.BmGame.RC
     }
 
     internal MCombatMove_GadgetStickyConcussionGrenade() { }
-
-    /// <summary>
-    /// Constructs a new MCombatMove_GadgetStickyConcussionGrenade
-    /// </summary>
-    public MCombatMove_GadgetStickyConcussionGrenade(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MCombatMove_GadgetStickyConcussionGrenade Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

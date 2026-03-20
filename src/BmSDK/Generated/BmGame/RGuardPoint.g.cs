@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGuardPoint<br/>
 /// (size = 713)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

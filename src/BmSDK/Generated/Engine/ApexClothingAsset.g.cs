@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexClothingAsset<br/>
 /// (size = 300)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObject
 {

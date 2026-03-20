@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_RestrictVoiceSynthesiserTargets<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_RestrictVoiceSynthesiserTargets : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

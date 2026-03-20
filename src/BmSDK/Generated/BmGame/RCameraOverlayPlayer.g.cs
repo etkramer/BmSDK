@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCameraOverlayPlayer<br/>
 /// (size = 124)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RCameraOverlayPlayer : BmSDK.GameObject, BmSDK.IGameObject
 {

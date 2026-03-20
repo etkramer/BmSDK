@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RPredatorGunLockerMesh<br/>
+/// ABSTRACT Class: RPredatorGunLockerMesh<br/>
 /// (size = 1008)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBas
     }
 
     internal RPredatorGunLockerMesh() { }
-
-    /// <summary>
-    /// Constructs a new RPredatorGunLockerMesh
-    /// </summary>
-    public RPredatorGunLockerMesh(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPredatorGunLockerMesh Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSeqAct_SideStory_IconControl<br/>
 /// (size = 408)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SideStory_IconControl : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

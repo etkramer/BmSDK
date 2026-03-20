@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWeatherAttachedToCameraBase<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RWeatherAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

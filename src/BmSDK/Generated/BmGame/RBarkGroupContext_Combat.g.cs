@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBarkGroupContext_Combat<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBarkGroupContext_Combat : BmSDK.BmGame.RBarkGroupContext, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_VehicleDriveSpline<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_VehicleDriveSpline : BmSDK.BmGame.RSeqAct_VehicleSelfDrive, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_BeginCarryJokerThugBase<br/>
+/// ABSTRACT Class: RSeqAct_BeginCarryJokerThugBase<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_BeginCarryJokerThugBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_BeginCarryJokerThugBase : BmSDK.Engine.SeqAct_Laten
     }
 
     internal RSeqAct_BeginCarryJokerThugBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_BeginCarryJokerThugBase
-    /// </summary>
-    public RSeqAct_BeginCarryJokerThugBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_BeginCarryJokerThugBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

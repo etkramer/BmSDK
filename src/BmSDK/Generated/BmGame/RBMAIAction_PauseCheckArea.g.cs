@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_PauseCheckArea<br/>
 /// (size = 873)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_PauseCheckArea : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: StaticMeshActorBase<br/>
+/// ABSTRACT Class: StaticMeshActorBase<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class StaticMeshActorBase : BmSDK.Engine.RStaticClimbableActor, B
     }
 
     internal StaticMeshActorBase() { }
-
-    /// <summary>
-    /// Constructs a new StaticMeshActorBase
-    /// </summary>
-    public StaticMeshActorBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, StaticMeshActorBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

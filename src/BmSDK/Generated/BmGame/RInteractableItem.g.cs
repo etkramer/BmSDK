@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RInteractableItem<br/>
 /// (size = 904)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RInteractableItem : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

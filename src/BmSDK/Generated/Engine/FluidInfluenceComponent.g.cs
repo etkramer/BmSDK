@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FluidInfluenceComponent<br/>
 /// (size = 644)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class FluidInfluenceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

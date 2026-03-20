@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDebugMenuContent<br/>
 /// (size = 1192)
-/// (flags = 0)
+/// (flags = 10485782)
 /// </summary>
 public partial class RDebugMenuContent : BmSDK.BmGame.RDebugMenu, BmSDK.IGameObject
 {

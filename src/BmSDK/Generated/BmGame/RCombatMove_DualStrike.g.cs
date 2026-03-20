@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_DualStrike<br/>
 /// (size = 1124)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_DualStrike : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

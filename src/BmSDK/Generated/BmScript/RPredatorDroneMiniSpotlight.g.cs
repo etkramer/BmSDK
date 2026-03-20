@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPredatorDroneMiniSpotlight<br/>
 /// (size = 820)
-/// (flags = 0)
+/// (flags = 10489874)
 /// </summary>
 public partial class RPredatorDroneMiniSpotlight : BmSDK.Engine.SpotLightComponent, BmSDK.IGameObject
 {

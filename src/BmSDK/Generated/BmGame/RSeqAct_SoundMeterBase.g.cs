@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_SoundMeterBase<br/>
+/// ABSTRACT Class: RSeqAct_SoundMeterBase<br/>
 /// (size = 484)
-/// (flags = 0)
+/// (flags = 201334931)
 /// </summary>
 public partial class RSeqAct_SoundMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_SoundMeterBase : BmSDK.Engine.SeqAct_Latent, BmSDK.
     }
 
     internal RSeqAct_SoundMeterBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_SoundMeterBase
-    /// </summary>
-    public RSeqAct_SoundMeterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_SoundMeterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

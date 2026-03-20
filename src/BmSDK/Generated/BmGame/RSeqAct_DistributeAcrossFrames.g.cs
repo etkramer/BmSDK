@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_DistributeAcrossFrames<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_DistributeAcrossFrames : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

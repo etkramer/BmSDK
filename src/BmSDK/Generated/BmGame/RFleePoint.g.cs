@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RFleePoint<br/>
+/// ABSTRACT Class: RFleePoint<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RFleePoint() { }
-
-    /// <summary>
-    /// Constructs a new RFleePoint
-    /// </summary>
-    public RFleePoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RFleePoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionLandscapeLayerBlend<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionLandscapeLayerBlend : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

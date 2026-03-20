@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MPawnVillainBlackMaskBase<br/>
+/// ABSTRACT Class: MPawnVillainBlackMaskBase<br/>
 /// (size = 6696)
-/// (flags = 0)
+/// (flags = 10485815)
 /// </summary>
 public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, 
     }
 
     internal MPawnVillainBlackMaskBase() { }
-
-    /// <summary>
-    /// Constructs a new MPawnVillainBlackMaskBase
-    /// </summary>
-    public MPawnVillainBlackMaskBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MPawnVillainBlackMaskBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

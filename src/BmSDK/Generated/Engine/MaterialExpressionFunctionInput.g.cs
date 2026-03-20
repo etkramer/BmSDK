@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionFunctionInput<br/>
 /// (size = 312)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class MaterialExpressionFunctionInput : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

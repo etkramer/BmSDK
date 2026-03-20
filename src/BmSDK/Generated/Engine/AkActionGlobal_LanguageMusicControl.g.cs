@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkActionGlobal_LanguageMusicControl<br/>
 /// (size = 292)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkActionGlobal_LanguageMusicControl : BmSDK.Engine.AkActionGlobal_GenericMusicControl, BmSDK.IGameObject
 {

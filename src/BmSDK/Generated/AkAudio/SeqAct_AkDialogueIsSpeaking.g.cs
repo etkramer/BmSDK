@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkDialogueIsSpeaking<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkDialogueIsSpeaking : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

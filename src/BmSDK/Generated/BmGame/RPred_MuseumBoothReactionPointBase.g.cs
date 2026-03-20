@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPred_MuseumBoothReactionPointBase<br/>
 /// (size = 732)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RPred_MuseumBoothReactionPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

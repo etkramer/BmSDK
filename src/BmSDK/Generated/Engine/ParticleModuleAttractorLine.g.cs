@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleAttractorLine<br/>
 /// (size = 192)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleAttractorLine : BmSDK.Engine.ParticleModuleAttractorBase, BmSDK.IGameObject
 {

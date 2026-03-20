@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RPollenVolume<br/>
 /// (size = 1004)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RPollenVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IGameObject
 {

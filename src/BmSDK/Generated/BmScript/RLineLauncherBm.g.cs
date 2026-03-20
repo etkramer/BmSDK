@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RLineLauncherBm<br/>
 /// (size = 2464)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RLineLauncherBm : BmSDK.BmGame.RLineLauncher, BmSDK.IGameObject
 {

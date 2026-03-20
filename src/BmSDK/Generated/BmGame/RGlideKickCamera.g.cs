@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGlideKickCamera<br/>
 /// (size = 1340)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RGlideKickCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

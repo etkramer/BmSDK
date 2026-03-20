@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSpecialMoveInstance_HarpoonDragBoatBase<br/>
+/// ABSTRACT Class: RSpecialMoveInstance_HarpoonDragBoatBase<br/>
 /// (size = 992)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSpecialMoveInstance_HarpoonDragObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSpecialMoveInstance_HarpoonDragBoatBase : BmSDK.BmGame.RSp
     }
 
     internal RSpecialMoveInstance_HarpoonDragBoatBase() { }
-
-    /// <summary>
-    /// Constructs a new RSpecialMoveInstance_HarpoonDragBoatBase
-    /// </summary>
-    public RSpecialMoveInstance_HarpoonDragBoatBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveInstance_HarpoonDragBoatBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

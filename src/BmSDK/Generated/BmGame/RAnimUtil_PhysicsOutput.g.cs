@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimUtil_PhysicsOutput<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RAnimUtil_PhysicsOutput : BmSDK.GameObject, BmSDK.IGameObject
 {

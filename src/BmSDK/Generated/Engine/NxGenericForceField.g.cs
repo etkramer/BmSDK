@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: NxGenericForceField<br/>
+/// ABSTRACT Class: NxGenericForceField<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class NxGenericForceField : BmSDK.Engine.NxForceField, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class NxGenericForceField : BmSDK.Engine.NxForceField, BmSDK.IGam
     }
 
     internal NxGenericForceField() { }
-
-    /// <summary>
-    /// Constructs a new NxGenericForceField
-    /// </summary>
-    public NxGenericForceField(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, NxGenericForceField Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

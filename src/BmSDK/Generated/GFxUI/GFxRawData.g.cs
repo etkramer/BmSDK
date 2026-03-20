@@ -6,7 +6,7 @@ namespace BmSDK.GFxUI;
 /// <summary>
 /// Class: GFxRawData<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class GFxRawData : BmSDK.GameObject, BmSDK.IGameObject
 {

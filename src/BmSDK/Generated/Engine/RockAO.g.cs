@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockAO<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RockAO : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {

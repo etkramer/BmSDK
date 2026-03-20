@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerIncidentalPoint<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RConformNavMeshToFloorVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RConformNavMeshToFloorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_WaitForCutscenesToFinish<br/>
 /// (size = 392)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_WaitForCutscenesToFinish : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

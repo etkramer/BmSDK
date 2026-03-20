@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqEvent_ControllerActivated<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RBMSeqEvent_ControllerActivated : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject
 {

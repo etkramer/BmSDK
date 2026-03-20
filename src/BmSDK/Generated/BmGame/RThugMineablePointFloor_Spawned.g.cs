@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RThugMineablePointFloor_Spawned<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RThugMineablePointFloor_Spawned : BmSDK.BmGame.RThugMineablePointFloor, BmSDK.IGameObject
 {

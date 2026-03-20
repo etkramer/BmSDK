@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqEvent_PredEnd_HostageFree<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 33554450)
 /// </summary>
 public partial class RBMSeqEvent_PredEnd_HostageFree : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSmashableProp<br/>
 /// (size = 1112)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RSmashableProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRiotPointHolder<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RRiotPointHolder : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

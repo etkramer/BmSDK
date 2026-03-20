@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPickup_InsectCrateBase<br/>
 /// (size = 752)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RPickup_InsectCrateBase : BmSDK.BmGame.RHarpoonTriggerBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBatmobileRemoteBm<br/>
 /// (size = 2456)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileRemoteBm : BmSDK.BmGame.RBatmobileRemote, BmSDK.IGameObject
 {

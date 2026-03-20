@@ -6,7 +6,7 @@ namespace BmSDK.GFxUI;
 /// <summary>
 /// Class: GFxEvent_FSCommand<br/>
 /// (size = 412)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class GFxEvent_FSCommand : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCapeContactModificationComponent<br/>
 /// (size = 548)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RCapeContactModificationComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

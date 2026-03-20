@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkCharacterFilter<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkCharacterFilter : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

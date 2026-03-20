@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMWeaponPipe<br/>
 /// (size = 1764)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBMWeaponPipe : BmSDK.BmScript.RBMWeaponBaton, BmSDK.IGameObject
 {

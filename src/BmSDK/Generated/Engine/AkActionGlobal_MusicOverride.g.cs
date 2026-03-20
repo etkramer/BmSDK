@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkActionGlobal_MusicOverride<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkActionGlobal_MusicOverride : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject
 {

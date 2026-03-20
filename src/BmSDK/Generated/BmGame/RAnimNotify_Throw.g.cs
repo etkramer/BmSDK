@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_Throw<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_Throw : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

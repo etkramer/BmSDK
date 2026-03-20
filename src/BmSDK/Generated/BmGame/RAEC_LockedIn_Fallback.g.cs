@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_LockedIn_Fallback<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_LockedIn_Fallback : BmSDK.BmGame.RAEC_LockedIn_GroupBase, BmSDK.IGameObject
 {

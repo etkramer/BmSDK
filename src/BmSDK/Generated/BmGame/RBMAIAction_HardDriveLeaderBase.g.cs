@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMAIAction_HardDriveLeaderBase<br/>
+/// ABSTRACT Class: RBMAIAction_HardDriveLeaderBase<br/>
 /// (size = 916)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RBMAIAction_HardDriveLeaderBase : BmSDK.BmGame.RBMAIAction_HoldGuardPointBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMAIAction_HardDriveLeaderBase : BmSDK.BmGame.RBMAIAction_
     }
 
     internal RBMAIAction_HardDriveLeaderBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMAIAction_HardDriveLeaderBase
-    /// </summary>
-    public RBMAIAction_HardDriveLeaderBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMAIAction_HardDriveLeaderBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

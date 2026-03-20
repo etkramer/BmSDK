@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkBankLoader<br/>
 /// (size = 364)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkBankLoader : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleNPCWeapon_ScriptedRPG<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RVehicleNPCWeapon_ScriptedRPG : BmSDK.BmGame.RVehicleNPCWeapon_RPG, BmSDK.IGameObject
 {

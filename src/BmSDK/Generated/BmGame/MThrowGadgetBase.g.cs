@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MThrowGadgetBase<br/>
 /// (size = 2340)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class MThrowGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_HitByGadget<br/>
 /// (size = 436)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_HitByGadget : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

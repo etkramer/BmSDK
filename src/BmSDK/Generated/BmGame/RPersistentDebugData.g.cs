@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPersistentDebugData<br/>
 /// (size = 536)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RPersistentDebugData : BmSDK.Engine.PersistentDebugData, BmSDK.IGameObject
 {

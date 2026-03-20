@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: InterpTrackColorScale<br/>
 /// (size = 304)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class InterpTrackColorScale : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject
 {

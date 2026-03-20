@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_RocketLauncher<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RBMBehaviour_RocketLauncher : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

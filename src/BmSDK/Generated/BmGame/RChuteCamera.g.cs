@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RChuteCamera<br/>
 /// (size = 1364)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RChuteCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

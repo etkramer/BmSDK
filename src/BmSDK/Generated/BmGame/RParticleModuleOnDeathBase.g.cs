@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RParticleModuleOnDeathBase<br/>
+/// ABSTRACT Class: RParticleModuleOnDeathBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class RParticleModuleOnDeathBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RParticleModuleOnDeathBase : BmSDK.Engine.ParticleModule, B
     }
 
     internal RParticleModuleOnDeathBase() { }
-
-    /// <summary>
-    /// Constructs a new RParticleModuleOnDeathBase
-    /// </summary>
-    public RParticleModuleOnDeathBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RParticleModuleOnDeathBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

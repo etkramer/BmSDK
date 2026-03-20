@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqAct_SetSequenceVariable<br/>
+/// ABSTRACT Class: SeqAct_SetSequenceVariable<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class SeqAct_SetSequenceVariable : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqAct_SetSequenceVariable : BmSDK.Engine.SequenceAction, B
     }
 
     internal SeqAct_SetSequenceVariable() { }
-
-    /// <summary>
-    /// Constructs a new SeqAct_SetSequenceVariable
-    /// </summary>
-    public SeqAct_SetSequenceVariable(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqAct_SetSequenceVariable Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshObstacle_Queue<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject
 {

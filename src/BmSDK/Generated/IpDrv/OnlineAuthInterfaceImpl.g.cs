@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: OnlineAuthInterfaceImpl<br/>
 /// (size = 792)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class OnlineAuthInterfaceImpl : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: KMeshProps<br/>
 /// (size = 204)
-/// (flags = 0)
+/// (flags = 402)
 /// </summary>
 public partial class KMeshProps : BmSDK.GameObject, BmSDK.IGameObject
 {

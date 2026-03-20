@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: BlurEffect<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class BlurEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {

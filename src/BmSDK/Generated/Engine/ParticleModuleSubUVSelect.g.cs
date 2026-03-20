@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleSubUVSelect<br/>
 /// (size = 160)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleSubUVSelect : BmSDK.Engine.ParticleModuleSubUVBase, BmSDK.IGameObject
 {

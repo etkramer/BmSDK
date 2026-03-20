@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexDestructibleActorSpawnable<br/>
 /// (size = 772)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class ApexDestructibleActorSpawnable : BmSDK.Engine.ApexDestructibleActor, BmSDK.IGameObject
 {

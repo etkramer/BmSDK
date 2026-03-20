@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRoadLink<br/>
 /// (size = 936)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

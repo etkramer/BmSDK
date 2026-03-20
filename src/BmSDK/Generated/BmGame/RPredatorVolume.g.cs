@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPredatorVolume<br/>
 /// (size = 860)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RPredatorVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

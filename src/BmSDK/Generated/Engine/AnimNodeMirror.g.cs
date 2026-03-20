@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNodeMirror<br/>
 /// (size = 308)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class AnimNodeMirror : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
 {

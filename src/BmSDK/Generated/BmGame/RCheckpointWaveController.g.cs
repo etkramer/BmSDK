@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCheckpointWaveController<br/>
 /// (size = 440)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RCheckpointWaveController : BmSDK.BmGame.RBMWaveController, BmSDK.IGameObject
 {

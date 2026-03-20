@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileVehicleTracker<br/>
 /// (size = 2468)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RBatmobileVehicleTracker : BmSDK.BmGame.RPursuitModeMissileLauncher, BmSDK.IGameObject
 {

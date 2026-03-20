@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFlashViewPostProcess<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RFlashViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject
 {

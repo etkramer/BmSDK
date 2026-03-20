@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AISwitchablePylon<br/>
 /// (size = 1320)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AISwitchablePylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
 {

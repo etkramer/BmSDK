@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshPath_WithinDistanceEnvelope<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshPath_WithinDistanceEnvelope : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject
 {

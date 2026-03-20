@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleBehaviour_StopAndSpawnBase<br/>
 /// (size = 628)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RVehicleBehaviour_StopAndSpawnBase : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject
 {

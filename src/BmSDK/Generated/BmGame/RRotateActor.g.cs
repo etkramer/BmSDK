@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRotateActor<br/>
 /// (size = 984)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRotateActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {

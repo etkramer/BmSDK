@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SequenceCondition<br/>
+/// ABSTRACT Class: SequenceCondition<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SequenceCondition : BmSDK.Engine.SequenceOp, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SequenceCondition : BmSDK.Engine.SequenceOp, BmSDK.IGameObj
     }
 
     internal SequenceCondition() { }
-
-    /// <summary>
-    /// Constructs a new SequenceCondition
-    /// </summary>
-    public SequenceCondition(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SequenceCondition Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

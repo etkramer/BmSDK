@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SkelControlBase<br/>
+/// ABSTRACT Class: SkelControlBase<br/>
 /// (size = 248)
-/// (flags = 0)
+/// (flags = 142606483)
 /// </summary>
 public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObjec
     }
 
     internal SkelControlBase() { }
-
-    /// <summary>
-    /// Constructs a new SkelControlBase
-    /// </summary>
-    public SkelControlBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SkelControlBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

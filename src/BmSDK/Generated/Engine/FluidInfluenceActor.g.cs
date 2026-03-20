@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: FluidInfluenceActor<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class FluidInfluenceActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

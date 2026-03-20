@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RExplosionPostProcess<br/>
 /// (size = 144)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RExplosionPostProcess : BmSDK.GameObject, BmSDK.IGameObject
 {

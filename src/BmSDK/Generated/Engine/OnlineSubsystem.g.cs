@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: OnlineSubsystem<br/>
+/// ABSTRACT Class: OnlineSubsystem<br/>
 /// (size = 560)
-/// (flags = 0)
+/// (flags = 134217879)
 /// </summary>
 public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal OnlineSubsystem() { }
-
-    /// <summary>
-    /// Constructs a new OnlineSubsystem
-    /// </summary>
-    public OnlineSubsystem(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, OnlineSubsystem Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

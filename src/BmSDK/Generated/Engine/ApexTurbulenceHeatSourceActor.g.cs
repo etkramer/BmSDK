@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexTurbulenceHeatSourceActor<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class ApexTurbulenceHeatSourceActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject
 {

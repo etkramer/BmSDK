@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_JokerIncedental<br/>
 /// (size = 632)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_JokerIncedental : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

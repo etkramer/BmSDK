@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_BatarangReaction_Master<br/>
 /// (size = 744)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_BatarangReaction_Master : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

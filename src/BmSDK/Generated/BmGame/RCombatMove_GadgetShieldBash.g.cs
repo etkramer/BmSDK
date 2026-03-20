@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetShieldBash<br/>
+/// ABSTRACT Class: RCombatMove_GadgetShieldBash<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetShieldBash : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetShieldBash : BmSDK.BmGame.RCombatMove_Bat
     }
 
     internal RCombatMove_GadgetShieldBash() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetShieldBash
-    /// </summary>
-    public RCombatMove_GadgetShieldBash(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetShieldBash Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

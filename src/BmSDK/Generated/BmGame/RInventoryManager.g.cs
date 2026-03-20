@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RInventoryManager<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RInventoryManager : BmSDK.Engine.InventoryManager, BmSDK.IGameObject
 {

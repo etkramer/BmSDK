@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockSceneCaptureCubeMapComponent<br/>
 /// (size = 256)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RockSceneCaptureCubeMapComponent : BmSDK.Engine.SceneCaptureCubeMapComponent, BmSDK.IGameObject
 {

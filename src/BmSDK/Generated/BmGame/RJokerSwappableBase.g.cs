@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RJokerSwappableBase<br/>
+/// ABSTRACT Class: RJokerSwappableBase<br/>
 /// (size = 732)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.I
     }
 
     internal RJokerSwappableBase() { }
-
-    /// <summary>
-    /// Constructs a new RJokerSwappableBase
-    /// </summary>
-    public RJokerSwappableBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RJokerSwappableBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

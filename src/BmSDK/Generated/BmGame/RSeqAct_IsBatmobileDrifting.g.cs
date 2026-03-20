@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_IsBatmobileDrifting<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_IsBatmobileDrifting : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Mutator<br/>
+/// ABSTRACT Class: Mutator<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Mutator : BmSDK.Engine.Info, BmSDK.IGameObject
     }
 
     internal Mutator() { }
-
-    /// <summary>
-    /// Constructs a new Mutator
-    /// </summary>
-    public Mutator(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Mutator Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

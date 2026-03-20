@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_TakeoverVideoScreens<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_TakeoverVideoScreens : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

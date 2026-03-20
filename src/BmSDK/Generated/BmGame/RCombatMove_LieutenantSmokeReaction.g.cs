@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_LieutenantSmokeReaction<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_LieutenantSmokeReaction : BmSDK.BmGame.RCombatMove_LieutenantSledgehammerAttack, BmSDK.IGameObject
 {

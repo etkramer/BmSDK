@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_Footstep<br/>
 /// (size = 87)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_Footstep : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

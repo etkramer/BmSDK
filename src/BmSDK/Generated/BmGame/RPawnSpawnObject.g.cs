@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnSpawnObject<br/>
 /// (size = 668)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RPawnSpawnObject : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

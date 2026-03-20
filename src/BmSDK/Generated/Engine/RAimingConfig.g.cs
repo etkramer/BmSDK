@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RAimingConfig<br/>
 /// (size = 184)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RAimingConfig : BmSDK.GameObject, BmSDK.IGameObject
 {

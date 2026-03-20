@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_PrepareMapChangeFromURL<br/>
 /// (size = 424)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_PrepareMapChangeFromURL : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

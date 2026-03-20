@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanBeatdown<br/>
 /// (size = 1624)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RCombatMove_BatmanBeatdown : BmSDK.BmGame.RCombatMove_BatmanStrike, BmSDK.IGameObject
 {

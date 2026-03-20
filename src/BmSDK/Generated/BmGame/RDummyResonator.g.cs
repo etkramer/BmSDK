@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDummyResonator<br/>
 /// (size = 2460)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RDummyResonator : BmSDK.BmGame.RResonatorTuner, BmSDK.IGameObject
 {

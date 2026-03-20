@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RStealthTakedownStage_GrateInvertedTakedownEnd<br/>
 /// (size = 1696)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RStealthTakedownStage_GrateInvertedTakedownEnd : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
 {

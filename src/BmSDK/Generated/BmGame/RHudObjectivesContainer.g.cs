@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudObjectivesContainer<br/>
 /// (size = 120)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObject
 {

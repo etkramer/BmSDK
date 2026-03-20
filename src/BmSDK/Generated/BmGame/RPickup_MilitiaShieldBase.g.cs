@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPickup_MilitiaShieldBase<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RPickup_MilitiaShieldBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObject
 {

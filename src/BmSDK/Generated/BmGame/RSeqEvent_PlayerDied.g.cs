@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_PlayerDied<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqEvent_PlayerDied : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

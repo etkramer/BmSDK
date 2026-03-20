@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRoadRoute<br/>
 /// (size = 724)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRoadRoute : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

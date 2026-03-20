@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetAPCDistrictSpawnPoints<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetAPCDistrictSpawnPoints : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

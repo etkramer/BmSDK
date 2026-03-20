@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBarkConvoActionCond<br/>
+/// ABSTRACT Class: RBarkConvoActionCond<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RBarkConvoActionCond : BmSDK.BmGame.RBarkConvoAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBarkConvoActionCond : BmSDK.BmGame.RBarkConvoAction, BmSDK
     }
 
     internal RBarkConvoActionCond() { }
-
-    /// <summary>
-    /// Constructs a new RBarkConvoActionCond
-    /// </summary>
-    public RBarkConvoActionCond(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBarkConvoActionCond Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

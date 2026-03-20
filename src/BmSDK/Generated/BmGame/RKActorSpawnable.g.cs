@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RKActorSpawnable<br/>
 /// (size = 996)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RKActorSpawnable : BmSDK.Engine.KActor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RExplosionDetector<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RExplosionDetector : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

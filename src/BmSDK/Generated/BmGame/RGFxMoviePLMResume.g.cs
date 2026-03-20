@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMoviePLMResume<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 22)
 /// </summary>
 public partial class RGFxMoviePLMResume : BmSDK.BmGame.RGFxMovie, BmSDK.IGameObject
 {

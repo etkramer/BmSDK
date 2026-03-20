@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RLOD1ClippingVolume<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RLOD1ClippingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

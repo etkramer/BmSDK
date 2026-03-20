@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxGameViewportClient<br/>
 /// (size = 484)
-/// (flags = 0)
+/// (flags = 134217918)
 /// </summary>
 public partial class RGFxGameViewportClient : BmSDK.Engine.GameViewportClient, BmSDK.IGameObject
 {

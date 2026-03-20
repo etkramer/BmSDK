@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkComponent<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

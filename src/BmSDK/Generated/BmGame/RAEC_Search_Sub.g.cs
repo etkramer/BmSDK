@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RAEC_Search_Sub<br/>
+/// ABSTRACT Class: RAEC_Search_Sub<br/>
 /// (size = 780)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLeader, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RAEC_Search_Sub : BmSDK.BmGame.RAEC_Search_Sub_FormationLea
     }
 
     internal RAEC_Search_Sub() { }
-
-    /// <summary>
-    /// Constructs a new RAEC_Search_Sub
-    /// </summary>
-    public RAEC_Search_Sub(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RAEC_Search_Sub Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

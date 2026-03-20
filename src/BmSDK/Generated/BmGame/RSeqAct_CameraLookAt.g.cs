@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_CameraLookAt<br/>
 /// (size = 452)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqAct_CameraLookAt : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {

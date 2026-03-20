@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_JammedGun_Solo_MinigunUnjam<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_JammedGun_Solo_MinigunUnjam : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject
 {

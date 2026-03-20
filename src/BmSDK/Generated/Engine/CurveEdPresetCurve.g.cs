@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: CurveEdPresetCurve<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134222002)
 /// </summary>
 public partial class CurveEdPresetCurve : BmSDK.GameObject, BmSDK.IGameObject
 {

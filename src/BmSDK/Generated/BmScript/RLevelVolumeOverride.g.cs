@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RLevelVolumeOverride<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RLevelVolumeOverride : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

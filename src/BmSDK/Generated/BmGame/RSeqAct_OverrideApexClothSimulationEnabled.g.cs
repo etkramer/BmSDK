@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_OverrideApexClothSimulationEnabled<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 167780498)
 /// </summary>
 public partial class RSeqAct_OverrideApexClothSimulationEnabled : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

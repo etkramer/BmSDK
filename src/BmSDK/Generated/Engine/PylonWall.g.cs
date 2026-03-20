@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PylonWall<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class PylonWall : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

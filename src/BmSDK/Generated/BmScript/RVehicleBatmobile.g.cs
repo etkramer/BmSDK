@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RVehicleBatmobile<br/>
 /// (size = 8640)
-/// (flags = 0)
+/// (flags = 10486326)
 /// </summary>
 public partial class RVehicleBatmobile : BmSDK.BmGame.RVehicleBatmobileBase, BmSDK.IGameObject
 {

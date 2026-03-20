@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleTypeDataApex<br/>
 /// (size = 188)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class ParticleModuleTypeDataApex : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RExtraPawnVarsForDLC<br/>
 /// (size = 716)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RExtraPawnVarsForDLC : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

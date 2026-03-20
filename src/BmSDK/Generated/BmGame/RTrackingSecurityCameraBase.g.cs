@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTrackingSecurityCameraBase<br/>
+/// ABSTRACT Class: RTrackingSecurityCameraBase<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectB
     }
 
     internal RTrackingSecurityCameraBase() { }
-
-    /// <summary>
-    /// Constructs a new RTrackingSecurityCameraBase
-    /// </summary>
-    public RTrackingSecurityCameraBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTrackingSecurityCameraBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

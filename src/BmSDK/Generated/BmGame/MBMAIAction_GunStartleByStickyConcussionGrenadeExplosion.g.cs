@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MBMAIAction_GunStartleByStickyConcussionGrenadeExplosion<br/>
 /// (size = 908)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MBMAIAction_GunStartleByStickyConcussionGrenadeExplosion : BmSDK.BmGame.RBMAIAction_GunStartle, BmSDK.IGameObject
 {

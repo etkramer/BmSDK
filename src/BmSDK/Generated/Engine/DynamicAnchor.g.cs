@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DynamicAnchor<br/>
 /// (size = 952)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class DynamicAnchor : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {

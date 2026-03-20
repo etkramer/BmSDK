@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_BodySetup<br/>
 /// (size = 284)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RB_BodySetup : BmSDK.Engine.KMeshProps, BmSDK.IGameObject
 {

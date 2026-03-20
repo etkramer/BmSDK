@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MPawnPlayerRedHoodBase<br/>
+/// ABSTRACT Class: MPawnPlayerRedHoodBase<br/>
 /// (size = 10200)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class MPawnPlayerRedHoodBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MPawnPlayerRedHoodBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IG
     }
 
     internal MPawnPlayerRedHoodBase() { }
-
-    /// <summary>
-    /// Constructs a new MPawnPlayerRedHoodBase
-    /// </summary>
-    public MPawnPlayerRedHoodBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MPawnPlayerRedHoodBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

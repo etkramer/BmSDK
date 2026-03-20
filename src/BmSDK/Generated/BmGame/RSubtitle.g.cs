@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSubtitle<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134226098)
 /// </summary>
 public partial class RSubtitle : BmSDK.GameObject, BmSDK.IGameObject
 {

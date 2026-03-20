@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqVar_Batmobile<br/>
 /// (size = 272)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RSeqVar_Batmobile : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject
 {

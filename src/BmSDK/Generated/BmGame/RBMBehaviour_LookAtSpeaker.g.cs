@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_LookAtSpeaker<br/>
 /// (size = 596)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_LookAtSpeaker : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

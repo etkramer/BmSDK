@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_GetCurrentAPC<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_GetCurrentAPC : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

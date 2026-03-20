@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_RunToPerimPeek<br/>
 /// (size = 920)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_RunToPerimPeek : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

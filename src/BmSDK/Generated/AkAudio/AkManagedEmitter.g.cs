@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkManagedEmitter<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class AkManagedEmitter : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

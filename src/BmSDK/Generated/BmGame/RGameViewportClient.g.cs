@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGameViewportClient<br/>
 /// (size = 460)
-/// (flags = 0)
+/// (flags = 62)
 /// </summary>
 public partial class RGameViewportClient : BmSDK.Engine.GameViewportClient, BmSDK.IGameObject
 {

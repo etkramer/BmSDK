@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMBehaviour_Combat<br/>
+/// ABSTRACT Class: RBMBehaviour_Combat<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMBehaviour_Combat : BmSDK.BmGame.RBMBehaviour_Controlled,
     }
 
     internal RBMBehaviour_Combat() { }
-
-    /// <summary>
-    /// Constructs a new RBMBehaviour_Combat
-    /// </summary>
-    public RBMBehaviour_Combat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMBehaviour_Combat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

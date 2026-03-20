@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PlayerStart<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class PlayerStart : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
 {

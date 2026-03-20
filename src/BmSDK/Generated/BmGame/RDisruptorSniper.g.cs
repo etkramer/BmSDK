@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RDisruptorSniper<br/>
+/// ABSTRACT Class: RDisruptorSniper<br/>
 /// (size = 3200)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGa
     }
 
     internal RDisruptorSniper() { }
-
-    /// <summary>
-    /// Constructs a new RDisruptorSniper
-    /// </summary>
-    public RDisruptorSniper(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RDisruptorSniper Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

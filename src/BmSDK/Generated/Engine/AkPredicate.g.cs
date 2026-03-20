@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkPredicate<br/>
+/// ABSTRACT Class: AkPredicate<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject
     }
 
     internal AkPredicate() { }
-
-    /// <summary>
-    /// Constructs a new AkPredicate
-    /// </summary>
-    public AkPredicate(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkPredicate Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

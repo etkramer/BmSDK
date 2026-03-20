@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RadialBlurComponent<br/>
 /// (size = 224)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RadialBlurComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

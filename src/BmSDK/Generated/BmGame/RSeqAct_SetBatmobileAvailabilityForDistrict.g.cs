@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetBatmobileAvailabilityForDistrict<br/>
 /// (size = 353)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetBatmobileAvailabilityForDistrict : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

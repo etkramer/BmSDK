@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_ChangeAlternativeWeapConfig<br/>
 /// (size = 372)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_ChangeAlternativeWeapConfig : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

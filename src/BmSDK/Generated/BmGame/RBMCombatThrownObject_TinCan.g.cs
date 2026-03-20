@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMCombatThrownObject_TinCan<br/>
 /// (size = 1188)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBMCombatThrownObject_TinCan : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject
 {

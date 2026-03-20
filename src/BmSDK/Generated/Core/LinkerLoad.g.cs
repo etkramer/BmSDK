@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: LinkerLoad<br/>
 /// (size = 2040)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class LinkerLoad : BmSDK.Linker, BmSDK.IGameObject
 {

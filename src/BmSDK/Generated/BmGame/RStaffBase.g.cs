@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RStaffBase<br/>
+/// ABSTRACT Class: RStaffBase<br/>
 /// (size = 2068)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RStaffBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RStaffBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObje
     }
 
     internal RStaffBase() { }
-
-    /// <summary>
-    /// Constructs a new RStaffBase
-    /// </summary>
-    public RStaffBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStaffBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

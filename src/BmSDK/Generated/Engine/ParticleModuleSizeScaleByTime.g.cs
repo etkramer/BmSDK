@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleSizeScaleByTime<br/>
 /// (size = 164)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ParticleModuleSizeScaleByTime : BmSDK.Engine.ParticleModuleSizeBase, BmSDK.IGameObject
 {

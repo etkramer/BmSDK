@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: RB_ForceComponent<br/>
+/// ABSTRACT Class: RB_ForceComponent<br/>
 /// (size = 584)
-/// (flags = 0)
+/// (flags = 2290102483)
 /// </summary>
 public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     }
 
     internal RB_ForceComponent() { }
-
-    /// <summary>
-    /// Constructs a new RB_ForceComponent
-    /// </summary>
-    public RB_ForceComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RB_ForceComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

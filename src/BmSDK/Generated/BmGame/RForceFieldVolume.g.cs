@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RForceFieldVolume<br/>
 /// (size = 760)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RForceFieldVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

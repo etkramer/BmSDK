@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleApexEmitterBase<br/>
+/// ABSTRACT Class: ParticleModuleApexEmitterBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleApexEmitterBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleApexEmitterBase : BmSDK.Engine.ParticleModule
     }
 
     internal ParticleModuleApexEmitterBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleApexEmitterBase
-    /// </summary>
-    public ParticleModuleApexEmitterBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleApexEmitterBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

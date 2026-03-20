@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_DroneStartle<br/>
 /// (size = 761)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_DroneStartle : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

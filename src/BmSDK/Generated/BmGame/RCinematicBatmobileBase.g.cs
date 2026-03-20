@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCinematicBatmobileBase<br/>
+/// ABSTRACT Class: RCinematicBatmobileBase<br/>
 /// (size = 1016)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RCinematicBatmobileBase : BmSDK.BmGame.RCinematicVehicle, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCinematicBatmobileBase : BmSDK.BmGame.RCinematicVehicle, B
     }
 
     internal RCinematicBatmobileBase() { }
-
-    /// <summary>
-    /// Constructs a new RCinematicBatmobileBase
-    /// </summary>
-    public RCinematicBatmobileBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCinematicBatmobileBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

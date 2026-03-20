@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPredatorDroneMini<br/>
 /// (size = 3688)
-/// (flags = 0)
+/// (flags = 10486326)
 /// </summary>
 public partial class RPredatorDroneMini : BmSDK.BmScript.RHelicopterIntermediate, BmSDK.IGameObject
 {

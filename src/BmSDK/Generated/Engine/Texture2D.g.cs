@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: Texture2D<br/>
 /// (size = 496)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
 {

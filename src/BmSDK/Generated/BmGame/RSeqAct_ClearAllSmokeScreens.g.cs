@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ClearAllSmokeScreens<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ClearAllSmokeScreens : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCrowdSequence<br/>
+/// ABSTRACT Class: RCrowdSequence<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCrowdSequence : BmSDK.Engine.Actor, BmSDK.IGameObject
     }
 
     internal RCrowdSequence() { }
-
-    /// <summary>
-    /// Constructs a new RCrowdSequence
-    /// </summary>
-    public RCrowdSequence(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCrowdSequence Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

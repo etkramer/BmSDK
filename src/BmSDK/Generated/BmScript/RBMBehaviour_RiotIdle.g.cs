@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMBehaviour_RiotIdle<br/>
 /// (size = 780)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_RiotIdle : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject
 {

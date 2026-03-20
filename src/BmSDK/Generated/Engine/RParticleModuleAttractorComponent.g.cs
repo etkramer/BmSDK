@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RParticleModuleAttractorComponent<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 142618770)
 /// </summary>
 public partial class RParticleModuleAttractorComponent : BmSDK.Engine.ParticleModuleAttractorBase, BmSDK.IGameObject
 {

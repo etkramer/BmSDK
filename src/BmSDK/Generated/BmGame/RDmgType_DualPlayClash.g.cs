@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_DualPlayClash<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDmgType_DualPlayClash : BmSDK.BmGame.RDamageType, BmSDK.IGameObject
 {

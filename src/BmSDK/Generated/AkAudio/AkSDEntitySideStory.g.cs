@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: AkSDEntitySideStory<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class AkSDEntitySideStory : BmSDK.AkAudio.AkSDEntitySymbol, BmSDK.IGameObject
 {

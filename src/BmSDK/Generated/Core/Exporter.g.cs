@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Exporter<br/>
+/// ABSTRACT Class: Exporter<br/>
 /// (size = 136)
-/// (flags = 0)
+/// (flags = 268435593)
 /// </summary>
 public partial class Exporter : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -24,30 +24,8 @@ public partial class Exporter : BmSDK.GameObject, BmSDK.IGameObject
     internal Exporter() { }
 
     /// <summary>
-    /// Constructs a new Exporter
-    /// </summary>
-    public Exporter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Exporter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
-
-    /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.
     /// </summary>
     protected Exporter(nint ptr) : base(ptr) { }
 
-    /// <summary>
-    /// ArrayProperty: FormatDescription
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FormatDescription
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 108); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 108); }
-    }
-
-    /// <summary>
-    /// ArrayProperty: FormatExtension
-    /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> FormatExtension
-    {
-        get { return BmSDK.Framework.MarshalUtil.ToManaged<BmSDK.TArray<BmSDK.FString>>(Ptr + 92); }
-        set { BmSDK.Framework.MarshalUtil.ToUnmanaged(value, Ptr + 92); }
-    }
 }

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RActorFactoryMoverNoCL<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134230166)
 /// </summary>
 public partial class RActorFactoryMoverNoCL : BmSDK.Engine.ActorFactoryMover, BmSDK.IGameObject
 {

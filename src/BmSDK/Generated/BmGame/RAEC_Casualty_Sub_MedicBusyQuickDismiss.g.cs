@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Casualty_Sub_MedicBusyQuickDismiss<br/>
 /// (size = 704)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Casualty_Sub_MedicBusyQuickDismiss : BmSDK.BmGame.RAEC_Casualty_Sub_Solo, BmSDK.IGameObject
 {

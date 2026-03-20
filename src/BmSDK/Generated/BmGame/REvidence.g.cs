@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: REvidence<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class REvidence : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

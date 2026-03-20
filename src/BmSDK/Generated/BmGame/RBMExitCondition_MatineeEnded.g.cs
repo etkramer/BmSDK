@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMExitCondition_MatineeEnded<br/>
 /// (size = 445)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMExitCondition_MatineeEnded : BmSDK.BmGame.RBMExitCondition, BmSDK.IGameObject
 {

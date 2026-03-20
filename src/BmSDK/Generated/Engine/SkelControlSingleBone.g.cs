@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SkelControlSingleBone<br/>
 /// (size = 296)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class SkelControlSingleBone : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkAudioStateReset<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkAudioStateReset : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject
 {

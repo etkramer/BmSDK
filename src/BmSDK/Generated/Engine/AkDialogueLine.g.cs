@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkDialogueLine<br/>
+/// ABSTRACT Class: AkDialogueLine<br/>
 /// (size = 172)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class AkDialogueLine : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkDialogueLine : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGame
     }
 
     internal AkDialogueLine() { }
-
-    /// <summary>
-    /// Constructs a new AkDialogueLine
-    /// </summary>
-    public AkDialogueLine(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkDialogueLine Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

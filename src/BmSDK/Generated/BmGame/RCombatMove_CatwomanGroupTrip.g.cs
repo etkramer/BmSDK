@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_CatwomanGroupTrip<br/>
 /// (size = 980)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RCombatMove_CatwomanGroupTrip : BmSDK.BmGame.RCombatMove_PlayerSpecial, BmSDK.IGameObject
 {

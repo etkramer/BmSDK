@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SetPhysicsVelocity<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_SetPhysicsVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

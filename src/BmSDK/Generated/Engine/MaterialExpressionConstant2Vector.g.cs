@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: MaterialExpressionConstant2Vector<br/>
 /// (size = 180)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class MaterialExpressionConstant2Vector : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
 {

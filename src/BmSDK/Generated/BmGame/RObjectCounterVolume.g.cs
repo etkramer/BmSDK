@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RObjectCounterVolume<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RObjectCounterVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

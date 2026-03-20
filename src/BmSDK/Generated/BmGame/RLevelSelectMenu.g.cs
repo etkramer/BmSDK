@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLevelSelectMenu<br/>
 /// (size = 1212)
-/// (flags = 0)
+/// (flags = 144704150)
 /// </summary>
 public partial class RLevelSelectMenu : BmSDK.BmGame.RDynamicMenu, BmSDK.IGameObject
 {

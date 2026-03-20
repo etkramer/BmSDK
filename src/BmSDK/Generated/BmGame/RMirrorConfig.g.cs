@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMirrorConfig<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RMirrorConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
 {

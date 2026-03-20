@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_SearchLite<br/>
 /// (size = 816)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_SearchLite : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObject
 {

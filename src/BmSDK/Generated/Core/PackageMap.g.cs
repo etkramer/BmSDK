@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: PackageMap<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 268435592)
 /// </summary>
 public partial class PackageMap : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: REnvironmentCheckTicker<br/>
 /// (size = 1233)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

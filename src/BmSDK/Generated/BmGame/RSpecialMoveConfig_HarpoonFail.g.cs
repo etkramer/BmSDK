@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_HarpoonFail<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 4114)
 /// </summary>
 public partial class RSpecialMoveConfig_HarpoonFail : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

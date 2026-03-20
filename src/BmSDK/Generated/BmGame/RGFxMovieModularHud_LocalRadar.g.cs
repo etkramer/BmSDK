@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGFxMovieModularHud_LocalRadar<br/>
 /// (size = 764)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class RGFxMovieModularHud_LocalRadar : BmSDK.BmGame.RGFxMovieModularHudBase, BmSDK.IGameObject
 {

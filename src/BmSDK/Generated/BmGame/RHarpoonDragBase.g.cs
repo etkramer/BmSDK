@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RHarpoonDragBase<br/>
+/// ABSTRACT Class: RHarpoonDragBase<br/>
 /// (size = 960)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RHarpoonDragBase : BmSDK.Engine.InterpActor, BmSDK.IGameObj
     }
 
     internal RHarpoonDragBase() { }
-
-    /// <summary>
-    /// Constructs a new RHarpoonDragBase
-    /// </summary>
-    public RHarpoonDragBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RHarpoonDragBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

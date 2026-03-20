@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RJobAssignment<br/>
+/// ABSTRACT Class: RJobAssignment<br/>
 /// (size = 100)
-/// (flags = 0)
+/// (flags = 19)
 /// </summary>
 public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RJobAssignment : BmSDK.Component, BmSDK.IGameObject
     }
 
     internal RJobAssignment() { }
-
-    /// <summary>
-    /// Constructs a new RJobAssignment
-    /// </summary>
-    public RJobAssignment(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RJobAssignment Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RThrowTarget<br/>
 /// (size = 673)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RThrowTarget : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

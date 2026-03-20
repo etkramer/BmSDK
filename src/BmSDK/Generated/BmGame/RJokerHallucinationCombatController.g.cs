@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerHallucinationCombatController<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RJokerHallucinationCombatController : BmSDK.GameObject, BmSDK.IGameObject
 {

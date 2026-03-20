@@ -6,7 +6,7 @@ namespace BmSDK;
 /// <summary>
 /// Class: Package<br/>
 /// (size = 244)
-/// (flags = 0)
+/// (flags = 268435584)
 /// </summary>
 public partial class Package : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_NeedsRescue<br/>
 /// (size = 608)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_NeedsRescue : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

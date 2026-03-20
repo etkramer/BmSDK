@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModuleAlertsAndSurveillance<br/>
 /// (size = 324)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModuleAlertsAndSurveillance : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

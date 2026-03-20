@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RActivatedFearToxinVolume<br/>
 /// (size = 824)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RActivatedFearToxinVolume : BmSDK.BmGame.RWaterRescueVolumeBase, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DOFBloomMotionBlurEffect<br/>
 /// (size = 176)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class DOFBloomMotionBlurEffect : BmSDK.Engine.DOFAndBloomEffect, BmSDK.IGameObject
 {

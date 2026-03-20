@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMDeathCutscene<br/>
 /// (size = 1472)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RBMDeathCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGameObject
 {

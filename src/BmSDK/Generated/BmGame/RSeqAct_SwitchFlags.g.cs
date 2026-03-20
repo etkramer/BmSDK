@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_SwitchFlags<br/>
 /// (size = 385)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_SwitchFlags : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

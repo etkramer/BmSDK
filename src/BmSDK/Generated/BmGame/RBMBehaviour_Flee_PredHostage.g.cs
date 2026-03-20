@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_Flee_PredHostage<br/>
 /// (size = 620)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_Flee_PredHostage : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject
 {

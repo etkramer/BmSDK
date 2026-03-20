@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MSpecialMoveInstance_RedhoodGunWindow<br/>
 /// (size = 1160)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class MSpecialMoveInstance_RedhoodGunWindow : BmSDK.BmGame.RSpecialMoveInstance_GlideKick, BmSDK.IGameObject
 {

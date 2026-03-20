@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RTurret_WatchtowerBase<br/>
+/// ABSTRACT Class: RTurret_WatchtowerBase<br/>
 /// (size = 1692)
-/// (flags = 0)
+/// (flags = 144704147)
 /// </summary>
 public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RTurret_WatchtowerBase : BmSDK.BmGame.RTurretBase, BmSDK.IG
     }
 
     internal RTurret_WatchtowerBase() { }
-
-    /// <summary>
-    /// Constructs a new RTurret_WatchtowerBase
-    /// </summary>
-    public RTurret_WatchtowerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RTurret_WatchtowerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

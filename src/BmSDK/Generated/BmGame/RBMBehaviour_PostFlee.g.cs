@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_PostFlee<br/>
 /// (size = 588)
-/// (flags = 0)
+/// (flags = 33562642)
 /// </summary>
 public partial class RBMBehaviour_PostFlee : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject
 {

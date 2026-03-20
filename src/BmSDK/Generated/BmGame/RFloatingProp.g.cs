@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFloatingProp<br/>
 /// (size = 1092)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RFloatingProp : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameObject
 {

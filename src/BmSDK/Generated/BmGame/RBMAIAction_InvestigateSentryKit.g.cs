@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_InvestigateSentryKit<br/>
 /// (size = 880)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_InvestigateSentryKit : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

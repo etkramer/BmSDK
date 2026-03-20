@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleSubUVBase<br/>
+/// ABSTRACT Class: ParticleModuleSubUVBase<br/>
 /// (size = 96)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ParticleModuleSubUVBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleSubUVBase : BmSDK.Engine.ParticleModule, BmSD
     }
 
     internal ParticleModuleSubUVBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleSubUVBase
-    /// </summary>
-    public ParticleModuleSubUVBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleSubUVBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

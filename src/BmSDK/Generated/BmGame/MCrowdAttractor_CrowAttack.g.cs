@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MCrowdAttractor_CrowAttack<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class MCrowdAttractor_CrowAttack : BmSDK.BmGame.RCrowdAttractor, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqVar_Object<br/>
 /// (size = 268)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class SeqVar_Object : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RLightingRigActor<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RLightingRigActor : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

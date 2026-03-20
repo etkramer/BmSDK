@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHudModulePerformanceTest<br/>
 /// (size = 340)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RHudModulePerformanceTest : BmSDK.BmGame.RHudModule, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RMagneticBlastBm<br/>
 /// (size = 2568)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RMagneticBlastBm : BmSDK.BmGame.RMagneticBlast, BmSDK.IGameObject
 {

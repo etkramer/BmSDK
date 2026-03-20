@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SpotLightMovable<br/>
 /// (size = 692)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class SpotLightMovable : BmSDK.Engine.SpotLight, BmSDK.IGameObject
 {

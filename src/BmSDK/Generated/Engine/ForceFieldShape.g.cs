@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ForceFieldShape<br/>
+/// ABSTRACT Class: ForceFieldShape<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ForceFieldShape : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal ForceFieldShape() { }
-
-    /// <summary>
-    /// Constructs a new ForceFieldShape
-    /// </summary>
-    public ForceFieldShape(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ForceFieldShape Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

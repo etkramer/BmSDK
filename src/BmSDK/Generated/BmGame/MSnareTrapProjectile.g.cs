@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: MSnareTrapProjectile<br/>
+/// ABSTRACT Class: MSnareTrapProjectile<br/>
 /// (size = 1068)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, 
     }
 
     internal MSnareTrapProjectile() { }
-
-    /// <summary>
-    /// Constructs a new MSnareTrapProjectile
-    /// </summary>
-    public MSnareTrapProjectile(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MSnareTrapProjectile Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

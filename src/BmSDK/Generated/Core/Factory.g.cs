@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Factory<br/>
+/// ABSTRACT Class: Factory<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 403)
 /// </summary>
 public partial class Factory : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Factory : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Factory() { }
-
-    /// <summary>
-    /// Constructs a new Factory
-    /// </summary>
-    public Factory(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Factory Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

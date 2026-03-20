@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqAct_AttachPawnToBehaviour<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMSeqAct_AttachPawnToBehaviour : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

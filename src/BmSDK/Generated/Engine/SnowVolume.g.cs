@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SnowVolume<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class SnowVolume : BmSDK.Engine.RHeightMapCaptureVolume, BmSDK.IGameObject
 {

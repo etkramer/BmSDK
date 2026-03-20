@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_ResonatorLookAt<br/>
 /// (size = 376)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_ResonatorLookAt : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

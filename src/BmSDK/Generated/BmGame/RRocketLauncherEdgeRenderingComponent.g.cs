@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRocketLauncherEdgeRenderingComponent<br/>
 /// (size = 540)
-/// (flags = 0)
+/// (flags = 2189430866)
 /// </summary>
 public partial class RRocketLauncherEdgeRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

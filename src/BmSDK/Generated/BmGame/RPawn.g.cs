@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawn<br/>
 /// (size = 1796)
-/// (flags = 0)
+/// (flags = 144703670)
 /// </summary>
 public partial class RPawn : BmSDK.Engine.Pawn, BmSDK.IGameObject
 {

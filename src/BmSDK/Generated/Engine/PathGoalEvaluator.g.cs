@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PathGoalEvaluator<br/>
 /// (size = 108)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class PathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
 {

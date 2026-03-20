@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RTriggerVolumeSpawnable<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RTriggerVolumeSpawnable : BmSDK.Engine.TriggerVolume, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: Settings<br/>
+/// ABSTRACT Class: Settings<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 134217907)
 /// </summary>
 public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal Settings() { }
-
-    /// <summary>
-    /// Constructs a new Settings
-    /// </summary>
-    public Settings(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Settings Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

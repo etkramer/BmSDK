@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PlatformInterfaceBase<br/>
 /// (size = 116)
-/// (flags = 0)
+/// (flags = 134217882)
 /// </summary>
 public partial class PlatformInterfaceBase : BmSDK.GameObject, BmSDK.IGameObject
 {

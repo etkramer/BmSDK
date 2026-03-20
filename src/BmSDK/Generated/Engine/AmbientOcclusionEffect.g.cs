@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AmbientOcclusionEffect<br/>
 /// (size = 240)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AmbientOcclusionEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject
 {

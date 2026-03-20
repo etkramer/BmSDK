@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RockHeightMapComponent<br/>
 /// (size = 132)
-/// (flags = 0)
+/// (flags = 167772306)
 /// </summary>
 public partial class RockHeightMapComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
 {

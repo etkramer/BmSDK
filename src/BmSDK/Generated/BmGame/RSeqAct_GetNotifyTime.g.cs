@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_GetNotifyTime<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_GetNotifyTime : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

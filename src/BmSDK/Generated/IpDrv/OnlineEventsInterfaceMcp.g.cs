@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: OnlineEventsInterfaceMcp<br/>
 /// (size = 168)
-/// (flags = 0)
+/// (flags = 134217878)
 /// </summary>
 public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBMWeaponStunStickBase<br/>
+/// ABSTRACT Class: RBMWeaponStunStickBase<br/>
 /// (size = 1756)
-/// (flags = 0)
+/// (flags = 211812531)
 /// </summary>
 public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK
     }
 
     internal RBMWeaponStunStickBase() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponStunStickBase
-    /// </summary>
-    public RBMWeaponStunStickBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponStunStickBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

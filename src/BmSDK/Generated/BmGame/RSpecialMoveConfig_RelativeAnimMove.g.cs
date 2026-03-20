@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveConfig_RelativeAnimMove<br/>
 /// (size = 456)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RSpecialMoveConfig_RelativeAnimMove : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject
 {

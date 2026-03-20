@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RTakeoverVideoScreen<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RTakeoverVideoScreen : BmSDK.BmGame.RTakeoverVideoScreenBase, BmSDK.IGameObject
 {

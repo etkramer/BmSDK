@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RWatchtowerAsset<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class RWatchtowerAsset : BmSDK.BmGame.RThreatBaseAsset, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_BatmanFloorPickupThug<br/>
 /// (size = 1089)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_BatmanFloorPickupThug : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {

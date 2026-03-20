@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnVillainPrototype2DBase<br/>
+/// ABSTRACT Class: RPawnVillainPrototype2DBase<br/>
 /// (size = 6748)
-/// (flags = 0)
+/// (flags = 10485815)
 /// </summary>
 public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug
     }
 
     internal RPawnVillainPrototype2DBase() { }
-
-    /// <summary>
-    /// Constructs a new RPawnVillainPrototype2DBase
-    /// </summary>
-    public RPawnVillainPrototype2DBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnVillainPrototype2DBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

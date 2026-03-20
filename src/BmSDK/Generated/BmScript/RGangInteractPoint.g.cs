@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RGangInteractPoint<br/>
 /// (size = 1304)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RGangInteractPoint : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject
 {

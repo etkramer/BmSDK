@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NavMeshGoal_At<br/>
 /// (size = 152)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class NavMeshGoal_At : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject
 {

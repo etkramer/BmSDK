@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_FlameManagerBase<br/>
+/// ABSTRACT Class: RSeqAct_FlameManagerBase<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 201334931)
 /// </summary>
 public partial class RSeqAct_FlameManagerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_FlameManagerBase : BmSDK.Engine.SeqAct_Latent, BmSD
     }
 
     internal RSeqAct_FlameManagerBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_FlameManagerBase
-    /// </summary>
-    public RSeqAct_FlameManagerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_FlameManagerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

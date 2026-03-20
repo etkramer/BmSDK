@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleStaticTank<br/>
 /// (size = 8112)
-/// (flags = 0)
+/// (flags = 144704182)
 /// </summary>
 public partial class RVehicleStaticTank : BmSDK.BmGame.RVehicleTank, BmSDK.IGameObject
 {

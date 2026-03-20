@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHidePoint_GargoyleBase<br/>
 /// (size = 1380)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RHidePoint_GargoyleBase : BmSDK.BmGame.RHidePoint_Mesh, BmSDK.IGameObject
 {

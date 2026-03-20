@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPerimeterData<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RPerimeterData : BmSDK.GameObject, BmSDK.IGameObject
 {

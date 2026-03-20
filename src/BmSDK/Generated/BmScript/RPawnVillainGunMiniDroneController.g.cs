@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RPawnVillainGunMiniDroneController<br/>
 /// (size = 6896)
-/// (flags = 0)
+/// (flags = 10485814)
 /// </summary>
 public partial class RPawnVillainGunMiniDroneController : BmSDK.BmScript.RPawnVillainGunPredFull, BmSDK.IGameObject
 {

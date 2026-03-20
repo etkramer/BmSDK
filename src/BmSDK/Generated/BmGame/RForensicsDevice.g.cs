@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RForensicsDevice<br/>
 /// (size = 2100)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

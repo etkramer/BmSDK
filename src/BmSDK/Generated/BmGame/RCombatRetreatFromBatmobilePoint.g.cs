@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatRetreatFromBatmobilePoint<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class RCombatRetreatFromBatmobilePoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
 {

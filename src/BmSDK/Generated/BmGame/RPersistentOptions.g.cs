@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPersistentOptions<br/>
 /// (size = 13032)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
 {

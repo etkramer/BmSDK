@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_FireflySpawnChecker<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_FireflySpawnChecker : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

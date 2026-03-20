@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_ParticleEventGenerator<br/>
 /// (size = 432)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_ParticleEventGenerator : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

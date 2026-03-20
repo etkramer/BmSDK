@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_AvoidanceRunAway<br/>
 /// (size = 1148)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_AvoidanceRunAway : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject
 {

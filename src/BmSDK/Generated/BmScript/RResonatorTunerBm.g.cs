@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RResonatorTunerBm<br/>
 /// (size = 2460)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RResonatorTunerBm : BmSDK.BmGame.RResonatorTuner, BmSDK.IGameObject
 {

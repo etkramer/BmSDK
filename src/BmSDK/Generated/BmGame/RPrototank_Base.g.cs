@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPrototank_Base<br/>
 /// (size = 672)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RPrototank_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

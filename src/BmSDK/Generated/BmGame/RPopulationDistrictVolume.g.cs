@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPopulationDistrictVolume<br/>
 /// (size = 756)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RPopulationDistrictVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSpecialMoveEnvironmentObject<br/>
+/// ABSTRACT Class: RSpecialMoveEnvironmentObject<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RSpecialMoveEnvironmentObject : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSpecialMoveEnvironmentObject : BmSDK.Engine.Actor, BmSDK.I
     }
 
     internal RSpecialMoveEnvironmentObject() { }
-
-    /// <summary>
-    /// Constructs a new RSpecialMoveEnvironmentObject
-    /// </summary>
-    public RSpecialMoveEnvironmentObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSpecialMoveEnvironmentObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

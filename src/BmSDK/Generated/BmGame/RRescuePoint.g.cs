@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RRescuePoint<br/>
 /// (size = 1076)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RRescuePoint : BmSDK.BmGame.RGrapplePoint, BmSDK.IGameObject
 {

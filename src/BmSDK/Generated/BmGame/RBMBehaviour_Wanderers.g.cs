@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBehaviour_Wanderers<br/>
 /// (size = 1092)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RBMBehaviour_Wanderers : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject
 {

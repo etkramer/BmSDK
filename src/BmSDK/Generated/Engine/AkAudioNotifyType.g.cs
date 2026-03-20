@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AkAudioNotifyType<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class AkAudioNotifyType : BmSDK.Engine.AkHash, BmSDK.IGameObject
 {

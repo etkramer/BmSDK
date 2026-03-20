@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MorphNodeBase<br/>
+/// ABSTRACT Class: MorphNodeBase<br/>
 /// (size = 140)
-/// (flags = 0)
+/// (flags = 142606483)
 /// </summary>
 public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MorphNodeBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     }
 
     internal MorphNodeBase() { }
-
-    /// <summary>
-    /// Constructs a new MorphNodeBase
-    /// </summary>
-    public MorphNodeBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MorphNodeBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -4,9 +4,9 @@
 namespace BmSDK.BmScript;
 
 /// <summary>
-/// Class: RBMWeaponHeavyObject<br/>
+/// ABSTRACT Class: RBMWeaponHeavyObject<br/>
 /// (size = 1748)
-/// (flags = 0)
+/// (flags = 77594675)
 /// </summary>
 public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBMWeaponHeavyObject : BmSDK.BmGame.RBMWeaponMelee, BmSDK.I
     }
 
     internal RBMWeaponHeavyObject() { }
-
-    /// <summary>
-    /// Constructs a new RBMWeaponHeavyObject
-    /// </summary>
-    public RBMWeaponHeavyObject(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBMWeaponHeavyObject Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

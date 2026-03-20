@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_EvidenceTrailAdvanced<br/>
 /// (size = 388)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_EvidenceTrailAdvanced : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RExplosiveGelBomb<br/>
 /// (size = 1056)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RExplosiveGelBomb : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject
 {

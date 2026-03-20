@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_BeatDownCriticalStart<br/>
 /// (size = 236)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_BeatDownCriticalStart : BmSDK.BmGame.RDmgType_BeatDownStart, BmSDK.IGameObject
 {

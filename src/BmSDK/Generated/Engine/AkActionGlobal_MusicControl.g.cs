@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AkActionGlobal_MusicControl<br/>
+/// ABSTRACT Class: AkActionGlobal_MusicControl<br/>
 /// (size = 260)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class AkActionGlobal_MusicControl : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AkActionGlobal_MusicControl : BmSDK.Engine.AkActionGlobal, 
     }
 
     internal AkActionGlobal_MusicControl() { }
-
-    /// <summary>
-    /// Constructs a new AkActionGlobal_MusicControl
-    /// </summary>
-    public AkActionGlobal_MusicControl(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AkActionGlobal_MusicControl Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

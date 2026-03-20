@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RVehicleCustomisation<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
 {

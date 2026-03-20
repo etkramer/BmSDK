@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMSeqEvent_StartleFired<br/>
 /// (size = 380)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RBMSeqEvent_StartleFired : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

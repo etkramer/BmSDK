@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SkeletalMesh<br/>
 /// (size = 1428)
-/// (flags = 0)
+/// (flags = 2097554)
 /// </summary>
 public partial class SkeletalMesh : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RVentMineBase<br/>
+/// ABSTRACT Class: RVentMineBase<br/>
 /// (size = 748)
-/// (flags = 0)
+/// (flags = 211812499)
 /// </summary>
 public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameO
     }
 
     internal RVentMineBase() { }
-
-    /// <summary>
-    /// Constructs a new RVentMineBase
-    /// </summary>
-    public RVentMineBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RVentMineBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMBarkCoordinator<br/>
 /// (size = 728)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RBMBarkCoordinator : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ApexShape<br/>
+/// ABSTRACT Class: ApexShape<br/>
 /// (size = 84)
-/// (flags = 0)
+/// (flags = 134221971)
 /// </summary>
 public partial class ApexShape : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ApexShape : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal ApexShape() { }
-
-    /// <summary>
-    /// Constructs a new ApexShape
-    /// </summary>
-    public ApexShape(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ApexShape Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

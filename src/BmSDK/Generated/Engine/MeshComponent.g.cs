@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MeshComponent<br/>
+/// ABSTRACT Class: MeshComponent<br/>
 /// (size = 640)
-/// (flags = 0)
+/// (flags = 2155872723)
 /// </summary>
 public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     }
 
     internal MeshComponent() { }
-
-    /// <summary>
-    /// Constructs a new MeshComponent
-    /// </summary>
-    public MeshComponent(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MeshComponent Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

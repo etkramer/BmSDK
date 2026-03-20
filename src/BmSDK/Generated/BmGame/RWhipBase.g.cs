@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RWhipBase<br/>
+/// ABSTRACT Class: RWhipBase<br/>
 /// (size = 2068)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RWhipBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObjec
     }
 
     internal RWhipBase() { }
-
-    /// <summary>
-    /// Constructs a new RWhipBase
-    /// </summary>
-    public RWhipBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RWhipBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

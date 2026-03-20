@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_SimultaneousCounter<br/>
 /// (size = 241)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class RDmgType_SimultaneousCounter : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPredHostageFleePoint<br/>
+/// ABSTRACT Class: RPredHostageFleePoint<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 10486291)
 /// </summary>
 public partial class RPredHostageFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPredHostageFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObje
     }
 
     internal RPredHostageFleePoint() { }
-
-    /// <summary>
-    /// Constructs a new RPredHostageFleePoint
-    /// </summary>
-    public RPredHostageFleePoint(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPredHostageFleePoint Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

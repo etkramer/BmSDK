@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SpeechRecognition<br/>
 /// (size = 260)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
 {

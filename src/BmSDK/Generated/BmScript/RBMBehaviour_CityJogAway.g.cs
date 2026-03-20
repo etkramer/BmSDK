@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RBMBehaviour_CityJogAway<br/>
 /// (size = 1008)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RBMBehaviour_CityJogAway : BmSDK.BmScript.RBMBehaviour_CityRunAway, BmSDK.IGameObject
 {

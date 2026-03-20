@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Formation_SideRoom<br/>
 /// (size = 804)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Formation_SideRoom : BmSDK.BmGame.RAEC_Search_Formation, BmSDK.IGameObject
 {

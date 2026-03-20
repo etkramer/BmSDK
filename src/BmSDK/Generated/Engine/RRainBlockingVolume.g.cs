@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RRainBlockingVolume<br/>
 /// (size = 1020)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RRainBlockingVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

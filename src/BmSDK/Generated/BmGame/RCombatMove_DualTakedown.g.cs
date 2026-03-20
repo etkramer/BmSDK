@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RCombatMove_DualTakedown<br/>
 /// (size = 1080)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RCombatMove_DualTakedown : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject
 {

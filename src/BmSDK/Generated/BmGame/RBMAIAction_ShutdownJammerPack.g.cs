@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBMAIAction_ShutdownJammerPack<br/>
 /// (size = 868)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RBMAIAction_ShutdownJammerPack : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject
 {

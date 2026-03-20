@@ -6,7 +6,7 @@ namespace BmSDK.AkAudio;
 /// <summary>
 /// Class: SeqAct_AkCreateMultipoint<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_AkCreateMultipoint : BmSDK.AkAudio.SeqAct_AkBase, BmSDK.IGameObject
 {

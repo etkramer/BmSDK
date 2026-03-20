@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_GFxMovieOutroMovie<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_GFxMovieOutroMovie : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PrefabInstance<br/>
 /// (size = 943)
-/// (flags = 0)
+/// (flags = 2292187282)
 /// </summary>
 public partial class PrefabInstance : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

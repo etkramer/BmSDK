@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RFreezeClusterTrapBase<br/>
 /// (size = 684)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RFreezeClusterTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObject
 {

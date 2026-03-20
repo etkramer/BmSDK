@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqEvent_RiddlerProgressionAdvanced<br/>
 /// (size = 400)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RSeqEvent_RiddlerProgressionAdvanced : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {

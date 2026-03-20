@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DefaultPhysicsVolume<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 144703642)
 /// </summary>
 public partial class DefaultPhysicsVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObject
 {

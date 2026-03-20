@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RNavMeshObstacle_OneWay<br/>
 /// (size = 700)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RNavMeshObstacle_OneWay : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject
 {

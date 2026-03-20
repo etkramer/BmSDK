@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDmgType_BigZapHit<br/>
 /// (size = 216)
-/// (flags = 0)
+/// (flags = 18)
 /// </summary>
 public partial class RDmgType_BigZapHit : BmSDK.BmGame.RDmgType_BigHit, BmSDK.IGameObject
 {

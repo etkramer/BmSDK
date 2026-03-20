@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RBarkConvoPawnRef<br/>
+/// ABSTRACT Class: RBarkConvoPawnRef<br/>
 /// (size = 156)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class RBarkConvoPawnRef : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RBarkConvoPawnRef : BmSDK.BmGame.RBarkConvoNode, BmSDK.IGam
     }
 
     internal RBarkConvoPawnRef() { }
-
-    /// <summary>
-    /// Constructs a new RBarkConvoPawnRef
-    /// </summary>
-    public RBarkConvoPawnRef(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RBarkConvoPawnRef Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

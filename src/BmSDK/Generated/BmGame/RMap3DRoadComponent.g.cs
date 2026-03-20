@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RMap3DRoadComponent<br/>
 /// (size = 540)
-/// (flags = 0)
+/// (flags = 2290090194)
 /// </summary>
 public partial class RMap3DRoadComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

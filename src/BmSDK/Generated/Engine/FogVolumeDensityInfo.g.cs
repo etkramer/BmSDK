@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: FogVolumeDensityInfo<br/>
+/// ABSTRACT Class: FogVolumeDensityInfo<br/>
 /// (size = 688)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class FogVolumeDensityInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     }
 
     internal FogVolumeDensityInfo() { }
-
-    /// <summary>
-    /// Constructs a new FogVolumeDensityInfo
-    /// </summary>
-    public FogVolumeDensityInfo(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, FogVolumeDensityInfo Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

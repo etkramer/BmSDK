@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_Interrogation<br/>
 /// (size = 1372)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSpecialMoveInstance_Interrogation : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

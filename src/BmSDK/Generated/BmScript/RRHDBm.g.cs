@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RRHDBm<br/>
 /// (size = 2560)
-/// (flags = 0)
+/// (flags = 10485810)
 /// </summary>
 public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
 {

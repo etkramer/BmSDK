@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDeathCamera<br/>
 /// (size = 1308)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
 {

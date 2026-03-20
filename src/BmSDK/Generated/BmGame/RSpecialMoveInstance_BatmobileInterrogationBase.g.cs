@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_BatmobileInterrogationBase<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RSpecialMoveInstance_BatmobileInterrogationBase : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject
 {

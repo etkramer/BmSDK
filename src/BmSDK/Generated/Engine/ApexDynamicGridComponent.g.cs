@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ApexDynamicGridComponent<br/>
 /// (size = 876)
-/// (flags = 0)
+/// (flags = 2290094290)
 /// </summary>
 public partial class ApexDynamicGridComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject
 {

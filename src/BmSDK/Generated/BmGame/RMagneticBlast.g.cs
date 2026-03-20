@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RMagneticBlast<br/>
+/// ABSTRACT Class: RMagneticBlast<br/>
 /// (size = 2568)
-/// (flags = 0)
+/// (flags = 144703667)
 /// </summary>
 public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RMagneticBlast : BmSDK.BmGame.RInventoryGadget, BmSDK.IGame
     }
 
     internal RMagneticBlast() { }
-
-    /// <summary>
-    /// Constructs a new RMagneticBlast
-    /// </summary>
-    public RMagneticBlast(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RMagneticBlast Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

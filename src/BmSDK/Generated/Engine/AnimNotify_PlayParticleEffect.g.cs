@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: AnimNotify_PlayParticleEffect<br/>
+/// ABSTRACT Class: AnimNotify_PlayParticleEffect<br/>
 /// (size = 128)
-/// (flags = 0)
+/// (flags = 134230163)
 /// </summary>
 public partial class AnimNotify_PlayParticleEffect : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class AnimNotify_PlayParticleEffect : BmSDK.Engine.AnimNotify, Bm
     }
 
     internal AnimNotify_PlayParticleEffect() { }
-
-    /// <summary>
-    /// Constructs a new AnimNotify_PlayParticleEffect
-    /// </summary>
-    public AnimNotify_PlayParticleEffect(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, AnimNotify_PlayParticleEffect Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

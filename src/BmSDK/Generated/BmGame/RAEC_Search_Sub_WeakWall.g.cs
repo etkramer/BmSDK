@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_Search_Sub_WeakWall<br/>
 /// (size = 788)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_Search_Sub_WeakWall : BmSDK.BmGame.RAEC_Search_Sub_FormationLeader, BmSDK.IGameObject
 {

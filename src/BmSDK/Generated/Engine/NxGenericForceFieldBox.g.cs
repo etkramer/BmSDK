@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: NxGenericForceFieldBox<br/>
 /// (size = 932)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class NxGenericForceFieldBox : BmSDK.Engine.NxGenericForceField, BmSDK.IGameObject
 {

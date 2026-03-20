@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RReflectionVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 178258066)
 /// </summary>
 public partial class RReflectionVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

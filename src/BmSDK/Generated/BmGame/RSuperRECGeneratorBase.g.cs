@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSuperRECGeneratorBase<br/>
 /// (size = 696)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSuperRECGeneratorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
 {

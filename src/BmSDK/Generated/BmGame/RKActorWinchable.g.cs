@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RKActorWinchable<br/>
 /// (size = 1152)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RKActorWinchable : BmSDK.BmGame.RKActorSpawnable, BmSDK.IGameObject
 {

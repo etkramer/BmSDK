@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: RB_LineImpulseActor<br/>
 /// (size = 693)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RB_LineImpulseActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGameObject
 {

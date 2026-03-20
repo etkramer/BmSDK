@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: DrawSphereComponent<br/>
 /// (size = 564)
-/// (flags = 0)
+/// (flags = 2155885010)
 /// </summary>
 public partial class DrawSphereComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
 {

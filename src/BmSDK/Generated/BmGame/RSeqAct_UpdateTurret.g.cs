@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_UpdateTurret<br/>
 /// (size = 384)
-/// (flags = 0)
+/// (flags = 8210)
 /// </summary>
 public partial class RSeqAct_UpdateTurret : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

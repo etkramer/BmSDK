@@ -6,7 +6,7 @@ namespace BmSDK.BmScript;
 /// <summary>
 /// Class: RSpecialMoveInstance_HangOnHelicopter<br/>
 /// (size = 1256)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_HangOnHelicopter : BmSDK.BmGame.RSpecialMoveInstance_PlaceGooMine, BmSDK.IGameObject
 {

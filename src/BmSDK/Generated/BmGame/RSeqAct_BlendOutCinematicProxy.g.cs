@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_BlendOutCinematicProxy<br/>
 /// (size = 356)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_BlendOutCinematicProxy : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

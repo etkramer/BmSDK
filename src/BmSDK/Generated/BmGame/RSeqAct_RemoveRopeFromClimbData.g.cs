@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSeqAct_RemoveRopeFromClimbData<br/>
 /// (size = 360)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class RSeqAct_RemoveRopeFromClimbData : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {

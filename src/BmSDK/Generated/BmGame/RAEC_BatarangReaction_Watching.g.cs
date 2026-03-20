@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAEC_BatarangReaction_Watching<br/>
 /// (size = 844)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RAEC_BatarangReaction_Watching : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
 {

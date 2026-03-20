@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RGameSearchCoop<br/>
 /// (size = 320)
-/// (flags = 0)
+/// (flags = 50)
 /// </summary>
 public partial class RGameSearchCoop : BmSDK.Engine.OnlineGameSearch, BmSDK.IGameObject
 {

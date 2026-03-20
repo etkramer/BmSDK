@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCombatMove_GadgetBullwhip<br/>
+/// ABSTRACT Class: RCombatMove_GadgetBullwhip<br/>
 /// (size = 836)
-/// (flags = 0)
+/// (flags = 10485779)
 /// </summary>
 public partial class RCombatMove_GadgetBullwhip : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCombatMove_GadgetBullwhip : BmSDK.BmGame.RCombatMove_Batma
     }
 
     internal RCombatMove_GadgetBullwhip() { }
-
-    /// <summary>
-    /// Constructs a new RCombatMove_GadgetBullwhip
-    /// </summary>
-    public RCombatMove_GadgetBullwhip(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCombatMove_GadgetBullwhip Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

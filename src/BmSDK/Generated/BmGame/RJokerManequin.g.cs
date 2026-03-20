@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RJokerManequin<br/>
 /// (size = 1736)
-/// (flags = 0)
+/// (flags = 144704146)
 /// </summary>
 public partial class RJokerManequin : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject
 {

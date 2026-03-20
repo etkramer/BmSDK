@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAudioPoint<br/>
 /// (size = 708)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject
 {

@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RStealthTakeDownStage<br/>
+/// ABSTRACT Class: RStealthTakeDownStage<br/>
 /// (size = 1664)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RStealthTakeDownStage : BmSDK.Engine.Actor, BmSDK.IGameObje
     }
 
     internal RStealthTakeDownStage() { }
-
-    /// <summary>
-    /// Constructs a new RStealthTakeDownStage
-    /// </summary>
-    public RStealthTakeDownStage(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RStealthTakeDownStage Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

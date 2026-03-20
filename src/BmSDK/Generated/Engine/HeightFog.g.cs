@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: HeightFog<br/>
 /// (size = 680)
-/// (flags = 0)
+/// (flags = 10486290)
 /// </summary>
 public partial class HeightFog : BmSDK.Engine.Info, BmSDK.IGameObject
 {

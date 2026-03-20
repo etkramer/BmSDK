@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: GameUISceneClient<br/>
 /// (size = 420)
-/// (flags = 0)
+/// (flags = 134217886)
 /// </summary>
 public partial class GameUISceneClient : BmSDK.Engine.UISceneClient, BmSDK.IGameObject
 {

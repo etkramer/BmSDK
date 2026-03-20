@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: SeqAct_DivideFloat<br/>
 /// (size = 368)
-/// (flags = 0)
+/// (flags = 134226066)
 /// </summary>
 public partial class SeqAct_DivideFloat : BmSDK.Engine.SeqAct_SetSequenceVariable, BmSDK.IGameObject
 {

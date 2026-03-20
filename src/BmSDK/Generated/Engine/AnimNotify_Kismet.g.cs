@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: AnimNotify_Kismet<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class AnimNotify_Kismet : BmSDK.Engine.AnimNotify, BmSDK.IGameObject
 {

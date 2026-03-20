@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: UmbraData<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 2415919232)
 /// </summary>
 public partial class UmbraData : BmSDK.GameObject, BmSDK.IGameObject
 {

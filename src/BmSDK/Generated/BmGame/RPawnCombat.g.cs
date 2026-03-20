@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RPawnCombat<br/>
+/// ABSTRACT Class: RPawnCombat<br/>
 /// (size = 2974)
-/// (flags = 0)
+/// (flags = 144703671)
 /// </summary>
 public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObjec
     }
 
     internal RPawnCombat() { }
-
-    /// <summary>
-    /// Constructs a new RPawnCombat
-    /// </summary>
-    public RPawnCombat(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RPawnCombat Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

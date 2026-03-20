@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: MaterialExpressionTextureSampleParameter<br/>
+/// ABSTRACT Class: MaterialExpressionTextureSampleParameter<br/>
 /// (size = 316)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class MaterialExpressionTextureSampleParameter : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class MaterialExpressionTextureSampleParameter : BmSDK.Engine.Mat
     }
 
     internal MaterialExpressionTextureSampleParameter() { }
-
-    /// <summary>
-    /// Constructs a new MaterialExpressionTextureSampleParameter
-    /// </summary>
-    public MaterialExpressionTextureSampleParameter(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, MaterialExpressionTextureSampleParameter Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

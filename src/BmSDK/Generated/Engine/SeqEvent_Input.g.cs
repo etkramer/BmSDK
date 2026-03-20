@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: SeqEvent_Input<br/>
+/// ABSTRACT Class: SeqEvent_Input<br/>
 /// (size = 404)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class SeqEvent_Input : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class SeqEvent_Input : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     }
 
     internal SeqEvent_Input() { }
-
-    /// <summary>
-    /// Constructs a new SeqEvent_Input
-    /// </summary>
-    public SeqEvent_Input(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, SeqEvent_Input Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

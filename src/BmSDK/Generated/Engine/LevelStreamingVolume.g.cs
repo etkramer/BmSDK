@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: LevelStreamingVolume<br/>
 /// (size = 768)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

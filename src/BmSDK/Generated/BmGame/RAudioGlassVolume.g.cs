@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAudioGlassVolume<br/>
 /// (size = 800)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class RAudioGlassVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

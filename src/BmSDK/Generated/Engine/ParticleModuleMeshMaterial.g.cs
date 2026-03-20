@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ParticleModuleMeshMaterial<br/>
 /// (size = 112)
-/// (flags = 0)
+/// (flags = 134221970)
 /// </summary>
 public partial class ParticleModuleMeshMaterial : BmSDK.Engine.ParticleModuleMaterialBase, BmSDK.IGameObject
 {

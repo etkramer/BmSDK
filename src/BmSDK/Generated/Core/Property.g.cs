@@ -4,9 +4,9 @@
 namespace BmSDK;
 
 /// <summary>
-/// Class: Property<br/>
+/// ABSTRACT Class: Property<br/>
 /// (size = 148)
-/// (flags = 0)
+/// (flags = 268435585)
 /// </summary>
 public partial class Property : BmSDK.Field, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class Property : BmSDK.Field, BmSDK.IGameObject
     }
 
     internal Property() { }
-
-    /// <summary>
-    /// Constructs a new Property
-    /// </summary>
-    public Property(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, Property Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

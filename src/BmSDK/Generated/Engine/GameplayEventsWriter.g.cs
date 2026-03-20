@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: GameplayEventsWriter<br/>
 /// (size = 444)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class GameplayEventsWriter : BmSDK.Engine.GameplayEventsWriterBase, BmSDK.IGameObject
 {

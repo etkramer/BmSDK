@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RHidePointLedgePerch<br/>
 /// (size = 1340)
-/// (flags = 0)
+/// (flags = 2292187794)
 /// </summary>
 public partial class RHidePointLedgePerch : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject
 {

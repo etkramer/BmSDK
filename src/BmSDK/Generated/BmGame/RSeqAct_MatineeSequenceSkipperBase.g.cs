@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_MatineeSequenceSkipperBase<br/>
+/// ABSTRACT Class: RSeqAct_MatineeSequenceSkipperBase<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_MatineeSequenceSkipperBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_MatineeSequenceSkipperBase : BmSDK.Engine.SequenceA
     }
 
     internal RSeqAct_MatineeSequenceSkipperBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_MatineeSequenceSkipperBase
-    /// </summary>
-    public RSeqAct_MatineeSequenceSkipperBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_MatineeSequenceSkipperBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

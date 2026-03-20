@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_AugmentedForensicsBase<br/>
+/// ABSTRACT Class: RSeqAct_AugmentedForensicsBase<br/>
 /// (size = 408)
-/// (flags = 0)
+/// (flags = 134226067)
 /// </summary>
 public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_AugmentedForensicsBase : BmSDK.Engine.SeqAct_Latent
     }
 
     internal RSeqAct_AugmentedForensicsBase() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_AugmentedForensicsBase
-    /// </summary>
-    public RSeqAct_AugmentedForensicsBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_AugmentedForensicsBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

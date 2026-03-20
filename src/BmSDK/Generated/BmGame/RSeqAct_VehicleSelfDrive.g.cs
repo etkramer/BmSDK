@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RSeqAct_VehicleSelfDrive<br/>
+/// ABSTRACT Class: RSeqAct_VehicleSelfDrive<br/>
 /// (size = 352)
-/// (flags = 0)
+/// (flags = 8211)
 /// </summary>
 public partial class RSeqAct_VehicleSelfDrive : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RSeqAct_VehicleSelfDrive : BmSDK.Engine.SequenceAction, BmS
     }
 
     internal RSeqAct_VehicleSelfDrive() { }
-
-    /// <summary>
-    /// Constructs a new RSeqAct_VehicleSelfDrive
-    /// </summary>
-    public RSeqAct_VehicleSelfDrive(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RSeqAct_VehicleSelfDrive Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

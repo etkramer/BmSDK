@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RDroneTrackingVolume<br/>
 /// (size = 740)
-/// (flags = 0)
+/// (flags = 44040210)
 /// </summary>
 public partial class RDroneTrackingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RPawnVillainAbseilBatmobileTakedownTarget<br/>
 /// (size = 6696)
-/// (flags = 0)
+/// (flags = 10485814)
 /// </summary>
 public partial class RPawnVillainAbseilBatmobileTakedownTarget : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject
 {

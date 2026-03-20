@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: PhysicalMaterial<br/>
 /// (size = 504)
-/// (flags = 0)
+/// (flags = 144703634)
 /// </summary>
 public partial class PhysicalMaterial : BmSDK.GameObject, BmSDK.IGameObject
 {

@@ -6,7 +6,7 @@ namespace BmSDK.Engine;
 /// <summary>
 /// Class: ForceFieldShapeCapsule<br/>
 /// (size = 92)
-/// (flags = 0)
+/// (flags = 142610578)
 /// </summary>
 public partial class ForceFieldShapeCapsule : BmSDK.Engine.ForceFieldShape, BmSDK.IGameObject
 {

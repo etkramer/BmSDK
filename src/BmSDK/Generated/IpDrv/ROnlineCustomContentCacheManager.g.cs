@@ -6,7 +6,7 @@ namespace BmSDK.IpDrv;
 /// <summary>
 /// Class: ROnlineCustomContentCacheManager<br/>
 /// (size = 252)
-/// (flags = 0)
+/// (flags = 134217874)
 /// </summary>
 public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.IGameObject
 {

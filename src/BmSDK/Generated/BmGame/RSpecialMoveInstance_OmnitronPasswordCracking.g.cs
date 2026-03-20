@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSpecialMoveInstance_OmnitronPasswordCracking<br/>
 /// (size = 1120)
-/// (flags = 0)
+/// (flags = 10485778)
 /// </summary>
 public partial class RSpecialMoveInstance_OmnitronPasswordCracking : BmSDK.BmGame.RSpecialMovieInstance_MinigameBase, BmSDK.IGameObject
 {

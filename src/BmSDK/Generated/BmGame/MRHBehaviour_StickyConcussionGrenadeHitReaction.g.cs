@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: MRHBehaviour_StickyConcussionGrenadeHitReaction<br/>
 /// (size = 912)
-/// (flags = 0)
+/// (flags = 8396818)
 /// </summary>
 public partial class MRHBehaviour_StickyConcussionGrenadeHitReaction : BmSDK.BmGame.RBMBehaviour_HitReaction, BmSDK.IGameObject
 {

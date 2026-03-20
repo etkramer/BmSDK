@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: ParticleModuleFieldSamplerBase<br/>
+/// ABSTRACT Class: ParticleModuleFieldSamplerBase<br/>
 /// (size = 104)
-/// (flags = 0)
+/// (flags = 142610579)
 /// </summary>
 public partial class ParticleModuleFieldSamplerBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class ParticleModuleFieldSamplerBase : BmSDK.Engine.ParticleModul
     }
 
     internal ParticleModuleFieldSamplerBase() { }
-
-    /// <summary>
-    /// Constructs a new ParticleModuleFieldSamplerBase
-    /// </summary>
-    public ParticleModuleFieldSamplerBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, ParticleModuleFieldSamplerBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

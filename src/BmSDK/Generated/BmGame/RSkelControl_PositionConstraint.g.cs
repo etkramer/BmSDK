@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RSkelControl_PositionConstraint<br/>
 /// (size = 284)
-/// (flags = 0)
+/// (flags = 142606482)
 /// </summary>
 public partial class RSkelControl_PositionConstraint : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
 {

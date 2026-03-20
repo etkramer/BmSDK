@@ -4,9 +4,9 @@
 namespace BmSDK.Engine;
 
 /// <summary>
-/// Class: GameplayEvents<br/>
+/// ABSTRACT Class: GameplayEvents<br/>
 /// (size = 436)
-/// (flags = 0)
+/// (flags = 134217875)
 /// </summary>
 public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     }
 
     internal GameplayEvents() { }
-
-    /// <summary>
-    /// Constructs a new GameplayEvents
-    /// </summary>
-    public GameplayEvents(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, GameplayEvents Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

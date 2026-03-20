@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RBatmobileRemote<br/>
 /// (size = 2328)
-/// (flags = 0)
+/// (flags = 144703666)
 /// </summary>
 public partial class RBatmobileRemote : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
 {

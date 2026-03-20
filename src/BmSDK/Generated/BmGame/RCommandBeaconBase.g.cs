@@ -4,9 +4,9 @@
 namespace BmSDK.BmGame;
 
 /// <summary>
-/// Class: RCommandBeaconBase<br/>
+/// ABSTRACT Class: RCommandBeaconBase<br/>
 /// (size = 1192)
-/// (flags = 0)
+/// (flags = 144703635)
 /// </summary>
 public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK.IGameObject
 {
@@ -22,11 +22,6 @@ public partial class RCommandBeaconBase : BmSDK.BmGame.RSpecialMoveEnvironmentOb
     }
 
     internal RCommandBeaconBase() { }
-
-    /// <summary>
-    /// Constructs a new RCommandBeaconBase
-    /// </summary>
-    public RCommandBeaconBase(BmSDK.GameObject Outer, string Name = null, BmSDK.GameObject.EObjectFlags SetFlags = 0, RCommandBeaconBase Template = null) : base(ConstructObjectInternal(StaticClass(), Outer, Name, SetFlags, Template)) { }
 
     /// <summary>
     /// Constructs a new wrapper instance from the given object pointer.

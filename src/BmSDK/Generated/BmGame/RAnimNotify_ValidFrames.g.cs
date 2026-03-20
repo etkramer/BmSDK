@@ -6,7 +6,7 @@ namespace BmSDK.BmGame;
 /// <summary>
 /// Class: RAnimNotify_ValidFrames<br/>
 /// (size = 88)
-/// (flags = 0)
+/// (flags = 134230162)
 /// </summary>
 public partial class RAnimNotify_ValidFrames : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject
 {
