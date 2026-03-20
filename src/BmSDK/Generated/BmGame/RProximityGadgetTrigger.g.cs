@@ -71,7 +71,7 @@ public partial class RProximityGadgetTrigger : BmSDK.BmGame.RThugTrap, BmSDK.IGa
     /// <summary>
     /// Function: SetCylinderSize
     /// </summary>
-    public unsafe void SetCylinderSize(float Radius = default, float Height = default)
+    public unsafe virtual void SetCylinderSize(float Radius = default, float Height = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProximityGadgetTrigger.SetCylinderSize", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RProximityGadgetTrigger : BmSDK.BmGame.RThugTrap, BmSDK.IGa
     /// <summary>
     /// Function: CheckExplode
     /// </summary>
-    public unsafe void CheckExplode(BmSDK.BmGame.RPawnVillain VillainTouched)
+    public unsafe virtual void CheckExplode(BmSDK.BmGame.RPawnVillain VillainTouched)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProximityGadgetTrigger.CheckExplode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RProximityGadgetTrigger : BmSDK.BmGame.RThugTrap, BmSDK.IGa
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProximityGadgetTrigger.Touch", true);
         byte* paramsPtr = stackalloc byte[36];

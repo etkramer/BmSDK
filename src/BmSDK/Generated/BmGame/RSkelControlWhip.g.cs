@@ -36,7 +36,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Function: GetWhipExtent
     /// </summary>
-    public unsafe float GetWhipExtent(BmSDK.Engine.SkeletalMeshComponent SkelComp)
+    public unsafe virtual float GetWhipExtent(BmSDK.Engine.SkeletalMeshComponent SkelComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSkelControlWhip.GetWhipExtent", true);
         byte* paramsPtr = stackalloc byte[8];

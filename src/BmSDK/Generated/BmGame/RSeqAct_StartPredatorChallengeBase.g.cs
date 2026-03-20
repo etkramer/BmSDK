@@ -31,7 +31,7 @@ public partial class RSeqAct_StartPredatorChallengeBase : BmSDK.Engine.SeqAct_La
     /// <summary>
     /// Function: ActionPerformed
     /// </summary>
-    public unsafe bool ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction NewGameAction)
+    public unsafe virtual bool ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction NewGameAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartPredatorChallengeBase.ActionPerformed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -43,7 +43,7 @@ public partial class RSeqAct_StartPredatorChallengeBase : BmSDK.Engine.SeqAct_La
     /// <summary>
     /// Function: GetChallengeTime
     /// </summary>
-    public unsafe float GetChallengeTime()
+    public unsafe virtual float GetChallengeTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartPredatorChallengeBase.GetChallengeTime", true);
         byte* paramsPtr = stackalloc byte[4];

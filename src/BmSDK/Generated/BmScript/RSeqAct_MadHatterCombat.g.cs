@@ -47,7 +47,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StartEdgeFadeOut
     /// </summary>
-    public unsafe void StartEdgeFadeOut()
+    public unsafe virtual void StartEdgeFadeOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.StartEdgeFadeOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: TriggerTeleport
     /// </summary>
-    public unsafe void TriggerTeleport()
+    public unsafe virtual void TriggerTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.TriggerTeleport", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StartEdgeFadeIn
     /// </summary>
-    public unsafe void StartEdgeFadeIn()
+    public unsafe virtual void StartEdgeFadeIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.StartEdgeFadeIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: EventFinished
     /// </summary>
-    public unsafe void EventFinished()
+    public unsafe virtual void EventFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.EventFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: MadHatterDown
     /// </summary>
-    public unsafe void MadHatterDown()
+    public unsafe virtual void MadHatterDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.MadHatterDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: EventStarted
     /// </summary>
-    public unsafe void EventStarted()
+    public unsafe virtual void EventStarted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.EventStarted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -135,7 +135,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: NotifyHatterHit
     /// </summary>
-    public unsafe void NotifyHatterHit()
+    public unsafe virtual void NotifyHatterHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.NotifyHatterHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -146,7 +146,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: HatterAction
     /// </summary>
-    public unsafe void HatterAction()
+    public unsafe virtual void HatterAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.HatterAction", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -157,7 +157,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StopClockSounds
     /// </summary>
-    public unsafe void StopClockSounds()
+    public unsafe virtual void StopClockSounds()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.StopClockSounds", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StartClockSound
     /// </summary>
-    public unsafe void StartClockSound(int Index)
+    public unsafe virtual void StartClockSound(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.StartClockSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: SetClockRate
     /// </summary>
-    public unsafe void SetClockRate(int newQuantisedRate)
+    public unsafe virtual void SetClockRate(int newQuantisedRate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.SetClockRate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -192,7 +192,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: TriggerFX
     /// </summary>
-    public unsafe void TriggerFX(BmSDK.BmScript.RSeqAct_MadHatterCombat.EHatterFX FX, System.Numerics.Vector3 Loc, BmSDK.Rotator Rot)
+    public unsafe virtual void TriggerFX(BmSDK.BmScript.RSeqAct_MadHatterCombat.EHatterFX FX, System.Numerics.Vector3 Loc, BmSDK.Rotator Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.TriggerFX", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -206,7 +206,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CheckHatterSpawn
     /// </summary>
-    public unsafe void CheckHatterSpawn()
+    public unsafe virtual void CheckHatterSpawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.CheckHatterSpawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdateHands
     /// </summary>
-    public unsafe void UpdateHands()
+    public unsafe virtual void UpdateHands()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UpdateHands", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdateCamSlip
     /// </summary>
-    public unsafe void UpdateCamSlip(float DeltaTime)
+    public unsafe virtual void UpdateCamSlip(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UpdateCamSlip", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -240,7 +240,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdateCamera
     /// </summary>
-    public unsafe void UpdateCamera(float DeltaTime, bool forcePos)
+    public unsafe virtual void UpdateCamera(float DeltaTime, bool forcePos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UpdateCamera", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -253,7 +253,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: PlayTickingSound
     /// </summary>
-    public unsafe void PlayTickingSound()
+    public unsafe virtual void PlayTickingSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.PlayTickingSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -264,7 +264,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdatePP
     /// </summary>
-    public unsafe void UpdatePP(float DeltaTime)
+    public unsafe virtual void UpdatePP(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UpdatePP", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -276,7 +276,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UpdatePPTransition
     /// </summary>
-    public unsafe void UpdatePPTransition()
+    public unsafe virtual void UpdatePPTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UpdatePPTransition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -287,7 +287,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: StartPPTransition
     /// </summary>
-    public unsafe void StartPPTransition(float Duration, float EndVal, float endRoundness)
+    public unsafe virtual void StartPPTransition(float Duration, float EndVal, float endRoundness)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.StartPPTransition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -301,7 +301,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: UnSinkBM
     /// </summary>
-    public unsafe void UnSinkBM()
+    public unsafe virtual void UnSinkBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.UnSinkBM", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -312,7 +312,7 @@ public partial class RSeqAct_MadHatterCombat : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterCombat.Update", true);
         byte* paramsPtr = stackalloc byte[16];

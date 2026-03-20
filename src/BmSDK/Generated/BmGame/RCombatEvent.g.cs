@@ -31,7 +31,7 @@ public partial class RCombatEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObjec
     /// <summary>
     /// Function: RegisterEvent
     /// </summary>
-    public unsafe void RegisterEvent()
+    public unsafe override void RegisterEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatEvent.RegisterEvent", true);
         byte* paramsPtr = stackalloc byte[0];

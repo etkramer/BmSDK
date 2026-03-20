@@ -47,7 +47,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: RegisterLightHit
     /// </summary>
-    public unsafe void RegisterLightHit(BmSDK.BmScript.RRiddlerLightSwitch Light)
+    public unsafe virtual void RegisterLightHit(BmSDK.BmScript.RRiddlerLightSwitch Light)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.RegisterLightHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: NewLight
     /// </summary>
-    public unsafe void NewLight()
+    public unsafe virtual void NewLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.NewLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: Failed
     /// </summary>
-    public unsafe void Failed()
+    public unsafe virtual void Failed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.Failed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: Success
     /// </summary>
-    public unsafe void Success()
+    public unsafe virtual void Success()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.Success", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSeqAct_RiddlerShootingRangeController : BmSDK.Engine.SeqAc
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_RiddlerShootingRangeController.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

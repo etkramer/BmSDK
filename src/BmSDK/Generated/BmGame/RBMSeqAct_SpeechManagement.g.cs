@@ -47,7 +47,7 @@ public partial class RBMSeqAct_SpeechManagement : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_SpeechManagement.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

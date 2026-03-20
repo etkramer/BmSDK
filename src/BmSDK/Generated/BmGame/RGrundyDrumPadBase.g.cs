@@ -71,7 +71,7 @@ public partial class RGrundyDrumPadBase : BmSDK.Engine.SkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: HitByExplosion
     /// </summary>
-    public unsafe void HitByExplosion()
+    public unsafe virtual void HitByExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrundyDrumPadBase.HitByExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGrundyDrumPadBase : BmSDK.Engine.SkeletalMeshActor, BmSDK.
     /// <summary>
     /// Function: GetVulnerabilityRadius
     /// </summary>
-    public unsafe float GetVulnerabilityRadius()
+    public unsafe virtual float GetVulnerabilityRadius()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGrundyDrumPadBase.GetVulnerabilityRadius", true);
         byte* paramsPtr = stackalloc byte[4];

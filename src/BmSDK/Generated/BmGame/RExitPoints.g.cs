@@ -36,7 +36,7 @@ public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebug
     /// </summary>
-    public unsafe void ShowDebug(BmSDK.Engine.Actor DebugActor, bool bPerm = default)
+    public unsafe virtual void ShowDebug(BmSDK.Engine.Actor DebugActor, bool bPerm = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RExitPoints.ShowDebug", true);
         byte* paramsPtr = stackalloc byte[16];

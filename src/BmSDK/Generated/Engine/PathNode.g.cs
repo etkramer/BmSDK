@@ -71,7 +71,7 @@ public partial class PathNode : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDebugAbbrev
     /// </summary>
-    public unsafe BmSDK.FString GetDebugAbbrev()
+    public unsafe override BmSDK.FString GetDebugAbbrev()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PathNode.GetDebugAbbrev", true);
         byte* paramsPtr = stackalloc byte[12];

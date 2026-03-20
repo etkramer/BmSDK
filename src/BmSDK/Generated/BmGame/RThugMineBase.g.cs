@@ -66,7 +66,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: MineSafeReaction
     /// </summary>
-    public unsafe void MineSafeReaction(BmSDK.BmGame.RPawnVillain Villain)
+    public unsafe virtual void MineSafeReaction(BmSDK.BmGame.RPawnVillain Villain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.MineSafeReaction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: OverrideAkComponentDefaults
     /// </summary>
-    public unsafe void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.OverrideAkComponentDefaults", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -122,7 +122,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ResetXray
     /// </summary>
-    public unsafe void ResetXray()
+    public unsafe virtual void ResetXray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.ResetXray", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: AttachTransparentStaticMesh
     /// </summary>
-    public unsafe BmSDK.Engine.StaticMeshComponent AttachTransparentStaticMesh(BmSDK.Engine.StaticMeshComponent Template, BmSDK.Engine.MaterialInterface OverrideMaterial = default)
+    public unsafe virtual BmSDK.Engine.StaticMeshComponent AttachTransparentStaticMesh(BmSDK.Engine.StaticMeshComponent Template, BmSDK.Engine.MaterialInterface OverrideMaterial = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.AttachTransparentStaticMesh", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -146,7 +146,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetDangerEffects
     /// </summary>
-    public unsafe void SetDangerEffects(float NewSpeed)
+    public unsafe virtual void SetDangerEffects(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetDangerEffects", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -158,7 +158,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetDangerEffectsNative
     /// </summary>
-    public unsafe void SetDangerEffectsNative(float NewSpeed)
+    public unsafe virtual void SetDangerEffectsNative(float NewSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetDangerEffectsNative", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetPrimedEffects
     /// </summary>
-    public unsafe void SetPrimedEffects()
+    public unsafe virtual void SetPrimedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetPrimedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -195,7 +195,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetDisarmedEffects
     /// </summary>
-    public unsafe void SetDisarmedEffects()
+    public unsafe virtual void SetDisarmedEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetDisarmedEffects", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -213,7 +213,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: UpdateRiddlerProximityTimers
     /// </summary>
-    public unsafe void UpdateRiddlerProximityTimers(float DeltaTime)
+    public unsafe virtual void UpdateRiddlerProximityTimers(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.UpdateRiddlerProximityTimers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -232,7 +232,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: UpdateProximityTimers
     /// </summary>
-    public unsafe void UpdateProximityTimers(float DeltaTime, bool bCheckThugs)
+    public unsafe virtual void UpdateProximityTimers(float DeltaTime, bool bCheckThugs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.UpdateProximityTimers", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -252,7 +252,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Disarm
     /// </summary>
-    public unsafe void Disarm()
+    public unsafe virtual void Disarm()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.Disarm", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -263,7 +263,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: ExplodeFx
     /// </summary>
-    public unsafe void ExplodeFx()
+    public unsafe virtual void ExplodeFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.ExplodeFx", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -274,7 +274,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: DoDamage
     /// </summary>
-    public unsafe void DoDamage(bool bByJammerGadget)
+    public unsafe virtual void DoDamage(bool bByJammerGadget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.DoDamage", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -286,7 +286,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: BlowUp
     /// </summary>
-    public unsafe void BlowUp(bool bByJammerGadget = default)
+    public unsafe virtual void BlowUp(bool bByJammerGadget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.BlowUp", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -298,7 +298,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Kill
     /// </summary>
-    public unsafe void Kill()
+    public unsafe virtual void Kill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.Kill", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -331,7 +331,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: StopTick
     /// </summary>
-    public unsafe void StopTick()
+    public unsafe virtual void StopTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.StopTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -342,7 +342,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: RegisterMine
     /// </summary>
-    public unsafe void RegisterMine()
+    public unsafe virtual void RegisterMine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.RegisterMine", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -353,7 +353,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SilentDestroy
     /// </summary>
-    public unsafe void SilentDestroy()
+    public unsafe virtual void SilentDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SilentDestroy", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -364,7 +364,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: SetInThermalMode
     /// </summary>
-    public unsafe void SetInThermalMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInThermalMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.SetInThermalMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -377,7 +377,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -388,7 +388,7 @@ public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.BmGame.RXrayInter
     /// <summary>
     /// Function: PlayerIsRunning
     /// </summary>
-    public unsafe bool PlayerIsRunning()
+    public unsafe virtual bool PlayerIsRunning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RThugMineBase.PlayerIsRunning", true);
         byte* paramsPtr = stackalloc byte[12];

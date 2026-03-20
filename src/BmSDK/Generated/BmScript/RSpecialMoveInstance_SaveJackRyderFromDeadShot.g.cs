@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_SaveJackRyderFromDeadShot : BmSDK.BmGa
     /// <summary>
     /// Function: SniperRifleFired
     /// </summary>
-    public unsafe void SniperRifleFired()
+    public unsafe virtual void SniperRifleFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SaveJackRyderFromDeadShot.SniperRifleFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_SaveJackRyderFromDeadShot : BmSDK.BmGa
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SaveJackRyderFromDeadShot.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_SaveJackRyderFromDeadShot : BmSDK.BmGa
     /// <summary>
     /// Function: SetKillSeqAct
     /// </summary>
-    public unsafe void SetKillSeqAct(BmSDK.BmScript.RSeqAct_DeadShotKillingJackRyder Seq)
+    public unsafe virtual void SetKillSeqAct(BmSDK.BmScript.RSeqAct_DeadShotKillingJackRyder Seq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SaveJackRyderFromDeadShot.SetKillSeqAct", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RSpecialMoveInstance_SaveJackRyderFromDeadShot : BmSDK.BmGa
     /// <summary>
     /// Function: SetSaveSeqAct
     /// </summary>
-    public unsafe void SetSaveSeqAct(BmSDK.BmScript.RSeqAct_DeadShotJackRyder Seq)
+    public unsafe virtual void SetSaveSeqAct(BmSDK.BmScript.RSeqAct_DeadShotJackRyder Seq)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_SaveJackRyderFromDeadShot.SetSaveSeqAct", true);
         byte* paramsPtr = stackalloc byte[4];

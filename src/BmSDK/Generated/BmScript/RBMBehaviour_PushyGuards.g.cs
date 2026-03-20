@@ -47,7 +47,7 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: PushBatmanNotify
     /// </summary>
-    public unsafe void PushBatmanNotify()
+    public unsafe virtual void PushBatmanNotify()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PushyGuards.PushBatmanNotify", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PushyGuards.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PushyGuards.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: PlayBatmanPushAnim
     /// </summary>
-    public unsafe void PlayBatmanPushAnim()
+    public unsafe virtual void PlayBatmanPushAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PushyGuards.PlayBatmanPushAnim", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_PushyGuards : BmSDK.BmGame.RBMBehaviour, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_PushyGuards.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

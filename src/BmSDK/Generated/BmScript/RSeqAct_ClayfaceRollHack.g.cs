@@ -47,7 +47,7 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClayfaceRollHack.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: IsEvading
     /// </summary>
-    public unsafe bool IsEvading()
+    public unsafe virtual bool IsEvading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClayfaceRollHack.IsEvading", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: TooClose
     /// </summary>
-    public unsafe bool TooClose()
+    public unsafe virtual bool TooClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClayfaceRollHack.TooClose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: RollAway
     /// </summary>
-    public unsafe void RollAway()
+    public unsafe virtual void RollAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClayfaceRollHack.RollAway", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -92,7 +92,7 @@ public partial class RSeqAct_ClayfaceRollHack : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClayfaceRollHack.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

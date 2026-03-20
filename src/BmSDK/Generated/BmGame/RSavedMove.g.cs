@@ -49,7 +49,7 @@ public partial class RSavedMove : BmSDK.Engine.SavedMove, BmSDK.IGameObject
     /// <summary>
     /// Function: CanCombineWith
     /// </summary>
-    public unsafe bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
+    public unsafe override bool CanCombineWith(BmSDK.Engine.SavedMove NewMove, BmSDK.Engine.Pawn inPawn, float MaxDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSavedMove.CanCombineWith", true);
         byte* paramsPtr = stackalloc byte[20];

@@ -36,7 +36,7 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     /// <summary>
     /// Function: NotifyFinishedOpen
     /// </summary>
-    public unsafe void NotifyFinishedOpen()
+    public unsafe virtual void NotifyFinishedOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_Mover.NotifyFinishedOpen", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -47,7 +47,7 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     /// <summary>
     /// Function: NotifyDetached
     /// </summary>
-    public unsafe void NotifyDetached(BmSDK.Engine.Actor Other)
+    public unsafe virtual void NotifyDetached(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_Mover.NotifyDetached", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     /// <summary>
     /// Function: NotifyAttached
     /// </summary>
-    public unsafe void NotifyAttached(BmSDK.Engine.Actor Other)
+    public unsafe virtual void NotifyAttached(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_Mover.NotifyAttached", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -71,7 +71,7 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     /// <summary>
     /// Function: NotifyEncroachingOn
     /// </summary>
-    public unsafe void NotifyEncroachingOn(BmSDK.Engine.Actor Hit)
+    public unsafe virtual void NotifyEncroachingOn(BmSDK.Engine.Actor Hit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_Mover.NotifyEncroachingOn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class SeqEvent_Mover : BmSDK.Engine.SequenceEvent, BmSDK.IGameObj
     /// <summary>
     /// Function: RegisterEvent
     /// </summary>
-    public unsafe void RegisterEvent()
+    public unsafe override void RegisterEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqEvent_Mover.RegisterEvent", true);
         byte* paramsPtr = stackalloc byte[4];

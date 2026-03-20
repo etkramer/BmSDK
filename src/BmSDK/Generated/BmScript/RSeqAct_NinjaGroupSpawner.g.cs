@@ -47,7 +47,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: FindAndRemoveNinjas
     /// </summary>
-    public unsafe void FindAndRemoveNinjas()
+    public unsafe virtual void FindAndRemoveNinjas()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.FindAndRemoveNinjas", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: SpawnPawns
     /// </summary>
-    public unsafe void SpawnPawns()
+    public unsafe virtual void SpawnPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.SpawnPawns", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -81,7 +81,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: SortSpawnPoints
     /// </summary>
-    public unsafe void SortSpawnPoints()
+    public unsafe virtual void SortSpawnPoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.SortSpawnPoints", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -92,7 +92,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: IsInFront
     /// </summary>
-    public unsafe bool IsInFront(BmSDK.BmGame.RPlayerController RPC, int Index)
+    public unsafe virtual bool IsInFront(BmSDK.BmGame.RPlayerController RPC, int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.IsInFront", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -105,7 +105,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: ClearDeadPawns
     /// </summary>
-    public unsafe void ClearDeadPawns()
+    public unsafe virtual void ClearDeadPawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.ClearDeadPawns", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: IsOffScreen
     /// </summary>
-    public unsafe bool IsOffScreen(BmSDK.BmGame.RPawn Pawn)
+    public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RPawn Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RSeqAct_NinjaGroupSpawner : BmSDK.BmGame.RSeqAct_CombatSpaw
     /// <summary>
     /// Function: UpdateAlivePawns
     /// </summary>
-    public unsafe void UpdateAlivePawns()
+    public unsafe virtual void UpdateAlivePawns()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaGroupSpawner.UpdateAlivePawns", true);
         byte* paramsPtr = stackalloc byte[4];

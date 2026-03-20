@@ -71,7 +71,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe override bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -83,7 +83,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StopRinging
     /// </summary>
-    public unsafe void StopRinging()
+    public unsafe virtual void StopRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.StopRinging", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: StartRinging
     /// </summary>
-    public unsafe void StartRinging()
+    public unsafe virtual void StartRinging()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.StartRinging", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.Interact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe override bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe override BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -152,7 +152,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ShouldShowCombatPrompt
     /// </summary>
-    public unsafe bool ShouldShowCombatPrompt()
+    public unsafe virtual bool ShouldShowCombatPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.ShouldShowCombatPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: notifyTriggerVolumeTouch
     /// </summary>
-    public unsafe void notifyTriggerVolumeTouch()
+    public unsafe virtual void notifyTriggerVolumeTouch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.notifyTriggerVolumeTouch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetDrawDebug
     /// </summary>
-    public unsafe void SetDrawDebug(bool Param)
+    public unsafe virtual void SetDrawDebug(bool Param)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.SetDrawDebug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -197,7 +197,7 @@ public partial class RZsaszPhone : BmSDK.BmGame.RZsaszPhoneBase, BmSDK.IGameObje
     /// <summary>
     /// Function: RegisterManager
     /// </summary>
-    public unsafe void RegisterManager(BmSDK.BmScript.RSeqAct_ZsaszPhoneManager inManager)
+    public unsafe virtual void RegisterManager(BmSDK.BmScript.RSeqAct_ZsaszPhoneManager inManager)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhone.RegisterManager", true);
         byte* paramsPtr = stackalloc byte[4];

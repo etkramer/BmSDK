@@ -71,7 +71,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: DamageCollisionBetween
     /// </summary>
-    public unsafe void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
+    public unsafe override void DamageCollisionBetween(BmSDK.BmGame.RPawnCombat Pawn1, BmSDK.BmGame.RPawnCombat Pawn2, System.Numerics.Vector3 DamageDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.DamageCollisionBetween", true);
         byte* paramsPtr = stackalloc byte[264];
@@ -107,7 +107,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: EnableRedirect
     /// </summary>
-    public unsafe void EnableRedirect()
+    public unsafe virtual void EnableRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.EnableRedirect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: StartShockwave
     /// </summary>
-    public unsafe void StartShockwave()
+    public unsafe virtual void StartShockwave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.StartShockwave", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -129,7 +129,7 @@ public partial class RCombatMove_VenomShockwaveAttack : BmSDK.BmGame.RCombatMove
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_VenomShockwaveAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

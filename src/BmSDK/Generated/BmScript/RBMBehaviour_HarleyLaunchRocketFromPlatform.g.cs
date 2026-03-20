@@ -47,7 +47,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: AimWithOverlay
     /// </summary>
-    public unsafe void AimWithOverlay()
+    public unsafe virtual void AimWithOverlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.AimWithOverlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: IsBMTooClose
     /// </summary>
-    public unsafe bool IsBMTooClose()
+    public unsafe virtual bool IsBMTooClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.IsBMTooClose", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: OnExitBehaviourCalled
     /// </summary>
-    public unsafe void OnExitBehaviourCalled()
+    public unsafe override void OnExitBehaviourCalled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.OnExitBehaviourCalled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_HarleyLaunchRocketFromPlatform : BmSDK.BmGame.
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_HarleyLaunchRocketFromPlatform.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];

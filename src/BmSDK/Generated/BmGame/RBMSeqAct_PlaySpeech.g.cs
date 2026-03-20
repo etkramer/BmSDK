@@ -42,7 +42,7 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
     /// <summary>
     /// Function: CueAborted
     /// </summary>
-    public unsafe void CueAborted()
+    public unsafe override void CueAborted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_PlaySpeech.CueAborted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
     /// <summary>
     /// Function: CueFinished
     /// </summary>
-    public unsafe void CueFinished()
+    public unsafe override void CueFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_PlaySpeech.CueFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -64,7 +64,7 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_PlaySpeech.Deactivated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -75,7 +75,7 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_PlaySpeech.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -86,7 +86,7 @@ public partial class RBMSeqAct_PlaySpeech : BmSDK.BmGame.RSeqAct_PlaySpeechBase,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMSeqAct_PlaySpeech.Update", true);
         byte* paramsPtr = stackalloc byte[8];

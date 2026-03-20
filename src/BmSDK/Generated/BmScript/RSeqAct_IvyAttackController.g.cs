@@ -47,7 +47,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.Update", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -59,7 +59,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: RemoveDeadPods
     /// </summary>
-    public unsafe void RemoveDeadPods()
+    public unsafe virtual void RemoveDeadPods()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.RemoveDeadPods", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: KeepInView
     /// </summary>
-    public unsafe void KeepInView(BmSDK.Engine.Actor Pawn, float MaxYaw = default)
+    public unsafe virtual void KeepInView(BmSDK.Engine.Actor Pawn, float MaxYaw = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.KeepInView", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -83,7 +83,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: UpdateKeepInViewTarget
     /// </summary>
-    public unsafe void UpdateKeepInViewTarget()
+    public unsafe virtual void UpdateKeepInViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.UpdateKeepInViewTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: InputRightStick
     /// </summary>
-    public unsafe System.Numerics.Vector3 InputRightStick()
+    public unsafe virtual System.Numerics.Vector3 InputRightStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.InputRightStick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -105,7 +105,7 @@ public partial class RSeqAct_IvyAttackController : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: SetVillainsTaunting
     /// </summary>
-    public unsafe void SetVillainsTaunting()
+    public unsafe virtual void SetVillainsTaunting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IvyAttackController.SetVillainsTaunting", true);
         byte* paramsPtr = stackalloc byte[16];

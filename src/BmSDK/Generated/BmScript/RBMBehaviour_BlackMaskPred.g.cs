@@ -47,7 +47,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: LostSightOfBM
     /// </summary>
-    public unsafe void LostSightOfBM()
+    public unsafe virtual void LostSightOfBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.LostSightOfBM", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: SpottedBM
     /// </summary>
-    public unsafe void SpottedBM()
+    public unsafe virtual void SpottedBM()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.SpottedBM", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: CanBlackMaskCurrentlySeeBatman
     /// </summary>
-    public unsafe bool CanBlackMaskCurrentlySeeBatman(float SeeDist)
+    public unsafe virtual bool CanBlackMaskCurrentlySeeBatman(float SeeDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.CanBlackMaskCurrentlySeeBatman", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: PickFromRange
     /// </summary>
-    public unsafe float PickFromRange(float rangeMin, float rangeMax)
+    public unsafe virtual float PickFromRange(float rangeMin, float rangeMax)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.PickFromRange", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: BlackMaskPlayAnim
     /// </summary>
-    public unsafe void BlackMaskPlayAnim(BmSDK.FName transitionAnimName, BmSDK.FName IdleAnimName, float startProportion = default)
+    public unsafe virtual void BlackMaskPlayAnim(BmSDK.FName transitionAnimName, BmSDK.FName IdleAnimName, float startProportion = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.BlackMaskPlayAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -108,7 +108,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBMBehaviour_BlackMaskPred : BmSDK.BmGame.RBMBehaviour, BmS
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_BlackMaskPred.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

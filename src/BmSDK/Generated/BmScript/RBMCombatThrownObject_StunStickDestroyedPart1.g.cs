@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent()
+    public unsafe override void DoEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.DoEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: TurnOffLight
     /// </summary>
-    public unsafe void TurnOffLight()
+    public unsafe virtual void TurnOffLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.TurnOffLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: TurnOnLight
     /// </summary>
-    public unsafe void TurnOnLight()
+    public unsafe virtual void TurnOnLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.TurnOnLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe virtual void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe virtual void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RBMCombatThrownObject_StunStickDestroyedPart1 : BmSDK.BmGam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_StunStickDestroyedPart1.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

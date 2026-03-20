@@ -36,7 +36,7 @@ public partial class RSeqAct_SetPhysicsVelocity : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetPhysicsVelocity.Activated", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -47,7 +47,7 @@ public partial class RSeqAct_SetPhysicsVelocity : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetActorVelocity
     /// </summary>
-    public unsafe void SetActorVelocity(BmSDK.Engine.PrimitiveComponent PC)
+    public unsafe virtual void SetActorVelocity(BmSDK.Engine.PrimitiveComponent PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetPhysicsVelocity.SetActorVelocity", true);
         byte* paramsPtr = stackalloc byte[24];

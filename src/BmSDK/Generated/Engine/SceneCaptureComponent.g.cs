@@ -31,7 +31,7 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bEnable)
+    public unsafe virtual void SetEnabled(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -50,7 +50,7 @@ public partial class SceneCaptureComponent : BmSDK.Engine.ActorComponent, BmSDK.
     /// <summary>
     /// Function: SetFrameRate
     /// </summary>
-    public unsafe void SetFrameRate(float NewFrameRate)
+    public unsafe virtual void SetFrameRate(float NewFrameRate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCaptureComponent.SetFrameRate", true);
         byte* paramsPtr = stackalloc byte[4];

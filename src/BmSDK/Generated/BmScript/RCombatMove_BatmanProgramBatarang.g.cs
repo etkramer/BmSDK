@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ShowBackarang
     /// </summary>
-    public unsafe void ShowBackarang()
+    public unsafe virtual void ShowBackarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.ShowBackarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ShowScreen
     /// </summary>
-    public unsafe void ShowScreen()
+    public unsafe virtual void ShowScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.ShowScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: SwordRelease
     /// </summary>
-    public unsafe void SwordRelease()
+    public unsafe virtual void SwordRelease()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.SwordRelease", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: LetGoSword
     /// </summary>
-    public unsafe void LetGoSword()
+    public unsafe virtual void LetGoSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.LetGoSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: PlayCamera
     /// </summary>
-    public unsafe void PlayCamera()
+    public unsafe virtual void PlayCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.PlayCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.ExitMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -137,7 +137,7 @@ public partial class RCombatMove_BatmanProgramBatarang : BmSDK.BmGame.RCombatMov
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanProgramBatarang.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

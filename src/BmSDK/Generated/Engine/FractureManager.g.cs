@@ -71,7 +71,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ReturnPartActor
     /// </summary>
-    public unsafe void ReturnPartActor(BmSDK.Engine.FracturedStaticMeshPart Part)
+    public unsafe virtual void ReturnPartActor(BmSDK.Engine.FracturedStaticMeshPart Part)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.ReturnPartActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnPartActor
     /// </summary>
-    public unsafe BmSDK.Engine.FracturedStaticMeshPart SpawnPartActor(BmSDK.Engine.FracturedStaticMeshActor Parent, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe virtual BmSDK.Engine.FracturedStaticMeshPart SpawnPartActor(BmSDK.Engine.FracturedStaticMeshActor Parent, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.SpawnPartActor", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -109,7 +109,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFSMPart
     /// </summary>
-    public unsafe BmSDK.Engine.FracturedStaticMeshPart GetFSMPart(BmSDK.Engine.FracturedStaticMeshActor Parent, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe virtual BmSDK.Engine.FracturedStaticMeshPart GetFSMPart(BmSDK.Engine.FracturedStaticMeshActor Parent, System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.GetFSMPart", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -130,7 +130,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetPoolVisibilityForParent
     /// </summary>
-    public unsafe void ResetPoolVisibilityForParent(BmSDK.Engine.FracturedStaticMeshActor Parent)
+    public unsafe virtual void ResetPoolVisibilityForParent(BmSDK.Engine.FracturedStaticMeshActor Parent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.ResetPoolVisibilityForParent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetPoolVisibility
     /// </summary>
-    public unsafe void ResetPoolVisibility()
+    public unsafe virtual void ResetPoolVisibility()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.ResetPoolVisibility", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateFSMParts
     /// </summary>
-    public unsafe void CreateFSMParts()
+    public unsafe virtual void CreateFSMParts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.CreateFSMParts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CleanUpFSMParts
     /// </summary>
-    public unsafe void CleanUpFSMParts()
+    public unsafe virtual void CleanUpFSMParts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.CleanUpFSMParts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -218,7 +218,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFSMFractureCullDistanceScale
     /// </summary>
-    public unsafe float GetFSMFractureCullDistanceScale()
+    public unsafe virtual float GetFSMFractureCullDistanceScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.GetFSMFractureCullDistanceScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -236,7 +236,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFSMRadialSpawnChanceScale
     /// </summary>
-    public unsafe float GetFSMRadialSpawnChanceScale()
+    public unsafe virtual float GetFSMRadialSpawnChanceScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.GetFSMRadialSpawnChanceScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -254,7 +254,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFSMDirectSpawnChanceScale
     /// </summary>
-    public unsafe float GetFSMDirectSpawnChanceScale()
+    public unsafe virtual float GetFSMDirectSpawnChanceScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.GetFSMDirectSpawnChanceScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNumFSMPartsScale
     /// </summary>
-    public unsafe float GetNumFSMPartsScale()
+    public unsafe virtual float GetNumFSMPartsScale()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.GetNumFSMPartsScale", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -290,7 +290,7 @@ public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnChunkDestroyEffect
     /// </summary>
-    public unsafe void SpawnChunkDestroyEffect(BmSDK.Engine.ParticleSystem Effect, BmSDK.GameObject.FBox ChunkBox, System.Numerics.Vector3 ChunkDir, float Scale)
+    public unsafe virtual void SpawnChunkDestroyEffect(BmSDK.Engine.ParticleSystem Effect, BmSDK.GameObject.FBox ChunkBox, System.Numerics.Vector3 ChunkDir, float Scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.FractureManager.SpawnChunkDestroyEffect", true);
         byte* paramsPtr = stackalloc byte[64];

@@ -71,7 +71,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: GetRepelSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetRepelSound()
+    public unsafe override BmSDK.Engine.AkEvent GetRepelSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.GetRepelSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: CreateBasicWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateBasicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.TArray<BmSDK.Engine.AnimSet> AnimSets, BmSDK.Engine.AnimSet TurnAnimSet = default)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateBasicWeaponConfig(BmSDK.GameObject NewOwner, BmSDK.TArray<BmSDK.Engine.AnimSet> AnimSets, BmSDK.Engine.AnimSet TurnAnimSet = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.CreateBasicWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2752];
@@ -96,7 +96,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: StopFreezeRay
     /// </summary>
-    public unsafe void StopFreezeRay()
+    public unsafe override void StopFreezeRay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.StopFreezeRay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: FreezeRayShot
     /// </summary>
-    public unsafe void FreezeRayShot()
+    public unsafe override void FreezeRayShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.FreezeRayShot", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman()
+    public unsafe override bool CanSeeBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -140,7 +140,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: PunchedEvent
     /// </summary>
-    public unsafe void PunchedEvent()
+    public unsafe override void PunchedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.PunchedEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: RotateGun
     /// </summary>
-    public unsafe void RotateGun()
+    public unsafe override void RotateGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.RotateGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: AttachProps
     /// </summary>
-    public unsafe void AttachProps()
+    public unsafe override void AttachProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.AttachProps", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -173,7 +173,7 @@ public partial class RPawnBossPenguinIceberg : BmSDK.BmGame.RPawnBossPenguinIceb
     /// <summary>
     /// Function: AddPawnProps
     /// </summary>
-    public unsafe void AddPawnProps()
+    public unsafe override void AddPawnProps()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnBossPenguinIceberg.AddPawnProps", true);
         byte* paramsPtr = stackalloc byte[124];

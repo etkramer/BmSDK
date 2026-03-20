@@ -36,7 +36,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: EndCam
     /// </summary>
-    public unsafe void EndCam()
+    public unsafe virtual void EndCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.EndCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CanSkip
     /// </summary>
-    public unsafe bool CanSkip()
+    public unsafe virtual bool CanSkip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.CanSkip", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseCamEffects
     /// </summary>
-    public unsafe void InitialiseCamEffects()
+    public unsafe virtual void InitialiseCamEffects()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.InitialiseCamEffects", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -120,7 +120,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe virtual void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe bool Initialise(BmSDK.BmGame.RBMCutsceneBase NewCutscene)
+    public unsafe virtual bool Initialise(BmSDK.BmGame.RBMCutsceneBase NewCutscene)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnSkip
     /// </summary>
-    public unsafe void OnSkip()
+    public unsafe virtual void OnSkip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.OnSkip", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Skip
     /// </summary>
-    public unsafe void Skip()
+    public unsafe virtual void Skip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.Skip", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetViewTarget
     /// </summary>
-    public unsafe void ResetViewTarget()
+    public unsafe virtual void ResetViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.ResetViewTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetViewTarget
     /// </summary>
-    public unsafe void SetViewTarget()
+    public unsafe virtual void SetViewTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.SetViewTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -210,7 +210,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe virtual bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -222,7 +222,7 @@ public partial class RBMCutscene_Cam : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe bool OnActivate()
+    public unsafe virtual bool OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutscene_Cam.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RSeqAct_CheckForHostageTaker : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CheckForHostageTaker.Activated", true);
         byte* paramsPtr = stackalloc byte[12];

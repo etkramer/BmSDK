@@ -47,7 +47,7 @@ public partial class RSeqEvent_BreakablePropDamage : BmSDK.Engine.SequenceEvent,
     /// <summary>
     /// Function: HandleDamage
     /// </summary>
-    public unsafe void HandleDamage(BmSDK.Engine.Actor InOriginator, BmSDK.Engine.Actor InInstigator, int DmgStage)
+    public unsafe virtual void HandleDamage(BmSDK.Engine.Actor InOriginator, BmSDK.Engine.Actor InInstigator, int DmgStage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_BreakablePropDamage.HandleDamage", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RSeqEvent_BreakablePropDamage : BmSDK.Engine.SequenceEvent,
     /// <summary>
     /// Function: IsValidDamageStage
     /// </summary>
-    public unsafe bool IsValidDamageStage(int DmgStage)
+    public unsafe virtual bool IsValidDamageStage(int DmgStage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_BreakablePropDamage.IsValidDamageStage", true);
         byte* paramsPtr = stackalloc byte[8];

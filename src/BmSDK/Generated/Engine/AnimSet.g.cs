@@ -36,7 +36,7 @@ public partial class AnimSet : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindAnimSequence
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName SequenceName)
+    public unsafe virtual BmSDK.Engine.AnimSequence FindAnimSequence(BmSDK.FName SequenceName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSet.FindAnimSequence", true);
         byte* paramsPtr = stackalloc byte[12];

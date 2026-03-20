@@ -47,7 +47,7 @@ public partial class RSeqAct_SwitchPlayerCharacter : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: RestartPlayer
     /// </summary>
-    public unsafe void RestartPlayer(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void RestartPlayer(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SwitchPlayerCharacter.RestartPlayer", true);
         byte* paramsPtr = stackalloc byte[12];

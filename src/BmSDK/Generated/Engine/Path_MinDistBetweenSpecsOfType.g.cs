@@ -36,7 +36,7 @@ public partial class Path_MinDistBetweenSpecsOfType : BmSDK.Engine.PathConstrain
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe override void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Path_MinDistBetweenSpecsOfType.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

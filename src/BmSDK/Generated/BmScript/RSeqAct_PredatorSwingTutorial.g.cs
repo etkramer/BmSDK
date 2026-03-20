@@ -36,7 +36,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: HelpTextTurnedOff
     /// </summary>
-    public unsafe void HelpTextTurnedOff()
+    public unsafe override void HelpTextTurnedOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.HelpTextTurnedOff", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: ActionPerformed
     /// </summary>
-    public unsafe void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
+    public unsafe override void ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.ActionPerformed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: CanUseGrapple
     /// </summary>
-    public unsafe bool CanUseGrapple()
+    public unsafe override bool CanUseGrapple()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.CanUseGrapple", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.Activated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RSeqAct_PredatorSwingTutorial : BmSDK.BmGame.RSeqAct_HelpTe
     /// <summary>
     /// Function: GetLine
     /// </summary>
-    public unsafe BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
+    public unsafe override BmSDK.BmGame.RHUDPrompt.FHelpLine GetLine(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PredatorSwingTutorial.GetLine", true);
         byte* paramsPtr = stackalloc byte[48];

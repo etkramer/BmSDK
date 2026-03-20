@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimInfo_Yaw
     /// </summary>
-    public unsafe float GetAnimInfo_Yaw()
+    public unsafe override float GetAnimInfo_Yaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetAnimInfo_Yaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimInfo_AimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimInfo_Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_Location()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_Location()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetAnimInfo_Location", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetAnimInfo_Name
     /// </summary>
-    public unsafe BmSDK.FName GetAnimInfo_Name()
+    public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: DamageNearbyThugs
     /// </summary>
-    public unsafe void DamageNearbyThugs()
+    public unsafe virtual void DamageNearbyThugs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.DamageNearbyThugs", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -126,7 +126,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: DamagePawn
     /// </summary>
-    public unsafe void DamagePawn(BmSDK.BmGame.RPawnCombat TargetPawn, float DamageAmount)
+    public unsafe virtual void DamagePawn(BmSDK.BmGame.RPawnCombat TargetPawn, float DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.DamagePawn", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -139,7 +139,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate(BmSDK.Engine.Controller InstigatedBy)
+    public unsafe virtual void Detonate(BmSDK.Engine.Controller InstigatedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.Detonate", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -169,7 +169,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat NewTarget = default, bool bUsedDuringTaunt = default)
+    public unsafe override void UsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat NewTarget = default, bool bUsedDuringTaunt = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -183,7 +183,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: CanBeUsedByPawn
     /// </summary>
-    public unsafe bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat TargetPawn, bool bTaunting)
+    public unsafe override bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat TargetPawn, bool bTaunting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.CanBeUsedByPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -197,7 +197,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -208,7 +208,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -230,7 +230,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -255,7 +255,7 @@ public partial class RBMCombatPoint_Explosive : BmSDK.BmGame.RBMCombatPoint_Envi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_Explosive.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

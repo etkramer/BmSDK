@@ -36,7 +36,7 @@ public partial class RBMSeqEvent_FleePointActivated : BmSDK.BmGame.RBMSeqEvent_B
     /// <summary>
     /// Function: AttachedToWanderingBehaviour
     /// </summary>
-    public unsafe bool AttachedToWanderingBehaviour()
+    public unsafe virtual bool AttachedToWanderingBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMSeqEvent_FleePointActivated.AttachedToWanderingBehaviour", true);
         byte* paramsPtr = stackalloc byte[8];

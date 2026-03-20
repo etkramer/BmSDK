@@ -71,7 +71,7 @@ public partial class RBMAIController_Lunatic : BmSDK.BmGame.RBMAIController, BmS
     /// <summary>
     /// Function: CalcVisibilityFor
     /// </summary>
-    public unsafe BmSDK.BmGame.AlertInstance.VisibilityCategory CalcVisibilityFor(BmSDK.Engine.Actor A, System.Numerics.Vector3 CheckLocation = default, float CanSeePercent = default, System.Numerics.Vector3 LookDir = default)
+    public unsafe override BmSDK.BmGame.AlertInstance.VisibilityCategory CalcVisibilityFor(BmSDK.Engine.Actor A, System.Numerics.Vector3 CheckLocation = default, float CanSeePercent = default, System.Numerics.Vector3 LookDir = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIController_Lunatic.CalcVisibilityFor", true);
         byte* paramsPtr = stackalloc byte[40];

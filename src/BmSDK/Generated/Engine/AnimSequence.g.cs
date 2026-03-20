@@ -36,7 +36,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ToString
     /// </summary>
-    public unsafe BmSDK.FString ToString(bool Verbose = default)
+    public unsafe virtual BmSDK.FString ToString(bool Verbose = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.ToString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -55,7 +55,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRealTimeLength
     /// </summary>
-    public unsafe float GetRealTimeLength()
+    public unsafe virtual float GetRealTimeLength()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetRealTimeLength", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNormalizedTimeFromFrameIndex
     /// </summary>
-    public unsafe float GetNormalizedTimeFromFrameIndex(int FrameIndex)
+    public unsafe virtual float GetNormalizedTimeFromFrameIndex(int FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromFrameIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -92,7 +92,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAnimTimeFromFrameIndex
     /// </summary>
-    public unsafe float GetAnimTimeFromFrameIndex(int FrameIndex)
+    public unsafe virtual float GetAnimTimeFromFrameIndex(int FrameIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetAnimTimeFromFrameIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -111,7 +111,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNormalizedLengthFromAnimLength
     /// </summary>
-    public unsafe float GetNormalizedLengthFromAnimLength(float AnimLength)
+    public unsafe virtual float GetNormalizedLengthFromAnimLength(float AnimLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedLengthFromAnimLength", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNormalizedTimeFromAnimTime
     /// </summary>
-    public unsafe float GetNormalizedTimeFromAnimTime(float AnimTime)
+    public unsafe virtual float GetNormalizedTimeFromAnimTime(float AnimTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNormalizedTimeFromAnimTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -149,7 +149,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRealTimeFromNormalizedTime
     /// </summary>
-    public unsafe float GetRealTimeFromNormalizedTime(float NormalizedTime)
+    public unsafe virtual float GetRealTimeFromNormalizedTime(float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetRealTimeFromNormalizedTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -168,7 +168,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAnimTimeFromNormalizedTime
     /// </summary>
-    public unsafe float GetAnimTimeFromNormalizedTime(float NormalizedTime)
+    public unsafe virtual float GetAnimTimeFromNormalizedTime(float NormalizedTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetAnimTimeFromNormalizedTime", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -187,7 +187,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetNotifyTimeByClass
     /// </summary>
-    public unsafe float GetNotifyTimeByClass(BmSDK.Class NotifyClass, float PlayRate, float StartPosition, out BmSDK.Engine.AnimNotify out_Notify, out float out_Duration)
+    public unsafe virtual float GetNotifyTimeByClass(BmSDK.Class NotifyClass, float PlayRate, float StartPosition, out BmSDK.Engine.AnimNotify out_Notify, out float out_Duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimSequence.GetNotifyTimeByClass", true);
         byte* paramsPtr = stackalloc byte[24];

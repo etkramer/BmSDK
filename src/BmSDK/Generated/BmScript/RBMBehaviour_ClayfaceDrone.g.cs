@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: CanCounterEnd
     /// </summary>
-    public unsafe void CanCounterEnd()
+    public unsafe virtual void CanCounterEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.CanCounterEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: CanCounterStart
     /// </summary>
-    public unsafe void CanCounterStart()
+    public unsafe virtual void CanCounterStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.CanCounterStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: StopMovement
     /// </summary>
-    public unsafe void StopMovement()
+    public unsafe virtual void StopMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.StopMovement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: MoveToBats
     /// </summary>
-    public unsafe void MoveToBats()
+    public unsafe virtual void MoveToBats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.MoveToBats", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: Attack
     /// </summary>
-    public unsafe void Attack()
+    public unsafe virtual void Attack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.Attack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_ClayfaceDrone : BmSDK.BmGame.RBMBehaviour_Comb
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ClayfaceDrone.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

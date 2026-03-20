@@ -71,7 +71,7 @@ public partial class RCwStealthTakeDownStage_InvertedFromCeiling : BmSDK.BmGame.
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCwStealthTakeDownStage_InvertedFromCeiling.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[80];

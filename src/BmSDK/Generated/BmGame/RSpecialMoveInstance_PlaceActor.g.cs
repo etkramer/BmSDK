@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_PlaceActor : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// Function: PlaceActor
     /// </summary>
-    public unsafe void PlaceActor()
+    public unsafe virtual void PlaceActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceActor.PlaceActor", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_PlaceActor : BmSDK.BmGame.RSpecialMove
     /// <summary>
     /// Function: GetSpawnedOwner
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetSpawnedOwner()
+    public unsafe virtual BmSDK.Engine.Actor GetSpawnedOwner()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_PlaceActor.GetSpawnedOwner", true);
         byte* paramsPtr = stackalloc byte[4];

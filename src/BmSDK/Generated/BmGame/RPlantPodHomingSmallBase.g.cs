@@ -66,7 +66,7 @@ public partial class RPlantPodHomingSmallBase : BmSDK.Engine.SkeletalMeshActor, 
     /// <summary>
     /// Function: Kill
     /// </summary>
-    public unsafe void Kill()
+    public unsafe virtual void Kill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlantPodHomingSmallBase.Kill", true);
         byte* paramsPtr = stackalloc byte[0];

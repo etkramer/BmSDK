@@ -71,7 +71,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// <summary>
     /// Function: DamageVictim
     /// </summary>
-    public unsafe void DamageVictim(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe override void DamageVictim(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.DamageVictim", true);
         byte* paramsPtr = stackalloc byte[300];
@@ -83,7 +83,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// <summary>
     /// Function: CheckWallBase
     /// </summary>
-    public unsafe void CheckWallBase()
+    public unsafe virtual void CheckWallBase()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.CheckWallBase", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RExplosiveGooMineRbDLC : BmSDK.BmScript.RExplosiveGooMineRb
     /// <summary>
     /// Function: Explode
     /// </summary>
-    public unsafe void Explode()
+    public unsafe override void Explode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRbDLC.Explode", true);
         byte* paramsPtr = stackalloc byte[8];

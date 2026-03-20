@@ -71,7 +71,7 @@ public partial class RPredatorSpecialMovePoint : BmSDK.BmGame.RPredatorSpecialMo
     /// <summary>
     /// Function: UnLockPredatorPoint
     /// </summary>
-    public unsafe void UnLockPredatorPoint(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe override void UnLockPredatorPoint(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint.UnLockPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPredatorSpecialMovePoint : BmSDK.BmGame.RPredatorSpecialMo
     /// <summary>
     /// Function: LockPredatorPoint
     /// </summary>
-    public unsafe void LockPredatorPoint(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe override void LockPredatorPoint(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint.LockPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RPredatorSpecialMovePoint : BmSDK.BmGame.RPredatorSpecialMo
     /// <summary>
     /// Function: CanBeUsedBy
     /// </summary>
-    public unsafe bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain TestPawn)
+    public unsafe override bool CanBeUsedBy(BmSDK.BmGame.RPawnVillain TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPredatorSpecialMovePoint.CanBeUsedBy", true);
         byte* paramsPtr = stackalloc byte[8];

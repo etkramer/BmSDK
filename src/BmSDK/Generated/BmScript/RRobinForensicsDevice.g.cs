@@ -71,7 +71,7 @@ public partial class RRobinForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSD
     /// <summary>
     /// Function: RestoreMaterialsForXray
     /// </summary>
-    public unsafe void RestoreMaterialsForXray(bool force_swap = default)
+    public unsafe override void RestoreMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinForensicsDevice.RestoreMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RRobinForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSD
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe override void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinForensicsDevice.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -95,7 +95,7 @@ public partial class RRobinForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSD
     /// <summary>
     /// Function: SwapMaterialsForXray
     /// </summary>
-    public unsafe void SwapMaterialsForXray(bool force_swap = default)
+    public unsafe override void SwapMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinForensicsDevice.SwapMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RRobinForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSD
     /// <summary>
     /// Function: SetForensicsRenderType
     /// </summary>
-    public unsafe void SetForensicsRenderType(bool On)
+    public unsafe override void SetForensicsRenderType(bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRobinForensicsDevice.SetForensicsRenderType", true);
         byte* paramsPtr = stackalloc byte[8];

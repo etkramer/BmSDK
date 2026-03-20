@@ -31,7 +31,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ReplayAnim
     /// </summary>
-    public unsafe void ReplayAnim()
+    public unsafe virtual void ReplayAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.ReplayAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -49,7 +49,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StopAnim
     /// </summary>
-    public unsafe void StopAnim()
+    public unsafe virtual void StopAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.StopAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -67,7 +67,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayAnim
     /// </summary>
-    public unsafe void PlayAnim(bool bLoop = default, float Rate = default, float StartTime = default)
+    public unsafe virtual void PlayAnim(bool bLoop = default, float Rate = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.PlayAnim", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -88,7 +88,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindAnimNode
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNode FindAnimNode(BmSDK.FName InNodeName)
+    public unsafe virtual BmSDK.Engine.AnimNode FindAnimNode(BmSDK.FName InNodeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.FindAnimNode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnCeaseRelevant
     /// </summary>
-    public unsafe void OnCeaseRelevant()
+    public unsafe virtual void OnCeaseRelevant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.OnCeaseRelevant", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnBecomeRelevant
     /// </summary>
-    public unsafe void OnBecomeRelevant()
+    public unsafe virtual void OnBecomeRelevant()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.OnBecomeRelevant", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnInit
     /// </summary>
-    public unsafe void OnInit()
+    public unsafe virtual void OnInit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNode.OnInit", true);
         byte* paramsPtr = stackalloc byte[0];

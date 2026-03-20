@@ -36,7 +36,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: PublishStats
     /// </summary>
-    public unsafe void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
+    public unsafe override void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.PublishStats", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: EnemyDefeated
     /// </summary>
-    public unsafe void EnemyDefeated(BmSDK.BmGame.RPawnVillain Enemy)
+    public unsafe virtual void EnemyDefeated(BmSDK.BmGame.RPawnVillain Enemy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.EnemyDefeated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: UpdateCombo
     /// </summary>
-    public unsafe void UpdateCombo(int NewCombo)
+    public unsafe virtual void UpdateCombo(int NewCombo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.UpdateCombo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: MaxGaugeBanked
     /// </summary>
-    public unsafe void MaxGaugeBanked(int Points)
+    public unsafe virtual void MaxGaugeBanked(int Points)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.MaxGaugeBanked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -84,7 +84,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: AddTime
     /// </summary>
-    public unsafe void AddTime(int Time)
+    public unsafe virtual void AddTime(int Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.AddTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -96,7 +96,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: AddPoints
     /// </summary>
-    public unsafe void AddPoints(int Points)
+    public unsafe virtual void AddPoints(int Points)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.AddPoints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: BankedLevel
     /// </summary>
-    public unsafe void BankedLevel(int NewLevel)
+    public unsafe virtual void BankedLevel(int NewLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.BankedLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: ReachedLevel
     /// </summary>
-    public unsafe void ReachedLevel(int NewLevel)
+    public unsafe virtual void ReachedLevel(int NewLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.ReachedLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: ClearChallengeStats
     /// </summary>
-    public unsafe void ClearChallengeStats()
+    public unsafe override void ClearChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.ClearChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: OutputMoveScores
     /// </summary>
-    public unsafe void OutputMoveScores()
+    public unsafe override void OutputMoveScores()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.OutputMoveScores", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RSeqAct_PYLCStats : BmSDK.BmScript.RSeqAct_StartCombatChall
     /// <summary>
     /// Function: AddCombatMove
     /// </summary>
-    public unsafe void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
+    public unsafe override void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PYLCStats.AddCombatMove", true);
         byte* paramsPtr = stackalloc byte[12];

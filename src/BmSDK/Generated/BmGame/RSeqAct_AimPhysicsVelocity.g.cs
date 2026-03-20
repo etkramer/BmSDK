@@ -47,7 +47,7 @@ public partial class RSeqAct_AimPhysicsVelocity : BmSDK.BmGame.RSeqAct_SetPhysic
     /// <summary>
     /// Function: SetActorVelocity
     /// </summary>
-    public unsafe void SetActorVelocity(BmSDK.Engine.PrimitiveComponent PC)
+    public unsafe override void SetActorVelocity(BmSDK.Engine.PrimitiveComponent PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_AimPhysicsVelocity.SetActorVelocity", true);
         byte* paramsPtr = stackalloc byte[36];

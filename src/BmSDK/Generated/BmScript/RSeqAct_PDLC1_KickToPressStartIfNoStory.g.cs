@@ -36,7 +36,7 @@ public partial class RSeqAct_PDLC1_KickToPressStartIfNoStory : BmSDK.Engine.Sequ
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_PDLC1_KickToPressStartIfNoStory.Activated", true);
         byte* paramsPtr = stackalloc byte[5];

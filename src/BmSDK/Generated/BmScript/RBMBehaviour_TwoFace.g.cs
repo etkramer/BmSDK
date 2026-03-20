@@ -47,7 +47,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: ReceiveCombatEvent
     /// </summary>
-    public unsafe void ReceiveCombatEvent(BmSDK.BmGame.RPawnCombat EventInstigator, System.Numerics.Vector3 EventLocation, System.Numerics.Vector3 SightingLocation)
+    public unsafe virtual void ReceiveCombatEvent(BmSDK.BmGame.RPawnCombat EventInstigator, System.Numerics.Vector3 EventLocation, System.Numerics.Vector3 SightingLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.ReceiveCombatEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -73,7 +73,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: OverrideGetupStances
     /// </summary>
-    public unsafe bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
+    public unsafe override bool OverrideGetupStances(out BmSDK.FName MovementStance, out BmSDK.FName WeaponStance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.OverrideGetupStances", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -86,7 +86,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -98,7 +98,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: ScaredThug
     /// </summary>
-    public unsafe void ScaredThug(BmSDK.BmGame.RPawnCombat Thug)
+    public unsafe virtual void ScaredThug(BmSDK.BmGame.RPawnCombat Thug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.ScaredThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -110,7 +110,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: NewPredThugSpawned
     /// </summary>
-    public unsafe void NewPredThugSpawned()
+    public unsafe override void NewPredThugSpawned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.NewPredThugSpawned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: ReleaseNavHandle
     /// </summary>
-    public unsafe void ReleaseNavHandle()
+    public unsafe virtual void ReleaseNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.ReleaseNavHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: FindNextPoint
     /// </summary>
-    public unsafe void FindNextPoint()
+    public unsafe virtual void FindNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.FindNextPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: GetAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetAimAtActor()
+    public unsafe virtual BmSDK.Engine.Actor GetAimAtActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.GetAimAtActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: SetNextAimAtActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
+    public unsafe virtual BmSDK.Engine.Actor SetNextAimAtActor(bool bNewSniperPoint = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.SetNextAimAtActor", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: FindPathToCurrPoint
     /// </summary>
-    public unsafe void FindPathToCurrPoint()
+    public unsafe virtual void FindPathToCurrPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.FindPathToCurrPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: CanPlayDialogue
     /// </summary>
-    public unsafe bool CanPlayDialogue()
+    public unsafe virtual bool CanPlayDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.CanPlayDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: GetSniperPointInfo
     /// </summary>
-    public unsafe bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
+    public unsafe virtual bool GetSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.GetSniperPointInfo", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -201,7 +201,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: LostSightOfPlayer
     /// </summary>
-    public unsafe void LostSightOfPlayer()
+    public unsafe virtual void LostSightOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.LostSightOfPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -212,7 +212,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: SeenPlayer
     /// </summary>
-    public unsafe void SeenPlayer()
+    public unsafe virtual void SeenPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.SeenPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -223,7 +223,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: PlayerBumped
     /// </summary>
-    public unsafe void PlayerBumped(bool bFriendly)
+    public unsafe override void PlayerBumped(bool bFriendly)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.PlayerBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -235,7 +235,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: GlobalTick
     /// </summary>
-    public unsafe void GlobalTick(float DeltaTime)
+    public unsafe virtual void GlobalTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.GlobalTick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -247,7 +247,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: OnReceivedImpulse
     /// </summary>
-    public unsafe void OnReceivedImpulse(int ActivatedLinkID)
+    public unsafe override void OnReceivedImpulse(int ActivatedLinkID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.OnReceivedImpulse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -259,7 +259,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: Damaged
     /// </summary>
-    public unsafe void Damaged()
+    public unsafe virtual void Damaged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.Damaged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: SetNextRandAlertedPoint
     /// </summary>
-    public unsafe void SetNextRandAlertedPoint()
+    public unsafe virtual void SetNextRandAlertedPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.SetNextRandAlertedPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -281,7 +281,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: Alerted
     /// </summary>
-    public unsafe void Alerted()
+    public unsafe virtual void Alerted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.Alerted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -292,7 +292,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: GetAlertedPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RSniperPoint GetAlertedPoint()
+    public unsafe virtual BmSDK.BmGame.RSniperPoint GetAlertedPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.GetAlertedPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -303,7 +303,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -314,7 +314,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: NoPathToSniperPoint
     /// </summary>
-    public unsafe void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void NoPathToSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.NoPathToSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -326,7 +326,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: ReachedSniperPoint
     /// </summary>
-    public unsafe void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void ReachedSniperPoint(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.ReachedSniperPoint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -338,7 +338,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -349,7 +349,7 @@ public partial class RBMBehaviour_TwoFace : BmSDK.BmGame.RBMBehaviour, BmSDK.IGa
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TwoFace.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

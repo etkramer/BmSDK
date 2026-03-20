@@ -36,7 +36,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpToLog
     /// </summary>
-    public unsafe void DumpToLog()
+    public unsafe virtual void DumpToLog()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.DumpToLog", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -47,7 +47,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearAllOfType
     /// </summary>
-    public unsafe void ClearAllOfType(BmSDK.FString PurgeType)
+    public unsafe virtual void ClearAllOfType(BmSDK.FString PurgeType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.ClearAllOfType", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -59,7 +59,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasTheseFlags
     /// </summary>
-    public unsafe bool HasTheseFlags(BmSDK.BmGame.RBarkFlagBase OtherBase)
+    public unsafe virtual bool HasTheseFlags(BmSDK.BmGame.RBarkFlagBase OtherBase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.HasTheseFlags", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -78,7 +78,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetValueForType
     /// </summary>
-    public unsafe BmSDK.FString GetValueForType(BmSDK.FString TestType, int TestIndex = default)
+    public unsafe virtual BmSDK.FString GetValueForType(BmSDK.FString TestType, int TestIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.GetValueForType", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -98,7 +98,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddFlagStruct
     /// </summary>
-    public unsafe void AddFlagStruct(BmSDK.BmGame.RBarkFlagBase.FBarkFlag NewFlag)
+    public unsafe virtual void AddFlagStruct(BmSDK.BmGame.RBarkFlagBase.FBarkFlag NewFlag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.AddFlagStruct", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -110,7 +110,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AddFlag
     /// </summary>
-    public unsafe void AddFlag(BmSDK.FString Type, BmSDK.FString Value)
+    public unsafe virtual void AddFlag(BmSDK.FString Type, BmSDK.FString Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBarkFlagBase.AddFlag", true);
         byte* paramsPtr = stackalloc byte[28];

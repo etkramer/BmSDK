@@ -71,7 +71,7 @@ public partial class RDeadShotSubstationDoor : BmSDK.BmGame.RRemoveableGrate, Bm
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDeadShotSubstationDoor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];

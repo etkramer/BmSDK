@@ -47,7 +47,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: PredatorWinDoneCallback
     /// </summary>
-    public unsafe void PredatorWinDoneCallback()
+    public unsafe virtual void PredatorWinDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.PredatorWinDoneCallback", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: StartTimer
     /// </summary>
-    public unsafe void StartTimer()
+    public unsafe virtual void StartTimer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.StartTimer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -69,7 +69,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: IntroDoneCallback
     /// </summary>
-    public unsafe void IntroDoneCallback()
+    public unsafe virtual void IntroDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.IntroDoneCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -92,7 +92,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: ActionPerformed
     /// </summary>
-    public unsafe bool ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction NewGameAction)
+    public unsafe override bool ActionPerformed(BmSDK.BmGame.RGameInfo.EGameAction NewGameAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.ActionPerformed", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -104,7 +104,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: GetChallengeTime
     /// </summary>
-    public unsafe float GetChallengeTime()
+    public unsafe override float GetChallengeTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.GetChallengeTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RSeqAct_StartPredatorChallenge : BmSDK.BmGame.RSeqAct_Start
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartPredatorChallenge.Activated", true);
         byte* paramsPtr = stackalloc byte[20];

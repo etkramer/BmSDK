@@ -47,7 +47,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: StartBMSpecialMove
     /// </summary>
-    public unsafe void StartBMSpecialMove()
+    public unsafe virtual void StartBMSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.StartBMSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -80,7 +80,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: SniperRifleFired
     /// </summary>
-    public unsafe void SniperRifleFired()
+    public unsafe virtual void SniperRifleFired()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.SniperRifleFired", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Complete
     /// </summary>
-    public unsafe void Complete()
+    public unsafe virtual void Complete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.Complete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Start
     /// </summary>
-    public unsafe void Start()
+    public unsafe virtual void Start()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.Start", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RSeqAct_DeadShotKillingJackRyder : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_DeadShotKillingJackRyder.Update", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: StartleNearbyCrows
     /// </summary>
-    public unsafe void StartleNearbyCrows()
+    public unsafe virtual void StartleNearbyCrows()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.StartleNearbyCrows", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -82,7 +82,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -97,7 +97,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsTargetatble
     /// </summary>
-    public unsafe bool IsTargetatble()
+    public unsafe override bool IsTargetatble()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsTargetatble", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -108,7 +108,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -119,7 +119,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -166,7 +166,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetHelicopterControlVolume
     /// </summary>
-    public unsafe void SetHelicopterControlVolume(BmSDK.BmScript.RHelicopterControlVolume ControlVolume, bool bEntering)
+    public unsafe virtual void SetHelicopterControlVolume(BmSDK.BmScript.RHelicopterControlVolume ControlVolume, bool bEntering)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetHelicopterControlVolume", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -179,7 +179,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetOverrideSpeed
     /// </summary>
-    public unsafe void SetOverrideSpeed(float _override_speed)
+    public unsafe override void SetOverrideSpeed(float _override_speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetOverrideSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.Bump", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -205,7 +205,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: FireHelicopterScannedEvent
     /// </summary>
-    public unsafe void FireHelicopterScannedEvent(BmSDK.BmGame.RPlayerController _RPC, bool IsControlHelicopter)
+    public unsafe override void FireHelicopterScannedEvent(BmSDK.BmGame.RPlayerController _RPC, bool IsControlHelicopter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.FireHelicopterScannedEvent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -218,7 +218,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetControlChopper
     /// </summary>
-    public unsafe void SetControlChopper()
+    public unsafe override void SetControlChopper()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetControlChopper", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -229,7 +229,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetGrapplePointEnabled
     /// </summary>
-    public unsafe void SetGrapplePointEnabled(bool make_enabled)
+    public unsafe override void SetGrapplePointEnabled(bool make_enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetGrapplePointEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: StartDownloadHud
     /// </summary>
-    public unsafe void StartDownloadHud()
+    public unsafe override void StartDownloadHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.StartDownloadHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -252,7 +252,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ReleaseHelicopterPanel
     /// </summary>
-    public unsafe void ReleaseHelicopterPanel()
+    public unsafe override void ReleaseHelicopterPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ReleaseHelicopterPanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -263,7 +263,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: OpenHelicopterPanel
     /// </summary>
-    public unsafe void OpenHelicopterPanel()
+    public unsafe override void OpenHelicopterPanel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.OpenHelicopterPanel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetupPlayerGrapplePoint
     /// </summary>
-    public unsafe void SetupPlayerGrapplePoint()
+    public unsafe virtual void SetupPlayerGrapplePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetupPlayerGrapplePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: DrawDebug
     /// </summary>
-    public unsafe void DrawDebug()
+    public unsafe virtual void DrawDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.DrawDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -310,7 +310,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: StopHelicopterDialogue
     /// </summary>
-    public unsafe void StopHelicopterDialogue()
+    public unsafe virtual void StopHelicopterDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.StopHelicopterDialogue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -321,7 +321,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: PlayHelicopterDialogue
     /// </summary>
-    public unsafe void PlayHelicopterDialogue(BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum, bool PlayEvenIfTooSoon = default)
+    public unsafe virtual void PlayHelicopterDialogue(BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum, bool PlayEvenIfTooSoon = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.PlayHelicopterDialogue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -334,7 +334,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsSameDialogue
     /// </summary>
-    public unsafe bool IsSameDialogue(BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum1, BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum2)
+    public unsafe virtual bool IsSameDialogue(BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum1, BmSDK.BmScript.RSeqEvent_HelicopterDialogueTrigger.HeliDialogue DialogueEnum2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsSameDialogue", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -347,7 +347,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: FindDialogueTriggerEvent
     /// </summary>
-    public unsafe bool FindDialogueTriggerEvent()
+    public unsafe virtual bool FindDialogueTriggerEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.FindDialogueTriggerEvent", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -358,7 +358,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SpawnBulletFX
     /// </summary>
-    public unsafe void SpawnBulletFX(System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe virtual void SpawnBulletFX(System.Numerics.Vector3 StartLoc, BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SpawnBulletFX", true);
         byte* paramsPtr = stackalloc byte[124];
@@ -371,7 +371,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetImpactMaterial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe virtual BmSDK.BmGame.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetImpactMaterial", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -383,7 +383,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: DoShotFX
     /// </summary>
-    public unsafe void DoShotFX(bool bForceMiss)
+    public unsafe virtual void DoShotFX(bool bForceMiss)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.DoShotFX", true);
         byte* paramsPtr = stackalloc byte[388];
@@ -395,7 +395,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: CalcImpact
     /// </summary>
-    public unsafe BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, bool bForceMiss)
+    public unsafe virtual BmSDK.Engine.Actor.FImpactInfo CalcImpact(System.Numerics.Vector3 StartTrace, System.Numerics.Vector3 EndTrace, bool bForceMiss)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.CalcImpact", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -409,7 +409,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetRandDeviance
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRandDeviance(BmSDK.Rotator Heading)
+    public unsafe virtual System.Numerics.Vector3 GetRandDeviance(BmSDK.Rotator Heading)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetRandDeviance", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -421,7 +421,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ReportRocketSuccess
     /// </summary>
-    public unsafe void ReportRocketSuccess(bool was_successful)
+    public unsafe virtual void ReportRocketSuccess(bool was_successful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ReportRocketSuccess", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -433,7 +433,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: FireRocket
     /// </summary>
-    public unsafe void FireRocket(bool TargetBatman, System.Numerics.Vector3 StaticTarget = default)
+    public unsafe virtual void FireRocket(bool TargetBatman, System.Numerics.Vector3 StaticTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.FireRocket", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -446,7 +446,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: TickWeapons
     /// </summary>
-    public unsafe void TickWeapons(float DeltaTime)
+    public unsafe virtual void TickWeapons(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.TickWeapons", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -458,7 +458,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetRocketLockon
     /// </summary>
-    public unsafe void SetRocketLockon(bool is_active, float Proportion)
+    public unsafe virtual void SetRocketLockon(bool is_active, float Proportion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetRocketLockon", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -471,7 +471,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetChainGunSpinning
     /// </summary>
-    public unsafe void SetChainGunSpinning(bool is_active)
+    public unsafe virtual void SetChainGunSpinning(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetChainGunSpinning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -483,7 +483,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetChainGunJammingEffect
     /// </summary>
-    public unsafe void SetChainGunJammingEffect(bool is_active)
+    public unsafe virtual void SetChainGunJammingEffect(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetChainGunJammingEffect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -495,7 +495,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetChainGunActive
     /// </summary>
-    public unsafe void SetChainGunActive(bool is_active)
+    public unsafe virtual void SetChainGunActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetChainGunActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -507,7 +507,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: AdvanceAttackMode
     /// </summary>
-    public unsafe void AdvanceAttackMode(float DeltaTime)
+    public unsafe virtual void AdvanceAttackMode(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.AdvanceAttackMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -519,7 +519,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetCurrentAttackMode
     /// </summary>
-    public unsafe void SetCurrentAttackMode(BmSDK.BmScript.RHelicopter.HeliAttackMode attack_mode)
+    public unsafe virtual void SetCurrentAttackMode(BmSDK.BmScript.RHelicopter.HeliAttackMode attack_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetCurrentAttackMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -531,7 +531,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetTargetAttackMode
     /// </summary>
-    public unsafe void SetTargetAttackMode(BmSDK.BmScript.RHelicopter.HeliAttackMode attack_mode)
+    public unsafe virtual void SetTargetAttackMode(BmSDK.BmScript.RHelicopter.HeliAttackMode attack_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetTargetAttackMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -543,7 +543,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetRocketSocketOrigin
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetRocketSocketOrigin(bool left_socket)
+    public unsafe virtual System.Numerics.Vector3 GetRocketSocketOrigin(bool left_socket)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetRocketSocketOrigin", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -555,7 +555,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetSearchLightOrigin
     /// </summary>
-    public unsafe void GetSearchLightOrigin()
+    public unsafe virtual void GetSearchLightOrigin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetSearchLightOrigin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -566,7 +566,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GetNextPoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RPatrolPoint GetNextPoint()
+    public unsafe virtual BmSDK.BmGame.RPatrolPoint GetNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GetNextPoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -577,7 +577,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: GotoNextPoint
     /// </summary>
-    public unsafe void GotoNextPoint()
+    public unsafe virtual void GotoNextPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.GotoNextPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -588,7 +588,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetTurningDistance
     /// </summary>
-    public unsafe void SetTurningDistance(float NewTurningDistance)
+    public unsafe virtual void SetTurningDistance(float NewTurningDistance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetTurningDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -600,7 +600,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: UpdateSearchLight
     /// </summary>
-    public unsafe void UpdateSearchLight(float DeltaTime, bool LookSweep = default, System.Numerics.Vector3 LookAtLocation = default)
+    public unsafe virtual void UpdateSearchLight(float DeltaTime, bool LookSweep = default, System.Numerics.Vector3 LookAtLocation = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.UpdateSearchLight", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -614,7 +614,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsBMInLineOfSight
     /// </summary>
-    public unsafe bool IsBMInLineOfSight()
+    public unsafe virtual bool IsBMInLineOfSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsBMInLineOfSight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -625,7 +625,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: UpdateDustEffect
     /// </summary>
-    public unsafe void UpdateDustEffect()
+    public unsafe virtual void UpdateDustEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.UpdateDustEffect", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -636,7 +636,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -648,7 +648,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: WatchPlayer
     /// </summary>
-    public unsafe void WatchPlayer()
+    public unsafe override void WatchPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.WatchPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -659,7 +659,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -677,7 +677,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: CanBeJammed
     /// </summary>
-    public unsafe bool CanBeJammed()
+    public unsafe override bool CanBeJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.CanBeJammed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -688,7 +688,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: HitByJammerGadgetCharge
     /// </summary>
-    public unsafe void HitByJammerGadgetCharge()
+    public unsafe override void HitByJammerGadgetCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.HitByJammerGadgetCharge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -699,7 +699,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: RecoveredFromREC
     /// </summary>
-    public unsafe void RecoveredFromREC()
+    public unsafe override void RecoveredFromREC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.RecoveredFromREC", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -710,7 +710,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: HitByREC
     /// </summary>
-    public unsafe void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 AttackerLocation)
+    public unsafe override void HitByREC(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 AttackerLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.HitByREC", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -723,7 +723,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: AlertToBatmansPosition
     /// </summary>
-    public unsafe void AlertToBatmansPosition()
+    public unsafe virtual void AlertToBatmansPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.AlertToBatmansPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -734,7 +734,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: AnnoyWithGadget
     /// </summary>
-    public unsafe void AnnoyWithGadget(float annoyance_value)
+    public unsafe virtual void AnnoyWithGadget(float annoyance_value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.AnnoyWithGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -746,7 +746,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: PointReached
     /// </summary>
-    public unsafe void PointReached()
+    public unsafe virtual void PointReached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.PointReached", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -757,7 +757,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ChangePath
     /// </summary>
-    public unsafe void ChangePath(BmSDK.BmGame.RPatrolPoint NewStartPoint, bool bTeleport)
+    public unsafe override void ChangePath(BmSDK.BmGame.RPatrolPoint NewStartPoint, bool bTeleport)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ChangePath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -770,7 +770,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetScanned
     /// </summary>
-    public unsafe void SetScanned()
+    public unsafe override void SetScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetScanned", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -781,7 +781,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: HasBeenScanned
     /// </summary>
-    public unsafe bool HasBeenScanned()
+    public unsafe override bool HasBeenScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.HasBeenScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -792,7 +792,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetAggressionLevels
     /// </summary>
-    public unsafe void SetAggressionLevels(bool ChaingunEnabled, bool MissilesEnabled)
+    public unsafe override void SetAggressionLevels(bool ChaingunEnabled, bool MissilesEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetAggressionLevels", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -805,7 +805,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: HelicopterDismounted
     /// </summary>
-    public unsafe void HelicopterDismounted()
+    public unsafe override void HelicopterDismounted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.HelicopterDismounted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -816,7 +816,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: HelicopterBoarded
     /// </summary>
-    public unsafe void HelicopterBoarded()
+    public unsafe override void HelicopterBoarded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.HelicopterBoarded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -827,7 +827,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ForceLowQualityLight
     /// </summary>
-    public unsafe void ForceLowQualityLight()
+    public unsafe override void ForceLowQualityLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ForceLowQualityLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -838,7 +838,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ForceHighQualityLight
     /// </summary>
-    public unsafe void ForceHighQualityLight()
+    public unsafe override void ForceHighQualityLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ForceHighQualityLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -849,7 +849,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ExitLowDetail
     /// </summary>
-    public unsafe void ExitLowDetail()
+    public unsafe virtual void ExitLowDetail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ExitLowDetail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -860,7 +860,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: EnterLowDetail
     /// </summary>
-    public unsafe void EnterLowDetail()
+    public unsafe virtual void EnterLowDetail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.EnterLowDetail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -871,7 +871,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: DrawDebugGraphics
     /// </summary>
-    public unsafe void DrawDebugGraphics()
+    public unsafe override void DrawDebugGraphics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.DrawDebugGraphics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -882,7 +882,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetAggroHelicopter
     /// </summary>
-    public unsafe void SetAggroHelicopter(bool is_aggro)
+    public unsafe virtual void SetAggroHelicopter(bool is_aggro)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetAggroHelicopter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -894,7 +894,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsFirstTimeBatmanSeen
     /// </summary>
-    public unsafe bool IsFirstTimeBatmanSeen()
+    public unsafe virtual bool IsFirstTimeBatmanSeen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsFirstTimeBatmanSeen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -905,7 +905,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetViewingBatman
     /// </summary>
-    public unsafe void SetViewingBatman(bool IsViewingBatman)
+    public unsafe virtual void SetViewingBatman(bool IsViewingBatman)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetViewingBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -917,7 +917,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: DoMoveToward
     /// </summary>
-    public unsafe bool DoMoveToward(float DeltaTime)
+    public unsafe virtual bool DoMoveToward(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.DoMoveToward", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -929,7 +929,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetMoveTowardPathLocations
     /// </summary>
-    public unsafe bool SetMoveTowardPathLocations(System.Numerics.Vector3 _MoveTowardPathLocation1, System.Numerics.Vector3 _MoveTowardPathLocation2, float DeltaTime, float _MoveTowardSpeed)
+    public unsafe virtual bool SetMoveTowardPathLocations(System.Numerics.Vector3 _MoveTowardPathLocation1, System.Numerics.Vector3 _MoveTowardPathLocation2, float DeltaTime, float _MoveTowardSpeed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetMoveTowardPathLocations", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -944,7 +944,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetMoveTowardLocation
     /// </summary>
-    public unsafe bool SetMoveTowardLocation(System.Numerics.Vector3 _MoveTowardLocation, float DeltaTime, float _MoveTowardSpeed, bool _MoveTowardSlowdownOnApproach = default)
+    public unsafe virtual bool SetMoveTowardLocation(System.Numerics.Vector3 _MoveTowardLocation, float DeltaTime, float _MoveTowardSpeed, bool _MoveTowardSlowdownOnApproach = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetMoveTowardLocation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -959,7 +959,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.Tick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -971,7 +971,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ShouldForceMissedShot
     /// </summary>
-    public unsafe bool ShouldForceMissedShot()
+    public unsafe virtual bool ShouldForceMissedShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ShouldForceMissedShot", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -982,7 +982,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsAttackEnabled
     /// </summary>
-    public unsafe bool IsAttackEnabled()
+    public unsafe override bool IsAttackEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsAttackEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -993,7 +993,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: IsViewablePlayerCharacter
     /// </summary>
-    public unsafe bool IsViewablePlayerCharacter()
+    public unsafe virtual bool IsViewablePlayerCharacter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.IsViewablePlayerCharacter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1004,7 +1004,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1015,7 +1015,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1026,7 +1026,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetLightColour
     /// </summary>
-    public unsafe void SetLightColour(BmSDK.BmScript.RHelicopter.ELightColour Colour)
+    public unsafe virtual void SetLightColour(BmSDK.BmScript.RHelicopter.ELightColour Colour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetLightColour", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1038,7 +1038,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetInvestigationStrings
     /// </summary>
-    public unsafe void SetInvestigationStrings(BmSDK.FString IS_Info, BmSDK.FString IS_InfoTitle)
+    public unsafe virtual void SetInvestigationStrings(BmSDK.FString IS_Info, BmSDK.FString IS_InfoTitle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetInvestigationStrings", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1051,7 +1051,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetHighlightType
     /// </summary>
-    public unsafe void SetHighlightType(BmSDK.BmScript.RHelicopter.HeliHighlightType new_type)
+    public unsafe virtual void SetHighlightType(BmSDK.BmScript.RHelicopter.HeliHighlightType new_type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetHighlightType", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -1063,7 +1063,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: ApplyXrayMat
     /// </summary>
-    public unsafe void ApplyXrayMat(BmSDK.Engine.MaterialInstanceConstant NewXrayMat)
+    public unsafe virtual void ApplyXrayMat(BmSDK.Engine.MaterialInstanceConstant NewXrayMat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.ApplyXrayMat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1075,7 +1075,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: SetXrayMeshLevel
     /// </summary>
-    public unsafe void SetXrayMeshLevel()
+    public unsafe virtual void SetXrayMeshLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.SetXrayMeshLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1086,7 +1086,7 @@ public partial class RHelicopter : BmSDK.BmGame.RHelicopterBase, BmSDK.BmGame.RB
     /// <summary>
     /// Function: DifficultySetup
     /// </summary>
-    public unsafe void DifficultySetup()
+    public unsafe virtual void DifficultySetup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHelicopter.DifficultySetup", true);
         byte* paramsPtr = stackalloc byte[12];

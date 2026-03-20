@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_FireBatClawDummyDLC : BmSDK.BmGame.RSp
     /// <summary>
     /// Function: FireBatClawFastProjectile
     /// </summary>
-    public unsafe void FireBatClawFastProjectile()
+    public unsafe virtual void FireBatClawFastProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_FireBatClawDummyDLC.FireBatClawFastProjectile", true);
         byte* paramsPtr = stackalloc byte[8];

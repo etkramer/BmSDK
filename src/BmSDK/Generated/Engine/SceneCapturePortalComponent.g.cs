@@ -36,7 +36,7 @@ public partial class SceneCapturePortalComponent : BmSDK.Engine.SceneCaptureComp
     /// <summary>
     /// Function: SetCaptureParameters
     /// </summary>
-    public unsafe void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewScaleFOV = default, BmSDK.Engine.Actor NewViewDest = default)
+    public unsafe virtual void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewScaleFOV = default, BmSDK.Engine.Actor NewViewDest = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapturePortalComponent.SetCaptureParameters", true);
         byte* paramsPtr = stackalloc byte[12];

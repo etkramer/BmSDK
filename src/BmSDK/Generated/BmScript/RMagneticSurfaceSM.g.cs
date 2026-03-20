@@ -71,7 +71,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: SetActive
     /// </summary>
-    public unsafe void SetActive(bool Active)
+    public unsafe override void SetActive(bool Active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.SetActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: GetActorThoughts
     /// </summary>
-    public unsafe void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
+    public unsafe override void GetActorThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList, out System.Numerics.Vector3 ThoughtLocationOverride, BmSDK.FString IndentString = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.GetActorThoughts", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -97,7 +97,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: MotorJammed
     /// </summary>
-    public unsafe void MotorJammed()
+    public unsafe virtual void MotorJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.MotorJammed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.Tick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -120,7 +120,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: InvMap
     /// </summary>
-    public unsafe float InvMap(float X)
+    public unsafe virtual float InvMap(float X)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.InvMap", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: Map
     /// </summary>
-    public unsafe float Map(float X)
+    public unsafe virtual float Map(float X)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.Map", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: SetMagStr
     /// </summary>
-    public unsafe void SetMagStr(float NewStr, bool bInitialFrame, BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.RMagneticSurfaceSMBase CallFromMaster = default)
+    public unsafe override void SetMagStr(float NewStr, bool bInitialFrame, BmSDK.BmGame.RPawnPlayer Player, BmSDK.BmGame.RMagneticSurfaceSMBase CallFromMaster = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.SetMagStr", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -159,7 +159,7 @@ public partial class RMagneticSurfaceSM : BmSDK.BmGame.RMagneticSurfaceSMBase, B
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagneticSurfaceSM.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

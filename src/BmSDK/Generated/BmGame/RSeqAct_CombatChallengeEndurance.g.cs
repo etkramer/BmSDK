@@ -47,7 +47,7 @@ public partial class RSeqAct_CombatChallengeEndurance : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeEndurance.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_CombatChallengeEndurance : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: EnduranceDoneCallback
     /// </summary>
-    public unsafe void EnduranceDoneCallback()
+    public unsafe virtual void EnduranceDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeEndurance.EnduranceDoneCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_CombatChallengeEndurance : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeEndurance.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

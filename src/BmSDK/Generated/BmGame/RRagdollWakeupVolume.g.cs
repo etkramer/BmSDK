@@ -71,7 +71,7 @@ public partial class RRagdollWakeupVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRagdollWakeupVolume.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];

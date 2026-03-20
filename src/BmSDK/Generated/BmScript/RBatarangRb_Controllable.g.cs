@@ -71,7 +71,7 @@ public partial class RBatarangRb_Controllable : BmSDK.BmScript.RBatarang_Control
     /// <summary>
     /// Function: GetReversePromptName
     /// </summary>
-    public unsafe BmSDK.FString GetReversePromptName()
+    public unsafe override BmSDK.FString GetReversePromptName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangRb_Controllable.GetReversePromptName", true);
         byte* paramsPtr = stackalloc byte[12];

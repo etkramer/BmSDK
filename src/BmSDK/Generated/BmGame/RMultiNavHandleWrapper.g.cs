@@ -36,7 +36,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsEmpty
     /// </summary>
-    public unsafe bool IsEmpty()
+    public unsafe virtual bool IsEmpty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.IsEmpty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: IsSearching
     /// </summary>
-    public unsafe bool IsSearching()
+    public unsafe virtual bool IsSearching()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.IsSearching", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: FreeAllHandles
     /// </summary>
-    public unsafe void FreeAllHandles()
+    public unsafe virtual void FreeAllHandles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.FreeAllHandles", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: RemovePathByIndex
     /// </summary>
-    public unsafe void RemovePathByIndex(int RemIndex)
+    public unsafe virtual void RemovePathByIndex(int RemIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.RemovePathByIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDestForIndex
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDestForIndex(int TestIndex)
+    public unsafe virtual System.Numerics.Vector3 GetDestForIndex(int TestIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetDestForIndex", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -93,7 +93,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDistForPathToIndex
     /// </summary>
-    public unsafe float GetDistForPathToIndex(int TestIndex)
+    public unsafe virtual float GetDistForPathToIndex(int TestIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetDistForPathToIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetDestIndexClosestTo
     /// </summary>
-    public unsafe int GetDestIndexClosestTo(System.Numerics.Vector3 TestPos)
+    public unsafe virtual int GetDestIndexClosestTo(System.Numerics.Vector3 TestPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetDestIndexClosestTo", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -117,7 +117,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetNumPaths
     /// </summary>
-    public unsafe int GetNumPaths()
+    public unsafe virtual int GetNumPaths()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetNumPaths", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetShortestPath
     /// </summary>
-    public unsafe bool GetShortestPath(out float bestDist, out int BestPath)
+    public unsafe virtual bool GetShortestPath(out float bestDist, out int BestPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetShortestPath", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -141,7 +141,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: AddDestination
     /// </summary>
-    public unsafe void AddDestination(System.Numerics.Vector3 NewLoc, int NewIndex = default)
+    public unsafe virtual void AddDestination(System.Numerics.Vector3 NewLoc, int NewIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.AddDestination", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -154,7 +154,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: DisplaySearches
     /// </summary>
-    public unsafe void DisplaySearches()
+    public unsafe virtual void DisplaySearches()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.DisplaySearches", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetAvoidPlayers
     /// </summary>
-    public unsafe void SetAvoidPlayers(bool bNewVal)
+    public unsafe virtual void SetAvoidPlayers(bool bNewVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.SetAvoidPlayers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetThug
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMPawnAI GetThug()
+    public unsafe virtual BmSDK.BmGame.RBMPawnAI GetThug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.GetThug", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -188,7 +188,7 @@ public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetThug
     /// </summary>
-    public unsafe void SetThug(BmSDK.BmGame.RBMPawnAI NewThug, BmSDK.FName NewClaimName = default)
+    public unsafe virtual void SetThug(BmSDK.BmGame.RBMPawnAI NewThug, BmSDK.FName NewClaimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMultiNavHandleWrapper.SetThug", true);
         byte* paramsPtr = stackalloc byte[12];

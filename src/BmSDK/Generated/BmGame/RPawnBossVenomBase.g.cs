@@ -66,7 +66,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsInBeatUp
     /// </summary>
-    public unsafe bool IsInBeatUp()
+    public unsafe virtual bool IsInBeatUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsInBeatUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetDeathTip
     /// </summary>
-    public unsafe BmSDK.FString GetDeathTip()
+    public unsafe virtual BmSDK.FString GetDeathTip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetDeathTip", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -88,7 +88,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: HitDisruptableLaserGrid
     /// </summary>
-    public unsafe bool HitDisruptableLaserGrid()
+    public unsafe virtual bool HitDisruptableLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.HitDisruptableLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -99,7 +99,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetDeadThugPickupPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDeadThugPickupPoint(BmSDK.BmGame.RPawnCombat DeadThug)
+    public unsafe virtual System.Numerics.Vector3 GetDeadThugPickupPoint(BmSDK.BmGame.RPawnCombat DeadThug)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetDeadThugPickupPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -111,7 +111,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetDeadThug
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat GetDeadThug(float SearchRange)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat GetDeadThug(float SearchRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetDeadThug", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetClampedTargetDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetClampedTargetDirection(System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos, float MaxYawDelta)
+    public unsafe virtual System.Numerics.Vector3 GetClampedTargetDirection(System.Numerics.Vector3 Heading, System.Numerics.Vector3 TargetPos, float MaxYawDelta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetClampedTargetDirection", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -137,7 +137,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetRightStrikeHitReaction
     /// </summary>
-    public unsafe void GetRightStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
+    public unsafe virtual void GetRightStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetRightStrikeHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -151,7 +151,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetLeftStrikeHitReaction
     /// </summary>
-    public unsafe void GetLeftStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
+    public unsafe virtual void GetLeftStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetLeftStrikeHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -165,7 +165,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetRearStrikeHitReaction
     /// </summary>
-    public unsafe void GetRearStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
+    public unsafe virtual void GetRearStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetRearStrikeHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -179,7 +179,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetFrontStrikeHitReaction
     /// </summary>
-    public unsafe void GetFrontStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
+    public unsafe virtual void GetFrontStrikeHitReaction(out BmSDK.FName HitReaction, out BmSDK.FName PoseName, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetFrontStrikeHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -193,7 +193,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetRightExplosionHitReaction
     /// </summary>
-    public unsafe void GetRightExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
+    public unsafe virtual void GetRightExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetRightExplosionHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -207,7 +207,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetLeftExplosionHitReaction
     /// </summary>
-    public unsafe void GetLeftExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
+    public unsafe virtual void GetLeftExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetLeftExplosionHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -221,7 +221,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetRearExplosionHitReaction
     /// </summary>
-    public unsafe void GetRearExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
+    public unsafe virtual void GetRearExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetRearExplosionHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -235,7 +235,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetFrontExplosionHitReaction
     /// </summary>
-    public unsafe void GetFrontExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
+    public unsafe virtual void GetFrontExplosionHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetFrontExplosionHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -249,7 +249,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetWallHitReaction
     /// </summary>
-    public unsafe void GetWallHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
+    public unsafe virtual void GetWallHitReaction(bool bThresholdReached, out BmSDK.FName HitReaction, out BmSDK.FName PoseName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetWallHitReaction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -263,7 +263,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ShockwaveTriggered
     /// </summary>
-    public unsafe void ShockwaveTriggered()
+    public unsafe virtual void ShockwaveTriggered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.ShockwaveTriggered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -274,7 +274,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: DeactivateCollision
     /// </summary>
-    public unsafe void DeactivateCollision()
+    public unsafe virtual void DeactivateCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.DeactivateCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ChargedIntoDisruptableLaserGrid
     /// </summary>
-    public unsafe void ChargedIntoDisruptableLaserGrid(bool bQuickBatarang)
+    public unsafe virtual void ChargedIntoDisruptableLaserGrid(bool bQuickBatarang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.ChargedIntoDisruptableLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -297,7 +297,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ChargedIntoWall
     /// </summary>
-    public unsafe void ChargedIntoWall(bool bQuickBatarang)
+    public unsafe virtual void ChargedIntoWall(bool bQuickBatarang)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.ChargedIntoWall", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -309,7 +309,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: CreateBatmansVenomWeaponConfig
     /// </summary>
-    public unsafe void CreateBatmansVenomWeaponConfig(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
+    public unsafe virtual void CreateBatmansVenomWeaponConfig(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.CreateBatmansVenomWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -321,7 +321,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: EvadeableAttackHitPlayer
     /// </summary>
-    public unsafe void EvadeableAttackHitPlayer()
+    public unsafe virtual void EvadeableAttackHitPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.EvadeableAttackHitPlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -332,7 +332,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: AttackCompleted
     /// </summary>
-    public unsafe void AttackCompleted()
+    public unsafe virtual void AttackCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.AttackCompleted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -343,7 +343,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: BerserkTimedOut
     /// </summary>
-    public unsafe void BerserkTimedOut()
+    public unsafe virtual void BerserkTimedOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.BerserkTimedOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -354,7 +354,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: BerserkEnd
     /// </summary>
-    public unsafe void BerserkEnd()
+    public unsafe virtual void BerserkEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.BerserkEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -365,7 +365,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: BerserkBegin
     /// </summary>
-    public unsafe void BerserkBegin()
+    public unsafe virtual void BerserkBegin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.BerserkBegin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -376,7 +376,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ChargeDodged
     /// </summary>
-    public unsafe void ChargeDodged()
+    public unsafe virtual void ChargeDodged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.ChargeDodged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -387,7 +387,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: SuccessfulEvade
     /// </summary>
-    public unsafe void SuccessfulEvade()
+    public unsafe virtual void SuccessfulEvade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.SuccessfulEvade", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -398,7 +398,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: SuccessfulBeatUp
     /// </summary>
-    public unsafe void SuccessfulBeatUp()
+    public unsafe virtual void SuccessfulBeatUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.SuccessfulBeatUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -409,7 +409,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: SuccessfulBatarang
     /// </summary>
-    public unsafe void SuccessfulBatarang()
+    public unsafe virtual void SuccessfulBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.SuccessfulBatarang", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -420,7 +420,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: SetStunnedPfx
     /// </summary>
-    public unsafe void SetStunnedPfx(bool bOn)
+    public unsafe virtual void SetStunnedPfx(bool bOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.SetStunnedPfx", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -432,7 +432,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: PlayAdditiveBatarangReaction
     /// </summary>
-    public unsafe void PlayAdditiveBatarangReaction()
+    public unsafe virtual void PlayAdditiveBatarangReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.PlayAdditiveBatarangReaction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -443,7 +443,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: PlayBatarangHitFX
     /// </summary>
-    public unsafe void PlayBatarangHitFX()
+    public unsafe virtual void PlayBatarangHitFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.PlayBatarangHitFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -454,7 +454,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: StopLookAtBatman
     /// </summary>
-    public unsafe void StopLookAtBatman()
+    public unsafe virtual void StopLookAtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.StopLookAtBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -465,7 +465,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: LookAtBatman
     /// </summary>
-    public unsafe void LookAtBatman()
+    public unsafe virtual void LookAtBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.LookAtBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -476,7 +476,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetThugThrowHitSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugThrowHitSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetThugThrowHitSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetThugThrowHitSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -487,7 +487,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetPlayerThrowHitSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerThrowHitSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetPlayerThrowHitSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetPlayerThrowHitSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -498,7 +498,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetThugChargedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugChargedSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetThugChargedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetThugChargedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -509,7 +509,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetPlayerChargedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerChargedSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetPlayerChargedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetPlayerChargedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -520,7 +520,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetThugPunchedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetThugPunchedSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetThugPunchedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetThugPunchedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -531,7 +531,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetPlayerPunchedSoundCue
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetPlayerPunchedSoundCue()
+    public unsafe virtual BmSDK.Engine.AkEvent GetPlayerPunchedSoundCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetPlayerPunchedSoundCue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -542,7 +542,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetTargetPriority
     /// </summary>
-    public unsafe float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetTargetPriority", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -555,7 +555,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsValidForStrike
     /// </summary>
-    public unsafe bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe virtual bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsValidForStrike", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -569,7 +569,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: ForceChargeAttack
     /// </summary>
-    public unsafe void ForceChargeAttack()
+    public unsafe virtual void ForceChargeAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.ForceChargeAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -580,7 +580,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetMaxWalkAttackRange
     /// </summary>
-    public unsafe float GetMaxWalkAttackRange()
+    public unsafe virtual float GetMaxWalkAttackRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetMaxWalkAttackRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -591,7 +591,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetChargeHomingValue
     /// </summary>
-    public unsafe float GetChargeHomingValue()
+    public unsafe virtual float GetChargeHomingValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetChargeHomingValue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -602,7 +602,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsBeingRidden
     /// </summary>
-    public unsafe bool IsBeingRidden()
+    public unsafe virtual bool IsBeingRidden()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsBeingRidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -613,7 +613,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsVulnerableToExplosion
     /// </summary>
-    public unsafe bool IsVulnerableToExplosion()
+    public unsafe virtual bool IsVulnerableToExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsVulnerableToExplosion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -624,7 +624,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetSmokeBombReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
+    public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -635,7 +635,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsHenchman
     /// </summary>
-    public unsafe bool IsHenchman()
+    public unsafe virtual bool IsHenchman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsHenchman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -646,7 +646,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetLastCombatMoveClass
     /// </summary>
-    public unsafe BmSDK.Class GetLastCombatMoveClass()
+    public unsafe virtual BmSDK.Class GetLastCombatMoveClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetLastCombatMoveClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -657,7 +657,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsVirtuallyDead
     /// </summary>
-    public unsafe bool IsVirtuallyDead()
+    public unsafe virtual bool IsVirtuallyDead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsVirtuallyDead", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -668,7 +668,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetHealth
     /// </summary>
-    public unsafe int GetHealth()
+    public unsafe override int GetHealth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetHealth", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -679,7 +679,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetBehaviour
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMBehaviour_Venom GetBehaviour()
+    public unsafe virtual BmSDK.BmGame.RBMBehaviour_Venom GetBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetBehaviour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -690,7 +690,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: IsPathClear
     /// </summary>
-    public unsafe bool IsPathClear(System.Numerics.Vector3 FromPoint, System.Numerics.Vector3 EndPoint, float Radius, out System.Numerics.Vector3 CollidePoint, out System.Numerics.Vector3 CollideNormal)
+    public unsafe virtual bool IsPathClear(System.Numerics.Vector3 FromPoint, System.Numerics.Vector3 EndPoint, float Radius, out System.Numerics.Vector3 CollidePoint, out System.Numerics.Vector3 CollideNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.IsPathClear", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -713,7 +713,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: GetCollideFreePosition
     /// </summary>
-    public unsafe bool GetCollideFreePosition(out System.Numerics.Vector3 Position)
+    public unsafe virtual bool GetCollideFreePosition(out System.Numerics.Vector3 Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.GetCollideFreePosition", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -732,7 +732,7 @@ public partial class RPawnBossVenomBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGame
     /// <summary>
     /// Function: WillCollideWithWall
     /// </summary>
-    public unsafe bool WillCollideWithWall(System.Numerics.Vector3 Heading, out System.Numerics.Vector3 CollidePoint, out System.Numerics.Vector3 Normal, out BmSDK.Engine.Actor HitActorL, out BmSDK.Engine.Actor HitActorR)
+    public unsafe virtual bool WillCollideWithWall(System.Numerics.Vector3 Heading, out System.Numerics.Vector3 CollidePoint, out System.Numerics.Vector3 Normal, out BmSDK.Engine.Actor HitActorL, out BmSDK.Engine.Actor HitActorR)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossVenomBase.WillCollideWithWall", true);
         byte* paramsPtr = stackalloc byte[48];

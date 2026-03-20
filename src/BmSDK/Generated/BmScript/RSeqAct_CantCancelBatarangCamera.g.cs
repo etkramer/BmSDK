@@ -36,7 +36,7 @@ public partial class RSeqAct_CantCancelBatarangCamera : BmSDK.Engine.SequenceAct
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CantCancelBatarangCamera.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

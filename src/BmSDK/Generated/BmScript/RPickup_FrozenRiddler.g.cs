@@ -71,7 +71,7 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
     /// <summary>
     /// Function: PickedUp
     /// </summary>
-    public unsafe void PickedUp(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void PickedUp(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_FrozenRiddler.PickedUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
     /// <summary>
     /// Function: FailedHarpoonPickup
     /// </summary>
-    public unsafe void FailedHarpoonPickup()
+    public unsafe override void FailedHarpoonPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_FrozenRiddler.FailedHarpoonPickup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_FrozenRiddler.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_FrozenRiddler.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -118,7 +118,7 @@ public partial class RPickup_FrozenRiddler : BmSDK.BmGame.RPickup_Riddler, BmSDK
     /// <summary>
     /// Function: InitialFlagCheck
     /// </summary>
-    public unsafe void InitialFlagCheck()
+    public unsafe override void InitialFlagCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPickup_FrozenRiddler.InitialFlagCheck", true);
         byte* paramsPtr = stackalloc byte[0];

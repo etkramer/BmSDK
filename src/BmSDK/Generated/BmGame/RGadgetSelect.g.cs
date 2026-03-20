@@ -36,7 +36,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayedGadgetChanged
     /// </summary>
-    public unsafe void DisplayedGadgetChanged()
+    public unsafe virtual void DisplayedGadgetChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.DisplayedGadgetChanged", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowRequiredGadget
     /// </summary>
-    public unsafe void ShowRequiredGadget(BmSDK.FName GadgetName)
+    public unsafe virtual void ShowRequiredGadget(BmSDK.FName GadgetName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.ShowRequiredGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowFailedGadget
     /// </summary>
-    public unsafe void ShowFailedGadget(BmSDK.BmGame.RInventoryGadget TheGadget)
+    public unsafe virtual void ShowFailedGadget(BmSDK.BmGame.RInventoryGadget TheGadget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.ShowFailedGadget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SendGadgetsToFlash
     /// </summary>
-    public unsafe void SendGadgetsToFlash()
+    public unsafe virtual void SendGadgetsToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.SendGadgetsToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HideGadgetSelect
     /// </summary>
-    public unsafe void HideGadgetSelect()
+    public unsafe virtual void HideGadgetSelect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.HideGadgetSelect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GadgetUpdated
     /// </summary>
-    public unsafe void GadgetUpdated()
+    public unsafe virtual void GadgetUpdated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.GadgetUpdated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Init(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.Init", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DoubleGadget
     /// </summary>
-    public unsafe void DoubleGadget(byte Row, byte Column)
+    public unsafe virtual void DoubleGadget(byte Row, byte Column)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.DoubleGadget", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -141,7 +141,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GadgetSelected
     /// </summary>
-    public unsafe void GadgetSelected(byte Row, byte Column)
+    public unsafe virtual void GadgetSelected(byte Row, byte Column)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.GadgetSelected", true);
         byte* paramsPtr = stackalloc byte[2];
@@ -154,7 +154,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CycleGadgets
     /// </summary>
-    public unsafe void CycleGadgets(int Direction)
+    public unsafe virtual void CycleGadgets(int Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.CycleGadgets", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -166,7 +166,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PrevGadget
     /// </summary>
-    public unsafe void PrevGadget()
+    public unsafe virtual void PrevGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.PrevGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: NextGadget
     /// </summary>
-    public unsafe void NextGadget()
+    public unsafe virtual void NextGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.NextGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SelectGadget
     /// </summary>
-    public unsafe void SelectGadget(int Gadget)
+    public unsafe virtual void SelectGadget(int Gadget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.SelectGadget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -200,7 +200,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateSelectedGadget
     /// </summary>
-    public unsafe void UpdateSelectedGadget(float DeltaTime, bool bCanCycleGadgets)
+    public unsafe virtual void UpdateSelectedGadget(float DeltaTime, bool bCanCycleGadgets)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.UpdateSelectedGadget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -220,7 +220,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe virtual void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -232,7 +232,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowHighlightedGadget
     /// </summary>
-    public unsafe void ShowHighlightedGadget()
+    public unsafe virtual void ShowHighlightedGadget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.ShowHighlightedGadget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -243,7 +243,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHUDHidden
     /// </summary>
-    public unsafe void SetHUDHidden(bool bHide, bool bImmediate = default)
+    public unsafe virtual void SetHUDHidden(bool bHide, bool bImmediate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.SetHUDHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -256,7 +256,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: AutoSelectGadgetAndOpenHud
     /// </summary>
-    public unsafe void AutoSelectGadgetAndOpenHud(BmSDK.Class GadgetClass, bool ShowChangeOnHud = default)
+    public unsafe virtual void AutoSelectGadgetAndOpenHud(BmSDK.Class GadgetClass, bool ShowChangeOnHud = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.AutoSelectGadgetAndOpenHud", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -269,7 +269,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GadgetGadgetSelected
     /// </summary>
-    public unsafe void GadgetGadgetSelected()
+    public unsafe virtual void GadgetGadgetSelected()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.GadgetGadgetSelected", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -280,7 +280,7 @@ public partial class RGadgetSelect : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: PawnChanged
     /// </summary>
-    public unsafe void PawnChanged()
+    public unsafe virtual void PawnChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGadgetSelect.PawnChanged", true);
         byte* paramsPtr = stackalloc byte[0];

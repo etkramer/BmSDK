@@ -36,7 +36,7 @@ public partial class RPhysOnContactHandler : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnContact
     /// </summary>
-    public unsafe void OnContact(BmSDK.Engine.RB_BodyInstance BodyInst0, BmSDK.Engine.RB_BodyInstance BodyInst1, System.Numerics.Vector3 SumNormalForce, System.Numerics.Vector3 SumFrictionForce)
+    public unsafe virtual void OnContact(BmSDK.Engine.RB_BodyInstance BodyInst0, BmSDK.Engine.RB_BodyInstance BodyInst1, System.Numerics.Vector3 SumNormalForce, System.Numerics.Vector3 SumFrictionForce)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RPhysOnContactHandler.OnContact", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -42,7 +42,7 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
     /// <summary>
     /// Function: PublishStats
     /// </summary>
-    public unsafe void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
+    public unsafe override void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallengeStats.PublishStats", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -54,7 +54,7 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
     /// <summary>
     /// Function: OutputMoveScores
     /// </summary>
-    public unsafe void OutputMoveScores()
+    public unsafe override void OutputMoveScores()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallengeStats.OutputMoveScores", true);
         byte* paramsPtr = stackalloc byte[17];
@@ -65,7 +65,7 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
     /// <summary>
     /// Function: ClearChallengeStats
     /// </summary>
-    public unsafe void ClearChallengeStats()
+    public unsafe override void ClearChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallengeStats.ClearChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -76,7 +76,7 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
     /// <summary>
     /// Function: AddCombatMove
     /// </summary>
-    public unsafe void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
+    public unsafe override void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallengeStats.AddCombatMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -90,7 +90,7 @@ public partial class RSeqAct_StartCombatChallengeStats : BmSDK.BmGame.RSeqAct_St
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_StartCombatChallengeStats.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

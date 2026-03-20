@@ -71,7 +71,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCameraPulseFxActive
     /// </summary>
-    public unsafe void SetCameraPulseFxActive(bool is_active)
+    public unsafe virtual void SetCameraPulseFxActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetCameraPulseFxActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DestroyScanFx
     /// </summary>
-    public unsafe void DestroyScanFx()
+    public unsafe virtual void DestroyScanFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.DestroyScanFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateScanFx
     /// </summary>
-    public unsafe void ActivateScanFx()
+    public unsafe virtual void ActivateScanFx()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ActivateScanFx", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Deactivate
     /// </summary>
-    public unsafe void Deactivate()
+    public unsafe virtual void Deactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.Deactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOnXray
     /// </summary>
-    public unsafe void TurnOnXray()
+    public unsafe virtual void TurnOnXray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.TurnOnXray", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsDetectiveMode
     /// </summary>
-    public unsafe bool IsDetectiveMode()
+    public unsafe virtual bool IsDetectiveMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsDetectiveMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ExitScanMode
     /// </summary>
-    public unsafe void ExitScanMode()
+    public unsafe virtual void ExitScanMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ExitScanMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EnterScanMode
     /// </summary>
-    public unsafe void EnterScanMode()
+    public unsafe virtual void EnterScanMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EnterScanMode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceXraysOff
     /// </summary>
-    public unsafe void ForceXraysOff()
+    public unsafe virtual void ForceXraysOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ForceXraysOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -171,7 +171,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ToggleFilter
     /// </summary>
-    public unsafe void ToggleFilter(bool TurnOff = default)
+    public unsafe virtual void ToggleFilter(bool TurnOff = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ToggleFilter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -183,7 +183,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerActivateEvent
     /// </summary>
-    public unsafe void TriggerActivateEvent(int Output)
+    public unsafe virtual void TriggerActivateEvent(int Output)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.TriggerActivateEvent", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -195,7 +195,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceLevelsForScanMode
     /// </summary>
-    public unsafe void SetEvidenceLevelsForScanMode()
+    public unsafe virtual void SetEvidenceLevelsForScanMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetEvidenceLevelsForScanMode", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -206,7 +206,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceLevelsForFilterMode
     /// </summary>
-    public unsafe void SetEvidenceLevelsForFilterMode()
+    public unsafe virtual void SetEvidenceLevelsForFilterMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetEvidenceLevelsForFilterMode", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -217,7 +217,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEvidenceInView
     /// </summary>
-    public unsafe bool IsEvidenceInView(BmSDK.BmGame.REvidenceInterface localEvidence)
+    public unsafe virtual bool IsEvidenceInView(BmSDK.BmGame.REvidenceInterface localEvidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsEvidenceInView", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -229,7 +229,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TurnOffEvidence
     /// </summary>
-    public unsafe void TurnOffEvidence()
+    public unsafe virtual void TurnOffEvidence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.TurnOffEvidence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -240,7 +240,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RestoreMaterialsForXray
     /// </summary>
-    public unsafe void RestoreMaterialsForXray(bool force_swap = default)
+    public unsafe virtual void RestoreMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.RestoreMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -252,7 +252,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetAllLightEnvironments
     /// </summary>
-    public unsafe void ResetAllLightEnvironments()
+    public unsafe virtual void ResetAllLightEnvironments()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ResetAllLightEnvironments", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -270,7 +270,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SwapMaterialsForXray
     /// </summary>
-    public unsafe void SwapMaterialsForXray(bool force_swap = default)
+    public unsafe virtual void SwapMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SwapMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -282,7 +282,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetForensicsRenderType
     /// </summary>
-    public unsafe void SetForensicsRenderType(bool On)
+    public unsafe virtual void SetForensicsRenderType(bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetForensicsRenderType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -294,7 +294,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SwapMaterialsForGlitchedXray
     /// </summary>
-    public unsafe void SwapMaterialsForGlitchedXray(bool force_swap = default)
+    public unsafe virtual void SwapMaterialsForGlitchedXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SwapMaterialsForGlitchedXray", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -306,7 +306,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SwapMaterialsForJammedXray
     /// </summary>
-    public unsafe void SwapMaterialsForJammedXray(bool force_swap = default)
+    public unsafe virtual void SwapMaterialsForJammedXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SwapMaterialsForJammedXray", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -318,7 +318,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeEvidenceArray
     /// </summary>
-    public unsafe void MakeEvidenceArray()
+    public unsafe virtual void MakeEvidenceArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.MakeEvidenceArray", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -329,7 +329,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EvidenceRegisterDNA
     /// </summary>
-    public unsafe void EvidenceRegisterDNA(BmSDK.BmGame.RForensicDnaSplat Splat)
+    public unsafe virtual void EvidenceRegisterDNA(BmSDK.BmGame.RForensicDnaSplat Splat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EvidenceRegisterDNA", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -348,7 +348,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EvidenceRegisterVap
     /// </summary>
-    public unsafe void EvidenceRegisterVap(BmSDK.BmGame.RVaporVolumeBase vapor, float Distance)
+    public unsafe virtual void EvidenceRegisterVap(BmSDK.BmGame.RVaporVolumeBase vapor, float Distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EvidenceRegisterVap", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -368,7 +368,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EvidenceRegisterDnaS
     /// </summary>
-    public unsafe void EvidenceRegisterDnaS(BmSDK.BmGame.RForensicDnaSplatStatic Splat)
+    public unsafe virtual void EvidenceRegisterDnaS(BmSDK.BmGame.RForensicDnaSplatStatic Splat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EvidenceRegisterDnaS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -387,7 +387,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EvidenceRegisterDnaSNS
     /// </summary>
-    public unsafe void EvidenceRegisterDnaSNS(BmSDK.BmGame.RForensicDnaSplatStaticNonScan Splat)
+    public unsafe virtual void EvidenceRegisterDnaSNS(BmSDK.BmGame.RForensicDnaSplatStaticNonScan Splat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EvidenceRegisterDnaSNS", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -406,7 +406,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ShouldStaticSplatBeRegistered
     /// </summary>
-    public unsafe bool ShouldStaticSplatBeRegistered(BmSDK.BmGame.RForensicDnaSplatStatic Splat)
+    public unsafe virtual bool ShouldStaticSplatBeRegistered(BmSDK.BmGame.RForensicDnaSplatStatic Splat)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ShouldStaticSplatBeRegistered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -425,7 +425,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsUsingFilterView
     /// </summary>
-    public unsafe bool IsUsingFilterView()
+    public unsafe virtual bool IsUsingFilterView()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsUsingFilterView", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -443,7 +443,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddItemToEvidenceArray
     /// </summary>
-    public unsafe void AddItemToEvidenceArray(BmSDK.BmGame.REvidenceInterface Item)
+    public unsafe virtual void AddItemToEvidenceArray(BmSDK.BmGame.REvidenceInterface Item)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.AddItemToEvidenceArray", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -455,7 +455,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: EvidenceItemIdentified
     /// </summary>
-    public unsafe void EvidenceItemIdentified()
+    public unsafe virtual void EvidenceItemIdentified()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.EvidenceItemIdentified", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -466,7 +466,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddScannedItemToMap
     /// </summary>
-    public unsafe void AddScannedItemToMap(BmSDK.FString EvidenceTrailName, int EvidenceIndex, System.Numerics.Vector3 Loc)
+    public unsafe virtual void AddScannedItemToMap(BmSDK.FString EvidenceTrailName, int EvidenceIndex, System.Numerics.Vector3 Loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.AddScannedItemToMap", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -480,7 +480,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SendDisruptorLocationsToHud
     /// </summary>
-    public unsafe void SendDisruptorLocationsToHud()
+    public unsafe virtual void SendDisruptorLocationsToHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SendDisruptorLocationsToHud", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -491,7 +491,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVirtualDisruptorLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVirtualDisruptorLocation()
+    public unsafe virtual System.Numerics.Vector3 GetVirtualDisruptorLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetVirtualDisruptorLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -502,7 +502,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetZeroToOnePitchScore
     /// </summary>
-    public unsafe float GetZeroToOnePitchScore(System.Numerics.Vector3 TargetVector)
+    public unsafe virtual float GetZeroToOnePitchScore(System.Numerics.Vector3 TargetVector)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetZeroToOnePitchScore", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -514,7 +514,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSpecialTrackingModeDistance
     /// </summary>
-    public unsafe void SetSpecialTrackingModeDistance(float new_distance)
+    public unsafe virtual void SetSpecialTrackingModeDistance(float new_distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetSpecialTrackingModeDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -526,7 +526,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[148];
@@ -538,7 +538,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckJamming
     /// </summary>
-    public unsafe bool CheckJamming()
+    public unsafe virtual bool CheckJamming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.CheckJamming", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -549,7 +549,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SendJammerVillainToHud
     /// </summary>
-    public unsafe void SendJammerVillainToHud(BmSDK.Engine.Canvas Canvas, BmSDK.BmGame.RPawnVillain JammerVillain)
+    public unsafe virtual void SendJammerVillainToHud(BmSDK.Engine.Canvas Canvas, BmSDK.BmGame.RPawnVillain JammerVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SendJammerVillainToHud", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -562,7 +562,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetAngularDistanceToTarget
     /// </summary>
-    public unsafe float GetAngularDistanceToTarget(System.Numerics.Vector3 target_location)
+    public unsafe virtual float GetAngularDistanceToTarget(System.Numerics.Vector3 target_location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetAngularDistanceToTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -581,7 +581,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDistanceToTarget
     /// </summary>
-    public unsafe float GetDistanceToTarget(System.Numerics.Vector3 target_location)
+    public unsafe virtual float GetDistanceToTarget(System.Numerics.Vector3 target_location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetDistanceToTarget", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -600,7 +600,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPositionAlongVapourPath
     /// </summary>
-    public unsafe float GetPositionAlongVapourPath()
+    public unsafe virtual float GetPositionAlongVapourPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetPositionAlongVapourPath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -618,7 +618,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCommsDisruptorMinigameStringForInitialDisruption
     /// </summary>
-    public unsafe BmSDK.FString GetCommsDisruptorMinigameStringForInitialDisruption()
+    public unsafe virtual BmSDK.FString GetCommsDisruptorMinigameStringForInitialDisruption()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetCommsDisruptorMinigameStringForInitialDisruption", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -629,7 +629,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCommsDisruptorMinigameString
     /// </summary>
-    public unsafe BmSDK.FString GetCommsDisruptorMinigameString()
+    public unsafe virtual BmSDK.FString GetCommsDisruptorMinigameString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetCommsDisruptorMinigameString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -640,7 +640,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveActorFromCommsDisruptorList
     /// </summary>
-    public unsafe void RemoveActorFromCommsDisruptorList(BmSDK.BmGame.RJammerTowerLocation the_actor)
+    public unsafe virtual void RemoveActorFromCommsDisruptorList(BmSDK.BmGame.RJammerTowerLocation the_actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.RemoveActorFromCommsDisruptorList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -652,7 +652,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddActorToCommsDisruptorList
     /// </summary>
-    public unsafe void AddActorToCommsDisruptorList(BmSDK.BmGame.RJammerTowerLocation the_actor)
+    public unsafe virtual void AddActorToCommsDisruptorList(BmSDK.BmGame.RJammerTowerLocation the_actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.AddActorToCommsDisruptorList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -664,7 +664,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindClosestActiveJammerSource
     /// </summary>
-    public unsafe System.Numerics.Vector3 FindClosestActiveJammerSource()
+    public unsafe virtual System.Numerics.Vector3 FindClosestActiveJammerSource()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.FindClosestActiveJammerSource", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -675,7 +675,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RemoveActorFromJammerList
     /// </summary>
-    public unsafe void RemoveActorFromJammerList(BmSDK.Engine.Actor the_actor)
+    public unsafe virtual void RemoveActorFromJammerList(BmSDK.Engine.Actor the_actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.RemoveActorFromJammerList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -687,7 +687,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddActorToJammerList
     /// </summary>
-    public unsafe void AddActorToJammerList(BmSDK.Engine.Actor the_actor)
+    public unsafe virtual void AddActorToJammerList(BmSDK.Engine.Actor the_actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.AddActorToJammerList", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -699,7 +699,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActorValidJammer
     /// </summary>
-    public unsafe bool IsActorValidJammer(BmSDK.Engine.Actor the_actor)
+    public unsafe virtual bool IsActorValidJammer(BmSDK.Engine.Actor the_actor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsActorValidJammer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -711,7 +711,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCompassAngleToLocation
     /// </summary>
-    public unsafe float GetCompassAngleToLocation(System.Numerics.Vector3 TargetLocation)
+    public unsafe virtual float GetCompassAngleToLocation(System.Numerics.Vector3 TargetLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetCompassAngleToLocation", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -723,7 +723,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDistanceFromFreezeLocation
     /// </summary>
-    public unsafe float GetDistanceFromFreezeLocation()
+    public unsafe virtual float GetDistanceFromFreezeLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.GetDistanceFromFreezeLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -734,7 +734,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForVapor
     /// </summary>
-    public unsafe void CheckForVapor()
+    public unsafe virtual void CheckForVapor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.CheckForVapor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -745,7 +745,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SortVapourEntryList
     /// </summary>
-    public unsafe void SortVapourEntryList(out BmSDK.TArray<BmSDK.BmGame.RForensicsDevice.FVapourEntry> Items)
+    public unsafe virtual void SortVapourEntryList(out BmSDK.TArray<BmSDK.BmGame.RForensicsDevice.FVapourEntry> Items)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SortVapourEntryList", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -757,7 +757,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayerTick
     /// </summary>
-    public unsafe void PlayerTick(float DeltaTime)
+    public unsafe virtual void PlayerTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.PlayerTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -769,7 +769,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeFilter
     /// </summary>
-    public unsafe void ChangeFilter(float DeltaTime, bool bFlashOutro)
+    public unsafe virtual void ChangeFilter(float DeltaTime, bool bFlashOutro)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ChangeFilter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -782,7 +782,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeFilterLock
     /// </summary>
-    public unsafe void ChangeFilterLock(float DeltaTime)
+    public unsafe virtual void ChangeFilterLock(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ChangeFilterLock", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -794,7 +794,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvestigateMovieInfo
     /// </summary>
-    public unsafe void SetInvestigateMovieInfo()
+    public unsafe virtual void SetInvestigateMovieInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetInvestigateMovieInfo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -805,7 +805,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ChangeFilterSettings
     /// </summary>
-    public unsafe void ChangeFilterSettings()
+    public unsafe virtual void ChangeFilterSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.ChangeFilterSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -816,7 +816,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVisualHudMode
     /// </summary>
-    public unsafe void SetVisualHudMode(BmSDK.BmGame.RForensicsDevice.VisualHudMode new_mode)
+    public unsafe virtual void SetVisualHudMode(BmSDK.BmGame.RForensicsDevice.VisualHudMode new_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetVisualHudMode", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -828,7 +828,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVisualHudModeAuto
     /// </summary>
-    public unsafe void SetVisualHudModeAuto()
+    public unsafe virtual void SetVisualHudModeAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetVisualHudModeAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -839,7 +839,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayZoomSound
     /// </summary>
-    public unsafe void PlayZoomSound(bool ZoomingIn)
+    public unsafe virtual void PlayZoomSound(bool ZoomingIn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.PlayZoomSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -851,7 +851,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsReady
     /// </summary>
-    public unsafe bool IsReady()
+    public unsafe virtual bool IsReady()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsReady", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -862,7 +862,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartupScan
     /// </summary>
-    public unsafe void StartupScan(float DeltaTime)
+    public unsafe virtual void StartupScan(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.StartupScan", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -874,7 +874,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -886,7 +886,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsEvidenceTrailActive
     /// </summary>
-    public unsafe bool IsEvidenceTrailActive(BmSDK.BmGame.REvidence EvidenceTrailInfo)
+    public unsafe virtual bool IsEvidenceTrailActive(BmSDK.BmGame.REvidence EvidenceTrailInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.IsEvidenceTrailActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -898,7 +898,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceTrailInactive
     /// </summary>
-    public unsafe void SetEvidenceTrailInactive(BmSDK.FString EvidenceNameString)
+    public unsafe virtual void SetEvidenceTrailInactive(BmSDK.FString EvidenceNameString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetEvidenceTrailInactive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -910,7 +910,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceTrailActive
     /// </summary>
-    public unsafe void SetEvidenceTrailActive(BmSDK.BmGame.REvidence EvidenceInfo)
+    public unsafe virtual void SetEvidenceTrailActive(BmSDK.BmGame.REvidence EvidenceInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetEvidenceTrailActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -922,7 +922,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceFound
     /// </summary>
-    public unsafe void SetEvidenceFound(BmSDK.BmGame.REvidenceInterface evidence)
+    public unsafe virtual void SetEvidenceFound(BmSDK.BmGame.REvidenceInterface evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.SetEvidenceFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -934,7 +934,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckEvidenceScanable
     /// </summary>
-    public unsafe bool CheckEvidenceScanable(BmSDK.BmGame.REvidenceInterface evidence, out float NotFullyVisible)
+    public unsafe virtual bool CheckEvidenceScanable(BmSDK.BmGame.REvidenceInterface evidence, out float NotFullyVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.CheckEvidenceScanable", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -947,7 +947,7 @@ public partial class RForensicsDevice : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicsDevice.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RSingleCrow : BmSDK.BmScript.RCrows, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayRandomIdle
     /// </summary>
-    public unsafe void PlayRandomIdle(int crowIndex)
+    public unsafe override void PlayRandomIdle(int crowIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSingleCrow.PlayRandomIdle", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RSingleCrow : BmSDK.BmScript.RCrows, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSingleCrow.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

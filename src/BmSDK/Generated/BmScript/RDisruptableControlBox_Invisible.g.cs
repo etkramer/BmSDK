@@ -71,7 +71,7 @@ public partial class RDisruptableControlBox_Invisible : BmSDK.BmScript.RDisrupta
     /// <summary>
     /// Function: ChangeState
     /// </summary>
-    public unsafe void ChangeState()
+    public unsafe override void ChangeState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox_Invisible.ChangeState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDisruptableControlBox_Invisible : BmSDK.BmScript.RDisrupta
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDisruptableControlBox_Invisible.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

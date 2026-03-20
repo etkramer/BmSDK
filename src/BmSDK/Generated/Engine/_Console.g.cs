@@ -36,7 +36,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateCompleteIndices
     /// </summary>
-    public unsafe void UpdateCompleteIndices()
+    public unsafe virtual void UpdateCompleteIndices()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.UpdateCompleteIndices", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: BuildRuntimeAutoCompleteList
     /// </summary>
-    public unsafe void BuildRuntimeAutoCompleteList(bool bForce = default)
+    public unsafe virtual void BuildRuntimeAutoCompleteList(bool bForce = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.BuildRuntimeAutoCompleteList", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: AppendInputText
     /// </summary>
-    public unsafe void AppendInputText(BmSDK.FString Text)
+    public unsafe virtual void AppendInputText(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.AppendInputText", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -85,7 +85,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessControlKey
     /// </summary>
-    public unsafe bool ProcessControlKey(BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event)
+    public unsafe virtual bool ProcessControlKey(BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.ProcessControlKey", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushPlayerInput
     /// </summary>
-    public unsafe void FlushPlayerInput()
+    public unsafe virtual void FlushPlayerInput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.FlushPlayerInput", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: InputChar
     /// </summary>
-    public unsafe bool InputChar(int ControllerId, BmSDK.FString Unicode)
+    public unsafe virtual bool InputChar(int ControllerId, BmSDK.FString Unicode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.InputChar", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -122,7 +122,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: InputKey
     /// </summary>
-    public unsafe bool InputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
+    public unsafe virtual bool InputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent Event, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.InputKey", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -138,7 +138,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: PostRender_Console
     /// </summary>
-    public unsafe void PostRender_Console(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void PostRender_Console(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.PostRender_Console", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: OutputText
     /// </summary>
-    public unsafe void OutputText(BmSDK.FString Text)
+    public unsafe virtual void OutputText(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.OutputText", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -162,7 +162,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: OutputTextLine
     /// </summary>
-    public unsafe void OutputTextLine(BmSDK.FString Text)
+    public unsafe virtual void OutputTextLine(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.OutputTextLine", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -174,7 +174,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearOutput
     /// </summary>
-    public unsafe void ClearOutput()
+    public unsafe virtual void ClearOutput()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.ClearOutput", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: ConsoleCommand
     /// </summary>
-    public unsafe void ConsoleCommand(BmSDK.FString Command)
+    public unsafe virtual void ConsoleCommand(BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.ConsoleCommand", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -197,7 +197,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: PurgeCommandFromHistory
     /// </summary>
-    public unsafe void PurgeCommandFromHistory(BmSDK.FString Command)
+    public unsafe virtual void PurgeCommandFromHistory(BmSDK.FString Command)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.PurgeCommandFromHistory", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -209,7 +209,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCursorPos
     /// </summary>
-    public unsafe void SetCursorPos(int Position)
+    public unsafe virtual void SetCursorPos(int Position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.SetCursorPos", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -221,7 +221,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInputText
     /// </summary>
-    public unsafe void SetInputText(BmSDK.FString Text)
+    public unsafe virtual void SetInputText(BmSDK.FString Text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.SetInputText", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -233,7 +233,7 @@ public partial class _Console : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialized
     /// </summary>
-    public unsafe void Initialized()
+    public unsafe override void Initialized()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Console.Initialized", true);
         byte* paramsPtr = stackalloc byte[0];

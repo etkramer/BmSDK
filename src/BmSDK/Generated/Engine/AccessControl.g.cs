@@ -71,7 +71,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: IsIDBanned
     /// </summary>
-    public unsafe bool IsIDBanned(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetId)
+    public unsafe virtual bool IsIDBanned(out BmSDK.Engine.OnlineSubsystem.FUniqueNetId NetId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.IsIDBanned", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckIPPolicy
     /// </summary>
-    public unsafe bool CheckIPPolicy(BmSDK.FString Address)
+    public unsafe virtual bool CheckIPPolicy(BmSDK.FString Address)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.CheckIPPolicy", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -95,7 +95,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ValidLogin
     /// </summary>
-    public unsafe bool ValidLogin(BmSDK.FString UserName, BmSDK.FString Password)
+    public unsafe virtual bool ValidLogin(BmSDK.FString UserName, BmSDK.FString Password)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.ValidLogin", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -108,7 +108,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ParseAdminOptions
     /// </summary>
-    public unsafe bool ParseAdminOptions(BmSDK.FString Options)
+    public unsafe virtual bool ParseAdminOptions(BmSDK.FString Options)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.ParseAdminOptions", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -120,7 +120,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AdminExited
     /// </summary>
-    public unsafe void AdminExited(BmSDK.Engine.PlayerController P)
+    public unsafe virtual void AdminExited(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.AdminExited", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AdminEntered
     /// </summary>
-    public unsafe void AdminEntered(BmSDK.Engine.PlayerController P)
+    public unsafe virtual void AdminEntered(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.AdminEntered", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AdminLogout
     /// </summary>
-    public unsafe bool AdminLogout(BmSDK.Engine.PlayerController P)
+    public unsafe virtual bool AdminLogout(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.AdminLogout", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -156,7 +156,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: AdminLogin
     /// </summary>
-    public unsafe bool AdminLogin(BmSDK.Engine.PlayerController P, BmSDK.FString Password)
+    public unsafe virtual bool AdminLogin(BmSDK.Engine.PlayerController P, BmSDK.FString Password)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.AdminLogin", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -169,7 +169,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: KickPlayer
     /// </summary>
-    public unsafe bool KickPlayer(BmSDK.Engine.PlayerController C, BmSDK.FString KickReason)
+    public unsafe virtual bool KickPlayer(BmSDK.Engine.PlayerController C, BmSDK.FString KickReason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.KickPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -182,7 +182,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceKickPlayer
     /// </summary>
-    public unsafe bool ForceKickPlayer(BmSDK.Engine.PlayerController C, BmSDK.FString KickReason)
+    public unsafe virtual bool ForceKickPlayer(BmSDK.Engine.PlayerController C, BmSDK.FString KickReason)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.ForceKickPlayer", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -195,7 +195,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: KickBan
     /// </summary>
-    public unsafe void KickBan(BmSDK.FString Target)
+    public unsafe virtual void KickBan(BmSDK.FString Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.KickBan", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -207,7 +207,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: Kick
     /// </summary>
-    public unsafe void Kick(BmSDK.FString Target)
+    public unsafe virtual void Kick(BmSDK.FString Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.Kick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -219,7 +219,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: GetControllerFromString
     /// </summary>
-    public unsafe BmSDK.Engine.Controller GetControllerFromString(BmSDK.FString Target)
+    public unsafe virtual BmSDK.Engine.Controller GetControllerFromString(BmSDK.FString Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.GetControllerFromString", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -231,7 +231,7 @@ public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAdmin
     /// </summary>
-    public unsafe bool IsAdmin(BmSDK.Engine.PlayerController P)
+    public unsafe virtual bool IsAdmin(BmSDK.Engine.PlayerController P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AccessControl.IsAdmin", true);
         byte* paramsPtr = stackalloc byte[8];

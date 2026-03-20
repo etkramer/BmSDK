@@ -66,7 +66,7 @@ public partial class RCreeperVineBase : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartAttack
     /// </summary>
-    public unsafe void StartAttack(float DelayDuration)
+    public unsafe virtual void StartAttack(float DelayDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCreeperVineBase.StartAttack", true);
         byte* paramsPtr = stackalloc byte[4];

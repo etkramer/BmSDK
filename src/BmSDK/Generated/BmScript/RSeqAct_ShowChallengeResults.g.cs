@@ -47,7 +47,7 @@ public partial class RSeqAct_ShowChallengeResults : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShowChallengeResults.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ShowChallengeResults : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: SetUpPlayerController
     /// </summary>
-    public unsafe void SetUpPlayerController()
+    public unsafe virtual void SetUpPlayerController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShowChallengeResults.SetUpPlayerController", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ShowChallengeResults : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ShowChallengeResults.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

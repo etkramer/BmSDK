@@ -71,7 +71,7 @@ public partial class RUberSimpleCrowdActor : BmSDK.BmGame.RUberSimpleCrowdActorB
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RUberSimpleCrowdActor.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

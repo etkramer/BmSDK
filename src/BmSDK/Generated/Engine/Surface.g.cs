@@ -31,7 +31,7 @@ public partial class Surface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSurfaceHeight
     /// </summary>
-    public unsafe float GetSurfaceHeight()
+    public unsafe virtual float GetSurfaceHeight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Surface.GetSurfaceHeight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -49,7 +49,7 @@ public partial class Surface : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSurfaceWidth
     /// </summary>
-    public unsafe float GetSurfaceWidth()
+    public unsafe virtual float GetSurfaceWidth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Surface.GetSurfaceWidth", true);
         byte* paramsPtr = stackalloc byte[4];

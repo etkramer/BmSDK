@@ -71,7 +71,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.Tick", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -83,7 +83,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: DeactivatePressurePad
     /// </summary>
-    public unsafe void DeactivatePressurePad(bool bSilent = default)
+    public unsafe override void DeactivatePressurePad(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.DeactivatePressurePad", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: Attach
     /// </summary>
-    public unsafe void Attach(BmSDK.Engine.Actor Other)
+    public unsafe override void Attach(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.Attach", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: ShockwaveLandOver
     /// </summary>
-    public unsafe bool ShockwaveLandOver()
+    public unsafe virtual bool ShockwaveLandOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.ShockwaveLandOver", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: WasShockwave
     /// </summary>
-    public unsafe bool WasShockwave()
+    public unsafe virtual bool WasShockwave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.WasShockwave", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[92];
@@ -158,7 +158,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangPos()
+    public unsafe virtual System.Numerics.Vector3 GetBatarangPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.GetBatarangPos", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -213,7 +213,7 @@ public partial class RDivePressurePad : BmSDK.BmScript.RPresurePad, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePad.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];

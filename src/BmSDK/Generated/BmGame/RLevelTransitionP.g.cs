@@ -66,7 +66,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: CheckPlayerStart
     /// </summary>
-    public unsafe void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
+    public unsafe override void CheckPlayerStart(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.CheckPlayerStart", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: MovePlayerHere
     /// </summary>
-    public unsafe void MovePlayerHere()
+    public unsafe override void MovePlayerHere()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.MovePlayerHere", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -100,7 +100,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: EnterTransition
     /// </summary>
-    public unsafe void EnterTransition()
+    public unsafe virtual void EnterTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.EnterTransition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: ReadyToSwitchLevels
     /// </summary>
-    public unsafe bool ReadyToSwitchLevels()
+    public unsafe override bool ReadyToSwitchLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.ReadyToSwitchLevels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: ReadyToSwitchPersistentLevels
     /// </summary>
-    public unsafe bool ReadyToSwitchPersistentLevels()
+    public unsafe virtual bool ReadyToSwitchPersistentLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.ReadyToSwitchPersistentLevels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -133,7 +133,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: PreloadLevelsForEntering
     /// </summary>
-    public unsafe void PreloadLevelsForEntering()
+    public unsafe override void PreloadLevelsForEntering()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.PreloadLevelsForEntering", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -144,7 +144,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: ShouldActivateStreamingAfterPreloading
     /// </summary>
-    public unsafe bool ShouldActivateStreamingAfterPreloading()
+    public unsafe override bool ShouldActivateStreamingAfterPreloading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.ShouldActivateStreamingAfterPreloading", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: InitialiseStreamingLevels
     /// </summary>
-    public unsafe void InitialiseStreamingLevels()
+    public unsafe virtual void InitialiseStreamingLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.InitialiseStreamingLevels", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: DoesLevelStreaming
     /// </summary>
-    public unsafe bool DoesLevelStreaming()
+    public unsafe override bool DoesLevelStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.DoesLevelStreaming", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -184,7 +184,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: SwitchPersistentLevels
     /// </summary>
-    public unsafe void SwitchPersistentLevels()
+    public unsafe virtual void SwitchPersistentLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.SwitchPersistentLevels", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RLevelTransitionP : BmSDK.BmGame.RLevelTransition, BmSDK.IG
     /// <summary>
     /// Function: ActivateStreaming
     /// </summary>
-    public unsafe void ActivateStreaming()
+    public unsafe override void ActivateStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelTransitionP.ActivateStreaming", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RSeqAct_TriggerSpecialMove : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: FinishedSpecialMove
     /// </summary>
-    public unsafe void FinishedSpecialMove()
+    public unsafe virtual void FinishedSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TriggerSpecialMove.FinishedSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_TriggerSpecialMove : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_TriggerSpecialMove.Activated", true);
         byte* paramsPtr = stackalloc byte[124];

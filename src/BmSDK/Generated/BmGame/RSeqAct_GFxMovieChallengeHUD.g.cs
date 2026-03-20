@@ -36,7 +36,7 @@ public partial class RSeqAct_GFxMovieChallengeHUD : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: LaunchCampaignProgressScreenIfActive
     /// </summary>
-    public unsafe void LaunchCampaignProgressScreenIfActive(BmSDK.BmGame.RPlayerController RPC)
+    public unsafe virtual void LaunchCampaignProgressScreenIfActive(BmSDK.BmGame.RPlayerController RPC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GFxMovieChallengeHUD.LaunchCampaignProgressScreenIfActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -48,7 +48,7 @@ public partial class RSeqAct_GFxMovieChallengeHUD : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_GFxMovieChallengeHUD.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

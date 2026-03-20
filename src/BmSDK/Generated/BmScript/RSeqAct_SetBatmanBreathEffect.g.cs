@@ -47,7 +47,7 @@ public partial class RSeqAct_SetBatmanBreathEffect : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: SetBreathActive
     /// </summary>
-    public unsafe void SetBreathActive(bool is_active)
+    public unsafe virtual void SetBreathActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetBatmanBreathEffect.SetBreathActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SetBatmanBreathEffect : BmSDK.Engine.SeqAct_Latent,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetBatmanBreathEffect.Update", true);
         byte* paramsPtr = stackalloc byte[8];

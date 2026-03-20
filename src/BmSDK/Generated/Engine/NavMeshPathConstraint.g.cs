@@ -36,7 +36,7 @@ public partial class NavMeshPathConstraint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RestartPathFind
     /// </summary>
-    public unsafe void RestartPathFind()
+    public unsafe virtual void RestartPathFind()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPathConstraint.RestartPathFind", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class NavMeshPathConstraint : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Recycle
     /// </summary>
-    public unsafe void Recycle()
+    public unsafe virtual void Recycle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NavMeshPathConstraint.Recycle", true);
         byte* paramsPtr = stackalloc byte[0];

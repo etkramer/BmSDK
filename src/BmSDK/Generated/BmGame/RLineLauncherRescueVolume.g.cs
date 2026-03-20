@@ -71,7 +71,7 @@ public partial class RLineLauncherRescueVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncherRescueVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RLineLauncherRescueVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncherRescueVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -98,7 +98,7 @@ public partial class RLineLauncherRescueVolume : BmSDK.Engine.Volume, BmSDK.IGam
     /// <summary>
     /// Function: UpdateHostages
     /// </summary>
-    public unsafe void UpdateHostages()
+    public unsafe virtual void UpdateHostages()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLineLauncherRescueVolume.UpdateHostages", true);
         byte* paramsPtr = stackalloc byte[4];

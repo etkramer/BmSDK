@@ -71,7 +71,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTagString
     /// </summary>
-    public unsafe BmSDK.FString GetTagString()
+    public unsafe virtual BmSDK.FString GetTagString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.GetTagString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle inAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsLocked
     /// </summary>
-    public unsafe bool IsLocked()
+    public unsafe virtual bool IsLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.IsLocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Unlock
     /// </summary>
-    public unsafe void Unlock(BmSDK.BmGame.RAEC_Search_Sub_Guard Unlocker)
+    public unsafe virtual void Unlock(BmSDK.BmGame.RAEC_Search_Sub_Guard Unlocker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.Unlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Steal
     /// </summary>
-    public unsafe void Steal(BmSDK.BmGame.RAEC_Search_Sub_Guard NewLockedBy)
+    public unsafe virtual void Steal(BmSDK.BmGame.RAEC_Search_Sub_Guard NewLockedBy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.Steal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class RGuardPoint : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGuardPoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

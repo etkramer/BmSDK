@@ -36,7 +36,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceAnnounced
     /// </summary>
-    public unsafe void SetEvidenceAnnounced(BmSDK.GameObject evidence)
+    public unsafe virtual void SetEvidenceAnnounced(BmSDK.GameObject evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.SetEvidenceAnnounced", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceFound
     /// </summary>
-    public unsafe bool SetEvidenceFound(BmSDK.GameObject evidence)
+    public unsafe virtual bool SetEvidenceFound(BmSDK.GameObject evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.SetEvidenceFound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEvidenceScanned
     /// </summary>
-    public unsafe bool SetEvidenceScanned(BmSDK.BmGame.REvidenceInterface evidence)
+    public unsafe virtual bool SetEvidenceScanned(BmSDK.BmGame.REvidenceInterface evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.SetEvidenceScanned", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsRoomUnlocked
     /// </summary>
-    public unsafe bool IsRoomUnlocked(BmSDK.FName roomName)
+    public unsafe virtual bool IsRoomUnlocked(BmSDK.FName roomName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.IsRoomUnlocked", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRoomUnlocked
     /// </summary>
-    public unsafe void SetRoomUnlocked(BmSDK.FName roomName, bool bUnLock, BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void SetRoomUnlocked(BmSDK.FName roomName, bool bUnLock, BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.SetRoomUnlocked", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RefreshRooms
     /// </summary>
-    public unsafe void RefreshRooms()
+    public unsafe virtual void RefreshRooms()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.RefreshRooms", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -109,7 +109,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasEvidenceBeenFoundAndNotAnnounced
     /// </summary>
-    public unsafe bool HasEvidenceBeenFoundAndNotAnnounced(BmSDK.GameObject evidence)
+    public unsafe virtual bool HasEvidenceBeenFoundAndNotAnnounced(BmSDK.GameObject evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.HasEvidenceBeenFoundAndNotAnnounced", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -121,7 +121,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HasEvidenceBeenScanned
     /// </summary>
-    public unsafe bool HasEvidenceBeenScanned(BmSDK.BmGame.REvidence evidence)
+    public unsafe virtual bool HasEvidenceBeenScanned(BmSDK.BmGame.REvidence evidence)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.HasEvidenceBeenScanned", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -133,7 +133,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFilterName
     /// </summary>
-    public unsafe BmSDK.FString GetFilterName()
+    public unsafe virtual BmSDK.FString GetFilterName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.GetFilterName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -144,7 +144,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DeleteFilterAndAwardXp
     /// </summary>
-    public unsafe void DeleteFilterAndAwardXp()
+    public unsafe virtual void DeleteFilterAndAwardXp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.DeleteFilterAndAwardXp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -155,7 +155,7 @@ public partial class REvidenceLog : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOwner
     /// </summary>
-    public unsafe void SetOwner(BmSDK.BmGame.RPlayerController Owner)
+    public unsafe virtual void SetOwner(BmSDK.BmGame.RPlayerController Owner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REvidenceLog.SetOwner", true);
         byte* paramsPtr = stackalloc byte[4];

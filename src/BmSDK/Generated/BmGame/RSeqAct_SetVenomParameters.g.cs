@@ -47,7 +47,7 @@ public partial class RSeqAct_SetVenomParameters : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetParameters
     /// </summary>
-    public unsafe void SetParameters()
+    public unsafe virtual void SetParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetVenomParameters.SetParameters", true);
         byte* paramsPtr = stackalloc byte[0];

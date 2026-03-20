@@ -71,7 +71,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim()
+    public unsafe override bool FinishAttackVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: LowerCamera
     /// </summary>
-    public unsafe void LowerCamera()
+    public unsafe virtual void LowerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.LowerCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: MakeAttackerSlave
     /// </summary>
-    public unsafe void MakeAttackerSlave()
+    public unsafe virtual void MakeAttackerSlave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.MakeAttackerSlave", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.Begin", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -138,7 +138,7 @@ public partial class RFreezeTakeDownStage_LedgeGrab : BmSDK.BmScript.RFreezeTake
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_LedgeGrab.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[28];

@@ -71,7 +71,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: EndCamera
     /// </summary>
-    public unsafe void EndCamera()
+    public unsafe virtual void EndCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.EndCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.Tick", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -94,7 +94,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: SetDestLookAtPoint
     /// </summary>
-    public unsafe void SetDestLookAtPoint()
+    public unsafe virtual void SetDestLookAtPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.SetDestLookAtPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: SetCamStage
     /// </summary>
-    public unsafe void SetCamStage(int NewStage, System.Numerics.Vector3 ForDir, bool bSnap = default)
+    public unsafe virtual void SetCamStage(int NewStage, System.Numerics.Vector3 ForDir, bool bSnap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.SetCamStage", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -119,7 +119,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: UpdateProgressLevel
     /// </summary>
-    public unsafe void UpdateProgressLevel(float DeltaTime)
+    public unsafe virtual void UpdateProgressLevel(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.UpdateProgressLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -131,7 +131,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: SetProgressLevel
     /// </summary>
-    public unsafe void SetProgressLevel(float NormalisedProgress)
+    public unsafe virtual void SetProgressLevel(float NormalisedProgress)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.SetProgressLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RCombatMove_LunaticGrab_Cam : BmSDK.Engine.CameraActor, BmS
     /// <summary>
     /// Function: StartCamera
     /// </summary>
-    public unsafe void StartCamera(BmSDK.BmGame.RPawnCombat BatmanPawn, System.Numerics.Vector3 ForDir, float NewStage2HeightOffset = default, float NewCamDistMulti = default, float NewCamDropOffset = default)
+    public unsafe virtual void StartCamera(BmSDK.BmGame.RPawnCombat BatmanPawn, System.Numerics.Vector3 ForDir, float NewStage2HeightOffset = default, float NewCamDistMulti = default, float NewCamDropOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab_Cam.StartCamera", true);
         byte* paramsPtr = stackalloc byte[28];

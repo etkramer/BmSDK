@@ -71,7 +71,7 @@ public partial class RHarpoonTriggerMoveable : BmSDK.BmScript.RHarpoonTrigger, B
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics()
+    public unsafe override void GoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTriggerMoveable.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHarpoonTriggerMoveable : BmSDK.BmScript.RHarpoonTrigger, B
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHarpoonTriggerMoveable.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[116];

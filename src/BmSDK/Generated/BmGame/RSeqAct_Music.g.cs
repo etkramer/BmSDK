@@ -47,7 +47,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: AdvanceResetCue
     /// </summary>
-    public unsafe void AdvanceResetCue()
+    public unsafe virtual void AdvanceResetCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.AdvanceResetCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: AdvanceCue
     /// </summary>
-    public unsafe void AdvanceCue()
+    public unsafe virtual void AdvanceCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.AdvanceCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: StopCue
     /// </summary>
-    public unsafe void StopCue()
+    public unsafe virtual void StopCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.StopCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: StartCue
     /// </summary>
-    public unsafe void StartCue()
+    public unsafe virtual void StartCue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.StartCue", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: OnAudioMarker
     /// </summary>
-    public unsafe void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
+    public unsafe virtual void OnAudioMarker(BmSDK.Engine.AudioComponent AC, BmSDK.FString MarkerName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.OnAudioMarker", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RSeqAct_Music : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObje
     /// <summary>
     /// Function: OnAudioFinished
     /// </summary>
-    public unsafe void OnAudioFinished(BmSDK.Engine.AudioComponent AC)
+    public unsafe virtual void OnAudioFinished(BmSDK.Engine.AudioComponent AC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Music.OnAudioFinished", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlayHurtEmote
     /// </summary>
-    public unsafe void PlayHurtEmote(float RandChance)
+    public unsafe override void PlayHurtEmote(float RandChance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlayHurtEmote", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetFailedPairedAnimMoveAnimset
     /// </summary>
-    public unsafe void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
+    public unsafe override void GetFailedPairedAnimMoveAnimset(out BmSDK.Engine.AnimSet MyAnimset, BmSDK.BmGame.RPawnCombat OtherPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetFailedPairedAnimMoveAnimset", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -96,7 +96,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: UpdateBetweenSticksBeam
     /// </summary>
-    public unsafe void UpdateBetweenSticksBeam()
+    public unsafe virtual void UpdateBetweenSticksBeam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.UpdateBetweenSticksBeam", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -107,7 +107,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HideBeamBetweenSticks
     /// </summary>
-    public unsafe void HideBeamBetweenSticks()
+    public unsafe virtual void HideBeamBetweenSticks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HideBeamBetweenSticks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowBeamBetweenSticks
     /// </summary>
-    public unsafe void ShowBeamBetweenSticks()
+    public unsafe virtual void ShowBeamBetweenSticks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowBeamBetweenSticks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetUnlockedMeleeArmourLevel
     /// </summary>
-    public unsafe int GetUnlockedMeleeArmourLevel()
+    public unsafe override int GetUnlockedMeleeArmourLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetUnlockedMeleeArmourLevel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -140,7 +140,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetUnlockedBallisticArmourLevel
     /// </summary>
-    public unsafe int GetUnlockedBallisticArmourLevel()
+    public unsafe override int GetUnlockedBallisticArmourLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetUnlockedBallisticArmourLevel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -151,7 +151,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlaySound_Impact
     /// </summary>
-    public unsafe void PlaySound_Impact(BmSDK.BmGame.RPawnCombat Villain, bool bIsStrike, bool bFinishingBlow, bool bIsHeadImpact, bool bIsPunch, bool bIsStrong, bool bIsBlocked, bool bCanEmote = default)
+    public unsafe override void PlaySound_Impact(BmSDK.BmGame.RPawnCombat Villain, bool bIsStrike, bool bFinishingBlow, bool bIsHeadImpact, bool bIsPunch, bool bIsStrong, bool bIsBlocked, bool bCanEmote = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlaySound_Impact", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -170,7 +170,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetStrikeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetStrikeMovementStance()
+    public unsafe override BmSDK.FName GetStrikeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetStrikeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -181,7 +181,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetCinematicModeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetCinematicModeMovementStance()
+    public unsafe override BmSDK.FName GetCinematicModeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetCinematicModeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -192,7 +192,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetWalkingModeMovementStance
     /// </summary>
-    public unsafe BmSDK.FName GetWalkingModeMovementStance()
+    public unsafe override BmSDK.FName GetWalkingModeMovementStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetWalkingModeMovementStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -203,7 +203,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: NofifyBeginStateBatarangPrimed
     /// </summary>
-    public unsafe void NofifyBeginStateBatarangPrimed()
+    public unsafe override void NofifyBeginStateBatarangPrimed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.NofifyBeginStateBatarangPrimed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: NotifyGadgetEquip
     /// </summary>
-    public unsafe void NotifyGadgetEquip(bool equip)
+    public unsafe override void NotifyGadgetEquip(bool equip)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.NotifyGadgetEquip", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -226,7 +226,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: SpawnBatclawSlam
     /// </summary>
-    public unsafe void SpawnBatclawSlam(BmSDK.BmGame.RPawnCombat TargetPawn, BmSDK.Class dmgType)
+    public unsafe override void SpawnBatclawSlam(BmSDK.BmGame.RPawnCombat TargetPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.SpawnBatclawSlam", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -239,7 +239,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.Died", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -253,7 +253,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetAfterCombatAnim
     /// </summary>
-    public unsafe BmSDK.FName GetAfterCombatAnim()
+    public unsafe override BmSDK.FName GetAfterCombatAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetAfterCombatAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -264,7 +264,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetAfterCombatAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAfterCombatAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetAfterCombatAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetAfterCombatAnimset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -275,7 +275,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PounceOnThug
     /// </summary>
-    public unsafe void PounceOnThug(BmSDK.BmGame.RPawnVillain Target)
+    public unsafe override void PounceOnThug(BmSDK.BmGame.RPawnVillain Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PounceOnThug", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -287,7 +287,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HopOffVantagePoint
     /// </summary>
-    public unsafe void HopOffVantagePoint()
+    public unsafe override void HopOffVantagePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HopOffVantagePoint", true);
         byte* paramsPtr = stackalloc byte[200];
@@ -298,7 +298,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HideWeaponRight
     /// </summary>
-    public unsafe void HideWeaponRight()
+    public unsafe virtual void HideWeaponRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HideWeaponRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeaponRightSmall
     /// </summary>
-    public unsafe void ShowWeaponRightSmall()
+    public unsafe virtual void ShowWeaponRightSmall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeaponRightSmall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeaponRight
     /// </summary>
-    public unsafe void ShowWeaponRight()
+    public unsafe virtual void ShowWeaponRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeaponRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -331,7 +331,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HideWeaponLeft
     /// </summary>
-    public unsafe void HideWeaponLeft()
+    public unsafe virtual void HideWeaponLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HideWeaponLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -342,7 +342,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeaponLeftSmall
     /// </summary>
-    public unsafe void ShowWeaponLeftSmall()
+    public unsafe virtual void ShowWeaponLeftSmall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeaponLeftSmall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -353,7 +353,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeaponLeft
     /// </summary>
-    public unsafe void ShowWeaponLeft()
+    public unsafe virtual void ShowWeaponLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeaponLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -364,7 +364,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlayStickAnimRight
     /// </summary>
-    public unsafe void PlayStickAnimRight(BmSDK.FName AnimName, float Speed = default, float StartTime = default)
+    public unsafe virtual void PlayStickAnimRight(BmSDK.FName AnimName, float Speed = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlayStickAnimRight", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -378,7 +378,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlayStickAnimLeft
     /// </summary>
-    public unsafe void PlayStickAnimLeft(BmSDK.FName AnimName, float Speed = default, float StartTime = default)
+    public unsafe virtual void PlayStickAnimLeft(BmSDK.FName AnimName, float Speed = default, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlayStickAnimLeft", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -392,7 +392,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlayStowSticksAnim
     /// </summary>
-    public unsafe bool PlayStowSticksAnim()
+    public unsafe virtual bool PlayStowSticksAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlayStowSticksAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -403,7 +403,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HideWeapons
     /// </summary>
-    public unsafe void HideWeapons()
+    public unsafe virtual void HideWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HideWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -414,7 +414,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: HideWeaponsWithFlourish
     /// </summary>
-    public unsafe void HideWeaponsWithFlourish()
+    public unsafe virtual void HideWeaponsWithFlourish()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.HideWeaponsWithFlourish", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -425,7 +425,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeaponsSmall
     /// </summary>
-    public unsafe void ShowWeaponsSmall()
+    public unsafe virtual void ShowWeaponsSmall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeaponsSmall", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -436,7 +436,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShowWeapons
     /// </summary>
-    public unsafe void ShowWeapons()
+    public unsafe virtual void ShowWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShowWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -447,7 +447,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ShrinkWeapons
     /// </summary>
-    public unsafe void ShrinkWeapons()
+    public unsafe virtual void ShrinkWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ShrinkWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -458,7 +458,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GrowWeapons
     /// </summary>
-    public unsafe void GrowWeapons()
+    public unsafe virtual void GrowWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GrowWeapons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -469,7 +469,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: StrikeStanceReversed
     /// </summary>
-    public unsafe void StrikeStanceReversed()
+    public unsafe virtual void StrikeStanceReversed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.StrikeStanceReversed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -480,7 +480,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: DisablePostCombatStance
     /// </summary>
-    public unsafe void DisablePostCombatStance()
+    public unsafe virtual void DisablePostCombatStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.DisablePostCombatStance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -491,7 +491,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: DeInitAttackMoveWeaponsFromCancelSpecialMove
     /// </summary>
-    public unsafe void DeInitAttackMoveWeaponsFromCancelSpecialMove()
+    public unsafe override void DeInitAttackMoveWeaponsFromCancelSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.DeInitAttackMoveWeaponsFromCancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -502,7 +502,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: DeInitAttackMoveWeaponsFromFinishSpecialMove
     /// </summary>
-    public unsafe void DeInitAttackMoveWeaponsFromFinishSpecialMove()
+    public unsafe override void DeInitAttackMoveWeaponsFromFinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.DeInitAttackMoveWeaponsFromFinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -513,7 +513,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: DeInitAttackMoveWeapons
     /// </summary>
-    public unsafe void DeInitAttackMoveWeapons()
+    public unsafe override void DeInitAttackMoveWeapons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.DeInitAttackMoveWeapons", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -524,7 +524,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: InitAttackMoveWeapons
     /// </summary>
-    public unsafe void InitAttackMoveWeapons(bool bMirrored)
+    public unsafe override void InitAttackMoveWeapons(bool bMirrored)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.InitAttackMoveWeapons", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -536,7 +536,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: OverrideChangeRunningModeStance
     /// </summary>
-    public unsafe bool OverrideChangeRunningModeStance()
+    public unsafe override bool OverrideChangeRunningModeStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.OverrideChangeRunningModeStance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -547,7 +547,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: OverrideChangeWalkingModeStance
     /// </summary>
-    public unsafe bool OverrideChangeWalkingModeStance()
+    public unsafe override bool OverrideChangeWalkingModeStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.OverrideChangeWalkingModeStance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -558,7 +558,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetContactCharacterName
     /// </summary>
-    public unsafe BmSDK.FString GetContactCharacterName()
+    public unsafe override BmSDK.FString GetContactCharacterName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetContactCharacterName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -569,7 +569,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: FindContactName
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent FindContactName(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact)
+    public unsafe override BmSDK.Engine.AkEvent FindContactName(BmSDK.BmGame.RAnimNotify_Footstep.EFoot Foot, BmSDK.BmGame.RAnimNotify_Footstep.EContactType Contact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.FindContactName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -582,7 +582,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PlayRicochetCatchAnim
     /// </summary>
-    public unsafe void PlayRicochetCatchAnim()
+    public unsafe virtual void PlayRicochetCatchAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PlayRicochetCatchAnim", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -593,7 +593,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: OnCatchRicochetStick
     /// </summary>
-    public unsafe void OnCatchRicochetStick()
+    public unsafe virtual void OnCatchRicochetStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.OnCatchRicochetStick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -604,7 +604,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: CombatMoveInitialised
     /// </summary>
-    public unsafe void CombatMoveInitialised(BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void CombatMoveInitialised(BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.CombatMoveInitialised", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -616,7 +616,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: OnThrowRicochetStick
     /// </summary>
-    public unsafe void OnThrowRicochetStick()
+    public unsafe virtual void OnThrowRicochetStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.OnThrowRicochetStick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -627,7 +627,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddDefaultInventory
     /// </summary>
-    public unsafe void AddDefaultInventory()
+    public unsafe override void AddDefaultInventory()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddDefaultInventory", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -638,7 +638,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddJammerGadgetMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddJammerGadgetMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddJammerGadgetMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddJammerGadgetMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[5040];
@@ -650,7 +650,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddLineLauncherMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddLineLauncherMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddLineLauncherMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddLineLauncherMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[1436];
@@ -662,7 +662,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddHarpoonMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddHarpoonMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddHarpoonMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddHarpoonMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2320];
@@ -674,7 +674,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddWristDartMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddWristDartMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddWristDartMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddWristDartMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2524];
@@ -686,7 +686,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddAreaStunMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddAreaStunMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddAreaStunMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddAreaStunMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2932];
@@ -698,7 +698,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddRicochetMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddRicochetMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddRicochetMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddRicochetMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2660];
@@ -710,7 +710,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddBatarangMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddBatarangMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddBatarangMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddBatarangMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[3476];
@@ -722,7 +722,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddGrappleMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddGrappleMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddGrappleMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddGrappleMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2052];
@@ -734,7 +734,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: SetupWirePoses
     /// </summary>
-    public unsafe void SetupWirePoses(BmSDK.BmGame.RPoseConfig PoseConfig)
+    public unsafe virtual void SetupWirePoses(BmSDK.BmGame.RPoseConfig PoseConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.SetupWirePoses", true);
         byte* paramsPtr = stackalloc byte[684];
@@ -746,7 +746,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddNightwingMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddNightwingMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void AddNightwingMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddNightwingMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[2728];
@@ -758,7 +758,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: ModifyExistingPoses
     /// </summary>
-    public unsafe void ModifyExistingPoses(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe virtual void ModifyExistingPoses(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.ModifyExistingPoses", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -770,7 +770,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: AddMovementMovesToWeaponConfig
     /// </summary>
-    public unsafe void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
+    public unsafe override void AddMovementMovesToWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.AddMovementMovesToWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -782,7 +782,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -794,7 +794,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.HUD H)
+    public unsafe override void DrawHUD(BmSDK.Engine.HUD H)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -806,7 +806,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: FillProximityScannerArray
     /// </summary>
-    public unsafe void FillProximityScannerArray()
+    public unsafe virtual void FillProximityScannerArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.FillProximityScannerArray", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -817,7 +817,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: TickProximityScanner
     /// </summary>
-    public unsafe void TickProximityScanner(float DeltaTime)
+    public unsafe virtual void TickProximityScanner(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.TickProximityScanner", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -829,7 +829,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: GetHarpoonOpenGrateMove
     /// </summary>
-    public unsafe BmSDK.BmGame.RSpecialMoveConfig GetHarpoonOpenGrateMove()
+    public unsafe override BmSDK.BmGame.RSpecialMoveConfig GetHarpoonOpenGrateMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.GetHarpoonOpenGrateMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -840,7 +840,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -853,7 +853,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: TakeFallingDamage
     /// </summary>
-    public unsafe void TakeFallingDamage()
+    public unsafe override void TakeFallingDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.TakeFallingDamage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -864,7 +864,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: SetOwnerNoSee
     /// </summary>
-    public unsafe void SetOwnerNoSee(bool bNewOwnerNoSee)
+    public unsafe override void SetOwnerNoSee(bool bNewOwnerNoSee)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.SetOwnerNoSee", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -876,7 +876,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: SetHidden
     /// </summary>
-    public unsafe void SetHidden(bool bNewHidden)
+    public unsafe override void SetHidden(bool bNewHidden)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.SetHidden", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -888,7 +888,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -900,7 +900,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: OnBeginStateSpecialMove
     /// </summary>
-    public unsafe void OnBeginStateSpecialMove()
+    public unsafe override void OnBeginStateSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.OnBeginStateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -911,7 +911,7 @@ public partial class RPawnPlayerNightwing : BmSDK.BmGame.RPawnPlayerNightwingBas
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnPlayerNightwing.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

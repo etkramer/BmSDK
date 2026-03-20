@@ -36,7 +36,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: ClearBodies
     /// </summary>
-    public unsafe void ClearBodies(int numDead, int numClear)
+    public unsafe virtual void ClearBodies(int numDead, int numClear)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.ClearBodies", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -61,7 +61,7 @@ public partial class RSeqAct_ClearDeadBodies : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: IsOffScreen
     /// </summary>
-    public unsafe bool IsOffScreen(BmSDK.BmGame.RPawnVillain Pawn)
+    public unsafe virtual bool IsOffScreen(BmSDK.BmGame.RPawnVillain Pawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ClearDeadBodies.IsOffScreen", true);
         byte* paramsPtr = stackalloc byte[8];

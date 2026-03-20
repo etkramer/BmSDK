@@ -47,7 +47,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: NotifyDeactivated
     /// </summary>
-    public unsafe void NotifyDeactivated(BmSDK.BmScript.RPawnVillainMadHatter notifier)
+    public unsafe virtual void NotifyDeactivated(BmSDK.BmScript.RPawnVillainMadHatter notifier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.NotifyDeactivated", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PlayFinalAnimPart
     /// </summary>
-    public unsafe void PlayFinalAnimPart()
+    public unsafe virtual void PlayFinalAnimPart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.PlayFinalAnimPart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: BlendBackFromCineCam
     /// </summary>
-    public unsafe void BlendBackFromCineCam()
+    public unsafe virtual void BlendBackFromCineCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.BlendBackFromCineCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SwapToBMNormalHead
     /// </summary>
-    public unsafe void SwapToBMNormalHead()
+    public unsafe virtual void SwapToBMNormalHead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.SwapToBMNormalHead", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -114,7 +114,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ChooseHatterSpawnPoint
     /// </summary>
-    public unsafe int ChooseHatterSpawnPoint()
+    public unsafe virtual int ChooseHatterSpawnPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.ChooseHatterSpawnPoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -125,7 +125,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: DespawnHatter
     /// </summary>
-    public unsafe void DespawnHatter()
+    public unsafe virtual void DespawnHatter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.DespawnHatter", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -136,7 +136,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SpawnHatter
     /// </summary>
-    public unsafe void SpawnHatter(bool KOAble = default)
+    public unsafe virtual void SpawnHatter(bool KOAble = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.SpawnHatter", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -148,7 +148,7 @@ public partial class RSeqAct_MadHatterSpawner : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_MadHatterSpawner.Update", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -47,7 +47,7 @@ public partial class RSeqAct_SetEvidenceScanned : BmSDK.Engine.SequenceAction, B
     /// <summary>
     /// Function: SetScanned
     /// </summary>
-    public unsafe void SetScanned()
+    public unsafe virtual void SetScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetEvidenceScanned.SetScanned", true);
         byte* paramsPtr = stackalloc byte[0];

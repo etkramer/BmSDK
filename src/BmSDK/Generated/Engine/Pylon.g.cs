@@ -71,7 +71,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: CanReachPylon
     /// </summary>
-    public unsafe bool CanReachPylon(BmSDK.Engine.Pylon DestPylon, BmSDK.Engine.Controller C)
+    public unsafe virtual bool CanReachPylon(BmSDK.Engine.Pylon DestPylon, BmSDK.Engine.Controller C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.CanReachPylon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -91,7 +91,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe override void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: IsEnabled
     /// </summary>
-    public unsafe bool IsEnabled()
+    public unsafe virtual bool IsEnabled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.IsEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bEnabled)
+    public unsafe virtual void SetEnabled(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: OnPylonStatusChange
     /// </summary>
-    public unsafe void OnPylonStatusChange()
+    public unsafe virtual void OnPylonStatusChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.OnPylonStatusChange", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: HasVisibilityInfo
     /// </summary>
-    public unsafe bool HasVisibilityInfo()
+    public unsafe virtual bool HasVisibilityInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.HasVisibilityInfo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: GetTimeSinceVertSeen
     /// </summary>
-    public unsafe float GetTimeSinceVertSeen(int VertID)
+    public unsafe virtual float GetTimeSinceVertSeen(int VertID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.GetTimeSinceVertSeen", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -192,7 +192,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: MarkVertAsSeen
     /// </summary>
-    public unsafe void MarkVertAsSeen(int VertID)
+    public unsafe virtual void MarkVertAsSeen(int VertID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.MarkVertAsSeen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: CanSeeVertFromVert
     /// </summary>
-    public unsafe bool CanSeeVertFromVert(int LookToVertID, int LookFromVertID)
+    public unsafe virtual bool CanSeeVertFromVert(int LookToVertID, int LookFromVertID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.CanSeeVertFromVert", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -231,7 +231,7 @@ public partial class Pylon : BmSDK.Engine.NavigationPoint, BmSDK.Engine.EditorLi
     /// <summary>
     /// Function: GetVertLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetVertLocation(int VertID)
+    public unsafe virtual System.Numerics.Vector3 GetVertLocation(int VertID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Pylon.GetVertLocation", true);
         byte* paramsPtr = stackalloc byte[16];

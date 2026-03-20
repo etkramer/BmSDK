@@ -36,7 +36,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetSessionDuration
     /// </summary>
-    public unsafe float GetSessionDuration()
+    public unsafe virtual float GetSessionDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetSessionDuration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetSessionEnd
     /// </summary>
-    public unsafe float GetSessionEnd()
+    public unsafe virtual float GetSessionEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetSessionEnd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetSessionStart
     /// </summary>
-    public unsafe float GetSessionStart()
+    public unsafe virtual float GetSessionStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetSessionStart", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetSessionTimestamp
     /// </summary>
-    public unsafe BmSDK.FString GetSessionTimestamp()
+    public unsafe virtual BmSDK.FString GetSessionTimestamp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetSessionTimestamp", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -108,7 +108,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetPlatform
     /// </summary>
-    public unsafe int GetPlatform()
+    public unsafe virtual int GetPlatform()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetPlatform", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetTitleID
     /// </summary>
-    public unsafe int GetTitleID()
+    public unsafe virtual int GetTitleID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetTitleID", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: GetSessionID
     /// </summary>
-    public unsafe BmSDK.FString GetSessionID()
+    public unsafe virtual BmSDK.FString GetSessionID()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.GetSessionID", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -180,7 +180,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: ProcessStream
     /// </summary>
-    public unsafe void ProcessStream()
+    public unsafe virtual void ProcessStream()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.ProcessStream", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -216,7 +216,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: UnregisterHandler
     /// </summary>
-    public unsafe void UnregisterHandler(BmSDK.Engine.GameplayEventsHandler ExistingHandler)
+    public unsafe virtual void UnregisterHandler(BmSDK.Engine.GameplayEventsHandler ExistingHandler)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.UnregisterHandler", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -228,7 +228,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: RegisterHandler
     /// </summary>
-    public unsafe void RegisterHandler(BmSDK.Engine.GameplayEventsHandler NewHandler)
+    public unsafe virtual void RegisterHandler(BmSDK.Engine.GameplayEventsHandler NewHandler)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.RegisterHandler", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -240,7 +240,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: SerializeHeader
     /// </summary>
-    public unsafe bool SerializeHeader()
+    public unsafe virtual bool SerializeHeader()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.SerializeHeader", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -258,7 +258,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: CloseStatsFile
     /// </summary>
-    public unsafe void CloseStatsFile()
+    public unsafe virtual void CloseStatsFile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.CloseStatsFile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class GameplayEventsReader : BmSDK.Engine.GameplayEvents, BmSDK.I
     /// <summary>
     /// Function: OpenStatsFile
     /// </summary>
-    public unsafe bool OpenStatsFile(BmSDK.FString Filename)
+    public unsafe virtual bool OpenStatsFile(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.GameplayEventsReader.OpenStatsFile", true);
         byte* paramsPtr = stackalloc byte[16];

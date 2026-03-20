@@ -71,7 +71,7 @@ public partial class RBatarangProjectile_MultiTarget : BmSDK.BmScript.RBatarangP
     /// <summary>
     /// Function: VillainHit
     /// </summary>
-    public unsafe void VillainHit(BmSDK.BmGame.RPawnVillain Target)
+    public unsafe override void VillainHit(BmSDK.BmGame.RPawnVillain Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangProjectile_MultiTarget.VillainHit", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RBatarangProjectile_MultiTarget : BmSDK.BmScript.RBatarangP
     /// <summary>
     /// Function: StartSpinSound
     /// </summary>
-    public unsafe void StartSpinSound()
+    public unsafe override void StartSpinSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangProjectile_MultiTarget.StartSpinSound", true);
         byte* paramsPtr = stackalloc byte[4];

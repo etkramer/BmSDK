@@ -71,7 +71,7 @@ public partial class RExplosiveGooMineRb : BmSDK.BmScript.RExplosiveGooMineBm, B
     /// <summary>
     /// Function: TickAudio
     /// </summary>
-    public unsafe void TickAudio(float DeltaTime)
+    public unsafe override void TickAudio(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRb.TickAudio", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RExplosiveGooMineRb : BmSDK.BmScript.RExplosiveGooMineBm, B
     /// <summary>
     /// Function: PlayExplosionSound
     /// </summary>
-    public unsafe void PlayExplosionSound()
+    public unsafe override void PlayExplosionSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RExplosiveGooMineRb.PlayExplosionSound", true);
         byte* paramsPtr = stackalloc byte[0];

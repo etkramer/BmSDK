@@ -36,7 +36,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnBack
     /// </summary>
-    public unsafe void OnBack()
+    public unsafe virtual void OnBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnLostFocus
     /// </summary>
-    public unsafe void OnLostFocus(int Id)
+    public unsafe virtual void OnLostFocus(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnLostFocus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnFocus
     /// </summary>
-    public unsafe void OnFocus(int Id)
+    public unsafe virtual void OnFocus(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnFocus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnButton2
     /// </summary>
-    public unsafe void OnButton2()
+    public unsafe virtual void OnButton2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnButton2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnButton1
     /// </summary>
-    public unsafe void OnButton1()
+    public unsafe virtual void OnButton1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnButton1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Id)
+    public unsafe virtual void OnClicked(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnClicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe virtual void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe virtual void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: SetData
     /// </summary>
-    public unsafe void SetData(BmSDK.BmGame.RGFxMoviePopupRequester.GPopup_Type TheType, BmSDK.BmGame.RGFxMovie RespondTo, BmSDK.FString Message, BmSDK.TArray<BmSDK.FString> Prompts)
+    public unsafe virtual void SetData(BmSDK.BmGame.RGFxMoviePopupRequester.GPopup_Type TheType, BmSDK.BmGame.RGFxMovie RespondTo, BmSDK.FString Message, BmSDK.TArray<BmSDK.FString> Prompts)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.SetData", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -142,7 +142,7 @@ public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovie, BmSDK.IGa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMoviePopupRequester.Init", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -36,7 +36,7 @@ public partial class RSeqAct_GFxMovieBenchmarking : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: SendStatusToFlashAuto
     /// </summary>
-    public unsafe void SendStatusToFlashAuto()
+    public unsafe virtual void SendStatusToFlashAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GFxMovieBenchmarking.SendStatusToFlashAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_GFxMovieBenchmarking : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GFxMovieBenchmarking.Update", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -59,7 +59,7 @@ public partial class RSeqAct_GFxMovieBenchmarking : BmSDK.Engine.SeqAct_Latent, 
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_GFxMovieBenchmarking.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_DLCSniper : BmSDK.BmGame.RBMBehaviour_Sniper, 
     /// <summary>
     /// Function: CheckBMInSightAndRange
     /// </summary>
-    public unsafe bool CheckBMInSightAndRange()
+    public unsafe virtual bool CheckBMInSightAndRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_DLCSniper.CheckBMInSightAndRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_DLCSniper : BmSDK.BmGame.RBMBehaviour_Sniper, 
     /// <summary>
     /// Function: GetDLCSniperPointInfo
     /// </summary>
-    public unsafe bool GetDLCSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
+    public unsafe virtual bool GetDLCSniperPointInfo(out System.Numerics.Vector3 StandPos, out BmSDK.Rotator StandRotator)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_DLCSniper.GetDLCSniperPointInfo", true);
         byte* paramsPtr = stackalloc byte[28];

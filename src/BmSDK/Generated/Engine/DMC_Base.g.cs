@@ -71,7 +71,7 @@ public partial class DMC_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DMC_Base.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -89,7 +89,7 @@ public partial class DMC_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DMCTakeDamage
     /// </summary>
-    public unsafe void DMCTakeDamage(int DamageAmount, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum)
+    public unsafe virtual void DMCTakeDamage(int DamageAmount, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DMC_Base.DMCTakeDamage", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -103,7 +103,7 @@ public partial class DMC_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DMCCreate
     /// </summary>
-    public unsafe void DMCCreate()
+    public unsafe virtual void DMCCreate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DMC_Base.DMCCreate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class DMC_Base : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddComponent
     /// </summary>
-    public unsafe BmSDK.Engine.ActorComponent AddComponent(BmSDK.Engine.ActorComponent Template)
+    public unsafe virtual BmSDK.Engine.ActorComponent AddComponent(BmSDK.Engine.ActorComponent Template)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DMC_Base.AddComponent", true);
         byte* paramsPtr = stackalloc byte[8];

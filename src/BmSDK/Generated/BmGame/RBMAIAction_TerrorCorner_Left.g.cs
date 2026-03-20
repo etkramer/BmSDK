@@ -71,7 +71,7 @@ public partial class RBMAIAction_TerrorCorner_Left : BmSDK.BmGame.RBMAIAction_Te
     /// <summary>
     /// Function: GetOutTransition
     /// </summary>
-    public unsafe BmSDK.FName GetOutTransition()
+    public unsafe override BmSDK.FName GetOutTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_TerrorCorner_Left.GetOutTransition", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: SetSpeedNormal
     /// </summary>
-    public unsafe void SetSpeedNormal()
+    public unsafe virtual void SetSpeedNormal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.SetSpeedNormal", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: SetSpeedLow
     /// </summary>
-    public unsafe void SetSpeedLow()
+    public unsafe virtual void SetSpeedLow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.SetSpeedLow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: FinishAttackAttacker
     /// </summary>
-    public unsafe void FinishAttackAttacker()
+    public unsafe override void FinishAttackAttacker()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.FinishAttackAttacker", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: DoesCameraMaintainLos
     /// </summary>
-    public unsafe bool DoesCameraMaintainLos(BmSDK.BmGame.RInGameCinematicCam CinematicCamera)
+    public unsafe virtual bool DoesCameraMaintainLos(BmSDK.BmGame.RInGameCinematicCam CinematicCamera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.DoesCameraMaintainLos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: CanCameraSeePoint
     /// </summary>
-    public unsafe bool CanCameraSeePoint(BmSDK.BmGame.RInGameCinematicCam CinematicCamera, float CameraTimeNormalised, System.Numerics.Vector3 CameraCheckTarget, BmSDK.Engine.Actor IgnoreThisActor, BmSDK.Engine.Actor IgnoreThisActorToo)
+    public unsafe virtual bool CanCameraSeePoint(BmSDK.BmGame.RInGameCinematicCam CinematicCamera, float CameraTimeNormalised, System.Numerics.Vector3 CameraCheckTarget, BmSDK.Engine.Actor IgnoreThisActor, BmSDK.Engine.Actor IgnoreThisActorToo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.CanCameraSeePoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -132,7 +132,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: GetCameraTargetBatman
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraTargetBatman(bool CheckEyes)
+    public unsafe virtual System.Numerics.Vector3 GetCameraTargetBatman(bool CheckEyes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.GetCameraTargetBatman", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -144,7 +144,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: GetCameraTargetFreeze
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCameraTargetFreeze(bool CheckEyes)
+    public unsafe virtual System.Numerics.Vector3 GetCameraTargetFreeze(bool CheckEyes)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.GetCameraTargetFreeze", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -156,7 +156,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: PlayCameraAnim
     /// </summary>
-    public unsafe bool PlayCameraAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default)
+    public unsafe virtual bool PlayCameraAnim(BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.PlayCameraAnim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -172,7 +172,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: BackToPlayerCamera
     /// </summary>
-    public unsafe void BackToPlayerCamera()
+    public unsafe virtual void BackToPlayerCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.BackToPlayerCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: CameraCut
     /// </summary>
-    public unsafe void CameraCut()
+    public unsafe virtual void CameraCut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.CameraCut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -194,7 +194,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: StartCamera
     /// </summary>
-    public unsafe void StartCamera()
+    public unsafe virtual void StartCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.StartCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -205,7 +205,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: PlayCameraPhase
     /// </summary>
-    public unsafe void PlayCameraPhase(int Index)
+    public unsafe virtual void PlayCameraPhase(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.PlayCameraPhase", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: ShouldUseCustomCamera
     /// </summary>
-    public unsafe bool ShouldUseCustomCamera()
+    public unsafe virtual bool ShouldUseCustomCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.ShouldUseCustomCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: PlaySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default)
+    public unsafe override bool PlaySpecialCameraAnim(BmSDK.FName AnimName, bool bCamMirrored, bool CameraCollision = default, float FOV = default, BmSDK.Engine.AnimSet CustomAnimSet = default, float BlendTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.PlaySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -245,7 +245,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: PlayCameraAuto
     /// </summary>
-    public unsafe void PlayCameraAuto()
+    public unsafe virtual void PlayCameraAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.PlayCameraAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -256,7 +256,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: ShouldForceSafeCamera
     /// </summary>
-    public unsafe bool ShouldForceSafeCamera()
+    public unsafe virtual bool ShouldForceSafeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.ShouldForceSafeCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -267,7 +267,7 @@ public partial class RFreezeTakeDownStage : BmSDK.BmGame.RStealthTakeDownStage, 
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage.Begin", true);
         byte* paramsPtr = stackalloc byte[40];

@@ -36,7 +36,7 @@ public partial class RSeqAct_SetCustomHangMove : BmSDK.Engine.SequenceAction, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetCustomHangMove.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

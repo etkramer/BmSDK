@@ -36,7 +36,7 @@ public partial class RAnimNode_AnimCapture : BmSDK.Engine.AnimNodeBlendBase, BmS
     /// <summary>
     /// Function: Capture
     /// </summary>
-    public unsafe void Capture(BmSDK.Engine.SkeletalMeshComponent Mesh)
+    public unsafe virtual void Capture(BmSDK.Engine.SkeletalMeshComponent Mesh)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_AnimCapture.Capture", true);
         byte* paramsPtr = stackalloc byte[4];

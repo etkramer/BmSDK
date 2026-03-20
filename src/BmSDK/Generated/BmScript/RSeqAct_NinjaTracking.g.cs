@@ -47,7 +47,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: BuildWaypointArray
     /// </summary>
-    public unsafe void BuildWaypointArray()
+    public unsafe virtual void BuildWaypointArray()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.BuildWaypointArray", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -58,7 +58,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: SnapPositionToPathDistance
     /// </summary>
-    public unsafe void SnapPositionToPathDistance()
+    public unsafe virtual void SnapPositionToPathDistance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.SnapPositionToPathDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: SetCurrentWaypoint
     /// </summary>
-    public unsafe void SetCurrentWaypoint(int waypoint_index)
+    public unsafe virtual void SetCurrentWaypoint(int waypoint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.SetCurrentWaypoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -81,7 +81,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: AdvanceAlongPath
     /// </summary>
-    public unsafe void AdvanceAlongPath(float how_far)
+    public unsafe virtual void AdvanceAlongPath(float how_far)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.AdvanceAlongPath", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: SetSpeedBasedOnProximity
     /// </summary>
-    public unsafe void SetSpeedBasedOnProximity()
+    public unsafe virtual void SetSpeedBasedOnProximity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.SetSpeedBasedOnProximity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: SetTrackerScreenPosition
     /// </summary>
-    public unsafe void SetTrackerScreenPosition()
+    public unsafe virtual void SetTrackerScreenPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.SetTrackerScreenPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -127,7 +127,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: SendInfoToFlash
     /// </summary>
-    public unsafe void SendInfoToFlash(bool DoPing)
+    public unsafe virtual void SendInfoToFlash(bool DoPing)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.SendInfoToFlash", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: InitTracking
     /// </summary>
-    public unsafe void InitTracking()
+    public unsafe virtual void InitTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.InitTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: GetTaliaLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTaliaLocation()
+    public unsafe virtual System.Numerics.Vector3 GetTaliaLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.GetTaliaLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -161,7 +161,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: TickTaliaMovement
     /// </summary>
-    public unsafe void TickTaliaMovement(float DeltaTime)
+    public unsafe virtual void TickTaliaMovement(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.TickTaliaMovement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -173,7 +173,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: TickNinjaMovement
     /// </summary>
-    public unsafe void TickNinjaMovement(float DeltaTime)
+    public unsafe virtual void TickNinjaMovement(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.TickNinjaMovement", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -185,7 +185,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: JumpToSavepoint
     /// </summary>
-    public unsafe void JumpToSavepoint(BmSDK.BmGame.RNinjaWaypointLocation the_savepoint)
+    public unsafe virtual void JumpToSavepoint(BmSDK.BmGame.RNinjaWaypointLocation the_savepoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.JumpToSavepoint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -197,7 +197,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -209,7 +209,7 @@ public partial class RSeqAct_NinjaTracking : BmSDK.Engine.SeqAct_Latent, BmSDK.B
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_NinjaTracking.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

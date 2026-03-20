@@ -36,7 +36,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: PickupScanAborted
     /// </summary>
-    public unsafe void PickupScanAborted()
+    public unsafe virtual void PickupScanAborted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.PickupScanAborted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: SetPickupLocation
     /// </summary>
-    public unsafe void SetPickupLocation(bool is_visible, float reticle_x, float reticle_y)
+    public unsafe virtual void SetPickupLocation(bool is_visible, float reticle_x, float reticle_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.SetPickupLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: InitialisePickupScan
     /// </summary>
-    public unsafe void InitialisePickupScan(bool new_pickup)
+    public unsafe virtual void InitialisePickupScan(bool new_pickup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.InitialisePickupScan", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -73,7 +73,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: InformantScanAborted
     /// </summary>
-    public unsafe void InformantScanAborted()
+    public unsafe virtual void InformantScanAborted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.InformantScanAborted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: SendInformationToFlash
     /// </summary>
-    public unsafe void SendInformationToFlash()
+    public unsafe virtual void SendInformationToFlash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.SendInformationToFlash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: SetInformantDetails
     /// </summary>
-    public unsafe void SetInformantDetails(int Index, bool is_visible, float reticle_x, float reticle_y)
+    public unsafe virtual void SetInformantDetails(int Index, bool is_visible, float reticle_x, float reticle_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.SetInformantDetails", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -110,7 +110,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: InitialiseInformants
     /// </summary>
-    public unsafe void InitialiseInformants(int num_subjects, int informant_index)
+    public unsafe virtual void InitialiseInformants(int num_subjects, int informant_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.InitialiseInformants", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -123,7 +123,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -134,7 +134,7 @@ public partial class RHudExtensionInformants : BmSDK.BmGame.RHudExtension, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInformants.Init", true);
         byte* paramsPtr = stackalloc byte[32];

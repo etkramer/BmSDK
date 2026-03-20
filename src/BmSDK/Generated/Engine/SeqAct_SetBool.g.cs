@@ -36,7 +36,7 @@ public partial class SeqAct_SetBool : BmSDK.Engine.SeqAct_SetSequenceVariable, B
     /// <summary>
     /// Function: IsValidLevelSequenceObject
     /// </summary>
-    public unsafe bool IsValidLevelSequenceObject()
+    public unsafe override bool IsValidLevelSequenceObject()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_SetBool.IsValidLevelSequenceObject", true);
         byte* paramsPtr = stackalloc byte[4];

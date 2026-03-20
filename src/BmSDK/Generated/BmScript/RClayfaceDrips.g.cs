@@ -36,7 +36,7 @@ public partial class RClayfaceDrips : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.Engine.Actor Ri)
+    public unsafe virtual void Initialise(BmSDK.Engine.Actor Ri)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceDrips.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RClayfaceDrips : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe void Update(float DeltaTime)
+    public unsafe virtual void Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceDrips.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RClayfaceDrips : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnEmitter
     /// </summary>
-    public unsafe BmSDK.BmGame.REmitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, BmSDK.Engine.SkeletalMeshComponent AttachMesh, BmSDK.FName BoneName, float BoneTranslationScale = default, float DrawScale = default)
+    public unsafe virtual BmSDK.BmGame.REmitter SpawnEmitter(BmSDK.Engine.ParticleSystem Template, BmSDK.Engine.SkeletalMeshComponent AttachMesh, BmSDK.FName BoneName, float BoneTranslationScale = default, float DrawScale = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RClayfaceDrips.SpawnEmitter", true);
         byte* paramsPtr = stackalloc byte[40];

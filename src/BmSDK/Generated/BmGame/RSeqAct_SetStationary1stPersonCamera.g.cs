@@ -36,7 +36,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: AdjustCameraRot
     /// </summary>
-    public unsafe void AdjustCameraRot(out BmSDK.Rotator CameraRot)
+    public unsafe virtual void AdjustCameraRot(out BmSDK.Rotator CameraRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.AdjustCameraRot", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -71,7 +71,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: UpdateBreakOut
     /// </summary>
-    public unsafe bool UpdateBreakOut(float DeltaTime)
+    public unsafe virtual bool UpdateBreakOut(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.UpdateBreakOut", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: Thrust
     /// </summary>
-    public unsafe void Thrust()
+    public unsafe virtual void Thrust()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.Thrust", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: Struggle
     /// </summary>
-    public unsafe void Struggle()
+    public unsafe virtual void Struggle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.Struggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: RequestStruggleDown
     /// </summary>
-    public unsafe void RequestStruggleDown()
+    public unsafe virtual void RequestStruggleDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.RequestStruggleDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: RequestStruggleRight
     /// </summary>
-    public unsafe void RequestStruggleRight()
+    public unsafe virtual void RequestStruggleRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.RequestStruggleRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: RequestStruggleLeft
     /// </summary>
-    public unsafe void RequestStruggleLeft()
+    public unsafe virtual void RequestStruggleLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.RequestStruggleLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: RequestStruggleUp
     /// </summary>
-    public unsafe void RequestStruggleUp()
+    public unsafe virtual void RequestStruggleUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.RequestStruggleUp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: EnableLookAtStrange
     /// </summary>
-    public unsafe void EnableLookAtStrange(bool bEnable)
+    public unsafe virtual void EnableLookAtStrange(bool bEnable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.EnableLookAtStrange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: LookAtStrange
     /// </summary>
-    public unsafe void LookAtStrange(float DeltaTime)
+    public unsafe virtual void LookAtStrange(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.LookAtStrange", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -173,7 +173,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: InputRightStick
     /// </summary>
-    public unsafe System.Numerics.Vector3 InputRightStick()
+    public unsafe virtual System.Numerics.Vector3 InputRightStick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.InputRightStick", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -184,7 +184,7 @@ public partial class RSeqAct_SetStationary1stPersonCamera : BmSDK.Engine.SeqAct_
     /// <summary>
     /// Function: Activate1stPersonCamera
     /// </summary>
-    public unsafe void Activate1stPersonCamera()
+    public unsafe virtual void Activate1stPersonCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_SetStationary1stPersonCamera.Activate1stPersonCamera", true);
         byte* paramsPtr = stackalloc byte[0];

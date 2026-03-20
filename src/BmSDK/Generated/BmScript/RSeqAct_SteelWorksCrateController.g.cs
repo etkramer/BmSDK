@@ -47,7 +47,7 @@ public partial class RSeqAct_SteelWorksCrateController : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SteelWorksCrateController.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_SteelWorksCrateController : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: UpdatePositions
     /// </summary>
-    public unsafe void UpdatePositions(float DeltaTime)
+    public unsafe virtual void UpdatePositions(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SteelWorksCrateController.UpdatePositions", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -71,7 +71,7 @@ public partial class RSeqAct_SteelWorksCrateController : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: BatmanInDangerArea
     /// </summary>
-    public unsafe bool BatmanInDangerArea()
+    public unsafe virtual bool BatmanInDangerArea()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SteelWorksCrateController.BatmanInDangerArea", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSeqAct_SteelWorksCrateController : BmSDK.Engine.SeqAct_Lat
     /// <summary>
     /// Function: SetInitialLocations
     /// </summary>
-    public unsafe void SetInitialLocations()
+    public unsafe virtual void SetInitialLocations()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SteelWorksCrateController.SetInitialLocations", true);
         byte* paramsPtr = stackalloc byte[8];

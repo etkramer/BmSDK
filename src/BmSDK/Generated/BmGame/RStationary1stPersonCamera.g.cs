@@ -71,7 +71,7 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStationary1stPersonCamera.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -84,7 +84,7 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: UnHidePlayer
     /// </summary>
-    public unsafe void UnHidePlayer()
+    public unsafe virtual void UnHidePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStationary1stPersonCamera.UnHidePlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: HidePlayer
     /// </summary>
-    public unsafe void HidePlayer()
+    public unsafe virtual void HidePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStationary1stPersonCamera.HidePlayer", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: DeactivateCamera
     /// </summary>
-    public unsafe void DeactivateCamera()
+    public unsafe virtual void DeactivateCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStationary1stPersonCamera.DeactivateCamera", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RStationary1stPersonCamera : BmSDK.BmGame.RCameraActor, BmS
     /// <summary>
     /// Function: ActivateCamera
     /// </summary>
-    public unsafe void ActivateCamera(BmSDK.BmGame.RPlayerController Player, BmSDK.FName SState = default, BmSDK.FName EState = default)
+    public unsafe virtual void ActivateCamera(BmSDK.BmGame.RPlayerController Player, BmSDK.FName SState = default, BmSDK.FName EState = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RStationary1stPersonCamera.ActivateCamera", true);
         byte* paramsPtr = stackalloc byte[20];

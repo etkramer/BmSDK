@@ -71,7 +71,7 @@ public partial class RCombatMove_ChaseNinjaAttack : BmSDK.BmGame.RCombatMove_Nin
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess = default)
+    public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RCombatMove_ChaseNinjaAttack : BmSDK.BmGame.RCombatMove_Nin
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_ChaseNinjaAttack.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];

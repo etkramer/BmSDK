@@ -31,7 +31,7 @@ public partial class RSeqAct_HeadToHeadCombatSpawnerBase : BmSDK.BmGame.RSeqAct_
     /// <summary>
     /// Function: PlayerTakesDamage
     /// </summary>
-    public unsafe void PlayerTakesDamage()
+    public unsafe virtual void PlayerTakesDamage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_HeadToHeadCombatSpawnerBase.PlayerTakesDamage", true);
         byte* paramsPtr = stackalloc byte[0];

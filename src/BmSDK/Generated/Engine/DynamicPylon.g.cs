@@ -71,7 +71,7 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
     /// <summary>
     /// Function: StoppedMoving
     /// </summary>
-    public unsafe void StoppedMoving()
+    public unsafe virtual void StoppedMoving()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicPylon.StoppedMoving", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
     /// <summary>
     /// Function: StartedMoving
     /// </summary>
-    public unsafe void StartedMoving()
+    public unsafe virtual void StartedMoving()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicPylon.StartedMoving", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
     /// <summary>
     /// Function: FlushDynamicEdges
     /// </summary>
-    public unsafe void FlushDynamicEdges()
+    public unsafe virtual void FlushDynamicEdges()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicPylon.FlushDynamicEdges", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
     /// <summary>
     /// Function: RebuildDynamicEdges
     /// </summary>
-    public unsafe void RebuildDynamicEdges()
+    public unsafe virtual void RebuildDynamicEdges()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicPylon.RebuildDynamicEdges", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class DynamicPylon : BmSDK.Engine.Pylon, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DynamicPylon.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

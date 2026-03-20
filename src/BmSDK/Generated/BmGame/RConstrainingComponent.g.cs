@@ -36,7 +36,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: Finalise
     /// </summary>
-    public unsafe void Finalise()
+    public unsafe virtual void Finalise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.Finalise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: UpdateRBConstraints
     /// </summary>
-    public unsafe bool UpdateRBConstraints(bool bNoPhys = default)
+    public unsafe virtual bool UpdateRBConstraints(bool bNoPhys = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.UpdateRBConstraints", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -77,7 +77,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: ClearRBConstraints
     /// </summary>
-    public unsafe void ClearRBConstraints()
+    public unsafe virtual void ClearRBConstraints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.ClearRBConstraints", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: AddRBConstraint
     /// </summary>
-    public unsafe void AddRBConstraint(BmSDK.Engine.RB_ConstraintSetup ConstraintSetup)
+    public unsafe virtual void AddRBConstraint(BmSDK.Engine.RB_ConstraintSetup ConstraintSetup)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.AddRBConstraint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: GetIsSyncronised
     /// </summary>
-    public unsafe bool GetIsSyncronised()
+    public unsafe virtual bool GetIsSyncronised()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.GetIsSyncronised", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Function: GetHasRBConstraints
     /// </summary>
-    public unsafe bool GetHasRBConstraints()
+    public unsafe virtual bool GetHasRBConstraints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RConstrainingComponent.GetHasRBConstraints", true);
         byte* paramsPtr = stackalloc byte[4];

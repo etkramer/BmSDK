@@ -36,7 +36,7 @@ public partial class RSeqAct_AddRemoveAudioAsset : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AddRemoveAudioAsset.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RSeqAct_AddRemoveAudioAsset : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: AttemptAction
     /// </summary>
-    public unsafe void AttemptAction()
+    public unsafe virtual void AttemptAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AddRemoveAudioAsset.AttemptAction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RSeqAct_AddRemoveAudioAsset : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: SetUpPlayerController
     /// </summary>
-    public unsafe void SetUpPlayerController()
+    public unsafe virtual void SetUpPlayerController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AddRemoveAudioAsset.SetUpPlayerController", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RSeqAct_AddRemoveAudioAsset : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_AddRemoveAudioAsset.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

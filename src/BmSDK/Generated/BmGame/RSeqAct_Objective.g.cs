@@ -47,7 +47,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.Activated", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -58,7 +58,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: AddSubObjective
     /// </summary>
-    public unsafe void AddSubObjective(bool bRealAdd)
+    public unsafe virtual void AddSubObjective(bool bRealAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.AddSubObjective", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -70,7 +70,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: AddMainObjective
     /// </summary>
-    public unsafe void AddMainObjective(bool bRealAdd)
+    public unsafe virtual void AddMainObjective(bool bRealAdd)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.AddMainObjective", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -82,7 +82,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: GetSubObjectiveName
     /// </summary>
-    public unsafe BmSDK.FString GetSubObjectiveName()
+    public unsafe virtual BmSDK.FString GetSubObjectiveName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.GetSubObjectiveName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: GetObjectiveName
     /// </summary>
-    public unsafe BmSDK.FString GetObjectiveName()
+    public unsafe virtual BmSDK.FString GetObjectiveName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.GetObjectiveName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGam
     /// <summary>
     /// Function: AddMessage
     /// </summary>
-    public unsafe void AddMessage(BmSDK.FString Title, BmSDK.FString Desc, bool bIsAdd, bool bIsComplete)
+    public unsafe virtual void AddMessage(BmSDK.FString Title, BmSDK.FString Desc, bool bIsAdd, bool bIsComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_Objective.AddMessage", true);
         byte* paramsPtr = stackalloc byte[64];

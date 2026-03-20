@@ -36,7 +36,7 @@ public partial class RSeqCond_LevelLoaded : BmSDK.Engine.SequenceCondition, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqCond_LevelLoaded.Activated", true);
         byte* paramsPtr = stackalloc byte[24];

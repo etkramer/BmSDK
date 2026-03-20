@@ -36,7 +36,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RadioScannerAudioCallback
     /// </summary>
-    public unsafe void RadioScannerAudioCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
+    public unsafe virtual void RadioScannerAudioCallback(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RadioScannerAudioCallback", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -50,7 +50,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RadioScannerAudioMarker
     /// </summary>
-    public unsafe void RadioScannerAudioMarker(BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
+    public unsafe virtual void RadioScannerAudioMarker(BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RadioScannerAudioMarker", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_CloseResonator
     /// </summary>
-    public unsafe void FE_CloseResonator()
+    public unsafe virtual void FE_CloseResonator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_CloseResonator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_StartResonator
     /// </summary>
-    public unsafe void FE_StartResonator()
+    public unsafe virtual void FE_StartResonator()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_StartResonator", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_NotifyPasswordFound
     /// </summary>
-    public unsafe void FE_NotifyPasswordFound()
+    public unsafe virtual void FE_NotifyPasswordFound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_NotifyPasswordFound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -103,7 +103,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_PlayResonatorAudioEvent
     /// </summary>
-    public unsafe void FE_PlayResonatorAudioEvent(int event_index)
+    public unsafe virtual void FE_PlayResonatorAudioEvent(int event_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_PlayResonatorAudioEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetRumbleFromFlash
     /// </summary>
-    public unsafe void FE_SetRumbleFromFlash(float left_rumble, float right_rumble)
+    public unsafe virtual void FE_SetRumbleFromFlash(float left_rumble, float right_rumble)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetRumbleFromFlash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_RedoPasswordPrompts
     /// </summary>
-    public unsafe void FE_RedoPasswordPrompts(bool _CanCyclePasswords)
+    public unsafe virtual void FE_RedoPasswordPrompts(bool _CanCyclePasswords)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_RedoPasswordPrompts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -140,7 +140,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_RedoDisruptedPrompts
     /// </summary>
-    public unsafe void FE_RedoDisruptedPrompts(bool _CanExit)
+    public unsafe virtual void FE_RedoDisruptedPrompts(bool _CanExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_RedoDisruptedPrompts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_RedoRadioPrompts
     /// </summary>
-    public unsafe void FE_RedoRadioPrompts(bool _RadioCanScan, bool _RadioCanMove, bool _RadioCanFlick)
+    public unsafe virtual void FE_RedoRadioPrompts(bool _RadioCanScan, bool _RadioCanMove, bool _RadioCanFlick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_RedoRadioPrompts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -166,7 +166,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_StopRadio
     /// </summary>
-    public unsafe void FE_StopRadio()
+    public unsafe virtual void FE_StopRadio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_StopRadio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetCurrentRadioDecrypted
     /// </summary>
-    public unsafe void FE_SetCurrentRadioDecrypted()
+    public unsafe virtual void FE_SetCurrentRadioDecrypted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetCurrentRadioDecrypted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetCurrentRadioWarbleXY
     /// </summary>
-    public unsafe void FE_SetCurrentRadioWarbleXY(float value_x, float value_y)
+    public unsafe virtual void FE_SetCurrentRadioWarbleXY(float value_x, float value_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetCurrentRadioWarbleXY", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -201,7 +201,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetCurrentRadioAudioLevel
     /// </summary>
-    public unsafe void FE_SetCurrentRadioAudioLevel(float zero_to_one)
+    public unsafe virtual void FE_SetCurrentRadioAudioLevel(float zero_to_one)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetCurrentRadioAudioLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetCurrentRadioStation
     /// </summary>
-    public unsafe void FE_SetCurrentRadioStation(BmSDK.FString RadioStationName, int CurrentSequence, bool encrypted)
+    public unsafe virtual void FE_SetCurrentRadioStation(BmSDK.FString RadioStationName, int CurrentSequence, bool encrypted)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetCurrentRadioStation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -227,7 +227,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetRadioAudioStates
     /// </summary>
-    public unsafe void SetRadioAudioStates(BmSDK.Engine.AkStateName base_state, BmSDK.Engine.AkStateName sequence_state)
+    public unsafe virtual void SetRadioAudioStates(BmSDK.Engine.AkStateName base_state, BmSDK.Engine.AkStateName sequence_state)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetRadioAudioStates", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -240,7 +240,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_SetRadioStationFound
     /// </summary>
-    public unsafe void FE_SetRadioStationFound(BmSDK.FString RadioStationName)
+    public unsafe virtual void FE_SetRadioStationFound(BmSDK.FString RadioStationName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_SetRadioStationFound", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -252,7 +252,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_TriggerOneShotRadioEvent
     /// </summary>
-    public unsafe void FE_TriggerOneShotRadioEvent(BmSDK.FString RadioStationName)
+    public unsafe virtual void FE_TriggerOneShotRadioEvent(BmSDK.FString RadioStationName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_TriggerOneShotRadioEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -264,7 +264,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_PasswordCrackerCrashedEvent
     /// </summary>
-    public unsafe void FE_PasswordCrackerCrashedEvent()
+    public unsafe virtual void FE_PasswordCrackerCrashedEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_PasswordCrackerCrashedEvent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -275,7 +275,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: FE_TellFlashAboutControllerState
     /// </summary>
-    public unsafe void FE_TellFlashAboutControllerState()
+    public unsafe virtual void FE_TellFlashAboutControllerState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.FE_TellFlashAboutControllerState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -286,7 +286,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: PlayResonatorAudioEvent
     /// </summary>
-    public unsafe void PlayResonatorAudioEvent(int event_index)
+    public unsafe virtual void PlayResonatorAudioEvent(int event_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.PlayResonatorAudioEvent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -298,7 +298,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: KillPasswordAudio
     /// </summary>
-    public unsafe void KillPasswordAudio()
+    public unsafe virtual void KillPasswordAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.KillPasswordAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -309,7 +309,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: StartPasswordAudio
     /// </summary>
-    public unsafe void StartPasswordAudio()
+    public unsafe virtual void StartPasswordAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.StartPasswordAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -320,7 +320,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: DisplayMinigamePrompts
     /// </summary>
-    public unsafe void DisplayMinigamePrompts(BmSDK.BmGame.RHUDPrompt HelpPrompt)
+    public unsafe virtual void DisplayMinigamePrompts(BmSDK.BmGame.RHUDPrompt HelpPrompt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.DisplayMinigamePrompts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -332,7 +332,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetRumbleFromFlash
     /// </summary>
-    public unsafe void SetRumbleFromFlash(float left_rumble, float right_rumble)
+    public unsafe virtual void SetRumbleFromFlash(float left_rumble, float right_rumble)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetRumbleFromFlash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -345,7 +345,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RedoRadioPrompts
     /// </summary>
-    public unsafe void RedoRadioPrompts(bool _RadioCanScan, bool _RadioCanMove, bool _RadioCanFlick)
+    public unsafe virtual void RedoRadioPrompts(bool _RadioCanScan, bool _RadioCanMove, bool _RadioCanFlick)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RedoRadioPrompts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -359,7 +359,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: MakeUnresponsive
     /// </summary>
-    public unsafe void MakeUnresponsive()
+    public unsafe virtual void MakeUnresponsive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.MakeUnresponsive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -370,7 +370,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RequestQuit
     /// </summary>
-    public unsafe void RequestQuit()
+    public unsafe virtual void RequestQuit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RequestQuit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -381,7 +381,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: BroadcastIsJammed
     /// </summary>
-    public unsafe void BroadcastIsJammed()
+    public unsafe virtual void BroadcastIsJammed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.BroadcastIsJammed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -392,7 +392,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: EnableEncryptedChipIntro
     /// </summary>
-    public unsafe void EnableEncryptedChipIntro()
+    public unsafe virtual void EnableEncryptedChipIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.EnableEncryptedChipIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -403,7 +403,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: AddStation
     /// </summary>
-    public unsafe void AddStation(BmSDK.FString StationName, float FrequencyX, float FrequencyY, int TransmissionRadius, byte CurrentSequence, bool HasBeenFound, bool HasHadHint, bool IsEncrypted, bool Mandatory, bool EasterEgg, BmSDK.FString StationTransmitterType, BmSDK.FString StationEncryptionType, BmSDK.FString StationEncryptionStrength, bool HasOneShotEvent)
+    public unsafe virtual void AddStation(BmSDK.FString StationName, float FrequencyX, float FrequencyY, int TransmissionRadius, byte CurrentSequence, bool HasBeenFound, bool HasHadHint, bool IsEncrypted, bool Mandatory, bool EasterEgg, BmSDK.FString StationTransmitterType, BmSDK.FString StationEncryptionType, BmSDK.FString StationEncryptionStrength, bool HasOneShotEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.AddStation", true);
         byte* paramsPtr = stackalloc byte[88];
@@ -428,7 +428,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetAudioInterceptDetails
     /// </summary>
-    public unsafe void SetAudioInterceptDetails(BmSDK.FString StationName, BmSDK.FString SpeakerName)
+    public unsafe virtual void SetAudioInterceptDetails(BmSDK.FString StationName, BmSDK.FString SpeakerName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetAudioInterceptDetails", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -441,7 +441,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RedoDisruptedPrompts
     /// </summary>
-    public unsafe void RedoDisruptedPrompts(bool _CanExit)
+    public unsafe virtual void RedoDisruptedPrompts(bool _CanExit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RedoDisruptedPrompts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -453,7 +453,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetControlBoxParams
     /// </summary>
-    public unsafe void SetControlBoxParams(int _SecurityLevel, BmSDK.FString _HackingNetworkString, BmSDK.FString _HackingTargetString, int _PasswordDifficultyLevel)
+    public unsafe virtual void SetControlBoxParams(int _SecurityLevel, BmSDK.FString _HackingNetworkString, BmSDK.FString _HackingTargetString, int _PasswordDifficultyLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetControlBoxParams", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -468,7 +468,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetDistortionEffectActive
     /// </summary>
-    public unsafe void SetDistortionEffectActive()
+    public unsafe virtual void SetDistortionEffectActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetDistortionEffectActive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -479,7 +479,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetImminentJamming
     /// </summary>
-    public unsafe void SetImminentJamming()
+    public unsafe virtual void SetImminentJamming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetImminentJamming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -490,7 +490,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetHighSecurity
     /// </summary>
-    public unsafe void SetHighSecurity()
+    public unsafe virtual void SetHighSecurity()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetHighSecurity", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -501,7 +501,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: RedoPasswordPrompts
     /// </summary>
-    public unsafe void RedoPasswordPrompts(bool _CanCyclePasswords)
+    public unsafe virtual void RedoPasswordPrompts(bool _CanCyclePasswords)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.RedoPasswordPrompts", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -513,7 +513,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: StartResonatorMiniGame
     /// </summary>
-    public unsafe void StartResonatorMiniGame()
+    public unsafe virtual void StartResonatorMiniGame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.StartResonatorMiniGame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -524,7 +524,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetResonatorPassword
     /// </summary>
-    public unsafe void SetResonatorPassword(int password_index, BmSDK.FString the_password)
+    public unsafe virtual void SetResonatorPassword(int password_index, BmSDK.FString the_password)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetResonatorPassword", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -537,7 +537,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetInstructionText
     /// </summary>
-    public unsafe void SetInstructionText(BmSDK.FString new_instructions)
+    public unsafe virtual void SetInstructionText(BmSDK.FString new_instructions)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetInstructionText", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -549,7 +549,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: EnableDebugAction
     /// </summary>
-    public unsafe void EnableDebugAction()
+    public unsafe virtual void EnableDebugAction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.EnableDebugAction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -560,7 +560,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: TestThenClearFlag
     /// </summary>
-    public unsafe bool TestThenClearFlag(BmSDK.FString FlagName)
+    public unsafe virtual bool TestThenClearFlag(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.TestThenClearFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -572,7 +572,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: OnCloseMinigame
     /// </summary>
-    public unsafe void OnCloseMinigame()
+    public unsafe virtual void OnCloseMinigame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.OnCloseMinigame", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -583,7 +583,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe virtual void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -594,7 +594,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide()
+    public unsafe virtual void Hide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.Hide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -605,7 +605,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show()
+    public unsafe virtual void show()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.show", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -616,7 +616,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: HideItem
     /// </summary>
-    public unsafe void HideItem(BmSDK.FString ItemName)
+    public unsafe virtual void HideItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.HideItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -628,7 +628,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: ShowItem
     /// </summary>
-    public unsafe void ShowItem(BmSDK.FString ItemName)
+    public unsafe virtual void ShowItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.ShowItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -640,7 +640,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: KismetControlsInOut
     /// </summary>
-    public unsafe void KismetControlsInOut(bool bTrue)
+    public unsafe virtual void KismetControlsInOut(bool bTrue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.KismetControlsInOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -652,7 +652,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: LoadMiniGame
     /// </summary>
-    public unsafe void LoadMiniGame(BmSDK.FString minigame_path)
+    public unsafe virtual void LoadMiniGame(BmSDK.FString minigame_path)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.LoadMiniGame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -664,7 +664,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SendCachedMousePosition
     /// </summary>
-    public unsafe void SendCachedMousePosition()
+    public unsafe virtual void SendCachedMousePosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SendCachedMousePosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -675,7 +675,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SetCachedMousePosition
     /// </summary>
-    public unsafe void SetCachedMousePosition(float _fCachedMouseX, float _fCachedMouseY)
+    public unsafe virtual void SetCachedMousePosition(float _fCachedMouseX, float _fCachedMouseY)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SetCachedMousePosition", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -688,7 +688,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: MinigameTick
     /// </summary>
-    public unsafe void MinigameTick()
+    public unsafe virtual void MinigameTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.MinigameTick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -699,7 +699,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: UpdateHudVisibility
     /// </summary>
-    public unsafe void UpdateHudVisibility(bool bVisible)
+    public unsafe override void UpdateHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.UpdateHudVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -711,7 +711,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: SendRandomCharacterString
     /// </summary>
-    public unsafe void SendRandomCharacterString()
+    public unsafe virtual void SendRandomCharacterString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.SendRandomCharacterString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -722,7 +722,7 @@ public partial class RGFxMovieResonatorMinigame : BmSDK.BmGame.RGFxMovie, BmSDK.
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieResonatorMinigame.Init", true);
         byte* paramsPtr = stackalloc byte[8];

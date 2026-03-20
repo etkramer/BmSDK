@@ -36,7 +36,7 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// <summary>
     /// Function: SetView
     /// </summary>
-    public unsafe void SetView(System.Numerics.Vector3 NewLocation, BmSDK.Rotator NewRotation)
+    public unsafe virtual void SetView(System.Numerics.Vector3 NewLocation, BmSDK.Rotator NewRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DComponent.SetView", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -56,7 +56,7 @@ public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponen
     /// <summary>
     /// Function: SetCaptureParameters
     /// </summary>
-    public unsafe void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewFOV = default, float NewNearPlane = default, float NewFarPlane = default)
+    public unsafe virtual void SetCaptureParameters(BmSDK.Engine.TextureRenderTarget2D NewTextureTarget = default, float NewFOV = default, float NewNearPlane = default, float NewFarPlane = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SceneCapture2DComponent.SetCaptureParameters", true);
         byte* paramsPtr = stackalloc byte[16];

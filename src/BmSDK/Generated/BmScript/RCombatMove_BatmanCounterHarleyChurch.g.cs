@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: PlayTargetAnimation
     /// </summary>
-    public unsafe void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.PlayTargetAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: PlayBatmanAnimation
     /// </summary>
-    public unsafe void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.PlayBatmanAnimation", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -97,7 +97,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: GetCounterAnim
     /// </summary>
-    public unsafe BmSDK.FName GetCounterAnim()
+    public unsafe override BmSDK.FName GetCounterAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.GetCounterAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -120,7 +120,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: InitialiseSimulated
     /// </summary>
-    public unsafe void InitialiseSimulated()
+    public unsafe override void InitialiseSimulated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.InitialiseSimulated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: PlayCapeAnim
     /// </summary>
-    public unsafe void PlayCapeAnim(BmSDK.FName DestCapeState, BmSDK.FName CapeAnimName = default)
+    public unsafe override void PlayCapeAnim(BmSDK.FName DestCapeState, BmSDK.FName CapeAnimName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.PlayCapeAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -155,7 +155,7 @@ public partial class RCombatMove_BatmanCounterHarleyChurch : BmSDK.BmGame.RComba
     /// <summary>
     /// Function: DamageTarget
     /// </summary>
-    public unsafe void DamageTarget()
+    public unsafe override void DamageTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterHarleyChurch.DamageTarget", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: BatmanExceedsAmbient
     /// </summary>
-    public unsafe bool BatmanExceedsAmbient()
+    public unsafe virtual bool BatmanExceedsAmbient()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.BatmanExceedsAmbient", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: AddBatmanSound
     /// </summary>
-    public unsafe void AddBatmanSound(BmSDK.BmGame.RSeqAct_IceMeterBase.SoundMeterVolume ffv)
+    public unsafe virtual void AddBatmanSound(BmSDK.BmGame.RSeqAct_IceMeterBase.SoundMeterVolume ffv)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.AddBatmanSound", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: UpdateHud
     /// </summary>
-    public unsafe void UpdateHud()
+    public unsafe override void UpdateHud()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.UpdateHud", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: PlayBMWobbleAnimation
     /// </summary>
-    public unsafe void PlayBMWobbleAnimation()
+    public unsafe override void PlayBMWobbleAnimation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.PlayBMWobbleAnimation", true);
         byte* paramsPtr = stackalloc byte[116];
@@ -104,7 +104,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: UpdateTiles
     /// </summary>
-    public unsafe void UpdateTiles(float DeltaTime)
+    public unsafe override void UpdateTiles(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.UpdateTiles", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: IsWeakAndBatmanWalking
     /// </summary>
-    public unsafe bool IsWeakAndBatmanWalking()
+    public unsafe override bool IsWeakAndBatmanWalking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.IsWeakAndBatmanWalking", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -127,7 +127,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: BreakTile
     /// </summary>
-    public unsafe void BreakTile()
+    public unsafe override void BreakTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.BreakTile", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -138,7 +138,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: CrackTile
     /// </summary>
-    public unsafe void CrackTile()
+    public unsafe override void CrackTile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.CrackTile", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -149,7 +149,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: IsOnIceBaseAndSetValues
     /// </summary>
-    public unsafe bool IsOnIceBaseAndSetValues()
+    public unsafe override bool IsOnIceBaseAndSetValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.IsOnIceBaseAndSetValues", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -160,7 +160,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: IsBeingNoisyThisFrame
     /// </summary>
-    public unsafe bool IsBeingNoisyThisFrame()
+    public unsafe override bool IsBeingNoisyThisFrame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.IsBeingNoisyThisFrame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -171,7 +171,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: UpdateNoiseLevel
     /// </summary>
-    public unsafe void UpdateNoiseLevel(float UpdateTime)
+    public unsafe override void UpdateNoiseLevel(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.UpdateNoiseLevel", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -183,7 +183,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: SetAmbientLevel
     /// </summary>
-    public unsafe void SetAmbientLevel(float fLev)
+    public unsafe virtual void SetAmbientLevel(float fLev)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.SetAmbientLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -195,7 +195,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.Activated", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -206,7 +206,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: AddBatWalkIfCan
     /// </summary>
-    public unsafe void AddBatWalkIfCan()
+    public unsafe override void AddBatWalkIfCan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.AddBatWalkIfCan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -217,7 +217,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: RemoveBatWalkIfCan
     /// </summary>
-    public unsafe void RemoveBatWalkIfCan()
+    public unsafe override void RemoveBatWalkIfCan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.RemoveBatWalkIfCan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -228,7 +228,7 @@ public partial class RSeqAct_IceMeter : BmSDK.BmGame.RSeqAct_IceMeterBase, BmSDK
     /// <summary>
     /// Function: RemoveBatWalk
     /// </summary>
-    public unsafe void RemoveBatWalk()
+    public unsafe override void RemoveBatWalk()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_IceMeter.RemoveBatWalk", true);
         byte* paramsPtr = stackalloc byte[0];

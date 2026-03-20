@@ -36,7 +36,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: HaveTheOptionsChanged
     /// </summary>
-    public unsafe bool HaveTheOptionsChanged()
+    public unsafe virtual bool HaveTheOptionsChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.HaveTheOptionsChanged", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: MakeCopyOfOptions
     /// </summary>
-    public unsafe void MakeCopyOfOptions()
+    public unsafe virtual void MakeCopyOfOptions()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.MakeCopyOfOptions", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetControlType
     /// </summary>
-    public unsafe void SetControlType(bool bPlayer2, int Value)
+    public unsafe virtual void SetControlType(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetControlType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -71,7 +71,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetControlType
     /// </summary>
-    public unsafe int GetControlType(bool bPlayer2)
+    public unsafe virtual int GetControlType(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetControlType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultControlType
     /// </summary>
-    public unsafe int GetDefaultControlType(bool bPlayer2)
+    public unsafe virtual int GetDefaultControlType(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultControlType", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -95,7 +95,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSixAxis
     /// </summary>
-    public unsafe void SetSixAxis(bool bPlayer2, int Value)
+    public unsafe virtual void SetSixAxis(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetSixAxis", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -108,7 +108,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSixAxis
     /// </summary>
-    public unsafe int GetSixAxis(bool bPlayer2)
+    public unsafe virtual int GetSixAxis(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetSixAxis", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -120,7 +120,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultSixAxis
     /// </summary>
-    public unsafe int GetDefaultSixAxis(bool bPlayer2)
+    public unsafe virtual int GetDefaultSixAxis(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultSixAxis", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -132,7 +132,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVibration
     /// </summary>
-    public unsafe void SetVibration(bool bPlayer2, int Value)
+    public unsafe virtual void SetVibration(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVibration", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -145,7 +145,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVibration
     /// </summary>
-    public unsafe int GetVibration(bool bPlayer2)
+    public unsafe virtual int GetVibration(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVibration", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -157,7 +157,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultVibration
     /// </summary>
-    public unsafe int GetDefaultVibration(bool bPlayer2)
+    public unsafe virtual int GetDefaultVibration(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVibration", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -169,7 +169,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetCameraAssist
     /// </summary>
-    public unsafe void SetCameraAssist(bool bPlayer2, int Value)
+    public unsafe virtual void SetCameraAssist(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetCameraAssist", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -182,7 +182,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCameraAssist
     /// </summary>
-    public unsafe int GetCameraAssist(bool bPlayer2)
+    public unsafe virtual int GetCameraAssist(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetCameraAssist", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -194,7 +194,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultCameraAssist
     /// </summary>
-    public unsafe int GetDefaultCameraAssist(bool bPlayer2)
+    public unsafe virtual int GetDefaultCameraAssist(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultCameraAssist", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -206,7 +206,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAutoFlow
     /// </summary>
-    public unsafe void SetAutoFlow(bool bPlayer2, int Value)
+    public unsafe virtual void SetAutoFlow(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetAutoFlow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -219,7 +219,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultAutoFlow
     /// </summary>
-    public unsafe int GetDefaultAutoFlow(bool bPlayer2)
+    public unsafe virtual int GetDefaultAutoFlow(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultAutoFlow", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -231,7 +231,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvertBatarang
     /// </summary>
-    public unsafe void SetInvertBatarang(bool bPlayer2, int Value)
+    public unsafe virtual void SetInvertBatarang(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertBatarang", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -244,7 +244,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInvertBatarang
     /// </summary>
-    public unsafe int GetInvertBatarang(bool bPlayer2)
+    public unsafe virtual int GetInvertBatarang(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertBatarang", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -256,7 +256,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultInvertBatarang
     /// </summary>
-    public unsafe int GetDefaultInvertBatarang(bool bPlayer2)
+    public unsafe virtual int GetDefaultInvertBatarang(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertBatarang", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -268,7 +268,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvertGlide
     /// </summary>
-    public unsafe void SetInvertGlide(bool bPlayer2, int Value)
+    public unsafe virtual void SetInvertGlide(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertGlide", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -281,7 +281,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInvertGlide
     /// </summary>
-    public unsafe int GetInvertGlide(bool bPlayer2)
+    public unsafe virtual int GetInvertGlide(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertGlide", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -293,7 +293,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultInvertGlide
     /// </summary>
-    public unsafe int GetDefaultInvertGlide(bool bPlayer2)
+    public unsafe virtual int GetDefaultInvertGlide(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertGlide", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -305,7 +305,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvertRotation
     /// </summary>
-    public unsafe void SetInvertRotation(bool bPlayer2, int Value)
+    public unsafe virtual void SetInvertRotation(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertRotation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -318,7 +318,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInvertRotation
     /// </summary>
-    public unsafe int GetInvertRotation(bool bPlayer2)
+    public unsafe virtual int GetInvertRotation(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertRotation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -330,7 +330,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultInvertRotation
     /// </summary>
-    public unsafe int GetDefaultInvertRotation(bool bPlayer2)
+    public unsafe virtual int GetDefaultInvertRotation(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertRotation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -342,7 +342,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetInvertLook
     /// </summary>
-    public unsafe void SetInvertLook(bool bPlayer2, int Value)
+    public unsafe virtual void SetInvertLook(bool bPlayer2, int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetInvertLook", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -355,7 +355,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetInvertLook
     /// </summary>
-    public unsafe int GetInvertLook(bool bPlayer2)
+    public unsafe virtual int GetInvertLook(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetInvertLook", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -367,7 +367,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultInvertLook
     /// </summary>
-    public unsafe int GetDefaultInvertLook(bool bPlayer2)
+    public unsafe virtual int GetDefaultInvertLook(bool bPlayer2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultInvertLook", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -379,7 +379,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetHints
     /// </summary>
-    public unsafe void SetHints(int Value)
+    public unsafe virtual void SetHints(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetHints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -391,7 +391,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetHints
     /// </summary>
-    public unsafe int GetHints()
+    public unsafe virtual int GetHints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetHints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -402,7 +402,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultHints
     /// </summary>
-    public unsafe int GetDefaultHints()
+    public unsafe virtual int GetDefaultHints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultHints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -413,7 +413,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTutorial
     /// </summary>
-    public unsafe void SetTutorial(int Value)
+    public unsafe virtual void SetTutorial(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetTutorial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -425,7 +425,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetTutorial
     /// </summary>
-    public unsafe int GetTutorial()
+    public unsafe virtual int GetTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetTutorial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -436,7 +436,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultTutorial
     /// </summary>
-    public unsafe int GetDefaultTutorial()
+    public unsafe virtual int GetDefaultTutorial()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultTutorial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -447,7 +447,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetIntensity3D
     /// </summary>
-    public unsafe void SetIntensity3D(int Value)
+    public unsafe virtual void SetIntensity3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetIntensity3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -459,7 +459,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetIntensity3D
     /// </summary>
-    public unsafe int GetIntensity3D()
+    public unsafe virtual int GetIntensity3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetIntensity3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -470,7 +470,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultIntensity3D
     /// </summary>
-    public unsafe int GetDefaultIntensity3D()
+    public unsafe virtual int GetDefaultIntensity3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultIntensity3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -481,7 +481,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetEyeInversion3D
     /// </summary>
-    public unsafe void SetEyeInversion3D(int Value)
+    public unsafe virtual void SetEyeInversion3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetEyeInversion3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -493,7 +493,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEyeInversion3D
     /// </summary>
-    public unsafe int GetEyeInversion3D()
+    public unsafe virtual int GetEyeInversion3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetEyeInversion3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -504,7 +504,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultEyeInversion3D
     /// </summary>
-    public unsafe int GetDefaultEyeInversion3D()
+    public unsafe virtual int GetDefaultEyeInversion3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultEyeInversion3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -515,7 +515,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetRender3D
     /// </summary>
-    public unsafe void SetRender3D(int Value)
+    public unsafe virtual void SetRender3D(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetRender3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -527,7 +527,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetRender3D
     /// </summary>
-    public unsafe int GetRender3D()
+    public unsafe virtual int GetRender3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetRender3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -538,7 +538,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultRender3D
     /// </summary>
-    public unsafe int GetDefaultRender3D()
+    public unsafe virtual int GetDefaultRender3D()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultRender3D", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -549,7 +549,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Apply3DSettings
     /// </summary>
-    public unsafe void Apply3DSettings()
+    public unsafe virtual void Apply3DSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.Apply3DSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -567,7 +567,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVolumeMusic
     /// </summary>
-    public unsafe void SetVolumeMusic(float Value)
+    public unsafe virtual void SetVolumeMusic(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeMusic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -586,7 +586,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVolumeMusic
     /// </summary>
-    public unsafe int GetVolumeMusic()
+    public unsafe virtual int GetVolumeMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeMusic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -604,7 +604,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultVolumeMusic
     /// </summary>
-    public unsafe int GetDefaultVolumeMusic()
+    public unsafe virtual int GetDefaultVolumeMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeMusic", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -615,7 +615,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVolumeDialogue
     /// </summary>
-    public unsafe void SetVolumeDialogue(float Value)
+    public unsafe virtual void SetVolumeDialogue(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -634,7 +634,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVolumeDialogue
     /// </summary>
-    public unsafe int GetVolumeDialogue()
+    public unsafe virtual int GetVolumeDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -652,7 +652,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultVolumeDialogue
     /// </summary>
-    public unsafe int GetDefaultVolumeDialogue()
+    public unsafe virtual int GetDefaultVolumeDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeDialogue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -663,7 +663,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetVolumeSFX
     /// </summary>
-    public unsafe void SetVolumeSFX(float Value)
+    public unsafe virtual void SetVolumeSFX(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetVolumeSFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -682,7 +682,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVolumeSFX
     /// </summary>
-    public unsafe int GetVolumeSFX()
+    public unsafe virtual int GetVolumeSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetVolumeSFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -700,7 +700,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultVolumeSFX
     /// </summary>
-    public unsafe int GetDefaultVolumeSFX()
+    public unsafe virtual int GetDefaultVolumeSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultVolumeSFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -711,7 +711,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGamma
     /// </summary>
-    public unsafe void SetGamma(float Value)
+    public unsafe virtual void SetGamma(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetGamma", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -730,7 +730,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEngineGamma
     /// </summary>
-    public unsafe float GetEngineGamma()
+    public unsafe virtual float GetEngineGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetEngineGamma", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -748,7 +748,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGamma
     /// </summary>
-    public unsafe float GetGamma()
+    public unsafe virtual float GetGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetGamma", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -766,7 +766,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultGamma
     /// </summary>
-    public unsafe int GetDefaultGamma()
+    public unsafe virtual int GetDefaultGamma()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultGamma", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -777,7 +777,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetSubtitles
     /// </summary>
-    public unsafe void SetSubtitles(int Value)
+    public unsafe virtual void SetSubtitles(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetSubtitles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -789,7 +789,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSubtitles
     /// </summary>
-    public unsafe int GetSubtitles()
+    public unsafe virtual int GetSubtitles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetSubtitles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -800,7 +800,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultSubtitles
     /// </summary>
-    public unsafe int GetDefaultSubtitles()
+    public unsafe virtual int GetDefaultSubtitles()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultSubtitles", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -811,7 +811,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDifficultyAsString
     /// </summary>
-    public unsafe BmSDK.FString GetDifficultyAsString()
+    public unsafe virtual BmSDK.FString GetDifficultyAsString()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDifficultyAsString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -822,7 +822,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetDifficulty
     /// </summary>
-    public unsafe void SetDifficulty(int Value)
+    public unsafe virtual void SetDifficulty(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetDifficulty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -834,7 +834,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDifficulty
     /// </summary>
-    public unsafe int GetDifficulty()
+    public unsafe virtual int GetDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDifficulty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -845,7 +845,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultDifficulty
     /// </summary>
-    public unsafe int GetDefaultDifficulty()
+    public unsafe virtual int GetDefaultDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultDifficulty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -856,7 +856,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPCControlsPage
     /// </summary>
-    public unsafe void SetPCControlsPage(int Value)
+    public unsafe virtual void SetPCControlsPage(int Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetPCControlsPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -868,7 +868,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPCControlsPage
     /// </summary>
-    public unsafe int GetPCControlsPage()
+    public unsafe virtual int GetPCControlsPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetPCControlsPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -879,7 +879,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDefaultPCControlsPage
     /// </summary>
-    public unsafe int GetDefaultPCControlsPage()
+    public unsafe virtual int GetDefaultPCControlsPage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetDefaultPCControlsPage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -890,7 +890,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetAllDefaults
     /// </summary>
-    public unsafe void SetAllDefaults()
+    public unsafe virtual void SetAllDefaults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SetAllDefaults", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -901,7 +901,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Dump
     /// </summary>
-    public unsafe void Dump()
+    public unsafe virtual void Dump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.Dump", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -912,7 +912,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CombatSuccess
     /// </summary>
-    public unsafe void CombatSuccess(int NumCombatants, int CombatKOsThisFight, float PlayerHealth)
+    public unsafe virtual void CombatSuccess(int NumCombatants, int CombatKOsThisFight, float PlayerHealth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.CombatSuccess", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -926,7 +926,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CombatDeath
     /// </summary>
-    public unsafe void CombatDeath(int CurrentChapter)
+    public unsafe virtual void CombatDeath(int CurrentChapter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.CombatDeath", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -938,7 +938,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsChallengeUnLocked
     /// </summary>
-    public unsafe bool IsChallengeUnLocked(int ChallengeID)
+    public unsafe virtual bool IsChallengeUnLocked(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.IsChallengeUnLocked", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -950,7 +950,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnlockedChallengeCharacterDataIndex
     /// </summary>
-    public unsafe int GetUnlockedChallengeCharacterDataIndex(int ChallengeIndex, int CharacterId)
+    public unsafe virtual int GetUnlockedChallengeCharacterDataIndex(int ChallengeIndex, int CharacterId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetUnlockedChallengeCharacterDataIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -963,7 +963,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetUnlockedChallengeIndex
     /// </summary>
-    public unsafe int GetUnlockedChallengeIndex(int ChallengeID)
+    public unsafe virtual int GetUnlockedChallengeIndex(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.GetUnlockedChallengeIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -975,7 +975,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UnlockChallenge
     /// </summary>
-    public unsafe bool UnlockChallenge(int ChallengeID)
+    public unsafe virtual bool UnlockChallenge(int ChallengeID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.UnlockChallenge", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -987,7 +987,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: RestorePS3LeaderboardCache
     /// </summary>
-    public unsafe void RestorePS3LeaderboardCache()
+    public unsafe virtual void RestorePS3LeaderboardCache()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.RestorePS3LeaderboardCache", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1005,7 +1005,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SavePS3LeaderboardCache
     /// </summary>
-    public unsafe void SavePS3LeaderboardCache()
+    public unsafe virtual void SavePS3LeaderboardCache()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.SavePS3LeaderboardCache", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1023,7 +1023,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearPS3LeaderboardCache
     /// </summary>
-    public unsafe void ClearPS3LeaderboardCache()
+    public unsafe virtual void ClearPS3LeaderboardCache()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPersistentOptions.ClearPS3LeaderboardCache", true);
         byte* paramsPtr = stackalloc byte[0];

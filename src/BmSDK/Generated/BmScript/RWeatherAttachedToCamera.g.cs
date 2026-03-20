@@ -71,7 +71,7 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeatherAttachedToCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeatherAttachedToCamera.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// Function: StopWeatherFX
     /// </summary>
-    public unsafe void StopWeatherFX()
+    public unsafe virtual void StopWeatherFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeatherAttachedToCamera.StopWeatherFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RWeatherAttachedToCamera : BmSDK.BmGame.RWeatherAttachedToC
     /// <summary>
     /// Function: StartWeatherFX
     /// </summary>
-    public unsafe void StartWeatherFX(BmSDK.Engine.RRainComponent.FRockRainSettings WeatherSettings, BmSDK.Engine.StaticMesh WeatherM)
+    public unsafe virtual void StartWeatherFX(BmSDK.Engine.RRainComponent.FRockRainSettings WeatherSettings, BmSDK.Engine.StaticMesh WeatherM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeatherAttachedToCamera.StartWeatherFX", true);
         byte* paramsPtr = stackalloc byte[72];

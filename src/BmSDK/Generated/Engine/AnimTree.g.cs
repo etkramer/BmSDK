@@ -36,7 +36,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetGroupIndex
     /// </summary>
-    public unsafe int GetGroupIndex(BmSDK.FName GroupName)
+    public unsafe virtual int GetGroupIndex(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.GetGroupIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -55,7 +55,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetGroupRateScale
     /// </summary>
-    public unsafe float GetGroupRateScale(BmSDK.FName GroupName)
+    public unsafe virtual float GetGroupRateScale(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.GetGroupRateScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -74,7 +74,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetGroupRateScale
     /// </summary>
-    public unsafe void SetGroupRateScale(BmSDK.FName GroupName, float NewRateScale)
+    public unsafe virtual void SetGroupRateScale(BmSDK.FName GroupName, float NewRateScale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.SetGroupRateScale", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetGroupRelativePosition
     /// </summary>
-    public unsafe float GetGroupRelativePosition(BmSDK.FName GroupName)
+    public unsafe virtual float GetGroupRelativePosition(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.GetGroupRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -113,7 +113,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: ForceGroupRelativePosition
     /// </summary>
-    public unsafe void ForceGroupRelativePosition(BmSDK.FName GroupName, float RelativePosition)
+    public unsafe virtual void ForceGroupRelativePosition(BmSDK.FName GroupName, float RelativePosition)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.ForceGroupRelativePosition", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -133,7 +133,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetGroupNotifyMaster
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetGroupNotifyMaster(BmSDK.FName GroupName)
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetGroupNotifyMaster(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.GetGroupNotifyMaster", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: GetGroupSynchMaster
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNodeSequence GetGroupSynchMaster(BmSDK.FName GroupName)
+    public unsafe virtual BmSDK.Engine.AnimNodeSequence GetGroupSynchMaster(BmSDK.FName GroupName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.GetGroupSynchMaster", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -171,7 +171,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetAnimGroupForNode
     /// </summary>
-    public unsafe bool SetAnimGroupForNode(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName, bool bCreateIfNotFound = default)
+    public unsafe virtual bool SetAnimGroupForNode(BmSDK.Engine.AnimNodeSequence SeqNode, BmSDK.FName GroupName, bool bCreateIfNotFound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.SetAnimGroupForNode", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -192,7 +192,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetUseSavedPose
     /// </summary>
-    public unsafe void SetUseSavedPose(bool bUseSaved)
+    public unsafe virtual void SetUseSavedPose(bool bUseSaved)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.SetUseSavedPose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: FindMorphNode
     /// </summary>
-    public unsafe BmSDK.Engine.MorphNodeBase FindMorphNode(BmSDK.FName InNodeName)
+    public unsafe virtual BmSDK.Engine.MorphNodeBase FindMorphNode(BmSDK.FName InNodeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.FindMorphNode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -230,7 +230,7 @@ public partial class AnimTree : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObjec
     /// <summary>
     /// Function: FindSkelControl
     /// </summary>
-    public unsafe BmSDK.Engine.SkelControlBase FindSkelControl(BmSDK.FName InControlName)
+    public unsafe virtual BmSDK.Engine.SkelControlBase FindSkelControl(BmSDK.FName InControlName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimTree.FindSkelControl", true);
         byte* paramsPtr = stackalloc byte[12];

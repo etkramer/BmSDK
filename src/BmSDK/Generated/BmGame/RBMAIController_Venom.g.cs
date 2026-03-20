@@ -71,7 +71,7 @@ public partial class RBMAIController_Venom : BmSDK.BmGame.RBMAIController, BmSDK
     /// <summary>
     /// Function: CanBatmanGrab
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
+    public unsafe override BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIController_Venom.CanBatmanGrab", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RInvestigateStaticMeshActor : BmSDK.Engine.StaticMeshActor,
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RInvestigateStaticMeshActor.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[12];

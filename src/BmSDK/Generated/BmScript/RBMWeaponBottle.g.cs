@@ -71,7 +71,7 @@ public partial class RBMWeaponBottle : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.
     /// <summary>
     /// Function: PlaySmashFX
     /// </summary>
-    public unsafe void PlaySmashFX()
+    public unsafe virtual void PlaySmashFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBottle.PlaySmashFX", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -82,7 +82,7 @@ public partial class RBMWeaponBottle : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.
     /// <summary>
     /// Function: Smash
     /// </summary>
-    public unsafe void Smash()
+    public unsafe virtual void Smash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBottle.Smash", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMWeaponBottle : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.
     /// <summary>
     /// Function: Unsmash
     /// </summary>
-    public unsafe void Unsmash()
+    public unsafe virtual void Unsmash()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBottle.Unsmash", true);
         byte* paramsPtr = stackalloc byte[0];

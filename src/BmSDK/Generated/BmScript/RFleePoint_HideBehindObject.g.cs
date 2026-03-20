@@ -71,7 +71,7 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
     /// <summary>
     /// Function: GetMoveToPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveToPoint(BmSDK.BmGame.RBMPawnAI Mover)
+    public unsafe override System.Numerics.Vector3 GetMoveToPoint(BmSDK.BmGame.RBMPawnAI Mover)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_HideBehindObject.GetMoveToPoint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -83,7 +83,7 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
     /// <summary>
     /// Function: StopScaredIdle
     /// </summary>
-    public unsafe void StopScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
+    public unsafe override void StopScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_HideBehindObject.StopScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
     /// <summary>
     /// Function: StartScaredIdle
     /// </summary>
-    public unsafe void StartScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
+    public unsafe override void StartScaredIdle(BmSDK.BmGame.RBMPawnAI CurrentUser)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_HideBehindObject.StartScaredIdle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
     /// <summary>
     /// Function: IsPlayerScary
     /// </summary>
-    public unsafe bool IsPlayerScary(bool bCurrentlyScared, BmSDK.BmGame.RBMPawnAI CurrentUser, BmSDK.BmGame.RPawn Player)
+    public unsafe override bool IsPlayerScary(bool bCurrentlyScared, BmSDK.BmGame.RBMPawnAI CurrentUser, BmSDK.BmGame.RPawn Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_HideBehindObject.IsPlayerScary", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -121,7 +121,7 @@ public partial class RFleePoint_HideBehindObject : BmSDK.BmGame.RFleePoint, BmSD
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
+    public unsafe override bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFleePoint_HideBehindObject.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[12];

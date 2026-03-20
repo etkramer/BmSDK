@@ -36,7 +36,7 @@ public partial class SeqAct_GetMatInstScalarParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_GetMatInstScalarParam.Activated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -47,7 +47,7 @@ public partial class SeqAct_GetMatInstScalarParam : BmSDK.Engine.SequenceAction,
     /// <summary>
     /// Function: GetScalar
     /// </summary>
-    public unsafe void GetScalar(out float Scalar)
+    public unsafe virtual void GetScalar(out float Scalar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_GetMatInstScalarParam.GetScalar", true);
         byte* paramsPtr = stackalloc byte[4];

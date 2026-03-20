@@ -93,7 +93,7 @@ public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Function: AddTextureStreamingSlaveLoc
     /// </summary>
-    public unsafe void AddTextureStreamingSlaveLoc(System.Numerics.Vector3 InLoc)
+    public unsafe virtual void AddTextureStreamingSlaveLoc(System.Numerics.Vector3 InLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Engine.AddTextureStreamingSlaveLoc", true);
         byte* paramsPtr = stackalloc byte[12];

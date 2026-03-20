@@ -71,7 +71,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: ProcessControllerShake
     /// </summary>
-    public unsafe void ProcessControllerShake(float DeltaTime)
+    public unsafe virtual void ProcessControllerShake(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.ProcessControllerShake", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.ExitMove", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -94,7 +94,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridePawn, BmSDK.BmGame.RCombatMove OverrideMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridePawn, BmSDK.BmGame.RCombatMove OverrideMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartTargetKO
     /// </summary>
-    public unsafe void StartTargetKO()
+    public unsafe virtual void StartTargetKO()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartTargetKO", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: SetCameraLookDirection
     /// </summary>
-    public unsafe void SetCameraLookDirection()
+    public unsafe virtual void SetCameraLookDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.SetCameraLookDirection", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -129,7 +129,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: Impact
     /// </summary>
-    public unsafe void Impact()
+    public unsafe virtual void Impact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.Impact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: PlayThrowAnim
     /// </summary>
-    public unsafe void PlayThrowAnim(BmSDK.FName NewAnimName, System.Numerics.Vector3 AnimPos, int AnimYaw)
+    public unsafe virtual void PlayThrowAnim(BmSDK.FName NewAnimName, System.Numerics.Vector3 AnimPos, int AnimYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.PlayThrowAnim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -154,7 +154,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartThrow
     /// </summary>
-    public unsafe void StartThrow()
+    public unsafe virtual void StartThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartThrow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartStruggle
     /// </summary>
-    public unsafe void StartStruggle()
+    public unsafe virtual void StartStruggle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartStruggle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -176,7 +176,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartEnterStruggleAnims
     /// </summary>
-    public unsafe void StartEnterStruggleAnims(System.Numerics.Vector3 AnimPos, BmSDK.FName NewAnimName, int AnimYaw)
+    public unsafe virtual void StartEnterStruggleAnims(System.Numerics.Vector3 AnimPos, BmSDK.FName NewAnimName, int AnimYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartEnterStruggleAnims", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -190,7 +190,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: Breakout
     /// </summary>
-    public unsafe void Breakout(System.Numerics.Vector3 NewThrowDir)
+    public unsafe virtual void Breakout(System.Numerics.Vector3 NewThrowDir)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.Breakout", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -202,7 +202,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: ProcessGrabTime
     /// </summary>
-    public unsafe void ProcessGrabTime(float DeltaTime)
+    public unsafe virtual void ProcessGrabTime(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.ProcessGrabTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -214,7 +214,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartEnterStruggle
     /// </summary>
-    public unsafe void StartEnterStruggle()
+    public unsafe virtual void StartEnterStruggle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartEnterStruggle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -225,7 +225,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StopTracking
     /// </summary>
-    public unsafe void StopTracking()
+    public unsafe virtual void StopTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StopTracking", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -236,7 +236,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: ClientStartJump
     /// </summary>
-    public unsafe void ClientStartJump()
+    public unsafe virtual void ClientStartJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.ClientStartJump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -247,7 +247,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: StartWaitToJump
     /// </summary>
-    public unsafe void StartWaitToJump()
+    public unsafe virtual void StartWaitToJump()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.StartWaitToJump", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -258,7 +258,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: PreventedWalkingOverLedge
     /// </summary>
-    public unsafe void PreventedWalkingOverLedge(BmSDK.BmGame.RPawnCombat PawnAtLedge)
+    public unsafe override void PreventedWalkingOverLedge(BmSDK.BmGame.RPawnCombat PawnAtLedge)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.PreventedWalkingOverLedge", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -270,7 +270,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: CanReceiveAttackFromPawn
     /// </summary>
-    public unsafe bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
+    public unsafe override bool CanReceiveAttackFromPawn(BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.BmGame.RPawnCombat NewAttacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.CanReceiveAttackFromPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -283,7 +283,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: InitialiseClient
     /// </summary>
-    public unsafe void InitialiseClient(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RPawnCombat PawnTarget)
+    public unsafe virtual void InitialiseClient(BmSDK.BmGame.RPawnVillain PawnVillain, BmSDK.BmGame.RPawnCombat PawnTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.InitialiseClient", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -296,7 +296,7 @@ public partial class RCombatMove_LunaticGrab : BmSDK.BmGame.RCombatMove_VillainA
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_LunaticGrab.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

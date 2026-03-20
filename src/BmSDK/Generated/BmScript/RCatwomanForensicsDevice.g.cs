@@ -71,7 +71,7 @@ public partial class RCatwomanForensicsDevice : BmSDK.BmGame.RForensicsDevice, B
     /// <summary>
     /// Function: RestoreMaterialsForXray
     /// </summary>
-    public unsafe void RestoreMaterialsForXray(bool force_swap = default)
+    public unsafe override void RestoreMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCatwomanForensicsDevice.RestoreMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RCatwomanForensicsDevice : BmSDK.BmGame.RForensicsDevice, B
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe override void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCatwomanForensicsDevice.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -95,7 +95,7 @@ public partial class RCatwomanForensicsDevice : BmSDK.BmGame.RForensicsDevice, B
     /// <summary>
     /// Function: SwapMaterialsForXray
     /// </summary>
-    public unsafe void SwapMaterialsForXray(bool force_swap = default)
+    public unsafe override void SwapMaterialsForXray(bool force_swap = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCatwomanForensicsDevice.SwapMaterialsForXray", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -107,7 +107,7 @@ public partial class RCatwomanForensicsDevice : BmSDK.BmGame.RForensicsDevice, B
     /// <summary>
     /// Function: SetForensicsRenderType
     /// </summary>
-    public unsafe void SetForensicsRenderType(bool On)
+    public unsafe override void SetForensicsRenderType(bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCatwomanForensicsDevice.SetForensicsRenderType", true);
         byte* paramsPtr = stackalloc byte[8];

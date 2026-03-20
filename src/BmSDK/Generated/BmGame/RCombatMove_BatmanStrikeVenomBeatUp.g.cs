@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetStrikeTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStrikeTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetStrikeTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.GetStrikeTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: SetStrikeInfo
     /// </summary>
-    public unsafe int SetStrikeInfo()
+    public unsafe override int SetStrikeInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.SetStrikeInfo", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -93,7 +93,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TriggerStunAttempted
     /// </summary>
-    public unsafe void TriggerStunAttempted()
+    public unsafe override void TriggerStunAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.TriggerStunAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TriggerCounterAttempted
     /// </summary>
-    public unsafe void TriggerCounterAttempted()
+    public unsafe override void TriggerCounterAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.TriggerCounterAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RCombatMove_BatmanStrikeVenomBeatUp : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanStrikeVenomBeatUp.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

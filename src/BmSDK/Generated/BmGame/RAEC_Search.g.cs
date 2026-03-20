@@ -71,7 +71,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ReassignToPredatorPoint
     /// </summary>
-    public unsafe void ReassignToPredatorPoint(BmSDK.BmGame.RAEC_Search_Sub PointLeader, BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint)
+    public unsafe virtual void ReassignToPredatorPoint(BmSDK.BmGame.RAEC_Search_Sub PointLeader, BmSDK.BmGame.RPredatorSpecialMovePointBase PredatorPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToPredatorPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ReassignToCornerTerrified
     /// </summary>
-    public unsafe void ReassignToCornerTerrified(BmSDK.BmGame.RAEC_Search_Sub_Terrified CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
+    public unsafe virtual void ReassignToCornerTerrified(BmSDK.BmGame.RAEC_Search_Sub_Terrified CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToCornerTerrified", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -98,7 +98,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ReassignToRailPeek
     /// </summary>
-    public unsafe void ReassignToRailPeek(BmSDK.BmGame.RAEC_Search_Sub PeekLeader, BmSDK.BmGame.RBMPathNode_FenceJump FenceNode, System.Numerics.Vector3 StartPoint)
+    public unsafe virtual void ReassignToRailPeek(BmSDK.BmGame.RAEC_Search_Sub PeekLeader, BmSDK.BmGame.RBMPathNode_FenceJump FenceNode, System.Numerics.Vector3 StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToRailPeek", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -112,7 +112,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: ReassignToCorner
     /// </summary>
-    public unsafe void ReassignToCorner(BmSDK.BmGame.RAEC_Search_Sub CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
+    public unsafe virtual void ReassignToCorner(BmSDK.BmGame.RAEC_Search_Sub CornerLeader, BmSDK.BmGame.RCornerWallMarker StartCorner, BmSDK.BmGame.RCornerWallMarker EndCorner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.ReassignToCorner", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -126,7 +126,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignFromTerrorCorner
     /// </summary>
-    public unsafe void AssignFromTerrorCorner(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
+    public unsafe virtual void AssignFromTerrorCorner(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromTerrorCorner", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -139,7 +139,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignFromFollow
     /// </summary>
-    public unsafe void AssignFromFollow(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
+    public unsafe override void AssignFromFollow(BmSDK.BmGame.RBMAIController NewMember, BmSDK.BmGame.RAEC_Search_Sub.FRestoreSearchState OldState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromFollow", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -152,7 +152,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignToSniperPoint
     /// </summary>
-    public unsafe void AssignToSniperPoint(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignToSniperPoint(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSniperPoint", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -164,7 +164,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignToSmashGenerators
     /// </summary>
-    public unsafe void AssignToSmashGenerators(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignToSmashGenerators(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSmashGenerators", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignToSmashGargoyles
     /// </summary>
-    public unsafe void AssignToSmashGargoyles(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignToSmashGargoyles(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToSmashGargoyles", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -188,7 +188,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignFromThermalFail
     /// </summary>
-    public unsafe void AssignFromThermalFail(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignFromThermalFail(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignFromThermalFail", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -200,7 +200,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: Assign
     /// </summary>
-    public unsafe void Assign(BmSDK.BmGame.RBMAIController NewMember, bool bFirstAttempt = default, bool bHasHintLoc = default, System.Numerics.Vector3 HintLoc = default)
+    public unsafe override void Assign(BmSDK.BmGame.RBMAIController NewMember, bool bFirstAttempt = default, bool bHasHintLoc = default, System.Numerics.Vector3 HintLoc = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.Assign", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -215,7 +215,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignToImmiediateSmash
     /// </summary>
-    public unsafe void AssignToImmiediateSmash(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignToImmiediateSmash(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToImmiediateSmash", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -227,7 +227,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: AssignToGuard
     /// </summary>
-    public unsafe void AssignToGuard(BmSDK.BmGame.RBMAIController NewMember)
+    public unsafe virtual void AssignToGuard(BmSDK.BmGame.RBMAIController NewMember)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.AssignToGuard", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -239,7 +239,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SendToGuardPoint
     /// </summary>
-    public unsafe void SendToGuardPoint(BmSDK.BmGame.RBMAIController NewGuardCon, BmSDK.BmGame.RGuardPoint GuardPoint)
+    public unsafe virtual void SendToGuardPoint(BmSDK.BmGame.RBMAIController NewGuardCon, BmSDK.BmGame.RGuardPoint GuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.SendToGuardPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -252,7 +252,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanSnipe
     /// </summary>
-    public unsafe bool CanSnipe()
+    public unsafe override bool CanSnipe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.CanSnipe", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -263,7 +263,7 @@ public partial class RAEC_Search : BmSDK.BmGame.RAEC_SearchBase, BmSDK.IGameObje
     /// <summary>
     /// Function: SetNewFearLevel
     /// </summary>
-    public unsafe void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
+    public unsafe override void SetNewFearLevel(BmSDK.BmGame.RBMRoomAIState.VillainFearLevel FearLevel)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search.SetNewFearLevel", true);
         byte* paramsPtr = stackalloc byte[1];

@@ -36,7 +36,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: GameMovieSetPauseState
     /// </summary>
-    public unsafe void GameMovieSetPauseState(bool bPause)
+    public unsafe override void GameMovieSetPauseState(bool bPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.GameMovieSetPauseState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: HasGameMovieContent
     /// </summary>
-    public unsafe bool HasGameMovieContent()
+    public unsafe override bool HasGameMovieContent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.HasGameMovieContent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: OnClose
     /// </summary>
-    public unsafe void OnClose()
+    public unsafe override void OnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.OnClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: FlashOnClose
     /// </summary>
-    public unsafe void FlashOnClose()
+    public unsafe virtual void FlashOnClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.FlashOnClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: MovieStartOutro
     /// </summary>
-    public unsafe void MovieStartOutro()
+    public unsafe virtual void MovieStartOutro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.MovieStartOutro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -92,7 +92,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: MovieUpdateVolumes
     /// </summary>
-    public unsafe void MovieUpdateVolumes()
+    public unsafe virtual void MovieUpdateVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.MovieUpdateVolumes", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -103,7 +103,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: Flash_SetVolumes
     /// </summary>
-    public unsafe void Flash_SetVolumes(float MainVol, float SubVol)
+    public unsafe virtual void Flash_SetVolumes(float MainVol, float SubVol)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.Flash_SetVolumes", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -116,7 +116,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: AtEnd
     /// </summary>
-    public unsafe void AtEnd()
+    public unsafe virtual void AtEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.AtEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: MovieClose
     /// </summary>
-    public unsafe void MovieClose()
+    public unsafe virtual void MovieClose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.MovieClose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: MoviePause
     /// </summary>
-    public unsafe void MoviePause()
+    public unsafe virtual void MoviePause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.MoviePause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -149,7 +149,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: MoviePlay
     /// </summary>
-    public unsafe void MoviePlay()
+    public unsafe virtual void MoviePlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.MoviePlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -160,7 +160,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: HandleCUE
     /// </summary>
-    public unsafe void HandleCUE(BmSDK.FString CueStr)
+    public unsafe virtual void HandleCUE(BmSDK.FString CueStr)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.HandleCUE", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -172,7 +172,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: SetSubtitleTo
     /// </summary>
-    public unsafe void SetSubtitleTo(BmSDK.FString Message)
+    public unsafe virtual void SetSubtitleTo(BmSDK.FString Message)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.SetSubtitleTo", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -184,7 +184,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: UpdateHudVisibility
     /// </summary>
-    public unsafe void UpdateHudVisibility(bool bVisible)
+    public unsafe override void UpdateHudVisibility(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.UpdateHudVisibility", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -196,7 +196,7 @@ public partial class RGFxMovieFlashMovie : BmSDK.BmGame.RGFxMovie, BmSDK.IGameOb
     /// <summary>
     /// Function: CustomInit
     /// </summary>
-    public unsafe bool CustomInit(BmSDK.BmGame.RPlayerController PC, BmSDK.FString USM_MovieName, float USM_BufferSize, bool bLoop, BmSDK.TArray<float> pos = default, BmSDK.TArray<float> Rot = default, bool bUseSubs = default)
+    public unsafe virtual bool CustomInit(BmSDK.BmGame.RPlayerController PC, BmSDK.FString USM_MovieName, float USM_BufferSize, bool bLoop, BmSDK.TArray<float> pos = default, BmSDK.TArray<float> Rot = default, bool bUseSubs = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieFlashMovie.CustomInit", true);
         byte* paramsPtr = stackalloc byte[84];

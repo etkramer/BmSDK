@@ -31,7 +31,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: IsPlayerInSession
     /// </summary>
-    public unsafe bool IsPlayerInSession(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
+    public unsafe virtual bool IsPlayerInSession(BmSDK.FName SessionName, BmSDK.Engine.OnlineSubsystem.FUniqueNetId PlayerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.IsPlayerInSession", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -51,7 +51,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetPlayerUniqueNetIdFromIndex
     /// </summary>
-    public unsafe BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetPlayerUniqueNetIdFromIndex(int UserIndex)
+    public unsafe virtual BmSDK.Engine.OnlineSubsystem.FUniqueNetId GetPlayerUniqueNetIdFromIndex(int UserIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetPlayerUniqueNetIdFromIndex", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -63,7 +63,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetPlayerNicknameFromIndex
     /// </summary>
-    public unsafe BmSDK.FString GetPlayerNicknameFromIndex(int UserIndex)
+    public unsafe virtual BmSDK.FString GetPlayerNicknameFromIndex(int UserIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetPlayerNicknameFromIndex", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -75,7 +75,7 @@ public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, B
     /// <summary>
     /// Function: GetInfocastFilename
     /// </summary>
-    public unsafe void GetInfocastFilename(out BmSDK.FString Filename)
+    public unsafe virtual void GetInfocastFilename(out BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "IpDrv.OnlineSubsystemCommonImpl.GetInfocastFilename", true);
         byte* paramsPtr = stackalloc byte[12];

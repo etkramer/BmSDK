@@ -71,7 +71,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: DestroyTeeth
     /// </summary>
-    public unsafe void DestroyTeeth()
+    public unsafe override void DestroyTeeth()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.DestroyTeeth", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetPickedUpName
     /// </summary>
-    public unsafe BmSDK.FString GetPickedUpName()
+    public unsafe virtual BmSDK.FString GetPickedUpName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetPickedUpName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetMapVisibleName
     /// </summary>
-    public unsafe BmSDK.FString GetMapVisibleName()
+    public unsafe virtual BmSDK.FString GetMapVisibleName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetMapVisibleName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetLevelName
     /// </summary>
-    public unsafe BmSDK.FString GetLevelName()
+    public unsafe virtual BmSDK.FString GetLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetLevelName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -115,7 +115,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: PlaySmashSound
     /// </summary>
-    public unsafe void PlaySmashSound()
+    public unsafe virtual void PlaySmashSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.PlaySmashSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -144,7 +144,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -155,7 +155,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: OnToggleHidden
     /// </summary>
-    public unsafe void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
+    public unsafe override void OnToggleHidden(BmSDK.Engine.SeqAct_ToggleHidden Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.OnToggleHidden", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -167,7 +167,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -181,7 +181,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -193,7 +193,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: StopTeethSound
     /// </summary>
-    public unsafe void StopTeethSound()
+    public unsafe virtual void StopTeethSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.StopTeethSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -204,7 +204,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: StartTeethSound
     /// </summary>
-    public unsafe void StartTeethSound()
+    public unsafe virtual void StartTeethSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.StartTeethSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -215,7 +215,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -237,7 +237,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -248,7 +248,7 @@ public partial class RChatterTeeth : BmSDK.BmGame.RChatteringTeeth, BmSDK.BmGame
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RChatterTeeth.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];

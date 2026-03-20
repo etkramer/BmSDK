@@ -36,7 +36,7 @@ public partial class RB_ForceComponentCylindrical : BmSDK.Engine.RB_ForceCompone
     /// <summary>
     /// Function: Clone
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ForceComponent Clone()
+    public unsafe override BmSDK.Engine.RB_ForceComponent Clone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponentCylindrical.Clone", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -66,7 +66,7 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REffectVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: InitSections
     /// </summary>
-    public unsafe void InitSections()
+    public unsafe virtual void InitSections()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REffectVolume.InitSections", true);
         byte* paramsPtr = stackalloc byte[108];
@@ -88,7 +88,7 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: InitSection
     /// </summary>
-    public unsafe void InitSection(BmSDK.Engine.ParticleSystemComponent P, BmSDK.Engine.ParticleSystemComponent Q, System.Numerics.Vector3 pos)
+    public unsafe virtual void InitSection(BmSDK.Engine.ParticleSystemComponent P, BmSDK.Engine.ParticleSystemComponent Q, System.Numerics.Vector3 pos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REffectVolume.InitSection", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -102,7 +102,7 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: GetSectionDivision
     /// </summary>
-    public unsafe void GetSectionDivision(float Size, out int SectionCount, out float SectionSize)
+    public unsafe virtual void GetSectionDivision(float Size, out int SectionCount, out float SectionSize)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REffectVolume.GetSectionDivision", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -116,7 +116,7 @@ public partial class REffectVolume : BmSDK.Engine.PhysicsVolume, BmSDK.IGameObje
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float Delta)
+    public unsafe override void Tick(float Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REffectVolume.Tick", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: HandleAction
     /// </summary>
-    public unsafe void HandleAction(BmSDK.FName ActionName)
+    public unsafe override void HandleAction(BmSDK.FName ActionName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.HandleAction", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -96,7 +96,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: KillBatman
     /// </summary>
-    public unsafe void KillBatman()
+    public unsafe virtual void KillBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.KillBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerDeathEvent
     /// </summary>
-    public unsafe void TriggerDeathEvent()
+    public unsafe virtual void TriggerDeathEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.TriggerDeathEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -118,7 +118,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -130,7 +130,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -142,7 +142,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: StoreOldCamera
     /// </summary>
-    public unsafe void StoreOldCamera()
+    public unsafe virtual void StoreOldCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.StoreOldCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: PlayMySpecialCameraAnim
     /// </summary>
-    public unsafe bool PlayMySpecialCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool Looping = default)
+    public unsafe virtual bool PlayMySpecialCameraAnim(BmSDK.FName AnimName, bool bPlaying, bool bCamMirrored, float FOV = default, bool Looping = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.PlayMySpecialCameraAnim", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -180,7 +180,7 @@ public partial class RSpecialMoveInstance_IceEscape : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_IceEscape.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[140];

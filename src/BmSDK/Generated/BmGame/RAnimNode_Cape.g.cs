@@ -36,7 +36,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: SetAnimTreeNodeBlendValue
     /// </summary>
-    public unsafe void SetAnimTreeNodeBlendValue(BmSDK.FName setNodeName, float blendValue)
+    public unsafe virtual void SetAnimTreeNodeBlendValue(BmSDK.FName setNodeName, float blendValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.SetAnimTreeNodeBlendValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -56,7 +56,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: GetAnimTreeNodeBlendValue
     /// </summary>
-    public unsafe float GetAnimTreeNodeBlendValue(BmSDK.FName getNodeName)
+    public unsafe virtual float GetAnimTreeNodeBlendValue(BmSDK.FName getNodeName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.GetAnimTreeNodeBlendValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -75,7 +75,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: GetStateAnimNode
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNode GetStateAnimNode(BmSDK.FName AnimStateName)
+    public unsafe virtual BmSDK.Engine.AnimNode GetStateAnimNode(BmSDK.FName AnimStateName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.GetStateAnimNode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -94,7 +94,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: GetCurrentCapeAnimNode
     /// </summary>
-    public unsafe BmSDK.Engine.AnimNode GetCurrentCapeAnimNode()
+    public unsafe virtual BmSDK.Engine.AnimNode GetCurrentCapeAnimNode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.GetCurrentCapeAnimNode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: GetNumBonesInCape
     /// </summary>
-    public unsafe int GetNumBonesInCape()
+    public unsafe virtual int GetNumBonesInCape()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.GetNumBonesInCape", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: GetHasCurrentAnimEnded
     /// </summary>
-    public unsafe bool GetHasCurrentAnimEnded()
+    public unsafe virtual bool GetHasCurrentAnimEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.GetHasCurrentAnimEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: ResumeAnim
     /// </summary>
-    public unsafe void ResumeAnim()
+    public unsafe virtual void ResumeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.ResumeAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: PauseAnim
     /// </summary>
-    public unsafe void PauseAnim()
+    public unsafe virtual void PauseAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.PauseAnim", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RAnimNode_Cape : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGam
     /// <summary>
     /// Function: ChangeAnim
     /// </summary>
-    public unsafe void ChangeAnim(BmSDK.FName NewAnimName, BmSDK.FName NewAnimNodeName = default, bool NewIsMirrored = default, bool isBlendOldAnim = default, float BlendDuration = default, bool bBlendPose = default, float PoseBlendDuration = default, float AnimStartTime = default, float AnimPlayRate = default, BmSDK.FName SetParentTimeSyncAnimName = default, float SetParentTimeSyncAnimOffset = default, bool bSetSyncParentAnimMirroredness = default)
+    public unsafe virtual void ChangeAnim(BmSDK.FName NewAnimName, BmSDK.FName NewAnimNodeName = default, bool NewIsMirrored = default, bool isBlendOldAnim = default, float BlendDuration = default, bool bBlendPose = default, float PoseBlendDuration = default, float AnimStartTime = default, float AnimPlayRate = default, BmSDK.FName SetParentTimeSyncAnimName = default, float SetParentTimeSyncAnimOffset = default, bool bSetSyncParentAnimMirroredness = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAnimNode_Cape.ChangeAnim", true);
         byte* paramsPtr = stackalloc byte[60];

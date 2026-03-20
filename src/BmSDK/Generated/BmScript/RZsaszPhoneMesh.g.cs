@@ -71,7 +71,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: UnsetPFXTemplate
     /// </summary>
-    public unsafe void UnsetPFXTemplate()
+    public unsafe virtual void UnsetPFXTemplate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.UnsetPFXTemplate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: PhoneStateChanged
     /// </summary>
-    public unsafe void PhoneStateChanged()
+    public unsafe virtual void PhoneStateChanged()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.PhoneStateChanged", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: OnSetMaterial
     /// </summary>
-    public unsafe void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
+    public unsafe override void OnSetMaterial(BmSDK.Engine.SeqAct_SetMaterial Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.OnSetMaterial", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe virtual void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -130,7 +130,7 @@ public partial class RZsaszPhoneMesh : BmSDK.BmGame.RStaticMeshToggleable, BmSDK
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RZsaszPhoneMesh.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[12];

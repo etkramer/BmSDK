@@ -47,7 +47,7 @@ public partial class RSeqAct_InDialogue : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: CheckDialogue
     /// </summary>
-    public unsafe void CheckDialogue()
+    public unsafe virtual void CheckDialogue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_InDialogue.CheckDialogue", true);
         byte* paramsPtr = stackalloc byte[12];

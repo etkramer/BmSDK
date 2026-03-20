@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RandomSoakDestination
     /// </summary>
-    public unsafe void RandomSoakDestination()
+    public unsafe virtual void RandomSoakDestination()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RandomSoakDestination", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ChangeToMovementPose
     /// </summary>
-    public unsafe void ChangeToMovementPose()
+    public unsafe virtual void ChangeToMovementPose()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ChangeToMovementPose", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsInRangeForBlast
     /// </summary>
-    public unsafe bool IsInRangeForBlast()
+    public unsafe virtual bool IsInRangeForBlast()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsInRangeForBlast", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TickAttackPointSearch
     /// </summary>
-    public unsafe void TickAttackPointSearch()
+    public unsafe virtual void TickAttackPointSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TickAttackPointSearch", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartAttackPointSearch
     /// </summary>
-    public unsafe void StartAttackPointSearch(System.Numerics.Vector3 StartingLocation, float SearchRadius)
+    public unsafe virtual void StartAttackPointSearch(System.Numerics.Vector3 StartingLocation, float SearchRadius)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StartAttackPointSearch", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: InitialiseAttackPointSearch
     /// </summary>
-    public unsafe void InitialiseAttackPointSearch(System.Numerics.Vector3 StartingLocation, float StartingRadius, float RadiusRange, bool AlternatePlusMinus, int NumIncrements)
+    public unsafe virtual void InitialiseAttackPointSearch(System.Numerics.Vector3 StartingLocation, float StartingRadius, float RadiusRange, bool AlternatePlusMinus, int NumIncrements)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.InitialiseAttackPointSearch", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -120,7 +120,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CancelAttackPointSearch
     /// </summary>
-    public unsafe void CancelAttackPointSearch()
+    public unsafe virtual void CancelAttackPointSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CancelAttackPointSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -131,7 +131,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TriggerRepel
     /// </summary>
-    public unsafe void TriggerRepel()
+    public unsafe virtual void TriggerRepel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TriggerRepel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartRepelCountDown
     /// </summary>
-    public unsafe void StartRepelCountDown()
+    public unsafe virtual void StartRepelCountDown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StartRepelCountDown", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetRepelAlertActive
     /// </summary>
-    public unsafe void SetRepelAlertActive(bool is_active)
+    public unsafe virtual void SetRepelAlertActive(bool is_active)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetRepelAlertActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -165,7 +165,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DoRepelAttack
     /// </summary>
-    public unsafe void DoRepelAttack(bool large_scale)
+    public unsafe virtual void DoRepelAttack(bool large_scale)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.DoRepelAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AttemptWeaponFire
     /// </summary>
-    public unsafe void AttemptWeaponFire(BmSDK.BmScript.RBMBehaviour_Freeze.FreezeWeapon ChosenWeapon)
+    public unsafe virtual void AttemptWeaponFire(BmSDK.BmScript.RBMBehaviour_Freeze.FreezeWeapon ChosenWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AttemptWeaponFire", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -189,7 +189,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsAppropriateToFireGrenadeSpread
     /// </summary>
-    public unsafe bool IsAppropriateToFireGrenadeSpread()
+    public unsafe virtual bool IsAppropriateToFireGrenadeSpread()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsAppropriateToFireGrenadeSpread", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -200,7 +200,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsWeaponUsable
     /// </summary>
-    public unsafe bool IsWeaponUsable(BmSDK.BmScript.RBMBehaviour_Freeze.FreezeWeapon ChosenWeapon)
+    public unsafe virtual bool IsWeaponUsable(BmSDK.BmScript.RBMBehaviour_Freeze.FreezeWeapon ChosenWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsWeaponUsable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -212,7 +212,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CouldBatmanHaveMovedThisFarThisQuickly
     /// </summary>
-    public unsafe bool CouldBatmanHaveMovedThisFarThisQuickly(System.Numerics.Vector3 QuestionLocation)
+    public unsafe virtual bool CouldBatmanHaveMovedThisFarThisQuickly(System.Numerics.Vector3 QuestionLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CouldBatmanHaveMovedThisFarThisQuickly", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -224,7 +224,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AlertToBrokenGlassSound
     /// </summary>
-    public unsafe void AlertToBrokenGlassSound(System.Numerics.Vector3 BreakageLocation)
+    public unsafe virtual void AlertToBrokenGlassSound(System.Numerics.Vector3 BreakageLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AlertToBrokenGlassSound", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -236,7 +236,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: UpdateEstimatedWeaponTimestamp
     /// </summary>
-    public unsafe void UpdateEstimatedWeaponTimestamp(float new_estimate)
+    public unsafe virtual void UpdateEstimatedWeaponTimestamp(float new_estimate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.UpdateEstimatedWeaponTimestamp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -248,7 +248,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyNoraStatueDestroyed
     /// </summary>
-    public unsafe void NotifyNoraStatueDestroyed(bool bDestroyedByFreeze, System.Numerics.Vector3 StatueLocation)
+    public unsafe virtual void NotifyNoraStatueDestroyed(bool bDestroyedByFreeze, System.Numerics.Vector3 StatueLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.NotifyNoraStatueDestroyed", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -261,7 +261,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyDroneFoundBatman
     /// </summary>
-    public unsafe void NotifyDroneFoundBatman(bool bWasDestroyed)
+    public unsafe virtual void NotifyDroneFoundBatman(bool bWasDestroyed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.NotifyDroneFoundBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -273,7 +273,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyBatmanEntersOrLeavesHighBoxVolume
     /// </summary>
-    public unsafe void NotifyBatmanEntersOrLeavesHighBoxVolume(bool is_entering)
+    public unsafe virtual void NotifyBatmanEntersOrLeavesHighBoxVolume(bool is_entering)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.NotifyBatmanEntersOrLeavesHighBoxVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -285,7 +285,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsDirectionWithinMovementCone
     /// </summary>
-    public unsafe bool IsDirectionWithinMovementCone(System.Numerics.Vector3 the_direction)
+    public unsafe virtual bool IsDirectionWithinMovementCone(System.Numerics.Vector3 the_direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsDirectionWithinMovementCone", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -297,7 +297,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: FreezeFollowPath
     /// </summary>
-    public unsafe void FreezeFollowPath()
+    public unsafe virtual void FreezeFollowPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.FreezeFollowPath", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -308,7 +308,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TickNavigationStrategy
     /// </summary>
-    public unsafe void TickNavigationStrategy(float DeltaTime)
+    public unsafe virtual void TickNavigationStrategy(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TickNavigationStrategy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -320,7 +320,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ShouldRerouteToFootPrint
     /// </summary>
-    public unsafe bool ShouldRerouteToFootPrint(out int youngest_footprint)
+    public unsafe virtual bool ShouldRerouteToFootPrint(out int youngest_footprint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ShouldRerouteToFootPrint", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -332,7 +332,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ReachedEndOfPath
     /// </summary>
-    public unsafe bool ReachedEndOfPath()
+    public unsafe virtual bool ReachedEndOfPath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ReachedEndOfPath", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -343,7 +343,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsFacingTarget
     /// </summary>
-    public unsafe bool IsFacingTarget(System.Numerics.Vector3 the_target_position)
+    public unsafe virtual bool IsFacingTarget(System.Numerics.Vector3 the_target_position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsFacingTarget", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -355,7 +355,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsOutside
     /// </summary>
-    public unsafe bool IsOutside()
+    public unsafe virtual bool IsOutside()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsOutside", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -366,7 +366,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetNavigationStrategyPaused
     /// </summary>
-    public unsafe void SetNavigationStrategyPaused(bool Paused)
+    public unsafe virtual void SetNavigationStrategyPaused(bool Paused)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetNavigationStrategyPaused", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -378,7 +378,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ArrestMovement
     /// </summary>
-    public unsafe void ArrestMovement()
+    public unsafe virtual void ArrestMovement()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ArrestMovement", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -389,7 +389,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetNavigationStrategy
     /// </summary>
-    public unsafe void SetNavigationStrategy(BmSDK.BmScript.RBMBehaviour_Freeze.NavigationStrategy NewStrategy)
+    public unsafe virtual void SetNavigationStrategy(BmSDK.BmScript.RBMBehaviour_Freeze.NavigationStrategy NewStrategy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetNavigationStrategy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -401,7 +401,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RefreshLampState
     /// </summary>
-    public unsafe void RefreshLampState()
+    public unsafe virtual void RefreshLampState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RefreshLampState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -412,7 +412,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DoEnvNeutMove
     /// </summary>
-    public unsafe void DoEnvNeutMove()
+    public unsafe virtual void DoEnvNeutMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.DoEnvNeutMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -423,7 +423,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CheckOutstandingTaunts
     /// </summary>
-    public unsafe void CheckOutstandingTaunts()
+    public unsafe virtual void CheckOutstandingTaunts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CheckOutstandingTaunts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -434,7 +434,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CheckForNearbyNeutralisableEnvironment
     /// </summary>
-    public unsafe bool CheckForNearbyNeutralisableEnvironment()
+    public unsafe virtual bool CheckForNearbyNeutralisableEnvironment()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CheckForNearbyNeutralisableEnvironment", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -445,7 +445,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlayOneTimeTauntForStrategy
     /// </summary>
-    public unsafe bool PlayOneTimeTauntForStrategy(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy taunt_strategy)
+    public unsafe virtual bool PlayOneTimeTauntForStrategy(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy taunt_strategy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.PlayOneTimeTauntForStrategy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -457,7 +457,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AcquireClosestEnvTarget
     /// </summary>
-    public unsafe bool AcquireClosestEnvTarget()
+    public unsafe virtual bool AcquireClosestEnvTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AcquireClosestEnvTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -468,7 +468,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AcquireEnvNeutTargetOfClass
     /// </summary>
-    public unsafe bool AcquireEnvNeutTargetOfClass(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy test_strategy, BmSDK.Class EnvTargetClass)
+    public unsafe virtual bool AcquireEnvNeutTargetOfClass(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy test_strategy, BmSDK.Class EnvTargetClass)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AcquireEnvNeutTargetOfClass", true);
         byte* paramsPtr = stackalloc byte[21];
@@ -481,7 +481,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsEnvNeutTargetInViewAndRange
     /// </summary>
-    public unsafe bool IsEnvNeutTargetInViewAndRange(BmSDK.BmScript.RFreezeEnvironmentTarget the_target)
+    public unsafe virtual bool IsEnvNeutTargetInViewAndRange(BmSDK.BmScript.RFreezeEnvironmentTarget the_target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsEnvNeutTargetInViewAndRange", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -493,7 +493,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: WouldHaveClearShotToPosition
     /// </summary>
-    public unsafe bool WouldHaveClearShotToPosition(System.Numerics.Vector3 target_position)
+    public unsafe virtual bool WouldHaveClearShotToPosition(System.Numerics.Vector3 target_position)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.WouldHaveClearShotToPosition", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -505,7 +505,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: UpdateEnvNeutListForLastTakedown
     /// </summary>
-    public unsafe void UpdateEnvNeutListForLastTakedown()
+    public unsafe virtual void UpdateEnvNeutListForLastTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.UpdateEnvNeutListForLastTakedown", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -516,7 +516,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AcquireEnvironmentTargets
     /// </summary>
-    public unsafe void AcquireEnvironmentTargets()
+    public unsafe virtual void AcquireEnvironmentTargets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AcquireEnvironmentTargets", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -527,7 +527,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartFreezeBeamSound
     /// </summary>
-    public unsafe void StartFreezeBeamSound()
+    public unsafe virtual void StartFreezeBeamSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StartFreezeBeamSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -538,7 +538,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StopFreezeBeamSound
     /// </summary>
-    public unsafe void StopFreezeBeamSound()
+    public unsafe virtual void StopFreezeBeamSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StopFreezeBeamSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -549,7 +549,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetAimingEnabled
     /// </summary>
-    public unsafe void SetAimingEnabled(bool Enabled)
+    public unsafe virtual void SetAimingEnabled(bool Enabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetAimingEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -561,7 +561,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AimAtOtherTarget
     /// </summary>
-    public unsafe void AimAtOtherTarget(System.Numerics.Vector3 target_location)
+    public unsafe virtual void AimAtOtherTarget(System.Numerics.Vector3 target_location)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AimAtOtherTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -573,7 +573,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: UpdateAiming
     /// </summary>
-    public unsafe void UpdateAiming()
+    public unsafe virtual void UpdateAiming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.UpdateAiming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -584,7 +584,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RefreshVisualContactWhileKnockedDown
     /// </summary>
-    public unsafe void RefreshVisualContactWhileKnockedDown(float DeltaTime)
+    public unsafe virtual void RefreshVisualContactWhileKnockedDown(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RefreshVisualContactWhileKnockedDown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -596,7 +596,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetHudDisplayString
     /// </summary>
-    public unsafe void SetHudDisplayString(BmSDK.FString ColourMode, BmSDK.FString new_message)
+    public unsafe virtual void SetHudDisplayString(BmSDK.FString ColourMode, BmSDK.FString new_message)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetHudDisplayString", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -609,7 +609,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RefreshHudDisplayAuto
     /// </summary>
-    public unsafe void RefreshHudDisplayAuto()
+    public unsafe virtual void RefreshHudDisplayAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RefreshHudDisplayAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -620,7 +620,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: BackscreenDownloadFinished
     /// </summary>
-    public unsafe void BackscreenDownloadFinished()
+    public unsafe virtual void BackscreenDownloadFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.BackscreenDownloadFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -631,7 +631,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ShowBackscreenDownload
     /// </summary>
-    public unsafe void ShowBackscreenDownload()
+    public unsafe virtual void ShowBackscreenDownload()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ShowBackscreenDownload", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -642,7 +642,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SuggestBackScreen
     /// </summary>
-    public unsafe void SuggestBackScreen(bool bSuggest)
+    public unsafe virtual void SuggestBackScreen(bool bSuggest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SuggestBackScreen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -654,7 +654,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ResetSuggestBackScreenTimeStamp
     /// </summary>
-    public unsafe void ResetSuggestBackScreenTimeStamp()
+    public unsafe virtual void ResetSuggestBackScreenTimeStamp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ResetSuggestBackScreenTimeStamp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -665,7 +665,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RefreshVisualContact
     /// </summary>
-    public unsafe void RefreshVisualContact(float DeltaTime)
+    public unsafe virtual void RefreshVisualContact(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RefreshVisualContact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -677,7 +677,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: UpdateBatmanVelocityVector
     /// </summary>
-    public unsafe void UpdateBatmanVelocityVector(float DeltaTime)
+    public unsafe virtual void UpdateBatmanVelocityVector(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.UpdateBatmanVelocityVector", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -689,7 +689,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveTowardsVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 MoveTowardsVector(System.Numerics.Vector3 current_vector, System.Numerics.Vector3 new_vector, float travel_distance)
+    public unsafe virtual System.Numerics.Vector3 MoveTowardsVector(System.Numerics.Vector3 current_vector, System.Numerics.Vector3 new_vector, float travel_distance)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveTowardsVector", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -703,7 +703,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GainedVisualContact
     /// </summary>
-    public unsafe void GainedVisualContact()
+    public unsafe virtual void GainedVisualContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GainedVisualContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -714,7 +714,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ResetFiringBlindLimitAuto
     /// </summary>
-    public unsafe void ResetFiringBlindLimitAuto()
+    public unsafe virtual void ResetFiringBlindLimitAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ResetFiringBlindLimitAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -725,7 +725,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AlertToBatmansPosition
     /// </summary>
-    public unsafe void AlertToBatmansPosition()
+    public unsafe virtual void AlertToBatmansPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AlertToBatmansPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -736,7 +736,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AlertToGadgetNoise
     /// </summary>
-    public unsafe void AlertToGadgetNoise()
+    public unsafe virtual void AlertToGadgetNoise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AlertToGadgetNoise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -747,7 +747,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GadgetNoise
     /// </summary>
-    public unsafe void GadgetNoise(System.Numerics.Vector3 HitLoc)
+    public unsafe override void GadgetNoise(System.Numerics.Vector3 HitLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GadgetNoise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -759,7 +759,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: EstimateBatmanPositionAssumingVelocityOf
     /// </summary>
-    public unsafe bool EstimateBatmanPositionAssumingVelocityOf(System.Numerics.Vector3 BatmanVelocity)
+    public unsafe virtual bool EstimateBatmanPositionAssumingVelocityOf(System.Numerics.Vector3 BatmanVelocity)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.EstimateBatmanPositionAssumingVelocityOf", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -771,7 +771,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: EstimateBatmanPositionWhenLosingSight
     /// </summary>
-    public unsafe void EstimateBatmanPositionWhenLosingSight()
+    public unsafe virtual void EstimateBatmanPositionWhenLosingSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.EstimateBatmanPositionWhenLosingSight", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -782,7 +782,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: LostVisualContact
     /// </summary>
-    public unsafe void LostVisualContact()
+    public unsafe virtual void LostVisualContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.LostVisualContact", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -793,7 +793,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsBatmanEnteringTunnel
     /// </summary>
-    public unsafe bool IsBatmanEnteringTunnel()
+    public unsafe virtual bool IsBatmanEnteringTunnel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsBatmanEnteringTunnel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -804,7 +804,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: BatmanEntersVent
     /// </summary>
-    public unsafe void BatmanEntersVent()
+    public unsafe virtual void BatmanEntersVent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.BatmanEntersVent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -815,7 +815,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: RefreshLastKnownPosition
     /// </summary>
-    public unsafe void RefreshLastKnownPosition()
+    public unsafe virtual void RefreshLastKnownPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.RefreshLastKnownPosition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -826,7 +826,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: HasBatmanStrayedTooFar
     /// </summary>
-    public unsafe bool HasBatmanStrayedTooFar()
+    public unsafe virtual bool HasBatmanStrayedTooFar()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.HasBatmanStrayedTooFar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -837,7 +837,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsWithinRange
     /// </summary>
-    public unsafe bool IsWithinRange(float TargetRange)
+    public unsafe virtual bool IsWithinRange(float TargetRange)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsWithinRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -849,7 +849,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SearchFailed
     /// </summary>
-    public unsafe void SearchFailed()
+    public unsafe virtual void SearchFailed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SearchFailed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -860,7 +860,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TargetSearchCompleted
     /// </summary>
-    public unsafe void TargetSearchCompleted()
+    public unsafe virtual void TargetSearchCompleted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TargetSearchCompleted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -871,7 +871,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToAttackLocation
     /// </summary>
-    public unsafe void MoveToAttackLocation()
+    public unsafe virtual void MoveToAttackLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToAttackLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -882,7 +882,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToAttackPointNearTargetLocation
     /// </summary>
-    public unsafe void MoveToAttackPointNearTargetLocation()
+    public unsafe virtual void MoveToAttackPointNearTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToAttackPointNearTargetLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -893,7 +893,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SearchForNearLocation
     /// </summary>
-    public unsafe void SearchForNearLocation(int ZeroToThree)
+    public unsafe virtual void SearchForNearLocation(int ZeroToThree)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SearchForNearLocation", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -905,7 +905,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveNearToTargetLocation
     /// </summary>
-    public unsafe void MoveNearToTargetLocation()
+    public unsafe virtual void MoveNearToTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveNearToTargetLocation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -916,7 +916,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToCommon
     /// </summary>
-    public unsafe void MoveToCommon(System.Numerics.Vector3 Destination)
+    public unsafe virtual void MoveToCommon(System.Numerics.Vector3 Destination)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToCommon", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -928,7 +928,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToTargetLocation
     /// </summary>
-    public unsafe void MoveToTargetLocation()
+    public unsafe virtual void MoveToTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -939,7 +939,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveOutside
     /// </summary>
-    public unsafe void MoveOutside()
+    public unsafe virtual void MoveOutside()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveOutside", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -950,7 +950,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetCentreOfRoom
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCentreOfRoom()
+    public unsafe virtual System.Numerics.Vector3 GetCentreOfRoom()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetCentreOfRoom", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -961,7 +961,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToAttackBatman
     /// </summary>
-    public unsafe void MoveToAttackBatman()
+    public unsafe virtual void MoveToAttackBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToAttackBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -972,7 +972,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToLastKnownPosition
     /// </summary>
-    public unsafe void MoveToLastKnownPosition()
+    public unsafe virtual void MoveToLastKnownPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToLastKnownPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -983,7 +983,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: MoveToFootprint
     /// </summary>
-    public unsafe void MoveToFootprint(int footprint_index)
+    public unsafe virtual void MoveToFootprint(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.MoveToFootprint", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -995,7 +995,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartMagneticBlastAttract
     /// </summary>
-    public unsafe bool StartMagneticBlastAttract()
+    public unsafe virtual bool StartMagneticBlastAttract()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StartMagneticBlastAttract", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1006,7 +1006,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: Stun
     /// </summary>
-    public unsafe bool Stun()
+    public unsafe virtual bool Stun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.Stun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1017,7 +1017,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: KnockDown
     /// </summary>
-    public unsafe bool KnockDown(bool AutoUpdateTelemetry = default)
+    public unsafe virtual bool KnockDown(bool AutoUpdateTelemetry = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.KnockDown", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1029,7 +1029,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanBeStunned
     /// </summary>
-    public unsafe bool CanBeStunned()
+    public unsafe virtual bool CanBeStunned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanBeStunned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1040,7 +1040,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanBeKnockedDownByPowerTakedown
     /// </summary>
-    public unsafe bool CanBeKnockedDownByPowerTakedown()
+    public unsafe virtual bool CanBeKnockedDownByPowerTakedown()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanBeKnockedDownByPowerTakedown", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1051,7 +1051,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanBeKnockedDown
     /// </summary>
-    public unsafe bool CanBeKnockedDown(BmSDK.FString takedown = default)
+    public unsafe virtual bool CanBeKnockedDown(BmSDK.FString takedown = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanBeKnockedDown", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1063,7 +1063,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ShouldSeekersSelfDestruct
     /// </summary>
-    public unsafe bool ShouldSeekersSelfDestruct()
+    public unsafe virtual bool ShouldSeekersSelfDestruct()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ShouldSeekersSelfDestruct", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1074,7 +1074,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanTalkNow
     /// </summary>
-    public unsafe bool CanTalkNow()
+    public unsafe virtual bool CanTalkNow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanTalkNow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1085,7 +1085,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AttemptFreezeSpeechOnceOnly
     /// </summary>
-    public unsafe bool AttemptFreezeSpeechOnceOnly(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay)
+    public unsafe virtual bool AttemptFreezeSpeechOnceOnly(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AttemptFreezeSpeechOnceOnly", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1097,7 +1097,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AttemptFreezeSpeechProbabilistically
     /// </summary>
-    public unsafe bool AttemptFreezeSpeechProbabilistically(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay, float probability)
+    public unsafe virtual bool AttemptFreezeSpeechProbabilistically(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay, float probability)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AttemptFreezeSpeechProbabilistically", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1110,7 +1110,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AttemptFreezeSpeech
     /// </summary>
-    public unsafe bool AttemptFreezeSpeech(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay)
+    public unsafe virtual bool AttemptFreezeSpeech(BmSDK.BmScript.RPawnVillainFreeze.FreezeDialogueLines LineToPlay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AttemptFreezeSpeech", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1122,7 +1122,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsVulnerableToTakedown
     /// </summary>
-    public unsafe bool IsVulnerableToTakedown(BmSDK.FString takedown)
+    public unsafe virtual bool IsVulnerableToTakedown(BmSDK.FString takedown)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsVulnerableToTakedown", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -1134,7 +1134,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TickSuspendedBehaviour
     /// </summary>
-    public unsafe void TickSuspendedBehaviour(float DeltaTime)
+    public unsafe virtual void TickSuspendedBehaviour(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TickSuspendedBehaviour", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1146,7 +1146,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SuspendBehaviour
     /// </summary>
-    public unsafe void SuspendBehaviour(bool OnlyIfNoVisualContact)
+    public unsafe virtual void SuspendBehaviour(bool OnlyIfNoVisualContact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SuspendBehaviour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1158,7 +1158,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: StartSeekersAiming
     /// </summary>
-    public unsafe void StartSeekersAiming()
+    public unsafe virtual void StartSeekersAiming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.StartSeekersAiming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1169,7 +1169,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: ChangeToVulnerableState
     /// </summary>
-    public unsafe void ChangeToVulnerableState()
+    public unsafe virtual void ChangeToVulnerableState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.ChangeToVulnerableState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1180,7 +1180,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsValidForStrike
     /// </summary>
-    public unsafe bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe virtual bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsValidForStrike", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1194,7 +1194,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: JammerGadgetUsed
     /// </summary>
-    public unsafe void JammerGadgetUsed()
+    public unsafe virtual void JammerGadgetUsed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.JammerGadgetUsed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1205,7 +1205,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsVulnerableToBossStrike
     /// </summary>
-    public unsafe bool IsVulnerableToBossStrike()
+    public unsafe virtual bool IsVulnerableToBossStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsVulnerableToBossStrike", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1216,7 +1216,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SpawnVisibleFootprint
     /// </summary>
-    public unsafe BmSDK.BmScript.RFreezePlaceableFootprint SpawnVisibleFootprint(System.Numerics.Vector3 PrintLocation, BmSDK.Rotator PrintRotation, int creation_index)
+    public unsafe virtual BmSDK.BmScript.RFreezePlaceableFootprint SpawnVisibleFootprint(System.Numerics.Vector3 PrintLocation, BmSDK.Rotator PrintRotation, int creation_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SpawnVisibleFootprint", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -1230,7 +1230,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetCurrentRailDirection
     /// </summary>
-    public unsafe BmSDK.Rotator GetCurrentRailDirection(System.Numerics.Vector3 movement_direction)
+    public unsafe virtual BmSDK.Rotator GetCurrentRailDirection(System.Numerics.Vector3 movement_direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetCurrentRailDirection", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1242,7 +1242,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: PlaceFootprint
     /// </summary>
-    public unsafe void PlaceFootprint()
+    public unsafe virtual void PlaceFootprint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.PlaceFootprint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -1253,7 +1253,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetAngleIncrease
     /// </summary>
-    public unsafe float GetAngleIncrease(float current_angle, float next_angle)
+    public unsafe virtual float GetAngleIncrease(float current_angle, float next_angle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetAngleIncrease", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1266,7 +1266,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetAngleToFootprint
     /// </summary>
-    public unsafe float GetAngleToFootprint(System.Numerics.Vector3 centre, System.Numerics.Vector3 footprint_loc)
+    public unsafe virtual float GetAngleToFootprint(System.Numerics.Vector3 centre, System.Numerics.Vector3 footprint_loc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetAngleToFootprint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1279,7 +1279,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintCircleAngleTraversed
     /// </summary>
-    public unsafe float GetFootprintCircleAngleTraversed(int starting_print, int ending_print, out System.Numerics.Vector3 CircleCentre, out System.Numerics.Vector3 CircleBounds)
+    public unsafe virtual float GetFootprintCircleAngleTraversed(int starting_print, int ending_print, out System.Numerics.Vector3 CircleCentre, out System.Numerics.Vector3 CircleBounds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintCircleAngleTraversed", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -1294,7 +1294,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: FindClosestFootprintLocationInRange
     /// </summary>
-    public unsafe System.Numerics.Vector3 FindClosestFootprintLocationInRange(System.Numerics.Vector3 target_position, int starting_print, int ending_print)
+    public unsafe virtual System.Numerics.Vector3 FindClosestFootprintLocationInRange(System.Numerics.Vector3 target_position, int starting_print, int ending_print)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.FindClosestFootprintLocationInRange", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -1308,7 +1308,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsSameCircleAsPrevious
     /// </summary>
-    public unsafe bool IsSameCircleAsPrevious(int current_footprint, System.Numerics.Vector3 CircleCentre, System.Numerics.Vector3 CircleBounds)
+    public unsafe virtual bool IsSameCircleAsPrevious(int current_footprint, System.Numerics.Vector3 CircleCentre, System.Numerics.Vector3 CircleBounds)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsSameCircleAsPrevious", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -1322,7 +1322,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: AreFootprintsLeadingFreezeInCircles
     /// </summary>
-    public unsafe bool AreFootprintsLeadingFreezeInCircles(int current_footprint)
+    public unsafe virtual bool AreFootprintsLeadingFreezeInCircles(int current_footprint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.AreFootprintsLeadingFreezeInCircles", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -1334,7 +1334,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetYoungestFootprintInRange
     /// </summary>
-    public unsafe int GetYoungestFootprintInRange()
+    public unsafe virtual int GetYoungestFootprintInRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetYoungestFootprintInRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1345,7 +1345,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsFootprintAboveGroundOrIsFreezeAwareOfUnderground
     /// </summary>
-    public unsafe bool IsFootprintAboveGroundOrIsFreezeAwareOfUnderground(int footprint_index)
+    public unsafe virtual bool IsFootprintAboveGroundOrIsFreezeAwareOfUnderground(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsFootprintAboveGroundOrIsFreezeAwareOfUnderground", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1357,7 +1357,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanUseFootprintDetectionCheat
     /// </summary>
-    public unsafe bool CanUseFootprintDetectionCheat()
+    public unsafe virtual bool CanUseFootprintDetectionCheat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanUseFootprintDetectionCheat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1368,7 +1368,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsFootprintNearLaser
     /// </summary>
-    public unsafe bool IsFootprintNearLaser(int footprint_index)
+    public unsafe virtual bool IsFootprintNearLaser(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsFootprintNearLaser", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1380,7 +1380,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: HasLineOfSightToFootprint
     /// </summary>
-    public unsafe bool HasLineOfSightToFootprint(int footprint_index)
+    public unsafe virtual bool HasLineOfSightToFootprint(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.HasLineOfSightToFootprint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1392,7 +1392,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsFootprintInRange
     /// </summary>
-    public unsafe bool IsFootprintInRange(int footprint_index)
+    public unsafe virtual bool IsFootprintInRange(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsFootprintInRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1404,7 +1404,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsLocationInVerticalRange
     /// </summary>
-    public unsafe bool IsLocationInVerticalRange(System.Numerics.Vector3 the_location, float limit_above, float limit_below)
+    public unsafe virtual bool IsLocationInVerticalRange(System.Numerics.Vector3 the_location, float limit_above, float limit_below)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsLocationInVerticalRange", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1418,7 +1418,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsLocationInHorizontalWedge
     /// </summary>
-    public unsafe bool IsLocationInHorizontalWedge(System.Numerics.Vector3 the_location, float angle_either_side)
+    public unsafe virtual bool IsLocationInHorizontalWedge(System.Numerics.Vector3 the_location, float angle_either_side)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsLocationInHorizontalWedge", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1431,7 +1431,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsLocationInVerticalWedge
     /// </summary>
-    public unsafe bool IsLocationInVerticalWedge(System.Numerics.Vector3 the_location, float angle_either_side)
+    public unsafe virtual bool IsLocationInVerticalWedge(System.Numerics.Vector3 the_location, float angle_either_side)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsLocationInVerticalWedge", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -1444,7 +1444,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintCreationIndex
     /// </summary>
-    public unsafe int GetFootprintCreationIndex(int footprint_index)
+    public unsafe virtual int GetFootprintCreationIndex(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintCreationIndex", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1456,7 +1456,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintAge
     /// </summary>
-    public unsafe float GetFootprintAge(int footprint_index)
+    public unsafe virtual float GetFootprintAge(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintAge", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1468,7 +1468,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintTimestamp
     /// </summary>
-    public unsafe float GetFootprintTimestamp(int footprint_index)
+    public unsafe virtual float GetFootprintTimestamp(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintTimestamp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1480,7 +1480,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFootprintLocation(int footprint_index)
+    public unsafe virtual System.Numerics.Vector3 GetFootprintLocation(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -1492,7 +1492,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetFootprintColour
     /// </summary>
-    public unsafe int GetFootprintColour(int footprint_index)
+    public unsafe virtual int GetFootprintColour(int footprint_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetFootprintColour", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1504,7 +1504,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanSeeBatmanStandingOnCrystals
     /// </summary>
-    public unsafe bool CanSeeBatmanStandingOnCrystals()
+    public unsafe virtual bool CanSeeBatmanStandingOnCrystals()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanSeeBatmanStandingOnCrystals", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1515,7 +1515,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: SetDetectiveModeLockingOn
     /// </summary>
-    public unsafe void SetDetectiveModeLockingOn(bool bLockingOn)
+    public unsafe virtual void SetDetectiveModeLockingOn(bool bLockingOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.SetDetectiveModeLockingOn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1527,7 +1527,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TickDetectiveModeJamming
     /// </summary>
-    public unsafe void TickDetectiveModeJamming(float DeltaTime)
+    public unsafe virtual void TickDetectiveModeJamming(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TickDetectiveModeJamming", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -1539,7 +1539,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: TickInternal
     /// </summary>
-    public unsafe void TickInternal(float DeltaTime)
+    public unsafe virtual void TickInternal(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.TickInternal", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1551,7 +1551,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: IsNeutralisationUnlocked
     /// </summary>
-    public unsafe bool IsNeutralisationUnlocked(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy test_strategy)
+    public unsafe virtual bool IsNeutralisationUnlocked(BmSDK.BmScript.RBMBehaviour_Freeze.EnvNeutStrategy test_strategy)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.IsNeutralisationUnlocked", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1563,7 +1563,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DetectBatmanWalkingOnTightrope
     /// </summary>
-    public unsafe void DetectBatmanWalkingOnTightrope(bool is_detected)
+    public unsafe virtual void DetectBatmanWalkingOnTightrope(bool is_detected)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.DetectBatmanWalkingOnTightrope", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1575,7 +1575,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CanSeeBatman
     /// </summary>
-    public unsafe bool CanSeeBatman(float minimum_proportion, bool ignore_view_wedge = default, bool ignore_slow_spot_timer = default)
+    public unsafe virtual bool CanSeeBatman(float minimum_proportion, bool ignore_view_wedge = default, bool ignore_slow_spot_timer = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CanSeeBatman", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -1589,7 +1589,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: GetGrateTarget
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetGrateTarget()
+    public unsafe virtual System.Numerics.Vector3 GetGrateTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.GetGrateTarget", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1600,7 +1600,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: NotifyFootprintDestroyed
     /// </summary>
-    public unsafe void NotifyFootprintDestroyed(int footprint_creation_index)
+    public unsafe virtual void NotifyFootprintDestroyed(int footprint_creation_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.NotifyFootprintDestroyed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -1612,7 +1612,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: CheckFluorescingFootprints
     /// </summary>
-    public unsafe void CheckFluorescingFootprints()
+    public unsafe virtual void CheckFluorescingFootprints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.CheckFluorescingFootprints", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1623,7 +1623,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DrawViewCone
     /// </summary>
-    public unsafe void DrawViewCone(System.Numerics.Vector3 ConeOrigin, System.Numerics.Vector3 ConeDirection)
+    public unsafe virtual void DrawViewCone(System.Numerics.Vector3 ConeOrigin, System.Numerics.Vector3 ConeDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.DrawViewCone", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -1636,7 +1636,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: DrawDebugGraphics
     /// </summary>
-    public unsafe void DrawDebugGraphics()
+    public unsafe virtual void DrawDebugGraphics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.DrawDebugGraphics", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1647,7 +1647,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -1659,7 +1659,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnEndInterrupt
     /// </summary>
-    public unsafe void OnEndInterrupt()
+    public unsafe override void OnEndInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.OnEndInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -1670,7 +1670,7 @@ public partial class RBMBehaviour_Freeze : BmSDK.BmGame.RBMBehaviour, BmSDK.IGam
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_Freeze.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -31,7 +31,7 @@ public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFloatValue
     /// </summary>
-    public unsafe float GetFloatValue(float F = default)
+    public unsafe virtual float GetFloatValue(float F = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.DistributionFloat.GetFloatValue", true);
         byte* paramsPtr = stackalloc byte[8];

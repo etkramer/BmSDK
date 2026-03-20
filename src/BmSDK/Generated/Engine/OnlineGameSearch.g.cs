@@ -36,7 +36,7 @@ public partial class OnlineGameSearch : BmSDK.Engine.Settings, BmSDK.IGameObject
     /// <summary>
     /// Function: SortSearchResults
     /// </summary>
-    public unsafe void SortSearchResults()
+    public unsafe virtual void SortSearchResults()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.OnlineGameSearch.SortSearchResults", true);
         byte* paramsPtr = stackalloc byte[0];

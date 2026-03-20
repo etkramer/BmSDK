@@ -71,7 +71,7 @@ public partial class RBMAIAction_EscapeStumble : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_EscapeStumble.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_EscapeStumble : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: StartStumbleAnim
     /// </summary>
-    public unsafe void StartStumbleAnim()
+    public unsafe virtual void StartStumbleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_EscapeStumble.StartStumbleAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_EscapeStumble : BmSDK.BmGame.RBMAIAction, BmSDK
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_EscapeStumble.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];

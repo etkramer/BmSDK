@@ -71,7 +71,7 @@ public partial class REmitter : BmSDK.Engine.Emitter, BmSDK.IGameObject
     /// <summary>
     /// Function: GoIntoStasis
     /// </summary>
-    public unsafe void GoIntoStasis()
+    public unsafe virtual void GoIntoStasis()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REmitter.GoIntoStasis", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class REmitter : BmSDK.Engine.Emitter, BmSDK.IGameObject
     /// <summary>
     /// Function: OnParticleSystemFinished
     /// </summary>
-    public unsafe void OnParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent FinishedComponent)
+    public unsafe override void OnParticleSystemFinished(BmSDK.Engine.ParticleSystemComponent FinishedComponent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.REmitter.OnParticleSystemFinished", true);
         byte* paramsPtr = stackalloc byte[4];

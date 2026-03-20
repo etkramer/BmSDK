@@ -66,7 +66,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: ShouldStopControllableBatarang
     /// </summary>
-    public unsafe bool ShouldStopControllableBatarang()
+    public unsafe override bool ShouldStopControllableBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.ShouldStopControllableBatarang", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: HitByFreezeClusterGrenade
     /// </summary>
-    public unsafe bool HitByFreezeClusterGrenade()
+    public unsafe virtual bool HitByFreezeClusterGrenade()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.HitByFreezeClusterGrenade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -88,7 +88,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: HitByFreezeGrenade
     /// </summary>
-    public unsafe bool HitByFreezeGrenade(out int bPlayEffect)
+    public unsafe virtual bool HitByFreezeGrenade(out int bPlayEffect)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.HitByFreezeGrenade", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -100,7 +100,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: StopFreezeBlastLegEffect
     /// </summary>
-    public unsafe void StopFreezeBlastLegEffect(bool bPlayBreakEffect = default, bool bDeactivatedBehaviour = default)
+    public unsafe override void StopFreezeBlastLegEffect(bool bPlayBreakEffect = default, bool bDeactivatedBehaviour = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.StopFreezeBlastLegEffect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -113,7 +113,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: StopFreezeBlastTorsoEffect
     /// </summary>
-    public unsafe void StopFreezeBlastTorsoEffect(bool bPlayBreakEffect = default, float Delay = default)
+    public unsafe override void StopFreezeBlastTorsoEffect(bool bPlayBreakEffect = default, float Delay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.StopFreezeBlastTorsoEffect", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: StartFreezeBlastLegEffect
     /// </summary>
-    public unsafe void StartFreezeBlastLegEffect()
+    public unsafe override void StartFreezeBlastLegEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.StartFreezeBlastLegEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: StartFreezeBlastTorsoEffect
     /// </summary>
-    public unsafe void StartFreezeBlastTorsoEffect()
+    public unsafe override void StartFreezeBlastTorsoEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.StartFreezeBlastTorsoEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: AllowCamera
     /// </summary>
-    public unsafe bool AllowCamera(BmSDK.BmGame.RSpecialMoveConfig SpecialMove)
+    public unsafe virtual bool AllowCamera(BmSDK.BmGame.RSpecialMoveConfig SpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.AllowCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RPawnBossClayfaceBase : BmSDK.BmGame.RPawnVillain, BmSDK.IG
     /// <summary>
     /// Function: SpawnPawn
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, System.Numerics.Vector3 NewSpawnLoc, BmSDK.Rotator NewSpawnRot)
+    public unsafe virtual BmSDK.BmGame.RPawn SpawnPawn(BmSDK.Class NewPawnClass, BmSDK.Class NewCharacterClass, BmSDK.Class NewWeaponClass, System.Numerics.Vector3 NewSpawnLoc, BmSDK.Rotator NewSpawnRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPawnBossClayfaceBase.SpawnPawn", true);
         byte* paramsPtr = stackalloc byte[40];

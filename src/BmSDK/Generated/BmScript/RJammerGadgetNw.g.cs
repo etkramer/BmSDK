@@ -71,7 +71,7 @@ public partial class RJammerGadgetNw : BmSDK.BmScript.RJammerGadgetBm, BmSDK.IGa
     /// <summary>
     /// Function: GetGadgetClassNameForHUD
     /// </summary>
-    public unsafe BmSDK.FName GetGadgetClassNameForHUD()
+    public unsafe override BmSDK.FName GetGadgetClassNameForHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw.GetGadgetClassNameForHUD", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RJammerGadgetNw : BmSDK.BmScript.RJammerGadgetBm, BmSDK.IGa
     /// <summary>
     /// Function: CheckUpgrades
     /// </summary>
-    public unsafe void CheckUpgrades()
+    public unsafe override void CheckUpgrades()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RJammerGadgetNw.CheckUpgrades", true);
         byte* paramsPtr = stackalloc byte[0];

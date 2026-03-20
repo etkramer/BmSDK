@@ -36,7 +36,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetTelemetryInformation
     /// </summary>
-    public unsafe void SetTelemetryInformation(BmSDK.FString ColourMode, BmSDK.FString TelemetryMessage)
+    public unsafe virtual void SetTelemetryInformation(BmSDK.FString ColourMode, BmSDK.FString TelemetryMessage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetTelemetryInformation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -49,7 +49,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: FailedJammingAlert
     /// </summary>
-    public unsafe void FailedJammingAlert()
+    public unsafe virtual void FailedJammingAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.FailedJammingAlert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -60,7 +60,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: AbortDetectiveJamming
     /// </summary>
-    public unsafe void AbortDetectiveJamming()
+    public unsafe virtual void AbortDetectiveJamming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.AbortDetectiveJamming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: InitiateDetectiveJamming
     /// </summary>
-    public unsafe void InitiateDetectiveJamming()
+    public unsafe virtual void InitiateDetectiveJamming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.InitiateDetectiveJamming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShowLockingOnState
     /// </summary>
-    public unsafe void ShowLockingOnState(bool bShow)
+    public unsafe virtual void ShowLockingOnState(bool bShow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.ShowLockingOnState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetDetectiveJammerLevel
     /// </summary>
-    public unsafe void SetDetectiveJammerLevel(float zeroToOne)
+    public unsafe virtual void SetDetectiveJammerLevel(float zeroToOne)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetDetectiveJammerLevel", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetInvestigateModeActive
     /// </summary>
-    public unsafe void SetInvestigateModeActive(bool InvModeActive)
+    public unsafe virtual void SetInvestigateModeActive(bool InvModeActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetInvestigateModeActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetIsInvestigateModeAuto
     /// </summary>
-    public unsafe void SetIsInvestigateModeAuto()
+    public unsafe virtual void SetIsInvestigateModeAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetIsInvestigateModeAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: StopRechargeGeneric
     /// </summary>
-    public unsafe void StopRechargeGeneric()
+    public unsafe virtual void StopRechargeGeneric()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.StopRechargeGeneric", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: StartRechargeGeneric
     /// </summary>
-    public unsafe void StartRechargeGeneric()
+    public unsafe virtual void StartRechargeGeneric()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.StartRechargeGeneric", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShakeBossHealthBarGeneric
     /// </summary>
-    public unsafe void ShakeBossHealthBarGeneric()
+    public unsafe virtual void ShakeBossHealthBarGeneric()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.ShakeBossHealthBarGeneric", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: ShakeBossHealthBar
     /// </summary>
-    public unsafe void ShakeBossHealthBar(int shake_magnitude, float shake_duration)
+    public unsafe virtual void ShakeBossHealthBar(int shake_magnitude, float shake_duration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.ShakeBossHealthBar", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -175,7 +175,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetBossArmour
     /// </summary>
-    public unsafe void SetBossArmour(float current_armour)
+    public unsafe virtual void SetBossArmour(float current_armour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetBossArmour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -187,7 +187,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: SetBossHealthNoShake
     /// </summary>
-    public unsafe void SetBossHealthNoShake(float new_health)
+    public unsafe virtual void SetBossHealthNoShake(float new_health)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.SetBossHealthNoShake", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: InitHealthBar
     /// </summary>
-    public unsafe void InitHealthBar(float init_health)
+    public unsafe virtual void InitHealthBar(float init_health)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.InitHealthBar", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -222,7 +222,7 @@ public partial class RHudExtensionBossHud : BmSDK.BmGame.RHudExtension, BmSDK.IG
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionBossHud.Init", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -71,7 +71,7 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show(float _show, int ShowMode = default)
+    public unsafe override void show(float _show, int ShowMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RForensicVisibleEvidence.show", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -84,7 +84,7 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
     /// <summary>
     /// Function: InitialiseDna
     /// </summary>
-    public unsafe void InitialiseDna()
+    public unsafe override void InitialiseDna()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RForensicVisibleEvidence.InitialiseDna", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
     /// <summary>
     /// Function: RegisterEvidence
     /// </summary>
-    public unsafe void RegisterEvidence()
+    public unsafe override void RegisterEvidence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RForensicVisibleEvidence.RegisterEvidence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
     /// <summary>
     /// Function: IsEvidenceInView
     /// </summary>
-    public unsafe bool IsEvidenceInView()
+    public unsafe virtual bool IsEvidenceInView()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RForensicVisibleEvidence.IsEvidenceInView", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RForensicVisibleEvidence : BmSDK.BmGame.RForensicDnaSplatSt
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool On, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool On, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RForensicVisibleEvidence.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[8];

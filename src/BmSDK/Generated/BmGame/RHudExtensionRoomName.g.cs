@@ -36,7 +36,7 @@ public partial class RHudExtensionRoomName : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: ShowRoomName
     /// </summary>
-    public unsafe void ShowRoomName(BmSDK.FString roomName, BmSDK.TArray<BmSDK.FString> RiddleList)
+    public unsafe virtual void ShowRoomName(BmSDK.FString roomName, BmSDK.TArray<BmSDK.FString> RiddleList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRoomName.ShowRoomName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -49,7 +49,7 @@ public partial class RHudExtensionRoomName : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: TriggerRoomName
     /// </summary>
-    public unsafe void TriggerRoomName(BmSDK.FString roomName)
+    public unsafe virtual void TriggerRoomName(BmSDK.FString roomName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRoomName.TriggerRoomName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -61,7 +61,7 @@ public partial class RHudExtensionRoomName : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRoomName.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class RHudExtensionRoomName : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRoomName.Init", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -49,7 +49,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: OnTick
     /// </summary>
-    public unsafe void OnTick()
+    public unsafe override void OnTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.OnTick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: StorageSelectionDoneNoSave
     /// </summary>
-    public unsafe void StorageSelectionDoneNoSave()
+    public unsafe virtual void StorageSelectionDoneNoSave()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.StorageSelectionDoneNoSave", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: StorageSelectionDone
     /// </summary>
-    public unsafe void StorageSelectionDone()
+    public unsafe virtual void StorageSelectionDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.StorageSelectionDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_StorageSelect : BmSDK.BmGame.RGFxMovieUI, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_StorageSelect.Init", true);
         byte* paramsPtr = stackalloc byte[4];

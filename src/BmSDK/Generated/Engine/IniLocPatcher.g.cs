@@ -36,7 +36,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLocFileName
     /// </summary>
-    public unsafe BmSDK.FString UpdateLocFileName(BmSDK.FString Filename)
+    public unsafe virtual BmSDK.FString UpdateLocFileName(BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.IniLocPatcher.UpdateLocFileName", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -55,7 +55,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ProcessIniLocFile
     /// </summary>
-    public unsafe void ProcessIniLocFile(BmSDK.FString Filename, out BmSDK.TArray<byte> FileData)
+    public unsafe virtual void ProcessIniLocFile(BmSDK.FString Filename, out BmSDK.TArray<byte> FileData)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.IniLocPatcher.ProcessIniLocFile", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -75,7 +75,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReadFileComplete
     /// </summary>
-    public unsafe void OnReadFileComplete(bool bWasSuccessful, BmSDK.FString Filename)
+    public unsafe virtual void OnReadFileComplete(bool bWasSuccessful, BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.IniLocPatcher.OnReadFileComplete", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -88,7 +88,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init()
+    public unsafe virtual void Init()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.IniLocPatcher.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -99,7 +99,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: OnReadTitleFileComplete
     /// </summary>
-    public unsafe void OnReadTitleFileComplete(bool bWasSuccessful, BmSDK.FString Filename)
+    public unsafe virtual void OnReadTitleFileComplete(bool bWasSuccessful, BmSDK.FString Filename)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.IniLocPatcher.OnReadTitleFileComplete", true);
         byte* paramsPtr = stackalloc byte[16];

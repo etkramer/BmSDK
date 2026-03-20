@@ -71,7 +71,7 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// <summary>
     /// Function: GenerateScanEvent
     /// </summary>
-    public unsafe void GenerateScanEvent(BmSDK.BmGame.RPlayerController RPC, bool Rescanned)
+    public unsafe override void GenerateScanEvent(BmSDK.BmGame.RPlayerController RPC, bool Rescanned)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_Riddler.GenerateScanEvent", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -84,7 +84,7 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// <summary>
     /// Function: CanScanAndAddToMap
     /// </summary>
-    public unsafe bool CanScanAndAddToMap()
+    public unsafe override bool CanScanAndAddToMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_Riddler.CanScanAndAddToMap", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// <summary>
     /// Function: PickedUp
     /// </summary>
-    public unsafe void PickedUp(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void PickedUp(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_Riddler.PickedUp", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -107,7 +107,7 @@ public partial class RPickup_Riddler : BmSDK.BmGame.RPickupBase, BmSDK.IGameObje
     /// <summary>
     /// Function: HasBeenPickedUp
     /// </summary>
-    public unsafe bool HasBeenPickedUp()
+    public unsafe override bool HasBeenPickedUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPickup_Riddler.HasBeenPickedUp", true);
         byte* paramsPtr = stackalloc byte[4];

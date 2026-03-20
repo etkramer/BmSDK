@@ -31,7 +31,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: PublishStats
     /// </summary>
-    public unsafe void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
+    public unsafe virtual void PublishStats(BmSDK.BmGame.RGFxMovieChallengeHUD GFXHud)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.PublishStats", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -43,7 +43,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: ClearChallengeStats
     /// </summary>
-    public unsafe void ClearChallengeStats()
+    public unsafe virtual void ClearChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.ClearChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: OutputMoveScores
     /// </summary>
-    public unsafe void OutputMoveScores()
+    public unsafe virtual void OutputMoveScores()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.OutputMoveScores", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -65,7 +65,7 @@ public partial class RSeqAct_StartCombatChallengeBase : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Function: AddCombatMove
     /// </summary>
-    public unsafe void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
+    public unsafe virtual void AddCombatMove(BmSDK.BmGame.RGameInfo.EComboMoveType MoveType, int MoveScore, int MoveMultiplier)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_StartCombatChallengeBase.AddCombatMove", true);
         byte* paramsPtr = stackalloc byte[12];

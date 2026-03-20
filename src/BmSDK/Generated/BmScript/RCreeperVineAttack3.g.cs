@@ -71,7 +71,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CreateVineSpawn
     /// </summary>
-    public unsafe BmSDK.BmScript.RCreeperVine CreateVineSpawn(System.Numerics.Vector3 SpawnPoint, BmSDK.Engine.Actor VineOwner, BmSDK.BmScript.RCreeperVine AlreadyCreated)
+    public unsafe virtual BmSDK.BmScript.RCreeperVine CreateVineSpawn(System.Numerics.Vector3 SpawnPoint, BmSDK.Engine.Actor VineOwner, BmSDK.BmScript.RCreeperVine AlreadyCreated)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.CreateVineSpawn", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -85,7 +85,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForGuardsWithinZone
     /// </summary>
-    public unsafe void CheckForGuardsWithinZone()
+    public unsafe virtual void CheckForGuardsWithinZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.CheckForGuardsWithinZone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -96,7 +96,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: BatmanHitByVine
     /// </summary>
-    public unsafe void BatmanHitByVine(bool bBringBack)
+    public unsafe virtual void BatmanHitByVine(bool bBringBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.BatmanHitByVine", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -108,7 +108,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForBatmanWithinZone
     /// </summary>
-    public unsafe void CheckForBatmanWithinZone()
+    public unsafe virtual void CheckForBatmanWithinZone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.CheckForBatmanWithinZone", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateVines
     /// </summary>
-    public unsafe void UpdateVines(float DeltaTime)
+    public unsafe virtual void UpdateVines(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.UpdateVines", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -131,7 +131,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitialiseVines
     /// </summary>
-    public unsafe void InitialiseVines()
+    public unsafe virtual void InitialiseVines()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.InitialiseVines", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -142,7 +142,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateAttack
     /// </summary>
-    public unsafe void UpdateAttack(float UpdateTime)
+    public unsafe virtual void UpdateAttack(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.UpdateAttack", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartRetractEffect
     /// </summary>
-    public unsafe void StartRetractEffect()
+    public unsafe virtual void StartRetractEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.StartRetractEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RCreeperVineAttack3 : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartAttack
     /// </summary>
-    public unsafe void StartAttack(System.Numerics.Vector3 StartPoint, float Delay)
+    public unsafe virtual void StartAttack(System.Numerics.Vector3 StartPoint, float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVineAttack3.StartAttack", true);
         byte* paramsPtr = stackalloc byte[16];

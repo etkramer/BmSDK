@@ -36,7 +36,7 @@ public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK
     /// <summary>
     /// Function: Render
     /// </summary>
-    public unsafe void Render(BmSDK.Engine.Canvas C)
+    public unsafe virtual void Render(BmSDK.Engine.Canvas C)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ScriptedTexture.Render", true);
         byte* paramsPtr = stackalloc byte[4];

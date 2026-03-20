@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: IsReadyToDisperse
     /// </summary>
-    public unsafe bool IsReadyToDisperse()
+    public unsafe override bool IsReadyToDisperse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.IsReadyToDisperse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: StartDisperse
     /// </summary>
-    public unsafe void StartDisperse()
+    public unsafe override void StartDisperse()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.StartDisperse", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: HasDoneConsole
     /// </summary>
-    public unsafe bool HasDoneConsole()
+    public unsafe override bool HasDoneConsole()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.HasDoneConsole", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: IsAtCasualty
     /// </summary>
-    public unsafe bool IsAtCasualty()
+    public unsafe override bool IsAtCasualty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.IsAtCasualty", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -115,7 +115,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: HasDoneDiscoverGesture
     /// </summary>
-    public unsafe bool HasDoneDiscoverGesture()
+    public unsafe override bool HasDoneDiscoverGesture()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.HasDoneDiscoverGesture", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: AssignCasualty
     /// </summary>
-    public unsafe void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
+    public unsafe override void AssignCasualty(BmSDK.BmGame.RPawnVillain NewCas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.AssignCasualty", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -138,7 +138,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: NotifyEvent
     /// </summary>
-    public unsafe void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
+    public unsafe override void NotifyEvent(BmSDK.BmGame.RBMAIController EventCon, BmSDK.BmGame.RBMAIAction EventAction, BmSDK.FString EventType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.NotifyEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -152,7 +152,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: NotifyStopped
     /// </summary>
-    public unsafe void NotifyStopped(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyStopped(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.NotifyStopped", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -165,7 +165,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: NotifyFinished
     /// </summary>
-    public unsafe void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFinished(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.NotifyFinished", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -191,7 +191,7 @@ public partial class RAEC_Casualty_Sub_ArmourThug : BmSDK.BmGame.RAEC_Casualty_S
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_ArmourThug.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[12];

@@ -47,7 +47,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: Repath
     /// </summary>
-    public unsafe void Repath()
+    public unsafe override void Repath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.Repath", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe override void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: CanBatmanGrab
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
+    public unsafe override BmSDK.BmGame.RBMAIController.BatmanGrabType CanBatmanGrab()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.CanBatmanGrab", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: UnAwareOfPlayer
     /// </summary>
-    public unsafe bool UnAwareOfPlayer()
+    public unsafe override bool UnAwareOfPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.UnAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -126,7 +126,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: SetInitialState
     /// </summary>
-    public unsafe void SetInitialState()
+    public unsafe override void SetInitialState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.SetInitialState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: NoOneElseWarning
     /// </summary>
-    public unsafe bool NoOneElseWarning()
+    public unsafe virtual bool NoOneElseWarning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.NoOneElseWarning", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe override System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -159,7 +159,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: GetBatToLineBist
     /// </summary>
-    public unsafe float GetBatToLineBist(System.Numerics.Vector3 ThugPoint, System.Numerics.Vector3 ThugDest)
+    public unsafe virtual float GetBatToLineBist(System.Numerics.Vector3 ThugPoint, System.Numerics.Vector3 ThugDest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.GetBatToLineBist", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: IsBatmanTooClose
     /// </summary>
-    public unsafe bool IsBatmanTooClose(float CheckDist)
+    public unsafe virtual bool IsBatmanTooClose(float CheckDist)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.IsBatmanTooClose", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -184,7 +184,7 @@ public partial class RBMBehaviour_TygerSurroundBM : BmSDK.BmGame.RBMBehaviour_Mo
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_TygerSurroundBM.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

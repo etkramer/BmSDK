@@ -71,7 +71,7 @@ public partial class RBatarang_ControllableTut : BmSDK.BmScript.RBatarang_Contro
     /// <summary>
     /// Function: Done
     /// </summary>
-    public unsafe void Done()
+    public unsafe virtual void Done()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_ControllableTut.Done", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBatarang_ControllableTut : BmSDK.BmScript.RBatarang_Contro
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override void GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarang_ControllableTut.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -47,7 +47,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.Update", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: AttemptToInitialise
     /// </summary>
-    public unsafe void AttemptToInitialise(bool bForceNewTarget = default)
+    public unsafe virtual void AttemptToInitialise(bool bForceNewTarget = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.AttemptToInitialise", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: SetNextTarget
     /// </summary>
-    public unsafe void SetNextTarget()
+    public unsafe virtual void SetNextTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.SetNextTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: IsValidTarget
     /// </summary>
-    public unsafe bool IsValidTarget(int TestPawnID)
+    public unsafe virtual bool IsValidTarget(int TestPawnID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.IsValidTarget", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: UpdateTargetList
     /// </summary>
-    public unsafe void UpdateTargetList()
+    public unsafe virtual void UpdateTargetList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.UpdateTargetList", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: AddAuraToTarget
     /// </summary>
-    public unsafe void AddAuraToTarget(BmSDK.BmGame.RPawnCombat TargetPawn)
+    public unsafe virtual void AddAuraToTarget(BmSDK.BmGame.RPawnCombat TargetPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.AddAuraToTarget", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -128,7 +128,7 @@ public partial class RSeqAct_ProtectiveAura : BmSDK.Engine.SeqAct_Latent, BmSDK.
     /// <summary>
     /// Function: ClearAuras
     /// </summary>
-    public unsafe void ClearAuras(BmSDK.BmGame.RPawnCombat IgnorePawn = default)
+    public unsafe virtual void ClearAuras(BmSDK.BmGame.RPawnCombat IgnorePawn = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ProtectiveAura.ClearAuras", true);
         byte* paramsPtr = stackalloc byte[8];

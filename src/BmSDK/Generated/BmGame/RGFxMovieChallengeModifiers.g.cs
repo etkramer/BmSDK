@@ -36,7 +36,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OnFadeCompleted_Callback
     /// </summary>
-    public unsafe void OnFadeCompleted_Callback()
+    public unsafe override void OnFadeCompleted_Callback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.OnFadeCompleted_Callback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: RefreshPrompts
     /// </summary>
-    public unsafe void RefreshPrompts()
+    public unsafe virtual void RefreshPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.RefreshPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CallAbortFunction
     /// </summary>
-    public unsafe void CallAbortFunction()
+    public unsafe virtual void CallAbortFunction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.CallAbortFunction", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: FE_IsCatwoman
     /// </summary>
-    public unsafe bool FE_IsCatwoman()
+    public unsafe virtual bool FE_IsCatwoman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.FE_IsCatwoman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowAbortPopup
     /// </summary>
-    public unsafe void ShowAbortPopup()
+    public unsafe virtual void ShowAbortPopup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.ShowAbortPopup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: GetGoalTitles
     /// </summary>
-    public unsafe void GetGoalTitles(int Round, BmSDK.FString TargetPath)
+    public unsafe virtual void GetGoalTitles(int Round, BmSDK.FString TargetPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.GetGoalTitles", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -117,7 +117,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetChallengeDetails
     /// </summary>
-    public unsafe void SetChallengeDetails(int ChallengeIndex, int CurrentRound)
+    public unsafe virtual void SetChallengeDetails(int ChallengeIndex, int CurrentRound)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetChallengeDetails", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetRankedInstructions
     /// </summary>
-    public unsafe void SetRankedInstructions(BmSDK.TArray<BmSDK.FString> RankedInstructionsText)
+    public unsafe virtual void SetRankedInstructions(BmSDK.TArray<BmSDK.FString> RankedInstructionsText)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetRankedInstructions", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -142,7 +142,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetNumModifiersAvailable
     /// </summary>
-    public unsafe void SetNumModifiersAvailable(int NumAvailable)
+    public unsafe virtual void SetNumModifiersAvailable(int NumAvailable)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetNumModifiersAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: FinishedSync
     /// </summary>
-    public unsafe void FinishedSync()
+    public unsafe virtual void FinishedSync()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.FinishedSync", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -165,7 +165,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: NoteEntryUsed
     /// </summary>
-    public unsafe void NoteEntryUsed(int entry_index)
+    public unsafe virtual void NoteEntryUsed(int entry_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.NoteEntryUsed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: AddTileEntryAuto
     /// </summary>
-    public unsafe void AddTileEntryAuto(int entry_index)
+    public unsafe virtual void AddTileEntryAuto(int entry_index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.AddTileEntryAuto", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -189,7 +189,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetRoundsRemaining
     /// </summary>
-    public unsafe void SetRoundsRemaining(int rounds_remaining)
+    public unsafe virtual void SetRoundsRemaining(int rounds_remaining)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetRoundsRemaining", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -201,7 +201,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetChallengeMode
     /// </summary>
-    public unsafe void SetChallengeMode(int challenge_type_mode)
+    public unsafe virtual void SetChallengeMode(int challenge_type_mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetChallengeMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -213,7 +213,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: OnCloseHUD
     /// </summary>
-    public unsafe void OnCloseHUD()
+    public unsafe virtual void OnCloseHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.OnCloseHUD", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -224,7 +224,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: CloseScreen
     /// </summary>
-    public unsafe void CloseScreen()
+    public unsafe virtual void CloseScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.CloseScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -235,7 +235,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: Hide
     /// </summary>
-    public unsafe void Hide()
+    public unsafe virtual void Hide()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.Hide", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -246,7 +246,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show(int Mode)
+    public unsafe virtual void show(int Mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.show", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -258,7 +258,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: HideItem
     /// </summary>
-    public unsafe void HideItem(BmSDK.FString ItemName)
+    public unsafe virtual void HideItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.HideItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -270,7 +270,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: ShowItem
     /// </summary>
-    public unsafe void ShowItem(BmSDK.FString ItemName)
+    public unsafe virtual void ShowItem(BmSDK.FString ItemName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.ShowItem", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -282,7 +282,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: KismetControlsInOut
     /// </summary>
-    public unsafe void KismetControlsInOut(bool bTrue)
+    public unsafe virtual void KismetControlsInOut(bool bTrue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.KismetControlsInOut", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -294,7 +294,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: SetTickRealTime
     /// </summary>
-    public unsafe void SetTickRealTime(bool bRealTime)
+    public unsafe virtual void SetTickRealTime(bool bRealTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.SetTickRealTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -306,7 +306,7 @@ public partial class RGFxMovieChallengeModifiers : BmSDK.BmGame.RGFxMovie, BmSDK
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RGFxMovieChallengeModifiers.Init", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: UpdateBMLook
     /// </summary>
-    public unsafe void UpdateBMLook()
+    public unsafe virtual void UpdateBMLook()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.UpdateBMLook", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: UpdateSpecialMove
     /// </summary>
-    public unsafe bool UpdateSpecialMove(float DeltaTime)
+    public unsafe override bool UpdateSpecialMove(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.UpdateSpecialMove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: CancelSpecialMove
     /// </summary>
-    public unsafe void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
+    public unsafe override void CancelSpecialMove(BmSDK.BmGame.RSpecialMoveConfig NextSpecialMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.CancelSpecialMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -117,7 +117,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: TriggerSpecialMove
     /// </summary>
-    public unsafe void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
+    public unsafe override void TriggerSpecialMove(BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.TriggerSpecialMove", true);
         byte* paramsPtr = stackalloc byte[112];
@@ -129,7 +129,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: PlayCoupledAnim
     /// </summary>
-    public unsafe void PlayCoupledAnim(BmSDK.FName AnimName, bool playerRelativeToOther, bool Queued)
+    public unsafe virtual void PlayCoupledAnim(BmSDK.FName AnimName, bool playerRelativeToOther, bool Queued)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.PlayCoupledAnim", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -143,7 +143,7 @@ public partial class RSpecialMoveInstance_CarryPerson : BmSDK.BmGame.RSpecialMov
     /// <summary>
     /// Function: QueuedTransitionStarted
     /// </summary>
-    public unsafe void QueuedTransitionStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
+    public unsafe virtual void QueuedTransitionStarted(BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSpecialMoveInstance_CarryPerson.QueuedTransitionStarted", true);
         byte* paramsPtr = stackalloc byte[4];

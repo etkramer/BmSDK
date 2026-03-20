@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetAnimInfo_Yaw
     /// </summary>
-    public unsafe float GetAnimInfo_Yaw()
+    public unsafe override float GetAnimInfo_Yaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetAnimInfo_Yaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetAnimInfo_AimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetAnimInfo_Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_Location()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_Location()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetAnimInfo_Location", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetAnimInfo_Name
     /// </summary>
-    public unsafe BmSDK.FName GetAnimInfo_Name()
+    public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -133,7 +133,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: HitByGel
     /// </summary>
-    public unsafe void HitByGel()
+    public unsafe override void HitByGel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.HitByGel", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: CanBeUsedByPawn
     /// </summary>
-    public unsafe bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat TargetPawn, bool bTaunting)
+    public unsafe override bool CanBeUsedByPawn(BmSDK.BmGame.RPawnCombat NewUser, BmSDK.BmGame.RPawnCombat TargetPawn, bool bTaunting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.CanBeUsedByPawn", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -158,7 +158,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetBatarangSpeedBoost
     /// </summary>
-    public unsafe float GetBatarangSpeedBoost()
+    public unsafe virtual float GetBatarangSpeedBoost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetBatarangSpeedBoost", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -169,7 +169,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: ForceHitAtEndOfFlight
     /// </summary>
-    public unsafe bool ForceHitAtEndOfFlight()
+    public unsafe virtual bool ForceHitAtEndOfFlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.ForceHitAtEndOfFlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -180,7 +180,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetBatarangPriority
     /// </summary>
-    public unsafe float GetBatarangPriority()
+    public unsafe virtual float GetBatarangPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetBatarangPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -191,7 +191,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: IsBatarangable
     /// </summary>
-    public unsafe bool IsBatarangable()
+    public unsafe virtual bool IsBatarangable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.IsBatarangable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -202,7 +202,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe virtual System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -216,7 +216,7 @@ public partial class RBMCombatPoint_FireExUpright : BmSDK.BmGame.RBMCombatPoint_
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_FireExUpright.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

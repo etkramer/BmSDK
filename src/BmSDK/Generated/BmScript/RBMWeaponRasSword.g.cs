@@ -71,7 +71,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: HideWeapon
     /// </summary>
-    public unsafe void HideWeapon()
+    public unsafe override void HideWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.HideWeapon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: Disarm
     /// </summary>
-    public unsafe void Disarm(System.Numerics.Vector3 StartVelocity = default)
+    public unsafe override void Disarm(System.Numerics.Vector3 StartVelocity = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.Disarm", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: CreateLevitatingWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateLevitatingWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateLevitatingWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.CreateLevitatingWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[4776];
@@ -129,7 +129,7 @@ public partial class RBMWeaponRasSword : BmSDK.BmScript.RBMWeaponNinjaSword, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponRasSword.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

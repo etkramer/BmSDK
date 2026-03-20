@@ -31,7 +31,7 @@ public partial class RBMBehaviour_BaseCorner : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: Abort_SpottedFriendlyAhead
     /// </summary>
-    public unsafe void Abort_SpottedFriendlyAhead()
+    public unsafe virtual void Abort_SpottedFriendlyAhead()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_BaseCorner.Abort_SpottedFriendlyAhead", true);
         byte* paramsPtr = stackalloc byte[0];

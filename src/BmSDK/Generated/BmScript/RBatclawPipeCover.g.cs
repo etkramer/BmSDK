@@ -71,7 +71,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: SuperEasy
     /// </summary>
-    public unsafe bool SuperEasy()
+    public unsafe virtual bool SuperEasy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.SuperEasy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: UnlinkToActor
     /// </summary>
-    public unsafe bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool UnlinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.UnlinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: LinkToActor
     /// </summary>
-    public unsafe bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
+    public unsafe override bool LinkToActor(BmSDK.Engine.Actor LinkTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.LinkToActor", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: GetHarpoonTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHarpoonTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetHarpoonTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.GetHarpoonTargetLocation", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -129,7 +129,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: IsHarpoonable
     /// </summary>
-    public unsafe bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
+    public unsafe virtual bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.IsHarpoonable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: GetBatClawImpactSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetBatClawImpactSound()
+    public unsafe virtual BmSDK.Engine.AkEvent GetBatClawImpactSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.GetBatClawImpactSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: StartRemoveAttempt
     /// </summary>
-    public unsafe void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.StartRemoveAttempt", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -165,7 +165,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: FailedToRemove
     /// </summary>
-    public unsafe void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.FailedToRemove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -177,7 +177,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: AnimTimeout
     /// </summary>
-    public unsafe void AnimTimeout()
+    public unsafe virtual void AnimTimeout()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.AnimTimeout", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: LightOn
     /// </summary>
-    public unsafe void LightOn()
+    public unsafe virtual void LightOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.LightOn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: Remove
     /// </summary>
-    public unsafe void Remove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void Remove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.Remove", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -211,7 +211,7 @@ public partial class RBatclawPipeCover : BmSDK.BmGame.RBatclawPipeCoverBase, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatclawPipeCover.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

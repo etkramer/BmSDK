@@ -36,7 +36,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnStorageDeviceChange
     /// </summary>
-    public unsafe void OnStorageDeviceChange()
+    public unsafe virtual void OnStorageDeviceChange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnStorageDeviceChange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnDeviceSelectionComplete
     /// </summary>
-    public unsafe void OnDeviceSelectionComplete(bool bWasSuccessful)
+    public unsafe virtual void OnDeviceSelectionComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnDeviceSelectionComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -59,7 +59,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: RefreshStorageData
     /// </summary>
-    public unsafe void RefreshStorageData()
+    public unsafe virtual void RefreshStorageData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.RefreshStorageData", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnLoginChange
     /// </summary>
-    public unsafe void OnLoginChange(byte LocalUserNum)
+    public unsafe virtual void OnLoginChange(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnLoginChange", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -82,7 +82,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnReadStorageComplete
     /// </summary>
-    public unsafe void OnReadStorageComplete(byte LocalUserNum, bool bWasSuccessful)
+    public unsafe virtual void OnReadStorageComplete(byte LocalUserNum, bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnReadStorageComplete", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -95,7 +95,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnUnregister
     /// </summary>
-    public unsafe void OnUnregister()
+    public unsafe override void OnUnregister()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnUnregister", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: OnRegister
     /// </summary>
-    public unsafe void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
+    public unsafe override void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.OnRegister", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -118,7 +118,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: ClearReadCompleteDelegate
     /// </summary>
-    public unsafe void ClearReadCompleteDelegate(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum)
+    public unsafe virtual void ClearReadCompleteDelegate(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.ClearReadCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -131,7 +131,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: AddReadCompleteDelegate
     /// </summary>
-    public unsafe void AddReadCompleteDelegate(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum)
+    public unsafe virtual void AddReadCompleteDelegate(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.AddReadCompleteDelegate", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -144,7 +144,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: GetData
     /// </summary>
-    public unsafe bool GetData(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
+    public unsafe virtual bool GetData(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.GetData", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -158,7 +158,7 @@ public partial class UIDataProvider_OnlinePlayerStorage : BmSDK.Engine.UIDataPro
     /// <summary>
     /// Function: ReadData
     /// </summary>
-    public unsafe bool ReadData(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum, int DeviceID, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
+    public unsafe virtual bool ReadData(BmSDK.Engine.OnlinePlayerInterface PlayerInterface, byte LocalUserNum, int DeviceID, BmSDK.Engine.OnlinePlayerStorage PlayerStorage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerStorage.ReadData", true);
         byte* paramsPtr = stackalloc byte[24];

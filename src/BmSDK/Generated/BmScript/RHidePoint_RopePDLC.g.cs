@@ -71,7 +71,7 @@ public partial class RHidePoint_RopePDLC : BmSDK.BmScript.RHidePoint_Rope, BmSDK
     /// <summary>
     /// Function: WillSmashIfShot
     /// </summary>
-    public unsafe bool WillSmashIfShot()
+    public unsafe override bool WillSmashIfShot()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RHidePoint_RopePDLC.WillSmashIfShot", true);
         byte* paramsPtr = stackalloc byte[4];

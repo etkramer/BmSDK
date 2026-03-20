@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ExitMoveForPawn
     /// </summary>
-    public unsafe void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
+    public unsafe override void ExitMoveForPawn(BmSDK.BmGame.RPawnCombat ExitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.ExitMoveForPawn", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPerformWeaponDestroy
     /// </summary>
-    public unsafe bool CanPerformWeaponDestroy()
+    public unsafe override bool CanPerformWeaponDestroy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.CanPerformWeaponDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPerformTakedownWithStun
     /// </summary>
-    public unsafe bool CanPerformTakedownWithStun()
+    public unsafe override bool CanPerformTakedownWithStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.CanPerformTakedownWithStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanPerformTakedownWithCounter
     /// </summary>
-    public unsafe bool CanPerformTakedownWithCounter()
+    public unsafe override bool CanPerformTakedownWithCounter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.CanPerformTakedownWithCounter", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetDamageAmount
     /// </summary>
-    public unsafe int GetDamageAmount()
+    public unsafe override int GetDamageAmount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.GetDamageAmount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetTeleportReferenceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTeleportReferenceLocation()
+    public unsafe override System.Numerics.Vector3 GetTeleportReferenceLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.GetTeleportReferenceLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -138,7 +138,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GetTeleportPawnList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
+    public unsafe override BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.GetTeleportPawnList", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -149,7 +149,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: CanTeleport
     /// </summary>
-    public unsafe bool CanTeleport()
+    public unsafe override bool CanTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.CanTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -160,7 +160,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: SetTeleportTimers
     /// </summary>
-    public unsafe void SetTeleportTimers(float AnimLength)
+    public unsafe override void SetTeleportTimers(float AnimLength)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.SetTeleportTimers", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayTargetAnimation
     /// </summary>
-    public unsafe void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayTargetAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.PlayTargetAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -185,7 +185,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayCamera
     /// </summary>
-    public unsafe void PlayCamera(System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName Anim, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float BlendInTime, float StartTime)
+    public unsafe virtual void PlayCamera(System.Numerics.Vector3 CamRootLocation, BmSDK.Rotator CamRootRotation, BmSDK.FName Anim, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float BlendInTime, float StartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.PlayCamera", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -203,7 +203,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: PlayBatmanAnimation
     /// </summary>
-    public unsafe void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
+    public unsafe override void PlayBatmanAnimation(BmSDK.BmGame.RAnimUtil.EMirrorChoice MC, float WindingStartTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.PlayBatmanAnimation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -216,7 +216,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ResetStance
     /// </summary>
-    public unsafe void ResetStance()
+    public unsafe virtual void ResetStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.ResetStance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: SetAnimSets
     /// </summary>
-    public unsafe void SetAnimSets()
+    public unsafe virtual void SetAnimSets()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.SetAnimSets", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Kick
     /// </summary>
-    public unsafe void Kick()
+    public unsafe virtual void Kick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.Kick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: FaceOnSword
     /// </summary>
-    public unsafe void FaceOnSword()
+    public unsafe virtual void FaceOnSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.FaceOnSword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Elbow
     /// </summary>
-    public unsafe void Elbow()
+    public unsafe virtual void Elbow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.Elbow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -271,7 +271,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Punch
     /// </summary>
-    public unsafe void Punch()
+    public unsafe virtual void Punch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.Punch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -282,7 +282,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: BlendBackCam
     /// </summary>
-    public unsafe void BlendBackCam()
+    public unsafe virtual void BlendBackCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.BlendBackCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -293,7 +293,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: GrabSword
     /// </summary>
-    public unsafe void GrabSword()
+    public unsafe virtual void GrabSword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.GrabSword", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -304,7 +304,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: TaliaAppears
     /// </summary>
-    public unsafe void TaliaAppears()
+    public unsafe virtual void TaliaAppears()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.TaliaAppears", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -315,7 +315,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: TeleportToPoint
     /// </summary>
-    public unsafe void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
+    public unsafe override void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.TeleportToPoint", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -328,7 +328,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -339,7 +339,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: DamageTarget
     /// </summary>
-    public unsafe void DamageTarget()
+    public unsafe override void DamageTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.DamageTarget", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -350,7 +350,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: AllowNextStrike
     /// </summary>
-    public unsafe void AllowNextStrike()
+    public unsafe override void AllowNextStrike()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.AllowNextStrike", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -361,7 +361,7 @@ public partial class RCombatMove_BatmanCounterAndGrabRasSword : BmSDK.BmGame.RCo
     /// <summary>
     /// Function: ForceTeleportBack
     /// </summary>
-    public unsafe void ForceTeleportBack()
+    public unsafe override void ForceTeleportBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndGrabRasSword.ForceTeleportBack", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -47,7 +47,7 @@ public partial class RSeqAct_FloatingRas2 : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: UpdateParticleEffect
     /// </summary>
-    public unsafe void UpdateParticleEffect(float DeltaTime)
+    public unsafe virtual void UpdateParticleEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FloatingRas2.UpdateParticleEffect", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -59,7 +59,7 @@ public partial class RSeqAct_FloatingRas2 : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FloatingRas2.Update", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -71,7 +71,7 @@ public partial class RSeqAct_FloatingRas2 : BmSDK.Engine.SeqAct_Latent, BmSDK.IG
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_FloatingRas2.Activated", true);
         byte* paramsPtr = stackalloc byte[0];

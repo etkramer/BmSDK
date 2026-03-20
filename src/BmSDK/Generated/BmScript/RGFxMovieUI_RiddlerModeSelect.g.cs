@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: OnTick
     /// </summary>
-    public unsafe void OnTick()
+    public unsafe override void OnTick()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.OnTick", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: PS3SignIn
     /// </summary>
-    public unsafe void PS3SignIn()
+    public unsafe virtual void PS3SignIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.PS3SignIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: OnClicked
     /// </summary>
-    public unsafe void OnClicked(int Index)
+    public unsafe override void OnClicked(int Index)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.OnClicked", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -70,7 +70,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: OnClosed
     /// </summary>
-    public unsafe void OnClosed()
+    public unsafe override void OnClosed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.OnClosed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: SaveActiveMode
     /// </summary>
-    public unsafe void SaveActiveMode(int Mode)
+    public unsafe virtual void SaveActiveMode(int Mode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.SaveActiveMode", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: GetActiveMode
     /// </summary>
-    public unsafe int GetActiveMode()
+    public unsafe virtual int GetActiveMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.GetActiveMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: PopupRequester_Callback
     /// </summary>
-    public unsafe void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
+    public unsafe override void PopupRequester_Callback(BmSDK.BmGame.RGFxMoviePopupRequester ThePopUpMsg, int ButtonId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.PopupRequester_Callback", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RGFxMovieUI_RiddlerModeSelect : BmSDK.BmGame.RGFxMovieUI, B
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_RiddlerModeSelect.Init", true);
         byte* paramsPtr = stackalloc byte[20];

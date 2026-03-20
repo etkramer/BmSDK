@@ -71,7 +71,7 @@ public partial class RPostFleePoint_Behaviour : BmSDK.BmGame.RPostFleePoint, BmS
     /// <summary>
     /// Function: UsedByPawn
     /// </summary>
-    public unsafe bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
+    public unsafe override bool UsedByPawn(BmSDK.BmGame.RBMPawnAI NewUser, bool bInstantUse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPostFleePoint_Behaviour.UsedByPawn", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -84,7 +84,7 @@ public partial class RPostFleePoint_Behaviour : BmSDK.BmGame.RPostFleePoint, BmS
     /// <summary>
     /// Function: RecheckWanderBehaviour
     /// </summary>
-    public unsafe void RecheckWanderBehaviour()
+    public unsafe virtual void RecheckWanderBehaviour()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPostFleePoint_Behaviour.RecheckWanderBehaviour", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RPostFleePoint_Behaviour : BmSDK.BmGame.RPostFleePoint, BmS
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPostFleePoint_Behaviour.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];

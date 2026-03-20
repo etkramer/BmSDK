@@ -36,7 +36,7 @@ public partial class RSimpleRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmS
     /// <summary>
     /// Function: FinaliseRope
     /// </summary>
-    public unsafe void FinaliseRope()
+    public unsafe override void FinaliseRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSimpleRopeComponent.FinaliseRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class RSimpleRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmS
     /// <summary>
     /// Function: InitialiseRope
     /// </summary>
-    public unsafe void InitialiseRope()
+    public unsafe override void InitialiseRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSimpleRopeComponent.InitialiseRope", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class RSimpleRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmS
     /// <summary>
     /// Function: UpdateRope
     /// </summary>
-    public unsafe void UpdateRope()
+    public unsafe override void UpdateRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSimpleRopeComponent.UpdateRope", true);
         byte* paramsPtr = stackalloc byte[0];

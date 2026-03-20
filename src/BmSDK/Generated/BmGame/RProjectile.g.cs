@@ -66,7 +66,7 @@ public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnHitEffects
     /// </summary>
-    public unsafe void SpawnHitEffects(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, BmSDK.FName ImpactType, bool bPlaySound = default)
+    public unsafe virtual void SpawnHitEffects(System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitVelocity, BmSDK.FName ImpactType, bool bPlaySound = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile.SpawnHitEffects", true);
         byte* paramsPtr = stackalloc byte[132];
@@ -81,7 +81,7 @@ public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject
     /// <summary>
     /// Function: GetImpactMaterial
     /// </summary>
-    public unsafe BmSDK.BmGame.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
+    public unsafe virtual BmSDK.BmGame.RPhysicalMaterialProperty GetImpactMaterial(BmSDK.Engine.Actor.FImpactInfo Impact)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RProjectile.GetImpactMaterial", true);
         byte* paramsPtr = stackalloc byte[92];

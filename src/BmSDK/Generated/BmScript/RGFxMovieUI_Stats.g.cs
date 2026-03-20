@@ -36,7 +36,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: GetGameplayStat
     /// </summary>
-    public unsafe float GetGameplayStat(BmSDK.BmGame.RPersistentShared.EGameplayStats Id)
+    public unsafe virtual float GetGameplayStat(BmSDK.BmGame.RPersistentShared.EGameplayStats Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.GetGameplayStat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -48,7 +48,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: FetchCurrentProfileData
     /// </summary>
-    public unsafe int FetchCurrentProfileData(BmSDK.FString TargetPathFull)
+    public unsafe virtual int FetchCurrentProfileData(BmSDK.FString TargetPathFull)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.FetchCurrentProfileData", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -60,7 +60,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: GetCurrentPercentage
     /// </summary>
-    public unsafe int GetCurrentPercentage()
+    public unsafe virtual int GetCurrentPercentage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.GetCurrentPercentage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: FetchNickname
     /// </summary>
-    public unsafe BmSDK.FString FetchNickname()
+    public unsafe virtual BmSDK.FString FetchNickname()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.FetchNickname", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: GetCatwomanTitle
     /// </summary>
-    public unsafe BmSDK.FString GetCatwomanTitle()
+    public unsafe virtual BmSDK.FString GetCatwomanTitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.GetCatwomanTitle", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: FetchStat
     /// </summary>
-    public unsafe BmSDK.FString FetchStat(bool bPlus, BmSDK.BmGame.RPersistentShared.EPercentData StatId)
+    public unsafe virtual BmSDK.FString FetchStat(bool bPlus, BmSDK.BmGame.RPersistentShared.EPercentData StatId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.FetchStat", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -106,7 +106,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: FetchStat_Label
     /// </summary>
-    public unsafe BmSDK.FString FetchStat_Label(int StatId)
+    public unsafe virtual BmSDK.FString FetchStat_Label(int StatId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.FetchStat_Label", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -118,7 +118,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: IsCharacterPresent
     /// </summary>
-    public unsafe bool IsCharacterPresent(BmSDK.FString CharName)
+    public unsafe virtual bool IsCharacterPresent(BmSDK.FString CharName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.IsCharacterPresent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -130,7 +130,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: IsStoryPresent
     /// </summary>
-    public unsafe bool IsStoryPresent(int Id)
+    public unsafe virtual bool IsStoryPresent(int Id)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.IsStoryPresent", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -142,7 +142,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: GetStoryCount
     /// </summary>
-    public unsafe int GetStoryCount()
+    public unsafe virtual int GetStoryCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.GetStoryCount", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: SetupScreenPrompts
     /// </summary>
-    public unsafe void SetupScreenPrompts()
+    public unsafe override void SetupScreenPrompts()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.SetupScreenPrompts", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
+    public unsafe override void Init(BmSDK.Engine.LocalPlayer LocPlay = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.Init", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -176,7 +176,7 @@ public partial class RGFxMovieUI_Stats : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameOb
     /// <summary>
     /// Function: SetTrophyCount
     /// </summary>
-    public unsafe void SetTrophyCount()
+    public unsafe virtual void SetTrophyCount()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGFxMovieUI_Stats.SetTrophyCount", true);
         byte* paramsPtr = stackalloc byte[24];

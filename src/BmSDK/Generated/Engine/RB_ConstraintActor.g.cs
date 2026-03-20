@@ -66,7 +66,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: OnToggleConstraintDrive
     /// </summary>
-    public unsafe void OnToggleConstraintDrive(BmSDK.Engine.SeqAct_ToggleConstraintDrive Action)
+    public unsafe virtual void OnToggleConstraintDrive(BmSDK.Engine.SeqAct_ToggleConstraintDrive Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.OnToggleConstraintDrive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -78,7 +78,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.OnToggle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -90,7 +90,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: OnDestroy
     /// </summary>
-    public unsafe void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
+    public unsafe override void OnDestroy(BmSDK.Engine.SeqAct_Destroy Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.OnDestroy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -102,7 +102,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: TermConstraint
     /// </summary>
-    public unsafe void TermConstraint()
+    public unsafe virtual void TermConstraint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.TermConstraint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -120,7 +120,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: InitConstraint
     /// </summary>
-    public unsafe void InitConstraint(BmSDK.Engine.Actor Actor1, BmSDK.Engine.Actor Actor2, BmSDK.FName Actor1Bone = default, BmSDK.FName Actor2Bone = default, float BreakThreshold = default)
+    public unsafe virtual void InitConstraint(BmSDK.Engine.Actor Actor1, BmSDK.Engine.Actor Actor2, BmSDK.FName Actor1Bone = default, BmSDK.FName Actor2Bone = default, float BreakThreshold = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.InitConstraint", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -143,7 +143,7 @@ public partial class RB_ConstraintActor : BmSDK.Engine.RigidBodyBase, BmSDK.IGam
     /// <summary>
     /// Function: SetDisableCollision
     /// </summary>
-    public unsafe void SetDisableCollision(bool NewDisableCollision)
+    public unsafe virtual void SetDisableCollision(bool NewDisableCollision)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ConstraintActor.SetDisableCollision", true);
         byte* paramsPtr = stackalloc byte[4];

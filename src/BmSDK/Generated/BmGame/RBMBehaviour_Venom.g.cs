@@ -36,7 +36,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: PlayTauntBark
     /// </summary>
-    public unsafe void PlayTauntBark()
+    public unsafe virtual void PlayTauntBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.PlayTauntBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: PathToTargetNotFound
     /// </summary>
-    public unsafe void PathToTargetNotFound(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void PathToTargetNotFound(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.PathToTargetNotFound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: ReachedTargetLocation
     /// </summary>
-    public unsafe void ReachedTargetLocation(BmSDK.BmGame.RNavigationHandle NavH)
+    public unsafe virtual void ReachedTargetLocation(BmSDK.BmGame.RNavigationHandle NavH)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.ReachedTargetLocation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: ReleaseNavHandle
     /// </summary>
-    public unsafe void ReleaseNavHandle()
+    public unsafe virtual void ReleaseNavHandle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.ReleaseNavHandle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: PawnBumped
     /// </summary>
-    public unsafe void PawnBumped(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PawnBumped(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.PawnBumped", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: BlendToExhausted
     /// </summary>
-    public unsafe void BlendToExhausted()
+    public unsafe virtual void BlendToExhausted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.BlendToExhausted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: IsInBeatUp
     /// </summary>
-    public unsafe bool IsInBeatUp()
+    public unsafe virtual bool IsInBeatUp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.IsInBeatUp", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: OnShockwaveDone
     /// </summary>
-    public unsafe void OnShockwaveDone()
+    public unsafe virtual void OnShockwaveDone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.OnShockwaveDone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: CanHitLaserGrid
     /// </summary>
-    public unsafe bool CanHitLaserGrid()
+    public unsafe override bool CanHitLaserGrid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.CanHitLaserGrid", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -138,7 +138,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: IsPathToBatmanClear
     /// </summary>
-    public unsafe bool IsPathToBatmanClear()
+    public unsafe virtual bool IsPathToBatmanClear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.IsPathToBatmanClear", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -149,7 +149,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: GetThoughts
     /// </summary>
-    public unsafe void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
+    public unsafe override void GetThoughts(out BmSDK.TArray<BmSDK.Engine.Actor.FThought> ThoughtList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.GetThoughts", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -161,7 +161,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: ResetTauntTime
     /// </summary>
-    public unsafe void ResetTauntTime()
+    public unsafe virtual void ResetTauntTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.ResetTauntTime", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -172,7 +172,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: ReduceVenomHealthBy
     /// </summary>
-    public unsafe void ReduceVenomHealthBy(int Damage)
+    public unsafe virtual void ReduceVenomHealthBy(int Damage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.ReduceVenomHealthBy", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -184,7 +184,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: CanBlock
     /// </summary>
-    public unsafe bool CanBlock()
+    public unsafe override bool CanBlock()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.CanBlock", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -195,7 +195,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe virtual bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: GetSpecialAttack
     /// </summary>
-    public unsafe BmSDK.Class GetSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
+    public unsafe virtual BmSDK.Class GetSpecialAttack(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.GetSpecialAttack", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -219,7 +219,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: TickStateTime
     /// </summary>
-    public unsafe void TickStateTime(float DeltaTime)
+    public unsafe virtual void TickStateTime(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.TickStateTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -231,7 +231,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: BeginState
     /// </summary>
-    public unsafe void BeginState(BmSDK.FName PrevState)
+    public unsafe override void BeginState(BmSDK.FName PrevState)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.BeginState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -243,7 +243,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: AttackTargetPawn
     /// </summary>
-    public unsafe bool AttackTargetPawn()
+    public unsafe override bool AttackTargetPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.AttackTargetPawn", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -254,7 +254,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: GetForceToGiveToPawn
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
+    public unsafe override System.Numerics.Vector3 GetForceToGiveToPawn(BmSDK.BmGame.RPawnCombat ForceReceiver, float MaxForce, float MinRange = default, float MaxRange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.GetForceToGiveToPawn", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -276,7 +276,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: SpawnHitMove
     /// </summary>
-    public unsafe void SpawnHitMove(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, bool bThresholdReached)
+    public unsafe virtual void SpawnHitMove(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo, bool bThresholdReached)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.SpawnHitMove", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -290,7 +290,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: OnDamaged
     /// </summary>
-    public unsafe void OnDamaged(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe virtual void OnDamaged(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.OnDamaged", true);
         byte* paramsPtr = stackalloc byte[272];
@@ -302,7 +302,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[256];
@@ -314,7 +314,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: GetTargetPriority
     /// </summary>
-    public unsafe float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe virtual float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.GetTargetPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -327,7 +327,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: IsValidForStrike
     /// </summary>
-    public unsafe bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
+    public unsafe virtual bool IsValidForStrike(BmSDK.BmGame.RPawnPlayerCombat PlayerPawn, BmSDK.BmGame.RPawnCombat TestPawn, BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.IsValidForStrike", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -341,7 +341,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: ChargeGoingAwayFromStrikePawn
     /// </summary>
-    public unsafe bool ChargeGoingAwayFromStrikePawn(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe virtual bool ChargeGoingAwayFromStrikePawn(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.ChargeGoingAwayFromStrikePawn", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -353,7 +353,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: IsVulnerableToPawn
     /// </summary>
-    public unsafe bool IsVulnerableToPawn(BmSDK.BmGame.RPawnCombat Attacker)
+    public unsafe virtual bool IsVulnerableToPawn(BmSDK.BmGame.RPawnCombat Attacker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.IsVulnerableToPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -365,7 +365,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: SpawnEvade
     /// </summary>
-    public unsafe bool SpawnEvade(System.Numerics.Vector3 DangerOrigin, System.Numerics.Vector3 DangerDirection)
+    public unsafe override bool SpawnEvade(System.Numerics.Vector3 DangerOrigin, System.Numerics.Vector3 DangerDirection)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.SpawnEvade", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -378,7 +378,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -389,7 +389,7 @@ public partial class RBMBehaviour_Venom : BmSDK.BmGame.RBMBehaviour_Combat, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_Venom.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

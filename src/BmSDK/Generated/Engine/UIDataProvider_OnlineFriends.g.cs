@@ -36,7 +36,7 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
     /// <summary>
     /// Function: OnLoginChange
     /// </summary>
-    public unsafe void OnLoginChange(byte LocalUserNum)
+    public unsafe virtual void OnLoginChange(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlineFriends.OnLoginChange", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -48,7 +48,7 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
     /// <summary>
     /// Function: OnFriendsReadComplete
     /// </summary>
-    public unsafe void OnFriendsReadComplete(bool bWasSuccessful)
+    public unsafe virtual void OnFriendsReadComplete(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlineFriends.OnFriendsReadComplete", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
     /// <summary>
     /// Function: OnUnregister
     /// </summary>
-    public unsafe void OnUnregister()
+    public unsafe override void OnUnregister()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlineFriends.OnUnregister", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -71,7 +71,7 @@ public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_
     /// <summary>
     /// Function: OnRegister
     /// </summary>
-    public unsafe void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
+    public unsafe override void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlineFriends.OnRegister", true);
         byte* paramsPtr = stackalloc byte[16];

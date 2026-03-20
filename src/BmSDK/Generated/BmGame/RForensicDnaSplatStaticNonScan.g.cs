@@ -71,7 +71,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// <summary>
     /// Function: RegisterEvidence
     /// </summary>
-    public unsafe void RegisterEvidence()
+    public unsafe override void RegisterEvidence()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.RegisterEvidence", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// <summary>
     /// Function: show
     /// </summary>
-    public unsafe void show(float _show, int ShowMode = default)
+    public unsafe override void show(float _show, int ShowMode = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.show", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RForensicDnaSplatStaticNonScan : BmSDK.BmGame.RForensicDnaS
     /// <summary>
     /// Function: CanBeScanned
     /// </summary>
-    public unsafe bool CanBeScanned()
+    public unsafe override bool CanBeScanned()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RForensicDnaSplatStaticNonScan.CanBeScanned", true);
         byte* paramsPtr = stackalloc byte[8];

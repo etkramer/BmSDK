@@ -36,7 +36,7 @@ public partial class MultiFont : BmSDK.Engine.Font, BmSDK.IGameObject
     /// <summary>
     /// Function: GetResolutionTestTableIndex
     /// </summary>
-    public unsafe int GetResolutionTestTableIndex(float HeightTest)
+    public unsafe virtual int GetResolutionTestTableIndex(float HeightTest)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MultiFont.GetResolutionTestTableIndex", true);
         byte* paramsPtr = stackalloc byte[8];

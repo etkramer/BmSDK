@@ -71,7 +71,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyWeaponFinishedFiring
     /// </summary>
-    public unsafe void NotifyWeaponFinishedFiring(BmSDK.Engine.Weapon W, byte FireMode)
+    public unsafe virtual void NotifyWeaponFinishedFiring(BmSDK.Engine.Weapon W, byte FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.NotifyWeaponFinishedFiring", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -84,7 +84,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyWeaponFired
     /// </summary>
-    public unsafe void NotifyWeaponFired(BmSDK.Engine.Weapon W, byte FireMode)
+    public unsafe virtual void NotifyWeaponFired(BmSDK.Engine.Weapon W, byte FireMode)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.NotifyWeaponFired", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -97,7 +97,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPlayerViewPoint
     /// </summary>
-    public unsafe void GetPlayerViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
+    public unsafe override void GetPlayerViewPoint(out System.Numerics.Vector3 out_Location, out BmSDK.Rotator out_Rotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.GetPlayerViewPoint", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -110,7 +110,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: SetTeam
     /// </summary>
-    public unsafe void SetTeam(int inTeamIdx)
+    public unsafe virtual void SetTeam(int inTeamIdx)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.SetTeam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -122,7 +122,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplayDebug
     /// </summary>
-    public unsafe void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
+    public unsafe override void DisplayDebug(BmSDK.Engine.HUD HUD, out float out_YL, out float out_YPos)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.DisplayDebug", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -136,7 +136,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: Reset
     /// </summary>
-    public unsafe void Reset()
+    public unsafe override void Reset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.Reset", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class AIController : BmSDK.Engine.Controller, BmSDK.IGameObject
     /// <summary>
     /// Function: PreBeginPlay
     /// </summary>
-    public unsafe void PreBeginPlay()
+    public unsafe override void PreBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AIController.PreBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

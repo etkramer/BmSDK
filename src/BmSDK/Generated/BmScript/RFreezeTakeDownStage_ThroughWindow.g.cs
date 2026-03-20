@@ -71,7 +71,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: HandleBreakWall
     /// </summary>
-    public unsafe void HandleBreakWall(BmSDK.Engine.FracturedStaticMeshActor FractureWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
+    public unsafe virtual void HandleBreakWall(BmSDK.Engine.FracturedStaticMeshActor FractureWindow, System.Numerics.Vector3 Loc, System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.HandleBreakWall", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -85,7 +85,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: BreakWall
     /// </summary>
-    public unsafe void BreakWall()
+    public unsafe virtual void BreakWall()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.BreakWall", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: ResetCamera
     /// </summary>
-    public unsafe void ResetCamera()
+    public unsafe virtual void ResetCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.ResetCamera", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -107,7 +107,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: FinishAttackVictim
     /// </summary>
-    public unsafe bool FinishAttackVictim()
+    public unsafe override bool FinishAttackVictim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.FinishAttackVictim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -118,7 +118,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -130,7 +130,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.Begin", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: GetStageAnim
     /// </summary>
-    public unsafe int GetStageAnim()
+    public unsafe override int GetStageAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.GetStageAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: DoesBatmanStartInside
     /// </summary>
-    public unsafe bool DoesBatmanStartInside()
+    public unsafe virtual bool DoesBatmanStartInside()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.DoesBatmanStartInside", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -163,7 +163,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: IsOnLeft
     /// </summary>
-    public unsafe bool IsOnLeft()
+    public unsafe virtual bool IsOnLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.IsOnLeft", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RFreezeTakeDownStage_ThroughWindow : BmSDK.BmScript.RFreeze
     /// <summary>
     /// Function: GetReferencePosition
     /// </summary>
-    public unsafe void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
+    public unsafe override void GetReferencePosition(out System.Numerics.Vector3 ReferencePosition, out BmSDK.Rotator ReferenceRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezeTakeDownStage_ThroughWindow.GetReferencePosition", true);
         byte* paramsPtr = stackalloc byte[76];

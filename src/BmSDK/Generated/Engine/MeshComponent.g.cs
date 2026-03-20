@@ -31,7 +31,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: CreateAndSetMaterialInstanceConstant
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
+    public unsafe virtual BmSDK.Engine.MaterialInstanceConstant CreateAndSetMaterialInstanceConstant(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.CreateAndSetMaterialInstanceConstant", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -43,7 +43,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: CastTemporaryMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInstanceConstant CastTemporaryMaterial(BmSDK.Engine.MaterialInterface Material)
+    public unsafe virtual BmSDK.Engine.MaterialInstanceConstant CastTemporaryMaterial(BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.CastTemporaryMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -62,7 +62,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: PrestreamTextures
     /// </summary>
-    public unsafe void PrestreamTextures(float Seconds, bool bPrioritizeCharacterTextures, int CinematicTextureGroups = default)
+    public unsafe virtual void PrestreamTextures(float Seconds, bool bPrioritizeCharacterTextures, int CinematicTextureGroups = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.PrestreamTextures", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: GetNumElements
     /// </summary>
-    public unsafe int GetNumElements()
+    public unsafe virtual int GetNumElements()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetNumElements", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -101,7 +101,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: ClearMaterials
     /// </summary>
-    public unsafe void ClearMaterials()
+    public unsafe virtual void ClearMaterials()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.ClearMaterials", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: SetMaterial
     /// </summary>
-    public unsafe void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
+    public unsafe virtual void SetMaterial(int ElementIndex, BmSDK.Engine.MaterialInterface Material)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.SetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: GetMaterial
     /// </summary>
-    public unsafe BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
+    public unsafe virtual BmSDK.Engine.MaterialInterface GetMaterial(int ElementIndex)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetMaterial", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -158,7 +158,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: GetUseSimpleLineCollision
     /// </summary>
-    public unsafe bool GetUseSimpleLineCollision()
+    public unsafe virtual bool GetUseSimpleLineCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetUseSimpleLineCollision", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class MeshComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGam
     /// <summary>
     /// Function: GetUseSimpleBoxCollision
     /// </summary>
-    public unsafe bool GetUseSimpleBoxCollision()
+    public unsafe virtual bool GetUseSimpleBoxCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MeshComponent.GetUseSimpleBoxCollision", true);
         byte* paramsPtr = stackalloc byte[4];

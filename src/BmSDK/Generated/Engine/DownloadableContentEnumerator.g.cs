@@ -36,7 +36,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: TriggerFindDLCDelegates
     /// </summary>
-    public unsafe void TriggerFindDLCDelegates()
+    public unsafe virtual void TriggerFindDLCDelegates()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.TriggerFindDLCDelegates", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -54,7 +54,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: InstallDLC
     /// </summary>
-    public unsafe void InstallDLC(BmSDK.FString DLCName)
+    public unsafe virtual void InstallDLC(BmSDK.FString DLCName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.InstallDLC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -73,7 +73,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: InstallAllDLC
     /// </summary>
-    public unsafe void InstallAllDLC()
+    public unsafe virtual void InstallAllDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.InstallAllDLC", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -84,7 +84,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: DeleteDLC
     /// </summary>
-    public unsafe void DeleteDLC(BmSDK.FString DLCName)
+    public unsafe virtual void DeleteDLC(BmSDK.FString DLCName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.DeleteDLC", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -103,7 +103,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: ClearFindDLCDelegate
     /// </summary>
-    public unsafe void ClearFindDLCDelegate(System.IntPtr InDelegate)
+    public unsafe virtual void ClearFindDLCDelegate(System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.ClearFindDLCDelegate", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -115,7 +115,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: AddFindDLCDelegate
     /// </summary>
-    public unsafe void AddFindDLCDelegate(System.IntPtr InDelegate)
+    public unsafe virtual void AddFindDLCDelegate(System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AddFindDLCDelegate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -127,7 +127,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: OnFindDLCComplete
     /// </summary>
-    public unsafe void OnFindDLCComplete()
+    public unsafe virtual void OnFindDLCComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.OnFindDLCComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -138,7 +138,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: GetListOfBadBundles
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.FString> GetListOfBadBundles(bool bCorrupt)
+    public unsafe virtual BmSDK.TArray<BmSDK.FString> GetListOfBadBundles(bool bCorrupt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.GetListOfBadBundles", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -150,7 +150,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: AnyInvalid
     /// </summary>
-    public unsafe bool AnyInvalid()
+    public unsafe virtual bool AnyInvalid()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AnyInvalid", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -161,7 +161,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: AnyCorrupt
     /// </summary>
-    public unsafe bool AnyCorrupt()
+    public unsafe virtual bool AnyCorrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.AnyCorrupt", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: ClearAllContent
     /// </summary>
-    public unsafe void ClearAllContent()
+    public unsafe virtual void ClearAllContent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.ClearAllContent", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class DownloadableContentEnumerator : BmSDK.GameObject, BmSDK.IGa
     /// <summary>
     /// Function: FindDLC
     /// </summary>
-    public unsafe void FindDLC()
+    public unsafe virtual void FindDLC()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.DownloadableContentEnumerator.FindDLC", true);
         byte* paramsPtr = stackalloc byte[0];

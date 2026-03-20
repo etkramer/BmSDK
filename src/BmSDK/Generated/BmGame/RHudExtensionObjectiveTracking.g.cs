@@ -36,7 +36,7 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectiveTracking.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -48,7 +48,7 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// Function: JustShowDistance
     /// </summary>
-    public unsafe void JustShowDistance(int distance_to_target)
+    public unsafe virtual void JustShowDistance(int distance_to_target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectiveTracking.JustShowDistance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// Function: SetReticleScreenLocation
     /// </summary>
-    public unsafe void SetReticleScreenLocation(float screen_x, float screen_y)
+    public unsafe virtual void SetReticleScreenLocation(float screen_x, float screen_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectiveTracking.SetReticleScreenLocation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -73,7 +73,7 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectiveTracking.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -84,7 +84,7 @@ public partial class RHudExtensionObjectiveTracking : BmSDK.BmGame.RHudExtension
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionObjectiveTracking.Init", true);
         byte* paramsPtr = stackalloc byte[32];

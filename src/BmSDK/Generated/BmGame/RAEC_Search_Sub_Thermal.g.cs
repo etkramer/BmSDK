@@ -71,7 +71,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Function: AtUltimateDest
     /// </summary>
-    public unsafe void AtUltimateDest()
+    public unsafe override void AtUltimateDest()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Thermal.AtUltimateDest", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Function: SetNextVantagePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RAEC_Search_Sub_Thermal.VantageSearchResult SetNextVantagePoint()
+    public unsafe virtual BmSDK.BmGame.RAEC_Search_Sub_Thermal.VantageSearchResult SetNextVantagePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Thermal.SetNextVantagePoint", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -93,7 +93,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Function: SetStateForChosenPoint
     /// </summary>
-    public unsafe void SetStateForChosenPoint(BmSDK.BmGame.RHidePoint BestVantage, System.Numerics.Vector3 VantageCheckStandPoint)
+    public unsafe virtual void SetStateForChosenPoint(BmSDK.BmGame.RHidePoint BestVantage, System.Numerics.Vector3 VantageCheckStandPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Thermal.SetStateForChosenPoint", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -106,7 +106,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Function: StartFromChase
     /// </summary>
-    public unsafe void StartFromChase(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 NewUDestFromChase)
+    public unsafe override void StartFromChase(BmSDK.BmGame.RBMAIController NewCon, System.Numerics.Vector3 NewUDestFromChase)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Thermal.StartFromChase", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -119,7 +119,7 @@ public partial class RAEC_Search_Sub_Thermal : BmSDK.BmGame.RAEC_Search_Sub, BmS
     /// <summary>
     /// Function: CheckHandleForSpecialMoves
     /// </summary>
-    public unsafe void CheckHandleForSpecialMoves(BmSDK.BmGame.RNavigationHandle ActiveHandle)
+    public unsafe override void CheckHandleForSpecialMoves(BmSDK.BmGame.RNavigationHandle ActiveHandle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Search_Sub_Thermal.CheckHandleForSpecialMoves", true);
         byte* paramsPtr = stackalloc byte[20];

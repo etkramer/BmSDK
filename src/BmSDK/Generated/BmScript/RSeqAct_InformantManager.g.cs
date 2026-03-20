@@ -47,7 +47,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: CheckInputs
     /// </summary>
-    public unsafe void CheckInputs()
+    public unsafe virtual void CheckInputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.CheckInputs", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -58,7 +58,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ShutdownHUD
     /// </summary>
-    public unsafe void ShutdownHUD()
+    public unsafe virtual void ShutdownHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.ShutdownHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: InitHUD
     /// </summary>
-    public unsafe void InitHUD()
+    public unsafe virtual void InitHUD()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.InitHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: DrawHUD
     /// </summary>
-    public unsafe void DrawHUD(BmSDK.Engine.Canvas Canvas)
+    public unsafe virtual void DrawHUD(BmSDK.Engine.Canvas Canvas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.DrawHUD", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -92,7 +92,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: PrintStatus
     /// </summary>
-    public unsafe void PrintStatus()
+    public unsafe virtual void PrintStatus()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.PrintStatus", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: FindFlagIndexByPriority
     /// </summary>
-    public unsafe int FindFlagIndexByPriority(BmSDK.BmScript.RSeqAct_InformantManager.eInformantZone Zone, int Priority)
+    public unsafe virtual int FindFlagIndexByPriority(BmSDK.BmScript.RSeqAct_InformantManager.eInformantZone Zone, int Priority)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.FindFlagIndexByPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -116,7 +116,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SetAllFlags
     /// </summary>
-    public unsafe void SetAllFlags()
+    public unsafe virtual void SetAllFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.SetAllFlags", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -127,7 +127,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SetNeededFlags
     /// </summary>
-    public unsafe void SetNeededFlags()
+    public unsafe virtual void SetNeededFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.SetNeededFlags", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -138,7 +138,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: UnsetAllFlags
     /// </summary>
-    public unsafe void UnsetAllFlags()
+    public unsafe virtual void UnsetAllFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.UnsetAllFlags", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -149,7 +149,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SanitiseFlagPriorities
     /// </summary>
-    public unsafe void SanitiseFlagPriorities()
+    public unsafe virtual void SanitiseFlagPriorities()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.SanitiseFlagPriorities", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -160,7 +160,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SetInitialFlagPrioritiesReversed
     /// </summary>
-    public unsafe void SetInitialFlagPrioritiesReversed()
+    public unsafe virtual void SetInitialFlagPrioritiesReversed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.SetInitialFlagPrioritiesReversed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -171,7 +171,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: SetInitialFlagPriorities
     /// </summary>
-    public unsafe void SetInitialFlagPriorities()
+    public unsafe virtual void SetInitialFlagPriorities()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.SetInitialFlagPriorities", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -182,7 +182,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: HaveFlagPrioritiesBeenSet
     /// </summary>
-    public unsafe bool HaveFlagPrioritiesBeenSet()
+    public unsafe virtual bool HaveFlagPrioritiesBeenSet()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.HaveFlagPrioritiesBeenSet", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -193,7 +193,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: UpdateFlagPriorities
     /// </summary>
-    public unsafe void UpdateFlagPriorities()
+    public unsafe virtual void UpdateFlagPriorities()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.UpdateFlagPriorities", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -204,7 +204,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: InformantInterrogated
     /// </summary>
-    public unsafe void InformantInterrogated()
+    public unsafe virtual void InformantInterrogated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.InformantInterrogated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -215,7 +215,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: UnsetMaintainPriorityFlags
     /// </summary>
-    public unsafe void UnsetMaintainPriorityFlags()
+    public unsafe virtual void UnsetMaintainPriorityFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.UnsetMaintainPriorityFlags", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -226,7 +226,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: AdjustPrioritiesForNewChapter
     /// </summary>
-    public unsafe void AdjustPrioritiesForNewChapter()
+    public unsafe virtual void AdjustPrioritiesForNewChapter()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.AdjustPrioritiesForNewChapter", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -237,7 +237,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: GetNewFlagPriority
     /// </summary>
-    public unsafe int GetNewFlagPriority(BmSDK.BmScript.RSeqAct_InformantManager.eInformantZone Zone)
+    public unsafe virtual int GetNewFlagPriority(BmSDK.BmScript.RSeqAct_InformantManager.eInformantZone Zone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.GetNewFlagPriority", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -249,7 +249,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: OnLevelLoaded
     /// </summary>
-    public unsafe void OnLevelLoaded()
+    public unsafe virtual void OnLevelLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.OnLevelLoaded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -260,7 +260,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ActiveInPreviousChapter
     /// </summary>
-    public unsafe bool ActiveInPreviousChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag)
+    public unsafe virtual bool ActiveInPreviousChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.ActiveInPreviousChapter", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -272,7 +272,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ActiveInCurrentChapter
     /// </summary>
-    public unsafe bool ActiveInCurrentChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag)
+    public unsafe virtual bool ActiveInCurrentChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.ActiveInCurrentChapter", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -284,7 +284,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: ActiveInChapter
     /// </summary>
-    public unsafe bool ActiveInChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag, int Chapter)
+    public unsafe virtual bool ActiveInChapter(BmSDK.BmScript.RSeqAct_InformantManager.FInformantFlag flag, int Chapter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.ActiveInChapter", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -297,7 +297,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Deactivated
     /// </summary>
-    public unsafe void Deactivated()
+    public unsafe override void Deactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.Deactivated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -308,7 +308,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -319,7 +319,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -331,7 +331,7 @@ public partial class RSeqAct_InformantManager : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Function: BlockLevelName
     /// </summary>
-    public unsafe bool BlockLevelName()
+    public unsafe virtual bool BlockLevelName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_InformantManager.BlockLevelName", true);
         byte* paramsPtr = stackalloc byte[4];

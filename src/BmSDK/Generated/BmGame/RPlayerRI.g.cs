@@ -71,7 +71,7 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
     /// <summary>
     /// Function: ShowChallengeStats
     /// </summary>
-    public unsafe void ShowChallengeStats()
+    public unsafe virtual void ShowChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerRI.ShowChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
     /// <summary>
     /// Function: PublishCombatChallengeStats
     /// </summary>
-    public unsafe void PublishCombatChallengeStats()
+    public unsafe virtual void PublishCombatChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerRI.PublishCombatChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RPlayerRI : BmSDK.Engine.PlayerReplicationInfo, BmSDK.IGame
     /// <summary>
     /// Function: ClearChallengeStats
     /// </summary>
-    public unsafe void ClearChallengeStats()
+    public unsafe virtual void ClearChallengeStats()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPlayerRI.ClearChallengeStats", true);
         byte* paramsPtr = stackalloc byte[0];

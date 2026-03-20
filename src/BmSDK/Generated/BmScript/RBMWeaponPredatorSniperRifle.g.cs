@@ -71,7 +71,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -94,7 +94,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: CreateSniperWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateSniperWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateSniperWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.CreateSniperWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[628];
@@ -106,7 +106,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: SetupWeaponAudio
     /// </summary>
-    public unsafe void SetupWeaponAudio()
+    public unsafe override void SetupWeaponAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.SetupWeaponAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.Tick", true);
         byte* paramsPtr = stackalloc byte[72];
@@ -129,7 +129,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: GetDamage
     /// </summary>
-    public unsafe float GetDamage(BmSDK.Engine.Actor Target)
+    public unsafe override float GetDamage(BmSDK.Engine.Actor Target)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.GetDamage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -141,7 +141,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: TurnOffVisibleSight
     /// </summary>
-    public unsafe void TurnOffVisibleSight()
+    public unsafe virtual void TurnOffVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.TurnOffVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: TurnOnVisibleSight
     /// </summary>
-    public unsafe void TurnOnVisibleSight()
+    public unsafe virtual void TurnOnVisibleSight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.TurnOnVisibleSight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMCombatThrownObject Drop()
+    public unsafe override BmSDK.BmGame.RBMCombatThrownObject Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.Drop", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -174,7 +174,7 @@ public partial class RBMWeaponPredatorSniperRifle : BmSDK.BmScript.RBMWeaponRifl
     /// <summary>
     /// Function: AttachWeapon
     /// </summary>
-    public unsafe void AttachWeapon()
+    public unsafe override void AttachWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPredatorSniperRifle.AttachWeapon", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_Bat_Harleyfied : BmSDK.BmScript.RBMCo
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_Bat_Harleyfied.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

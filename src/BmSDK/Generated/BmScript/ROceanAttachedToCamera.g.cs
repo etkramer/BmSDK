@@ -71,7 +71,7 @@ public partial class ROceanAttachedToCamera : BmSDK.BmGame.ROceanAttachedToCamer
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.ROceanAttachedToCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class ROceanAttachedToCamera : BmSDK.BmGame.ROceanAttachedToCamer
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.ROceanAttachedToCamera.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class ROceanAttachedToCamera : BmSDK.BmGame.ROceanAttachedToCamer
     /// <summary>
     /// Function: StopOceanFX
     /// </summary>
-    public unsafe void StopOceanFX()
+    public unsafe virtual void StopOceanFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.ROceanAttachedToCamera.StopOceanFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class ROceanAttachedToCamera : BmSDK.BmGame.ROceanAttachedToCamer
     /// <summary>
     /// Function: StartOceanFX
     /// </summary>
-    public unsafe void StartOceanFX(BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings, BmSDK.Engine.StaticMesh OceanM)
+    public unsafe virtual void StartOceanFX(BmSDK.Engine.ROceanComponent.FRockOceanSettings OceanSettings, BmSDK.Engine.StaticMesh OceanM)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.ROceanAttachedToCamera.StartOceanFX", true);
         byte* paramsPtr = stackalloc byte[140];

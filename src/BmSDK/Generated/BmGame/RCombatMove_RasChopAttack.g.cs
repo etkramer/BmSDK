@@ -71,7 +71,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: GetAnimTargetYaw
     /// </summary>
-    public unsafe float GetAnimTargetYaw()
+    public unsafe virtual float GetAnimTargetYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.GetAnimTargetYaw", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: DeactivateBlockingVolume
     /// </summary>
-    public unsafe void DeactivateBlockingVolume()
+    public unsafe virtual void DeactivateBlockingVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.DeactivateBlockingVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: ActivateBlockingVolume
     /// </summary>
-    public unsafe void ActivateBlockingVolume(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot)
+    public unsafe virtual void ActivateBlockingVolume(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.ActivateBlockingVolume", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -117,7 +117,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: DamageBatman
     /// </summary>
-    public unsafe void DamageBatman(System.Numerics.Vector3 DamageImpulse)
+    public unsafe virtual void DamageBatman(System.Numerics.Vector3 DamageImpulse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.DamageBatman", true);
         byte* paramsPtr = stackalloc byte[276];
@@ -129,7 +129,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: IsBMInDamageZone
     /// </summary>
-    public unsafe bool IsBMInDamageZone(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot, out System.Numerics.Vector3 DamageImpulseOut)
+    public unsafe virtual bool IsBMInDamageZone(System.Numerics.Vector3 SwordLoc, BmSDK.Rotator SwordRot, out System.Numerics.Vector3 DamageImpulseOut)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.IsBMInDamageZone", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -143,7 +143,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: SwordLift
     /// </summary>
-    public unsafe void SwordLift()
+    public unsafe virtual void SwordLift()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.SwordLift", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: SwordContact
     /// </summary>
-    public unsafe void SwordContact()
+    public unsafe virtual void SwordContact()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.SwordContact", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -165,7 +165,7 @@ public partial class RCombatMove_RasChopAttack : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasChopAttack.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

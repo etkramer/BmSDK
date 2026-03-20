@@ -71,7 +71,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: RigidBodyCollision
     /// </summary>
-    public unsafe void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
+    public unsafe override void RigidBodyCollision(BmSDK.Engine.PrimitiveComponent HitComponent, BmSDK.Engine.PrimitiveComponent OtherComponent, out BmSDK.Engine.Actor.FCollisionImpactData RigidCollisionData, int ContactIndex, float Speed, int Index0, int Index1)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.RigidBodyCollision", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -89,7 +89,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -101,7 +101,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetMagTargetTangent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagTargetTangent()
+    public unsafe virtual System.Numerics.Vector3 GetMagTargetTangent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetMagTargetTangent", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -112,7 +112,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsSecondaryTarget
     /// </summary>
-    public unsafe bool IsSecondaryTarget()
+    public unsafe virtual bool IsSecondaryTarget()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsSecondaryTarget", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -123,7 +123,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsMagActive
     /// </summary>
-    public unsafe bool IsMagActive()
+    public unsafe virtual bool IsMagActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsMagActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -134,7 +134,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetActor
     /// </summary>
-    public unsafe BmSDK.Engine.Actor GetActor()
+    public unsafe virtual BmSDK.Engine.Actor GetActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -145,7 +145,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetMagLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMagLocation()
+    public unsafe virtual System.Numerics.Vector3 GetMagLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetMagLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -156,7 +156,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: SetMagnetStrength
     /// </summary>
-    public unsafe float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
+    public unsafe virtual float SetMagnetStrength(BmSDK.BmGame.RMagneticBlastReceiver REC, float MagStr, System.Numerics.Vector3 MagPos, float DeltaTime, bool bInitialImpulse, BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.SetMagnetStrength", true);
         byte* paramsPtr = stackalloc byte[96];
@@ -173,7 +173,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsMagnetAllowed
     /// </summary>
-    public unsafe bool IsMagnetAllowed(BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
+    public unsafe virtual bool IsMagnetAllowed(BmSDK.BmGame.RMagneticSurfaceSMBase Surface)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsMagnetAllowed", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -185,7 +185,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: ApplyImpulse
     /// </summary>
-    public unsafe void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
+    public unsafe virtual void ApplyImpulse(System.Numerics.Vector3 ImpulseDir, float ImpulseMag, System.Numerics.Vector3 HitLocation, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Class DamageType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.ApplyImpulse", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -201,7 +201,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -213,7 +213,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -224,7 +224,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -236,7 +236,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -247,7 +247,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -258,7 +258,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.Interact", true);
         byte* paramsPtr = stackalloc byte[120];
@@ -270,7 +270,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -281,7 +281,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -292,7 +292,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -303,7 +303,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -314,7 +314,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -326,7 +326,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -337,7 +337,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -348,7 +348,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -359,7 +359,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -370,7 +370,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -381,7 +381,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -393,7 +393,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: OnInteract
     /// </summary>
-    public unsafe void OnInteract(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void OnInteract(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.OnInteract", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -405,7 +405,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: AttachPickup
     /// </summary>
-    public unsafe void AttachPickup()
+    public unsafe virtual void AttachPickup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.AttachPickup", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -416,7 +416,7 @@ public partial class RRiddlerBall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerBall.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int DamageAmount, BmSDK.Engine.Controller EventInstigator, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -89,7 +89,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: DestroyHead
     /// </summary>
-    public unsafe void DestroyHead(bool bSilent = default)
+    public unsafe virtual void DestroyHead(bool bSilent = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.DestroyHead", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -101,7 +101,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -113,7 +113,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -125,7 +125,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -137,7 +137,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -148,7 +148,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -159,7 +159,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -170,7 +170,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -181,7 +181,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: OnToggle
     /// </summary>
-    public unsafe void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
+    public unsafe virtual void OnToggle(BmSDK.Engine.SeqAct_Toggle Action)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.OnToggle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -193,7 +193,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: EnablePrompt
     /// </summary>
-    public unsafe void EnablePrompt()
+    public unsafe virtual void EnablePrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.EnablePrompt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -204,7 +204,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: TriggerSpeechEvent
     /// </summary>
-    public unsafe void TriggerSpeechEvent(bool bStopAudio)
+    public unsafe virtual void TriggerSpeechEvent(bool bStopAudio)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.TriggerSpeechEvent", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -216,7 +216,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.Interact", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -250,7 +250,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -261,7 +261,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.IsActive", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -284,7 +284,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -295,7 +295,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -306,7 +306,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -317,7 +317,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -328,7 +328,7 @@ public partial class RAudioHarleyHeadPoint : BmSDK.BmGame.RAudioHarleyHeadPointB
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RAudioHarleyHeadPoint.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];

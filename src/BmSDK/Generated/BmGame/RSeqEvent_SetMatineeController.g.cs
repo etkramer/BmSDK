@@ -47,7 +47,7 @@ public partial class RSeqEvent_SetMatineeController : BmSDK.Engine.SequenceEvent
     /// <summary>
     /// Function: UpdateLinkToMatinee
     /// </summary>
-    public unsafe void UpdateLinkToMatinee()
+    public unsafe virtual void UpdateLinkToMatinee()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_SetMatineeController.UpdateLinkToMatinee", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RSeqEvent_SetMatineeController : BmSDK.Engine.SequenceEvent
     /// <summary>
     /// Function: Toggled
     /// </summary>
-    public unsafe void Toggled()
+    public unsafe override void Toggled()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_SetMatineeController.Toggled", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -69,7 +69,7 @@ public partial class RSeqEvent_SetMatineeController : BmSDK.Engine.SequenceEvent
     /// <summary>
     /// Function: RegisterEvent
     /// </summary>
-    public unsafe void RegisterEvent()
+    public unsafe override void RegisterEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqEvent_SetMatineeController.RegisterEvent", true);
         byte* paramsPtr = stackalloc byte[0];

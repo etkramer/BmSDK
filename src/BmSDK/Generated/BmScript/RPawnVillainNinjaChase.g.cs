@@ -71,7 +71,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: AllowGooInGodMode
     /// </summary>
-    public unsafe bool AllowGooInGodMode()
+    public unsafe override bool AllowGooInGodMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.AllowGooInGodMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: CheckBossCounter
     /// </summary>
-    public unsafe bool CheckBossCounter(BmSDK.BmGame.RPawnVillain targ)
+    public unsafe override bool CheckBossCounter(BmSDK.BmGame.RPawnVillain targ)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.CheckBossCounter", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -106,7 +106,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: ModifyDamageAmount
     /// </summary>
-    public unsafe void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
+    public unsafe override void ModifyDamageAmount(BmSDK.Class dmgType, out float DmgAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.ModifyDamageAmount", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[246];
@@ -131,7 +131,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: ExitIfHit
     /// </summary>
-    public unsafe void ExitIfHit()
+    public unsafe virtual void ExitIfHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.ExitIfHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -142,7 +142,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: BackToNormalCamera
     /// </summary>
-    public unsafe void BackToNormalCamera()
+    public unsafe virtual void BackToNormalCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.BackToNormalCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -153,7 +153,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: CombatAnimHit
     /// </summary>
-    public unsafe void CombatAnimHit()
+    public unsafe override void CombatAnimHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.CombatAnimHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -164,7 +164,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: CanBeGlideKicked
     /// </summary>
-    public unsafe bool CanBeGlideKicked()
+    public unsafe override bool CanBeGlideKicked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.CanBeGlideKicked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -175,7 +175,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: DamageCollisionWith
     /// </summary>
-    public unsafe void DamageCollisionWith(BmSDK.BmGame.RPawnCombat OtherPawn, System.Numerics.Vector3 DamageDir = default)
+    public unsafe override void DamageCollisionWith(BmSDK.BmGame.RPawnCombat OtherPawn, System.Numerics.Vector3 DamageDir = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.DamageCollisionWith", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -188,7 +188,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: CreateWeapon
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMWeapon CreateWeapon()
+    public unsafe override BmSDK.BmGame.RBMWeapon CreateWeapon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.CreateWeapon", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -199,7 +199,7 @@ public partial class RPawnVillainNinjaChase : BmSDK.BmScript.RPawnVillainNinja, 
     /// <summary>
     /// Function: CanRecieveSuperStun
     /// </summary>
-    public unsafe bool CanRecieveSuperStun()
+    public unsafe override bool CanRecieveSuperStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainNinjaChase.CanRecieveSuperStun", true);
         byte* paramsPtr = stackalloc byte[4];

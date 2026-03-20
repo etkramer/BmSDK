@@ -71,7 +71,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: CalculateCurrentFallbackPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateCurrentFallbackPos()
+    public unsafe virtual System.Numerics.Vector3 CalculateCurrentFallbackPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentFallbackPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -89,7 +89,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: CalculateCurrentTargetPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateCurrentTargetPos()
+    public unsafe virtual System.Numerics.Vector3 CalculateCurrentTargetPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentTargetPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -107,7 +107,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: CalculateCurrentDragPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 CalculateCurrentDragPos()
+    public unsafe virtual System.Numerics.Vector3 CalculateCurrentDragPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.CalculateCurrentDragPos", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -125,7 +125,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: UpdateCurrentExplodePose
     /// </summary>
-    public unsafe void UpdateCurrentExplodePose(float DeltaTime)
+    public unsafe virtual void UpdateCurrentExplodePose(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.UpdateCurrentExplodePose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: UpdateCurrentFollowPose
     /// </summary>
-    public unsafe void UpdateCurrentFollowPose(float DeltaTime)
+    public unsafe virtual void UpdateCurrentFollowPose(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.UpdateCurrentFollowPose", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -163,7 +163,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: HandleExplode
     /// </summary>
-    public unsafe void HandleExplode()
+    public unsafe virtual void HandleExplode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.HandleExplode", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RControllableChatteringTeethCamera : BmSDK.BmGame.RCameraAc
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmGame.RControllableChatteringTeethBase NewTargetTeeth)
+    public unsafe virtual void Initialise(BmSDK.BmGame.RControllableChatteringTeethBase NewTargetTeeth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RControllableChatteringTeethCamera.Initialise", true);
         byte* paramsPtr = stackalloc byte[4];

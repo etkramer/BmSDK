@@ -71,7 +71,7 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KickCas.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -83,7 +83,7 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KickCas.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: DebugKickPoint
     /// </summary>
-    public unsafe void DebugKickPoint()
+    public unsafe virtual void DebugKickPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KickCas.DebugKickPoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_KickCas : BmSDK.BmGame.RBMAIAction, BmSDK.IGame
     /// <summary>
     /// Function: SetCasualty
     /// </summary>
-    public unsafe void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas, System.Numerics.Vector3 NewKickLoc, BmSDK.FName NewKickBone)
+    public unsafe virtual void SetCasualty(BmSDK.BmGame.RPawnVillain NewCas, System.Numerics.Vector3 NewKickLoc, BmSDK.FName NewKickBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_KickCas.SetCasualty", true);
         byte* paramsPtr = stackalloc byte[24];

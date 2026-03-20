@@ -47,7 +47,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: GetGadgetVariationScore
     /// </summary>
-    public unsafe int GetGadgetVariationScore(int num_variations, BmSDK.BmGame.RPlayerControllerCombat RPCC)
+    public unsafe virtual int GetGadgetVariationScore(int num_variations, BmSDK.BmGame.RPlayerControllerCombat RPCC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.GetGadgetVariationScore", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: GetVariationScore
     /// </summary>
-    public unsafe int GetVariationScore(int num_variations)
+    public unsafe virtual int GetVariationScore(int num_variations)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.GetVariationScore", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.Update", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -84,7 +84,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: WaveCompleteDoneCallback
     /// </summary>
-    public unsafe void WaveCompleteDoneCallback()
+    public unsafe virtual void WaveCompleteDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.WaveCompleteDoneCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -95,7 +95,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: IntroDoneCallback
     /// </summary>
-    public unsafe void IntroDoneCallback()
+    public unsafe virtual void IntroDoneCallback()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.IntroDoneCallback", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RSeqAct_CombatChallengeWave : BmSDK.Engine.SeqAct_Latent, B
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_CombatChallengeWave.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

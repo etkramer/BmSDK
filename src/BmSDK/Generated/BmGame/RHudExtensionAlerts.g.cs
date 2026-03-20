@@ -36,7 +36,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetInvestigateModeActive
     /// </summary>
-    public unsafe void SetInvestigateModeActive(bool InvModeActive)
+    public unsafe virtual void SetInvestigateModeActive(bool InvModeActive)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetInvestigateModeActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetIsInvestigateModeAuto
     /// </summary>
-    public unsafe void SetIsInvestigateModeAuto()
+    public unsafe virtual void SetIsInvestigateModeAuto()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetIsInvestigateModeAuto", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -59,7 +59,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetMovieState
     /// </summary>
-    public unsafe void SetMovieState(BmSDK.FString movie_name, BmSDK.FString target_frame)
+    public unsafe virtual void SetMovieState(BmSDK.FString movie_name, BmSDK.FString target_frame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetMovieState", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -72,7 +72,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: HideForensicAlert
     /// </summary>
-    public unsafe void HideForensicAlert()
+    public unsafe virtual void HideForensicAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.HideForensicAlert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -83,7 +83,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetForensicAlert
     /// </summary>
-    public unsafe void SetForensicAlert(BmSDK.FString forensic_text)
+    public unsafe virtual void SetForensicAlert(BmSDK.FString forensic_text)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetForensicAlert", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: HideAudioAlert
     /// </summary>
-    public unsafe void HideAudioAlert()
+    public unsafe virtual void HideAudioAlert()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.HideAudioAlert", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetRingingPhoneAngleAndDistance
     /// </summary>
-    public unsafe void SetRingingPhoneAngleAndDistance(float the_angle, int distance_metres)
+    public unsafe virtual void SetRingingPhoneAngleAndDistance(float the_angle, int distance_metres)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetRingingPhoneAngleAndDistance", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -119,7 +119,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetRingingPhoneDetail
     /// </summary>
-    public unsafe void SetRingingPhoneDetail(BmSDK.FString telephone_number)
+    public unsafe virtual void SetRingingPhoneDetail(BmSDK.FString telephone_number)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetRingingPhoneDetail", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -131,7 +131,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetInterceptAngleAndRange
     /// </summary>
-    public unsafe void SetInterceptAngleAndRange(float intercept_angle, int distance_metres)
+    public unsafe virtual void SetInterceptAngleAndRange(float intercept_angle, int distance_metres)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetInterceptAngleAndRange", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -144,7 +144,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetRadioInterceptAlert
     /// </summary>
-    public unsafe void SetRadioInterceptAlert(BmSDK.FString text1, BmSDK.FString text2)
+    public unsafe virtual void SetRadioInterceptAlert(BmSDK.FString text1, BmSDK.FString text2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetRadioInterceptAlert", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -157,7 +157,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: SetAudioFrame
     /// </summary>
-    public unsafe void SetAudioFrame(BmSDK.FString new_frame)
+    public unsafe virtual void SetAudioFrame(BmSDK.FString new_frame)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.SetAudioFrame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -169,7 +169,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -180,7 +180,7 @@ public partial class RHudExtensionAlerts : BmSDK.BmGame.RHudExtension, BmSDK.IGa
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionAlerts.Init", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetWatchAim
     /// </summary>
-    public unsafe void SetWatchAim()
+    public unsafe virtual void SetWatchAim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.SetWatchAim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetGuardIdleAnim
     /// </summary>
-    public unsafe BmSDK.FName GetGuardIdleAnim()
+    public unsafe virtual BmSDK.FName GetGuardIdleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.GetGuardIdleAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.ActionTick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayIdleAnim
     /// </summary>
-    public unsafe void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
+    public unsafe virtual void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.PlayIdleAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -118,7 +118,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetNewWatchActor
     /// </summary>
-    public unsafe bool GetNewWatchActor(System.Numerics.Vector3 PreferredDirection = default)
+    public unsafe virtual bool GetNewWatchActor(System.Numerics.Vector3 PreferredDirection = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.GetNewWatchActor", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -130,7 +130,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -152,7 +152,7 @@ public partial class RBMAIAction_TempGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmScript.RPredatorSpecialMovePoint_TempGuard NewGuardPoint)
+    public unsafe virtual void SetGuardPoint(BmSDK.BmScript.RPredatorSpecialMovePoint_TempGuard NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMAIAction_TempGuardPoint.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[4];

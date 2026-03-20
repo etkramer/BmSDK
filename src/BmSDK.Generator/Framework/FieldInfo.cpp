@@ -40,6 +40,16 @@ string FieldInfo::GetNameManaged()
         return "_" + field->GetName();
     }
 
+    // Ensure that every function override will have the same name
+    if (field->IsA(UFunction::StaticClass()))
+    {
+        auto func = (UFunction*)field;
+        if (func->SuperStruct)
+        {
+            return func->SuperStruct->GetNameManaged();
+        }
+    }
+
     // De-duplicate prop names for structs and functions
     if (field->IsA(UProperty::StaticClass()) && (field->Outer->IsA(UFunction::StaticClass()) ||
         field->Outer->IsA(UScriptStruct::StaticClass())))

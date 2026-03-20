@@ -71,7 +71,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// <summary>
     /// Function: End
     /// </summary>
-    public unsafe void End(bool bLastStage = default)
+    public unsafe override void End(bool bLastStage = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.End", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// <summary>
     /// Function: TriggerSecondCamAnim
     /// </summary>
-    public unsafe void TriggerSecondCamAnim(System.Numerics.Vector3 newRootLoc, BmSDK.Rotator newRootRot)
+    public unsafe virtual void TriggerSecondCamAnim(System.Numerics.Vector3 newRootLoc, BmSDK.Rotator newRootRot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.TriggerSecondCamAnim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -96,7 +96,7 @@ public partial class RStealthTakedownStage_MadHatterGroundTakedown : BmSDK.BmGam
     /// <summary>
     /// Function: Begin
     /// </summary>
-    public unsafe void Begin()
+    public unsafe override void Begin()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RStealthTakedownStage_MadHatterGroundTakedown.Begin", true);
         byte* paramsPtr = stackalloc byte[0];

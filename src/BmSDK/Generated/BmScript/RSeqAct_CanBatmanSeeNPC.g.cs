@@ -47,7 +47,7 @@ public partial class RSeqAct_CanBatmanSeeNPC : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CanBatmanSeeNPC.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RSeqAct_CanBatmanSeeNPC : BmSDK.Engine.SeqAct_Latent, BmSDK
     /// <summary>
     /// Function: CanSeeNPC
     /// </summary>
-    public unsafe bool CanSeeNPC(float DeltaTime)
+    public unsafe virtual bool CanSeeNPC(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CanBatmanSeeNPC.CanSeeNPC", true);
         byte* paramsPtr = stackalloc byte[8];

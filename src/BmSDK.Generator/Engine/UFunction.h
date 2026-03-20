@@ -4,18 +4,19 @@
 
 enum class EFunctionFlags : DWORD
 {
-	FUNC_Iterator = 0x4,
-	FUNC_Native = 0x400,
-	FUNC_Event = 0x800,
-	FUNC_Operator = 0x1000,
-	FUNC_Static = 0x2000,
+    FUNC_Iterator = 0x4,
+    FUNC_Native = 0x400,
+    FUNC_Event = 0x800,
+    FUNC_Operator = 0x1000,
+    FUNC_Static = 0x2000,
+    FUNC_Private = 0x40000,
 };
 
 class UFunction : public UStruct
 {
-	// TODO
-	FIELD(EFunctionFlags, FunctionFlags)
+    // TODO
+    FIELD(EFunctionFlags, FunctionFlags)
 
 public:
-	STATIC_CLASS("Core.Function")
+    STATIC_CLASS("Core.Function")
 };

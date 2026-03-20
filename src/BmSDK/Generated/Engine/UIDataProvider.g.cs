@@ -31,7 +31,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: RemovePropertyNotificationChangeRequest
     /// </summary>
-    public unsafe bool RemovePropertyNotificationChangeRequest(System.IntPtr InDelegate)
+    public unsafe virtual bool RemovePropertyNotificationChangeRequest(System.IntPtr InDelegate)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.RemovePropertyNotificationChangeRequest", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -43,7 +43,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPropertyNotificationChangeRequest
     /// </summary>
-    public unsafe bool AddPropertyNotificationChangeRequest(System.IntPtr InDelegate, bool bAllowDuplicates = default)
+    public unsafe virtual bool AddPropertyNotificationChangeRequest(System.IntPtr InDelegate, bool bAllowDuplicates = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.AddPropertyNotificationChangeRequest", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -56,7 +56,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: NotifyPropertyChanged
     /// </summary>
-    public unsafe void NotifyPropertyChanged(BmSDK.FName PropTag = default)
+    public unsafe virtual void NotifyPropertyChanged(BmSDK.FName PropTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.NotifyPropertyChanged", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -68,7 +68,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GenerateFillerData
     /// </summary>
-    public unsafe BmSDK.FString GenerateFillerData(BmSDK.FString DataTag)
+    public unsafe virtual BmSDK.FString GenerateFillerData(BmSDK.FString DataTag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GenerateFillerData", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -80,7 +80,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GenerateScriptMarkupString
     /// </summary>
-    public unsafe BmSDK.FString GenerateScriptMarkupString(BmSDK.FName DataTag)
+    public unsafe virtual BmSDK.FString GenerateScriptMarkupString(BmSDK.FName DataTag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GenerateScriptMarkupString", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -92,7 +92,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFieldValue
     /// </summary>
-    public unsafe bool SetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
+    public unsafe virtual bool SetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.SetFieldValue", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -106,7 +106,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GetFieldValue
     /// </summary>
-    public unsafe bool GetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
+    public unsafe virtual bool GetFieldValue(BmSDK.FString FieldName, out BmSDK.Engine.UIRoot.FUIProviderScriptFieldValue FieldValue, int ArrayIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetFieldValue", true);
         byte* paramsPtr = stackalloc byte[104];
@@ -120,7 +120,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: AllowPublishingToField
     /// </summary>
-    public unsafe bool AllowPublishingToField(BmSDK.FString FieldName, int ArrayIndex = default)
+    public unsafe virtual bool AllowPublishingToField(BmSDK.FString FieldName, int ArrayIndex = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.AllowPublishingToField", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -133,7 +133,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GetSupportedScriptFields
     /// </summary>
-    public unsafe void GetSupportedScriptFields(out BmSDK.TArray<BmSDK.Engine.UIDataProvider.FUIDataProviderField> out_Fields)
+    public unsafe virtual void GetSupportedScriptFields(out BmSDK.TArray<BmSDK.Engine.UIDataProvider.FUIDataProviderField> out_Fields)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetSupportedScriptFields", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -145,7 +145,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: ParseArrayDelimiter
     /// </summary>
-    public unsafe int ParseArrayDelimiter(out BmSDK.FString DataTag)
+    public unsafe virtual int ParseArrayDelimiter(out BmSDK.FString DataTag)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.ParseArrayDelimiter", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -164,7 +164,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: GetProviderFieldType
     /// </summary>
-    public unsafe bool GetProviderFieldType(BmSDK.FString DataTag, out BmSDK.Engine.UIRoot.EUIDataProviderFieldType out_ProviderFieldType)
+    public unsafe virtual bool GetProviderFieldType(BmSDK.FString DataTag, out BmSDK.Engine.UIRoot.EUIDataProviderFieldType out_ProviderFieldType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.GetProviderFieldType", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -184,7 +184,7 @@ public partial class UIDataProvider : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Function: OnDataProviderPropertyChange
     /// </summary>
-    public unsafe void OnDataProviderPropertyChange(BmSDK.Engine.UIDataProvider SourceProvider, BmSDK.FName PropTag = default)
+    public unsafe virtual void OnDataProviderPropertyChange(BmSDK.Engine.UIDataProvider SourceProvider, BmSDK.FName PropTag = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider.OnDataProviderPropertyChange", true);
         byte* paramsPtr = stackalloc byte[12];

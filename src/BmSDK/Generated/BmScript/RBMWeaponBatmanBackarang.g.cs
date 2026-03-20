@@ -71,7 +71,7 @@ public partial class RBMWeaponBatmanBackarang : BmSDK.BmGame.RBMWeapon, BmSDK.IG
     /// <summary>
     /// Function: CreateCustomWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCustomWeaponConfig(BmSDK.BmGame.RPawnPlayer PlayerOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCustomWeaponConfig(BmSDK.BmGame.RPawnPlayer PlayerOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanBackarang.CreateCustomWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[492];
@@ -83,7 +83,7 @@ public partial class RBMWeaponBatmanBackarang : BmSDK.BmGame.RBMWeapon, BmSDK.IG
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanBackarang.GivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -96,7 +96,7 @@ public partial class RBMWeaponBatmanBackarang : BmSDK.BmGame.RBMWeapon, BmSDK.IG
     /// <summary>
     /// Function: SetWeaponConfig
     /// </summary>
-    public unsafe void SetWeaponConfig()
+    public unsafe override void SetWeaponConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponBatmanBackarang.SetWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[0];

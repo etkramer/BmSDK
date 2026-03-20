@@ -36,7 +36,7 @@ public partial class ExponentialHeightFogComponent : BmSDK.Engine.ActorComponent
     /// <summary>
     /// Function: SetEnabled
     /// </summary>
-    public unsafe void SetEnabled(bool bSetEnabled)
+    public unsafe virtual void SetEnabled(bool bSetEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ExponentialHeightFogComponent.SetEnabled", true);
         byte* paramsPtr = stackalloc byte[4];

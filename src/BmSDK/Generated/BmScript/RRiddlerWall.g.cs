@@ -71,7 +71,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: CheckForRevealing
     /// </summary>
-    public unsafe void CheckForRevealing()
+    public unsafe virtual void CheckForRevealing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.CheckForRevealing", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: CanReachItem
     /// </summary>
-    public unsafe bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
+    public unsafe virtual bool CanReachItem(BmSDK.Engine.Pawn CheckingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.CanReachItem", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -105,7 +105,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: OverridesRun
     /// </summary>
-    public unsafe float OverridesRun(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual float OverridesRun(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.OverridesRun", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: UsesAttackButton
     /// </summary>
-    public unsafe bool UsesAttackButton()
+    public unsafe virtual bool UsesAttackButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.UsesAttackButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetLocationOffset
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLocationOffset()
+    public unsafe virtual System.Numerics.Vector3 GetLocationOffset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetLocationOffset", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -139,7 +139,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: CanUseInCinematicMode
     /// </summary>
-    public unsafe bool CanUseInCinematicMode()
+    public unsafe virtual bool CanUseInCinematicMode()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.CanUseInCinematicMode", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: MustBeCrouched
     /// </summary>
-    public unsafe bool MustBeCrouched()
+    public unsafe virtual bool MustBeCrouched()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.MustBeCrouched", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsCounterButton
     /// </summary>
-    public unsafe bool IsCounterButton()
+    public unsafe virtual bool IsCounterButton()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.IsCounterButton", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -172,7 +172,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: EitherButtonAllowed
     /// </summary>
-    public unsafe bool EitherButtonAllowed()
+    public unsafe virtual bool EitherButtonAllowed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.EitherButtonAllowed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -183,7 +183,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -195,7 +195,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetPriority
     /// </summary>
-    public unsafe float GetPriority()
+    public unsafe virtual float GetPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -206,7 +206,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetFOVDegrees
     /// </summary>
-    public unsafe float GetFOVDegrees()
+    public unsafe virtual float GetFOVDegrees()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetFOVDegrees", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -217,7 +217,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetHeightRange
     /// </summary>
-    public unsafe float GetHeightRange()
+    public unsafe virtual float GetHeightRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetHeightRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -228,7 +228,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetRange
     /// </summary>
-    public unsafe float GetRange()
+    public unsafe virtual float GetRange()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetRange", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
+    public unsafe virtual BmSDK.FString GetPrompt(BmSDK.Engine.PlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetPrompt", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -251,7 +251,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetCombatLockType
     /// </summary>
-    public unsafe BmSDK.BmGame.RGameInfo.ECombatLockType GetCombatLockType(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual BmSDK.BmGame.RGameInfo.ECombatLockType GetCombatLockType(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetCombatLockType", true);
         byte* paramsPtr = stackalloc byte[6];
@@ -263,7 +263,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: IsButtonPrompt
     /// </summary>
-    public unsafe bool IsButtonPrompt()
+    public unsafe virtual bool IsButtonPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.IsButtonPrompt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -274,7 +274,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: DisableInvisibleForHelicopters
     /// </summary>
-    public unsafe void DisableInvisibleForHelicopters()
+    public unsafe virtual void DisableInvisibleForHelicopters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.DisableInvisibleForHelicopters", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -285,7 +285,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: SecondBreak
     /// </summary>
-    public unsafe void SecondBreak()
+    public unsafe virtual void SecondBreak()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.SecondBreak", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -296,7 +296,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: GetUpperPrompt
     /// </summary>
-    public unsafe BmSDK.FString GetUpperPrompt()
+    public unsafe virtual BmSDK.FString GetUpperPrompt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.GetUpperPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -307,7 +307,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: FirstBreak
     /// </summary>
-    public unsafe void FirstBreak()
+    public unsafe virtual void FirstBreak()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.FirstBreak", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -318,7 +318,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: SetBrokenWallCollision
     /// </summary>
-    public unsafe void SetBrokenWallCollision()
+    public unsafe virtual void SetBrokenWallCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.SetBrokenWallCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -329,7 +329,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: Interact
     /// </summary>
-    public unsafe void Interact(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void Interact(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.Interact", true);
         byte* paramsPtr = stackalloc byte[128];
@@ -341,7 +341,7 @@ public partial class RRiddlerWall : BmSDK.Engine.Actor, BmSDK.BmGame.RInteractIn
     /// <summary>
     /// Function: ShouldReveal
     /// </summary>
-    public unsafe bool ShouldReveal()
+    public unsafe virtual bool ShouldReveal()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddlerWall.ShouldReveal", true);
         byte* paramsPtr = stackalloc byte[4];

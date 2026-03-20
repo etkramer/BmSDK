@@ -71,7 +71,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartCamera
     /// </summary>
-    public unsafe void StartCamera()
+    public unsafe virtual void StartCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.StartCamera", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: UpdateGlobalSpeed
     /// </summary>
-    public unsafe void UpdateGlobalSpeed()
+    public unsafe virtual void UpdateGlobalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.UpdateGlobalSpeed", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IncrementNumAttacks
     /// </summary>
-    public unsafe void IncrementNumAttacks()
+    public unsafe virtual void IncrementNumAttacks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.IncrementNumAttacks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StopSwordTrail
     /// </summary>
-    public unsafe void StopSwordTrail()
+    public unsafe virtual void StopSwordTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.StopSwordTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -115,7 +115,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: StartSwordTrail
     /// </summary>
-    public unsafe void StartSwordTrail()
+    public unsafe virtual void StartSwordTrail()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.StartSwordTrail", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -126,7 +126,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CheckGotoAttack
     /// </summary>
-    public unsafe void CheckGotoAttack()
+    public unsafe virtual void CheckGotoAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.CheckGotoAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -137,7 +137,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GlobalSpeed
     /// </summary>
-    public unsafe void GlobalSpeed()
+    public unsafe virtual void GlobalSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.GlobalSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TakeBack
     /// </summary>
-    public unsafe void TakeBack()
+    public unsafe virtual void TakeBack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.TakeBack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Swing
     /// </summary>
-    public unsafe void Swing()
+    public unsafe virtual void Swing()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.Swing", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -170,7 +170,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ClearAllGameSpeedTimers
     /// </summary>
-    public unsafe void ClearAllGameSpeedTimers()
+    public unsafe virtual void ClearAllGameSpeedTimers()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.ClearAllGameSpeedTimers", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -181,7 +181,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: BatmanReady
     /// </summary>
-    public unsafe void BatmanReady()
+    public unsafe virtual void BatmanReady()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.BatmanReady", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -192,7 +192,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.ExitMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -203,7 +203,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetHelpPrompt
     /// </summary>
-    public unsafe bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
+    public unsafe override bool GetHelpPrompt(BmSDK.BmGame.RHUDPrompt HelpPrompt, bool bKismetHelpOn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.GetHelpPrompt", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -216,7 +216,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: ResetSpeed
     /// </summary>
-    public unsafe void ResetSpeed()
+    public unsafe virtual void ResetSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.ResetSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -227,7 +227,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: PoseSpeed
     /// </summary>
-    public unsafe void PoseSpeed()
+    public unsafe virtual void PoseSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.PoseSpeed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -238,7 +238,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: bLocked
     /// </summary>
-    public unsafe void bLocked()
+    public unsafe virtual void bLocked()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.bLocked", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DamagePlayer
     /// </summary>
-    public unsafe void DamagePlayer()
+    public unsafe virtual void DamagePlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.DamagePlayer", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -260,7 +260,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TurnOffHighlight
     /// </summary>
-    public unsafe void TurnOffHighlight(bool bSuccess = default)
+    public unsafe override void TurnOffHighlight(bool bSuccess = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.TurnOffHighlight", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -272,7 +272,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TurnOnHighlight
     /// </summary>
-    public unsafe void TurnOnHighlight()
+    public unsafe override void TurnOnHighlight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.TurnOnHighlight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -283,7 +283,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: DoHit
     /// </summary>
-    public unsafe void DoHit()
+    public unsafe virtual void DoHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.DoHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -294,7 +294,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: TriggerCounterAttempted
     /// </summary>
-    public unsafe void TriggerCounterAttempted()
+    public unsafe override void TriggerCounterAttempted()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.TriggerCounterAttempted", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -318,7 +318,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetCounterLimb
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
+    public unsafe override BmSDK.BmGame.RPawnCombat.CounterLimb GetCounterLimb(BmSDK.BmGame.RPawnCombat TestPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.GetCounterLimb", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -330,7 +330,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: MoveOverridenForPawn
     /// </summary>
-    public unsafe void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
+    public unsafe override void MoveOverridenForPawn(BmSDK.BmGame.RPawnCombat OverridenPawn, BmSDK.BmGame.RCombatMove NewMove)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.MoveOverridenForPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -343,7 +343,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: SetAttackInfo
     /// </summary>
-    public unsafe void SetAttackInfo()
+    public unsafe virtual void SetAttackInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.SetAttackInfo", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -354,7 +354,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -365,7 +365,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: GetJumpFromLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetJumpFromLocation()
+    public unsafe virtual System.Numerics.Vector3 GetJumpFromLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.GetJumpFromLocation", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -376,7 +376,7 @@ public partial class RCombatMove_RasFuryAttackAndCounter : BmSDK.BmGame.RCombatM
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_RasFuryAttackAndCounter.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

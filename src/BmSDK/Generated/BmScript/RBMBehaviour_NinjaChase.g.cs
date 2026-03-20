@@ -47,7 +47,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: UpdateMoveSpeed
     /// </summary>
-    public unsafe void UpdateMoveSpeed()
+    public unsafe virtual void UpdateMoveSpeed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.UpdateMoveSpeed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: BatmanFailedCheck
     /// </summary>
-    public unsafe void BatmanFailedCheck()
+    public unsafe virtual void BatmanFailedCheck()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.BatmanFailedCheck", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -80,7 +80,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: BatmanTooFarAway
     /// </summary>
-    public unsafe bool BatmanTooFarAway()
+    public unsafe virtual bool BatmanTooFarAway()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.BatmanTooFarAway", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -91,7 +91,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -102,7 +102,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: FindNextRelativePoint
     /// </summary>
-    public unsafe void FindNextRelativePoint()
+    public unsafe virtual void FindNextRelativePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.FindNextRelativePoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: StartNavMeshSearch
     /// </summary>
-    public unsafe void StartNavMeshSearch()
+    public unsafe override void StartNavMeshSearch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.StartNavMeshSearch", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -124,7 +124,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: GetMoveLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLocation()
+    public unsafe override System.Numerics.Vector3 GetMoveLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.GetMoveLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -135,7 +135,7 @@ public partial class RBMBehaviour_NinjaChase : BmSDK.BmGame.RBMBehaviour_MoveTo,
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaChase.Update", true);
         byte* paramsPtr = stackalloc byte[8];

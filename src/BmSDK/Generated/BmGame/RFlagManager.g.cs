@@ -36,7 +36,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: DumpFlagList
     /// </summary>
-    public unsafe void DumpFlagList(BmSDK.FString Description = default)
+    public unsafe virtual void DumpFlagList(BmSDK.FString Description = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.DumpFlagList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -55,7 +55,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlagListForChallengeMode
     /// </summary>
-    public unsafe void SetFlagListForChallengeMode(out BmSDK.TArray<BmSDK.FString> flagsList)
+    public unsafe virtual void SetFlagListForChallengeMode(out BmSDK.TArray<BmSDK.FString> flagsList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetFlagListForChallengeMode", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -74,7 +74,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlagList
     /// </summary>
-    public unsafe void SetFlagList(out BmSDK.TArray<BmSDK.FString> flagsList)
+    public unsafe virtual void SetFlagList(out BmSDK.TArray<BmSDK.FString> flagsList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetFlagList", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetFlagListPIE
     /// </summary>
-    public unsafe void SetFlagListPIE()
+    public unsafe virtual void SetFlagListPIE()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetFlagListPIE", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: FindSetFlagsLike
     /// </summary>
-    public unsafe void FindSetFlagsLike(BmSDK.FString MatchName, out BmSDK.TArray<BmSDK.FString> MatchingFlags)
+    public unsafe virtual void FindSetFlagsLike(BmSDK.FString MatchName, out BmSDK.TArray<BmSDK.FString> MatchingFlags)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.FindSetFlagsLike", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -131,7 +131,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetPersistentMapName
     /// </summary>
-    public unsafe BmSDK.FString GetPersistentMapName()
+    public unsafe virtual BmSDK.FString GetPersistentMapName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.GetPersistentMapName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -149,7 +149,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearNonSavedFlags
     /// </summary>
-    public unsafe void ClearNonSavedFlags()
+    public unsafe virtual void ClearNonSavedFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.ClearNonSavedFlags", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGlobalFlags
     /// </summary>
-    public unsafe int SetGlobalFlags(BmSDK.FString FlagList)
+    public unsafe virtual int SetGlobalFlags(BmSDK.FString FlagList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetGlobalFlags", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -186,7 +186,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGlobalFlag
     /// </summary>
-    public unsafe bool SetGlobalFlag(BmSDK.FString FlagName, bool Value)
+    public unsafe virtual bool SetGlobalFlag(BmSDK.FString FlagName, bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetGlobalFlag", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -206,7 +206,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetGlobalFlag
     /// </summary>
-    public unsafe bool GetGlobalFlag(BmSDK.FString FlagName)
+    public unsafe virtual bool GetGlobalFlag(BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.GetGlobalFlag", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -225,7 +225,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SetObjectFlag
     /// </summary>
-    public unsafe bool SetObjectFlag(BmSDK.GameObject Obj, BmSDK.FString FlagName, bool Value)
+    public unsafe virtual bool SetObjectFlag(BmSDK.GameObject Obj, BmSDK.FString FlagName, bool Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.SetObjectFlag", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -246,7 +246,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetObjectFlag
     /// </summary>
-    public unsafe bool GetObjectFlag(BmSDK.GameObject Obj, BmSDK.FString FlagName)
+    public unsafe virtual bool GetObjectFlag(BmSDK.GameObject Obj, BmSDK.FString FlagName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.GetObjectFlag", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -266,7 +266,7 @@ public partial class RFlagManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe virtual void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFlagManager.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

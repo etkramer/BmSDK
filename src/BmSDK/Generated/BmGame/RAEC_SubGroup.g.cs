@@ -71,7 +71,7 @@ public partial class RAEC_SubGroup : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SubGroup.IsActive", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -82,7 +82,7 @@ public partial class RAEC_SubGroup : BmSDK.BmGame.RAlertEventCoordinatorBase, Bm
     /// <summary>
     /// Function: AddToGroup
     /// </summary>
-    public unsafe void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
+    public unsafe virtual void AddToGroup(BmSDK.BmGame.RBMAIController NewCon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_SubGroup.AddToGroup", true);
         byte* paramsPtr = stackalloc byte[4];

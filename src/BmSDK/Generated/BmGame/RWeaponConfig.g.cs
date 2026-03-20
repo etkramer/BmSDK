@@ -36,7 +36,7 @@ public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Function: Shrink
     /// </summary>
-    public unsafe void Shrink()
+    public unsafe virtual void Shrink()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RWeaponConfig.Shrink", true);
         byte* paramsPtr = stackalloc byte[0];

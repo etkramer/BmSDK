@@ -66,7 +66,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: PairedAnimsSuccessfullyLoaded
     /// </summary>
-    public unsafe void PairedAnimsSuccessfullyLoaded()
+    public unsafe override void PairedAnimsSuccessfullyLoaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PairedAnimsSuccessfullyLoaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -104,7 +104,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: GroupAttackHit
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult GroupAttackHit()
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult GroupAttackHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.GroupAttackHit", true);
         byte* paramsPtr = stackalloc byte[252];
@@ -115,7 +115,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: GetSmokeBombReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
+    public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -126,7 +126,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: PlayAdditiveBatarangReaction
     /// </summary>
-    public unsafe void PlayAdditiveBatarangReaction()
+    public unsafe virtual void PlayAdditiveBatarangReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PlayAdditiveBatarangReaction", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -137,7 +137,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: PlayHitReaction
     /// </summary>
-    public unsafe void PlayHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override void PlayHitReaction(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.PlayHitReaction", true);
         byte* paramsPtr = stackalloc byte[244];
@@ -149,7 +149,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: ShouldGoRagdoll
     /// </summary>
-    public unsafe bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
+    public unsafe override bool ShouldGoRagdoll(BmSDK.Class dmgType, float DamageAmount)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.ShouldGoRagdoll", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -162,7 +162,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: CanDodgeAttack
     /// </summary>
-    public unsafe bool CanDodgeAttack(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType, bool bFar)
+    public unsafe override bool CanDodgeAttack(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType, bool bFar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CanDodgeAttack", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -176,7 +176,7 @@ public partial class RPawnVillainLunaticBase : BmSDK.BmGame.RPawnVillainCombat, 
     /// <summary>
     /// Function: CanPlayBark
     /// </summary>
-    public unsafe bool CanPlayBark()
+    public unsafe override bool CanPlayBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainLunaticBase.CanPlayBark", true);
         byte* paramsPtr = stackalloc byte[4];

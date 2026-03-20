@@ -36,7 +36,7 @@ public partial class RSpecialMoveConfig_ActivePoseTransitionWithOffset : BmSDK.B
     /// <summary>
     /// Function: GetEndPositionAndYaw
     /// </summary>
-    public unsafe void GetEndPositionAndYaw(BmSDK.Engine.Pawn Player, BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation, out System.Numerics.Vector3 EndPosition, out int EndYaw)
+    public unsafe override void GetEndPositionAndYaw(BmSDK.Engine.Pawn Player, BmSDK.BmGame.RPawnPlayer.FEnvironmentSpecialMoveLocator MoveLocation, out System.Numerics.Vector3 EndPosition, out int EndYaw)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveConfig_ActivePoseTransitionWithOffset.GetEndPositionAndYaw", true);
         byte* paramsPtr = stackalloc byte[132];

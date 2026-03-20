@@ -71,7 +71,7 @@ public partial class RCreeperVine : BmSDK.BmGame.RCreeperVineBase, BmSDK.IGameOb
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVine.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCreeperVine : BmSDK.BmGame.RCreeperVineBase, BmSDK.IGameOb
     /// <summary>
     /// Function: SetHumpRotation
     /// </summary>
-    public unsafe void SetHumpRotation(BmSDK.Rotator Rot)
+    public unsafe virtual void SetHumpRotation(BmSDK.Rotator Rot)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCreeperVine.SetHumpRotation", true);
         byte* paramsPtr = stackalloc byte[12];

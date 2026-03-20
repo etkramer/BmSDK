@@ -71,7 +71,7 @@ public partial class RMagBlastLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UpdateLight
     /// </summary>
-    public unsafe void UpdateLight(float DeltaTime, System.Numerics.Vector3 Position, float NewRadius, float Power)
+    public unsafe virtual void UpdateLight(float DeltaTime, System.Numerics.Vector3 Position, float NewRadius, float Power)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagBlastLight.UpdateLight", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -86,7 +86,7 @@ public partial class RMagBlastLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StartLight
     /// </summary>
-    public unsafe void StartLight()
+    public unsafe virtual void StartLight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagBlastLight.StartLight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RMagBlastLight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RMagBlastLight.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

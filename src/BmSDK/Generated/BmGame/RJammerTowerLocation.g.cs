@@ -71,7 +71,7 @@ public partial class RJammerTowerLocation : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: SetTowerEnabled
     /// </summary>
-    public unsafe void SetTowerEnabled(bool _bIsBroadcasting)
+    public unsafe virtual void SetTowerEnabled(bool _bIsBroadcasting)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerTowerLocation.SetTowerEnabled", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RJammerTowerLocation : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: UpdateCurrentWaypointVolume
     /// </summary>
-    public unsafe void UpdateCurrentWaypointVolume()
+    public unsafe virtual void UpdateCurrentWaypointVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerTowerLocation.UpdateCurrentWaypointVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RJammerTowerLocation : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RJammerTowerLocation.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[32];

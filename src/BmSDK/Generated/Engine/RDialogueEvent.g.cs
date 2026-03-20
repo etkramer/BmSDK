@@ -36,7 +36,7 @@ public partial class RDialogueEvent : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetCueDuration
     /// </summary>
-    public unsafe float GetCueDuration()
+    public unsafe virtual float GetCueDuration()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RDialogueEvent.GetCueDuration", true);
         byte* paramsPtr = stackalloc byte[4];

@@ -71,7 +71,7 @@ public partial class RSpecialMoveInstance_HoldLedge : BmSDK.BmGame.RSpecialMoveI
     /// <summary>
     /// Function: FinishSpecialMove
     /// </summary>
-    public unsafe void FinishSpecialMove()
+    public unsafe override void FinishSpecialMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSpecialMoveInstance_HoldLedge.FinishSpecialMove", true);
         byte* paramsPtr = stackalloc byte[0];

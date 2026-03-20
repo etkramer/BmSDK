@@ -71,7 +71,7 @@ public partial class RCrossLevelVantageProxy : BmSDK.Engine.Actor, BmSDK.IGameOb
     /// <summary>
     /// Function: GetNearestHidePoint
     /// </summary>
-    public unsafe BmSDK.BmGame.RHidePoint GetNearestHidePoint()
+    public unsafe virtual BmSDK.BmGame.RHidePoint GetNearestHidePoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCrossLevelVantageProxy.GetNearestHidePoint", true);
         byte* paramsPtr = stackalloc byte[20];

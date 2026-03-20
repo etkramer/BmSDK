@@ -36,7 +36,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBankStreamPreloaded
     /// </summary>
-    public unsafe bool IsBankStreamPreloaded()
+    public unsafe virtual bool IsBankStreamPreloaded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.IsBankStreamPreloaded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: PreloadBankStreams
     /// </summary>
-    public unsafe bool PreloadBankStreams(bool preload, BmSDK.Engine.AkWwise.EAkIOStreamPriorities Priority = default)
+    public unsafe virtual bool PreloadBankStreams(bool preload, BmSDK.Engine.AkWwise.EAkIOStreamPriorities Priority = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.PreloadBankStreams", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -74,7 +74,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: IsBankLoadComplete
     /// </summary>
-    public unsafe bool IsBankLoadComplete()
+    public unsafe virtual bool IsBankLoadComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.IsBankLoadComplete", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: ForceUnloadBank
     /// </summary>
-    public unsafe void ForceUnloadBank()
+    public unsafe virtual void ForceUnloadBank()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.ForceUnloadBank", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -110,7 +110,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: UnloadBank
     /// </summary>
-    public unsafe void UnloadBank(bool performDeferredUnload)
+    public unsafe virtual void UnloadBank(bool performDeferredUnload)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.UnloadBank", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -129,7 +129,7 @@ public partial class AkBank : BmSDK.Engine.AkAssetBase, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadBank
     /// </summary>
-    public unsafe bool LoadBank(bool performDeferredLoad)
+    public unsafe virtual bool LoadBank(bool performDeferredLoad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AkBank.LoadBank", true);
         byte* paramsPtr = stackalloc byte[8];

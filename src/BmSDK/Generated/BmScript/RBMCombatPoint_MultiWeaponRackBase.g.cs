@@ -66,7 +66,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: WeaponDetached
     /// </summary>
-    public unsafe void WeaponDetached()
+    public unsafe override void WeaponDetached()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.WeaponDetached", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -77,7 +77,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_Yaw
     /// </summary>
-    public unsafe float GetAnimInfo_Yaw()
+    public unsafe override float GetAnimInfo_Yaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_Yaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_AimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -99,7 +99,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_MoveToLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_MoveToLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_MoveToLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_MoveToLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_Location()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_Location()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_Location", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -121,7 +121,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_Animset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetAnimInfo_Animset()
+    public unsafe override BmSDK.Engine.AnimSet GetAnimInfo_Animset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_Animset", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: GetAnimInfo_Name
     /// </summary>
-    public unsafe BmSDK.FName GetAnimInfo_Name()
+    public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -143,7 +143,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: SetNextWeaponInfo
     /// </summary>
-    public unsafe void SetNextWeaponInfo()
+    public unsafe virtual void SetNextWeaponInfo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.SetNextWeaponInfo", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -154,7 +154,7 @@ public partial class RBMCombatPoint_MultiWeaponRackBase : BmSDK.BmGame.RBMCombat
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_MultiWeaponRackBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

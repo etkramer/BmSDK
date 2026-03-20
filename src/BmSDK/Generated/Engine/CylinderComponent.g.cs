@@ -36,7 +36,7 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// Function: GetExtent
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetExtent()
+    public unsafe virtual System.Numerics.Vector3 GetExtent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.GetExtent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -47,7 +47,7 @@ public partial class CylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// Function: SetCylinderSize
     /// </summary>
-    public unsafe void SetCylinderSize(float NewRadius, float NewHeight)
+    public unsafe virtual void SetCylinderSize(float NewRadius, float NewHeight)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.CylinderComponent.SetCylinderSize", true);
         byte* paramsPtr = stackalloc byte[8];

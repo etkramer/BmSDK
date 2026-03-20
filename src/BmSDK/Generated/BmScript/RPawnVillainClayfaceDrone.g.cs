@@ -71,7 +71,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CreateWeaponConfigUnarmed
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfigUnarmed(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.CreateWeaponConfigUnarmed", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CreateCombatWeaponConfigDrone
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfigDrone(BmSDK.GameObject NewOwner)
+    public unsafe virtual BmSDK.BmGame.RWeaponConfig CreateCombatWeaponConfigDrone(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.CreateCombatWeaponConfigDrone", true);
         byte* paramsPtr = stackalloc byte[2532];
@@ -95,7 +95,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetSmokeBombReactionClass
     /// </summary>
-    public unsafe BmSDK.Class GetSmokeBombReactionClass()
+    public unsafe override BmSDK.Class GetSmokeBombReactionClass()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetSmokeBombReactionClass", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: DeactivateFreezeEffects
     /// </summary>
-    public unsafe void DeactivateFreezeEffects(bool bIsEarlyInterrupt, bool bDeactivatedBehaviour = default, bool bDeactivateTorsoEffects = default)
+    public unsafe override void DeactivateFreezeEffects(bool bIsEarlyInterrupt, bool bDeactivatedBehaviour = default, bool bDeactivateTorsoEffects = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.DeactivateFreezeEffects", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -120,7 +120,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float UpdateTime)
+    public unsafe override void Tick(float UpdateTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -132,7 +132,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetBlockBreakerStunTime
     /// </summary>
-    public unsafe float GetBlockBreakerStunTime()
+    public unsafe override float GetBlockBreakerStunTime()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetBlockBreakerStunTime", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -143,7 +143,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: DamagedBy
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
+    public unsafe override BmSDK.BmGame.RPawnCombat.DamageResult DamagedBy(BmSDK.BmGame.RPawnCombat.FDamageInfo DmgInfo)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.DamagedBy", true);
         byte* paramsPtr = stackalloc byte[245];
@@ -155,7 +155,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: StartRagdollDeath
     /// </summary>
-    public unsafe BmSDK.BmGame.RPawnCombat.DamageResult StartRagdollDeath()
+    public unsafe virtual BmSDK.BmGame.RPawnCombat.DamageResult StartRagdollDeath()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.StartRagdollDeath", true);
         byte* paramsPtr = stackalloc byte[260];
@@ -166,7 +166,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: DestroyMe
     /// </summary>
-    public unsafe void DestroyMe()
+    public unsafe virtual void DestroyMe()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.DestroyMe", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: SinkRagdoll
     /// </summary>
-    public unsafe void SinkRagdoll()
+    public unsafe virtual void SinkRagdoll()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.SinkRagdoll", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -188,7 +188,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: Died
     /// </summary>
-    public unsafe bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
+    public unsafe override bool Died(BmSDK.Engine.Controller Killer, BmSDK.Class DamageType, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.Died", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -202,7 +202,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: BreakAwayOtherMesh
     /// </summary>
-    public unsafe void BreakAwayOtherMesh()
+    public unsafe virtual void BreakAwayOtherMesh()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.BreakAwayOtherMesh", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -213,7 +213,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: MakeOtherPart
     /// </summary>
-    public unsafe void MakeOtherPart(BmSDK.Engine.SkeletalMesh MeshToUse, BmSDK.Engine.PhysicsAsset PhysAssetToUse)
+    public unsafe virtual void MakeOtherPart(BmSDK.Engine.SkeletalMesh MeshToUse, BmSDK.Engine.PhysicsAsset PhysAssetToUse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.MakeOtherPart", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -226,7 +226,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetFreezeSprayTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetFreezeSprayTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetFreezeSprayTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetFreezeSprayTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -237,7 +237,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetBatarangTargetPosition
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
+    public unsafe override System.Numerics.Vector3 GetBatarangTargetPosition(System.Numerics.Vector3 AimLocation, System.Numerics.Vector3 AimDirection, bool bDuringTargetPhase = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetBatarangTargetPosition", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -251,7 +251,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetTargetPriority
     /// </summary>
-    public unsafe float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
+    public unsafe override float GetTargetPriority(BmSDK.BmGame.RPawnCombat Attacker, BmSDK.Class dmgType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetTargetPriority", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -264,7 +264,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: AwardXP
     /// </summary>
-    public unsafe void AwardXP(BmSDK.Class DamageType)
+    public unsafe override void AwardXP(BmSDK.Class DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.AwardXP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -276,7 +276,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: SetTargetPlayer
     /// </summary>
-    public unsafe void SetTargetPlayer(BmSDK.BmGame.RPawnPlayerCombat NewTarget)
+    public unsafe override void SetTargetPlayer(BmSDK.BmGame.RPawnPlayerCombat NewTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.SetTargetPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -288,7 +288,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: DeactivateCollision
     /// </summary>
-    public unsafe void DeactivateCollision()
+    public unsafe virtual void DeactivateCollision()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.DeactivateCollision", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -299,7 +299,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -311,7 +311,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: IsAwareOfPlayer
     /// </summary>
-    public unsafe bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
+    public unsafe override bool IsAwareOfPlayer(BmSDK.BmGame.RPawnPlayer PlayerPawn, BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.IsAwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -324,7 +324,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: ActivateCollisionRight
     /// </summary>
-    public unsafe void ActivateCollisionRight()
+    public unsafe virtual void ActivateCollisionRight()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.ActivateCollisionRight", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -335,7 +335,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: ActivateCollisionLeft
     /// </summary>
-    public unsafe void ActivateCollisionLeft()
+    public unsafe virtual void ActivateCollisionLeft()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.ActivateCollisionLeft", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -346,7 +346,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: GetFreezeBlastPriority
     /// </summary>
-    public unsafe float GetFreezeBlastPriority()
+    public unsafe override float GetFreezeBlastPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.GetFreezeBlastPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -357,7 +357,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: SetInXrayMode
     /// </summary>
-    public unsafe void SetInXrayMode(bool show, bool bForceOff)
+    public unsafe override void SetInXrayMode(bool show, bool bForceOff)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.SetInXrayMode", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -370,7 +370,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: ChangeXrayMat
     /// </summary>
-    public unsafe void ChangeXrayMat(BmSDK.Engine.SkeletalMeshComponent ChangeMesh, bool bXray, BmSDK.Engine.MaterialInterface XrayMatToUse)
+    public unsafe virtual void ChangeXrayMat(BmSDK.Engine.SkeletalMeshComponent ChangeMesh, bool bXray, BmSDK.Engine.MaterialInterface XrayMatToUse)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.ChangeXrayMat", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -384,7 +384,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: PlayCombatBark
     /// </summary>
-    public unsafe void PlayCombatBark(BmSDK.FString EventName, bool bUseWeapon, BmSDK.BmGame.RBMWeapon OverrideWeapon = default, BmSDK.FString OverrideWeaponName = default)
+    public unsafe override void PlayCombatBark(BmSDK.FString EventName, bool bUseWeapon, BmSDK.BmGame.RBMWeapon OverrideWeapon = default, BmSDK.FString OverrideWeaponName = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.PlayCombatBark", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -399,7 +399,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: CanRecieveSuperStun
     /// </summary>
-    public unsafe bool CanRecieveSuperStun()
+    public unsafe override bool CanRecieveSuperStun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.CanRecieveSuperStun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -410,7 +410,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: SetCombatReady
     /// </summary>
-    public unsafe void SetCombatReady()
+    public unsafe virtual void SetCombatReady()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.SetCombatReady", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -421,7 +421,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: OverrideRECMagnetReaction
     /// </summary>
-    public unsafe bool OverrideRECMagnetReaction(BmSDK.Engine.Actor MagnetSource)
+    public unsafe override bool OverrideRECMagnetReaction(BmSDK.Engine.Actor MagnetSource)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.OverrideRECMagnetReaction", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -433,7 +433,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: PutXrayIntoForground
     /// </summary>
-    public unsafe bool PutXrayIntoForground()
+    public unsafe override bool PutXrayIntoForground()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.PutXrayIntoForground", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -444,7 +444,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: AllowAttackerTracking
     /// </summary>
-    public unsafe bool AllowAttackerTracking()
+    public unsafe override bool AllowAttackerTracking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.AllowAttackerTracking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -455,7 +455,7 @@ public partial class RPawnVillainClayfaceDrone : BmSDK.BmGame.RPawnVillainThug, 
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RPawnVillainClayfaceDrone.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RCinematicCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IG
     /// <summary>
     /// Function: GetCameraView
     /// </summary>
-    public unsafe void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
+    public unsafe override void GetCameraView(float DeltaTime, out BmSDK.GameObject.FTPOV OutPOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCinematicCameraActor.GetCameraView", true);
         byte* paramsPtr = stackalloc byte[40];

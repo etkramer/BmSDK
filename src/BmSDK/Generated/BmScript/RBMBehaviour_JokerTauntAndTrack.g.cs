@@ -36,7 +36,7 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: PlayTurnStep
     /// </summary>
-    public unsafe void PlayTurnStep(System.Numerics.Vector3 TargetHeading)
+    public unsafe virtual void PlayTurnStep(System.Numerics.Vector3 TargetHeading)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerTauntAndTrack.PlayTurnStep", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -48,7 +48,7 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerTauntAndTrack.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -60,7 +60,7 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: AwareOfPlayer
     /// </summary>
-    public unsafe bool AwareOfPlayer(BmSDK.Class dmgType = default)
+    public unsafe override bool AwareOfPlayer(BmSDK.Class dmgType = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerTauntAndTrack.AwareOfPlayer", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -72,7 +72,7 @@ public partial class RBMBehaviour_JokerTauntAndTrack : BmSDK.BmGame.RBMBehaviour
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_JokerTauntAndTrack.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

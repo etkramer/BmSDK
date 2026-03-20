@@ -36,7 +36,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: UpdatePushYourLuckBandDetails
     /// </summary>
-    public unsafe void UpdatePushYourLuckBandDetails(int Band_Index, int Bonus_Points, int Bonus_Time)
+    public unsafe virtual void UpdatePushYourLuckBandDetails(int Band_Index, int Bonus_Points, int Bonus_Time)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.UpdatePushYourLuckBandDetails", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -50,7 +50,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: PushYourLuckShakeGauge
     /// </summary>
-    public unsafe void PushYourLuckShakeGauge()
+    public unsafe virtual void PushYourLuckShakeGauge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.PushYourLuckShakeGauge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -61,7 +61,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: PushYourLuckBankValue
     /// </summary>
-    public unsafe void PushYourLuckBankValue(int bank_level, int Score, int Bonus_Time, bool max_gauge)
+    public unsafe virtual void PushYourLuckBankValue(int bank_level, int Score, int Bonus_Time, bool max_gauge)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.PushYourLuckBankValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -76,7 +76,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: SetPushYourLuckGaugeValue
     /// </summary>
-    public unsafe void SetPushYourLuckGaugeValue(int raw_value)
+    public unsafe virtual void SetPushYourLuckGaugeValue(int raw_value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetPushYourLuckGaugeValue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: SetPushYourLuckBandDetails
     /// </summary>
-    public unsafe void SetPushYourLuckBandDetails(int Band_Index, BmSDK.FString Band_Title, int Bonus_Points, int Bonus_Time, int GaugeValueForNext)
+    public unsafe virtual void SetPushYourLuckBandDetails(int Band_Index, BmSDK.FString Band_Title, int Bonus_Points, int Bonus_Time, int GaugeValueForNext)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetPushYourLuckBandDetails", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -104,7 +104,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: SetHeadToHeadBankLocal
     /// </summary>
-    public unsafe void SetHeadToHeadBankLocal(int bank_level)
+    public unsafe virtual void SetHeadToHeadBankLocal(int bank_level)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.SetHeadToHeadBankLocal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -127,7 +127,7 @@ public partial class RHudExtensionChallengeBespoke : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionChallengeBespoke.Init", true);
         byte* paramsPtr = stackalloc byte[32];

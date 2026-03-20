@@ -71,7 +71,7 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: FreezeCamera
     /// </summary>
-    public unsafe void FreezeCamera()
+    public unsafe virtual void FreezeCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.FreezeCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.Tick", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -94,7 +94,7 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckForBossRestriction
     /// </summary>
-    public unsafe void CheckForBossRestriction()
+    public unsafe virtual void CheckForBossRestriction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.CheckForBossRestriction", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RDeathCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetUpCamera
     /// </summary>
-    public unsafe void SetUpCamera(System.Numerics.Vector3 Loc, BmSDK.Engine.SkeletalMeshComponent targetAct)
+    public unsafe virtual void SetUpCamera(System.Numerics.Vector3 Loc, BmSDK.Engine.SkeletalMeshComponent targetAct)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RDeathCamera.SetUpCamera", true);
         byte* paramsPtr = stackalloc byte[16];

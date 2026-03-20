@@ -71,7 +71,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: SuperEasy
     /// </summary>
-    public unsafe bool SuperEasy()
+    public unsafe virtual bool SuperEasy()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.SuperEasy", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: GetBatClawImpactSound
     /// </summary>
-    public unsafe BmSDK.Engine.AkEvent GetBatClawImpactSound()
+    public unsafe virtual BmSDK.Engine.AkEvent GetBatClawImpactSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.GetBatClawImpactSound", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -93,7 +93,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: GetHarpoonTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetHarpoonTargetLocation()
+    public unsafe virtual System.Numerics.Vector3 GetHarpoonTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.GetHarpoonTargetLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: SetTension
     /// </summary>
-    public unsafe void SetTension(BmSDK.Engine.Pawn AttemptingPawn, float Value)
+    public unsafe virtual void SetTension(BmSDK.Engine.Pawn AttemptingPawn, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.SetTension", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -117,7 +117,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: IsHarpoonable
     /// </summary>
-    public unsafe bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
+    public unsafe virtual bool IsHarpoonable(BmSDK.BmGame.RHarpoonGun HarpoonGun)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.IsHarpoonable", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -129,7 +129,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: StartRemoveAttempt
     /// </summary>
-    public unsafe void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
+    public unsafe virtual void StartRemoveAttempt(BmSDK.Engine.Pawn AttemptingPawn, System.Numerics.Vector3 HitLocation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.StartRemoveAttempt", true);
         byte* paramsPtr = stackalloc byte[144];
@@ -142,7 +142,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: FailedToRemove
     /// </summary>
-    public unsafe void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void FailedToRemove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.FailedToRemove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -154,7 +154,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: Remove
     /// </summary>
-    public unsafe void Remove(BmSDK.Engine.Pawn AttemptingPawn)
+    public unsafe virtual void Remove(BmSDK.Engine.Pawn AttemptingPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.Remove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -166,7 +166,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: OnSleepRBPhysics
     /// </summary>
-    public unsafe void OnSleepRBPhysics()
+    public unsafe override void OnSleepRBPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.OnSleepRBPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -177,7 +177,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: StopPhysics
     /// </summary>
-    public unsafe void StopPhysics()
+    public unsafe virtual void StopPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.StopPhysics", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -188,7 +188,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: ClearAudio
     /// </summary>
-    public unsafe void ClearAudio()
+    public unsafe virtual void ClearAudio()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.ClearAudio", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -199,7 +199,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: GoPhysics
     /// </summary>
-    public unsafe void GoPhysics()
+    public unsafe override void GoPhysics()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.GoPhysics", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -210,7 +210,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: BreakSeal
     /// </summary>
-    public unsafe void BreakSeal(bool bInstant)
+    public unsafe virtual void BreakSeal(bool bInstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.BreakSeal", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -222,7 +222,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: CancelPullMove
     /// </summary>
-    public unsafe void CancelPullMove()
+    public unsafe virtual void CancelPullMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.CancelPullMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -233,7 +233,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: Drop
     /// </summary>
-    public unsafe void Drop()
+    public unsafe virtual void Drop()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.Drop", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -244,7 +244,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: GetBoneName
     /// </summary>
-    public unsafe BmSDK.FName GetBoneName()
+    public unsafe override BmSDK.FName GetBoneName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.GetBoneName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -255,7 +255,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: NotifyForce
     /// </summary>
-    public unsafe void NotifyForce()
+    public unsafe override void NotifyForce()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.NotifyForce", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -266,7 +266,7 @@ public partial class RBreakableDemonSeal : BmSDK.BmGame.RBreakableDemonSealBase,
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBreakableDemonSeal.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// Function: GetGlanceScore
     /// </summary>
-    public unsafe int GetGlanceScore()
+    public unsafe virtual int GetGlanceScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingHostageAIMarker.GetGlanceScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// Function: EventFinished
     /// </summary>
-    public unsafe void EventFinished()
+    public unsafe virtual void EventFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingHostageAIMarker.EventFinished", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// Function: MissingHostageNoticedBy
     /// </summary>
-    public unsafe void MissingHostageNoticedBy(BmSDK.BmGame.RBMAIController Spotter)
+    public unsafe virtual void MissingHostageNoticedBy(BmSDK.BmGame.RBMAIController Spotter)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingHostageAIMarker.MissingHostageNoticedBy", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -105,7 +105,7 @@ public partial class RMissingHostageAIMarker : BmSDK.Engine.Actor, BmSDK.BmGame.
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RMissingHostageAIMarker.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

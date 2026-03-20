@@ -71,7 +71,7 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: StopPlayerOceanEffect
     /// </summary>
-    public unsafe void StopPlayerOceanEffect()
+    public unsafe virtual void StopPlayerOceanEffect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase.StopPlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -89,7 +89,7 @@ public partial class ROceanAttachedToCameraBase : BmSDK.Engine.Actor, BmSDK.IGam
     /// <summary>
     /// Function: UpdatePlayerOceanEffect
     /// </summary>
-    public unsafe void UpdatePlayerOceanEffect(float DeltaTime)
+    public unsafe virtual void UpdatePlayerOceanEffect(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.ROceanAttachedToCameraBase.UpdatePlayerOceanEffect", true);
         byte* paramsPtr = stackalloc byte[4];

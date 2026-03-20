@@ -71,7 +71,7 @@ public partial class RZsaszPhoneBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGa
     /// <summary>
     /// Function: ShouldContinueSurveillance
     /// </summary>
-    public unsafe bool ShouldContinueSurveillance()
+    public unsafe override bool ShouldContinueSurveillance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RZsaszPhoneBase.ShouldContinueSurveillance", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RZsaszPhoneBase : BmSDK.BmGame.RInteractableItem, BmSDK.IGa
     /// <summary>
     /// Function: OnAudioSourceCreate
     /// </summary>
-    public unsafe void OnAudioSourceCreate(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OnAudioSourceCreate(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RZsaszPhoneBase.OnAudioSourceCreate", true);
         byte* paramsPtr = stackalloc byte[4];

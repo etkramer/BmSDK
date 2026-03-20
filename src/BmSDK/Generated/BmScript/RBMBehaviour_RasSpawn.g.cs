@@ -36,7 +36,7 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: OnBeginInterrupt
     /// </summary>
-    public unsafe void OnBeginInterrupt()
+    public unsafe override void OnBeginInterrupt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasSpawn.OnBeginInterrupt", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasSpawn.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -59,7 +59,7 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: SetReadyForCombat
     /// </summary>
-    public unsafe void SetReadyForCombat()
+    public unsafe virtual void SetReadyForCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasSpawn.SetReadyForCombat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_RasSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.IG
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.FName AnimName, System.Numerics.Vector3 DestLoc, float Delay)
+    public unsafe virtual void Initialise(BmSDK.FName AnimName, System.Numerics.Vector3 DestLoc, float Delay)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_RasSpawn.Initialise", true);
         byte* paramsPtr = stackalloc byte[24];

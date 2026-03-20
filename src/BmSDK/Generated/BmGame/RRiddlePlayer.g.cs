@@ -71,7 +71,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Pause
     /// </summary>
-    public unsafe void Pause()
+    public unsafe virtual void Pause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.Pause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Unpause
     /// </summary>
-    public unsafe void Unpause()
+    public unsafe virtual void Unpause()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.Unpause", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetGameSpeechPlaying
     /// </summary>
-    public unsafe void SetGameSpeechPlaying()
+    public unsafe virtual void SetGameSpeechPlaying()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.SetGameSpeechPlaying", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -104,7 +104,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetRiddleVars
     /// </summary>
-    public unsafe void ResetRiddleVars(bool bDoCallback)
+    public unsafe virtual void ResetRiddleVars(bool bDoCallback)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.ResetRiddleVars", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: TryStart
     /// </summary>
-    public unsafe void TryStart()
+    public unsafe virtual void TryStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.TryStart", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -139,7 +139,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: RiddlePlayerFinished
     /// </summary>
-    public unsafe void RiddlePlayerFinished(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
+    public unsafe virtual void RiddlePlayerFinished(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.RiddlePlayerFinished", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -153,7 +153,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: AddPacks
     /// </summary>
-    public unsafe void AddPacks(BmSDK.TArray<BmSDK.Engine.AkAssetPack> Packs)
+    public unsafe virtual void AddPacks(BmSDK.TArray<BmSDK.Engine.AkAssetPack> Packs)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.AddPacks", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -165,7 +165,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: StopConversation
     /// </summary>
-    public unsafe void StopConversation(bool bDoCallback = default, bool FromMapScreen = default)
+    public unsafe virtual void StopConversation(bool bDoCallback = default, bool FromMapScreen = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.StopConversation", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -178,7 +178,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlayRiddle
     /// </summary>
-    public unsafe void PlayRiddle()
+    public unsafe virtual void PlayRiddle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.PlayRiddle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -189,7 +189,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: PlaybackConversation
     /// </summary>
-    public unsafe void PlaybackConversation(BmSDK.FString RiddleName, bool bIsATape = default, bool bPlaysInBio = default, bool bStopOnGameSpeech = default, bool bStopWhenExiting = default)
+    public unsafe virtual void PlaybackConversation(BmSDK.FString RiddleName, bool bIsATape = default, bool bPlaysInBio = default, bool bStopOnGameSpeech = default, bool bStopWhenExiting = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.PlaybackConversation", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -205,7 +205,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: HighPriority
     /// </summary>
-    public unsafe bool HighPriority()
+    public unsafe virtual bool HighPriority()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.HighPriority", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -223,7 +223,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive()
+    public unsafe virtual bool IsActive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.IsActive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -241,7 +241,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: FindValidConversation
     /// </summary>
-    public unsafe bool FindValidConversation(bool DoBanks, bool FromPackageLoad)
+    public unsafe virtual bool FindValidConversation(bool DoBanks, bool FromPackageLoad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.FindValidConversation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -261,7 +261,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: SetPause
     /// </summary>
-    public unsafe void SetPause(bool bPause)
+    public unsafe virtual void SetPause(bool bPause)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.SetPause", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -280,7 +280,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: UnloadBanks
     /// </summary>
-    public unsafe void UnloadBanks()
+    public unsafe virtual void UnloadBanks()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.UnloadBanks", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -298,7 +298,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: CheckBanksAndTrigger
     /// </summary>
-    public unsafe void CheckBanksAndTrigger(float Delta)
+    public unsafe virtual void CheckBanksAndTrigger(float Delta)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.CheckBanksAndTrigger", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -317,7 +317,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: ClearSubtitle
     /// </summary>
-    public unsafe void ClearSubtitle()
+    public unsafe virtual void ClearSubtitle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.ClearSubtitle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -335,7 +335,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: DisplaySubtitle
     /// </summary>
-    public unsafe void DisplaySubtitle(BmSDK.Engine.RDialogueEvent DialogueEvent)
+    public unsafe virtual void DisplaySubtitle(BmSDK.Engine.RDialogueEvent DialogueEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.DisplaySubtitle", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -354,7 +354,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadPackage
     /// </summary>
-    public unsafe void LoadPackage()
+    public unsafe virtual void LoadPackage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.LoadPackage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -372,7 +372,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: LoadConversation
     /// </summary>
-    public unsafe void LoadConversation(BmSDK.FString RiddleName)
+    public unsafe virtual void LoadConversation(BmSDK.FString RiddleName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.LoadConversation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -391,7 +391,7 @@ public partial class RRiddlePlayer : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Function: InitConversation
     /// </summary>
-    public unsafe bool InitConversation(bool FromPackageLoad)
+    public unsafe virtual bool InitConversation(bool FromPackageLoad)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RRiddlePlayer.InitConversation", true);
         byte* paramsPtr = stackalloc byte[8];

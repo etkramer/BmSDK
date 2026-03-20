@@ -71,7 +71,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: FinalGlyphScan
     /// </summary>
-    public unsafe void FinalGlyphScan(BmSDK.BmGame.RPlayerController PC)
+    public unsafe virtual void FinalGlyphScan(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.FinalGlyphScan", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: RiddleReScanned
     /// </summary>
-    public unsafe void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleReScanned(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.RiddleReScanned", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: TurnOnMinigame
     /// </summary>
-    public unsafe void TurnOnMinigame()
+    public unsafe virtual void TurnOnMinigame()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.TurnOnMinigame", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: RiddleFound
     /// </summary>
-    public unsafe void RiddleFound(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override void RiddleFound(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.RiddleFound", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: CheckVisibility
     /// </summary>
-    public unsafe bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RRiddleBase.FVisibilityResult ReasonItFailed)
+    public unsafe override bool CheckVisibility(BmSDK.GameObject.FTPOV CameraPOV, out BmSDK.BmGame.RRiddleBase.FVisibilityResult ReasonItFailed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.CheckVisibility", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -142,7 +142,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: IsAzraelGlyph
     /// </summary>
-    public unsafe bool IsAzraelGlyph()
+    public unsafe override bool IsAzraelGlyph()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.IsAzraelGlyph", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -153,7 +153,7 @@ public partial class RRiddleAzraelGlyph : BmSDK.BmGame.RRiddleSolutionBase, BmSD
     /// <summary>
     /// Function: GetObjectName
     /// </summary>
-    public unsafe BmSDK.FString GetObjectName()
+    public unsafe override BmSDK.FString GetObjectName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRiddleAzraelGlyph.GetObjectName", true);
         byte* paramsPtr = stackalloc byte[12];

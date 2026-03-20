@@ -36,7 +36,7 @@ public partial class SeqVar_ObjectList : BmSDK.Engine.SeqVar_Object, BmSDK.IGame
     /// <summary>
     /// Function: SetObjectValue
     /// </summary>
-    public unsafe void SetObjectValue(BmSDK.GameObject NewValue)
+    public unsafe override void SetObjectValue(BmSDK.GameObject NewValue)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_ObjectList.SetObjectValue", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class SeqVar_ObjectList : BmSDK.Engine.SeqVar_Object, BmSDK.IGame
     /// <summary>
     /// Function: GetObjectValue
     /// </summary>
-    public unsafe BmSDK.GameObject GetObjectValue()
+    public unsafe override BmSDK.GameObject GetObjectValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqVar_ObjectList.GetObjectValue", true);
         byte* paramsPtr = stackalloc byte[4];

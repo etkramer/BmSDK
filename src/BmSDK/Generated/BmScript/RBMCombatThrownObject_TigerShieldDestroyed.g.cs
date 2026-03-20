@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_TigerShieldDestroyed : BmSDK.BmGame.R
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent()
+    public unsafe override void DoEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_TigerShieldDestroyed.DoEvent", true);
         byte* paramsPtr = stackalloc byte[24];

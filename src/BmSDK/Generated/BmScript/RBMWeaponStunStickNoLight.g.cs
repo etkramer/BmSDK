@@ -71,7 +71,7 @@ public partial class RBMWeaponStunStickNoLight : BmSDK.BmScript.RBMWeaponStunSti
     /// <summary>
     /// Function: TurnOff
     /// </summary>
-    public unsafe void TurnOff()
+    public unsafe override void TurnOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponStunStickNoLight.TurnOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RBMWeaponStunStickNoLight : BmSDK.BmScript.RBMWeaponStunSti
     /// <summary>
     /// Function: TurnOn
     /// </summary>
-    public unsafe void TurnOn()
+    public unsafe override void TurnOn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponStunStickNoLight.TurnOn", true);
         byte* paramsPtr = stackalloc byte[0];

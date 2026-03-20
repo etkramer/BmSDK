@@ -66,7 +66,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: SpawnSmallIceSphere
     /// </summary>
-    public unsafe BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe virtual BmSDK.Engine.Actor SpawnSmallIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.SpawnSmallIceSphere", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -79,7 +79,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: SpawnIceSphere
     /// </summary>
-    public unsafe void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
+    public unsafe virtual void SpawnIceSphere(System.Numerics.Vector3 SpawnLocation, BmSDK.Rotator SpawnRotation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.SpawnIceSphere", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -92,7 +92,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: CanFreezeVillain
     /// </summary>
-    public unsafe bool CanFreezeVillain(BmSDK.BmGame.RPawnVillain V)
+    public unsafe virtual bool CanFreezeVillain(BmSDK.BmGame.RPawnVillain V)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.CanFreezeVillain", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -104,7 +104,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: HitWall
     /// </summary>
-    public unsafe void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
+    public unsafe override void HitWall(System.Numerics.Vector3 HitNormal, BmSDK.Engine.Actor Wall, BmSDK.Engine.PrimitiveComponent WallComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.HitWall", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -118,7 +118,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: DestroyProjectile
     /// </summary>
-    public unsafe void DestroyProjectile()
+    public unsafe virtual void DestroyProjectile()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.DestroyProjectile", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: ProximityTriggerd
     /// </summary>
-    public unsafe void ProximityTriggerd(BmSDK.BmGame.RPawnVillain NearbyVillain)
+    public unsafe virtual void ProximityTriggerd(BmSDK.BmGame.RPawnVillain NearbyVillain)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.ProximityTriggerd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: SuperComboBlast
     /// </summary>
-    public unsafe void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
+    public unsafe virtual void SuperComboBlast(BmSDK.BmGame.RPawnVillain Victim)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.SuperComboBlast", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -153,7 +153,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: Deploy
     /// </summary>
-    public unsafe void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe virtual void Deploy(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.Deploy", true);
         byte* paramsPtr = stackalloc byte[84];
@@ -168,7 +168,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: StartFreezeBlastFailEffect
     /// </summary>
-    public unsafe void StartFreezeBlastFailEffect(bool bUseOffset = default)
+    public unsafe virtual void StartFreezeBlastFailEffect(bool bUseOffset = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.StartFreezeBlastFailEffect", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -180,7 +180,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: Detonate
     /// </summary>
-    public unsafe void Detonate(bool noGroundParticles = default, bool ProximityDetonate = default)
+    public unsafe virtual void Detonate(bool noGroundParticles = default, bool ProximityDetonate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.Detonate", true);
         byte* paramsPtr = stackalloc byte[56];
@@ -193,7 +193,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: GadgetNoiseEvent
     /// </summary>
-    public unsafe void GadgetNoiseEvent()
+    public unsafe virtual void GadgetNoiseEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.GadgetNoiseEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -204,7 +204,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: FreezeVictimBody
     /// </summary>
-    public unsafe void FreezeVictimBody(BmSDK.BmGame.RPawnVillain Victim, bool bInstant = default)
+    public unsafe virtual void FreezeVictimBody(BmSDK.BmGame.RPawnVillain Victim, bool bInstant = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.FreezeVictimBody", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -217,7 +217,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: TriggerFreezeBlastHitEvent
     /// </summary>
-    public unsafe void TriggerFreezeBlastHitEvent()
+    public unsafe virtual void TriggerFreezeBlastHitEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.TriggerFreezeBlastHitEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -228,7 +228,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -239,7 +239,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: TriggerCreatedRaftEvent
     /// </summary>
-    public unsafe void TriggerCreatedRaftEvent()
+    public unsafe virtual void TriggerCreatedRaftEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.TriggerCreatedRaftEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -250,7 +250,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: SpawnDelayedTrigger
     /// </summary>
-    public unsafe void SpawnDelayedTrigger()
+    public unsafe virtual void SpawnDelayedTrigger()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.SpawnDelayedTrigger", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -261,7 +261,7 @@ public partial class RFreezeSprayProjectile : BmSDK.BmGame.RGadgetProjectileBase
     /// <summary>
     /// Function: GetLookAtRotator
     /// </summary>
-    public unsafe BmSDK.Rotator GetLookAtRotator(System.Numerics.Vector3 Direction, System.Numerics.Vector3 Up)
+    public unsafe virtual BmSDK.Rotator GetLookAtRotator(System.Numerics.Vector3 Direction, System.Numerics.Vector3 Up)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RFreezeSprayProjectile.GetLookAtRotator", true);
         byte* paramsPtr = stackalloc byte[36];

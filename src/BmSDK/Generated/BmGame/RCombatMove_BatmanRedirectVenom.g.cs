@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanRedirectVenom : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: SetBlockActorsOff
     /// </summary>
-    public unsafe void SetBlockActorsOff()
+    public unsafe virtual void SetBlockActorsOff()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRedirectVenom.SetBlockActorsOff", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanRedirectVenom : BmSDK.BmGame.RCombatMove_
     /// <summary>
     /// Function: CanRedirect
     /// </summary>
-    public unsafe bool CanRedirect()
+    public unsafe override bool CanRedirect()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_BatmanRedirectVenom.CanRedirect", true);
         byte* paramsPtr = stackalloc byte[4];

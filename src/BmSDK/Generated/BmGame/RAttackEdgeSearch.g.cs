@@ -36,7 +36,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Release
     /// </summary>
-    public unsafe void Release()
+    public unsafe virtual void Release()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.Release", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: StartSearch
     /// </summary>
-    public unsafe void StartSearch(System.Numerics.Vector3 NewTargetLocation, float NewAttackRadius, BmSDK.FName NewClaimName, BmSDK.TArray<BmSDK.Engine.Pylon> NewPylonList)
+    public unsafe virtual void StartSearch(System.Numerics.Vector3 NewTargetLocation, float NewAttackRadius, BmSDK.FName NewClaimName, BmSDK.TArray<BmSDK.Engine.Pylon> NewPylonList)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.StartSearch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -62,7 +62,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: ShowDebug
     /// </summary>
-    public unsafe void ShowDebug()
+    public unsafe virtual void ShowDebug()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.ShowDebug", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: SearchFinished
     /// </summary>
-    public unsafe bool SearchFinished()
+    public unsafe virtual bool SearchFinished()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.SearchFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -98,7 +98,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: IsAvailable
     /// </summary>
-    public unsafe bool IsAvailable()
+    public unsafe virtual bool IsAvailable()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.IsAvailable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: Search
     /// </summary>
-    public unsafe void Search(float DeltaTime)
+    public unsafe virtual void Search(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAttackEdgeSearch.Search", true);
         byte* paramsPtr = stackalloc byte[4];

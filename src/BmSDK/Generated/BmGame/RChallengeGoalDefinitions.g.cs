@@ -71,7 +71,7 @@ public partial class RChallengeGoalDefinitions : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: EraseAllLeaderBoards
     /// </summary>
-    public unsafe void EraseAllLeaderBoards()
+    public unsafe virtual void EraseAllLeaderBoards()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeGoalDefinitions.EraseAllLeaderBoards", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -82,7 +82,7 @@ public partial class RChallengeGoalDefinitions : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: FetchPredatorGoalInfo
     /// </summary>
-    public unsafe int FetchPredatorGoalInfo(int ChallengeID, BmSDK.BmGame.RChallengeManager.EPlayableCharacters Character, out BmSDK.TArray<BmSDK.BmGame.RGameInfo.EGameAction> Goals)
+    public unsafe virtual int FetchPredatorGoalInfo(int ChallengeID, BmSDK.BmGame.RChallengeManager.EPlayableCharacters Character, out BmSDK.TArray<BmSDK.BmGame.RGameInfo.EGameAction> Goals)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeGoalDefinitions.FetchPredatorGoalInfo", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -96,7 +96,7 @@ public partial class RChallengeGoalDefinitions : BmSDK.Engine.Actor, BmSDK.IGame
     /// <summary>
     /// Function: FetchCombatGoalInfo
     /// </summary>
-    public unsafe int FetchCombatGoalInfo(int ChallengeID, BmSDK.BmGame.RChallengeManager.EPlayableCharacters Character, out BmSDK.TArray<int> Goals)
+    public unsafe virtual int FetchCombatGoalInfo(int ChallengeID, BmSDK.BmGame.RChallengeManager.EPlayableCharacters Character, out BmSDK.TArray<int> Goals)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RChallengeGoalDefinitions.FetchCombatGoalInfo", true);
         byte* paramsPtr = stackalloc byte[32];

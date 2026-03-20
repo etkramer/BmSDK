@@ -31,7 +31,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: GetBuildChangelistNumber
     /// </summary>
-    public unsafe int GetBuildChangelistNumber()
+    public unsafe virtual int GetBuildChangelistNumber()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetBuildChangelistNumber", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -49,7 +49,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: GetEngineVersion
     /// </summary>
-    public unsafe int GetEngineVersion()
+    public unsafe virtual int GetEngineVersion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetEngineVersion", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -67,7 +67,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: GetSystemTime
     /// </summary>
-    public unsafe void GetSystemTime(out int Year, out int Month, out int DayOfWeek, out int Day, out int Hour, out int Min, out int Sec, out int MSec)
+    public unsafe virtual void GetSystemTime(out int Year, out int Month, out int DayOfWeek, out int Day, out int Hour, out int Min, out int Sec, out int MSec)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetSystemTime", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -93,7 +93,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: TimeStamp
     /// </summary>
-    public unsafe BmSDK.FString TimeStamp()
+    public unsafe virtual BmSDK.FString TimeStamp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TimeStamp", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -111,7 +111,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: TransformVectorByRotation
     /// </summary>
-    public unsafe System.Numerics.Vector3 TransformVectorByRotation(BmSDK.Rotator SourceRotation, System.Numerics.Vector3 SourceVector, bool bInverse = default)
+    public unsafe virtual System.Numerics.Vector3 TransformVectorByRotation(BmSDK.Rotator SourceRotation, System.Numerics.Vector3 SourceVector, bool bInverse = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.TransformVectorByRotation", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -132,7 +132,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: IsCapturingMovie
     /// </summary>
-    public unsafe bool IsCapturingMovie()
+    public unsafe virtual bool IsCapturingMovie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsCapturingMovie", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: IsInPIE
     /// </summary>
-    public unsafe bool IsInPIE()
+    public unsafe virtual bool IsInPIE()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsInPIE", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -168,7 +168,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: GetPackageName
     /// </summary>
-    public unsafe BmSDK.FName GetPackageName()
+    public unsafe virtual BmSDK.FName GetPackageName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetPackageName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -179,7 +179,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: IsPendingKill
     /// </summary>
-    public unsafe bool IsPendingKill()
+    public unsafe virtual bool IsPendingKill()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsPendingKill", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -298,7 +298,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: SphereIntersectingLine
     /// </summary>
-    public unsafe bool SphereIntersectingLine(System.Numerics.Vector3 SphereOrigin, float SphereRadius, System.Numerics.Vector3 LineOrigin, System.Numerics.Vector3 LineDir, out System.Numerics.Vector3 ClosestPoint1, out System.Numerics.Vector3 ClosestPoint2)
+    public unsafe virtual bool SphereIntersectingLine(System.Numerics.Vector3 SphereOrigin, float SphereRadius, System.Numerics.Vector3 LineOrigin, System.Numerics.Vector3 LineDir, out System.Numerics.Vector3 ClosestPoint1, out System.Numerics.Vector3 ClosestPoint2)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SphereIntersectingLine", true);
         byte* paramsPtr = stackalloc byte[68];
@@ -322,7 +322,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: PointDistSquaredToLineSegment
     /// </summary>
-    public unsafe float PointDistSquaredToLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
+    public unsafe virtual float PointDistSquaredToLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistSquaredToLineSegment", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -343,7 +343,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: PointDistAlongLineSegment
     /// </summary>
-    public unsafe float PointDistAlongLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
+    public unsafe virtual float PointDistAlongLineSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistAlongLineSegment", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -364,7 +364,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: PointDistAlongLine
     /// </summary>
-    public unsafe float PointDistAlongLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
+    public unsafe virtual float PointDistAlongLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistAlongLine", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -385,7 +385,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: PointDistToSegment
     /// </summary>
-    public unsafe float PointDistToSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, out System.Numerics.Vector3 OutClosestPoint)
+    public unsafe virtual float PointDistToSegment(System.Numerics.Vector3 Point, System.Numerics.Vector3 StartPoint, System.Numerics.Vector3 EndPoint, out System.Numerics.Vector3 OutClosestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistToSegment", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -407,7 +407,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: PointDistToLine
     /// </summary>
-    public unsafe float PointDistToLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin, out System.Numerics.Vector3 OutClosestPoint)
+    public unsafe virtual float PointDistToLine(System.Numerics.Vector3 Point, System.Numerics.Vector3 Line, System.Numerics.Vector3 Origin, out System.Numerics.Vector3 OutClosestPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.PointDistToLine", true);
         byte* paramsPtr = stackalloc byte[52];
@@ -489,7 +489,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: SaveConfig
     /// </summary>
-    public unsafe void SaveConfig()
+    public unsafe virtual void SaveConfig()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.SaveConfig", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -935,7 +935,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: EvalInterpCurveVector2D
     /// </summary>
-    public unsafe System.Numerics.Vector2 EvalInterpCurveVector2D(BmSDK.GameObject.FInterpCurveVector2D Vector2DCurve, float InVal)
+    public unsafe virtual System.Numerics.Vector2 EvalInterpCurveVector2D(BmSDK.GameObject.FInterpCurveVector2D Vector2DCurve, float InVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveVector2D", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -955,7 +955,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: EvalInterpCurveVector
     /// </summary>
-    public unsafe System.Numerics.Vector3 EvalInterpCurveVector(BmSDK.GameObject.FInterpCurveVector VectorCurve, float InVal)
+    public unsafe virtual System.Numerics.Vector3 EvalInterpCurveVector(BmSDK.GameObject.FInterpCurveVector VectorCurve, float InVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveVector", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -975,7 +975,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: EvalInterpCurveFloat
     /// </summary>
-    public unsafe float EvalInterpCurveFloat(BmSDK.GameObject.FInterpCurveFloat FloatCurve, float InVal)
+    public unsafe virtual float EvalInterpCurveFloat(BmSDK.GameObject.FInterpCurveFloat FloatCurve, float InVal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.EvalInterpCurveFloat", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -1385,7 +1385,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: IsA
     /// </summary>
-    public unsafe bool IsA(BmSDK.FName ClassName)
+    public unsafe virtual bool IsA(BmSDK.FName ClassName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.IsA", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -2057,7 +2057,7 @@ public partial class GameObject : BmSDK.IGameObject
     /// <summary>
     /// Function: GetYawFromDirection
     /// </summary>
-    public unsafe int GetYawFromDirection(System.Numerics.Vector3 Direction)
+    public unsafe virtual int GetYawFromDirection(System.Numerics.Vector3 Direction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Core.Object.GetYawFromDirection", true);
         byte* paramsPtr = stackalloc byte[16];

@@ -47,7 +47,7 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: ActivateOutputs
     /// </summary>
-    public unsafe void ActivateOutputs()
+    public unsafe virtual void ActivateOutputs()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChallengeModifiers.ActivateOutputs", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -58,7 +58,7 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChallengeModifiers.Update", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -70,7 +70,7 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: SetUpPlayerController
     /// </summary>
-    public unsafe void SetUpPlayerController()
+    public unsafe virtual void SetUpPlayerController()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChallengeModifiers.SetUpPlayerController", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: IsModifierAllowedForCustom
     /// </summary>
-    public unsafe bool IsModifierAllowedForCustom(int ModifierEnum)
+    public unsafe virtual bool IsModifierAllowedForCustom(int ModifierEnum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChallengeModifiers.IsModifierAllowedForCustom", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RSeqAct_ChallengeModifiers : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_ChallengeModifiers.Activated", true);
         byte* paramsPtr = stackalloc byte[16];

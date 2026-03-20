@@ -71,7 +71,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: CanPerformNextComboMove
     /// </summary>
-    public unsafe bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
+    public unsafe override bool CanPerformNextComboMove(bool bSpecialMove = default, bool bStrike = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.CanPerformNextComboMove", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -84,7 +84,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: PlayFreezeReaction
     /// </summary>
-    public unsafe BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFreezeReaction()
+    public unsafe virtual BmSDK.BmGame.RAnimUtil_PosePlayer.FTransitionId PlayFreezeReaction()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.PlayFreezeReaction", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -95,7 +95,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: ReturnToNormalCamera
     /// </summary>
-    public unsafe void ReturnToNormalCamera()
+    public unsafe virtual void ReturnToNormalCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.ReturnToNormalCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -106,7 +106,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: StrikeContact
     /// </summary>
-    public unsafe void StrikeContact(bool bPreStrike)
+    public unsafe override void StrikeContact(bool bPreStrike)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.StrikeContact", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -118,7 +118,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: SafeToInitiateNextAttack
     /// </summary>
-    public unsafe void SafeToInitiateNextAttack()
+    public unsafe virtual void SafeToInitiateNextAttack()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.SafeToInitiateNextAttack", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -129,7 +129,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: UpdateSlowMo
     /// </summary>
-    public unsafe void UpdateSlowMo(float DeltaTime)
+    public unsafe override void UpdateSlowMo(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.UpdateSlowMo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -141,7 +141,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: DoesCameraMaintainLos
     /// </summary>
-    public unsafe bool DoesCameraMaintainLos(BmSDK.BmGame.RInGameCinematicCam CinematicCamera)
+    public unsafe override bool DoesCameraMaintainLos(BmSDK.BmGame.RInGameCinematicCam CinematicCamera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.DoesCameraMaintainLos", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -153,7 +153,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: TryToPlayCamera
     /// </summary>
-    public unsafe bool TryToPlayCamera(BmSDK.BmGame.RInGameCinematicCam CinematicCamera, BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default)
+    public unsafe virtual bool TryToPlayCamera(BmSDK.BmGame.RInGameCinematicCam CinematicCamera, BmSDK.FName AnimName, BmSDK.Engine.AnimSet TheAnimSet, bool bCamMirrored, float FOV = default, bool bHardCut = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.TryToPlayCamera", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -170,7 +170,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: PlayFinisherCameraAnim
     /// </summary>
-    public unsafe void PlayFinisherCameraAnim(System.Numerics.Vector3 ref_position, System.Numerics.Vector3 ref_direction, BmSDK.FName primary_camera, BmSDK.FName backup_camera)
+    public unsafe virtual void PlayFinisherCameraAnim(System.Numerics.Vector3 ref_position, System.Numerics.Vector3 ref_direction, BmSDK.FName primary_camera, BmSDK.FName backup_camera)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.PlayFinisherCameraAnim", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -185,7 +185,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: StartFinalBlowCamera
     /// </summary>
-    public unsafe void StartFinalBlowCamera()
+    public unsafe virtual void StartFinalBlowCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.StartFinalBlowCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -196,7 +196,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: GetFlipOverHeadAnim
     /// </summary>
-    public unsafe BmSDK.FName GetFlipOverHeadAnim()
+    public unsafe virtual BmSDK.FName GetFlipOverHeadAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.GetFlipOverHeadAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -207,7 +207,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: GetBeatdownStrikeAnim
     /// </summary>
-    public unsafe BmSDK.FName GetBeatdownStrikeAnim()
+    public unsafe virtual BmSDK.FName GetBeatdownStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.GetBeatdownStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -218,7 +218,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: GetCustomStrikeAnim
     /// </summary>
-    public unsafe BmSDK.FName GetCustomStrikeAnim()
+    public unsafe virtual BmSDK.FName GetCustomStrikeAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.GetCustomStrikeAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -229,7 +229,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: IsFinalBlow
     /// </summary>
-    public unsafe bool IsFinalBlow()
+    public unsafe virtual bool IsFinalBlow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.IsFinalBlow", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -240,7 +240,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: ShouldSlowMo
     /// </summary>
-    public unsafe bool ShouldSlowMo()
+    public unsafe override bool ShouldSlowMo()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.ShouldSlowMo", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -251,7 +251,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: ShouldStartFinalBlowCam
     /// </summary>
-    public unsafe bool ShouldStartFinalBlowCam()
+    public unsafe override bool ShouldStartFinalBlowCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.ShouldStartFinalBlowCam", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -262,7 +262,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: GetImpactPS
     /// </summary>
-    public unsafe BmSDK.Engine.ParticleSystem GetImpactPS(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat HitPawn)
+    public unsafe override BmSDK.Engine.ParticleSystem GetImpactPS(BmSDK.BmGame.RPawnCombat.DamageResult DmgResult, BmSDK.BmGame.RPawnCombat HitPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.GetImpactPS", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -275,7 +275,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: GetStrikeTargetLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetStrikeTargetLocation()
+    public unsafe override System.Numerics.Vector3 GetStrikeTargetLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.GetStrikeTargetLocation", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -286,7 +286,7 @@ public partial class RCombatMove_FreezeBeatUp : BmSDK.BmGame.RCombatMove_FreezeB
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_FreezeBeatUp.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

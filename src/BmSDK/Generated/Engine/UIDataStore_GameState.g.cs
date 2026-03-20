@@ -31,7 +31,7 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     /// <summary>
     /// Function: NotifyGameSessionEnded
     /// </summary>
-    public unsafe bool NotifyGameSessionEnded()
+    public unsafe override bool NotifyGameSessionEnded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore_GameState.NotifyGameSessionEnded", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -51,7 +51,7 @@ public partial class UIDataStore_GameState : BmSDK.Engine.UIDataStore, BmSDK.IGa
     /// <summary>
     /// Function: OnRefreshDataFieldValue
     /// </summary>
-    public unsafe void OnRefreshDataFieldValue()
+    public unsafe virtual void OnRefreshDataFieldValue()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataStore_GameState.OnRefreshDataFieldValue", true);
         byte* paramsPtr = stackalloc byte[0];

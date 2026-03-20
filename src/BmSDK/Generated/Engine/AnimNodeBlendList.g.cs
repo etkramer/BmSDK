@@ -36,7 +36,7 @@ public partial class AnimNodeBlendList : BmSDK.Engine.AnimNodeBlendBase, BmSDK.I
     /// <summary>
     /// Function: SetActiveChild
     /// </summary>
-    public unsafe void SetActiveChild(int ChildIndex, float BlendTime)
+    public unsafe virtual void SetActiveChild(int ChildIndex, float BlendTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AnimNodeBlendList.SetActiveChild", true);
         byte* paramsPtr = stackalloc byte[8];

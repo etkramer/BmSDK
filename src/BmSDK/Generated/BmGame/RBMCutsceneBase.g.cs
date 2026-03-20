@@ -71,7 +71,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetFOV
     /// </summary>
-    public unsafe void SetFOV(float NewFOV)
+    public unsafe virtual void SetFOV(float NewFOV)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.SetFOV", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: Skip
     /// </summary>
-    public unsafe void Skip()
+    public unsafe virtual void Skip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.Skip", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: CanSkip
     /// </summary>
-    public unsafe bool CanSkip()
+    public unsafe virtual bool CanSkip()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.CanSkip", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: PickCamera
     /// </summary>
-    public unsafe void PickCamera()
+    public unsafe virtual void PickCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.PickCamera", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -116,7 +116,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: InitialiseCutscene
     /// </summary>
-    public unsafe void InitialiseCutscene(BmSDK.BmGame.RPlayerController NewCutsceneOwner, BmSDK.BmGame.RPawn NewCutsceneTarget)
+    public unsafe virtual void InitialiseCutscene(BmSDK.BmGame.RPlayerController NewCutsceneOwner, BmSDK.BmGame.RPawn NewCutsceneTarget)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.InitialiseCutscene", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -129,7 +129,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetCamFocusLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetCamFocusLocation()
+    public unsafe virtual System.Numerics.Vector3 GetCamFocusLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.GetCamFocusLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -140,7 +140,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: EndCam
     /// </summary>
-    public unsafe void EndCam()
+    public unsafe virtual void EndCam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.EndCam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -151,7 +151,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: GetTargetPawnLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTargetPawnLocation()
+    public unsafe virtual System.Numerics.Vector3 GetTargetPawnLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.GetTargetPawnLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -162,7 +162,7 @@ public partial class RBMCutsceneBase : BmSDK.Engine.CameraActor, BmSDK.IGameObje
     /// <summary>
     /// Function: InitialiseBoneFollowers
     /// </summary>
-    public unsafe void InitialiseBoneFollowers(BmSDK.FName TargetBoneToFollow)
+    public unsafe virtual void InitialiseBoneFollowers(BmSDK.FName TargetBoneToFollow)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMCutsceneBase.InitialiseBoneFollowers", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class AITree : BmSDK.Engine.K2GraphBase, BmSDK.IGameObject
     /// <summary>
     /// Function: EvaluateTree
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.Class> EvaluateTree(BmSDK.Engine.AIController InAI, out BmSDK.Engine.AITree.FAITreeHandle Handle)
+    public unsafe virtual BmSDK.TArray<BmSDK.Class> EvaluateTree(BmSDK.Engine.AIController InAI, out BmSDK.Engine.AITree.FAITreeHandle Handle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AITree.EvaluateTree", true);
         byte* paramsPtr = stackalloc byte[64];
@@ -56,7 +56,7 @@ public partial class AITree : BmSDK.Engine.K2GraphBase, BmSDK.IGameObject
     /// <summary>
     /// Function: SetActiveRoot
     /// </summary>
-    public unsafe bool SetActiveRoot(BmSDK.FName InName, out BmSDK.Engine.AITree.FAITreeHandle Handle)
+    public unsafe virtual bool SetActiveRoot(BmSDK.FName InName, out BmSDK.Engine.AITree.FAITreeHandle Handle)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.AITree.SetActiveRoot", true);
         byte* paramsPtr = stackalloc byte[60];

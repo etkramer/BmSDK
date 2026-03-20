@@ -71,7 +71,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.ExitMove", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: StartChargeUpFX
     /// </summary>
-    public unsafe void StartChargeUpFX(int Variation)
+    public unsafe virtual void StartChargeUpFX(int Variation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.StartChargeUpFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: OnTryQueueNextThrow
     /// </summary>
-    public unsafe void OnTryQueueNextThrow()
+    public unsafe virtual void OnTryQueueNextThrow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.OnTryQueueNextThrow", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -105,7 +105,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: OnReleaseShurikan
     /// </summary>
-    public unsafe void OnReleaseShurikan()
+    public unsafe virtual void OnReleaseShurikan()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.OnReleaseShurikan", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -116,7 +116,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: GetThrowTransitionName
     /// </summary>
-    public unsafe BmSDK.FName GetThrowTransitionName(int Variation)
+    public unsafe virtual BmSDK.FName GetThrowTransitionName(int Variation)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.GetThrowTransitionName", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: SelectThrowVariation
     /// </summary>
-    public unsafe void SelectThrowVariation()
+    public unsafe virtual void SelectThrowVariation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.SelectThrowVariation", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -139,7 +139,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: IsAttacking
     /// </summary>
-    public unsafe bool IsAttacking()
+    public unsafe override bool IsAttacking()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.IsAttacking", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -150,7 +150,7 @@ public partial class RCombatMove_RasDemonBlast : BmSDK.BmGame.RCombatMove_RasAtt
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RCombatMove_RasDemonBlast.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

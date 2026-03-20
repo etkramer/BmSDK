@@ -71,7 +71,7 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCatwomanBriefcases.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -83,7 +83,7 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: ModifyWeaponConfig
     /// </summary>
-    public unsafe void ModifyWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfigToMod)
+    public unsafe virtual void ModifyWeaponConfig(BmSDK.BmGame.RWeaponConfig WeaponConfigToMod)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCatwomanBriefcases.ModifyWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: ItemRemovedFromInvManager
     /// </summary>
-    public unsafe void ItemRemovedFromInvManager()
+    public unsafe override void ItemRemovedFromInvManager()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCatwomanBriefcases.ItemRemovedFromInvManager", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: GivenTo
     /// </summary>
-    public unsafe void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
+    public unsafe override void GivenTo(BmSDK.Engine.Pawn thisPawn, bool bDoNotActivate = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCatwomanBriefcases.GivenTo", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -119,7 +119,7 @@ public partial class RBMWeaponCatwomanBriefcases : BmSDK.BmGame.RBMWeapon, BmSDK
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponCatwomanBriefcases.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -66,7 +66,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetCurrentWeighting
     /// </summary>
-    public unsafe float GetCurrentWeighting()
+    public unsafe virtual float GetCurrentWeighting()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.GetCurrentWeighting", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -77,7 +77,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetAnimRefYaw
     /// </summary>
-    public unsafe int GetAnimRefYaw()
+    public unsafe virtual int GetAnimRefYaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.GetAnimRefYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -88,7 +88,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetAnimRefPoint
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimRefPoint()
+    public unsafe virtual System.Numerics.Vector3 GetAnimRefPoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.GetAnimRefPoint", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -99,7 +99,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetMoveLoc
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetMoveLoc()
+    public unsafe virtual System.Numerics.Vector3 GetMoveLoc()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.GetMoveLoc", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -110,7 +110,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: Destroyed
     /// </summary>
-    public unsafe void Destroyed()
+    public unsafe override void Destroyed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.Destroyed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -121,7 +121,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: PreStreamOut
     /// </summary>
-    public unsafe void PreStreamOut()
+    public unsafe override void PreStreamOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.PreStreamOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -132,7 +132,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: CheckForWeaponLoad
     /// </summary>
-    public unsafe void CheckForWeaponLoad()
+    public unsafe virtual void CheckForWeaponLoad()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.CheckForWeaponLoad", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -143,7 +143,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: GetObstacleBoudingShape
     /// </summary>
-    public unsafe bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
+    public unsafe virtual bool GetObstacleBoudingShape(out BmSDK.TArray<System.Numerics.Vector3> Shape)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.GetObstacleBoudingShape", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -155,7 +155,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -166,7 +166,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: UnRegisterObstacle
     /// </summary>
-    public unsafe void UnRegisterObstacle()
+    public unsafe virtual void UnRegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.UnRegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -184,7 +184,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: RegisterObstacle
     /// </summary>
-    public unsafe void RegisterObstacle()
+    public unsafe virtual void RegisterObstacle()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.RegisterObstacle", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -202,7 +202,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: CancelWeaponLoading
     /// </summary>
-    public unsafe void CancelWeaponLoading()
+    public unsafe virtual void CancelWeaponLoading()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.CancelWeaponLoading", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RPredatorGunLockerBase : BmSDK.Engine.Actor, BmSDK.Engine.I
     /// <summary>
     /// Function: LoadWeapon
     /// </summary>
-    public unsafe bool LoadWeapon(BmSDK.FString WeaponPackageString)
+    public unsafe virtual bool LoadWeapon(BmSDK.FString WeaponPackageString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RPredatorGunLockerBase.LoadWeapon", true);
         byte* paramsPtr = stackalloc byte[16];

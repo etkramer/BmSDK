@@ -36,7 +36,7 @@ public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: DeactivatePP
     /// </summary>
-    public unsafe void DeactivatePP(BmSDK.Engine.LocalPlayer Player)
+    public unsafe virtual void DeactivatePP(BmSDK.Engine.LocalPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ModifyPostProcess.DeactivatePP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: UpdatePP
     /// </summary>
-    public unsafe void UpdatePP(BmSDK.Engine.LocalPlayer Player)
+    public unsafe virtual void UpdatePP(BmSDK.Engine.LocalPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ModifyPostProcess.UpdatePP", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RSeqAct_ModifyPostProcess : BmSDK.Engine.SeqAct_Latent, BmS
     /// <summary>
     /// Function: ActivatePP
     /// </summary>
-    public unsafe void ActivatePP(BmSDK.Engine.LocalPlayer Player)
+    public unsafe virtual void ActivatePP(BmSDK.Engine.LocalPlayer Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_ModifyPostProcess.ActivatePP", true);
         byte* paramsPtr = stackalloc byte[4];

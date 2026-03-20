@@ -36,7 +36,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: GotoCombat
     /// </summary>
-    public unsafe void GotoCombat()
+    public unsafe virtual void GotoCombat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.GotoCombat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: SmashWindow
     /// </summary>
-    public unsafe void SmashWindow()
+    public unsafe virtual void SmashWindow()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.SmashWindow", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -69,7 +69,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: CanBeHitInCombat
     /// </summary>
-    public unsafe bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
+    public unsafe override bool CanBeHitInCombat(BmSDK.BmGame.RDamageType DamageType)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.CanBeHitInCombat", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RBMBehaviour_NinjaSpawn : BmSDK.BmGame.RBMBehaviour, BmSDK.
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_NinjaSpawn.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];

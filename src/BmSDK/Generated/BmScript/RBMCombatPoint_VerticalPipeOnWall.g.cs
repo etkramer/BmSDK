@@ -71,7 +71,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: WeaponRemoved
     /// </summary>
-    public unsafe void WeaponRemoved(BmSDK.BmGame.RBMWeapon SpawnedWeapon)
+    public unsafe override void WeaponRemoved(BmSDK.BmGame.RBMWeapon SpawnedWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.WeaponRemoved", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -83,7 +83,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: WeaponRemovalFX
     /// </summary>
-    public unsafe void WeaponRemovalFX(BmSDK.BmGame.RBMWeapon SpawnedWeapon)
+    public unsafe override void WeaponRemovalFX(BmSDK.BmGame.RBMWeapon SpawnedWeapon)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.WeaponRemovalFX", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -95,7 +95,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: GetAnimInfo_Yaw
     /// </summary>
-    public unsafe float GetAnimInfo_Yaw()
+    public unsafe override float GetAnimInfo_Yaw()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.GetAnimInfo_Yaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -106,7 +106,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: GetAnimInfo_AimAtLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_AimAtLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.GetAnimInfo_AimAtLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -117,7 +117,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: GetAnimInfo_Location
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetAnimInfo_Location()
+    public unsafe override System.Numerics.Vector3 GetAnimInfo_Location()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.GetAnimInfo_Location", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -128,7 +128,7 @@ public partial class RBMCombatPoint_VerticalPipeOnWall : BmSDK.BmGame.RBMCombatP
     /// <summary>
     /// Function: GetAnimInfo_Name
     /// </summary>
-    public unsafe BmSDK.FName GetAnimInfo_Name()
+    public unsafe override BmSDK.FName GetAnimInfo_Name()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatPoint_VerticalPipeOnWall.GetAnimInfo_Name", true);
         byte* paramsPtr = stackalloc byte[8];

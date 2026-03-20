@@ -71,7 +71,7 @@ public partial class RBMWeaponPenguinLauncher : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPenguinLauncher.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -99,7 +99,7 @@ public partial class RBMWeaponPenguinLauncher : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: GetRECHitReactionAnimName
     /// </summary>
-    public unsafe BmSDK.FName GetRECHitReactionAnimName()
+    public unsafe override BmSDK.FName GetRECHitReactionAnimName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPenguinLauncher.GetRECHitReactionAnimName", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -110,7 +110,7 @@ public partial class RBMWeaponPenguinLauncher : BmSDK.BmGame.RBMWeaponRanged, Bm
     /// <summary>
     /// Function: GetRECHitReactionAnimset
     /// </summary>
-    public unsafe BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
+    public unsafe override BmSDK.Engine.AnimSet GetRECHitReactionAnimset()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponPenguinLauncher.GetRECHitReactionAnimset", true);
         byte* paramsPtr = stackalloc byte[4];

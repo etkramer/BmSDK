@@ -71,7 +71,7 @@ public partial class NxCylindricalForceFieldCapsule : BmSDK.Engine.NxCylindrical
     /// <summary>
     /// Function: DoInitRBPhys
     /// </summary>
-    public unsafe void DoInitRBPhys()
+    public unsafe override void DoInitRBPhys()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.NxCylindricalForceFieldCapsule.DoInitRBPhys", true);
         byte* paramsPtr = stackalloc byte[0];

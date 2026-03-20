@@ -71,7 +71,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SetInvestigateData
     /// </summary>
-    public unsafe void SetInvestigateData()
+    public unsafe virtual void SetInvestigateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SetInvestigateData", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: ClearInvestigateData
     /// </summary>
-    public unsafe void ClearInvestigateData()
+    public unsafe virtual void ClearInvestigateData()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.ClearInvestigateData", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -93,7 +93,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -105,7 +105,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: UpdateGodRay
     /// </summary>
-    public unsafe void UpdateGodRay(float DeltaTime)
+    public unsafe virtual void UpdateGodRay(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.UpdateGodRay", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -117,7 +117,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: UpdateAnim
     /// </summary>
-    public unsafe void UpdateAnim()
+    public unsafe virtual void UpdateAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.UpdateAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -128,7 +128,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: IsPlayingAnim
     /// </summary>
-    public unsafe bool IsPlayingAnim()
+    public unsafe virtual bool IsPlayingAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.IsPlayingAnim", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -139,7 +139,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: HitByExplosion
     /// </summary>
-    public unsafe void HitByExplosion()
+    public unsafe override void HitByExplosion()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.HitByExplosion", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -150,7 +150,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: LidShouldBeOpen
     /// </summary>
-    public unsafe bool LidShouldBeOpen()
+    public unsafe virtual bool LidShouldBeOpen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.LidShouldBeOpen", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -161,7 +161,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SwitchToCurrentDamageState
     /// </summary>
-    public unsafe void SwitchToCurrentDamageState()
+    public unsafe virtual void SwitchToCurrentDamageState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SwitchToCurrentDamageState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SwitchToNextDamageState
     /// </summary>
-    public unsafe void SwitchToNextDamageState()
+    public unsafe virtual void SwitchToNextDamageState()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SwitchToNextDamageState", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SwitchToDamageState
     /// </summary>
-    public unsafe void SwitchToDamageState(int stateNum)
+    public unsafe virtual void SwitchToDamageState(int stateNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SwitchToDamageState", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -195,7 +195,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SetLightState
     /// </summary>
-    public unsafe void SetLightState(BmSDK.BmScript.RGrundyDrumPad.eDrumPadLightStates newLightState, bool ForceChange = default)
+    public unsafe virtual void SetLightState(BmSDK.BmScript.RGrundyDrumPad.eDrumPadLightStates newLightState, bool ForceChange = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SetLightState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -208,7 +208,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SetBlownUp
     /// </summary>
-    public unsafe void SetBlownUp(bool isBlownUp, bool playExplodeFX)
+    public unsafe virtual void SetBlownUp(bool isBlownUp, bool playExplodeFX)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SetBlownUp", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -221,7 +221,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: SetSmokeState
     /// </summary>
-    public unsafe void SetSmokeState(bool bEnabled)
+    public unsafe virtual void SetSmokeState(bool bEnabled)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.SetSmokeState", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -233,7 +233,7 @@ public partial class RGrundyDrumPad : BmSDK.BmGame.RGrundyDrumPadBase, BmSDK.IGa
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise(BmSDK.BmScript.RPawnBossGrundy Grund)
+    public unsafe virtual void Initialise(BmSDK.BmScript.RPawnBossGrundy Grund)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RGrundyDrumPad.Initialise", true);
         byte* paramsPtr = stackalloc byte[8];

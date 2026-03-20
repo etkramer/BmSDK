@@ -47,7 +47,7 @@ public partial class RSeqAct_SetMadHatterMask : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: GetRequiredMeshIndex
     /// </summary>
-    public unsafe int GetRequiredMeshIndex()
+    public unsafe virtual int GetRequiredMeshIndex()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetMadHatterMask.GetRequiredMeshIndex", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -58,7 +58,7 @@ public partial class RSeqAct_SetMadHatterMask : BmSDK.Engine.SequenceAction, BmS
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_SetMadHatterMask.Activated", true);
         byte* paramsPtr = stackalloc byte[4];

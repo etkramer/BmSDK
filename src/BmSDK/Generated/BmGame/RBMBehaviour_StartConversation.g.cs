@@ -47,7 +47,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: PlayNextLine
     /// </summary>
-    public unsafe void PlayNextLine()
+    public unsafe virtual void PlayNextLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.PlayNextLine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.Tick", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnDeactivate
     /// </summary>
-    public unsafe void OnDeactivate()
+    public unsafe override void OnDeactivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.OnDeactivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: ContainsSpeaker
     /// </summary>
-    public unsafe bool ContainsSpeaker(BmSDK.Engine.Pawn Speaker)
+    public unsafe virtual bool ContainsSpeaker(BmSDK.Engine.Pawn Speaker)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.ContainsSpeaker", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -104,7 +104,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: SetPawnFromVariable
     /// </summary>
-    public unsafe void SetPawnFromVariable(int I)
+    public unsafe virtual void SetPawnFromVariable(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.SetPawnFromVariable", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -116,7 +116,7 @@ public partial class RBMBehaviour_StartConversation : BmSDK.BmGame.RBMBehaviour_
     /// <summary>
     /// Function: SetVariableLinkExpectedType
     /// </summary>
-    public unsafe void SetVariableLinkExpectedType(int I)
+    public unsafe virtual void SetVariableLinkExpectedType(int I)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMBehaviour_StartConversation.SetVariableLinkExpectedType", true);
         byte* paramsPtr = stackalloc byte[4];

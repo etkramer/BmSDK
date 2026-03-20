@@ -71,7 +71,7 @@ public partial class VolumePathNode : BmSDK.Engine.PathNode, BmSDK.IGameObject
     /// <summary>
     /// Function: GetReachedPointFrom
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetReachedPointFrom(System.Numerics.Vector3 StartPoint)
+    public unsafe virtual System.Numerics.Vector3 GetReachedPointFrom(System.Numerics.Vector3 StartPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.VolumePathNode.GetReachedPointFrom", true);
         byte* paramsPtr = stackalloc byte[24];

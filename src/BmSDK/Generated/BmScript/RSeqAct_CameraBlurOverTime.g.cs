@@ -36,7 +36,7 @@ public partial class RSeqAct_CameraBlurOverTime : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: InterpBlurValues
     /// </summary>
-    public unsafe void InterpBlurValues(float Interp)
+    public unsafe virtual void InterpBlurValues(float Interp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CameraBlurOverTime.InterpBlurValues", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RSeqAct_CameraBlurOverTime : BmSDK.Engine.SeqAct_Latent, Bm
     /// <summary>
     /// Function: Update
     /// </summary>
-    public unsafe bool Update(float DeltaTime)
+    public unsafe override bool Update(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RSeqAct_CameraBlurOverTime.Update", true);
         byte* paramsPtr = stackalloc byte[12];

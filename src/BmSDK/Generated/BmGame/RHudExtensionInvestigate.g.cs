@@ -36,7 +36,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: ScanComplete
     /// </summary>
-    public unsafe void ScanComplete()
+    public unsafe virtual void ScanComplete()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.ScanComplete", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: HideGadgetHUD
     /// </summary>
-    public unsafe void HideGadgetHUD(bool bHide)
+    public unsafe virtual void HideGadgetHUD(bool bHide)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.HideGadgetHUD", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetPrompt
     /// </summary>
-    public unsafe void SetPrompt(BmSDK.BmGame.RHudExtensionInvestigate.ScannerPrompt ScanID)
+    public unsafe virtual void SetPrompt(BmSDK.BmGame.RHudExtensionInvestigate.ScannerPrompt ScanID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetPrompt", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -71,7 +71,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetEvidenceDetail
     /// </summary>
-    public unsafe void SetEvidenceDetail(BmSDK.FString _CurrentEvidenceDetailString)
+    public unsafe virtual void SetEvidenceDetail(BmSDK.FString _CurrentEvidenceDetailString)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetEvidenceDetail", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -83,7 +83,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetContentsType
     /// </summary>
-    public unsafe void SetContentsType(BmSDK.FString contents_type)
+    public unsafe virtual void SetContentsType(BmSDK.FString contents_type)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetContentsType", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -95,7 +95,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetContentsVisible
     /// </summary>
-    public unsafe void SetContentsVisible(bool bVisible)
+    public unsafe virtual void SetContentsVisible(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetContentsVisible", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -107,7 +107,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: MarkGrundyDrumBeat
     /// </summary>
-    public unsafe void MarkGrundyDrumBeat()
+    public unsafe virtual void MarkGrundyDrumBeat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.MarkGrundyDrumBeat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -118,7 +118,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetScannerVisible
     /// </summary>
-    public unsafe void SetScannerVisible(bool bVisible)
+    public unsafe virtual void SetScannerVisible(bool bVisible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetScannerVisible", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -130,7 +130,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: StopScanning
     /// </summary>
-    public unsafe void StopScanning()
+    public unsafe virtual void StopScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.StopScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: StartScanning
     /// </summary>
-    public unsafe void StartScanning()
+    public unsafe virtual void StartScanning()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.StartScanning", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetSmokePercentageInternal
     /// </summary>
-    public unsafe void SetSmokePercentageInternal(int SmokePercentage)
+    public unsafe virtual void SetSmokePercentageInternal(int SmokePercentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetSmokePercentageInternal", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -164,7 +164,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetSmokePercentage
     /// </summary>
-    public unsafe void SetSmokePercentage(int SmokePercentage)
+    public unsafe virtual void SetSmokePercentage(int SmokePercentage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetSmokePercentage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -176,7 +176,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetScannerCursor
     /// </summary>
-    public unsafe void SetScannerCursor(float X, float Y, BmSDK.FString EvidenceName, bool bNewItem, bool bScanned, bool bUnscannable, int NotFullyVisible, BmSDK.FString MessageTitle, BmSDK.FString Message)
+    public unsafe virtual void SetScannerCursor(float X, float Y, BmSDK.FString EvidenceName, bool bNewItem, bool bScanned, bool bUnscannable, int NotFullyVisible, BmSDK.FString MessageTitle, BmSDK.FString Message)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetScannerCursor", true);
         byte* paramsPtr = stackalloc byte[60];
@@ -196,7 +196,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetScannerCursorNone
     /// </summary>
-    public unsafe void SetScannerCursorNone()
+    public unsafe virtual void SetScannerCursorNone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetScannerCursorNone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetNPCCountString
     /// </summary>
-    public unsafe void SetNPCCountString(int Total, BmSDK.FString Str)
+    public unsafe virtual void SetNPCCountString(int Total, BmSDK.FString Str)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetNPCCountString", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -220,7 +220,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetNPCInfoCursor
     /// </summary>
-    public unsafe void SetNPCInfoCursor(float X, float Y, BmSDK.FString actorName, int NpcType, int HeartBeatType, int WeaponType, bool bIsArmoured)
+    public unsafe virtual void SetNPCInfoCursor(float X, float Y, BmSDK.FString actorName, int NpcType, int HeartBeatType, int WeaponType, bool bIsArmoured)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetNPCInfoCursor", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -238,7 +238,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetNPCInfoCursorNone
     /// </summary>
-    public unsafe void SetNPCInfoCursorNone()
+    public unsafe virtual void SetNPCInfoCursorNone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetNPCInfoCursorNone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -249,7 +249,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetInfoCursor
     /// </summary>
-    public unsafe void SetInfoCursor(float X, float Y, BmSDK.FString actorName, BmSDK.FString Title, BmSDK.FString Message, bool bWarningColour)
+    public unsafe virtual void SetInfoCursor(float X, float Y, BmSDK.FString actorName, BmSDK.FString Title, BmSDK.FString Message, bool bWarningColour)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetInfoCursor", true);
         byte* paramsPtr = stackalloc byte[48];
@@ -266,7 +266,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetInfoCursorNone
     /// </summary>
-    public unsafe void SetInfoCursorNone()
+    public unsafe virtual void SetInfoCursorNone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetInfoCursorNone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -277,7 +277,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetEvidenceCursor
     /// </summary>
-    public unsafe void SetEvidenceCursor(float X, float Y, BmSDK.FString EvidenceName, BmSDK.FString actorName, bool bScanned, bool bShowLine)
+    public unsafe virtual void SetEvidenceCursor(float X, float Y, BmSDK.FString EvidenceName, BmSDK.FString actorName, bool bScanned, bool bShowLine)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetEvidenceCursor", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -294,7 +294,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetEvidenceCursorNone
     /// </summary>
-    public unsafe void SetEvidenceCursorNone()
+    public unsafe virtual void SetEvidenceCursorNone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetEvidenceCursorNone", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -305,7 +305,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: CloseCurrentCursor
     /// </summary>
-    public unsafe void CloseCurrentCursor()
+    public unsafe virtual void CloseCurrentCursor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.CloseCurrentCursor", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -316,7 +316,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: CloseCurrentCursorUnless
     /// </summary>
-    public unsafe void CloseCurrentCursorUnless(BmSDK.BmGame.RHudExtensionInvestigate.EvidenceDisplayType type_exception)
+    public unsafe virtual void CloseCurrentCursorUnless(BmSDK.BmGame.RHudExtensionInvestigate.EvidenceDisplayType type_exception)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.CloseCurrentCursorUnless", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -328,7 +328,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SwitchToMode
     /// </summary>
-    public unsafe void SwitchToMode(int Mode, bool bInDesiredMode, BmSDK.FString TrailName)
+    public unsafe virtual void SwitchToMode(int Mode, bool bInDesiredMode, BmSDK.FString TrailName)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SwitchToMode", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -342,7 +342,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: UpdateNPCCounts
     /// </summary>
-    public unsafe void UpdateNPCCounts(int Armed, int UnArmed)
+    public unsafe virtual void UpdateNPCCounts(int Armed, int UnArmed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.UpdateNPCCounts", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -355,7 +355,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: SetScreenDepth
     /// </summary>
-    public unsafe void SetScreenDepth(float inDepth)
+    public unsafe virtual void SetScreenDepth(float inDepth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.SetScreenDepth", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -367,7 +367,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -378,7 +378,7 @@ public partial class RHudExtensionInvestigate : BmSDK.BmGame.RHudExtension, BmSD
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionInvestigate.Init", true);
         byte* paramsPtr = stackalloc byte[32];

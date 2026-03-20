@@ -31,7 +31,7 @@ public partial class UIDataProvider_OnlinePlayerDataBase : BmSDK.Engine.UIDataPr
     /// <summary>
     /// Function: OnUnregister
     /// </summary>
-    public unsafe void OnUnregister()
+    public unsafe virtual void OnUnregister()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerDataBase.OnUnregister", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -42,7 +42,7 @@ public partial class UIDataProvider_OnlinePlayerDataBase : BmSDK.Engine.UIDataPr
     /// <summary>
     /// Function: OnRegister
     /// </summary>
-    public unsafe void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
+    public unsafe virtual void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_OnlinePlayerDataBase.OnRegister", true);
         byte* paramsPtr = stackalloc byte[4];

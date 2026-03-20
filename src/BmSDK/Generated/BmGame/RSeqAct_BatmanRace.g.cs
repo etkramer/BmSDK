@@ -36,7 +36,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.Activated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: StartRace
     /// </summary>
-    public unsafe void StartRace()
+    public unsafe virtual void StartRace()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.StartRace", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: RaceOver
     /// </summary>
-    public unsafe void RaceOver()
+    public unsafe virtual void RaceOver()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.RaceOver", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -69,7 +69,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: RaceLost
     /// </summary>
-    public unsafe void RaceLost()
+    public unsafe virtual void RaceLost()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.RaceLost", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -80,7 +80,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: RaceWon
     /// </summary>
-    public unsafe void RaceWon()
+    public unsafe virtual void RaceWon()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.RaceWon", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -91,7 +91,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: SpawnWaypoints
     /// </summary>
-    public unsafe void SpawnWaypoints()
+    public unsafe virtual void SpawnWaypoints()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.SpawnWaypoints", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -102,7 +102,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: ActivateWaypoint
     /// </summary>
-    public unsafe void ActivateWaypoint()
+    public unsafe virtual void ActivateWaypoint()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.ActivateWaypoint", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -113,7 +113,7 @@ public partial class RSeqAct_BatmanRace : BmSDK.Engine.SeqAct_Latent, BmSDK.IGam
     /// <summary>
     /// Function: WaypointHit
     /// </summary>
-    public unsafe void WaypointHit(BmSDK.BmGame.RBatmanRaceWaypoint HitWaypoint)
+    public unsafe virtual void WaypointHit(BmSDK.BmGame.RBatmanRaceWaypoint HitWaypoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_BatmanRace.WaypointHit", true);
         byte* paramsPtr = stackalloc byte[4];

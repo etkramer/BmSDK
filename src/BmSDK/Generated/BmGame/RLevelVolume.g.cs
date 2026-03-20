@@ -71,7 +71,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: EvaluateAudioActivation
     /// </summary>
-    public unsafe float EvaluateAudioActivation()
+    public unsafe override float EvaluateAudioActivation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.EvaluateAudioActivation", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -89,7 +89,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ResetRoomIfNeeded
     /// </summary>
-    public unsafe void ResetRoomIfNeeded()
+    public unsafe virtual void ResetRoomIfNeeded()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.ResetRoomIfNeeded", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -111,7 +111,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: StartChapterSpecificLevels
     /// </summary>
-    public unsafe void StartChapterSpecificLevels()
+    public unsafe virtual void StartChapterSpecificLevels()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.StartChapterSpecificLevels", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -122,7 +122,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: StartLevelInPIE
     /// </summary>
-    public unsafe void StartLevelInPIE()
+    public unsafe virtual void StartLevelInPIE()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.StartLevelInPIE", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -133,7 +133,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: TrySwitchingLevelVolumes
     /// </summary>
-    public unsafe void TrySwitchingLevelVolumes()
+    public unsafe virtual void TrySwitchingLevelVolumes()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.TrySwitchingLevelVolumes", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -144,7 +144,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.UnTouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.Touch", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -171,7 +171,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: EnteredLevelVolume
     /// </summary>
-    public unsafe void EnteredLevelVolume()
+    public unsafe virtual void EnteredLevelVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.EnteredLevelVolume", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -182,7 +182,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: LevelVolumeReentered
     /// </summary>
-    public unsafe void LevelVolumeReentered()
+    public unsafe virtual void LevelVolumeReentered()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.LevelVolumeReentered", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -193,7 +193,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: LevelVolumeDeactivated
     /// </summary>
-    public unsafe void LevelVolumeDeactivated()
+    public unsafe virtual void LevelVolumeDeactivated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.LevelVolumeDeactivated", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -204,7 +204,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: LevelVolumeActivated
     /// </summary>
-    public unsafe void LevelVolumeActivated(bool LevelStart)
+    public unsafe virtual void LevelVolumeActivated(bool LevelStart)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.LevelVolumeActivated", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -216,7 +216,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: LevelEntered
     /// </summary>
-    public unsafe void LevelEntered(bool LevelStart = default)
+    public unsafe virtual void LevelEntered(bool LevelStart = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.LevelEntered", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -228,7 +228,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: AttemptToShowRoomName
     /// </summary>
-    public unsafe void AttemptToShowRoomName()
+    public unsafe virtual void AttemptToShowRoomName()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.AttemptToShowRoomName", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -239,7 +239,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: GetVisibleFlag
     /// </summary>
-    public unsafe BmSDK.FString GetVisibleFlag()
+    public unsafe virtual BmSDK.FString GetVisibleFlag()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.GetVisibleFlag", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -250,7 +250,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: TriggerEvents
     /// </summary>
-    public unsafe void TriggerEvents(BmSDK.BmGame.RPlayerController PC, bool Entered)
+    public unsafe virtual void TriggerEvents(BmSDK.BmGame.RPlayerController PC, bool Entered)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.TriggerEvents", true);
         byte* paramsPtr = stackalloc byte[28];
@@ -263,7 +263,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOverworldVolume
     /// </summary>
-    public unsafe bool IsOverworldVolume()
+    public unsafe virtual bool IsOverworldVolume()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.IsOverworldVolume", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -281,7 +281,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: DeactivateStreaming
     /// </summary>
-    public unsafe void DeactivateStreaming()
+    public unsafe virtual void DeactivateStreaming()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.DeactivateStreaming", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -299,7 +299,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: ActivateStreaming
     /// </summary>
-    public unsafe void ActivateStreaming(bool LevelStart, BmSDK.BmGame.RLevelVolume PredictionOwner = default)
+    public unsafe virtual void ActivateStreaming(bool LevelStart, BmSDK.BmGame.RLevelVolume PredictionOwner = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.ActivateStreaming", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -319,7 +319,7 @@ public partial class RLevelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Function: IsOnPersistentMap
     /// </summary>
-    public unsafe bool IsOnPersistentMap()
+    public unsafe virtual bool IsOnPersistentMap()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RLevelVolume.IsOnPersistentMap", true);
         byte* paramsPtr = stackalloc byte[4];

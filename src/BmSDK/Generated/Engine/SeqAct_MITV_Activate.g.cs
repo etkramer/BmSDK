@@ -36,7 +36,7 @@ public partial class SeqAct_MITV_Activate : BmSDK.Engine.SequenceAction, BmSDK.I
     /// <summary>
     /// Function: Activated
     /// </summary>
-    public unsafe void Activated()
+    public unsafe override void Activated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_MITV_Activate.Activated", true);
         byte* paramsPtr = stackalloc byte[8];

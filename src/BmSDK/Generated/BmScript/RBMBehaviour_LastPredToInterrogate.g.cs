@@ -47,7 +47,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: CanLookAtPlayer
     /// </summary>
-    public unsafe bool CanLookAtPlayer()
+    public unsafe override bool CanLookAtPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.CanLookAtPlayer", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -58,7 +58,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: SpawnReplacementAndDie
     /// </summary>
-    public unsafe void SpawnReplacementAndDie()
+    public unsafe virtual void SpawnReplacementAndDie()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.SpawnReplacementAndDie", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -81,7 +81,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: IsOnGround
     /// </summary>
-    public unsafe bool IsOnGround()
+    public unsafe virtual bool IsOnGround()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.IsOnGround", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -92,7 +92,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: HasGun
     /// </summary>
-    public unsafe bool HasGun()
+    public unsafe virtual bool HasGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.HasGun", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -103,7 +103,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: ChangeStance
     /// </summary>
-    public unsafe void ChangeStance()
+    public unsafe virtual void ChangeStance()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.ChangeStance", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -114,7 +114,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: SurrenderGun
     /// </summary>
-    public unsafe void SurrenderGun()
+    public unsafe virtual void SurrenderGun()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.SurrenderGun", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -125,7 +125,7 @@ public partial class RBMBehaviour_LastPredToInterrogate : BmSDK.BmGame.RBMBehavi
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_LastPredToInterrogate.OnActivate", true);
         byte* paramsPtr = stackalloc byte[4];

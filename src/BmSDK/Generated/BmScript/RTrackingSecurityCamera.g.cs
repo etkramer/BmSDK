@@ -71,7 +71,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: InitAlreadyHitByBatarang
     /// </summary>
-    public unsafe void InitAlreadyHitByBatarang()
+    public unsafe override void InitAlreadyHitByBatarang()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.InitAlreadyHitByBatarang", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -93,7 +93,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[80];
@@ -111,7 +111,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: TriggerCameraUpdate
     /// </summary>
-    public unsafe void TriggerCameraUpdate(bool bAllDestroyed)
+    public unsafe virtual void TriggerCameraUpdate(bool bAllDestroyed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.TriggerCameraUpdate", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -123,7 +123,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: SetInvestigateHighlighted
     /// </summary>
-    public unsafe void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
+    public unsafe override void SetInvestigateHighlighted(BmSDK.Engine.MaterialInstanceConstant highMat, bool On)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.SetInvestigateHighlighted", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -136,7 +136,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: StopDisabledSound
     /// </summary>
-    public unsafe void StopDisabledSound()
+    public unsafe virtual void StopDisabledSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.StopDisabledSound", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -147,7 +147,7 @@ public partial class RTrackingSecurityCamera : BmSDK.BmGame.RTrackingSecurityCam
     /// <summary>
     /// Function: StartDisabledSound
     /// </summary>
-    public unsafe void StartDisabledSound()
+    public unsafe virtual void StartDisabledSound()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTrackingSecurityCamera.StartDisabledSound", true);
         byte* paramsPtr = stackalloc byte[0];

@@ -71,7 +71,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// <summary>
     /// Function: PlayDiscoverBark
     /// </summary>
-    public unsafe void PlayDiscoverBark()
+    public unsafe override void PlayDiscoverBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.PlayDiscoverBark", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// <summary>
     /// Function: AssignCasualtyKick
     /// </summary>
-    public unsafe void AssignCasualtyKick(BmSDK.BmGame.RPawnVillain NewCas, System.Numerics.Vector3 KickLoc, BmSDK.FName KickBone)
+    public unsafe virtual void AssignCasualtyKick(BmSDK.BmGame.RPawnVillain NewCas, System.Numerics.Vector3 KickLoc, BmSDK.FName KickBone)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.AssignCasualtyKick", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -96,7 +96,7 @@ public partial class RAEC_Casualty_Sub_KickCas : BmSDK.BmGame.RAEC_Casualty_Sub_
     /// <summary>
     /// Function: NotifyFailed
     /// </summary>
-    public unsafe void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
+    public unsafe override void NotifyFailed(BmSDK.BmGame.RBMAIController FinishedCon, BmSDK.BmGame.RBMAIAction FinishedAction)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAEC_Casualty_Sub_KickCas.NotifyFailed", true);
         byte* paramsPtr = stackalloc byte[8];

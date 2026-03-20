@@ -71,7 +71,7 @@ public partial class RWeakIce : BmSDK.BmGame.RWeakIceBase, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakTileSFX
     /// </summary>
-    public unsafe void BreakTileSFX()
+    public unsafe virtual void BreakTileSFX()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeakIce.BreakTileSFX", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RWeakIce : BmSDK.BmGame.RWeakIceBase, BmSDK.IGameObject
     /// <summary>
     /// Function: BreakFromDive
     /// </summary>
-    public unsafe void BreakFromDive()
+    public unsafe override void BreakFromDive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeakIce.BreakFromDive", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -93,7 +93,7 @@ public partial class RWeakIce : BmSDK.BmGame.RWeakIceBase, BmSDK.IGameObject
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RWeakIce.Tick", true);
         byte* paramsPtr = stackalloc byte[4];

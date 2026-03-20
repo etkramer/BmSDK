@@ -47,7 +47,7 @@ public partial class SeqAct_ConsoleCommand : BmSDK.Engine.SequenceAction, BmSDK.
     /// <summary>
     /// Function: VersionUpdated
     /// </summary>
-    public unsafe void VersionUpdated(int OldVersion, int NewVersion)
+    public unsafe override void VersionUpdated(int OldVersion, int NewVersion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.SeqAct_ConsoleCommand.VersionUpdated", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class RBMBehaviour_ZipKicked : BmSDK.BmGame.RBMBehaviour_BatClawe
     /// <summary>
     /// Function: BumpedIntoPlayer
     /// </summary>
-    public unsafe void BumpedIntoPlayer()
+    public unsafe override void BumpedIntoPlayer()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMBehaviour_ZipKicked.BumpedIntoPlayer", true);
         byte* paramsPtr = stackalloc byte[0];

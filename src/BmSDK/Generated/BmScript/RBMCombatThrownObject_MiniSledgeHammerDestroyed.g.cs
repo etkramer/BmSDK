@@ -71,7 +71,7 @@ public partial class RBMCombatThrownObject_MiniSledgeHammerDestroyed : BmSDK.BmG
     /// <summary>
     /// Function: DoEvent
     /// </summary>
-    public unsafe void DoEvent()
+    public unsafe override void DoEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MiniSledgeHammerDestroyed.DoEvent", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -82,7 +82,7 @@ public partial class RBMCombatThrownObject_MiniSledgeHammerDestroyed : BmSDK.BmG
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMCombatThrownObject_MiniSledgeHammerDestroyed.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];

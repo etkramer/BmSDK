@@ -71,7 +71,7 @@ public partial class RTunnelGrate_NonInteractive : BmSDK.BmScript.RTunnelGrate, 
     /// <summary>
     /// Function: IsActive
     /// </summary>
-    public unsafe bool IsActive(BmSDK.BmGame.RPlayerController PC)
+    public unsafe override bool IsActive(BmSDK.BmGame.RPlayerController PC)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RTunnelGrate_NonInteractive.IsActive", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ExitMove
     /// </summary>
-    public unsafe void ExitMove()
+    public unsafe override void ExitMove()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.ExitMove", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: TeleportToPoint
     /// </summary>
-    public unsafe void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
+    public unsafe override void TeleportToPoint(System.Numerics.Vector3 NewLocation, bool bBlendBack)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.TeleportToPoint", true);
         byte* paramsPtr = stackalloc byte[44];
@@ -95,7 +95,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayOutCameraAnim
     /// </summary>
-    public unsafe void PlayOutCameraAnim(System.Numerics.Vector3 CamLocation, float StartTime = default, float BlendTime = default)
+    public unsafe virtual void PlayOutCameraAnim(System.Numerics.Vector3 CamLocation, float StartTime = default, float BlendTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.PlayOutCameraAnim", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -109,7 +109,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: PlayCameraAnim
     /// </summary>
-    public unsafe void PlayCameraAnim(System.Numerics.Vector3 CamPos, BmSDK.Rotator CamRot, float StartTime = default)
+    public unsafe virtual void PlayCameraAnim(System.Numerics.Vector3 CamPos, BmSDK.Rotator CamRot, float StartTime = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.PlayCameraAnim", true);
         byte* paramsPtr = stackalloc byte[36];
@@ -123,7 +123,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetTeleportReferenceLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetTeleportReferenceLocation()
+    public unsafe override System.Numerics.Vector3 GetTeleportReferenceLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.GetTeleportReferenceLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -134,7 +134,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: GetTeleportPawnList
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
+    public unsafe override BmSDK.TArray<BmSDK.BmGame.RPawnCombat> GetTeleportPawnList()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.GetTeleportPawnList", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -145,7 +145,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: CanTeleport
     /// </summary>
-    public unsafe bool CanTeleport()
+    public unsafe override bool CanTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.CanTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -156,7 +156,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Disappear
     /// </summary>
-    public unsafe void Disappear()
+    public unsafe virtual void Disappear()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.Disappear", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -167,7 +167,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: StartDecay
     /// </summary>
-    public unsafe void StartDecay()
+    public unsafe virtual void StartDecay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.StartDecay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -178,7 +178,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SwordToThroat
     /// </summary>
-    public unsafe void SwordToThroat()
+    public unsafe virtual void SwordToThroat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.SwordToThroat", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -189,7 +189,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Never
     /// </summary>
-    public unsafe void Never()
+    public unsafe virtual void Never()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.Never", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -200,7 +200,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ReleaseSandClone
     /// </summary>
-    public unsafe void ReleaseSandClone()
+    public unsafe virtual void ReleaseSandClone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.ReleaseSandClone", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -211,7 +211,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Punch
     /// </summary>
-    public unsafe void Punch()
+    public unsafe virtual void Punch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.Punch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -222,7 +222,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Catch
     /// </summary>
-    public unsafe void Catch()
+    public unsafe virtual void Catch()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.Catch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -233,7 +233,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: ActivateTalia
     /// </summary>
-    public unsafe void ActivateTalia()
+    public unsafe virtual void ActivateTalia()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.ActivateTalia", true);
         byte* paramsPtr = stackalloc byte[40];
@@ -244,7 +244,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: SkyMild
     /// </summary>
-    public unsafe void SkyMild()
+    public unsafe virtual void SkyMild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.SkyMild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -255,7 +255,7 @@ public partial class RCombatMove_BatmanCounterAndChokeRas : BmSDK.BmGame.RCombat
     /// <summary>
     /// Function: Initialise
     /// </summary>
-    public unsafe void Initialise()
+    public unsafe override void Initialise()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RCombatMove_BatmanCounterAndChokeRas.Initialise", true);
         byte* paramsPtr = stackalloc byte[0];

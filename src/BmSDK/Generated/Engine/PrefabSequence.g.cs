@@ -36,7 +36,7 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
     /// <summary>
     /// Function: GetOwnerPrefab
     /// </summary>
-    public unsafe BmSDK.Engine.PrefabInstance GetOwnerPrefab()
+    public unsafe virtual BmSDK.Engine.PrefabInstance GetOwnerPrefab()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence.GetOwnerPrefab", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject
     /// <summary>
     /// Function: SetOwnerPrefab
     /// </summary>
-    public unsafe void SetOwnerPrefab(BmSDK.Engine.PrefabInstance InOwner)
+    public unsafe virtual void SetOwnerPrefab(BmSDK.Engine.PrefabInstance InOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.PrefabSequence.SetOwnerPrefab", true);
         byte* paramsPtr = stackalloc byte[4];

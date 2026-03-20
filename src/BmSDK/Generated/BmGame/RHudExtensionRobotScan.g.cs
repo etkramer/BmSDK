@@ -36,7 +36,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: TellFlashScanAborted
     /// </summary>
-    public unsafe void TellFlashScanAborted(bool AbortedByDamage)
+    public unsafe virtual void TellFlashScanAborted(bool AbortedByDamage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.TellFlashScanAborted", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -48,7 +48,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: TellFlashScanIsFinished
     /// </summary>
-    public unsafe void TellFlashScanIsFinished(bool ScanIsComplete)
+    public unsafe virtual void TellFlashScanIsFinished(bool ScanIsComplete)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.TellFlashScanIsFinished", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -60,7 +60,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: SetRobotStateByString
     /// </summary>
-    public unsafe void SetRobotStateByString(BmSDK.FString robot_state)
+    public unsafe virtual void SetRobotStateByString(BmSDK.FString robot_state)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.SetRobotStateByString", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -72,7 +72,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: SetCompletionPercentage
     /// </summary>
-    public unsafe void SetCompletionPercentage(int completion)
+    public unsafe virtual void SetCompletionPercentage(int completion)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.SetCompletionPercentage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -84,7 +84,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: SetRobotReticle
     /// </summary>
-    public unsafe void SetRobotReticle(float screen_x, float screen_y)
+    public unsafe virtual void SetRobotReticle(float screen_x, float screen_y)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.SetRobotReticle", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -97,7 +97,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RHudExtensionRobotScan : BmSDK.BmGame.RHudExtension, BmSDK.
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionRobotScan.Init", true);
         byte* paramsPtr = stackalloc byte[32];

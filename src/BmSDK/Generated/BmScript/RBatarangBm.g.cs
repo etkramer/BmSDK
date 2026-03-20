@@ -71,7 +71,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: DoAffectCombo
     /// </summary>
-    public unsafe void DoAffectCombo(BmSDK.BmGame.RPlayerControllerCombat PC, BmSDK.BmGame.RBatarangProjectile Projectile, BmSDK.Engine.Actor ThisTarget, bool bDodged)
+    public unsafe override void DoAffectCombo(BmSDK.BmGame.RPlayerControllerCombat PC, BmSDK.BmGame.RBatarangProjectile Projectile, BmSDK.Engine.Actor ThisTarget, bool bDodged)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.DoAffectCombo", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -86,7 +86,7 @@ public partial class RBatarangBm : BmSDK.BmGame.RBatarang, BmSDK.IGameObject
     /// <summary>
     /// Function: QuickFire
     /// </summary>
-    public unsafe void QuickFire(bool OverridesCombatMove = default)
+    public unsafe override void QuickFire(bool OverridesCombatMove = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBatarangBm.QuickFire", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -36,7 +36,7 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetDirection
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetDirection()
+    public unsafe virtual System.Numerics.Vector3 GetDirection()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ReachSpec.GetDirection", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -54,7 +54,7 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: GetEnd
     /// </summary>
-    public unsafe BmSDK.Engine.NavigationPoint GetEnd()
+    public unsafe virtual BmSDK.Engine.NavigationPoint GetEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ReachSpec.GetEnd", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -72,7 +72,7 @@ public partial class ReachSpec : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Function: CostFor
     /// </summary>
-    public unsafe int CostFor(BmSDK.Engine.Pawn P)
+    public unsafe virtual int CostFor(BmSDK.Engine.Pawn P)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.ReachSpec.CostFor", true);
         byte* paramsPtr = stackalloc byte[8];

@@ -71,7 +71,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayRandomBark
     /// </summary>
-    public unsafe bool PlayRandomBark()
+    public unsafe override bool PlayRandomBark()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.PlayRandomBark", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetGuardFlags
     /// </summary>
-    public unsafe BmSDK.TArray<BmSDK.BmGame.RBarkFlagBase.FBarkFlag> GetGuardFlags()
+    public unsafe virtual BmSDK.TArray<BmSDK.BmGame.RBarkFlagBase.FBarkFlag> GetGuardFlags()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.GetGuardFlags", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -93,7 +93,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetWatchAim
     /// </summary>
-    public unsafe void SetWatchAim()
+    public unsafe virtual void SetWatchAim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.SetWatchAim", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -104,7 +104,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetGuardIdleAnim
     /// </summary>
-    public unsafe BmSDK.FName GetGuardIdleAnim()
+    public unsafe virtual BmSDK.FName GetGuardIdleAnim()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.GetGuardIdleAnim", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -115,7 +115,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: ActionTick
     /// </summary>
-    public unsafe BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
+    public unsafe override BmSDK.BmGame.RBMAIAction.ActionTickResult ActionTick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.ActionTick", true);
         byte* paramsPtr = stackalloc byte[5];
@@ -127,7 +127,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: PlayIdleAnim
     /// </summary>
-    public unsafe void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
+    public unsafe virtual void PlayIdleAnim(BmSDK.FName AnimName, System.Numerics.Vector3 AimLoc)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.PlayIdleAnim", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -140,7 +140,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: GetNewWatchActor
     /// </summary>
-    public unsafe void GetNewWatchActor()
+    public unsafe virtual void GetNewWatchActor()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.GetNewWatchActor", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -151,7 +151,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: OnActivate
     /// </summary>
-    public unsafe void OnActivate()
+    public unsafe override void OnActivate()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.OnActivate", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -162,7 +162,7 @@ public partial class RBMAIAction_HoldGuardPoint : BmSDK.BmGame.RBMAIAction, BmSD
     /// <summary>
     /// Function: SetGuardPoint
     /// </summary>
-    public unsafe void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
+    public unsafe virtual void SetGuardPoint(BmSDK.BmGame.RGuardPoint NewGuardPoint)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RBMAIAction_HoldGuardPoint.SetGuardPoint", true);
         byte* paramsPtr = stackalloc byte[4];

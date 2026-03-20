@@ -36,7 +36,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: UpdateAchievements
     /// </summary>
-    public unsafe void UpdateAchievements()
+    public unsafe virtual void UpdateAchievements()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.UpdateAchievements", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -47,7 +47,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: OnLoginChange
     /// </summary>
-    public unsafe void OnLoginChange(byte LocalUserNum)
+    public unsafe virtual void OnLoginChange(byte LocalUserNum)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.OnLoginChange", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -59,7 +59,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: OnUnregister
     /// </summary>
-    public unsafe void OnUnregister()
+    public unsafe override void OnUnregister()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.OnUnregister", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -70,7 +70,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: OnRegister
     /// </summary>
-    public unsafe void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
+    public unsafe override void OnRegister(BmSDK.Engine.LocalPlayer InPlayer)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.OnRegister", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -82,7 +82,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: OnPlayerAchievementUnlocked
     /// </summary>
-    public unsafe void OnPlayerAchievementUnlocked(bool bWasSuccessful)
+    public unsafe virtual void OnPlayerAchievementUnlocked(bool bWasSuccessful)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.OnPlayerAchievementUnlocked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -94,7 +94,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: OnPlayerAchievementsChanged
     /// </summary>
-    public unsafe void OnPlayerAchievementsChanged(int TitleId)
+    public unsafe virtual void OnPlayerAchievementsChanged(int TitleId)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.OnPlayerAchievementsChanged", true);
         byte* paramsPtr = stackalloc byte[9];
@@ -106,7 +106,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: PopulateAchievementIcons
     /// </summary>
-    public unsafe void PopulateAchievementIcons()
+    public unsafe virtual void PopulateAchievementIcons()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.PopulateAchievementIcons", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -117,7 +117,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: GetMaxTotalGamerScore
     /// </summary>
-    public unsafe int GetMaxTotalGamerScore()
+    public unsafe virtual int GetMaxTotalGamerScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.GetMaxTotalGamerScore", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -135,7 +135,7 @@ public partial class UIDataProvider_PlayerAchievements : BmSDK.Engine.UIDataProv
     /// <summary>
     /// Function: GetTotalGamerScore
     /// </summary>
-    public unsafe int GetTotalGamerScore()
+    public unsafe virtual int GetTotalGamerScore()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.UIDataProvider_PlayerAchievements.GetTotalGamerScore", true);
         byte* paramsPtr = stackalloc byte[4];

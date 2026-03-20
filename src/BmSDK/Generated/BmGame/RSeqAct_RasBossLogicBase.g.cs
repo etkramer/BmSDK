@@ -42,7 +42,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateFirstLookup
     /// </summary>
-    public unsafe void ActivateFirstLookup()
+    public unsafe virtual void ActivateFirstLookup()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateFirstLookup", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -53,7 +53,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: HideRECHelp
     /// </summary>
-    public unsafe void HideRECHelp()
+    public unsafe virtual void HideRECHelp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.HideRECHelp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -64,7 +64,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ShowRECHelp
     /// </summary>
-    public unsafe void ShowRECHelp()
+    public unsafe virtual void ShowRECHelp()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ShowRECHelp", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -75,7 +75,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ChangeBatmanDamageLevel
     /// </summary>
-    public unsafe void ChangeBatmanDamageLevel()
+    public unsafe virtual void ChangeBatmanDamageLevel()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ChangeBatmanDamageLevel", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -86,7 +86,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ShowNewGadgetScreen
     /// </summary>
-    public unsafe void ShowNewGadgetScreen()
+    public unsafe virtual void ShowNewGadgetScreen()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ShowNewGadgetScreen", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -97,7 +97,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: RasHit
     /// </summary>
-    public unsafe void RasHit()
+    public unsafe virtual void RasHit()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.RasHit", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -108,7 +108,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateFirstCharge
     /// </summary>
-    public unsafe void ActivateFirstCharge()
+    public unsafe virtual void ActivateFirstCharge()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateFirstCharge", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -119,7 +119,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: TeleportOut
     /// </summary>
-    public unsafe void TeleportOut()
+    public unsafe virtual void TeleportOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.TeleportOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -130,7 +130,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: TeleportIn
     /// </summary>
-    public unsafe void TeleportIn()
+    public unsafe virtual void TeleportIn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.TeleportIn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -141,7 +141,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: RasZapped
     /// </summary>
-    public unsafe void RasZapped()
+    public unsafe virtual void RasZapped()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.RasZapped", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -152,7 +152,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: RasBurstOut
     /// </summary>
-    public unsafe void RasBurstOut()
+    public unsafe virtual void RasBurstOut()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.RasBurstOut", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -163,7 +163,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateBurlySlowMoEnd
     /// </summary>
-    public unsafe void ActivateBurlySlowMoEnd()
+    public unsafe virtual void ActivateBurlySlowMoEnd()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateBurlySlowMoEnd", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -174,7 +174,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateBurlySlowMoStart
     /// </summary>
-    public unsafe void ActivateBurlySlowMoStart()
+    public unsafe virtual void ActivateBurlySlowMoStart()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateBurlySlowMoStart", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -185,7 +185,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateTakeHostage
     /// </summary>
-    public unsafe void ActivateTakeHostage(BmSDK.GameObject NewTalia, BmSDK.GameObject NewRas)
+    public unsafe virtual void ActivateTakeHostage(BmSDK.GameObject NewTalia, BmSDK.GameObject NewRas)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateTakeHostage", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -198,7 +198,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateEOStage3
     /// </summary>
-    public unsafe void ActivateEOStage3()
+    public unsafe virtual void ActivateEOStage3()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateEOStage3", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -209,7 +209,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateEOStage2
     /// </summary>
-    public unsafe void ActivateEOStage2()
+    public unsafe virtual void ActivateEOStage2()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateEOStage2", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -220,7 +220,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateEOStage1
     /// </summary>
-    public unsafe void ActivateEOStage1()
+    public unsafe virtual void ActivateEOStage1()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateEOStage1", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -231,7 +231,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateDefeated
     /// </summary>
-    public unsafe void ActivateDefeated()
+    public unsafe virtual void ActivateDefeated()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateDefeated", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -242,7 +242,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateRasChoked
     /// </summary>
-    public unsafe void ActivateRasChoked(BmSDK.GameObject NewTalia)
+    public unsafe virtual void ActivateRasChoked(BmSDK.GameObject NewTalia)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateRasChoked", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -254,7 +254,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateSkyIntense
     /// </summary>
-    public unsafe void ActivateSkyIntense()
+    public unsafe virtual void ActivateSkyIntense()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateSkyIntense", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -265,7 +265,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ActivateSkyMild
     /// </summary>
-    public unsafe void ActivateSkyMild()
+    public unsafe virtual void ActivateSkyMild()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ActivateSkyMild", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -276,7 +276,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: IntroTaunt
     /// </summary>
-    public unsafe void IntroTaunt(BmSDK.Engine.Actor SpeechActor)
+    public unsafe virtual void IntroTaunt(BmSDK.Engine.Actor SpeechActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.IntroTaunt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -288,7 +288,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: GiantAppearTaunt
     /// </summary>
-    public unsafe void GiantAppearTaunt(BmSDK.Engine.Actor SpeechActor)
+    public unsafe virtual void GiantAppearTaunt(BmSDK.Engine.Actor SpeechActor)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.GiantAppearTaunt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -300,7 +300,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: PlayRasSpeech
     /// </summary>
-    public unsafe void PlayRasSpeech(BmSDK.BmGame.RSeqAct_RasBossLogicBase.RasSpeech Speech, BmSDK.Engine.Actor SpeechActor, bool bHighPriority = default)
+    public unsafe virtual void PlayRasSpeech(BmSDK.BmGame.RSeqAct_RasBossLogicBase.RasSpeech Speech, BmSDK.Engine.Actor SpeechActor, bool bHighPriority = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.PlayRasSpeech", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -314,7 +314,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: CanTeleport
     /// </summary>
-    public unsafe bool CanTeleport()
+    public unsafe virtual bool CanTeleport()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.CanTeleport", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -325,7 +325,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: TauntPlayed
     /// </summary>
-    public unsafe void TauntPlayed()
+    public unsafe virtual void TauntPlayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.TauntPlayed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -336,7 +336,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: CanTaunt
     /// </summary>
-    public unsafe bool CanTaunt()
+    public unsafe virtual bool CanTaunt()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.CanTaunt", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -347,7 +347,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ClearCamera
     /// </summary>
-    public unsafe void ClearCamera()
+    public unsafe virtual void ClearCamera()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ClearCamera", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -358,7 +358,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetLookSpeed
     /// </summary>
-    public unsafe void SetLookSpeed(BmSDK.BmGame.RGameInfo.CameraLookAtSpeed Speed)
+    public unsafe virtual void SetLookSpeed(BmSDK.BmGame.RGameInfo.CameraLookAtSpeed Speed)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetLookSpeed", true);
         byte* paramsPtr = stackalloc byte[1];
@@ -370,7 +370,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetLockLook
     /// </summary>
-    public unsafe void SetLockLook(bool bLock)
+    public unsafe virtual void SetLockLook(bool bLock)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetLockLook", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -382,7 +382,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetConstantCamLookYaw
     /// </summary>
-    public unsafe void SetConstantCamLookYaw(bool bConstant)
+    public unsafe virtual void SetConstantCamLookYaw(bool bConstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetConstantCamLookYaw", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -394,7 +394,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetConstantCamLook
     /// </summary>
-    public unsafe void SetConstantCamLook(bool bConstant)
+    public unsafe virtual void SetConstantCamLook(bool bConstant)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetConstantCamLook", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -406,7 +406,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetLookAtHead
     /// </summary>
-    public unsafe void SetLookAtHead(bool bLook)
+    public unsafe virtual void SetLookAtHead(bool bLook)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetLookAtHead", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -418,7 +418,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: GetBossDifficulty
     /// </summary>
-    public unsafe int GetBossDifficulty()
+    public unsafe virtual int GetBossDifficulty()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.GetBossDifficulty", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -429,7 +429,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: IsOnlyOneSandCloneAlive
     /// </summary>
-    public unsafe bool IsOnlyOneSandCloneAlive()
+    public unsafe virtual bool IsOnlyOneSandCloneAlive()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.IsOnlyOneSandCloneAlive", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -440,7 +440,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: InitSandClones
     /// </summary>
-    public unsafe void InitSandClones()
+    public unsafe virtual void InitSandClones()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.InitSandClones", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -451,7 +451,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: AreSandClonesInLine
     /// </summary>
-    public unsafe bool AreSandClonesInLine()
+    public unsafe virtual bool AreSandClonesInLine()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.AreSandClonesInLine", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -462,7 +462,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: OnDamageBatman
     /// </summary>
-    public unsafe void OnDamageBatman()
+    public unsafe virtual void OnDamageBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.OnDamageBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -473,7 +473,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: CanDamageBatman
     /// </summary>
-    public unsafe bool CanDamageBatman()
+    public unsafe virtual bool CanDamageBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.CanDamageBatman", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -484,7 +484,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: GetLandLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetLandLocation()
+    public unsafe virtual System.Numerics.Vector3 GetLandLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.GetLandLocation", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -495,7 +495,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: CreateRealRas
     /// </summary>
-    public unsafe void CreateRealRas(BmSDK.BmGame.RPawnBossRasBase PawnToBoss)
+    public unsafe virtual void CreateRealRas(BmSDK.BmGame.RPawnBossRasBase PawnToBoss)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.CreateRealRas", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -507,7 +507,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: IncStage
     /// </summary>
-    public unsafe void IncStage()
+    public unsafe virtual void IncStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.IncStage", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -518,7 +518,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetOrbitView
     /// </summary>
-    public unsafe void SetOrbitView(bool bOrbit)
+    public unsafe virtual void SetOrbitView(bool bOrbit)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetOrbitView", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -530,7 +530,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: StartIntro
     /// </summary>
-    public unsafe void StartIntro()
+    public unsafe virtual void StartIntro()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.StartIntro", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -541,7 +541,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: DestroySword
     /// </summary>
-    public unsafe void DestroySword()
+    public unsafe virtual void DestroySword()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.DestroySword", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -552,7 +552,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: ClearLookAtPawn
     /// </summary>
-    public unsafe void ClearLookAtPawn()
+    public unsafe virtual void ClearLookAtPawn()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.ClearLookAtPawn", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -563,7 +563,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetLookAtPawn
     /// </summary>
-    public unsafe void SetLookAtPawn(BmSDK.BmGame.RPawnBossRasBase PawnToLookAt, float Duration = default)
+    public unsafe virtual void SetLookAtPawn(BmSDK.BmGame.RPawnBossRasBase PawnToLookAt, float Duration = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetLookAtPawn", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -576,7 +576,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: UpdateHud
     /// </summary>
-    public unsafe void UpdateHud(float Scalar)
+    public unsafe virtual void UpdateHud(float Scalar)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.UpdateHud", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -588,7 +588,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetDefaultSandCloneCamSettings
     /// </summary>
-    public unsafe void SetDefaultSandCloneCamSettings()
+    public unsafe virtual void SetDefaultSandCloneCamSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetDefaultSandCloneCamSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -599,7 +599,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetDefaultManoCamSettings
     /// </summary>
-    public unsafe void SetDefaultManoCamSettings()
+    public unsafe virtual void SetDefaultManoCamSettings()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetDefaultManoCamSettings", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -610,7 +610,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetTargetFOV
     /// </summary>
-    public unsafe void SetTargetFOV(float NewFOV, float TransitionTime)
+    public unsafe virtual void SetTargetFOV(float NewFOV, float TransitionTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetTargetFOV", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -623,7 +623,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: StaggerBatman
     /// </summary>
-    public unsafe void StaggerBatman()
+    public unsafe virtual void StaggerBatman()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.StaggerBatman", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -634,7 +634,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: HasFinishedManoTransition
     /// </summary>
-    public unsafe bool HasFinishedManoTransition()
+    public unsafe virtual bool HasFinishedManoTransition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.HasFinishedManoTransition", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -645,7 +645,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: GetSpectralLocation
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetSpectralLocation()
+    public unsafe virtual System.Numerics.Vector3 GetSpectralLocation()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.GetSpectralLocation", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -656,7 +656,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SpectralHit
     /// </summary>
-    public unsafe void SpectralHit(bool bBig)
+    public unsafe virtual void SpectralHit(bool bBig)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SpectralHit", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -668,7 +668,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: RemoveSpectral
     /// </summary>
-    public unsafe void RemoveSpectral()
+    public unsafe virtual void RemoveSpectral()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.RemoveSpectral", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -679,7 +679,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SpawnSpectral
     /// </summary>
-    public unsafe void SpawnSpectral()
+    public unsafe virtual void SpawnSpectral()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SpawnSpectral", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -690,7 +690,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: OnRasDestroyed
     /// </summary>
-    public unsafe void OnRasDestroyed(BmSDK.BmGame.RPawnBossRasBase RasPawn)
+    public unsafe virtual void OnRasDestroyed(BmSDK.BmGame.RPawnBossRasBase RasPawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.OnRasDestroyed", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -702,7 +702,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: StartMano
     /// </summary>
-    public unsafe void StartMano()
+    public unsafe virtual void StartMano()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.StartMano", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -713,7 +713,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: RemoveThisPawn
     /// </summary>
-    public unsafe void RemoveThisPawn(BmSDK.BmGame.RPawnBossRasBase pawnToKill)
+    public unsafe virtual void RemoveThisPawn(BmSDK.BmGame.RPawnBossRasBase pawnToKill)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.RemoveThisPawn", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -725,7 +725,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: EndStage
     /// </summary>
-    public unsafe void EndStage()
+    public unsafe virtual void EndStage()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.EndStage", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -736,7 +736,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetRas
     /// </summary>
-    public unsafe void SetRas(BmSDK.GameObject NewSpawn)
+    public unsafe virtual void SetRas(BmSDK.GameObject NewSpawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetRas", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -755,7 +755,7 @@ public partial class RSeqAct_RasBossLogicBase : BmSDK.BmGame.RSeqAct_CombatSpawn
     /// <summary>
     /// Function: SetTalia
     /// </summary>
-    public unsafe void SetTalia(BmSDK.GameObject NewSpawn)
+    public unsafe virtual void SetTalia(BmSDK.GameObject NewSpawn)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RSeqAct_RasBossLogicBase.SetTalia", true);
         byte* paramsPtr = stackalloc byte[4];

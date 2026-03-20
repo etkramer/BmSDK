@@ -36,7 +36,7 @@ public partial class RHudExtensionContents : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: MarkGrundyDrumBeat
     /// </summary>
-    public unsafe void MarkGrundyDrumBeat()
+    public unsafe virtual void MarkGrundyDrumBeat()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionContents.MarkGrundyDrumBeat", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -47,7 +47,7 @@ public partial class RHudExtensionContents : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: SetContentsDepth
     /// </summary>
-    public unsafe void SetContentsDepth(float inDepth)
+    public unsafe virtual void SetContentsDepth(float inDepth)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionContents.SetContentsDepth", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -59,7 +59,7 @@ public partial class RHudExtensionContents : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: SetContentsVisible
     /// </summary>
-    public unsafe void SetContentsVisible(bool make_visible)
+    public unsafe virtual void SetContentsVisible(bool make_visible)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionContents.SetContentsVisible", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -71,7 +71,7 @@ public partial class RHudExtensionContents : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionContents.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -82,7 +82,7 @@ public partial class RHudExtensionContents : BmSDK.BmGame.RHudExtension, BmSDK.I
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionContents.Init", true);
         byte* paramsPtr = stackalloc byte[32];

@@ -36,7 +36,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: GetMaxDurationFromAllParameters
     /// </summary>
-    public unsafe float GetMaxDurationFromAllParameters()
+    public unsafe virtual float GetMaxDurationFromAllParameters()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.GetMaxDurationFromAllParameters", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -54,7 +54,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: ClearParameterValues
     /// </summary>
-    public unsafe void ClearParameterValues()
+    public unsafe override void ClearParameterValues()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.ClearParameterValues", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -72,7 +72,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetFontParameterValue
     /// </summary>
-    public unsafe void SetFontParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Font FontValue, int FontPage)
+    public unsafe override void SetFontParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Font FontValue, int FontPage)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetFontParameterValue", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -93,7 +93,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetVectorStartTime
     /// </summary>
-    public unsafe void SetVectorStartTime(BmSDK.FName ParameterName, float Value)
+    public unsafe virtual void SetVectorStartTime(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorStartTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -113,7 +113,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetVectorCurveParameterValue
     /// </summary>
-    public unsafe void SetVectorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveVector Value)
+    public unsafe virtual void SetVectorCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveVector Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorCurveParameterValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -133,7 +133,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetVectorParameterValue
     /// </summary>
-    public unsafe void SetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
+    public unsafe override void SetVectorParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FLinearColor Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetVectorParameterValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -153,7 +153,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetTextureParameterValue
     /// </summary>
-    public unsafe void SetTextureParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Texture Value)
+    public unsafe override void SetTextureParameterValue(BmSDK.FName ParameterName, BmSDK.Engine.Texture Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetTextureParameterValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -173,7 +173,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetDuration
     /// </summary>
-    public unsafe void SetDuration(float Value)
+    public unsafe virtual void SetDuration(float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetDuration", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -192,7 +192,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetScalarStartTime
     /// </summary>
-    public unsafe void SetScalarStartTime(BmSDK.FName ParameterName, float Value)
+    public unsafe virtual void SetScalarStartTime(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarStartTime", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -212,7 +212,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetScalarCurveParameterValue
     /// </summary>
-    public unsafe void SetScalarCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveFloat Value)
+    public unsafe override void SetScalarCurveParameterValue(BmSDK.FName ParameterName, out BmSDK.GameObject.FInterpCurveFloat Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarCurveParameterValue", true);
         byte* paramsPtr = stackalloc byte[24];
@@ -232,7 +232,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetScalarParameterValue
     /// </summary>
-    public unsafe void SetScalarParameterValue(BmSDK.FName ParameterName, float Value)
+    public unsafe override void SetScalarParameterValue(BmSDK.FName ParameterName, float Value)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetScalarParameterValue", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -252,7 +252,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Function: SetParent
     /// </summary>
-    public unsafe void SetParent(BmSDK.Engine.MaterialInterface NewParent)
+    public unsafe override void SetParent(BmSDK.Engine.MaterialInterface NewParent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.MaterialInstanceTimeVarying.SetParent", true);
         byte* paramsPtr = stackalloc byte[4];

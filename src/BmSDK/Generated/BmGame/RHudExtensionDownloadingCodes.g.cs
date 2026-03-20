@@ -36,7 +36,7 @@ public partial class RHudExtensionDownloadingCodes : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: SetFlashParameters
     /// </summary>
-    public unsafe void SetFlashParameters(BmSDK.FString _TextDbReference, float _StayOnScreenDuration)
+    public unsafe virtual void SetFlashParameters(BmSDK.FString _TextDbReference, float _StayOnScreenDuration)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionDownloadingCodes.SetFlashParameters", true);
         byte* paramsPtr = stackalloc byte[16];
@@ -49,7 +49,7 @@ public partial class RHudExtensionDownloadingCodes : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: Close
     /// </summary>
-    public unsafe void Close()
+    public unsafe override void Close()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionDownloadingCodes.Close", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -60,7 +60,7 @@ public partial class RHudExtensionDownloadingCodes : BmSDK.BmGame.RHudExtension,
     /// <summary>
     /// Function: Init
     /// </summary>
-    public unsafe bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
+    public unsafe override bool Init(BmSDK.BmGame.RPlayerController _RPC, BmSDK.FString _ExtensionName, BmSDK.FString _ExtensionPath)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RHudExtensionDownloadingCodes.Init", true);
         byte* paramsPtr = stackalloc byte[32];

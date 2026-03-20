@@ -71,7 +71,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float DeltaTime)
+    public unsafe override void Tick(float DeltaTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.Tick", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -83,7 +83,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: ResetBlockedSteam
     /// </summary>
-    public unsafe void ResetBlockedSteam()
+    public unsafe virtual void ResetBlockedSteam()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.ResetBlockedSteam", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -94,7 +94,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: BlockSteam
     /// </summary>
-    public unsafe void BlockSteam(BmSDK.Engine.Actor Player)
+    public unsafe virtual void BlockSteam(BmSDK.Engine.Actor Player)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.BlockSteam", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -106,7 +106,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: TriggerHitBySteamEvent
     /// </summary>
-    public unsafe void TriggerHitBySteamEvent()
+    public unsafe virtual void TriggerHitBySteamEvent()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.TriggerHitBySteamEvent", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -117,7 +117,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: PawnTouched
     /// </summary>
-    public unsafe void PawnTouched(BmSDK.Engine.Actor Other)
+    public unsafe virtual void PawnTouched(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.PawnTouched", true);
         byte* paramsPtr = stackalloc byte[268];
@@ -129,7 +129,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: BlockActorsDelayed
     /// </summary>
-    public unsafe void BlockActorsDelayed()
+    public unsafe virtual void BlockActorsDelayed()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.BlockActorsDelayed", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -140,7 +140,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: UnTouch
     /// </summary>
-    public unsafe void UnTouch(BmSDK.Engine.Actor Other)
+    public unsafe override void UnTouch(BmSDK.Engine.Actor Other)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.UnTouch", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -152,7 +152,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: Touch
     /// </summary>
-    public unsafe void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Touch(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.Touch", true);
         byte* paramsPtr = stackalloc byte[32];
@@ -167,7 +167,7 @@ public partial class RFreezableSteamVentDLC : BmSDK.BmScript.RFreezableSteamVent
     /// <summary>
     /// Function: Bump
     /// </summary>
-    public unsafe void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
+    public unsafe override void Bump(BmSDK.Engine.Actor Other, BmSDK.Engine.PrimitiveComponent OtherComp, System.Numerics.Vector3 HitNormal)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RFreezableSteamVentDLC.Bump", true);
         byte* paramsPtr = stackalloc byte[28];

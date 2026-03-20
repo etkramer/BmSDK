@@ -71,7 +71,7 @@ public partial class RDivePressurePadTen : BmSDK.BmScript.RDivePressurePad, BmSD
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePadTen.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -82,7 +82,7 @@ public partial class RDivePressurePadTen : BmSDK.BmScript.RDivePressurePad, BmSD
     /// <summary>
     /// Function: GetBatarangPos
     /// </summary>
-    public unsafe System.Numerics.Vector3 GetBatarangPos()
+    public unsafe override System.Numerics.Vector3 GetBatarangPos()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RDivePressurePadTen.GetBatarangPos", true);
         byte* paramsPtr = stackalloc byte[24];

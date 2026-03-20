@@ -71,7 +71,7 @@ public partial class RBMWeaponMegaPhone : BmSDK.BmGame.RBMWeaponPipeBase, BmSDK.
     /// <summary>
     /// Function: CreateWeaponConfig
     /// </summary>
-    public unsafe BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
+    public unsafe override BmSDK.BmGame.RWeaponConfig CreateWeaponConfig(BmSDK.GameObject NewOwner)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RBMWeaponMegaPhone.CreateWeaponConfig", true);
         byte* paramsPtr = stackalloc byte[24];

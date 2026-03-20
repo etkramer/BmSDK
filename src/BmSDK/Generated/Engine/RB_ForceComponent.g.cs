@@ -31,7 +31,7 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// Function: SetBaseCloneParameters
     /// </summary>
-    public unsafe void SetBaseCloneParameters(BmSDK.Engine.RB_ForceComponent ForceComp)
+    public unsafe virtual void SetBaseCloneParameters(BmSDK.Engine.RB_ForceComponent ForceComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponent.SetBaseCloneParameters", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -43,7 +43,7 @@ public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.
     /// <summary>
     /// Function: Clone
     /// </summary>
-    public unsafe BmSDK.Engine.RB_ForceComponent Clone()
+    public unsafe virtual BmSDK.Engine.RB_ForceComponent Clone()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.RB_ForceComponent.Clone", true);
         byte* paramsPtr = stackalloc byte[4];

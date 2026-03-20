@@ -71,7 +71,7 @@ public partial class RRope2 : BmSDK.BmGame.RRope2Base, BmSDK.IGameObject
     /// <summary>
     /// Function: SpawnRope
     /// </summary>
-    public unsafe BmSDK.BmGame.RRope2Base SpawnRope()
+    public unsafe override BmSDK.BmGame.RRope2Base SpawnRope()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmScript.RRope2.SpawnRope", true);
         byte* paramsPtr = stackalloc byte[8];

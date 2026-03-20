@@ -71,7 +71,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: TakeDamage
     /// </summary>
-    public unsafe void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
+    public unsafe override void TakeDamage(int Damage, BmSDK.Engine.Controller InstigatedBy, System.Numerics.Vector3 HitLocation, System.Numerics.Vector3 Momentum, BmSDK.Class DamageType, BmSDK.Engine.Actor.FTraceHitInfo HitInfo = default, BmSDK.Engine.Actor DamageCauser = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.TakeDamage", true);
         byte* paramsPtr = stackalloc byte[76];
@@ -89,7 +89,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: ResetPosition
     /// </summary>
-    public unsafe void ResetPosition()
+    public unsafe virtual void ResetPosition()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.ResetPosition", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -100,7 +100,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: Tick
     /// </summary>
-    public unsafe void Tick(float dt)
+    public unsafe override void Tick(float dt)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.Tick", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -112,7 +112,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: DoSpeech
     /// </summary>
-    public unsafe void DoSpeech()
+    public unsafe virtual void DoSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.DoSpeech", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -123,7 +123,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: AkOnVocalFinished
     /// </summary>
-    public unsafe void AkOnVocalFinished(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
+    public unsafe virtual void AkOnVocalFinished(int CallbackFlags, BmSDK.Engine.AkWwise.FAkSoundHandle SoundHandle, int MarkerID)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.AkOnVocalFinished", true);
         byte* paramsPtr = stackalloc byte[20];
@@ -137,7 +137,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: StartSpeech
     /// </summary>
-    public unsafe void StartSpeech()
+    public unsafe virtual void StartSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.StartSpeech", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -148,7 +148,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: StartBong
     /// </summary>
-    public unsafe void StartBong()
+    public unsafe virtual void StartBong()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.StartBong", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -159,7 +159,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: PlayBingBong
     /// </summary>
-    public unsafe void PlayBingBong(float delayTime, BmSDK.Engine.AkEvent BingEvent)
+    public unsafe virtual void PlayBingBong(float delayTime, BmSDK.Engine.AkEvent BingEvent)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.PlayBingBong", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -172,7 +172,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: StopSpeech
     /// </summary>
-    public unsafe void StopSpeech()
+    public unsafe virtual void StopSpeech()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.StopSpeech", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -183,7 +183,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: PlaySpeakerSpeech
     /// </summary>
-    public unsafe void PlaySpeakerSpeech(BmSDK.Engine.RDialogueEvent DialogueEvent, float delayTime)
+    public unsafe virtual void PlaySpeakerSpeech(BmSDK.Engine.RDialogueEvent DialogueEvent, float delayTime)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.PlaySpeakerSpeech", true);
         byte* paramsPtr = stackalloc byte[8];
@@ -196,7 +196,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: StartBackgroundMusic
     /// </summary>
-    public unsafe void StartBackgroundMusic()
+    public unsafe virtual void StartBackgroundMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.StartBackgroundMusic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -207,7 +207,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: Occlude
     /// </summary>
-    public unsafe void Occlude(bool bOcclude)
+    public unsafe virtual void Occlude(bool bOcclude)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.Occlude", true);
         byte* paramsPtr = stackalloc byte[4];
@@ -219,7 +219,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: StopBackgroundMusic
     /// </summary>
-    public unsafe void StopBackgroundMusic()
+    public unsafe virtual void StopBackgroundMusic()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.StopBackgroundMusic", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -230,7 +230,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: SetBackgroundMusic
     /// </summary>
-    public unsafe void SetBackgroundMusic(BmSDK.Engine.AkEvent BackgroundMusicEvent, bool StartMusic)
+    public unsafe virtual void SetBackgroundMusic(BmSDK.Engine.AkEvent BackgroundMusicEvent, bool StartMusic)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.SetBackgroundMusic", true);
         byte* paramsPtr = stackalloc byte[12];
@@ -243,7 +243,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: PostBeginPlay
     /// </summary>
-    public unsafe void PostBeginPlay()
+    public unsafe override void PostBeginPlay()
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.PostBeginPlay", true);
         byte* paramsPtr = stackalloc byte[0];
@@ -254,7 +254,7 @@ public partial class RAudioPoint : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObje
     /// <summary>
     /// Function: OverrideAkComponentDefaults
     /// </summary>
-    public unsafe void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
+    public unsafe override void OverrideAkComponentDefaults(BmSDK.Engine.AkComponent akComp)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "BmGame.RAudioPoint.OverrideAkComponentDefaults", true);
         byte* paramsPtr = stackalloc byte[4];
