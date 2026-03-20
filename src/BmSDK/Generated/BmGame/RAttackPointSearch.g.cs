@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAttackPointSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
@@ -180,7 +179,7 @@ public partial class RAttackPointSearch : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAttackPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAttackPoint
     {
         /// <summary>

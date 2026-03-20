@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LightFunction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LightFunction : BmSDK.GameObject, BmSDK.IGameObject

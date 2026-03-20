@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHarpoonGun<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHarpoonGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

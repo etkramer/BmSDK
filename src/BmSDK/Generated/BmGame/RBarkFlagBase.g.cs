@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkFlagBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class RBarkFlagBase : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FBarkFlag
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBarkFlag
     {
         /// <summary>

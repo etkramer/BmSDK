@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileHeavyCannon<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileHeavyCannon : BmSDK.BmGame.RVehicleWeapon, BmSDK.IGameObject

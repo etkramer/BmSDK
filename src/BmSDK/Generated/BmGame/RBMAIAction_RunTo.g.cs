@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RunTo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RunTo : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject

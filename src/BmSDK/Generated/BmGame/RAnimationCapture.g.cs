@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimationCapture<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimationCapture : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

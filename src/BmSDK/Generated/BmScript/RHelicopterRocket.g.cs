@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHelicopterRocket<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHelicopterRocket : BmSDK.BmGame.RHelicopterRocketBase, BmSDK.IGameObject

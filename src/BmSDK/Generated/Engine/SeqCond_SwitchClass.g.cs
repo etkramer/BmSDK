@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_SwitchClass<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class SeqCond_SwitchClass : BmSDK.Engine.SeqCond_SwitchBase, BmSD
     /// <summary>
     /// Struct: FSwitchClassInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSwitchClassInfo
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_Objective<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_Objective : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

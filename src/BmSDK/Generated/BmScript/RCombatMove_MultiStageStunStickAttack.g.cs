@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCombatMove_MultiStageStunStickAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_MultiStageStunStickAttack : BmSDK.BmScript.RCombatMove_VillainStunStickAttack, BmSDK.IGameObject

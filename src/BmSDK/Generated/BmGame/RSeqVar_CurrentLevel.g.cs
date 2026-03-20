@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_CurrentLevel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_CurrentLevel : BmSDK.Engine.SeqVar_String, BmSDK.IGameObject

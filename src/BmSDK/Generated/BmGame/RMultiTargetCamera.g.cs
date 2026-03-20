@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiTargetCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiTargetCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject

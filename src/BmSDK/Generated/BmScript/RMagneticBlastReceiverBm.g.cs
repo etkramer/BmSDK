@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RMagneticBlastReceiverBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMagneticBlastReceiverBm : BmSDK.BmGame.RMagneticBlastReceiver, BmSDK.IGameObject

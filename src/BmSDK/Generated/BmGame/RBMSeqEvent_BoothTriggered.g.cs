@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_BoothTriggered<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_BoothTriggered : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

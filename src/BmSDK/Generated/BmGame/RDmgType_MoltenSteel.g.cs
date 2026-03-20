@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_MoltenSteel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_MoltenSteel : BmSDK.BmGame.RDmgType_KillZone, BmSDK.IGameObject

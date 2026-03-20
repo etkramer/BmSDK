@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_PlayCameraAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_PlayCameraAnim : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

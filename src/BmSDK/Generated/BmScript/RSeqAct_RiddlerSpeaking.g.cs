@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_RiddlerSpeaking<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_RiddlerSpeaking : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

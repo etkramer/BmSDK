@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_DropThroughCeilingGrateFinish<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_DropThroughCeilingGrateFinish : BmSDK.BmGame.RStealthTakeDownStage_GlassFinish, BmSDK.IGameObject

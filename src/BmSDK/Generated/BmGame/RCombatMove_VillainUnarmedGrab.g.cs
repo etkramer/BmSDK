@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainUnarmedGrab<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainUnarmedGrab : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

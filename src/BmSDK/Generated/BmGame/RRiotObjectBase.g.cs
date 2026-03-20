@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRiotObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRiotObjectBase : BmSDK.Engine.KAsset, BmSDK.IGameObject

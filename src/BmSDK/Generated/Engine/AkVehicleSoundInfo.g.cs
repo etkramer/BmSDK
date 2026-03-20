@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkVehicleSoundInfo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
@@ -1575,7 +1574,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FInheritSetParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FInheritSetParam
     {
         /// <summary>
@@ -1600,7 +1599,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGearing
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGearing
     {
         /// <summary>
@@ -1679,7 +1678,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSocketAudio
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSocketAudio
     {
         /// <summary>
@@ -1704,7 +1703,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FNamedWheelForceTriggers
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FNamedWheelForceTriggers
     {
         /// <summary>
@@ -1765,7 +1764,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FForceTrigger
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FForceTrigger
     {
         /// <summary>
@@ -1799,7 +1798,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSuspensionTrigger
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSuspensionTrigger
     {
         /// <summary>
@@ -1833,7 +1832,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFactSound
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFactSound
     {
         /// <summary>
@@ -1858,7 +1857,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FExtraSoundData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FExtraSoundData
     {
         /// <summary>
@@ -1892,7 +1891,7 @@ public partial class AkVehicleSoundInfo : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWheelData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWheelData
     {
         /// <summary>

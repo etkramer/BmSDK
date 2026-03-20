@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_RailingFearToRail<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_RailingFearToRail : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
@@ -903,7 +902,7 @@ public partial class RStealthTakedownStage_RailingFearToRail : BmSDK.BmGame.RSte
     /// <summary>
     /// Struct: FTakeDownStageAnimSet
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTakeDownStageAnimSet
     {
         /// <summary>
@@ -1225,7 +1224,7 @@ public partial class RStealthTakedownStage_RailingFearToRail : BmSDK.BmGame.RSte
     /// <summary>
     /// Struct: FAnimList
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAnimList
     {
         /// <summary>

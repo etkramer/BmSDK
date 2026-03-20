@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPredatorSpecialMovePointBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPredatorSpecialMovePointBase : BmSDK.Engine.Actor, BmSDK.IGameObject

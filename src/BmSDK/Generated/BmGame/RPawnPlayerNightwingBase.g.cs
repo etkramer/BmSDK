@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnPlayerNightwingBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnPlayerNightwingBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RPawnPlayerNightwingBase : BmSDK.BmGame.RPawnPlayer, BmSDK.
     /// <summary>
     /// Struct: FNwStickBouncePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FNwStickBouncePoint
     {
         /// <summary>

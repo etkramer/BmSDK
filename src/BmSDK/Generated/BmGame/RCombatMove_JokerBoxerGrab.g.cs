@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_JokerBoxerGrab<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_JokerBoxerGrab : BmSDK.BmGame.RCombatMove_VillainUnarmedGrab, BmSDK.IGameObject

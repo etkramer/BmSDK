@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FracturedStaticMeshPart<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class FracturedStaticMeshPart : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.IGameObject

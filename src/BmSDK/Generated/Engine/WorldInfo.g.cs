@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WorldInfo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class WorldInfo : BmSDK.Engine.ZoneInfo, BmSDK.IGameObject

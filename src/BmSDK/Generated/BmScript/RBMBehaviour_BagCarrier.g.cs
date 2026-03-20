@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMBehaviour_BagCarrier<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_BagCarrier : BmSDK.BmGame.RBMBehaviour_BagCarrierBase, BmSDK.IGameObject

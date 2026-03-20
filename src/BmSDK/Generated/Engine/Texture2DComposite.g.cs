@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2DComposite<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class Texture2DComposite : BmSDK.Engine.Texture, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FSourceTexture2DRegion
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSourceTexture2DRegion
     {
         /// <summary>

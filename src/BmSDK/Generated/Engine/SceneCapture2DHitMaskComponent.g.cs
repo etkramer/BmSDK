@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCapture2DHitMaskComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SceneCapture2DHitMaskComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject

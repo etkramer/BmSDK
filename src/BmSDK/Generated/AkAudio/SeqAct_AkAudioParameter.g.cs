@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkAudioParameter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -90,7 +89,7 @@ public partial class SeqAct_AkAudioParameter : BmSDK.Engine.SequenceAction, BmSD
     /// <summary>
     /// Struct: FSeqAct_AkAudioParameterInterpolationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSeqAct_AkAudioParameterInterpolationInfo
     {
         /// <summary>

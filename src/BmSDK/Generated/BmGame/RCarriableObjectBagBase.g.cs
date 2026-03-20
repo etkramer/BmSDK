@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCarriableObjectBagBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCarriableObjectBagBase : BmSDK.BmGame.RCarriableObjectBase, BmSDK.IGameObject

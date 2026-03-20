@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleApexEmitterExplicitGeom<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.ParticleModuleApexEmitterBase, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class ParticleModuleApexEmitterExplicitGeom : BmSDK.Engine.Partic
     /// <summary>
     /// Struct: FExplicitGeomMap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FExplicitGeomMap
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetRigidBodyIgnoreVehicles<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetRigidBodyIgnoreVehicles : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

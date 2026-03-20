@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimationCompressionAlgorithm_RemoveEverySecondKey<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimationCompressionAlgorithm_RemoveEverySecondKey : BmSDK.Engine.AnimationCompressionAlgorithm, BmSDK.IGameObject

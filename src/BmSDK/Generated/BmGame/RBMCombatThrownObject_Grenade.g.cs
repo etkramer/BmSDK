@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_Grenade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_Grenade : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

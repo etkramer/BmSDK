@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryLight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryLight : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

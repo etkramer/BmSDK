@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ForceComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

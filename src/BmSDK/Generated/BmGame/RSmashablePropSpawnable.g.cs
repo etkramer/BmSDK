@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSmashablePropSpawnable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSmashablePropSpawnable : BmSDK.BmGame.RSmashableProp, BmSDK.IGameObject

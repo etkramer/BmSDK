@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetSkelControlTarget<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetSkelControlTarget : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryRigidBody<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryRigidBody : BmSDK.Engine.ActorFactoryDynamicSM, BmSDK.IGameObject

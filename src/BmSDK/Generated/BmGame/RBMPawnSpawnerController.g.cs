@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPawnSpawnerController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RBMPawnSpawnerController : BmSDK.Engine.SeqAct_Latent, BmSD
     /// <summary>
     /// Struct: FPawnSpawnerDesc
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPawnSpawnerDesc
     {
         /// <summary>

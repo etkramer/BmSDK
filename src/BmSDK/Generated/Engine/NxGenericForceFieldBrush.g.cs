@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxGenericForceFieldBrush<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NxGenericForceFieldBrush : BmSDK.Engine.Volume, BmSDK.IGameObject

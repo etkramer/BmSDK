@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatPoint_LoPipesControlBox<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatPoint_LoPipesControlBox : BmSDK.BmGame.RBMCombatPoint, BmSDK.IGameObject

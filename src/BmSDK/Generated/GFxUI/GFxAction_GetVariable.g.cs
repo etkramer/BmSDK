@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxAction_GetVariable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GFxAction_GetVariable : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

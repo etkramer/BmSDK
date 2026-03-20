@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHostageSeesPlayerVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHostageSeesPlayerVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

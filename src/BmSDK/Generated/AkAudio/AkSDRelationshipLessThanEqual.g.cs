@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDRelationshipLessThanEqual<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDRelationshipLessThanEqual : BmSDK.AkAudio.AkSDRelationship, BmSDK.IGameObject
@@ -198,7 +197,7 @@ public partial class AkSDRelationshipLessThanEqual : BmSDK.AkAudio.AkSDRelations
     /// <summary>
     /// Struct: FVariables
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVariables
     {
         /// <summary>

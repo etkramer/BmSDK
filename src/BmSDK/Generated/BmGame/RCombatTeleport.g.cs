@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatTeleport<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatTeleport : BmSDK.Engine.Actor, BmSDK.IGameObject

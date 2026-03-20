@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqCond_VisibleLastFrame<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqCond_VisibleLastFrame : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

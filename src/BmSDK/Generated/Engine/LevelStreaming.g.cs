@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelStreaming<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LevelStreaming : BmSDK.GameObject, BmSDK.IGameObject

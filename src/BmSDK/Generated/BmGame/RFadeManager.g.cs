@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFadeManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -143,7 +142,7 @@ public partial class RFadeManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMainFadeState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMainFadeState
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_GunJamDiscovery<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_GunJamDiscovery : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleChallengeMode<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleChallengeMode : BmSDK.BmGame.RHudModule, BmSDK.IGameObject

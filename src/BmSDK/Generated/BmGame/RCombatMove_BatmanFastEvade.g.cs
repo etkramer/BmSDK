@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_BatmanFastEvade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_BatmanFastEvade : BmSDK.BmGame.RCombatMove_BatmanEvade, BmSDK.IGameObject

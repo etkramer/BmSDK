@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntity<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntity : BmSDK.AkAudio.AkSDNode, BmSDK.IGameObject

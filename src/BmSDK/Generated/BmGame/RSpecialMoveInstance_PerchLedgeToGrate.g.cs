@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_PerchLedgeToGrate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_PerchLedgeToGrate : BmSDK.BmGame.RSpecialMoveInstance_RelativeAnimMove, BmSDK.IGameObject

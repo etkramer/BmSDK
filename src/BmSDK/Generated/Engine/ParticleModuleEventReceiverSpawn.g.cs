@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleEventReceiverSpawn<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleEventReceiverSpawn : BmSDK.Engine.ParticleModuleEventReceiverBase, BmSDK.IGameObject

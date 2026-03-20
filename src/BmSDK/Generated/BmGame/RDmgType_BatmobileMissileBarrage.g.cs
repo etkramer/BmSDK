@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BatmobileMissileBarrage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BatmobileMissileBarrage : BmSDK.BmGame.RDmgType_BatmobileCannon, BmSDK.IGameObject

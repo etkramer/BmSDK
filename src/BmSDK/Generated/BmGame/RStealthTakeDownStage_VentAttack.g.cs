@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_VentAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_VentAttack : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject

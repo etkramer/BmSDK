@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CoverMeshComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CoverMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
@@ -90,7 +89,7 @@ public partial class CoverMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSD
     /// <summary>
     /// Struct: FCoverMeshes
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCoverMeshes
     {
         /// <summary>

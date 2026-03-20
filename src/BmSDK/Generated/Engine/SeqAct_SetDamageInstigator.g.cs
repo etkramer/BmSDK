@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetDamageInstigator<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetDamageInstigator : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

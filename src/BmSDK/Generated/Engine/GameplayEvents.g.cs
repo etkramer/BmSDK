@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameplayEvents<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
@@ -153,7 +152,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPawnClassEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPawnClassEventData
     {
         /// <summary>
@@ -169,7 +168,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FProjectileClassEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FProjectileClassEventData
     {
         /// <summary>
@@ -185,7 +184,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDamageClassEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDamageClassEventData
     {
         /// <summary>
@@ -201,7 +200,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWeaponClassEventData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWeaponClassEventData
     {
         /// <summary>
@@ -217,7 +216,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGameplayEventMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGameplayEventMetaData
     {
         /// <summary>
@@ -260,7 +259,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlayerInformation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPlayerInformation
     {
         /// <summary>
@@ -303,7 +302,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTeamInformation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTeamInformation
     {
         /// <summary>
@@ -346,7 +345,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGameSessionInformation
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGameSessionInformation
     {
         /// <summary>
@@ -488,7 +487,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGameplayEventsHeader
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGameplayEventsHeader
     {
         /// <summary>
@@ -576,7 +575,7 @@ public partial class GameplayEvents : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGameStatGroup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGameStatGroup
     {
         /// <summary>

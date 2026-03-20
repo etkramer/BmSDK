@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDRelationshipHasChanged<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDRelationshipHasChanged : BmSDK.AkAudio.AkSDRelationship, BmSDK.IGameObject

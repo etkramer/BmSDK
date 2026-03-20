@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_RemoteEvent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_RemoteEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

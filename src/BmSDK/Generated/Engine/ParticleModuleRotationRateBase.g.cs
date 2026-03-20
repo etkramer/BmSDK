@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleRotationRateBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleRotationRateBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

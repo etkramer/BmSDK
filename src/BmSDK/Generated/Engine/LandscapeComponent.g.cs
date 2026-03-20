@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

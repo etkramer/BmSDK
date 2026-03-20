@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RDmgType_Flamethrower<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Flamethrower : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject

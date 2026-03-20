@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleFieldSamplerAttractor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleFieldSamplerAttractor : BmSDK.Engine.ParticleModuleFieldSamplerBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_WaitForWeaponToSettle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_WaitForWeaponToSettle : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

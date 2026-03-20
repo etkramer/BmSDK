@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIController_Friendly<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIController_Friendly : BmSDK.BmGame.RBMAIController, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RRbStealthTakedownStage_OrderedTakedown<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRbStealthTakedownStage_OrderedTakedown : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject

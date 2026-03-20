@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameInfo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameInfo : BmSDK.Engine.Info, BmSDK.IGameObject
@@ -1115,7 +1114,7 @@ public partial class GameInfo : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRMap3DRenderingData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRMap3DRenderingData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphNodePose<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MorphNodePose : BmSDK.Engine.MorphNodeBase, BmSDK.IGameObject

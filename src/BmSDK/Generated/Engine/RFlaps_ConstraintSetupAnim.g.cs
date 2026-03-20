@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetupAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetupAnim : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject

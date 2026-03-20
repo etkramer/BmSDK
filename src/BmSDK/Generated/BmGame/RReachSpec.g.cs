@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RReachSpec<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RReachSpec : BmSDK.Engine.ReachSpec, BmSDK.IGameObject

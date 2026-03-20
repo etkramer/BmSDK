@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlTankTrack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlTankTrack : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

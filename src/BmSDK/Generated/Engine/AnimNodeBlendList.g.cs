@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeBlendList<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeBlendList : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject

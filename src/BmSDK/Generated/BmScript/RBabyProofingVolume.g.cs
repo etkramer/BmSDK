@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBabyProofingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBabyProofingVolume : BmSDK.Engine.BlockingVolume, BmSDK.IGameObject

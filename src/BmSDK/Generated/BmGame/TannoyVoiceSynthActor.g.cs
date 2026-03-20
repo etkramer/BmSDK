@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: TannoyVoiceSynthActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TannoyVoiceSynthActor : BmSDK.Engine.Actor, BmSDK.IGameObject

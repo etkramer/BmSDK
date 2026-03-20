@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_128Step<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_128Step : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_TakedownFront<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_TakedownFront : BmSDK.BmGame.RSeqEvent_TakedownBase, BmSDK.IGameObject

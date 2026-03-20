@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_AirStrikeEndHigh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_AirStrikeEndHigh : BmSDK.BmGame.RDmgType_AirStrikeEnd, BmSDK.IGameObject

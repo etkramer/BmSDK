@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_CasualtyBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_CasualtyBase : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

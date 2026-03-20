@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetCombatParamsForPawns<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetCombatParamsForPawns : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPulleyActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPulleyActor : BmSDK.Engine.RB_PulleyJointActor, BmSDK.IGameObject

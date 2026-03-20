@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BigZapHit<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BigZapHit : BmSDK.BmGame.RDmgType_BigHit, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqEvent_SentryGunEvent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_SentryGunEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

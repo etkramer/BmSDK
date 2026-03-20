@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MWBIDEmailFormScreenMessage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject
@@ -60,7 +59,7 @@ public partial class MWBIDEmailFormScreenMessage : BmSDK.BmGame.MWBIDDataMessage
     /// <summary>
     /// Struct: FUserData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUserData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMRagdollBoneFollower<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMRagdollBoneFollower : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatBotVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatBotVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

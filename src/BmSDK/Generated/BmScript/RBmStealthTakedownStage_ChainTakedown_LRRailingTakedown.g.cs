@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBmStealthTakedownStage_ChainTakedown_LRRailingTakedown<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBmStealthTakedownStage_ChainTakedown_LRRailingTakedown : BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_Base, BmSDK.IGameObject

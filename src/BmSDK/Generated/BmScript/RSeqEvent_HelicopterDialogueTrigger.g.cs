@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqEvent_HelicopterDialogueTrigger<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_HelicopterDialogueTrigger : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

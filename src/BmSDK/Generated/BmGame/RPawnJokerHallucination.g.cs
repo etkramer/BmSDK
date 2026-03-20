@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnJokerHallucination<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnJokerHallucination : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameObject

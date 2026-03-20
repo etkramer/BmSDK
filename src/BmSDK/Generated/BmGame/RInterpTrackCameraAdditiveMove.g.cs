@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackCameraAdditiveMove<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackCameraAdditiveMove : BmSDK.Engine.InterpTrack, BmSDK.IGameObject

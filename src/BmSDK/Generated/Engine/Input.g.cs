@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Input<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
@@ -144,7 +143,7 @@ public partial class Input : BmSDK.Engine.Interaction, BmSDK.IGameObject
     /// <summary>
     /// Struct: FKeyBind
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FKeyBind
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: BookMark2D<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class BookMark2D : BmSDK.GameObject, BmSDK.IGameObject

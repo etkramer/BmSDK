@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_CaltropsRagdoll<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_CaltropsRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, BmSDK.IGameObject

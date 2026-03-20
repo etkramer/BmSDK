@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRoadJunction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRoadJunction : BmSDK.Engine.Actor, BmSDK.IGameObject

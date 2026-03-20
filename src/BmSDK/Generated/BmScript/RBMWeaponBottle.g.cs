@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponBottle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponBottle : BmSDK.BmScript.RBMWeaponKnifeBase, BmSDK.IGameObject

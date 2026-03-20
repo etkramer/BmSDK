@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionPixelDepth<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionPixelDepth : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

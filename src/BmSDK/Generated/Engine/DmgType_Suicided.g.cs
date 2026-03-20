@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DmgType_Suicided<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DmgType_Suicided : BmSDK.Engine.KillZDamageType, BmSDK.IGameObject

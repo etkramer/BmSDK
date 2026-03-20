@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexGridComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject
@@ -412,7 +411,7 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// Struct: FSGridIntRange
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSGridIntRange
     {
         /// <summary>
@@ -437,7 +436,7 @@ public partial class ApexGridComponent : BmSDK.Engine.ApexFieldSamplerComponent,
     /// <summary>
     /// Struct: FSGridFloatRange
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSGridFloatRange
     {
         /// <summary>

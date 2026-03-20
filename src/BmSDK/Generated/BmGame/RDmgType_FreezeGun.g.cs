@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_FreezeGun<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_FreezeGun : BmSDK.BmGame.RDmgType_Ranged, BmSDK.IGameObject

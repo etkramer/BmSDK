@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: InterpTrackSoundMasterSync<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackSoundMasterSync : BmSDK.AkAudio.InterpTrackAkEvent, BmSDK.IGameObject

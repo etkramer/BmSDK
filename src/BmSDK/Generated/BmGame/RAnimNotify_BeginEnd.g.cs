@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_BeginEnd<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_BeginEnd : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

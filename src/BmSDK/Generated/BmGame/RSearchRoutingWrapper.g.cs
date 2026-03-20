@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSearchRoutingWrapper<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
@@ -396,7 +395,7 @@ public partial class RSearchRoutingWrapper : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSideBranchStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSideBranchStruct
     {
         /// <summary>

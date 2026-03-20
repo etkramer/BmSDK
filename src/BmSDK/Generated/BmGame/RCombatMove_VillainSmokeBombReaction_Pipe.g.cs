@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainSmokeBombReaction_Pipe<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainSmokeBombReaction_Pipe : BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction, BmSDK.IGameObject

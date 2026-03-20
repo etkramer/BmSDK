@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetThugBarkState<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetThugBarkState : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

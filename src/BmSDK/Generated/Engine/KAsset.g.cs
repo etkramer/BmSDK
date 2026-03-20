@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KAsset<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class KAsset : BmSDK.Engine.Actor, BmSDK.IGameObject

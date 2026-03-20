@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceComponentRadial<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ForceComponentRadial : BmSDK.Engine.RB_ForceComponent, BmSDK.IGameObject

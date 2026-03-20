@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UISoundTheme<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class UISoundTheme : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSoundEventMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSoundEventMapping
     {
         /// <summary>

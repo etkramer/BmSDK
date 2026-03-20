@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStartlePoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStartlePoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

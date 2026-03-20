@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_BossPawn<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_BossPawn : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHidePoint_Grate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePoint_Grate : BmSDK.BmGame.RHidePoint_GrateBase, BmSDK.IGameObject

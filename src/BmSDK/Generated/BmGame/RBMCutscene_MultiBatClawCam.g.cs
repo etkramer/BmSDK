@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCutscene_MultiBatClawCam<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCutscene_MultiBatClawCam : BmSDK.BmGame.RBMCutscene_BatClawCam, BmSDK.IGameObject

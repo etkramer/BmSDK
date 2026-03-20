@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXrayWire<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RXrayWire : BmSDK.BmGame.RXrayInterpActor, BmSDK.IGameObject

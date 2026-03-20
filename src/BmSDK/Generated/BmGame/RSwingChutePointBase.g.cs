@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSwingChutePointBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSwingChutePointBase : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject

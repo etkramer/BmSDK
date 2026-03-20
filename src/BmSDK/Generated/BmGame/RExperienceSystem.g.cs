@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RExperienceSystem<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RExperienceSystem : BmSDK.Engine.Actor, BmSDK.IGameObject

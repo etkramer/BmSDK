@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDisruptableObjectDoor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDisruptableObjectDoor : BmSDK.Engine.Actor, BmSDK.IGameObject

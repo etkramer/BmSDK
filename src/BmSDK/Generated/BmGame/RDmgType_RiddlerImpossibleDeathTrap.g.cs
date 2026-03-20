@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_RiddlerImpossibleDeathTrap<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_RiddlerImpossibleDeathTrap : BmSDK.BmGame.RDmgType_ElectricFloor, BmSDK.IGameObject

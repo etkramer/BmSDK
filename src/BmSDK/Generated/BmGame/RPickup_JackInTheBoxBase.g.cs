@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPickup_JackInTheBoxBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPickup_JackInTheBoxBase : BmSDK.Engine.Actor, BmSDK.IGameObject

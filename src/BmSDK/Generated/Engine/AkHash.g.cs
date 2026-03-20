@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkHash<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkHash : BmSDK.GameObject, BmSDK.IGameObject

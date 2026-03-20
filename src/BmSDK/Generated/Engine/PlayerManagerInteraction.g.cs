@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PlayerManagerInteraction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PlayerManagerInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject
@@ -75,7 +74,7 @@ public partial class PlayerManagerInteraction : BmSDK.Engine.Interaction, BmSDK.
     public unsafe bool OnReceivedNativeInputKey(int ControllerId, BmSDK.FName Key, BmSDK.GameObject.EInputEvent EventType, float AmountDepressed = default, bool bGamepad = default)
     {
         var funcManaged = BmSDK.GameObject.StaticFindObjectChecked<BmSDK.Function>(BmSDK.Function.StaticClass(), null, "Engine.Interaction.OnReceivedNativeInputKey", true);
-        byte* paramsPtr = stackalloc byte[0];
+        byte* paramsPtr = stackalloc byte[64];
         BmSDK.Framework.MarshalUtil.ToUnmanaged(ControllerId, paramsPtr + 0);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(Key, paramsPtr + 4);
         BmSDK.Framework.MarshalUtil.ToUnmanaged(EventType, paramsPtr + 12);

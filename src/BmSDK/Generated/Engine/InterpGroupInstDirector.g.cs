@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpGroupInstDirector<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpGroupInstDirector : BmSDK.Engine.InterpGroupInst, BmSDK.IGameObject

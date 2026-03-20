@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFloatingIceRaftMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFloatingIceRaftMesh : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.IGameObject

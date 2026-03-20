@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_PlayParticleEffect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_PlayParticleEffect : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

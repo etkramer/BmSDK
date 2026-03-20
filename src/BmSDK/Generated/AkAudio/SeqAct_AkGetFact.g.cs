@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkGetFact<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkGetFact : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAlternateAnimationAndWeaponConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAlternateAnimationAndWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject

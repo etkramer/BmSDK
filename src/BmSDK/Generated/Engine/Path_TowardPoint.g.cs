@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Path_TowardPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Path_TowardPoint : BmSDK.Engine.PathConstraint, BmSDK.IGameObject

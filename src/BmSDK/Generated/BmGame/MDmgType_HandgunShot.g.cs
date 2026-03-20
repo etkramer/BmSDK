@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MDmgType_HandgunShot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MDmgType_HandgunShot : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

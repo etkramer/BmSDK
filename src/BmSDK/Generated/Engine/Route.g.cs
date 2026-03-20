@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Route<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Route : BmSDK.Engine.Info, BmSDK.IGameObject

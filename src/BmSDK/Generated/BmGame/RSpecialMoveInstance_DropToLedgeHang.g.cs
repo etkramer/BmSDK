@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_DropToLedgeHang<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_DropToLedgeHang : BmSDK.BmGame.RSpecialMoveInstance_RelativeAnimWithTravelAnim, BmSDK.IGameObject

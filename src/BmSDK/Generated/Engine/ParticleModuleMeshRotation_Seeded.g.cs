@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleMeshRotation_Seeded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleMeshRotation_Seeded : BmSDK.Engine.ParticleModuleMeshRotation, BmSDK.IGameObject

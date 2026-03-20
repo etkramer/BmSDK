@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RPawnVillainMultiStage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainMultiStage : BmSDK.BmGame.RPawnVillainMultiStageBase, BmSDK.IGameObject

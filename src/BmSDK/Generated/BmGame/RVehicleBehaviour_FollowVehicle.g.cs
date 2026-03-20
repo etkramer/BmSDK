@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_FollowVehicle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_FollowVehicle : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject

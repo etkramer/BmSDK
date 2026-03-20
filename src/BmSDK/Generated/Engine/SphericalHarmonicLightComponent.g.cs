@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SphericalHarmonicLightComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject
@@ -728,7 +727,7 @@ public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightCompone
     /// <summary>
     /// Struct: FFGelLayer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFGelLayer
     {
         /// <summary>
@@ -829,7 +828,7 @@ public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightCompone
     /// <summary>
     /// Struct: FEffectorSignal
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FEffectorSignal
     {
         /// <summary>
@@ -863,7 +862,7 @@ public partial class SphericalHarmonicLightComponent : BmSDK.Engine.LightCompone
     /// <summary>
     /// Struct: FLightingChannelContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLightingChannelContainer
     {
         /// <summary>

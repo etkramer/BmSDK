@@ -5,7 +5,6 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: IpNetDriverSteamworks<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class IpNetDriverSteamworks : BmSDK.IpDrv.TcpNetDriver, BmSDK.IGameObject

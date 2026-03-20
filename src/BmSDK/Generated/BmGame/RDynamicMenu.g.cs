@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDynamicMenu<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -683,7 +682,7 @@ public partial class RDynamicMenu : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FShowEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FShowEntry
     {
         /// <summary>

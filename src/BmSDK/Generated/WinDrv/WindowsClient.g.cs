@@ -5,7 +5,6 @@ namespace BmSDK.WinDrv;
 
 /// <summary>
 /// Class: WindowsClient<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class WindowsClient : BmSDK.Engine.Client, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameStatsAggregator<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameStatsAggregator : BmSDK.Engine.GameplayEventsHandler, BmSDK.IGameObject

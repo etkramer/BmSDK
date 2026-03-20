@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_GameActionPerformedWithTarget<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_GameActionPerformedWithTarget : BmSDK.BmGame.RSeqAct_GameActionPerformed, BmSDK.IGameObject

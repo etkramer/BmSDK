@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: InterpTrackInstAkEditorOnlyWav<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstAkEditorOnlyWav : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class InterpTrackInstAkEditorOnlyWav : BmSDK.Engine.InterpTrackIn
     /// <summary>
     /// Struct: FAkWavData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkWavData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RFreezeBlastIceSphere<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeBlastIceSphere : BmSDK.Engine.FogVolumeSphericalDensityInfo, BmSDK.IGameObject

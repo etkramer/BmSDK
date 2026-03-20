@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkMixTemplate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkMixTemplate : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class AkMixTemplate : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMixParameter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMixParameter
     {
         /// <summary>

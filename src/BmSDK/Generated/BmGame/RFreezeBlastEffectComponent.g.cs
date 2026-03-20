@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezeBlastEffectComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeBlastEffectComponent : BmSDK.BmGame.RPawnEffectComponent, BmSDK.IGameObject

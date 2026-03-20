@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_Predator<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_Predator : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

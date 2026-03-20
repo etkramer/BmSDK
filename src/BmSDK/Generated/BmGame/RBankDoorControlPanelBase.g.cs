@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBankDoorControlPanelBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBankDoorControlPanelBase : BmSDK.Engine.Actor, BmSDK.IGameObject

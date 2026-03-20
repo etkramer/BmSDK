@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SVehicleWheel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SVehicleWheel : BmSDK.Component, BmSDK.IGameObject

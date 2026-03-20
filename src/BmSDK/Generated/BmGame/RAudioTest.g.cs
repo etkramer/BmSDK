@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAudioTest<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAudioTest : BmSDK.Engine.AkVehicle, BmSDK.IGameObject

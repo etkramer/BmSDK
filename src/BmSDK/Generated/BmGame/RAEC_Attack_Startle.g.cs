@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Attack_Startle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Attack_Startle : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

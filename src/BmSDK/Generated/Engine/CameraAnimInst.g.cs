@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraAnimInst<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CameraAnimInst : BmSDK.GameObject, BmSDK.IGameObject

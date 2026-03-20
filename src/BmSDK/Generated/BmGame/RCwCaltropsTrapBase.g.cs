@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCwCaltropsTrapBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCwCaltropsTrapBase : BmSDK.BmGame.RThugTrap, BmSDK.IGameObject

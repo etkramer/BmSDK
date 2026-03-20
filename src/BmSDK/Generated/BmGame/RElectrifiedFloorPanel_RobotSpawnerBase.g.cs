@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RElectrifiedFloorPanel_RobotSpawnerBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RElectrifiedFloorPanel_RobotSpawnerBase : BmSDK.BmGame.RElectrifiedFloorPanel, BmSDK.IGameObject

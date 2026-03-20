@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_Event<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_Event : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject

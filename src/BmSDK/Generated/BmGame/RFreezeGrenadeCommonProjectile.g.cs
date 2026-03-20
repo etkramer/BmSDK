@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezeGrenadeCommonProjectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeGrenadeCommonProjectile : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject

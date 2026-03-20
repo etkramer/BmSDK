@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionMeshSubUVBlend<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionMeshSubUVBlend : BmSDK.Engine.MaterialExpressionMeshSubUV, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleCombatManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleCombatManager : BmSDK.GameObject, BmSDK.IGameObject

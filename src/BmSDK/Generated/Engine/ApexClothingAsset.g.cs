@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexClothingAsset<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObject
@@ -261,7 +260,7 @@ public partial class ApexClothingAsset : BmSDK.Engine.ApexAsset, BmSDK.IGameObje
     /// <summary>
     /// Struct: FClothingLodInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FClothingLodInfo
     {
         /// <summary>

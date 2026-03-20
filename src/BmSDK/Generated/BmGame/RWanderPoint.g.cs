@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWanderPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWanderPoint : BmSDK.Engine.Actor, BmSDK.IGameObject

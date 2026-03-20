@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryVehicle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryVehicle : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiDestGoalData<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class RMultiDestGoalData : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPerGoalInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPerGoalInfo
     {
         /// <summary>

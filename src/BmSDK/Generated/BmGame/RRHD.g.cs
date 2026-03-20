@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRHD<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRHD : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
@@ -728,7 +727,7 @@ public partial class RRHD : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSecondaryTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSecondaryTargetData
     {
         /// <summary>

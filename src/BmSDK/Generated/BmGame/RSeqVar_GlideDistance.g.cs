@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_GlideDistance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_GlideDistance : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject

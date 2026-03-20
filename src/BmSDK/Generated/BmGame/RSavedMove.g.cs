@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSavedMove<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSavedMove : BmSDK.Engine.SavedMove, BmSDK.IGameObject

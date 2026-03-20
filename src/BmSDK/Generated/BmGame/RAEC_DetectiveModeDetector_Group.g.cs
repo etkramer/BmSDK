@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_DetectiveModeDetector_Group<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_DetectiveModeDetector_Group : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

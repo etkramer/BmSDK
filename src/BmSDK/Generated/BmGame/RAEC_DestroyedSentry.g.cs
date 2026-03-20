@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_DestroyedSentry<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_DestroyedSentry : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

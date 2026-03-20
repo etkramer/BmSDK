@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_PerimPeekInward<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_PerimPeekInward : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

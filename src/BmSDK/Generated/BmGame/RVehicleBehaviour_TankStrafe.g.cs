@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_TankStrafe<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_TankStrafe : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DOFEffect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DOFEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject

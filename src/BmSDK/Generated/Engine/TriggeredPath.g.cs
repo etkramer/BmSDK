@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TriggeredPath<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TriggeredPath : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject

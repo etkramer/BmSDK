@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezeTankDestroyerBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeTankDestroyerBase : BmSDK.Engine.Actor, BmSDK.IGameObject

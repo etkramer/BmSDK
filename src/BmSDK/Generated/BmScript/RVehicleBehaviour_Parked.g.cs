@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVehicleBehaviour_Parked<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_Parked : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject

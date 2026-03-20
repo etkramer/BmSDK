@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRocketMineTargetBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRocketMineTargetBase : BmSDK.Engine.KAsset, BmSDK.IGameObject

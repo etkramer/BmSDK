@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RLOD2UndersideClippingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLOD2UndersideClippingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

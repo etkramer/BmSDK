@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: REvadeOverrideVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class REvadeOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

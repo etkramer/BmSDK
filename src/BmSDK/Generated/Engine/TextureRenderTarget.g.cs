@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TextureRenderTarget<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TextureRenderTarget : BmSDK.Engine.Texture, BmSDK.IGameObject

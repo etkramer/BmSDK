@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJobAssignment_MiniManDown<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJobAssignment_MiniManDown : BmSDK.BmGame.RJobAssignment, BmSDK.IGameObject

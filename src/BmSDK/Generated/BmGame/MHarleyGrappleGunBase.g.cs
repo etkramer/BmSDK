@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHarleyGrappleGunBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHarleyGrappleGunBase : BmSDK.BmGame.RGrappleGun, BmSDK.IGameObject

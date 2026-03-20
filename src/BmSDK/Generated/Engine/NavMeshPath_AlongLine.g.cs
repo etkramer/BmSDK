@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshPath_AlongLine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshPath_AlongLine : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject

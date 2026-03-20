@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueLineDynamic<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueLineDynamic : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorParameterBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVectorParameterBase : BmSDK.Engine.DistributionVectorConstant, BmSDK.IGameObject

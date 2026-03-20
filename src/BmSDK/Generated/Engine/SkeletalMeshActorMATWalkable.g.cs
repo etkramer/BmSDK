@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkeletalMeshActorMATWalkable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SkeletalMeshActorMATWalkable : BmSDK.Engine.SkeletalMeshActorMAT, BmSDK.IGameObject

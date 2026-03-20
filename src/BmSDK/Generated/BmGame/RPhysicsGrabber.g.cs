@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhysicsGrabber<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysicsGrabber : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

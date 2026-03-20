@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Sub_EnvironmentStartle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Sub_EnvironmentStartle : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

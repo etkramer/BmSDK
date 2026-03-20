@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstVectorMaterialParam<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstVectorMaterialParam : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class InterpTrackInstVectorMaterialParam : BmSDK.Engine.InterpTra
     /// <summary>
     /// Struct: FVectorMaterialParamMICData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVectorMaterialParamMICData
     {
         /// <summary>

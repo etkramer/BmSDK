@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSkeletalMeshPhysSceneInterface<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkeletalMeshPhysSceneInterface : BmSDK.GameObject, BmSDK.IGameObject

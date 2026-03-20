@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqEvent_CustomBackscreenRequested_Normal<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_CustomBackscreenRequested_Normal : BmSDK.BmGame.RSeqEvent_CustomBackscreenRequested, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatEvent_QuickStrikeHit<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatEvent_QuickStrikeHit : BmSDK.BmGame.RCombatEvent, BmSDK.IGameObject

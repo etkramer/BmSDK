@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSearchTreeFinder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSearchTreeFinder : BmSDK.Engine.RNavigationQueryObject, BmSDK.IGameObject

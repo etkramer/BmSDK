@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MPawnScarecrowBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MPawnScarecrowBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject

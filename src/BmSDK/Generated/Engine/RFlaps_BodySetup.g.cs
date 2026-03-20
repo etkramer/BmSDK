@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_BodySetup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_BodySetup : BmSDK.GameObject, BmSDK.IGameObject

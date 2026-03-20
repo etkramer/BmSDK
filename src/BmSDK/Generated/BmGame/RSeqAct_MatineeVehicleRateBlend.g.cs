@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_MatineeVehicleRateBlend<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_MatineeVehicleRateBlend : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

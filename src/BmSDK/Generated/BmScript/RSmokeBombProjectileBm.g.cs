@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSmokeBombProjectileBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSmokeBombProjectileBm : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject

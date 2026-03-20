@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnCombat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnCombat : BmSDK.BmGame.RPawnCharacter, BmSDK.IGameObject

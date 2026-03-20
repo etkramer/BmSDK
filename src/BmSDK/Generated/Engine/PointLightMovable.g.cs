@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PointLightMovable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PointLightMovable : BmSDK.Engine.PointLight, BmSDK.IGameObject

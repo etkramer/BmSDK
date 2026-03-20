@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RDmgType_DiveBoostShockwave<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_DiveBoostShockwave : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject

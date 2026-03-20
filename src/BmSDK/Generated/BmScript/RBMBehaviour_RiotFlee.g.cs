@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMBehaviour_RiotFlee<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_RiotFlee : BmSDK.BmGame.RBMBehaviour_GangMovementBaseBase, BmSDK.IGameObject

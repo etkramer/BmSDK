@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRoadArea<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRoadAreaLink
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRoadAreaLink
     {
         /// <summary>
@@ -194,7 +193,7 @@ public partial class RRoadArea : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRoadAreaPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRoadAreaPoint
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDNode<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDNode : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -198,7 +197,7 @@ public partial class AkSDNode : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVariables
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVariables
     {
         /// <summary>

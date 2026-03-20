@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdSequence_BatmanAppear<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdSequence_BatmanAppear : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSentryGunLightsBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSentryGunLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObject

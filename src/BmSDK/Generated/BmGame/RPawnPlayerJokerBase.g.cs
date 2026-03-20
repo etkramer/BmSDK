@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnPlayerJokerBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameObject
@@ -98,7 +97,7 @@ public partial class RPawnPlayerJokerBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGam
     /// <summary>
     /// Struct: FJokerCustomConstraintConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FJokerCustomConstraintConfig
     {
         /// <summary>

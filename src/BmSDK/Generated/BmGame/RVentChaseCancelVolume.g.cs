@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVentChaseCancelVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVentChaseCancelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

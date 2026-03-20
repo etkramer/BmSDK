@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMWeaponStunStickBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponStunStickBase : BmSDK.BmGame.RBMWeaponMelee, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RMagBlastLight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMagBlastLight : BmSDK.Engine.Actor, BmSDK.IGameObject

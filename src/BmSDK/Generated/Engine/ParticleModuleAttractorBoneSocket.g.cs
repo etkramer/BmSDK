@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleAttractorBoneSocket<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleAttractorBoneSocket : BmSDK.Engine.ParticleModuleAttractorBase, BmSDK.IGameObject

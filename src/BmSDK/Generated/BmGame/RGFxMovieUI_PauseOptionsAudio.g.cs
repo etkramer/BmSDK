@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieUI_PauseOptionsAudio<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieUI_PauseOptionsAudio : BmSDK.BmGame.RGFxMovieUI_PauseBase, BmSDK.IGameObject

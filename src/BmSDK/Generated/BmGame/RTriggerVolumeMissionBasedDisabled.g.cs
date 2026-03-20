@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTriggerVolumeMissionBasedDisabled<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTriggerVolumeMissionBasedDisabled : BmSDK.BmGame.RTriggerVolumeMissionBased, BmSDK.IGameObject

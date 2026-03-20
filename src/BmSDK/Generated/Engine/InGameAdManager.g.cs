@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InGameAdManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InGameAdManager : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject

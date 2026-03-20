@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainClash<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainClash : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject
@@ -323,7 +322,7 @@ public partial class RCombatMove_VillainClash : BmSDK.BmGame.RCombatMove_Villain
     /// <summary>
     /// Struct: FClashInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FClashInfo
     {
         /// <summary>

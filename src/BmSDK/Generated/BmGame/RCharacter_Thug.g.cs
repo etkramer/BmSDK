@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacter_Thug<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacter_Thug : BmSDK.BmGame.RCharacter, BmSDK.IGameObject

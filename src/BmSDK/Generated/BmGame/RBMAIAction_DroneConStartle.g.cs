@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_DroneConStartle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_DroneConStartle : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

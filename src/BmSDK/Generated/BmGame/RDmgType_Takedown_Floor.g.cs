@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_Takedown_Floor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_Takedown_Floor : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject

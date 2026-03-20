@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_SetVelocity<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_SetVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RFreezeClusterGrenadeProjectileBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeClusterGrenadeProjectileBm : BmSDK.BmGame.RFreezeClusterGrenadeProjectile, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_DialogueTrigger<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_DialogueTrigger : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

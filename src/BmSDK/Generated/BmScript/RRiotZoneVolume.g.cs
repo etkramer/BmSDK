@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RRiotZoneVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRiotZoneVolume : BmSDK.BmGame.ROverworldPopulationVolume, BmSDK.IGameObject

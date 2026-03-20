@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SplineActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -179,7 +178,7 @@ public partial class SplineActor : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSplineConnection
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSplineConnection
     {
         /// <summary>

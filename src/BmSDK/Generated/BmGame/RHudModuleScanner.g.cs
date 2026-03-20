@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleScanner<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleScanner : BmSDK.BmGame.RHudModule, BmSDK.IGameObject

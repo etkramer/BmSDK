@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_OpenGrate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_OpenGrate : BmSDK.BmGame.RSpecialMoveInstance_HarpoonBase, BmSDK.IGameObject

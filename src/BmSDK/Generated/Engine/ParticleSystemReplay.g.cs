@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleSystemReplay<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleSystemReplayFrame
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FParticleSystemReplayFrame
     {
         /// <summary>
@@ -79,7 +78,7 @@ public partial class ParticleSystemReplay : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FParticleEmitterReplayFrame
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FParticleEmitterReplayFrame
     {
         /// <summary>

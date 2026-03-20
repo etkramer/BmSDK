@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkGlobalFlagCheck<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkGlobalFlagCheck : BmSDK.Engine.AkPredicate, BmSDK.IGameObject

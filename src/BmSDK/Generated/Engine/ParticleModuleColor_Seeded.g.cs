@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleColor_Seeded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleColor_Seeded : BmSDK.Engine.ParticleModuleColor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_BMSpotted<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_BMSpotted : BmSDK.BmGame.RBMSeqEvent_BehaviourRoot, BmSDK.IGameObject

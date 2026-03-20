@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSubtitle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSubtitle : BmSDK.GameObject, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RSubtitle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRSArraySubtitleCue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRSArraySubtitleCue
     {
         /// <summary>

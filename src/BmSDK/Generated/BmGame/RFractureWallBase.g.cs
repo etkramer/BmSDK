@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFractureWallBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFractureWallBase : BmSDK.Engine.FracturedStaticMeshActor, BmSDK.IGameObject

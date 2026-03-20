@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PrefabSequence<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PrefabSequence : BmSDK.Engine.Sequence, BmSDK.IGameObject

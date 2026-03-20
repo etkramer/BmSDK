@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHushCameraBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHushCameraBase : BmSDK.Engine.Actor, BmSDK.IGameObject

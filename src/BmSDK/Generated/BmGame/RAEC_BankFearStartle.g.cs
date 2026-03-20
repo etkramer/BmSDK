@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_BankFearStartle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_BankFearStartle : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangInteractPointBreakableBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangInteractPointBreakableBase : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject

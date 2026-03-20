@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshGoal_SafeCombat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshGoal_SafeCombat : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject

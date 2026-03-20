@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Scout<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
@@ -368,7 +367,7 @@ public partial class Scout : BmSDK.Engine.Pawn, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPathSizeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPathSizeInfo
     {
         /// <summary>

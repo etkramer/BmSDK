@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxEngine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GFxEngine : BmSDK.GameObject, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class GFxEngine : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGCReference
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGCReference
     {
         /// <summary>

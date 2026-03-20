@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_VariablePositionTraverse<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_VariablePositionTraverse : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceActor : BmSDK.Engine.Actor, BmSDK.IGameObject

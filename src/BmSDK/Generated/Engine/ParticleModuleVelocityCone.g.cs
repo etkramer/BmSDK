@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleVelocityCone<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleVelocityCone : BmSDK.Engine.ParticleModuleVelocityBase, BmSDK.IGameObject

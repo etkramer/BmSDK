@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavigationHandle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IGameObject
@@ -576,7 +575,7 @@ public partial class RNavigationHandle : BmSDK.Engine.NavigationHandle, BmSDK.IG
     /// <summary>
     /// Struct: FComputedPathPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FComputedPathPoint
     {
         /// <summary>

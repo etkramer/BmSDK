@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FluidSurfaceActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class FluidSurfaceActor : BmSDK.Engine.Actor, BmSDK.IGameObject

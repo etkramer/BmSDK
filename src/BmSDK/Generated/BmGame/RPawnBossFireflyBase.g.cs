@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnBossFireflyBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnBossFireflyBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject

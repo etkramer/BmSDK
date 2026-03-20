@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RockMapHighlight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RockMapHighlight : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RockMapHighlight : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFMapHighlightInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFMapHighlightInfo
     {
         /// <summary>

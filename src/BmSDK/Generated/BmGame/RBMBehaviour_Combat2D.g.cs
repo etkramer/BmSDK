@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_Combat2D<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_Combat2D : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject

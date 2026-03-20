@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceConstant<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Struct: FVectorParameterValue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVectorParameterValue
     {
         /// <summary>
@@ -106,7 +105,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Struct: FTextureParameterValue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTextureParameterValue
     {
         /// <summary>
@@ -140,7 +139,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Struct: FScalarParameterValue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FScalarParameterValue
     {
         /// <summary>
@@ -174,7 +173,7 @@ public partial class MaterialInstanceConstant : BmSDK.Engine.MaterialInstance, B
     /// <summary>
     /// Struct: FFontParameterValue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFontParameterValue
     {
         /// <summary>

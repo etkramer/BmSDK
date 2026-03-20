@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_LightTankFlushOutBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_LightTankFlushOutBatmobile : BmSDK.BmGame.RVehicleBehaviour, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeStateConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -587,7 +586,7 @@ public partial class RCapeStateConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeMaterialPropertySetting
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeMaterialPropertySetting
     {
         /// <summary>

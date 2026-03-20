@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_PredGuard<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_PredGuard : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject

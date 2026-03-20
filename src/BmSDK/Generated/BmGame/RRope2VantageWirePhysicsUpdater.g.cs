@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2VantageWirePhysicsUpdater<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2VantageWirePhysicsUpdater : BmSDK.BmGame.RRope2SimplePhysicsUpdater, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class RRope2VantageWirePhysicsUpdater : BmSDK.BmGame.RRope2Simple
     /// <summary>
     /// Struct: FRRope2SimplePhysicsUpdaterInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRRope2SimplePhysicsUpdaterInitData
     {
         /// <summary>
@@ -115,7 +114,7 @@ public partial class RRope2VantageWirePhysicsUpdater : BmSDK.BmGame.RRope2Simple
     /// <summary>
     /// Struct: FRRope2SimplePhyiscsNodeInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRRope2SimplePhyiscsNodeInitData
     {
         /// <summary>

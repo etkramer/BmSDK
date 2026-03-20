@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNodeScalePlayRate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNodeScalePlayRate : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexFieldSamplerComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexFieldSamplerComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

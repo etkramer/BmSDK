@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangFleePressPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangFleePressPoint : BmSDK.BmGame.RGangFleePressPointBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkEvent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkEvent : BmSDK.Engine.AkAsset, BmSDK.IGameObject

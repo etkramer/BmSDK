@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_Parameter_Altitude<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_Parameter_Altitude : BmSDK.Engine.AkActionGlobal, BmSDK.IGameObject

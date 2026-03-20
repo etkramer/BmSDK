@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVoiceSynthesiserBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVoiceSynthesiserBm : BmSDK.BmGame.RVoiceSynthesiser, BmSDK.IGameObject
@@ -759,7 +758,7 @@ public partial class RVoiceSynthesiserBm : BmSDK.BmGame.RVoiceSynthesiser, BmSDK
     /// <summary>
     /// Struct: FVoiceSynthTargetStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVoiceSynthTargetStruct
     {
         /// <summary>

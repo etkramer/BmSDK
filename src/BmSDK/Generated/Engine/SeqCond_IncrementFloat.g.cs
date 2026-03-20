@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_IncrementFloat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_IncrementFloat : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

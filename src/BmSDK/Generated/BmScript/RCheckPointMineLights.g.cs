@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCheckPointMineLights<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCheckPointMineLights : BmSDK.Engine.Actor, BmSDK.IGameObject

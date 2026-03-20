@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RestoreMines<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RestoreMines : BmSDK.BmGame.RBMAIAction_RestoreSpecial, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: ClientBeaconAddressResolver<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ClientBeaconAddressResolver : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBmBatmanCutscene<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBmBatmanCutscene : BmSDK.BmGame.RBMCutsceneBase, BmSDK.IGameObject

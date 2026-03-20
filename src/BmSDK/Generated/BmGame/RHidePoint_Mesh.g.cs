@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHidePoint_Mesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePoint_Mesh : BmSDK.BmGame.RHidePoint, BmSDK.IGameObject

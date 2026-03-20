@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicSMActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DynamicSMActor : BmSDK.Engine.RStaticClimbableActor, BmSDK.IGameObject

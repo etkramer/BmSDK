@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainChargeAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainChargeAttack : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_FearDart_Watcher<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_FearDart_Watcher : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

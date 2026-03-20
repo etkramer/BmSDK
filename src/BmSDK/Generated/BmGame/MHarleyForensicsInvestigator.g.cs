@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHarleyForensicsInvestigator<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHarleyForensicsInvestigator : BmSDK.BmGame.RForensicsInvestigator, BmSDK.IGameObject
@@ -297,7 +296,7 @@ public partial class MHarleyForensicsInvestigator : BmSDK.BmGame.RForensicsInves
     /// <summary>
     /// Struct: FInfoEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FInfoEntry
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_InputAlias<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBase, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
     /// <summary>
     /// Struct: FUIDataStoreInputAlias
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUIDataStoreInputAlias
     {
         /// <summary>
@@ -95,7 +94,7 @@ public partial class UIDataStore_InputAlias : BmSDK.Engine.UIDataStore_StringBas
     /// <summary>
     /// Struct: FUIInputKeyData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUIInputKeyData
     {
         /// <summary>

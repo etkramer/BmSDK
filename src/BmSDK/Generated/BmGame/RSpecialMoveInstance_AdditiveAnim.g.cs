@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_AdditiveAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_AdditiveAnim : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

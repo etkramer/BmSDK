@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_CompletedBatcaveWithBeatdowns<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_CompletedBatcaveWithBeatdowns : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

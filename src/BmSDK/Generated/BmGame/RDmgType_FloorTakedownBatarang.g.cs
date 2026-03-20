@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_FloorTakedownBatarang<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_FloorTakedownBatarang : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IGameObject

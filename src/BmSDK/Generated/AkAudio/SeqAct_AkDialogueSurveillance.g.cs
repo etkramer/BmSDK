@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkDialogueSurveillance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkDialogueSurveillance : BmSDK.AkAudio.SeqAct_AkBaseSimple, BmSDK.IGameObject

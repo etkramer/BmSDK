@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_ShowTextOverFade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ShowTextOverFade : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

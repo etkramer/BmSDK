@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainJokerBoxerBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainJokerBoxerBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject

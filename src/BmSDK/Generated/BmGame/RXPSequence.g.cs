@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXPSequence<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RXPSequence : BmSDK.BmGame.RCrowdSequence, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RLevelTransitionShutterDoors<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelTransitionShutterDoors : BmSDK.BmScript.RLevelTransitionDoorBunkerBase, BmSDK.IGameObject

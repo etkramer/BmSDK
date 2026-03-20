@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_HarpoonGlideKick<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_HarpoonGlideKick : BmSDK.BmGame.RSpecialMoveConfig_HarpoonThug, BmSDK.IGameObject
@@ -108,7 +107,7 @@ public partial class RSpecialMoveConfig_HarpoonGlideKick : BmSDK.BmGame.RSpecial
     /// <summary>
     /// Struct: FBatclawBatmanAnimConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBatclawBatmanAnimConfig
     {
         /// <summary>

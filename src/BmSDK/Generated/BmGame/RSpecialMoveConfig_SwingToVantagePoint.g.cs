@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_SwingToVantagePoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_SwingToVantagePoint : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

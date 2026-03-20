@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_BatmanBatclawRedirect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_BatmanBatclawRedirect : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

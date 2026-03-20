@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangInteractPointAbandonedVehicleBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FArrowContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FArrowContainer
     {
         /// <summary>
@@ -186,7 +185,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FTransInLocs
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTransInLocs
     {
         /// <summary>
@@ -220,7 +219,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FCarAnimationDetails
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCarAnimationDetails
     {
         /// <summary>
@@ -317,7 +316,7 @@ public partial class RGangInteractPointAbandonedVehicleBase : BmSDK.BmGame.RGang
     /// <summary>
     /// Struct: FMultiStageAnim
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMultiStageAnim
     {
         /// <summary>

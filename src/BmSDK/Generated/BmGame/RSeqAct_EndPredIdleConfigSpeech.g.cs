@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_EndPredIdleConfigSpeech<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_EndPredIdleConfigSpeech : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ElecFloorRobotSpawnManagerBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ElecFloorRobotSpawnManagerBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

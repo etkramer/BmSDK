@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_HudExtensionControl<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_HudExtensionControl : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

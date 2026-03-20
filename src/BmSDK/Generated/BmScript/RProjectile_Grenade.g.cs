@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RProjectile_Grenade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RProjectile_Grenade : BmSDK.BmGame.RProjectile_GrenadeBase, BmSDK.IGameObject

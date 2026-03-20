@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDestructibleActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDestructibleActor : BmSDK.Engine.ApexDestructibleActor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_PlayCameraEmitter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_PlayCameraEmitter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KismetBookMark<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class KismetBookMark : BmSDK.Engine.BookMark2D, BmSDK.IGameObject

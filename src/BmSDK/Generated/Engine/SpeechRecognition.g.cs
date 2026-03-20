@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpeechRecognition<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
@@ -150,7 +149,7 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRecogUserData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRecogUserData
     {
         /// <summary>
@@ -175,7 +174,7 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRecogVocabulary
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRecogVocabulary
     {
         /// <summary>
@@ -236,7 +235,7 @@ public partial class SpeechRecognition : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRecognisableWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRecognisableWord
     {
         /// <summary>

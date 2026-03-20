@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_GauntletMovie<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_GauntletMovie : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

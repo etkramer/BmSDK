@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCharacterScaleReferenceBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -80,7 +79,7 @@ public partial class RCharacterScaleReferenceBase : BmSDK.Engine.Actor, BmSDK.IG
     /// <summary>
     /// Struct: FSkeletalMeshSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSkeletalMeshSettings
     {
         /// <summary>

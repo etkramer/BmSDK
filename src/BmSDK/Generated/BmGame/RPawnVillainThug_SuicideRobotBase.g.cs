@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainThug_SuicideRobotBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainThug_SuicideRobotBase : BmSDK.BmGame.RPawnVillain, BmSDK.IGameObject

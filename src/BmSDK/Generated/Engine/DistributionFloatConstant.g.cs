@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionFloatConstant<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionFloatConstant : BmSDK.DistributionFloat, BmSDK.IGameObject

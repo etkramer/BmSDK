@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_FireflyFleeBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_FireflyFleeBase : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject

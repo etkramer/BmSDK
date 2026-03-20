@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackCape<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RInterpTrackCape : BmSDK.Engine.InterpTrack, BmSDK.IGameObj
     /// <summary>
     /// Struct: FCapeTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeTrackKey
     {
         /// <summary>

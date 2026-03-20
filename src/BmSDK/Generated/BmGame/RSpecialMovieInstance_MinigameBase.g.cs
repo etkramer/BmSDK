@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMovieInstance_MinigameBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMovieInstance_MinigameBase : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

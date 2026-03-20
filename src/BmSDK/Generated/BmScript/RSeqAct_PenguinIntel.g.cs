@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_PenguinIntel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_PenguinIntel : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

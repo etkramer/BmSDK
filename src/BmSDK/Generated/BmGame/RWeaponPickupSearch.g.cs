@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWeaponPickupSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWeaponPickupSearch : BmSDK.GameObject, BmSDK.IGameObject

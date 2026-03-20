@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackDirector<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -180,7 +179,7 @@ public partial class InterpTrackDirector : BmSDK.Engine.InterpTrack, BmSDK.IGame
     /// <summary>
     /// Struct: FDirectorTrackCut
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDirectorTrackCut
     {
         /// <summary>

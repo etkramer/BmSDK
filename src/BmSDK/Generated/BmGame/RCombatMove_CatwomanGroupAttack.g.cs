@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_CatwomanGroupAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_CatwomanGroupAttack : BmSDK.BmGame.RCombatMove_PlayerSpecial, BmSDK.IGameObject

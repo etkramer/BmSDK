@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPawnAIAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPawnAIAnim : BmSDK.BmGame.RPawnCombat, BmSDK.IGameObject

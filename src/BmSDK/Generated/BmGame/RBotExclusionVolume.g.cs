@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBotExclusionVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBotExclusionVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

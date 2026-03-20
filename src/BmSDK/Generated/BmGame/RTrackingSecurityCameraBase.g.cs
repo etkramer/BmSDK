@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTrackingSecurityCameraBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTrackingSecurityCameraBase : BmSDK.BmGame.RTrackingObjectBase, BmSDK.IGameObject

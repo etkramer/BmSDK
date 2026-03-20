@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshObstacle_Queue<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshObstacle_Queue : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject

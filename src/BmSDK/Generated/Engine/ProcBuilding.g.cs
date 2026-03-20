@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ProcBuilding<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -415,7 +414,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBEdgeInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPBEdgeInfo
     {
         /// <summary>
@@ -498,7 +497,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBFaceUVInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPBFaceUVInfo
     {
         /// <summary>
@@ -523,7 +522,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBScopeProcessInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPBScopeProcessInfo
     {
         /// <summary>
@@ -575,7 +574,7 @@ public partial class ProcBuilding : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPBScope2D
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPBScope2D
     {
         /// <summary>

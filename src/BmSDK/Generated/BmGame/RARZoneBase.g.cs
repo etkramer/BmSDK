@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RARZoneBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RARZoneBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHidePoint_LampPostTop<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePoint_LampPostTop : BmSDK.BmGame.RHidePoint_Walkable, BmSDK.IGameObject

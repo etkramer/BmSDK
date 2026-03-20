@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDirectionalLightStaticShadows<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDirectionalLightStaticShadows : BmSDK.Engine.DirectionalLight, BmSDK.IGameObject

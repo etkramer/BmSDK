@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_RedirectChargerRagdoll<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_RedirectChargerRagdoll : BmSDK.BmGame.RDmgType_Ragdoll, BmSDK.IGameObject

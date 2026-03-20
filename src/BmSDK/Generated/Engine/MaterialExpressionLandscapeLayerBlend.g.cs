@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLandscapeLayerBlend<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLandscapeLayerBlend : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class MaterialExpressionLandscapeLayerBlend : BmSDK.Engine.Materi
     /// <summary>
     /// Struct: FLayerBlendInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLayerBlendInput
     {
         /// <summary>

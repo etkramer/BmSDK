@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RChallengeManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -486,7 +485,7 @@ public partial class RChallengeManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCountsByCharacter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCountsByCharacter
     {
         /// <summary>

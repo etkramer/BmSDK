@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawCapsuleComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DrawCapsuleComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

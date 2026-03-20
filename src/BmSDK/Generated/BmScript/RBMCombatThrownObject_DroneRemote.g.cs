@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_DroneRemote<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_DroneRemote : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

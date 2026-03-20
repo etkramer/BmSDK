@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMovieModularHud_Batmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieModularHud_Batmobile : BmSDK.BmGame.RGFxMovieModularHudBase, BmSDK.IGameObject

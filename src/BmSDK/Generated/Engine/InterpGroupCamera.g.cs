@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpGroupCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpGroupCamera : BmSDK.Engine.InterpGroup, BmSDK.IGameObject

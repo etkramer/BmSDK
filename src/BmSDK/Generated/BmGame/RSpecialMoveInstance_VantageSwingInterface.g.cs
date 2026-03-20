@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_VantageSwingInterface<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_VantageSwingInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -162,7 +161,7 @@ public partial class RSpecialMoveInstance_VantageSwingInterface : BmSDK.Interfac
     /// <summary>
     /// Struct: FQWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FQWord
     {
         /// <summary>
@@ -187,7 +186,7 @@ public partial class RSpecialMoveInstance_VantageSwingInterface : BmSDK.Interfac
     /// <summary>
     /// Struct: FPointer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPointer
     {
         /// <summary>

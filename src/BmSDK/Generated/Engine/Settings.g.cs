@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Settings<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsPropertyPropertyMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSettingsPropertyPropertyMetaData
     {
         /// <summary>
@@ -172,7 +171,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FIdToStringMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FIdToStringMapping
     {
         /// <summary>
@@ -197,7 +196,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalizedStringSettingMetaData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLocalizedStringSettingMetaData
     {
         /// <summary>
@@ -240,7 +239,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FStringIdToStringMapping
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FStringIdToStringMapping
     {
         /// <summary>
@@ -274,7 +273,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsProperty
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSettingsProperty
     {
         /// <summary>
@@ -308,7 +307,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSettingsData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSettingsData
     {
         /// <summary>
@@ -358,7 +357,7 @@ public partial class Settings : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocalizedStringSetting
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLocalizedStringSetting
     {
         /// <summary>

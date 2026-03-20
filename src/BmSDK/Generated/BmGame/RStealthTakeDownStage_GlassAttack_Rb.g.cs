@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_GlassAttack_Rb<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_GlassAttack_Rb : BmSDK.BmGame.RStealthTakeDownStage_GlassAttack, BmSDK.IGameObject

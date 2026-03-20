@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCityBlockThreatAsset<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCityBlockThreatAsset : BmSDK.BmGame.RConfig, BmSDK.IGameObject

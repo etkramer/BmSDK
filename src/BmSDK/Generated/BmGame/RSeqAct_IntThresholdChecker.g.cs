@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_IntThresholdChecker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_IntThresholdChecker : BmSDK.Engine.SequenceAction, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class RSeqAct_IntThresholdChecker : BmSDK.Engine.SequenceAction, 
     /// <summary>
     /// Struct: FIntThreshold
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FIntThreshold
     {
         /// <summary>

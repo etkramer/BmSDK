@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileTunnelVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileTunnelVolume : BmSDK.BmGame.RBatmobileForceVolume, BmSDK.IGameObject

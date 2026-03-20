@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_IdleOverlay<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_IdleOverlay : BmSDK.BmGame.RAnimNotify_Script, BmSDK.IGameObject

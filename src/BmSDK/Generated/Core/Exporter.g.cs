@@ -5,7 +5,6 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: Exporter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Exporter : BmSDK.GameObject, BmSDK.IGameObject

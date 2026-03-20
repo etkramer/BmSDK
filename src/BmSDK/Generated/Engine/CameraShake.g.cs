@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraShake<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CameraShake : BmSDK.GameObject, BmSDK.IGameObject

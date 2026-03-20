@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactoryFogVolumeConstantDensityInfo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactoryFogVolumeConstantDensityInfo : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

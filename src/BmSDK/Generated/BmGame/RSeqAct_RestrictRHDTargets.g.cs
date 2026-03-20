@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_RestrictRHDTargets<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_RestrictRHDTargets : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

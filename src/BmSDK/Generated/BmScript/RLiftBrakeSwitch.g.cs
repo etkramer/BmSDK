@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RLiftBrakeSwitch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLiftBrakeSwitch : BmSDK.BmGame.RInteractableItem, BmSDK.IGameObject

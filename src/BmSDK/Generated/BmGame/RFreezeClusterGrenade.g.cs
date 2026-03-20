@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezeClusterGrenade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeClusterGrenade : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGameObject

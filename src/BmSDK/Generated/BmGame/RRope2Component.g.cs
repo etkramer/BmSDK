@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2Component<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -188,7 +187,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FRopeRenderPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRopeRenderPoint
     {
         /// <summary>
@@ -213,7 +212,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FConnectionAttachCalculatedData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FConnectionAttachCalculatedData
     {
         /// <summary>
@@ -283,7 +282,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FRopeEndAttachData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRopeEndAttachData
     {
         /// <summary>
@@ -317,7 +316,7 @@ public partial class RRope2Component : BmSDK.Engine.PrimitiveComponent, BmSDK.IG
     /// <summary>
     /// Struct: FRopeConnectData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRopeConnectData
     {
         /// <summary>

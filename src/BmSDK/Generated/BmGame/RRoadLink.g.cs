@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRoadLink<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -401,7 +400,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLane
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLane
     {
         /// <summary>
@@ -444,7 +443,7 @@ public partial class RRoadLink : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLaneInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLaneInfo
     {
         /// <summary>

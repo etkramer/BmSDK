@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_ThrowGrenadeAtBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_ThrowGrenadeAtBatmobile : BmSDK.BmGame.RCombatMove_VillainThrowBrick, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphNodeWeightByBoneRotation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MorphNodeWeightByBoneRotation : BmSDK.Engine.MorphNodeWeightBase, BmSDK.IGameObject

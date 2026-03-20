@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RThugMineablePointWall<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RThugMineablePointWall : BmSDK.BmGame.RThugMineablePointBase, BmSDK.IGameObject

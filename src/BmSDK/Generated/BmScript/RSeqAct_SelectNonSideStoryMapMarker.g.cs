@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_SelectNonSideStoryMapMarker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SelectNonSideStoryMapMarker : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

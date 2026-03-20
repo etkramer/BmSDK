@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_UnlockShowcaseCharacter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_UnlockShowcaseCharacter : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

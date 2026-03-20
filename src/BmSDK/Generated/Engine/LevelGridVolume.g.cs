@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelGridVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -151,7 +150,7 @@ public partial class LevelGridVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLevelGridCellCoordinate
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLevelGridCellCoordinate
     {
         /// <summary>

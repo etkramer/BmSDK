@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackVisibility<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class InterpTrackVisibility : BmSDK.Engine.InterpTrack, BmSDK.IGa
     /// <summary>
     /// Struct: FVisibilityTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVisibilityTrackKey
     {
         /// <summary>

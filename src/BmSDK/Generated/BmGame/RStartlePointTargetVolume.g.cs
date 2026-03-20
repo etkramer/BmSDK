@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStartlePointTargetVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStartlePointTargetVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

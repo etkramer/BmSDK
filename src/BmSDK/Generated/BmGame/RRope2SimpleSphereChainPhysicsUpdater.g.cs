@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2SimpleSphereChainPhysicsUpdater<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2BasePhysicsUpdater, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// Struct: FRRope2SimpleSphereChainPhysicsUpdaterInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRRope2SimpleSphereChainPhysicsUpdaterInitData
     {
         /// <summary>
@@ -97,7 +96,7 @@ public partial class RRope2SimpleSphereChainPhysicsUpdater : BmSDK.BmGame.RRope2
     /// <summary>
     /// Struct: FRRope2SimpleSphereChainPhyiscsNodeInitData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRRope2SimpleSphereChainPhyiscsNodeInitData
     {
         /// <summary>

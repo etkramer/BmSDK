@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_TriggerSpecialMoveInDirection<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_TriggerSpecialMoveInDirection : BmSDK.BmGame.RSeqAct_TriggerSpecialMove, BmSDK.IGameObject

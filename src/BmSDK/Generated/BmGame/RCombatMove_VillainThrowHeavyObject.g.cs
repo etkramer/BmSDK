@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainThrowHeavyObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainThrowHeavyObject : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

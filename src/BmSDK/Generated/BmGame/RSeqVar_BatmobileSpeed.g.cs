@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_BatmobileSpeed<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_BatmobileSpeed : BmSDK.Engine.SeqVar_Float, BmSDK.IGameObject

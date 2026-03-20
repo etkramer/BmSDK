@@ -5,7 +5,6 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: DistributionVector<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVector : BmSDK.Component, BmSDK.IGameObject

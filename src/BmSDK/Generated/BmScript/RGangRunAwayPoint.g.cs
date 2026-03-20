@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangRunAwayPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangRunAwayPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_VehicleMotionExtraction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_VehicleMotionExtraction : BmSDK.Engine.AnimNodeSequence, BmSDK.IGameObject

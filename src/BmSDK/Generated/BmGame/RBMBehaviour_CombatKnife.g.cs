@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_CombatKnife<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_CombatKnife : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject

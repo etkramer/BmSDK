@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLevelTransition<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelTransition : BmSDK.Engine.Actor, BmSDK.IGameObject

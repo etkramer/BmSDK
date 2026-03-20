@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeferred_SpotLight_Shadowed_Spawnable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDeferred_SpotLight_Shadowed_Spawnable : BmSDK.BmGame.RDeferred_SpotLight_Shadowed, BmSDK.IGameObject

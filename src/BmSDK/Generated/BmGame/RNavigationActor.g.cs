@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavigationActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavigationActor : BmSDK.Engine.Actor, BmSDK.IGameObject

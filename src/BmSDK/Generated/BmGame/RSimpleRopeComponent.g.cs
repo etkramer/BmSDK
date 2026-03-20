@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSimpleRopeComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSimpleRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGameObject

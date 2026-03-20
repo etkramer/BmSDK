@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DataStoreClient<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class DataStoreClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPlayerDataStoreGroup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPlayerDataStoreGroup
     {
         /// <summary>

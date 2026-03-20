@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexForceFieldRadialActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexForceFieldRadialActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject

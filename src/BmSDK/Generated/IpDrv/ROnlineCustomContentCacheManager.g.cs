@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: ROnlineCustomContentCacheManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -153,7 +152,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FCacheActivityEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCacheActivityEntry
     {
         /// <summary>
@@ -249,7 +248,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FRegistryFolder
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRegistryFolder
     {
         /// <summary>
@@ -283,7 +282,7 @@ public partial class ROnlineCustomContentCacheManager : BmSDK.GameObject, BmSDK.
     /// <summary>
     /// Struct: FRegistryEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRegistryEntry
     {
         /// <summary>

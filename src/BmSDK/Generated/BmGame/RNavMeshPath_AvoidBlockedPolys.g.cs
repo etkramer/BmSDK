@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_AvoidBlockedPolys<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_AvoidBlockedPolys : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject

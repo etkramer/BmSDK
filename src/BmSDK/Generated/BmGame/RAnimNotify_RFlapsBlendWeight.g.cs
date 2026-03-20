@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_RFlapsBlendWeight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_RFlapsBlendWeight : BmSDK.Engine.AnimNotify, BmSDK.IGameObject

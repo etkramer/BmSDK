@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSniperPointRenderingComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -1449,7 +1448,7 @@ public partial class RSniperPointRenderingComponent : BmSDK.Engine.PrimitiveComp
     /// <summary>
     /// Struct: FMaterialViewRelevance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMaterialViewRelevance
     {
         /// <summary>

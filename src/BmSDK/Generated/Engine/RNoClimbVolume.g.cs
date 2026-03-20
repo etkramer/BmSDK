@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RNoClimbVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNoClimbVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

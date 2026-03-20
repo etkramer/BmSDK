@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_PlayEntryAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_PlayEntryAnim : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject

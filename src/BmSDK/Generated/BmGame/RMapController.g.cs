@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMapController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMapController : BmSDK.Engine.Actor, BmSDK.IGameObject

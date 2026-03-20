@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiNavHandleWrapper<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiNavHandleWrapper : BmSDK.GameObject, BmSDK.IGameObject

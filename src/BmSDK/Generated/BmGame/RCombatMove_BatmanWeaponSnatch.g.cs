@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_BatmanWeaponSnatch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_BatmanWeaponSnatch : BmSDK.BmGame.RCombatMove_BatmanWeaponAttack, BmSDK.IGameObject

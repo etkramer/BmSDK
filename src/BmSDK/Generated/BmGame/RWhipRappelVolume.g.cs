@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWhipRappelVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWhipRappelVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

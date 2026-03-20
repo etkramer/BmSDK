@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLevelTransitionUpperBuilding<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLevelTransitionUpperBuilding : BmSDK.BmGame.RLevelTransition, BmSDK.IGameObject

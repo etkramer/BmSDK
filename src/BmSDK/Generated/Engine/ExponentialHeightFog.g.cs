@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ExponentialHeightFog<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ExponentialHeightFog : BmSDK.Engine.Info, BmSDK.IGameObject

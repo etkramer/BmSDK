@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_SnaredThug<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_SnaredThug : BmSDK.BmGame.RAEC_FrozenThug, BmSDK.IGameObject

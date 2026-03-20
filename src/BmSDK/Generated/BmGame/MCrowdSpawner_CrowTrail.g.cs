@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCrowdSpawner_CrowTrail<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCrowdSpawner_CrowTrail : BmSDK.BmGame.RCrowdSpawner, BmSDK.IGameObject

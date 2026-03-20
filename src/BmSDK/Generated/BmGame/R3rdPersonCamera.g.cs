@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: R3rdPersonCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
@@ -7068,7 +7067,7 @@ public partial class R3rdPersonCamera : BmSDK.Engine.Camera, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFreeCameraConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFreeCameraConfig
     {
         /// <summary>

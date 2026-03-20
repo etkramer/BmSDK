@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPointLightEnvironment<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPointLightEnvironment : BmSDK.Engine.PointLight, BmSDK.IGameObject

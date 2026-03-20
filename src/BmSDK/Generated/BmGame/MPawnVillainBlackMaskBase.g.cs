@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MPawnVillainBlackMaskBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MPawnVillainBlackMaskBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGrappleProjectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGrappleProjectile : BmSDK.BmGame.RProjectileWithRope, BmSDK.IGameObject

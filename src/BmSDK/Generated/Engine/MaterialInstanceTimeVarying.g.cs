@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceTimeVarying<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FLinearColorParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLinearColorParameterValueOverTime
     {
         /// <summary>
@@ -124,7 +123,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FVectorParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVectorParameterValueOverTime
     {
         /// <summary>
@@ -149,7 +148,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FTextureParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTextureParameterValueOverTime
     {
         /// <summary>
@@ -165,7 +164,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FScalarParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FScalarParameterValueOverTime
     {
         /// <summary>
@@ -190,7 +189,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FFontParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFontParameterValueOverTime
     {
         /// <summary>
@@ -215,7 +214,7 @@ public partial class MaterialInstanceTimeVarying : BmSDK.Engine.MaterialInstance
     /// <summary>
     /// Struct: FParameterValueOverTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FParameterValueOverTime
     {
         /// <summary>

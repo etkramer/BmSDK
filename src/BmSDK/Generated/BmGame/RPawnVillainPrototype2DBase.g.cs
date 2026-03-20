@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnVillainPrototype2DBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainPrototype2DBase : BmSDK.BmGame.RPawnVillainThug, BmSDK.IGameObject

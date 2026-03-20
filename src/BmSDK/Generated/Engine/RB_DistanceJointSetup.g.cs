@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_DistanceJointSetup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_DistanceJointSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject

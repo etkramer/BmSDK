@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SwitchDualPlayerCharacter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SwitchDualPlayerCharacter : BmSDK.BmGame.RSeqAct_SpawnerBase, BmSDK.IGameObject

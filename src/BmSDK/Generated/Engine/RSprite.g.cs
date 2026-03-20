@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSprite<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSprite : BmSDK.Engine.Actor, BmSDK.IGameObject

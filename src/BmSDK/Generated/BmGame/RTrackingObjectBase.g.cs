@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTrackingObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTrackingObjectBase : BmSDK.Engine.DynamicSMActor, BmSDK.IGameObject

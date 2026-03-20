@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Canvas<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
@@ -198,7 +197,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCanvasUVTri
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCanvasUVTri
     {
         /// <summary>
@@ -259,7 +258,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFontRenderInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFontRenderInfo
     {
         /// <summary>
@@ -293,7 +292,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMobileDistanceFieldParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMobileDistanceFieldParams
     {
         /// <summary>
@@ -381,7 +380,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDepthFieldGlowInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDepthFieldGlowInfo
     {
         /// <summary>
@@ -442,7 +441,7 @@ public partial class Canvas : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCanvasIcon
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCanvasIcon
     {
         /// <summary>

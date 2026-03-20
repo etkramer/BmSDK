@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDifficultyOverrideVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDifficultyOverrideVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

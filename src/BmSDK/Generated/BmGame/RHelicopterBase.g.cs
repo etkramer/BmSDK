@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHelicopterBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHelicopterBase : BmSDK.Engine.Pawn, BmSDK.IGameObject

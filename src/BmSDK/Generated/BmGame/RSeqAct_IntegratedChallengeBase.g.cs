@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_IntegratedChallengeBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_IntegratedChallengeBase : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

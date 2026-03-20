@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnalyticEventsBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class AnalyticEventsBase : BmSDK.Engine.PlatformInterfaceBase, Bm
     /// <summary>
     /// Struct: FEventStringParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FEventStringParam
     {
         /// <summary>

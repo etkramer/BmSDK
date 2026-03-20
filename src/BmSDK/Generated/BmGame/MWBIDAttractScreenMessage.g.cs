@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MWBIDAttractScreenMessage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MWBIDAttractScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject

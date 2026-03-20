@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqCond_AreSideStoriesDisabled<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqCond_AreSideStoriesDisabled : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

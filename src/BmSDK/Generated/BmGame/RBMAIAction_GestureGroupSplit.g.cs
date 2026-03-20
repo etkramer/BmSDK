@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_GestureGroupSplit<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_GestureGroupSplit : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

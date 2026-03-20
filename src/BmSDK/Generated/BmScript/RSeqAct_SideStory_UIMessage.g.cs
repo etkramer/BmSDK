@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_SideStory_UIMessage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SideStory_UIMessage : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

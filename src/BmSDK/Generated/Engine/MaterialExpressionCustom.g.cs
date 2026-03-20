@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionCustom<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class MaterialExpressionCustom : BmSDK.Engine.MaterialExpression,
     /// <summary>
     /// Struct: FCustomInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCustomInput
     {
         /// <summary>

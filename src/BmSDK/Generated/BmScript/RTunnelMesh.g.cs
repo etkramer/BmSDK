@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RTunnelMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTunnelMesh : BmSDK.BmGame.RTunnelMeshBase, BmSDK.IGameObject

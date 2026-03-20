@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkValDef<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkValDef : BmSDK.GameObject, BmSDK.IGameObject

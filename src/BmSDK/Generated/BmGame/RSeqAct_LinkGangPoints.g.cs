@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_LinkGangPoints<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_LinkGangPoints : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

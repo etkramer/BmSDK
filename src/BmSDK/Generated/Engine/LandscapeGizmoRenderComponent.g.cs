@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeGizmoRenderComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeGizmoRenderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -1449,7 +1448,7 @@ public partial class LandscapeGizmoRenderComponent : BmSDK.Engine.PrimitiveCompo
     /// <summary>
     /// Struct: FMaterialViewRelevance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMaterialViewRelevance
     {
         /// <summary>

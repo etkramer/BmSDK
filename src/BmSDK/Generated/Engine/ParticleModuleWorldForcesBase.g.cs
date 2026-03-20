@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleWorldForcesBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleWorldForcesBase : BmSDK.Engine.ParticleModule, BmSDK.IGameObject

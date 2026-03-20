@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNode<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
@@ -243,7 +242,7 @@ public partial class AnimNode : BmSDK.Engine.AnimObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCurveKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCurveKey
     {
         /// <summary>

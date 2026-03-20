@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJokerIncidentalPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJokerIncidentalPoint : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject

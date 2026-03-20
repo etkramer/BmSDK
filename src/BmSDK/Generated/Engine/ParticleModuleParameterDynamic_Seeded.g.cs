@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleParameterDynamic_Seeded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleParameterDynamic_Seeded : BmSDK.Engine.ParticleModuleParameterDynamic, BmSDK.IGameObject

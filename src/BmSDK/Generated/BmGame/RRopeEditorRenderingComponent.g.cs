@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeEditorRenderingComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRopeEditorRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject
@@ -1449,7 +1448,7 @@ public partial class RRopeEditorRenderingComponent : BmSDK.Engine.PrimitiveCompo
     /// <summary>
     /// Struct: FMaterialViewRelevance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMaterialViewRelevance
     {
         /// <summary>

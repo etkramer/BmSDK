@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_ExitedCombat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_ExitedCombat : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqCond_LevelLoaded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqCond_LevelLoaded : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

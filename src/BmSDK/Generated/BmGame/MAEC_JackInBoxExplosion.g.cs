@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_JackInBoxExplosion<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_JackInBoxExplosion : BmSDK.BmGame.RAEC_GelMineExplosion, BmSDK.IGameObject

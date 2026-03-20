@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: _Engine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class _Engine : BmSDK.Subsystem, BmSDK.IGameObject

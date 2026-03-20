@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCombatPoint_EnvironmentAttackObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatPoint_EnvironmentAttackObjectBase : BmSDK.BmGame.RBMCombatPoint, BmSDK.IGameObject

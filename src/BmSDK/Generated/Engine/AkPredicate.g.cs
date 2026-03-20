@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkPredicate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkPredicate : BmSDK.Engine.AkHash, BmSDK.IGameObject

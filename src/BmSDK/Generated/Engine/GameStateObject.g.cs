@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameStateObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class GameStateObject : BmSDK.Engine.GameplayEventsHandler, BmSDK
     /// <summary>
     /// Struct: FTeamState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTeamState
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBmPawnSpawner_RobotBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBmPawnSpawner_RobotBase : BmSDK.BmGame.RBmPawnSpawner, BmSDK.IGameObject

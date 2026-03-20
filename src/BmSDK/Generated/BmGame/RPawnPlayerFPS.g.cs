@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnPlayerFPS<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnPlayerFPS : BmSDK.BmGame.RPawnPlayerAnim, BmSDK.IGameObject

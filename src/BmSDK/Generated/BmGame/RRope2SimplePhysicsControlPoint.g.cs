@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRope2SimplePhysicsControlPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRope2SimplePhysicsControlPoint : BmSDK.GameObject, BmSDK.IGameObject

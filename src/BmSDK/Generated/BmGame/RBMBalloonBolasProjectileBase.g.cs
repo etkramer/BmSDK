@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBalloonBolasProjectileBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBalloonBolasProjectileBase : BmSDK.BmGame.RBatarangProjectile, BmSDK.IGameObject

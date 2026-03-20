@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_BatmanCarPassengerStrike<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_BatmanCarPassengerStrike : BmSDK.BmGame.RCombatMove_BatmanWeaponAttack, BmSDK.IGameObject

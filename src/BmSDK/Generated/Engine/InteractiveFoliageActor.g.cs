@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InteractiveFoliageActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InteractiveFoliageActor : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

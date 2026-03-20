@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_HopOffLedgeStart<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_HopOffLedgeStart : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject

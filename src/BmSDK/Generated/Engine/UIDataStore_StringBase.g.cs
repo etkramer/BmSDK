@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_StringBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_StringBase : BmSDK.Engine.UIDataStore, BmSDK.IGameObject

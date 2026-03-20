@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdAttractor_Cylinder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdAttractor_Cylinder : BmSDK.BmGame.RCrowdAttractor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTurret_Stagg<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTurret_Stagg : BmSDK.BmGame.RTurretBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphTargetSet<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MorphTargetSet : BmSDK.GameObject, BmSDK.IGameObject

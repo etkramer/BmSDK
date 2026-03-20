@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProximityGadgetTrigger<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RProximityGadgetTrigger : BmSDK.BmGame.RThugTrap, BmSDK.IGameObject

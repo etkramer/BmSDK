@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_VillainBatmobileTaunt<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainBatmobileTaunt : BmSDK.BmGame.RCombatMove, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqCond_CheckChapter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqCond_CheckChapter : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

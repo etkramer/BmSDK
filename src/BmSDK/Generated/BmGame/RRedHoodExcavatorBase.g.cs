@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRedHoodExcavatorBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -395,7 +394,7 @@ public partial class RRedHoodExcavatorBase : BmSDK.Engine.Actor, BmSDK.IGameObje
     /// <summary>
     /// Struct: FTunnelPathPoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTunnelPathPoint
     {
         /// <summary>

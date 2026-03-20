@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_PlaceStickyBomb<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_PlaceStickyBomb : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

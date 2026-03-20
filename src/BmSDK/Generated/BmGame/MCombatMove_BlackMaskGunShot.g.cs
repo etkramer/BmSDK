@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_BlackMaskGunShot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_BlackMaskGunShot : BmSDK.BmGame.RCombatMove_VillainCloseAttack, BmSDK.IGameObject

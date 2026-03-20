@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Sub_ExplodedJammer<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Sub_ExplodedJammer : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

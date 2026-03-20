@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAttackEdgeSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAttackEdgeSearch : BmSDK.GameObject, BmSDK.IGameObject

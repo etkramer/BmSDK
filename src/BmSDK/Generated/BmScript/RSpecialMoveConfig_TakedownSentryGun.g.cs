@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_TakedownSentryGun<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_TakedownSentryGun : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

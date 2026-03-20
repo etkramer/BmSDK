@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControl_PositionConstraint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControl_PositionConstraint : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class RSkelControl_PositionConstraint : BmSDK.Engine.SkelControlB
     /// <summary>
     /// Struct: FPositionConstraintBone
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPositionConstraintBone
     {
         /// <summary>

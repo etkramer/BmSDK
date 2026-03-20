@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_ResonateObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_ResonateObject : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

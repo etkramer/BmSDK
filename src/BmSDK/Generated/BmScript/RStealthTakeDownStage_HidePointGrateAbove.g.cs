@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_HidePointGrateAbove<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_HidePointGrateAbove : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject

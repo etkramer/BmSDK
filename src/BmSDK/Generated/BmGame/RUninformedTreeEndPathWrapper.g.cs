@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RUninformedTreeEndPathWrapper<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RUninformedTreeEndPathWrapper : BmSDK.GameObject, BmSDK.IGameObject

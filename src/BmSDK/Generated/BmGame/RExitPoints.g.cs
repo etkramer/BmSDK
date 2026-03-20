@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RExitPoints<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RExitPoints : BmSDK.GameObject, BmSDK.IGameObject

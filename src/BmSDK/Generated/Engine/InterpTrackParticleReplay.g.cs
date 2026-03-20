@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackParticleReplay<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackParticleReplay : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class InterpTrackParticleReplay : BmSDK.Engine.InterpTrack, BmSDK
     /// <summary>
     /// Struct: FParticleReplayTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FParticleReplayTrackKey
     {
         /// <summary>

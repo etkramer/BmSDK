@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWindForceFieldVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWindForceFieldVolume : BmSDK.BmGame.RForceFieldVolume, BmSDK.IGameObject

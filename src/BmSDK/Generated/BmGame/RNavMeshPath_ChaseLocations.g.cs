@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshPath_ChaseLocations<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshPath_ChaseLocations : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject

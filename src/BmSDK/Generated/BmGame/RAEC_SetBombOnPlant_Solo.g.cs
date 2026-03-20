@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_SetBombOnPlant_Solo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_SetBombOnPlant_Solo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

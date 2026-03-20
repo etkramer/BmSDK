@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ElectricFloor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ElectricFloor : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject

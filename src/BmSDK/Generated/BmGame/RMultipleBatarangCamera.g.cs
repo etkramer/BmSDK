@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultipleBatarangCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultipleBatarangCamera : BmSDK.BmGame.RBatarangCamera, BmSDK.IGameObject

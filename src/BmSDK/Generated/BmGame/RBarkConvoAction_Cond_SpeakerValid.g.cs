@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoAction_Cond_SpeakerValid<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoAction_Cond_SpeakerValid : BmSDK.BmGame.RBarkConvoActionCond, BmSDK.IGameObject

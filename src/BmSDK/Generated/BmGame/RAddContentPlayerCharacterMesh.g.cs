@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentPlayerCharacterMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentPlayerCharacterMesh : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject

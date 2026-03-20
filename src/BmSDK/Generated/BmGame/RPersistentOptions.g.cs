@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPersistentOptions<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
@@ -3387,7 +3386,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FActivePlayerSkin
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FActivePlayerSkin
     {
         /// <summary>
@@ -3449,7 +3448,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUnlockedChallenge
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUnlockedChallenge
     {
         /// <summary>
@@ -3531,7 +3530,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FUnlockedChallengePerCharacter
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUnlockedChallengePerCharacter
     {
         /// <summary>
@@ -3673,7 +3672,7 @@ public partial class RPersistentOptions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FDeathMovieRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDeathMovieRecord
     {
         /// <summary>

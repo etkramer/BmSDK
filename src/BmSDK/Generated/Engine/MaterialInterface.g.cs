@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInterface<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInterface : BmSDK.Engine.Surface, BmSDK.IGameObject

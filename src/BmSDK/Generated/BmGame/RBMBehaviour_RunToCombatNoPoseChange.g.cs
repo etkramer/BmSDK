@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_RunToCombatNoPoseChange<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_RunToCombatNoPoseChange : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

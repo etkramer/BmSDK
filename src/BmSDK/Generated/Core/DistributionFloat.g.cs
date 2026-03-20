@@ -5,7 +5,6 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: DistributionFloat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionFloat : BmSDK.Component, BmSDK.IGameObject

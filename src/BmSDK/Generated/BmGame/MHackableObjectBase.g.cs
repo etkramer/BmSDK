@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHackableObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHackableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject

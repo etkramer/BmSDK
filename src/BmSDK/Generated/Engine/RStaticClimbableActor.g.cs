@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RStaticClimbableActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStaticClimbableActor : BmSDK.Engine.Actor, BmSDK.IGameObject

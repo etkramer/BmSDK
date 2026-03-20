@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleStoreSpawnTime<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleStoreSpawnTime : BmSDK.Engine.ParticleModuleStoreSpawnTimeBase, BmSDK.IGameObject

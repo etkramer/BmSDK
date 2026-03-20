@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRiddleBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRiddleBase : BmSDK.Engine.Actor, BmSDK.IGameObject

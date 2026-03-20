@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RockReflectionVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RockReflectionVolume : BmSDK.Engine.Actor, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FFReflectionBoxInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFReflectionBoxInfo
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCombatMove_VillainRobotAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_VillainRobotAttack : BmSDK.BmGame.RCombatMove_VillainCloseAttack, BmSDK.IGameObject

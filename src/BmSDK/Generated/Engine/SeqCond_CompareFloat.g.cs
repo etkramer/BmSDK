@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqCond_CompareFloat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqCond_CompareFloat : BmSDK.Engine.SequenceCondition, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_ShotgunDestroyedPart2<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_ShotgunDestroyedPart2 : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

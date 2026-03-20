@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSnowVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSnowVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

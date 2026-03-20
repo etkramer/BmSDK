@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTitanCrateBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTitanCrateBase : BmSDK.Engine.InterpActor, BmSDK.IGameObject

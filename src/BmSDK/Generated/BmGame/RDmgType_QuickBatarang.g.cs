@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_QuickBatarang<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_QuickBatarang : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IGameObject

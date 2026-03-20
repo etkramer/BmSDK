@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROnlineStatsReadMostWanted<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineStatsReadMostWanted : BmSDK.Engine.OnlineStatsRead, BmSDK.IGameObject
@@ -108,7 +107,7 @@ public partial class ROnlineStatsReadMostWanted : BmSDK.Engine.OnlineStatsRead, 
     /// <summary>
     /// Struct: FOnlineStatsRow
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FOnlineStatsRow
     {
         /// <summary>
@@ -151,7 +150,7 @@ public partial class ROnlineStatsReadMostWanted : BmSDK.Engine.OnlineStatsRead, 
     /// <summary>
     /// Struct: FOnlineStatsColumn
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FOnlineStatsColumn
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangSpectatorPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangSpectatorPoint : BmSDK.BmGame.RGangSpectatorPointBase, BmSDK.IGameObject

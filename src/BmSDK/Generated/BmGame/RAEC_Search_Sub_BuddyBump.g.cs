@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Search_Sub_BuddyBump<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Search_Sub_BuddyBump : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

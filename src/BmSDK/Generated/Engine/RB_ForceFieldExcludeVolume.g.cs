@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ForceFieldExcludeVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ForceFieldExcludeVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

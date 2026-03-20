@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_MayhemTransitionAlert<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_MayhemTransitionAlert : BmSDK.BmGame.RAEC_GelMineExplosion, BmSDK.IGameObject

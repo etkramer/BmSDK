@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudModuleExtraSequence<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHudModuleExtraSequence : BmSDK.BmGame.RHudModule, BmSDK.IGameObject

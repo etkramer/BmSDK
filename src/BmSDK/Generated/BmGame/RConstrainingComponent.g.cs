@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RConstrainingComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RConstrainingComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

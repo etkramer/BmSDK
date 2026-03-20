@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: EditorLinkSelectionInterface<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class EditorLinkSelectionInterface : BmSDK.Interface, BmSDK.IGameObject
@@ -162,7 +161,7 @@ public partial class EditorLinkSelectionInterface : BmSDK.Interface, BmSDK.IGame
     /// <summary>
     /// Struct: FQWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FQWord
     {
         /// <summary>
@@ -187,7 +186,7 @@ public partial class EditorLinkSelectionInterface : BmSDK.Interface, BmSDK.IGame
     /// <summary>
     /// Struct: FPointer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPointer
     {
         /// <summary>

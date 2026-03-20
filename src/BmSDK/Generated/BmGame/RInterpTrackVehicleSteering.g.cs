@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInterpTrackVehicleSteering<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackVehicleSteering : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

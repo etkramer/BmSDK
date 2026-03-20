@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MGFxMovieUI_WBIDMainBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MGFxMovieUI_WBIDMainBase : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject

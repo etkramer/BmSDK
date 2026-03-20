@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIGameInfoSummary<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIGameInfoSummary : BmSDK.Engine.UIResourceDataProvider, BmSDK.IGameObject

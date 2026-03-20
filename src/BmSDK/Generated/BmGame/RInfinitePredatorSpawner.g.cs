@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInfinitePredatorSpawner<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInfinitePredatorSpawner : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

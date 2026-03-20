@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFireflyRoadExclusionVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFireflyRoadExclusionVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

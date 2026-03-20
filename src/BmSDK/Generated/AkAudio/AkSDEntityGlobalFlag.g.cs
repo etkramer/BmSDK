@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityGlobalFlag<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityGlobalFlag : BmSDK.AkAudio.AkSDEntityValue, BmSDK.IGameObject

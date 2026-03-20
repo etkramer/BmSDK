@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RJammerGadgetBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJammerGadgetBm : BmSDK.BmGame.RJammerGadget, BmSDK.IGameObject

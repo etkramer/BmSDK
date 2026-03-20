@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_CatwomanStunStrike<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_CatwomanStunStrike : BmSDK.BmGame.RCombatMove_BatmanStunStrike, BmSDK.IGameObject

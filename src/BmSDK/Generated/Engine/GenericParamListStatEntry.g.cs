@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GenericParamListStatEntry<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GenericParamListStatEntry : BmSDK.GameObject, BmSDK.IGameObject

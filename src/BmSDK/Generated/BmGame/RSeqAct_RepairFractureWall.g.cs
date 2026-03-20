@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_RepairFractureWall<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_RepairFractureWall : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

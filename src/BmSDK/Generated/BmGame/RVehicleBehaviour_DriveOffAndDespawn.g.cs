@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_DriveOffAndDespawn<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_DriveOffAndDespawn : BmSDK.BmGame.RVehicleBehaviour_RunAway, BmSDK.IGameObject

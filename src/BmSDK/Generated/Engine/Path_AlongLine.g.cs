@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Path_AlongLine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Path_AlongLine : BmSDK.Engine.PathConstraint, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2DDynamic<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2DDynamic : BmSDK.Engine.Texture, BmSDK.IGameObject

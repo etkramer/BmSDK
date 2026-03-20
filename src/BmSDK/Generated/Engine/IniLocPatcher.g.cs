@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: IniLocPatcher<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
@@ -108,7 +107,7 @@ public partial class IniLocPatcher : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FIniLocFileEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FIniLocFileEntry
     {
         /// <summary>

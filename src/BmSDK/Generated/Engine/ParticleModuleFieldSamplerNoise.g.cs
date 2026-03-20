@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleFieldSamplerNoise<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleFieldSamplerNoise : BmSDK.Engine.ParticleModuleFieldSamplerBase, BmSDK.IGameObject

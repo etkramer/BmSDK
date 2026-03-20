@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorComponent : BmSDK.Component, BmSDK.IGameObject

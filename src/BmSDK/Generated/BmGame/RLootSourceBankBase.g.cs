@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLootSourceBankBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLootSourceBankBase : BmSDK.BmGame.RLootSourceBase, BmSDK.IGameObject

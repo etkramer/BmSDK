@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_BatmobileRollingStart<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_BatmobileRollingStart : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

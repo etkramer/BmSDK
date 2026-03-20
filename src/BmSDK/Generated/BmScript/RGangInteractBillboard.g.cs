@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangInteractBillboard<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangInteractBillboard : BmSDK.BmGame.RGangInteractPointBreakableBase, BmSDK.IGameObject

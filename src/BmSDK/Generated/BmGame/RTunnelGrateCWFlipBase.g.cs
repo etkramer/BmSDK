@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTunnelGrateCWFlipBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTunnelGrateCWFlipBase : BmSDK.BmGame.RSpecialMoveEnvironmentObject, BmSDK.IGameObject

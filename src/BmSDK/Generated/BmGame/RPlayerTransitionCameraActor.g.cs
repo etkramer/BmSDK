@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPlayerTransitionCameraActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPlayerTransitionCameraActor : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MDmgType_JackInBox<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MDmgType_JackInBox : BmSDK.BmGame.RDamageType, BmSDK.IGameObject

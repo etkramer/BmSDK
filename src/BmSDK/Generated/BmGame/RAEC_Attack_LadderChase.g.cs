@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Attack_LadderChase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Attack_LadderChase : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

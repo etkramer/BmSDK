@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlWhip<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject
@@ -207,7 +206,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipHipPhysicsData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWhipHipPhysicsData
     {
         /// <summary>
@@ -349,7 +348,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipTargetingData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWhipTargetingData
     {
         /// <summary>
@@ -419,7 +418,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipBoneReparenting
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWhipBoneReparenting
     {
         /// <summary>
@@ -462,7 +461,7 @@ public partial class RSkelControlWhip : BmSDK.Engine.SkelControlBase, BmSDK.IGam
     /// <summary>
     /// Struct: FWhipBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWhipBoneData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackInstDirector<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackInstDirector : BmSDK.Engine.InterpTrackInst, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqVar_RandomInt<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqVar_RandomInt : BmSDK.Engine.SeqVar_Int, BmSDK.IGameObject

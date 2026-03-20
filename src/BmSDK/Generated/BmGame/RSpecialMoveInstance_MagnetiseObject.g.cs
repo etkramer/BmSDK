@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_MagnetiseObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_MagnetiseObject : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

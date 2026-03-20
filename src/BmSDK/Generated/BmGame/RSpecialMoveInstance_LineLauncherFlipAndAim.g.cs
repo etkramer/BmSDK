@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveInstance_LineLauncherFlipAndAim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveInstance_LineLauncherFlipAndAim : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

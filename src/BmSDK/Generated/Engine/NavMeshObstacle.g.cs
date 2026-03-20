@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshObstacle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshObstacle : BmSDK.Engine.Actor, BmSDK.IGameObject

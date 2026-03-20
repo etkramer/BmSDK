@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SceneCapture2DComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SceneCapture2DComponent : BmSDK.Engine.SceneCaptureComponent, BmSDK.IGameObject

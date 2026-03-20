@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFullTape<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRArraySubtitleCue
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRArraySubtitleCue
     {
         /// <summary>
@@ -115,7 +114,7 @@ public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRArrayLocalizedSubtitles
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRArrayLocalizedSubtitles
     {
         /// <summary>
@@ -131,7 +130,7 @@ public partial class RFullTape : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRLocalizedSubtitles
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRLocalizedSubtitles
     {
         /// <summary>

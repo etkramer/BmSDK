@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMRoomAIState<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMRoomAIState : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

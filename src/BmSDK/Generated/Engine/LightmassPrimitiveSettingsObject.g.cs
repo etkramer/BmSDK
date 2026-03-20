@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LightmassPrimitiveSettingsObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LightmassPrimitiveSettingsObject : BmSDK.GameObject, BmSDK.IGameObject

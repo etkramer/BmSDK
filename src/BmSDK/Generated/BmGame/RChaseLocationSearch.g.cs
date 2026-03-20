@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RChaseLocationSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RChaseLocationSearch : BmSDK.BmGame.RSearchTreeFinder, BmSDK.IGameObject

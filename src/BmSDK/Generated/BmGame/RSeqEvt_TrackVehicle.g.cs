@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvt_TrackVehicle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvt_TrackVehicle : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhotoCameraHUD<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPhotoCameraHUD : BmSDK.Engine.HUD, BmSDK.IGameObject

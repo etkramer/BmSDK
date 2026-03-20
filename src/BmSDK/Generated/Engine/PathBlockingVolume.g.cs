@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PathBlockingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PathBlockingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

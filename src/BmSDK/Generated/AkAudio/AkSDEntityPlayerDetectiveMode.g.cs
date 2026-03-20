@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityPlayerDetectiveMode<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityPlayerDetectiveMode : BmSDK.AkAudio.AkSDEntityPlayerBase, BmSDK.IGameObject

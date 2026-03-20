@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataProvider_OnlineFriends<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataProvider_OnlineFriends : BmSDK.Engine.UIDataProvider_OnlinePlayerDataBase, BmSDK.IGameObject

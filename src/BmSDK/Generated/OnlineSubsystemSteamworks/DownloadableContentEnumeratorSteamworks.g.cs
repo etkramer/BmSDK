@@ -5,7 +5,6 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: DownloadableContentEnumeratorSteamworks<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DownloadableContentEnumeratorSteamworks : BmSDK.Engine.DownloadableContentEnumerator, BmSDK.IGameObject

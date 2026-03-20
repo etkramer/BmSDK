@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCameraEmitter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCameraEmitter : BmSDK.Engine.REmitter, BmSDK.IGameObject

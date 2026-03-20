@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_HitReaction_Minigunner<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_HitReaction_Minigunner : BmSDK.BmGame.RBMBehaviour_HitReaction, BmSDK.IGameObject

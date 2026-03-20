@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Texture2D<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
@@ -414,7 +413,7 @@ public partial class Texture2D : BmSDK.Engine.Texture, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTexture2DMipMap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTexture2DMipMap
     {
         /// <summary>

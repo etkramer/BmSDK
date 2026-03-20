@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_DualTakedownStateChange<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_DualTakedownStateChange : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

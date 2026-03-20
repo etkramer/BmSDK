@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Search_Formation_PairUp<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Search_Formation_PairUp : BmSDK.BmGame.RAEC_Search_Formation, BmSDK.IGameObject

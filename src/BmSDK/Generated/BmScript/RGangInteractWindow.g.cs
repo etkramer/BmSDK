@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGangInteractWindow<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangInteractWindow : BmSDK.BmGame.RGangInteractWindowBase, BmSDK.IGameObject

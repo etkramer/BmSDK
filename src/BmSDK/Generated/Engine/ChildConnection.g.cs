@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ChildConnection<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ChildConnection : BmSDK.Engine.NetConnection, BmSDK.IGameObject

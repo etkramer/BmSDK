@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnCrowdRagdoll<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnCrowdRagdoll : BmSDK.BmGame.RPawnCrowd, BmSDK.IGameObject

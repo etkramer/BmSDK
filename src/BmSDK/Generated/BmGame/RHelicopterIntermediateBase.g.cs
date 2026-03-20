@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHelicopterIntermediateBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase, BmSDK.IGameObject
@@ -359,7 +358,7 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// <summary>
     /// Struct: FSearchLightSourceLocationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSearchLightSourceLocationInfo
     {
         /// <summary>
@@ -447,7 +446,7 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// <summary>
     /// Struct: FTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTargetData
     {
         /// <summary>
@@ -481,7 +480,7 @@ public partial class RHelicopterIntermediateBase : BmSDK.BmGame.RHelicopterBase,
     /// <summary>
     /// Struct: FSearchLightData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSearchLightData
     {
         /// <summary>

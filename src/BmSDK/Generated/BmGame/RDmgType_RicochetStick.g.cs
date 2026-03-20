@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_RicochetStick<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_RicochetStick : BmSDK.BmGame.RDmgType_StealthBatarang, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDirtyDepth<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDirtyDepth : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

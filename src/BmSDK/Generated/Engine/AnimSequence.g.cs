@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimSequence<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
@@ -945,7 +944,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRawAnimSequenceTrack
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRawAnimSequenceTrack
     {
         /// <summary>
@@ -988,7 +987,7 @@ public partial class AnimSequence : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimNotifyEvent
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAnimNotifyEvent
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LandscapeGizmoActiveActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LandscapeGizmoActiveActor : BmSDK.Engine.LandscapeGizmoActor, BmSDK.IGameObject
@@ -280,7 +279,7 @@ public partial class LandscapeGizmoActiveActor : BmSDK.Engine.LandscapeGizmoActo
     /// <summary>
     /// Struct: FGizmoSelectData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGizmoSelectData
     {
         /// <summary>

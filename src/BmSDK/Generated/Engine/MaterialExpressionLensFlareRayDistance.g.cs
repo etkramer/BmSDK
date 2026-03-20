@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionLensFlareRayDistance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionLensFlareRayDistance : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject
@@ -207,7 +206,7 @@ public partial class MaterialExpressionLensFlareRayDistance : BmSDK.Engine.Mater
     /// <summary>
     /// Struct: FExpressionOutput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FExpressionOutput
     {
         /// <summary>
@@ -268,7 +267,7 @@ public partial class MaterialExpressionLensFlareRayDistance : BmSDK.Engine.Mater
     /// <summary>
     /// Struct: FExpressionInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FExpressionInput
     {
         /// <summary>

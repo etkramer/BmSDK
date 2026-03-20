@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InAppMessageBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Struct: FDelegateArray
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDelegateArray
     {
         /// <summary>
@@ -70,7 +69,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Struct: FPlatformInterfaceDelegateResult
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPlatformInterfaceDelegateResult
     {
         /// <summary>
@@ -95,7 +94,7 @@ public partial class InAppMessageBase : BmSDK.Engine.PlatformInterfaceBase, BmSD
     /// <summary>
     /// Struct: FPlatformInterfaceData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPlatformInterfaceData
     {
         /// <summary>

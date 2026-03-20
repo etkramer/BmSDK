@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCinematicPlayerCharacter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCinematicPlayerCharacter : BmSDK.BmGame.RCinematicActor, BmSDK.IGameObject

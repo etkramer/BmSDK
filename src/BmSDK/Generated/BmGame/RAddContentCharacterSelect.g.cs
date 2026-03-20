@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAddContentCharacterSelect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAddContentCharacterSelect : BmSDK.BmGame.RAdditionalContent, BmSDK.IGameObject

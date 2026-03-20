@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPatrolPoint_LitePred<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPatrolPoint_LitePred : BmSDK.BmGame.RPatrolPoint, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkEmitter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkEmitter : BmSDK.Engine.AkSoundActor, BmSDK.IGameObject

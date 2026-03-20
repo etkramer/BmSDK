@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RB_ActualDistanceConstraintSetup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ActualDistanceConstraintSetup : BmSDK.Engine.RB_ConstraintSetup, BmSDK.IGameObject

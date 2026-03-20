@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AudioComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AudioComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

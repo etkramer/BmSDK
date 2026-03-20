@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatArea<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatArea : BmSDK.Engine.Actor, BmSDK.IGameObject

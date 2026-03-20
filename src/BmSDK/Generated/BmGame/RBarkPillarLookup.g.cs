@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkPillarLookup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRuntimePillar
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRuntimePillar
     {
         /// <summary>
@@ -97,7 +96,7 @@ public partial class RBarkPillarLookup : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFlagValAndFileName
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFlagValAndFileName
     {
         /// <summary>

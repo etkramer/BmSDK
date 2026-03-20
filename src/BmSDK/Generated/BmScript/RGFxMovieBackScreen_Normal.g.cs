@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RGFxMovieBackScreen_Normal<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMovieBackScreen_Normal : BmSDK.BmGame.RGFxMovieBackScreen, BmSDK.IGameObject

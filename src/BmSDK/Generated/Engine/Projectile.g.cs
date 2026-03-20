@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Projectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Projectile : BmSDK.Engine.Actor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicTriggerVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DynamicTriggerVolume : BmSDK.Engine.TriggerVolume, BmSDK.IGameObject

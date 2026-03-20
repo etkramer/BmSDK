@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSkelControlBatmobileWheel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkelControlBatmobileWheel : BmSDK.Engine.SkelControlWheel, BmSDK.IGameObject

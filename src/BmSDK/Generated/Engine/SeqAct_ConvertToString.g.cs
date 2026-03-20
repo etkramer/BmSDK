@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_ConvertToString<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_ConvertToString : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

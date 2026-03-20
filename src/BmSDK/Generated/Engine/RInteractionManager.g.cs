@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInteractionManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInteractionManager : BmSDK.Component, BmSDK.IGameObject

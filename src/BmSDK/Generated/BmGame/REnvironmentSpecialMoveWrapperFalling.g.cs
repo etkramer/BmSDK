@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: REnvironmentSpecialMoveWrapperFalling<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class REnvironmentSpecialMoveWrapperFalling : BmSDK.BmGame.REnvironmentSpecialMoveWrapper, BmSDK.IGameObject

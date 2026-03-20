@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIPropertyDataProvider<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIPropertyDataProvider : BmSDK.Engine.UIDataProvider, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_2DVillainHighLowAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_2DVillainHighLowAttack : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

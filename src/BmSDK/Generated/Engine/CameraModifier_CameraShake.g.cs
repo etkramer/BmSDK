@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CameraModifier_CameraShake<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class CameraModifier_CameraShake : BmSDK.Engine.CameraModifier, B
     /// <summary>
     /// Struct: FCameraShakeInstance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCameraShakeInstance
     {
         /// <summary>

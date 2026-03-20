@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameplayEventsUploadAnalytics<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameplayEventsUploadAnalytics : BmSDK.Engine.GameplayEventsWriterBase, BmSDK.IGameObject

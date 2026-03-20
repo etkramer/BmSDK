@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBlowDartBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
@@ -1424,7 +1423,7 @@ public partial class RBlowDartBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameO
     /// <summary>
     /// Struct: FGlideGadgetTargetContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGlideGadgetTargetContainer
     {
         /// <summary>

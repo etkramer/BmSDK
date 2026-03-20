@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_RestoreJammer<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RestoreJammer : BmSDK.BmGame.RBMAIAction_RestoreSpecial, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_LaserGrid_Blue<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_LaserGrid_Blue : BmSDK.BmGame.RDmgType_Electricity, BmSDK.IGameObject

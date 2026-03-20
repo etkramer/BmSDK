@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_CriticalStrike<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_CriticalStrike : BmSDK.BmGame.RDmgType_HeavyStrike, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RRainBlockingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRainBlockingVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -125,7 +124,7 @@ public partial class RRainBlockingVolume : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFRainBlockInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFRainBlockInfo
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_MultipleMobileObjectives<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -144,7 +143,7 @@ public partial class RSeqAct_MultipleMobileObjectives : BmSDK.Engine.SeqAct_Late
     /// <summary>
     /// Struct: FMMO_Record
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMMO_Record
     {
         /// <summary>

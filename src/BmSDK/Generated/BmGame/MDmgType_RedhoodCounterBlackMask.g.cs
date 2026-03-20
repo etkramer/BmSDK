@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MDmgType_RedhoodCounterBlackMask<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MDmgType_RedhoodCounterBlackMask : BmSDK.BmGame.RDmgType_Counter, BmSDK.IGameObject

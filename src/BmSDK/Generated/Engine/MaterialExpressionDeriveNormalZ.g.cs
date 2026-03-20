@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDeriveNormalZ<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDeriveNormalZ : BmSDK.Engine.MaterialExpression, BmSDK.IGameObject

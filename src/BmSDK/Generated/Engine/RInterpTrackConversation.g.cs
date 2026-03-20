@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackConversation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackConversation : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject

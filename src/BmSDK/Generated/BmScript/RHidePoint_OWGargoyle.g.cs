@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHidePoint_OWGargoyle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePoint_OWGargoyle : BmSDK.BmGame.RHidePoint_GargoyleBase, BmSDK.IGameObject

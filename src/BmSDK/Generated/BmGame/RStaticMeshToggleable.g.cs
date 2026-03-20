@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStaticMeshToggleable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStaticMeshToggleable : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

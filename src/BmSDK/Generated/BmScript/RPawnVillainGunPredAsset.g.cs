@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RPawnVillainGunPredAsset<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnVillainGunPredAsset : BmSDK.BmGame.RPawnVillainGunPredBase, BmSDK.IGameObject

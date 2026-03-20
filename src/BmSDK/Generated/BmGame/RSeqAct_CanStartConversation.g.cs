@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_CanStartConversation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_CanStartConversation : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

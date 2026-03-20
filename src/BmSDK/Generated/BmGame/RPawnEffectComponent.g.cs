@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnEffectComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnEffectComponent : BmSDK.GameObject, BmSDK.IGameObject

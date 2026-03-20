@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RTurret_Watchtower<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTurret_Watchtower : BmSDK.BmGame.RTurret_WatchtowerBase, BmSDK.IGameObject

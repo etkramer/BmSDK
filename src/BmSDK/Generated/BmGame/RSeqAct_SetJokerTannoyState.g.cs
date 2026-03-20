@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetJokerTannoyState<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetJokerTannoyState : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

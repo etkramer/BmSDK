@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLineLauncherRescueVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLineLauncherRescueVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

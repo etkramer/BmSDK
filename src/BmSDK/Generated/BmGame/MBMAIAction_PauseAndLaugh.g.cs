@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MBMAIAction_PauseAndLaugh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MBMAIAction_PauseAndLaugh : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

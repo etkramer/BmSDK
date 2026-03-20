@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMissingWallGrateAIMarker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMissingWallGrateAIMarker : BmSDK.Engine.Actor, BmSDK.IGameObject

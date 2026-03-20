@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ScriptedTexture<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ScriptedTexture : BmSDK.Engine.TextureRenderTarget2D, BmSDK.IGameObject

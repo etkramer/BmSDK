@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCutscene_LineLauncherKill<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCutscene_LineLauncherKill : BmSDK.BmGame.RBMCutscene_Cam, BmSDK.IGameObject

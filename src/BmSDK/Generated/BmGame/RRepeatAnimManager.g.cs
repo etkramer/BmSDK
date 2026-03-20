@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRepeatAnimManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class RRepeatAnimManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRAM_AnimTime
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRAM_AnimTime
     {
         /// <summary>

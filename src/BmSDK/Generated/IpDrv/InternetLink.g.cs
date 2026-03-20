@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: InternetLink<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
@@ -163,7 +162,7 @@ public partial class InternetLink : BmSDK.Engine.Info, BmSDK.IGameObject
     /// <summary>
     /// Struct: FIpAddr
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FIpAddr
     {
         /// <summary>

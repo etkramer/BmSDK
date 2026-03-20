@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavMeshGoal_MultiDest<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavMeshGoal_MultiDest : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject

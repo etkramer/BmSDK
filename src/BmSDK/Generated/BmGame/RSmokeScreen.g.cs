@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSmokeScreen<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSmokeScreen : BmSDK.Engine.Actor, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AudioDevice<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
@@ -450,7 +449,7 @@ public partial class AudioDevice : BmSDK.Subsystem, BmSDK.IGameObject
     /// <summary>
     /// Struct: FListener
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FListener
     {
         /// <summary>

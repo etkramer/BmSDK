@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: StaticMeshSocket<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class StaticMeshSocket : BmSDK.GameObject, BmSDK.IGameObject

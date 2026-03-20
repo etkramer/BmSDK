@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMagicSmasher<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMagicSmasher : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

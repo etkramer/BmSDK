@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleNPCBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleNPCBatmobile : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject

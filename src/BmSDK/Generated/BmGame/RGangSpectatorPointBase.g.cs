@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangSpectatorPointBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangSpectatorPointBase : BmSDK.BmGame.RGangInteractPointBase, BmSDK.IGameObject

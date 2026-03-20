@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInterpTrackVehicleProp<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInterpTrackVehicleProp : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

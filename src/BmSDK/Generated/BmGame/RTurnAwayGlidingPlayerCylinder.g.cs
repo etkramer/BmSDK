@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTurnAwayGlidingPlayerCylinder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTurnAwayGlidingPlayerCylinder : BmSDK.Engine.Actor, BmSDK.IGameObject

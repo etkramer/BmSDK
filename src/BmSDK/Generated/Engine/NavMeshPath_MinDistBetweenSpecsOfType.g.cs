@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshPath_MinDistBetweenSpecsOfType<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshPath_MinDistBetweenSpecsOfType : BmSDK.Engine.NavMeshPathConstraint, BmSDK.IGameObject

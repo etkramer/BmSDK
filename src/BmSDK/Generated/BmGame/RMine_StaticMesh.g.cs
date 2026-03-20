@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMine_StaticMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMine_StaticMesh : BmSDK.BmGame.RMineBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatarangElectrifyVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatarangElectrifyVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

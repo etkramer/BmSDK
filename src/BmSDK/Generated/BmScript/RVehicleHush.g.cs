@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVehicleHush<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleHush : BmSDK.BmGame.RVehicleHushBase, BmSDK.IGameObject

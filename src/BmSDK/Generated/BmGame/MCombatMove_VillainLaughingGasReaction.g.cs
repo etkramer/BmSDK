@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_VillainLaughingGasReaction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_VillainLaughingGasReaction : BmSDK.BmGame.RCombatMove_VillainSmokeBombReaction, BmSDK.IGameObject

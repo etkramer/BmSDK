@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeStateBoneConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeStateDataIndicator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeStateDataIndicator
     {
         /// <summary>
@@ -232,7 +231,7 @@ public partial class RCapeStateBoneConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeSkinningBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeSkinningBoneData
     {
         /// <summary>

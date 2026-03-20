@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCameraActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCameraActor : BmSDK.Engine.CameraActor, BmSDK.IGameObject

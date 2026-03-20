@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_RedhoodBeatdownAtRange<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_RedhoodBeatdownAtRange : BmSDK.BmGame.RCombatMove_BatmanBeatdown, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDisableAIAlertsVolumeBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDisableAIAlertsVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameObject

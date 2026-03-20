@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFloatingRaft<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFloatingRaft : BmSDK.BmGame.ROceanSMActor, BmSDK.IGameObject

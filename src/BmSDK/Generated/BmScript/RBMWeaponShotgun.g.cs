@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMWeaponShotgun<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponShotgun : BmSDK.BmScript.RBMWeaponRiflePredFull, BmSDK.IGameObject

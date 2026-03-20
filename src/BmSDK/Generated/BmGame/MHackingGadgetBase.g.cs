@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHackingGadgetBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject
@@ -278,7 +277,7 @@ public partial class MHackingGadgetBase : BmSDK.BmGame.RInventoryGadget, BmSDK.I
     /// <summary>
     /// Struct: FBatgirlSecondaryTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBatgirlSecondaryTargetData
     {
         /// <summary>

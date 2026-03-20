@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIDataStore_Remote<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIDataStore_Remote : BmSDK.Engine.UIDataStore, BmSDK.IGameObject

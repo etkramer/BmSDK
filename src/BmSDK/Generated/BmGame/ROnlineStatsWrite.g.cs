@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROnlineStatsWrite<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineStatsWrite : BmSDK.Engine.OnlineStatsWrite, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_StreamInTextures<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_StreamInTextures : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

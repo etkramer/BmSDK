@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHudObjectivesContainer<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class RHudObjectivesContainer : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FQueuedObjectives
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FQueuedObjectives
     {
         /// <summary>

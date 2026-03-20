@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RLightShaftVolumeComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLightShaftVolumeComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

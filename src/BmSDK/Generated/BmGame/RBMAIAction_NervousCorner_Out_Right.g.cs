@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_NervousCorner_Out_Right<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_NervousCorner_Out_Right : BmSDK.BmGame.RBMAIAction_NervousCorner_Out, BmSDK.IGameObject

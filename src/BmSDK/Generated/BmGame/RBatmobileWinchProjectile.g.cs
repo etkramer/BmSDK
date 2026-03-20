@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileWinchProjectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileWinchProjectile : BmSDK.BmGame.RProjectileWithRope, BmSDK.IGameObject

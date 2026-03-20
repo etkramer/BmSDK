@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCameraEmitterBloodSplat<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCameraEmitterBloodSplat : BmSDK.BmGame.RBMCameraEmitter, BmSDK.IGameObject

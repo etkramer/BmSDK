@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDRelationshipSymbolValid<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDRelationshipSymbolValid : BmSDK.AkAudio.AkSDRelationship, BmSDK.IGameObject
@@ -198,7 +197,7 @@ public partial class AkSDRelationshipSymbolValid : BmSDK.AkAudio.AkSDRelationshi
     /// <summary>
     /// Struct: FVariables
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVariables
     {
         /// <summary>

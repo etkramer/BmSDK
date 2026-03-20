@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DecalMaterial<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
@@ -1536,7 +1535,7 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVector2MaterialInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVector2MaterialInput
     {
         /// <summary>
@@ -1570,7 +1569,7 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
     /// <summary>
     /// Struct: FVectorMaterialInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FVectorMaterialInput
     {
         /// <summary>
@@ -1595,7 +1594,7 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScalarMaterialInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FScalarMaterialInput
     {
         /// <summary>
@@ -1620,7 +1619,7 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
     /// <summary>
     /// Struct: FColorMaterialInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FColorMaterialInput
     {
         /// <summary>
@@ -1645,7 +1644,7 @@ public partial class DecalMaterial : BmSDK.Engine.Material, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMaterialInput
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMaterialInput
     {
         /// <summary>

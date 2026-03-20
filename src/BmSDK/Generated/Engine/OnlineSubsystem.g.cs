@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineSubsystem<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineSubsystem : BmSDK.GameObject, BmSDK.IGameObject

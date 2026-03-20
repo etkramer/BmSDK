@@ -5,7 +5,6 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: _System<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class _System : BmSDK.Subsystem, BmSDK.IGameObject

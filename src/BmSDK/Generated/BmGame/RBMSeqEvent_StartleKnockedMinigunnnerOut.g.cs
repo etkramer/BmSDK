@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSeqEvent_StartleKnockedMinigunnnerOut<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSeqEvent_StartleKnockedMinigunnnerOut : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

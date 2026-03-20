@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AccessControl<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AccessControl : BmSDK.Engine.Info, BmSDK.IGameObject

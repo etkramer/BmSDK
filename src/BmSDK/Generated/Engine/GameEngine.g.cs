@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameEngine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
@@ -342,7 +341,7 @@ public partial class GameEngine : BmSDK.Engine._Engine, BmSDK.IGameObject
     /// <summary>
     /// Struct: FURL
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FURL
     {
         /// <summary>

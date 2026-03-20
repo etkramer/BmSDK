@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWaterRescueVolumeBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWaterRescueVolumeBase : BmSDK.Engine.Volume, BmSDK.IGameObject

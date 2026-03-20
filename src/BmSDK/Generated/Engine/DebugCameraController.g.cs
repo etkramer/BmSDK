@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DebugCameraController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DebugCameraController : BmSDK.Engine.PlayerController, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_GlideOutOfBounds<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_GlideOutOfBounds : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

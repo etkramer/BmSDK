@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhysicalEvidenceCrimeScene<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPhysicalEvidenceCrimeScene : BmSDK.BmGame.RPhysicalEvidenceBase, BmSDK.IGameObject

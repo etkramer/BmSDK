@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTypeDataRibbon<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTypeDataRibbon : BmSDK.Engine.ParticleModuleTypeDataBase, BmSDK.IGameObject

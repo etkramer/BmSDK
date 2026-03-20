@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMagneticObjectForceField<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMagneticObjectForceField : BmSDK.Engine.NxRadialForceField, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkTriggerName<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkTriggerName : BmSDK.Engine.AkHash, BmSDK.IGameObject

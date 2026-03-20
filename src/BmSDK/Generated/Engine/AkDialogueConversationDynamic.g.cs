@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueConversationDynamic<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class AkDialogueConversationDynamic : BmSDK.Engine.AkDialogueSpee
     /// <summary>
     /// Struct: FAkDialogueConversationDynamicItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkDialogueConversationDynamicItem
     {
         /// <summary>

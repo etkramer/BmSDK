@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleNPCWeapon_APCMissileLauncher<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleNPCWeapon_APCMissileLauncher : BmSDK.BmGame.RVehicleNPCWeapon_RPG, BmSDK.IGameObject

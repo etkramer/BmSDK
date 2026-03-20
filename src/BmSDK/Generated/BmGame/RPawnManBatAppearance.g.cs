@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnManBatAppearance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnManBatAppearance : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMAIAction_RiotFollow<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_RiotFollow : BmSDK.BmGame.RBMAIAction_BaseMove, BmSDK.IGameObject

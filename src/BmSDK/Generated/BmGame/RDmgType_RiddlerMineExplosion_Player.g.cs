@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_RiddlerMineExplosion_Player<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_RiddlerMineExplosion_Player : BmSDK.BmGame.RDmgType_ThugMineExplosion_Player, BmSDK.IGameObject

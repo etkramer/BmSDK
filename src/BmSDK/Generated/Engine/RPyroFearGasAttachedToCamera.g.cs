@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RPyroFearGasAttachedToCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPyroFearGasAttachedToCamera : BmSDK.Engine.Volume, BmSDK.IGameObject

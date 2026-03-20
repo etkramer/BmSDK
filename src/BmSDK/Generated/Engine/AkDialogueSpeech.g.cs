@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueSpeech<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueSpeech : BmSDK.Engine.AkHash, BmSDK.IGameObject

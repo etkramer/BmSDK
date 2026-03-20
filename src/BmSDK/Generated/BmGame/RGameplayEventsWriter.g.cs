@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGameplayEventsWriter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGameplayEventsWriter : BmSDK.BmGame.RGameplayEventsHydra, BmSDK.IGameObject

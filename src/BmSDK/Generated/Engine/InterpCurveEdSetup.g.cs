@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpCurveEdSetup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCurveEdTab
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCurveEdTab
     {
         /// <summary>
@@ -115,7 +114,7 @@ public partial class InterpCurveEdSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCurveEdEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCurveEdEntry
     {
         /// <summary>

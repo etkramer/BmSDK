@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGroupAssignmentPicker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGroupAssignmentPicker : BmSDK.StateObject, BmSDK.IGameObject

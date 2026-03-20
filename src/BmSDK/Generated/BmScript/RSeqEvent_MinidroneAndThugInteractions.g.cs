@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqEvent_MinidroneAndThugInteractions<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_MinidroneAndThugInteractions : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

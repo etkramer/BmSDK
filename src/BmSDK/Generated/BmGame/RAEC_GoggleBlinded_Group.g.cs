@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_GoggleBlinded_Group<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_GoggleBlinded_Group : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexVortexActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexVortexActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject

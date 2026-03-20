@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawLightRadiusComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DrawLightRadiusComponent : BmSDK.Engine.DrawSphereComponent, BmSDK.IGameObject

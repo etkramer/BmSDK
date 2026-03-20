@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CoverLink<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CoverLink : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject

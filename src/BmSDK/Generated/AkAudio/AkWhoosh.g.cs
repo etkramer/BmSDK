@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkWhoosh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkWhoosh : BmSDK.Engine.AkActor, BmSDK.IGameObject
@@ -107,7 +106,7 @@ public partial class AkWhoosh : BmSDK.Engine.AkActor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FWhooshBy
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWhooshBy
     {
         /// <summary>

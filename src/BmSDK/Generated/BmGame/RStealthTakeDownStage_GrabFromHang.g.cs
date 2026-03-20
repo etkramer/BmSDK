@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_GrabFromHang<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_GrabFromHang : BmSDK.BmGame.RStealthTakeDownStage, BmSDK.IGameObject
@@ -903,7 +902,7 @@ public partial class RStealthTakeDownStage_GrabFromHang : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Struct: FTakeDownStageAnimSet
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTakeDownStageAnimSet
     {
         /// <summary>
@@ -1225,7 +1224,7 @@ public partial class RStealthTakeDownStage_GrabFromHang : BmSDK.BmGame.RStealthT
     /// <summary>
     /// Struct: FAnimList
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAnimList
     {
         /// <summary>

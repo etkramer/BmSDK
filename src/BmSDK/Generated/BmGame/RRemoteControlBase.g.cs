@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRemoteControlBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRemoteControlBase : BmSDK.Engine.Actor, BmSDK.IGameObject

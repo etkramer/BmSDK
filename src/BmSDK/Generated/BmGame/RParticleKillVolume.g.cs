@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RParticleKillVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleKillVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

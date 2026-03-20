@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBMCombatThrownObject_RocketLauncher<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCombatThrownObject_RocketLauncher : BmSDK.BmGame.RBMCombatThrownObject, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RBodyInstancePool<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBodyInstancePool : BmSDK.GameObject, BmSDK.IGameObject

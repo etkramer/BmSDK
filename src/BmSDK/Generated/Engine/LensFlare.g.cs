@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LensFlare<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
@@ -225,7 +224,7 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLensFlareElement
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLensFlareElement
     {
         /// <summary>
@@ -493,7 +492,7 @@ public partial class LensFlare : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLensFlareElementCurvePair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLensFlareElementCurvePair
     {
         /// <summary>

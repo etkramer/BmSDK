@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MStickyConcussionGrenade<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MStickyConcussionGrenade : BmSDK.BmGame.RProjectileGadgetBase, BmSDK.IGameObject

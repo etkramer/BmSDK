@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPhotoCameraController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPhotoCameraController : BmSDK.Engine.DebugCameraController, BmSDK.IGameObject

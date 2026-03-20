@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqAct_GetVelocity<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_GetVelocity : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

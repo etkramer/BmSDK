@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_MinigunnerInvStartlePoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_MinigunnerInvStartlePoint : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

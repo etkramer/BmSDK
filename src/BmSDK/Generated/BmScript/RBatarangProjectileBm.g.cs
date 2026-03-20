@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBatarangProjectileBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatarangProjectileBm : BmSDK.BmGame.RBatarangProjectile, BmSDK.IGameObject

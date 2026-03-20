@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleCustomisation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
@@ -90,7 +89,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCarCustomisationObject
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCarCustomisationObject
     {
         /// <summary>
@@ -124,7 +123,7 @@ public partial class RVehicleCustomisation : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCarCustomisationMaterialParam
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCarCustomisationMaterialParam
     {
         /// <summary>

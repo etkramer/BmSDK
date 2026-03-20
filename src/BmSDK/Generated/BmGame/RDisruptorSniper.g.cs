@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDisruptorSniper<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDisruptorSniper : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Search_Sub_JoiningBuddy<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Search_Sub_JoiningBuddy : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

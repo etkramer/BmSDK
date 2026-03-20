@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProjectileWithRope<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RProjectileWithRope : BmSDK.Engine.Actor, BmSDK.IGameObject

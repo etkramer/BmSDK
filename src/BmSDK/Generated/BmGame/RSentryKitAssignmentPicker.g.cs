@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSentryKitAssignmentPicker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSentryKitAssignmentPicker : BmSDK.BmGame.RGroupAssignmentPicker, BmSDK.IGameObject

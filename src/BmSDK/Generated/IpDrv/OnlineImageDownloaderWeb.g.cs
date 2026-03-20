@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: OnlineImageDownloaderWeb<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class OnlineImageDownloaderWeb : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FOnlineImageDownload
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FOnlineImageDownload
     {
         /// <summary>

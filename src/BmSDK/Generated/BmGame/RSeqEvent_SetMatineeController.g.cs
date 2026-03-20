@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_SetMatineeController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_SetMatineeController : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

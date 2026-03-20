@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SplineMeshComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class SplineMeshComponent : BmSDK.Engine.StaticMeshComponent, BmS
     /// <summary>
     /// Struct: FSplineMeshParams
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSplineMeshParams
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_PodExplosion<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_PodExplosion : BmSDK.BmGame.RDmgType_NoXP, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWindVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWindVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

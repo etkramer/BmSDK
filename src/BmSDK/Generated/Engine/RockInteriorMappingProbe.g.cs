@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RockInteriorMappingProbe<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RockInteriorMappingProbe : BmSDK.Engine.RockReflectionVolume, BmSDK.IGameObject
@@ -170,7 +169,7 @@ public partial class RockInteriorMappingProbe : BmSDK.Engine.RockReflectionVolum
     /// <summary>
     /// Struct: FFReflectionBoxInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFReflectionBoxInfo
     {
         /// <summary>

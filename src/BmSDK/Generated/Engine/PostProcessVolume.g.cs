@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PostProcessVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -125,7 +124,7 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPostProcessSettings
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPostProcessSettings
     {
         /// <summary>
@@ -1401,7 +1400,7 @@ public partial class PostProcessVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLUTBlender
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLUTBlender
     {
         /// <summary>

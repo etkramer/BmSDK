@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ToggleValidVoiceSynthesiserTarget<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ToggleValidVoiceSynthesiserTarget : BmSDK.Engine.SeqAct_Toggle, BmSDK.IGameObject

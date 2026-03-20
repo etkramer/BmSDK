@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawBoxComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DrawBoxComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

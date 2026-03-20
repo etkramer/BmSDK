@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MWBIDVerifyScreenMessage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MWBIDVerifyScreenMessage : BmSDK.BmGame.MWBIDDataMessage, BmSDK.IGameObject

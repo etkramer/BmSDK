@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ActiveCombatantChecker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class RSeqAct_ActiveCombatantChecker : BmSDK.Engine.SeqAct_Latent
     /// <summary>
     /// Struct: FCombatantThreshold
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCombatantThreshold
     {
         /// <summary>

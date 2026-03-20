@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Ladder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Ladder : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelStreamingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject
@@ -134,7 +133,7 @@ public partial class LevelStreamingVolume : BmSDK.Engine.Volume, BmSDK.IGameObje
     /// <summary>
     /// Struct: FCheckpointRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCheckpointRecord
     {
         /// <summary>

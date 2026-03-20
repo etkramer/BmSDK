@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCapeConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -576,7 +575,7 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FMinLengthSpringConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMinLengthSpringConfig
     {
         /// <summary>
@@ -628,7 +627,7 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeSupportConnectorIndexPair
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeSupportConnectorIndexPair
     {
         /// <summary>
@@ -653,7 +652,7 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeBoolArrayType
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeBoolArrayType
     {
         /// <summary>
@@ -669,7 +668,7 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeFloatArrayType
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeFloatArrayType
     {
         /// <summary>
@@ -685,7 +684,7 @@ public partial class RCapeConfig : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCapeIntArrayType
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCapeIntArrayType
     {
         /// <summary>

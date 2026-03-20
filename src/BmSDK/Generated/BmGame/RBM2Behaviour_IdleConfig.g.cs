@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBM2Behaviour_IdleConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBM2Behaviour_IdleConfig : BmSDK.BmGame.RBMBehaviour_MoveToBase, BmSDK.IGameObject

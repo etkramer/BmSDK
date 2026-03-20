@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ServerCommandlet<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ServerCommandlet : BmSDK.Commandlet, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDisruptableObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDisruptableObjectBase : BmSDK.Engine.Actor, BmSDK.IGameObject

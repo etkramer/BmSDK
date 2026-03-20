@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Interface_NavMeshPathSwitch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Interface_NavMeshPathSwitch : BmSDK.Engine.Interface_NavMeshPathObject, BmSDK.IGameObject
@@ -162,7 +161,7 @@ public partial class Interface_NavMeshPathSwitch : BmSDK.Engine.Interface_NavMes
     /// <summary>
     /// Struct: FQWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FQWord
     {
         /// <summary>
@@ -187,7 +186,7 @@ public partial class Interface_NavMeshPathSwitch : BmSDK.Engine.Interface_NavMes
     /// <summary>
     /// Struct: FPointer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPointer
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RFreezableVentBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezableVentBase : BmSDK.Engine.Actor, BmSDK.IGameObject

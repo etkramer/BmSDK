@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TerrainLayerSetup<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTerrainFilteredMaterial
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTerrainFilteredMaterial
     {
         /// <summary>
@@ -133,7 +132,7 @@ public partial class TerrainLayerSetup : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FFilterLimit
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFilterLimit
     {
         /// <summary>

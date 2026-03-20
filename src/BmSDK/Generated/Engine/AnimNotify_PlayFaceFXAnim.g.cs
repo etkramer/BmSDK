@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AnimNotify_PlayFaceFxAnim<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AnimNotify_PlayFaceFxAnim : BmSDK.Engine.AnimNotify_Scripted, BmSDK.IGameObject
@@ -162,7 +161,7 @@ public partial class AnimNotify_PlayFaceFxAnim : BmSDK.Engine.AnimNotify_Scripte
     /// <summary>
     /// Struct: FQWord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FQWord
     {
         /// <summary>
@@ -187,7 +186,7 @@ public partial class AnimNotify_PlayFaceFxAnim : BmSDK.Engine.AnimNotify_Scripte
     /// <summary>
     /// Struct: FPointer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPointer
     {
         /// <summary>

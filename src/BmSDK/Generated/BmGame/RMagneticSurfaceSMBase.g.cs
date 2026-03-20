@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMagneticSurfaceSMBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMagneticSurfaceSMBase : BmSDK.Engine.Actor, BmSDK.IGameObject

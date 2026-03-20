@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexNoiseComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexNoiseComponent : BmSDK.Engine.ApexFieldSamplerComponent, BmSDK.IGameObject

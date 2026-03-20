@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Sequence<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Sequence : BmSDK.Engine.SequenceOp, BmSDK.IGameObject

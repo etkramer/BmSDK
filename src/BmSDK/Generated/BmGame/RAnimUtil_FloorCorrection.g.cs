@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_FloorCorrection<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameObject
@@ -135,7 +134,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFloorCorrectionResolvedConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFloorCorrectionResolvedConfig
     {
         /// <summary>
@@ -160,7 +159,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFloorCorrectionTransition
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFloorCorrectionTransition
     {
         /// <summary>
@@ -221,7 +220,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFloorCorrectionResult
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFloorCorrectionResult
     {
         /// <summary>
@@ -291,7 +290,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FStepUpState
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FStepUpState
     {
         /// <summary>
@@ -343,7 +342,7 @@ public partial class RAnimUtil_FloorCorrection : BmSDK.GameObject, BmSDK.IGameOb
     /// <summary>
     /// Struct: FFloorCorrectionBoneIndices
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FFloorCorrectionBoneIndices
     {
         /// <summary>

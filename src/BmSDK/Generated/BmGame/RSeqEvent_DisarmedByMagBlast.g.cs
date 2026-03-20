@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_DisarmedByMagBlast<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_DisarmedByMagBlast : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MicroTransactionBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class MicroTransactionBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FPurchaseInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPurchaseInfo
     {
         /// <summary>

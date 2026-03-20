@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoal_PolyEncompassesAI<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoal_PolyEncompassesAI : BmSDK.Engine.NavMeshPathGoalEvaluator, BmSDK.IGameObject

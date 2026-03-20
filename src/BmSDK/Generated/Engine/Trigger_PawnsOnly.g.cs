@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Trigger_PawnsOnly<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Trigger_PawnsOnly : BmSDK.Engine.Trigger, BmSDK.IGameObject
@@ -98,7 +97,7 @@ public partial class Trigger_PawnsOnly : BmSDK.Engine.Trigger, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCheckpointRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCheckpointRecord
     {
         /// <summary>

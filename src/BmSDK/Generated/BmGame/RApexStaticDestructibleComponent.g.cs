@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RApexStaticDestructibleComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RApexStaticDestructibleComponent : BmSDK.Engine.ApexStaticDestructibleComponent, BmSDK.IGameObject

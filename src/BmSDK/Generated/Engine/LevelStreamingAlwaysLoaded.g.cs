@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: LevelStreamingAlwaysLoaded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class LevelStreamingAlwaysLoaded : BmSDK.Engine.LevelStreaming, BmSDK.IGameObject

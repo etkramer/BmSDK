@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MLaughingGasScreenBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MLaughingGasScreenBase : BmSDK.BmGame.RSmokeScreen, BmSDK.IGameObject

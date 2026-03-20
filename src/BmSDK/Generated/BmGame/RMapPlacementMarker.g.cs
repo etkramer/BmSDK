@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMapPlacementMarker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMapPlacementMarker : BmSDK.Engine.Actor, BmSDK.IGameObject

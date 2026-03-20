@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ApexGridActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ApexGridActor : BmSDK.Engine.ApexFieldSamplerActor, BmSDK.IGameObject

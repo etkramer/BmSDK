@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SpeedTreeComponentFactory<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SpeedTreeComponentFactory : BmSDK.Engine.PrimitiveComponentFactory, BmSDK.IGameObject

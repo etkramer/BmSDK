@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RFlaps_ConstraintSetupDistance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFlaps_ConstraintSetupDistance : BmSDK.Engine.RFlaps_ConstraintSetup, BmSDK.IGameObject

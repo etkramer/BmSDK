@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPatrolPoint_Moveable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPatrolPoint_Moveable : BmSDK.BmGame.RPatrolPoint, BmSDK.IGameObject

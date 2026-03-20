@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPredatorGunLockerAPEXBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPredatorGunLockerAPEXBase : BmSDK.BmGame.RPredatorGunLockerBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDistributionVectorRain<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDistributionVectorRain : BmSDK.Engine.DistributionVectorParameterBase, BmSDK.IGameObject

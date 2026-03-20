@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHQBehaviour_SnareTrapTripped<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHQBehaviour_SnareTrapTripped : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

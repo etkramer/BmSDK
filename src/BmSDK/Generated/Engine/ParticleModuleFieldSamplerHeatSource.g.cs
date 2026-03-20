@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleFieldSamplerHeatSource<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleFieldSamplerHeatSource : BmSDK.Engine.ParticleModuleFieldSamplerBase, BmSDK.IGameObject

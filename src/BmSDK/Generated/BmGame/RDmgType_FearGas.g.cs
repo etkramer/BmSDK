@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_FearGas<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_FearGas : BmSDK.BmGame.RDmgType_Explosion, BmSDK.IGameObject

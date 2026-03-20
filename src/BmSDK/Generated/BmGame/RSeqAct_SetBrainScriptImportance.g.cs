@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetBrainScriptImportance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetBrainScriptImportance : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGrapplePoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IGameObject
@@ -476,7 +475,7 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// Struct: FGrapplePointInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGrapplePointInfo
     {
         /// <summary>
@@ -600,7 +599,7 @@ public partial class RGrapplePoint : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IG
     /// <summary>
     /// Struct: FGrapplePointOctreeObject
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGrapplePointOctreeObject
     {
         /// <summary>

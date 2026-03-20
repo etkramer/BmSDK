@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SeqEvent_RigidBodyCollision<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqEvent_RigidBodyCollision : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

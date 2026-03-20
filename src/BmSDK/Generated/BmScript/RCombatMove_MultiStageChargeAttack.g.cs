@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCombatMove_MultiStageChargeAttack<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_MultiStageChargeAttack : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

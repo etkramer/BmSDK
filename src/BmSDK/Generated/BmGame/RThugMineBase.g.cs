@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RThugMineBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RThugMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject

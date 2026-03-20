@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PhysicsLODVerticalEmitter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PhysicsLODVerticalEmitter : BmSDK.GameObject, BmSDK.IGameObject

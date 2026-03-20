@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UIRoot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UIRoot : BmSDK.StateObject, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSpecialMoveInstance_PlaceJackInBox<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MSpecialMoveInstance_PlaceJackInBox : BmSDK.BmGame.RSpecialMoveInstance_PlaceActor, BmSDK.IGameObject

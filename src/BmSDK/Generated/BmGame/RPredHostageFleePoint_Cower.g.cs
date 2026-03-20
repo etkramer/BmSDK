@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPredHostageFleePoint_Cower<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPredHostageFleePoint_Cower : BmSDK.BmGame.RPredHostageFleePoint, BmSDK.IGameObject

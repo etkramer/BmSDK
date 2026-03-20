@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DynamicCameraActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DynamicCameraActor : BmSDK.Engine.CameraActor, BmSDK.IGameObject

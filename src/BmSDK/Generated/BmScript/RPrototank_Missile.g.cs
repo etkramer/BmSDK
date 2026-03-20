@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RPrototank_Missile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPrototank_Missile : BmSDK.BmGame.RProjectile, BmSDK.IGameObject

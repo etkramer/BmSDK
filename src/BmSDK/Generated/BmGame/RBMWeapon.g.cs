@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMWeapon<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeapon : BmSDK.Engine.Inventory, BmSDK.IGameObject

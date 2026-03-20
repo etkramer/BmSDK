@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactorySpotLightToggleable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactorySpotLightToggleable : BmSDK.Engine.ActorFactorySpotLight, BmSDK.IGameObject

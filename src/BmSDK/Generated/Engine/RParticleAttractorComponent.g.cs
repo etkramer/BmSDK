@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleAttractorComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleAttractorComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

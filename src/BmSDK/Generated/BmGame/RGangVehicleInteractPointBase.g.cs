@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGangVehicleInteractPointBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, BmSDK.IGameObject
@@ -1979,7 +1978,7 @@ public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, 
     /// <summary>
     /// Struct: FBlockingVolumeTypesContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBlockingVolumeTypesContainer
     {
         /// <summary>
@@ -2139,7 +2138,7 @@ public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, 
     /// <summary>
     /// Struct: FThought
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FThought
     {
         /// <summary>
@@ -2200,7 +2199,7 @@ public partial class RGangVehicleInteractPointBase : BmSDK.BmGame.RDummyTarget, 
     /// <summary>
     /// Struct: FDetailThought
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FDetailThought
     {
         /// <summary>

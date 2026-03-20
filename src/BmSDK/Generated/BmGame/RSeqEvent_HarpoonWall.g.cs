@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_HarpoonWall<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_HarpoonWall : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

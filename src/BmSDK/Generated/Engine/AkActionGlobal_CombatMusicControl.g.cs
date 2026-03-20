@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_CombatMusicControl<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_CombatMusicControl : BmSDK.Engine.AkActionGlobal_MusicControl, BmSDK.IGameObject
@@ -270,7 +269,7 @@ public partial class AkActionGlobal_CombatMusicControl : BmSDK.Engine.AkActionGl
     /// <summary>
     /// Struct: FCombatGroups
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCombatGroups
     {
         /// <summary>

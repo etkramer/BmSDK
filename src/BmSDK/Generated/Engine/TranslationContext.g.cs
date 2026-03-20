@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TranslationContext<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TranslationContext : BmSDK.GameObject, BmSDK.IGameObject

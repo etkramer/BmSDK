@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PathTargetPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PathTargetPoint : BmSDK.Engine.Keypoint, BmSDK.IGameObject

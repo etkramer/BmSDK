@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNode_BlendBonesFromPoses<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendBase, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class RAnimNode_BlendBonesFromPoses : BmSDK.Engine.AnimNodeBlendB
     /// <summary>
     /// Struct: FBlendBoneData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBlendBoneData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RShimmyEdgeMarker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RShimmyEdgeMarker : BmSDK.BmGame.RSnapToPositionActor, BmSDK.IGameObject

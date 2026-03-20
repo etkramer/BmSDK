@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdSpawner_BatmanVanish<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdSpawner_BatmanVanish : BmSDK.BmGame.RCrowdSpawner, BmSDK.IGameObject

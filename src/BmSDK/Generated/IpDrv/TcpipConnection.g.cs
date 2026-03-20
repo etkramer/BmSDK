@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: TcpipConnection<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TcpipConnection : BmSDK.Engine.NetConnection, BmSDK.IGameObject

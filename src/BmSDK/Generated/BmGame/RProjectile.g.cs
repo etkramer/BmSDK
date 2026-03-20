@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProjectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RProjectile : BmSDK.Engine.Projectile, BmSDK.IGameObject

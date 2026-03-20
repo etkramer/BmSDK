@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MHackSubroutine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MHackSubroutine : BmSDK.Engine.Actor, BmSDK.IGameObject

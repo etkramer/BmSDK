@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DrawCylinderComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DrawCylinderComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

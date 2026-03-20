@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Vehicle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Vehicle : BmSDK.Engine.Pawn, BmSDK.IGameObject

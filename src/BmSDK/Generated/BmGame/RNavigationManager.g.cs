@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNavigationManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNavigationManager : BmSDK.GameObject, BmSDK.IGameObject

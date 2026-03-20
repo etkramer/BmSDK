@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleTrailTaper<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleTrailTaper : BmSDK.Engine.ParticleModuleTrailBase, BmSDK.IGameObject

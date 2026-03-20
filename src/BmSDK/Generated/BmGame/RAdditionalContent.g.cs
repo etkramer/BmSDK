@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAdditionalContent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAdditionalContent : BmSDK.BmGame.RConfig, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_ChinookAbseil<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_ChinookAbseil : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

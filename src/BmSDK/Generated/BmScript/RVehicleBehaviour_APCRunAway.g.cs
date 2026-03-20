@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVehicleBehaviour_APCRunAway<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_APCRunAway : BmSDK.BmGame.RVehicleBehaviour_RunAway, BmSDK.IGameObject

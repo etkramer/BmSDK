@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxInteraction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GFxInteraction : BmSDK.Engine.Interaction, BmSDK.IGameObject

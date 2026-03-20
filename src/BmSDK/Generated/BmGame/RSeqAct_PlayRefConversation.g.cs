@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_PlayRefConversation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_PlayRefConversation : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

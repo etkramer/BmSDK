@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDynamicCeilingClimbVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDynamicCeilingClimbVolume : BmSDK.BmGame.RCeilingClimbVolume, BmSDK.IGameObject

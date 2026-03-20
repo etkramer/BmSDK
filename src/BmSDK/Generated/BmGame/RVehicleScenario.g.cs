@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleScenario<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
@@ -74,7 +73,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioVehicleDesc
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FScenarioVehicleDesc
     {
         /// <summary>
@@ -198,7 +197,7 @@ public partial class RVehicleScenario : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FScenarioPassengerDesc
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FScenarioPassengerDesc
     {
         /// <summary>

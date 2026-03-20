@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: InterpTrackAkEvent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class InterpTrackAkEvent : BmSDK.Engine.InterpTrack, BmSDK.IGameO
     /// <summary>
     /// Struct: FAkEventTrackKey
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkEventTrackKey
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_MuseumBooth<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_MuseumBooth : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

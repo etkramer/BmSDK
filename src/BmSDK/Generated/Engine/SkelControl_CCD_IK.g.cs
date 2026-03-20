@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControl_CCD_IK<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControl_CCD_IK : BmSDK.Engine.SkelControlBase, BmSDK.IGameObject

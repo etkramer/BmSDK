@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_LaughingGas_Outsider<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_LaughingGas_Outsider : BmSDK.BmGame.RAEC_Smoke_Outsider, BmSDK.IGameObject

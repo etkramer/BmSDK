@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_MayhemMode_Sub<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_MayhemMode_Sub : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

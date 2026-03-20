@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDialogueConversation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class AkDialogueConversation : BmSDK.Engine.AkDialogueSpeech, BmS
     /// <summary>
     /// Struct: FAkDialogueConversationItem
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkDialogueConversationItem
     {
         /// <summary>

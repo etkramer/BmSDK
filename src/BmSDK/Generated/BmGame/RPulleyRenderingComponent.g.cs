@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPulleyRenderingComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPulleyRenderingComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

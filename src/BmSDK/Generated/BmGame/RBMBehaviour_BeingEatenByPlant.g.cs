@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_BeingEatenByPlant<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_BeingEatenByPlant : BmSDK.BmGame.RBMBehaviour_ActionQueue, BmSDK.IGameObject

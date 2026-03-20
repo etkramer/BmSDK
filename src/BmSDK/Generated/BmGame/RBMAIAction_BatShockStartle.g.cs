@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_BatShockStartle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_BatShockStartle : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

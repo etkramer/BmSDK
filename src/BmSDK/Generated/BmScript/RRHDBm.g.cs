@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RRHDBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
@@ -728,7 +727,7 @@ public partial class RRHDBm : BmSDK.BmGame.RRHD, BmSDK.IGameObject
     /// <summary>
     /// Struct: FSecondaryTargetData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FSecondaryTargetData
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_BmTunnelGrateGrabEnd<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_BmTunnelGrateGrabEnd : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject

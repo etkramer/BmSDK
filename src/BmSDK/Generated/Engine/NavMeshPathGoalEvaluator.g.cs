@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshPathGoalEvaluator<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObject
@@ -99,7 +98,7 @@ public partial class NavMeshPathGoalEvaluator : BmSDK.GameObject, BmSDK.IGameObj
     /// <summary>
     /// Struct: FBiasedGoalActor
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBiasedGoalActor
     {
         /// <summary>

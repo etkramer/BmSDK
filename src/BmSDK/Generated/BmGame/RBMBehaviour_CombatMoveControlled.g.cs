@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_CombatMoveControlled<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_CombatMoveControlled : BmSDK.BmGame.RBMBehaviour_Controlled, BmSDK.IGameObject

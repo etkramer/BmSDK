@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSnareTrapProjectile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MSnareTrapProjectile : BmSDK.BmGame.RGadgetProjectileBase, BmSDK.IGameObject

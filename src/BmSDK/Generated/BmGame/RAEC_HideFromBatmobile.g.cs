@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_HideFromBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_HideFromBatmobile : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

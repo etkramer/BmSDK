@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAIBrain_PredLite<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAIBrain_PredLite : BmSDK.BmGame.RAIBrain_Pred, BmSDK.IGameObject

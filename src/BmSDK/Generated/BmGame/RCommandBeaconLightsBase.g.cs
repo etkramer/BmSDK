@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCommandBeaconLightsBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -116,7 +115,7 @@ public partial class RCommandBeaconLightsBase : BmSDK.Engine.Actor, BmSDK.IGameO
     /// <summary>
     /// Struct: FCommandBeaconMaterialSet
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCommandBeaconMaterialSet
     {
         /// <summary>

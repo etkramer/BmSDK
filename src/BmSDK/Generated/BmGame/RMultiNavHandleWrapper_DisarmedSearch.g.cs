@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiNavHandleWrapper_DisarmedSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiNavHandleWrapper_DisarmedSearch : BmSDK.BmGame.RMultiNavHandleWrapper, BmSDK.IGameObject

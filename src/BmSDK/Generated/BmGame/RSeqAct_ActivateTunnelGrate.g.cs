@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_ActivateTunnelGrate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_ActivateTunnelGrate : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

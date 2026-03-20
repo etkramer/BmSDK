@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkVehicleSound<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkVehicleSound : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

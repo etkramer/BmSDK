@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPlayerStartInLevel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPlayerStartInLevel : BmSDK.Engine.PlayerStart, BmSDK.IGameObject

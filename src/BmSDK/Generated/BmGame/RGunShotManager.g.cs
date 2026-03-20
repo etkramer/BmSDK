@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGunShotManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
@@ -449,7 +448,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FTrackedVehicle
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FTrackedVehicle
     {
         /// <summary>
@@ -474,7 +473,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGunShotFiringActor
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGunShotFiringActor
     {
         /// <summary>
@@ -616,7 +615,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGunFireRayJob
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGunFireRayJob
     {
         /// <summary>
@@ -632,7 +631,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FReflection
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FReflection
     {
         /// <summary>
@@ -684,7 +683,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FRocketEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRocketEntry
     {
         /// <summary>
@@ -736,7 +735,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGunShotEntry
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGunShotEntry
     {
         /// <summary>
@@ -905,7 +904,7 @@ public partial class RGunShotManager : BmSDK.Engine.Actor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FGunInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FGunInfo
     {
         /// <summary>

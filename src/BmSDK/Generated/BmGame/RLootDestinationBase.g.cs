@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLootDestinationBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLootDestinationBase : BmSDK.Engine.SkeletalMeshActor, BmSDK.IGameObject

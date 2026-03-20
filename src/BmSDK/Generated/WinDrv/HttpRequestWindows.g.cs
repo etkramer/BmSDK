@@ -5,7 +5,6 @@ namespace BmSDK.WinDrv;
 
 /// <summary>
 /// Class: HttpRequestWindows<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class HttpRequestWindows : BmSDK.Engine.HttpRequestInterface, BmSDK.IGameObject

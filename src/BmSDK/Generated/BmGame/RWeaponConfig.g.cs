@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWeaponConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWeaponConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject

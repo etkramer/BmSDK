@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackVectorMaterialParam<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackVectorMaterialParam : BmSDK.Engine.InterpTrackVectorBase, BmSDK.IGameObject

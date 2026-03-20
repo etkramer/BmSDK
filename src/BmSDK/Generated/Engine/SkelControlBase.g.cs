@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControlBase : BmSDK.Engine.AnimObject, BmSDK.IGameObject

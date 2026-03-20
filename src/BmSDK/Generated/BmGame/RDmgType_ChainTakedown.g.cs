@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ChainTakedown<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ChainTakedown : BmSDK.BmGame.RDmgType_Takedown, BmSDK.IGameObject

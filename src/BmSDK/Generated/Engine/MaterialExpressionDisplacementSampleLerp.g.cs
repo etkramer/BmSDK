@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialExpressionDisplacementSampleLerp<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialExpressionDisplacementSampleLerp : BmSDK.Engine.MaterialExpressionTextureSample, BmSDK.IGameObject

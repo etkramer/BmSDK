@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_StrikeSimultaneous<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_StrikeSimultaneous : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

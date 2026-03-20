@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RObjectPool<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
@@ -576,7 +575,7 @@ public partial class RObjectPool : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FREmitterPool
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FREmitterPool
     {
         /// <summary>

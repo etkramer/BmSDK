@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: FlashMovie<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class FlashMovie : BmSDK.GFxUI.SwfMovie, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionGlobal_DeathMusicControl<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionGlobal_DeathMusicControl : BmSDK.Engine.AkActionGlobal_MusicControl, BmSDK.IGameObject

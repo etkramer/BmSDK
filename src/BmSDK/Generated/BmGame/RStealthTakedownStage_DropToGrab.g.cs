@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_DropToGrab<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_DropToGrab : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject

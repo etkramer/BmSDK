@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RTunnelFunnel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RTunnelFunnel : BmSDK.Engine.Actor, BmSDK.IGameObject

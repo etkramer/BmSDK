@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_BatmanOnElectrifiedPanel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_BatmanOnElectrifiedPanel : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

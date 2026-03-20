@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRescuePoint_Temporary<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRescuePoint_Temporary : BmSDK.BmGame.RRescuePoint, BmSDK.IGameObject

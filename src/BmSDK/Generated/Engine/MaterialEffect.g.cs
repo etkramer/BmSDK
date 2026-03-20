@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialEffect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialEffect : BmSDK.Engine.PostProcessEffect, BmSDK.IGameObject

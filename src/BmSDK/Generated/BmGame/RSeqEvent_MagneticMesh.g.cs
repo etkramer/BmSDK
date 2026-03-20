@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_MagneticMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_MagneticMesh : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

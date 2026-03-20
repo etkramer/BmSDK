@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RChallengeModeStartPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RChallengeModeStartPoint : BmSDK.BmGame.RChallengeModeStartPointBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_Handle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_Handle : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

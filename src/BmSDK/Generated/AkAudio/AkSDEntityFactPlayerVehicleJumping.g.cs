@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityFactPlayerVehicleJumping<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityFactPlayerVehicleJumping : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject

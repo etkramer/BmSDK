@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBreakableVentLightBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBreakableVentLightBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

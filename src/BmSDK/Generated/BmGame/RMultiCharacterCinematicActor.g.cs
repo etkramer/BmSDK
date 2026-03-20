@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMultiCharacterCinematicActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshActor, BmSDK.IGameObject
@@ -107,7 +106,7 @@ public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Struct: FMultiCharacterCinematicActorSetup
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMultiCharacterCinematicActorSetup
     {
         /// <summary>
@@ -150,7 +149,7 @@ public partial class RMultiCharacterCinematicActor : BmSDK.BmGame.RSkeletalMeshA
     /// <summary>
     /// Struct: FMultiCharacterCinematicActorMaterialSwap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMultiCharacterCinematicActorMaterialSwap
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJokerTannoy<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJokerTannoy : BmSDK.Engine.Actor, BmSDK.IGameObject

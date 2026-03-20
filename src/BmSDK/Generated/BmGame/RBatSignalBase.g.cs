@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatSignalBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatSignalBase : BmSDK.Engine.Actor, BmSDK.IGameObject

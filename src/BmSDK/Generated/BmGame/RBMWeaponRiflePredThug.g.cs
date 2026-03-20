@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMWeaponRiflePredThug<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMWeaponRiflePredThug : BmSDK.BmGame.RBMWeaponRiflePredBase, BmSDK.IGameObject

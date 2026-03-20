@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MLaughingGasBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MLaughingGasBase : BmSDK.BmGame.RSmokeBomb, BmSDK.IGameObject

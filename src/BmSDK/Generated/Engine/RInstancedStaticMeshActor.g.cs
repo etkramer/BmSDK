@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RInstancedStaticMeshActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInstancedStaticMeshActor : BmSDK.Engine.StaticMeshActorBase, BmSDK.IGameObject

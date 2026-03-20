@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_LevelScriptingRoot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_LevelScriptingRoot : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

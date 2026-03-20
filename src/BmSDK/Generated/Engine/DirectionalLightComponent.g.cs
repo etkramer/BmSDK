@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DirectionalLightComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DirectionalLightComponent : BmSDK.Engine.LightComponent, BmSDK.IGameObject

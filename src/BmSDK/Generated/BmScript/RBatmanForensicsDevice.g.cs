@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBatmanForensicsDevice<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmanForensicsDevice : BmSDK.BmGame.RForensicsDevice, BmSDK.IGameObject

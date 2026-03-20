@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleRotationRate_Seeded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleRotationRate_Seeded : BmSDK.Engine.ParticleModuleRotationRate, BmSDK.IGameObject

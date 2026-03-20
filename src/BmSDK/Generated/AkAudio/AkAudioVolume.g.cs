@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkAudioVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkAudioVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

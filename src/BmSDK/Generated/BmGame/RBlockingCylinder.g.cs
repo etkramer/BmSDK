@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBlockingCylinder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBlockingCylinder : BmSDK.Engine.Actor, BmSDK.IGameObject

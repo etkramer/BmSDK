@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_BatmanGrabThrownObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_BatmanGrabThrownObject : BmSDK.BmGame.RCombatMove_BatmanWeaponAttack, BmSDK.IGameObject

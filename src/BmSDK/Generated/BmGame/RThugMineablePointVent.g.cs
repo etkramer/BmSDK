@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RThugMineablePointVent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RThugMineablePointVent : BmSDK.BmGame.RThugMineablePointBase, BmSDK.IGameObject

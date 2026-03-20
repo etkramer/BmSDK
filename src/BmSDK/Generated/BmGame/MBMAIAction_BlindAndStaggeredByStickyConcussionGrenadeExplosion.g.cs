@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MBMAIAction_BlindAndStaggeredByStickyConcussionGrenadeExplosion<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MBMAIAction_BlindAndStaggeredByStickyConcussionGrenadeExplosion : BmSDK.BmGame.RBMAIAction, BmSDK.IGameObject

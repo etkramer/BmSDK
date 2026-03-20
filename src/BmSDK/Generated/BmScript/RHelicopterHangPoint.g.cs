@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RHelicopterHangPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHelicopterHangPoint : BmSDK.BmGame.RHangPointSpawnable, BmSDK.IGameObject

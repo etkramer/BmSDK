@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimUtil_ShimmyCorrection<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameObject
@@ -116,7 +115,7 @@ public partial class RAnimUtil_ShimmyCorrection : BmSDK.GameObject, BmSDK.IGameO
     /// <summary>
     /// Struct: FShimmyArm
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FShimmyArm
     {
         /// <summary>

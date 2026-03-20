@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_WallClimb<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_WallClimb : BmSDK.BmGame.RBMPathNode_VariablePositionTraverse, BmSDK.IGameObject

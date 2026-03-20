@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkDrawSoundRadiusComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkDrawSoundRadiusComponent : BmSDK.Engine.PrimitiveComponent, BmSDK.IGameObject

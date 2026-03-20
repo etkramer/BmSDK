@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVisualDamageComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -135,7 +134,7 @@ public partial class RVisualDamageComponent : BmSDK.Engine.ActorComponent, BmSDK
     /// <summary>
     /// Struct: FBoneToHide
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBoneToHide
     {
         /// <summary>

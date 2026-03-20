@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJokerSwappableBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJokerSwappableBase : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

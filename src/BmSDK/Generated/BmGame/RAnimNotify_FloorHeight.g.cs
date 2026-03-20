@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAnimNotify_FloorHeight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimNotify_FloorHeight : BmSDK.BmGame.RAnimNotify_BeginEnd, BmSDK.IGameObject

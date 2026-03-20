@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDestructibleProp_PointLight<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDestructibleProp_PointLight : BmSDK.BmGame.RDestructibleProp, BmSDK.IGameObject

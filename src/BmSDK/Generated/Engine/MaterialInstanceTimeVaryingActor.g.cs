@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MaterialInstanceTimeVaryingActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MaterialInstanceTimeVaryingActor : BmSDK.Engine.Actor, BmSDK.IGameObject

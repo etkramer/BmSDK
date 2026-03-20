@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavigationPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavigationPoint : BmSDK.Engine.Actor, BmSDK.IGameObject

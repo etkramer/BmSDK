@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ForceFeedbackManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ForceFeedbackManager : BmSDK.GameObject, BmSDK.IGameObject

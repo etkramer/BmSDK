@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCheckpointAsset<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCheckpointAsset : BmSDK.BmGame.RThreatBaseAsset, BmSDK.IGameObject

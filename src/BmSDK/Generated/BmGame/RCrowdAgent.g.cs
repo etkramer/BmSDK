@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCrowdAgent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCrowdAgent : BmSDK.Engine.Actor, BmSDK.IGameObject

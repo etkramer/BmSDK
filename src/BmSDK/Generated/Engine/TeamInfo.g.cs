@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TeamInfo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TeamInfo : BmSDK.Engine.ReplicationInfo, BmSDK.IGameObject

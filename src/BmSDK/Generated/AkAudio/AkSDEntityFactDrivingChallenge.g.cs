@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityFactDrivingChallenge<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityFactDrivingChallenge : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject

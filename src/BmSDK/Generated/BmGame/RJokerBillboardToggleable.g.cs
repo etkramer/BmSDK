@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RJokerBillboardToggleable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RJokerBillboardToggleable : BmSDK.BmGame.RJokerBillboard, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: OnlineEventsInterfaceMcp<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class OnlineEventsInterfaceMcp : BmSDK.IpDrv.MCPBase, BmSDK.IGame
     /// <summary>
     /// Struct: FEventUploadConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FEventUploadConfig
     {
         /// <summary>

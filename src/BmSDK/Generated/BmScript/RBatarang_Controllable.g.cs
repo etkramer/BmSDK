@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBatarang_Controllable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatarang_Controllable : BmSDK.BmGame.RBatarang, BmSDK.IGameObject

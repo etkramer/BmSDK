@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RBmStealthTakedownStage_LRLedgeTakedownSuccess<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBmStealthTakedownStage_LRLedgeTakedownSuccess : BmSDK.BmGame.RStealthTakeDownStage_GrabFromCrouch2, BmSDK.IGameObject

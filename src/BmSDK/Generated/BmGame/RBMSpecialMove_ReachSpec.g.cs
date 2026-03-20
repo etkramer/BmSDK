@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMSpecialMove_ReachSpec<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMSpecialMove_ReachSpec : BmSDK.BmGame.RReachSpec, BmSDK.IGameObject

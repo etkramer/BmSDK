@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_LedgeHangNoRailingStart<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_LedgeHangNoRailingStart : BmSDK.BmGame.RStealthTakeDownStage_ChainTakedown_LedgeHangRailingStart, BmSDK.IGameObject

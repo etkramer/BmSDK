@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_HardDriveLeaderBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_HardDriveLeaderBase : BmSDK.BmGame.RBMAIAction_HoldGuardPointBase, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionVectorUniformRange<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionVectorUniformRange : BmSDK.DistributionVector, BmSDK.IGameObject

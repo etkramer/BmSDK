@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatMove_2DVillainBlock<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatMove_2DVillainBlock : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

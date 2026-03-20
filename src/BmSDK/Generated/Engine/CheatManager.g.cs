@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CheatManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CheatManager : BmSDK.GameObject, BmSDK.IGameObject

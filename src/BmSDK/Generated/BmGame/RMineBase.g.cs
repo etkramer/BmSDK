@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMineBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject

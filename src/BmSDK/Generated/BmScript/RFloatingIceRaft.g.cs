@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RFloatingIceRaft<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFloatingIceRaft : BmSDK.BmGame.RFloatingRaft, BmSDK.IGameObject

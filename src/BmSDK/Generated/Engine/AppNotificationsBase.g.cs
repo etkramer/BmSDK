@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AppNotificationsBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FLaunchNotificationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLaunchNotificationInfo
     {
         /// <summary>
@@ -88,7 +87,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FNotificationInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FNotificationInfo
     {
         /// <summary>
@@ -131,7 +130,7 @@ public partial class AppNotificationsBase : BmSDK.Engine.PlatformInterfaceBase, 
     /// <summary>
     /// Struct: FNotificationMessageInfo
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FNotificationMessageInfo
     {
         /// <summary>

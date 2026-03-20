@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakedownStage_ChainTakedown_LedgeHangDropToGrab<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakedownStage_ChainTakedown_LedgeHangDropToGrab : BmSDK.BmGame.RStealthTakedownStage_ChainTakedown_DropToGrab, BmSDK.IGameObject

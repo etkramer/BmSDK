@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBunkerDoorVillainBlocker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBunkerDoorVillainBlocker : BmSDK.Engine.Actor, BmSDK.IGameObject

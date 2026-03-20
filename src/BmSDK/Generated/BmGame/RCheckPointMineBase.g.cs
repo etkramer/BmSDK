@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCheckPointMineBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCheckPointMineBase : BmSDK.Engine.Actor, BmSDK.IGameObject

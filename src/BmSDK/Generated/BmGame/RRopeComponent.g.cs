@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGameObject
@@ -216,7 +215,7 @@ public partial class RRopeComponent : BmSDK.BmGame.RRopeComponentBase, BmSDK.IGa
     /// <summary>
     /// Struct: FRopeExtraAttachConnection
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRopeExtraAttachConnection
     {
         /// <summary>

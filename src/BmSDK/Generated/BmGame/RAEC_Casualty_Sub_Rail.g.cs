@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Casualty_Sub_Rail<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Casualty_Sub_Rail : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

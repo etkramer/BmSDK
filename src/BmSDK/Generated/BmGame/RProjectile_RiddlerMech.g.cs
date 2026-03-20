@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RProjectile_RiddlerMech<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RProjectile_RiddlerMech : BmSDK.BmGame.RProjectile, BmSDK.IGameObject

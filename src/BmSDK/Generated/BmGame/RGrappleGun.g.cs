@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGrappleGun<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGrappleGun : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

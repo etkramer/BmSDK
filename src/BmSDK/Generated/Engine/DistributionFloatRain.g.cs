@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: DistributionFloatRain<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class DistributionFloatRain : BmSDK.Engine.DistributionFloatParameterBase, BmSDK.IGameObject

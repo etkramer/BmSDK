@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMScreenShakeModifier<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObject
@@ -72,7 +71,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FBMScreenShakeStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBMScreenShakeStruct
     {
         /// <summary>
@@ -250,7 +249,7 @@ public partial class RBMScreenShakeModifier : BmSDK.GameObject, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FBMAdvancedScreenShakeStruct
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBMAdvancedScreenShakeStruct
     {
         /// <summary>

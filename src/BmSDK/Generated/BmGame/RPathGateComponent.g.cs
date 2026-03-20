@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPathGateComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPathGateComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_VillainStickyConcussionGrenadeReaction<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_VillainStickyConcussionGrenadeReaction : BmSDK.BmGame.RCombatMove_VillainAttack, BmSDK.IGameObject

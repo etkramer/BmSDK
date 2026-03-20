@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_GetComboMultiplier<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_GetComboMultiplier : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

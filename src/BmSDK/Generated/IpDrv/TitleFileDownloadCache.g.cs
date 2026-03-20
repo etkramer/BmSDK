@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: TitleFileDownloadCache<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TitleFileDownloadCache : BmSDK.IpDrv.MCPBase, BmSDK.IGameObject

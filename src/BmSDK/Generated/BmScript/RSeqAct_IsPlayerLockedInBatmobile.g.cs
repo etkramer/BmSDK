@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_IsPlayerLockedInBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_IsPlayerLockedInBatmobile : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

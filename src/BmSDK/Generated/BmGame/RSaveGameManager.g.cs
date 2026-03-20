@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSaveGameManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
@@ -108,7 +107,7 @@ public partial class RSaveGameManager : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FLocationIDRemap
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FLocationIDRemap
     {
         /// <summary>

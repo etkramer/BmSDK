@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBankDoorBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBankDoorBase : BmSDK.Engine.NavMeshObstacle, BmSDK.IGameObject

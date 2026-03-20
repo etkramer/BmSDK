@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Casualty_Sub_FindCas<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Casualty_Sub_FindCas : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

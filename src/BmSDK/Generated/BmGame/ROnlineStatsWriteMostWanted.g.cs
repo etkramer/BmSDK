@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: ROnlineStatsWriteMostWanted<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ROnlineStatsWriteMostWanted : BmSDK.Engine.OnlineStatsWrite, BmSDK.IGameObject

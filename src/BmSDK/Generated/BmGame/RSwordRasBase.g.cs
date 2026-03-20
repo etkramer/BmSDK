@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSwordRasBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSwordRasBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

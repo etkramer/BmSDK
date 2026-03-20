@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAnimSet_Skeleton<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAnimSet_Skeleton : BmSDK.GameObject, BmSDK.IGameObject
@@ -63,7 +62,7 @@ public partial class RAnimSet_Skeleton : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAnimSetRefSkeletonBone
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAnimSetRefSkeletonBone
     {
         /// <summary>

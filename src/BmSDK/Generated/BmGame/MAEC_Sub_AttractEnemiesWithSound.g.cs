@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_Sub_AttractEnemiesWithSound<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_Sub_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

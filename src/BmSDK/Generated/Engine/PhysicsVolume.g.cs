@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PhysicsVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PhysicsVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

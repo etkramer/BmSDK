@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXrayInteractableItemMoveable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RXrayInteractableItemMoveable : BmSDK.BmGame.RXrayInteractableItem, BmSDK.IGameObject

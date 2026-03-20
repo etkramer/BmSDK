@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleSimBatmobile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleSimBatmobile : BmSDK.BmGame.RVehicleSimCar, BmSDK.IGameObject

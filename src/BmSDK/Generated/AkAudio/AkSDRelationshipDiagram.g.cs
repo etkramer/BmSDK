@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDRelationshipDiagram<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDRelationshipDiagram : BmSDK.GameObject, BmSDK.IGameObject
@@ -81,7 +80,7 @@ public partial class AkSDRelationshipDiagram : BmSDK.GameObject, BmSDK.IGameObje
     /// <summary>
     /// Struct: FNodeEditorData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FNodeEditorData
     {
         /// <summary>

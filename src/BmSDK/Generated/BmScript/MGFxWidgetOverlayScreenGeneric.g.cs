@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: MGFxWidgetOverlayScreenGeneric<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MGFxWidgetOverlayScreenGeneric : BmSDK.BmScript.MGFxWidgetOverlayScreen, BmSDK.IGameObject

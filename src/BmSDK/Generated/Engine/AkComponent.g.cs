@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -980,7 +979,7 @@ public partial class AkComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObjec
     /// <summary>
     /// Struct: FAkFakePhysicsControl
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkFakePhysicsControl
     {
         /// <summary>

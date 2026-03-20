@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: CloudStorageBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class CloudStorageBase : BmSDK.Engine.PlatformInterfaceBase, BmSDK.IGameObject

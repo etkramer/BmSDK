@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MJackInBoxBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MJackInBoxBase : BmSDK.BmGame.RInventoryGadget, BmSDK.IGameObject

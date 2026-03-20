@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: TextureMovie<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class TextureMovie : BmSDK.Engine.Texture, BmSDK.IGameObject

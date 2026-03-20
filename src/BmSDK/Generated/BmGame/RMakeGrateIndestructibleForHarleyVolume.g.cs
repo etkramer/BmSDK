@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RMakeGrateIndestructibleForHarleyVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RMakeGrateIndestructibleForHarleyVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

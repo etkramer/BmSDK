@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpData<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpData : BmSDK.Engine.SequenceVariable, BmSDK.IGameObject

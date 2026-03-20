@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RExplosiveGooMine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RExplosiveGooMine : BmSDK.BmGame.RThugTrap, BmSDK.IGameObject

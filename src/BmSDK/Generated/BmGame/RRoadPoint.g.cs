@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRoadPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRoadPoint : BmSDK.Engine.Actor, BmSDK.IGameObject

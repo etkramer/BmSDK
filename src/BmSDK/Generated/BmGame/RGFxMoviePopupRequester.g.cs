@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RGFxMoviePopupRequester<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RGFxMoviePopupRequester : BmSDK.BmGame.RGFxMovieUI, BmSDK.IGameObject

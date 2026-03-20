@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSecurityLaserDoorBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSecurityLaserDoorBase : BmSDK.Engine.Actor, BmSDK.IGameObject

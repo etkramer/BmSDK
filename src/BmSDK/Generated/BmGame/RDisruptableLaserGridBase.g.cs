@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDisruptableLaserGridBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDisruptableLaserGridBase : BmSDK.BmGame.RDisruptableObjectDoor, BmSDK.IGameObject

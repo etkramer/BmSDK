@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkBank<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkBank : BmSDK.Engine.AkBankExternalHook, BmSDK.IGameObject

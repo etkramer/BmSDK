@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Camera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Camera : BmSDK.Engine.Actor, BmSDK.IGameObject

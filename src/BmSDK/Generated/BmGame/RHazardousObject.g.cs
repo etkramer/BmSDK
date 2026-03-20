@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHazardousObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHazardousObject : BmSDK.Engine.InterpActor, BmSDK.IGameObject

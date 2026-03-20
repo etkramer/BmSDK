@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleFlying<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleFlying : BmSDK.BmGame.RVehicleNPC, BmSDK.IGameObject

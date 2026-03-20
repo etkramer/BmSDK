@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: InterpTrackFaceFXRegister<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class InterpTrackFaceFXRegister : BmSDK.Engine.InterpTrackFloatBase, BmSDK.IGameObject

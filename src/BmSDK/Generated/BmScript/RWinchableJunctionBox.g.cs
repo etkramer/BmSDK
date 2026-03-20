@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RWinchableJunctionBox<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWinchableJunctionBox : BmSDK.BmGame.RWinchableJunctionBoxBase, BmSDK.IGameObject

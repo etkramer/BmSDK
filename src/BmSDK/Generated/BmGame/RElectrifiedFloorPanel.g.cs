@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RElectrifiedFloorPanel<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RElectrifiedFloorPanel : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

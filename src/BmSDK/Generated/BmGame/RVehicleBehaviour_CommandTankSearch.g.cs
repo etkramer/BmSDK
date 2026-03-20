@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVehicleBehaviour_CommandTankSearch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_CommandTankSearch : BmSDK.BmGame.RVehicleBehaviour_HeavyTankSearch, BmSDK.IGameObject

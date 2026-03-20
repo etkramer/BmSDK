@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAimingBoneConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
@@ -126,7 +125,7 @@ public partial class RAimingBoneConfig : BmSDK.BmGame.RConfig, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAimingBoneValues
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAimingBoneValues
     {
         /// <summary>

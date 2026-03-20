@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: AkSDEntityFactCrawlSpace<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkSDEntityFactCrawlSpace : BmSDK.AkAudio.AkSDEntityFact, BmSDK.IGameObject

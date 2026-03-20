@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_BombExplosion<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_BombExplosion : BmSDK.BmGame.RDmgType_BigHit, BmSDK.IGameObject

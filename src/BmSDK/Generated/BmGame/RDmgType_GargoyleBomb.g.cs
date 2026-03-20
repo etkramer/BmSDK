@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_GargoyleBomb<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_GargoyleBomb : BmSDK.BmGame.RDmgType_Explosion, BmSDK.IGameObject

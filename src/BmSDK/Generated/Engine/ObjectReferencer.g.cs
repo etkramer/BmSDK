@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ObjectReferencer<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ObjectReferencer : BmSDK.GameObject, BmSDK.IGameObject

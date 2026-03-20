@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxMoviePlayer<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GFxMoviePlayer : BmSDK.GameObject, BmSDK.IGameObject

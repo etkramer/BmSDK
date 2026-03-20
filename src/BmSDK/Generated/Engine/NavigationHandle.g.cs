@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavigationHandle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
@@ -333,7 +332,7 @@ public partial class NavigationHandle : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FPolySegmentSpan
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPolySegmentSpan
     {
         /// <summary>

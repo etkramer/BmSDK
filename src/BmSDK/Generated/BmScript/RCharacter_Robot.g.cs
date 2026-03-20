@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RCharacter_Robot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCharacter_Robot : BmSDK.BmGame.RCharacter_Thug, BmSDK.IGameObject

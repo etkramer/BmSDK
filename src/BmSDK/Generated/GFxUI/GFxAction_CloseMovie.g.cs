@@ -5,7 +5,6 @@ namespace BmSDK.GFxUI;
 
 /// <summary>
 /// Class: GFxAction_CloseMovie<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GFxAction_CloseMovie : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RHeightMapCaptureVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHeightMapCaptureVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

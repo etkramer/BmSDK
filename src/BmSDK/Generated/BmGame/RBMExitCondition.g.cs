@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMExitCondition<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMExitCondition : BmSDK.Engine.SeqAct_Latent, BmSDK.IGameObject

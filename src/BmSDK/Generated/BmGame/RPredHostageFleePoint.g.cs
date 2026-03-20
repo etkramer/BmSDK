@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPredHostageFleePoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPredHostageFleePoint : BmSDK.Engine.Actor, BmSDK.IGameObject

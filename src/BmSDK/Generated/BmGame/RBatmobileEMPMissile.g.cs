@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBatmobileEMPMissile<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBatmobileEMPMissile : BmSDK.BmGame.RPursuitModeMissileLauncher, BmSDK.IGameObject

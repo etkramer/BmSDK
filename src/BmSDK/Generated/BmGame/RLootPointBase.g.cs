@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLootPointBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLootPointBase : BmSDK.Engine.Actor, BmSDK.IGameObject

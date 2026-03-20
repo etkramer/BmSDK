@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_MatineeSequenceSkipperBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_MatineeSequenceSkipperBase : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

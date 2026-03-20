@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: UISceneClient<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class UISceneClient : BmSDK.Engine.UIRoot, BmSDK.IGameObject

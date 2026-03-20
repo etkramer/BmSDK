@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RWeaponPool<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RWeaponPool : BmSDK.GameObject, BmSDK.IGameObject

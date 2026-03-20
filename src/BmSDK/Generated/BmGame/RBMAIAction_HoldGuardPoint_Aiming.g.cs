@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMAIAction_HoldGuardPoint_Aiming<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMAIAction_HoldGuardPoint_Aiming : BmSDK.BmGame.RBMAIAction_HoldGuardPoint, BmSDK.IGameObject

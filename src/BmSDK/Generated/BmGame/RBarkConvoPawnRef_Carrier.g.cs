@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBarkConvoPawnRef_Carrier<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBarkConvoPawnRef_Carrier : BmSDK.BmGame.RBarkConvoPawnRef, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RLockedInReactionPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RLockedInReactionPoint : BmSDK.Engine.Actor, BmSDK.IGameObject

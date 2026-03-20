@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPickupBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPickupBase : BmSDK.BmGame.RPickupBaseBase, BmSDK.IGameObject

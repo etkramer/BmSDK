@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqVar_SpecificPlayerChar<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqVar_SpecificPlayerChar : BmSDK.Engine.SeqVar_Object, BmSDK.IGameObject

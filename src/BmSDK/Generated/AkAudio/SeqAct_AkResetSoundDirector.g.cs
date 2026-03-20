@@ -5,7 +5,6 @@ namespace BmSDK.AkAudio;
 
 /// <summary>
 /// Class: SeqAct_AkResetSoundDirector<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SeqAct_AkResetSoundDirector : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

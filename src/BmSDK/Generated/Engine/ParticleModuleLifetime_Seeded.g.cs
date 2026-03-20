@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ParticleModuleLifetime_Seeded<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ParticleModuleLifetime_Seeded : BmSDK.Engine.ParticleModuleLifetime, BmSDK.IGameObject

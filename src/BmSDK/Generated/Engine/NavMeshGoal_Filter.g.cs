@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NavMeshGoal_Filter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NavMeshGoal_Filter : BmSDK.GameObject, BmSDK.IGameObject

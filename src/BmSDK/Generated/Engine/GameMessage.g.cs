@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: GameMessage<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class GameMessage : BmSDK.Engine.LocalMessage, BmSDK.IGameObject

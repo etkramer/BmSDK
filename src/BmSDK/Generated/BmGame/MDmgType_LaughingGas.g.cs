@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MDmgType_LaughingGas<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MDmgType_LaughingGas : BmSDK.BmGame.RDmgType_SmokeBomb, BmSDK.IGameObject

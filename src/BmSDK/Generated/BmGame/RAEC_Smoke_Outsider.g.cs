@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_Smoke_Outsider<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_Smoke_Outsider : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

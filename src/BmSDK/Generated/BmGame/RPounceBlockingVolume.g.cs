@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPounceBlockingVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPounceBlockingVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: Weapon<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class Weapon : BmSDK.Engine.Inventory, BmSDK.IGameObject

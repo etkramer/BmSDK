@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_SetRandomRiotPopulation<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_SetRandomRiotPopulation : BmSDK.BmGame.RSeqAct_SetRandomPopulationBase, BmSDK.IGameObject
@@ -432,7 +431,7 @@ public partial class RSeqAct_SetRandomRiotPopulation : BmSDK.BmGame.RSeqAct_SetR
     /// <summary>
     /// Struct: FRiotWeapons
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRiotWeapons
     {
         /// <summary>
@@ -466,7 +465,7 @@ public partial class RSeqAct_SetRandomRiotPopulation : BmSDK.BmGame.RSeqAct_SetR
     /// <summary>
     /// Struct: FWanderingData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FWanderingData
     {
         /// <summary>

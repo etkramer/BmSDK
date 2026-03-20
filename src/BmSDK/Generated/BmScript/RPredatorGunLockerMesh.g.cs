@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RPredatorGunLockerMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPredatorGunLockerMesh : BmSDK.BmGame.RPredatorGunLockerBase, BmSDK.IGameObject

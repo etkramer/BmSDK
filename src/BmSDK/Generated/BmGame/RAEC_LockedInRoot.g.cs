@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_LockedInRoot<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_LockedInRoot : BmSDK.BmGame.RAEC_LockedIn_GroupBase, BmSDK.IGameObject

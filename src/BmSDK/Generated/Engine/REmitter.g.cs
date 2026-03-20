@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: REmitter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class REmitter : BmSDK.Engine.Emitter, BmSDK.IGameObject

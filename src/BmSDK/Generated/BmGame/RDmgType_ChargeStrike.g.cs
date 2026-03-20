@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ChargeStrike<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ChargeStrike : BmSDK.BmGame.RDmgType_Strike, BmSDK.IGameObject

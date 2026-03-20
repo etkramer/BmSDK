@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_FirstRiddlerTrophyCollected<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_FirstRiddlerTrophyCollected : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

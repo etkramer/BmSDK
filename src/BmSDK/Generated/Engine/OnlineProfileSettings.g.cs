@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineProfileSettings<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineProfileSettings : BmSDK.Engine.OnlinePlayerStorage, BmSDK.IGameObject

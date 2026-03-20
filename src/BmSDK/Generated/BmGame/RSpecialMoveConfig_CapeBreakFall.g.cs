@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_CapeBreakFall<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_CapeBreakFall : BmSDK.BmGame.RSpecialMoveConfig_Land, BmSDK.IGameObject

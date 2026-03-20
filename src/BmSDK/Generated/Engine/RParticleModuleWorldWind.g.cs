@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RParticleModuleWorldWind<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RParticleModuleWorldWind : BmSDK.Engine.ParticleModuleVelocityBase, BmSDK.IGameObject

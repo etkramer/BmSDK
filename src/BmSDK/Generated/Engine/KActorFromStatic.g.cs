@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: KActorFromStatic<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class KActorFromStatic : BmSDK.Engine.KActor, BmSDK.IGameObject

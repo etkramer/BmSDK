@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkAudioNotifySet<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkAudioNotifySet : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class AkAudioNotifySet : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkAudioNotifyDefine
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkAudioNotifyDefine
     {
         /// <summary>

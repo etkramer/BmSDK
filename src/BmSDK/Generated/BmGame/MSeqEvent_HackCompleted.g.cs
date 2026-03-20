@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSeqEvent_HackCompleted<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MSeqEvent_HackCompleted : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

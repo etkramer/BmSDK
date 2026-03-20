@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FlexActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class FlexActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
@@ -314,7 +313,7 @@ public partial class FlexActor : BmSDK.Engine.InterpActor, BmSDK.IGameObject
     /// <summary>
     /// Struct: FCheckpointRecord
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FCheckpointRecord
     {
         /// <summary>

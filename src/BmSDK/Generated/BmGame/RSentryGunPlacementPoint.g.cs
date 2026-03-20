@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSentryGunPlacementPoint<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSentryGunPlacementPoint : BmSDK.BmGame.RLootDestinationBase, BmSDK.IGameObject

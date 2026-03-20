@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqAct_CodeDrivenThought<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_CodeDrivenThought : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

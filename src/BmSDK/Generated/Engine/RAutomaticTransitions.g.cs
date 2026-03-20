@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RAutomaticTransitions<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAutomaticTransitionLayer1
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAutomaticTransitionLayer1
     {
         /// <summary>
@@ -70,7 +69,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAutomaticTransitionLayer1Description
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAutomaticTransitionLayer1Description
     {
         /// <summary>
@@ -158,7 +157,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAutomaticTransitionLayer2
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAutomaticTransitionLayer2
     {
         /// <summary>
@@ -183,7 +182,7 @@ public partial class RAutomaticTransitions : BmSDK.GameObject, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAutomaticTransitionLayer2Description
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAutomaticTransitionLayer2Description
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_ExplodedWall_Sub_CheckWall<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_ExplodedWall_Sub_CheckWall : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK;
 
 /// <summary>
 /// Class: HelpCommandlet<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class HelpCommandlet : BmSDK.Commandlet, BmSDK.IGameObject

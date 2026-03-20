@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMPathNode_Ladder<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMPathNode_Ladder : BmSDK.BmGame.RBMPathNode_SpecialMove, BmSDK.IGameObject

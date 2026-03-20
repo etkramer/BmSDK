@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PostProcessEffect<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PostProcessEffect : BmSDK.GameObject, BmSDK.IGameObject

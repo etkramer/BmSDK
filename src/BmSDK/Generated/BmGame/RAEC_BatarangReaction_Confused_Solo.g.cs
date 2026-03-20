@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_BatarangReaction_Confused_Solo<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_BatarangReaction_Confused_Solo : BmSDK.BmGame.RAlertEventCoordinatorSolo, BmSDK.IGameObject

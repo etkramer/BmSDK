@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: REnvironmentCheckTicker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -189,7 +188,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FEnvironmentSpecialMoveLocator
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FEnvironmentSpecialMoveLocator
     {
         /// <summary>
@@ -429,7 +428,7 @@ public partial class REnvironmentCheckTicker : BmSDK.Engine.ActorComponent, BmSD
     /// <summary>
     /// Struct: FEnvironmentSpecialMoveTypesContainer
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FEnvironmentSpecialMoveTypesContainer
     {
         /// <summary>

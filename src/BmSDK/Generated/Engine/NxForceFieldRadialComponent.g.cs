@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: NxForceFieldRadialComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class NxForceFieldRadialComponent : BmSDK.Engine.NxForceFieldComponent, BmSDK.IGameObject

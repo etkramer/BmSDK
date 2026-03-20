@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: WindDirectionalSource<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class WindDirectionalSource : BmSDK.Engine.Info, BmSDK.IGameObject

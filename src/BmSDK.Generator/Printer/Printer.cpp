@@ -38,7 +38,6 @@ void Printer::PrintInterface(class UClass* _class, ostream& out)
     // Print interface comment
     Printer::Indent(out) << "/// <summary>" << endl;
     Printer::Indent(out) << "/// Interface: " << _class->GetNameManaged() << "<br/>" << endl;
-    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
     Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
@@ -103,7 +102,6 @@ void Printer::PrintClass(UClass* _class, ostream& out)
         out << "ABSTRACT ";
     }
     Printer::Indent(out) << "Class: " << _class->GetNameManaged() << "<br/>" << endl;
-    Printer::Indent(out) << "/// (size = " << _class->PropertiesSize << ")" << endl;
     Printer::Indent(out) << "/// (flags = " << (DWORD)_class->ClassFlags << ")" << endl;
     Printer::Indent(out) << "/// </summary>" << endl;
 
@@ -299,8 +297,7 @@ void Printer::PrintStruct(UScriptStruct* _struct, ostream& out)
     Printer::Indent(out) << "/// </summary>" << endl;
 
     // Print struct declaration
-    Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit, Size = " << _struct->PropertiesSize
-        << ")]" << endl;
+    Printer::Indent(out) << "[StructLayout(LayoutKind.Explicit)]" << endl;
     Printer::Indent(out) << "public partial record struct " << _struct->GetNameManaged() << endl;
 
     // Print struct body
@@ -580,7 +577,8 @@ void Printer::PrintFunction(class UFunction* func, bool shouldPrintBody, ostream
             "Function>(BmSDK.Function.StaticClass(), null, \""
             << func->GetPathName() << "\", true);" << endl;
 
-        Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << func->PropertiesSize << "];"
+        // BM4: Replaced with a constant due to missing PropertiesSize. Should replace with a shared buffer later
+        Printer::Indent(out) << "byte* paramsPtr = stackalloc byte[" << /*func->PropertiesSize*/ 64 << "];"
             << endl;
         for (auto i = 0u; i < params.size(); i++)
         {

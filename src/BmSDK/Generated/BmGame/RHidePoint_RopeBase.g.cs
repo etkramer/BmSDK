@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RHidePoint_RopeBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RHidePoint_RopeBase : BmSDK.BmGame.RHidePoint_Walkable, BmSDK.IGameObject

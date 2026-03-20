@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkeletalMeshActorSpawnable<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SkeletalMeshActorSpawnable : BmSDK.Engine.SkeletalMeshActor, BmSDK.IGameObject

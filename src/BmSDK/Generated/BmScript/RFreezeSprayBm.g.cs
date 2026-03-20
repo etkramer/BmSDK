@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RFreezeSprayBm<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RFreezeSprayBm : BmSDK.BmGame.RFreezeSpray, BmSDK.IGameObject

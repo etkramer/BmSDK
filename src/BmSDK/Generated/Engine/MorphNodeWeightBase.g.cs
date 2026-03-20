@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MorphNodeWeightBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class MorphNodeWeightBase : BmSDK.Engine.MorphNodeBase, BmSDK.IGa
     /// <summary>
     /// Struct: FMorphNodeConn
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMorphNodeConn
     {
         /// <summary>

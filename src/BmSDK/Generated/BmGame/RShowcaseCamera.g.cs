@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RShowcaseCamera<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RShowcaseCamera : BmSDK.BmGame.RCameraActor, BmSDK.IGameObject

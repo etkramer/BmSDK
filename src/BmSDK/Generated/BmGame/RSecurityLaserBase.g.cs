@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSecurityLaserBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSecurityLaserBase : BmSDK.Engine.Actor, BmSDK.IGameObject

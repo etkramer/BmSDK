@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPawnFriendly_FireCrew<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPawnFriendly_FireCrew : BmSDK.BmGame.RPawnFriendly, BmSDK.IGameObject

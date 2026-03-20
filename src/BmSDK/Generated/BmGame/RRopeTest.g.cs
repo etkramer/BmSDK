@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RRopeTest<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RRopeTest : BmSDK.Engine.Actor, BmSDK.IGameObject

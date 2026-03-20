@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_UnlockShowcaseVehicle<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_UnlockShowcaseVehicle : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

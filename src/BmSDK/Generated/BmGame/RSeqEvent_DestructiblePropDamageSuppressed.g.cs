@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RSeqEvent_DestructiblePropDamageSuppressed<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqEvent_DestructiblePropDamageSuppressed : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_CombatHeavyObject<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_CombatHeavyObject : BmSDK.BmGame.RBMBehaviour_CombatAI, BmSDK.IGameObject

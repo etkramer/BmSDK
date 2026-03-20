@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: FractureManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class FractureManager : BmSDK.Engine.Actor, BmSDK.IGameObject

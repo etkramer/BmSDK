@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PrimitiveComponent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGameObject
@@ -1449,7 +1448,7 @@ public partial class PrimitiveComponent : BmSDK.Engine.ActorComponent, BmSDK.IGa
     /// <summary>
     /// Struct: FMaterialViewRelevance
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FMaterialViewRelevance
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: ActorFactorySkeletalMesh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class ActorFactorySkeletalMesh : BmSDK.Engine.ActorFactory, BmSDK.IGameObject

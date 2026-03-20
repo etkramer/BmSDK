@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MAEC_AttractEnemiesWithSound<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject
@@ -134,7 +133,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Struct: FAttractedThugData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAttractedThugData
     {
         /// <summary>
@@ -159,7 +158,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Struct: FPathfindingController
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPathfindingController
     {
         /// <summary>
@@ -202,7 +201,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Struct: FPossibleSpotIndexAndNavHandle
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPossibleSpotIndexAndNavHandle
     {
         /// <summary>
@@ -227,7 +226,7 @@ public partial class MAEC_AttractEnemiesWithSound : BmSDK.BmGame.RAlertEventCoor
     /// <summary>
     /// Struct: FPossibleSpot
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FPossibleSpot
     {
         /// <summary>

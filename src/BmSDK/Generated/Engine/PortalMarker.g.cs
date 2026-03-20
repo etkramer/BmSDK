@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: PortalMarker<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class PortalMarker : BmSDK.Engine.NavigationPoint, BmSDK.IGameObject

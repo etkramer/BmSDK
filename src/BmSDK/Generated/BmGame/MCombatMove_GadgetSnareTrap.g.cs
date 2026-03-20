@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MCombatMove_GadgetSnareTrap<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MCombatMove_GadgetSnareTrap : BmSDK.BmGame.RCombatMove_BatmanAttack, BmSDK.IGameObject

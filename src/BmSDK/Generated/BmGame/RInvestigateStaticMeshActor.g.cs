@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RInvestigateStaticMeshActor<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RInvestigateStaticMeshActor : BmSDK.Engine.StaticMeshActor, BmSDK.IGameObject

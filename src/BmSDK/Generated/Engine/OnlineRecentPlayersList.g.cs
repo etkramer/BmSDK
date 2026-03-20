@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineRecentPlayersList<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineRecentPlayersList : BmSDK.GameObject, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RChallengeWallBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RChallengeWallBase : BmSDK.Engine.Actor, BmSDK.IGameObject

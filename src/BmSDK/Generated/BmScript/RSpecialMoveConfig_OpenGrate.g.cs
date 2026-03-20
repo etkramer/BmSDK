@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSpecialMoveConfig_OpenGrate<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSpecialMoveConfig_OpenGrate : BmSDK.BmGame.RSpecialMoveConfig, BmSDK.IGameObject

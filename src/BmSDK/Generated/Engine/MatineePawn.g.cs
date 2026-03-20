@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: MatineePawn<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MatineePawn : BmSDK.Engine.Pawn, BmSDK.IGameObject

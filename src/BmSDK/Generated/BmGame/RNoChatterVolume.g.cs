@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RNoChatterVolume<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RNoChatterVolume : BmSDK.Engine.Volume, BmSDK.IGameObject

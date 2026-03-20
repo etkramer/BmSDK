@@ -5,7 +5,6 @@ namespace BmSDK.IpDrv;
 
 /// <summary>
 /// Class: OnlineSubsystemCommonImpl<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineSubsystemCommonImpl : BmSDK.Engine.OnlineSubsystem, BmSDK.IGameObject

@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RB_ConstraintInstance<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RB_ConstraintInstance : BmSDK.GameObject, BmSDK.IGameObject

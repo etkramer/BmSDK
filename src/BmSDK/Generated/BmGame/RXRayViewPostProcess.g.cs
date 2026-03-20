@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RXRayViewPostProcess<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RXRayViewPostProcess : BmSDK.BmGame.RViewPostProcess, BmSDK.IGameObject

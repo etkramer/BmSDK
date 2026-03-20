@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkActionTargeted_Switch<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkActionTargeted_Switch : BmSDK.Engine.AkActionTargeted, BmSDK.IGameObject

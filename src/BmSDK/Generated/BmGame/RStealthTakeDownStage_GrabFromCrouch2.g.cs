@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RStealthTakeDownStage_GrabFromCrouch2<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RStealthTakeDownStage_GrabFromCrouch2 : BmSDK.BmGame.RStealthTakedownStageQuickBase, BmSDK.IGameObject

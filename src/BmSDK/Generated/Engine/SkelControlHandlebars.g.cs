@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: SkelControlHandlebars<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class SkelControlHandlebars : BmSDK.Engine.SkelControlSingleBone, BmSDK.IGameObject

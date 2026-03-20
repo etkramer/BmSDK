@@ -5,7 +5,6 @@ namespace BmSDK.OnlineSubsystemSteamworks;
 
 /// <summary>
 /// Class: IpNetConnectionSteamworks<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class IpNetConnectionSteamworks : BmSDK.IpDrv.TcpipConnection, BmSDK.IGameObject

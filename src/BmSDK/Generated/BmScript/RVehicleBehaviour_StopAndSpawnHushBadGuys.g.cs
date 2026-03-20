@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RVehicleBehaviour_StopAndSpawnHushBadGuys<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVehicleBehaviour_StopAndSpawnHushBadGuys : BmSDK.BmGame.RVehicleBehaviour_StopAndSpawnBase, BmSDK.IGameObject

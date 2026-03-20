@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MToggleSubroutine<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MToggleSubroutine : BmSDK.BmGame.MHackSubroutine, BmSDK.IGameObject

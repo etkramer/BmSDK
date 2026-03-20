@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MSpecialMoveInstance_ShootHandGunRh<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MSpecialMoveInstance_ShootHandGunRh : BmSDK.BmGame.RSpecialMoveInstance, BmSDK.IGameObject

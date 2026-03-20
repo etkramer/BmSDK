@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCombatEvent<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCombatEvent : BmSDK.Engine.SequenceEvent, BmSDK.IGameObject

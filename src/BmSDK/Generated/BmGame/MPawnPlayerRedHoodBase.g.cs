@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MPawnPlayerRedHoodBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MPawnPlayerRedHoodBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IGameObject
@@ -368,7 +367,7 @@ public partial class MPawnPlayerRedHoodBase : BmSDK.BmGame.RPawnPlayer, BmSDK.IG
     /// <summary>
     /// Struct: FRhStickBouncePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FRhStickBouncePoint
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: MBMBehaviour_ScarecrowBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class MBMBehaviour_ScarecrowBase : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

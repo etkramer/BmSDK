@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPlayerController<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmSDK.IGameObject
@@ -9126,7 +9125,7 @@ public partial class RPlayerController : BmSDK.BmGame.RPlayerControllerBase, BmS
     /// <summary>
     /// Struct: FUnlockableDefinition
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FUnlockableDefinition
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDeadBody<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDeadBody : BmSDK.Engine.Actor, BmSDK.IGameObject

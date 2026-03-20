@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RDmgType_ComboBatarang<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RDmgType_ComboBatarang : BmSDK.BmGame.RDmgType_Batarang, BmSDK.IGameObject

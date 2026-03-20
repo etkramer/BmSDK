@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RAEC_ExplodedWall_GroupCheck_Perimeter<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RAEC_ExplodedWall_GroupCheck_Perimeter : BmSDK.BmGame.RAlertEventCoordinatorBase, BmSDK.IGameObject

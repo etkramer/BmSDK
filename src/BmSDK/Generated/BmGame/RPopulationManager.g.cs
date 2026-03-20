@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RPopulationManager<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RPopulationManager : BmSDK.Engine.Actor, BmSDK.IGameObject

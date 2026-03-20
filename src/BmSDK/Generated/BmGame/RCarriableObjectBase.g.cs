@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RCarriableObjectBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RCarriableObjectBase : BmSDK.BmGame.RInvestigateStaticMeshActor, BmSDK.IGameObject

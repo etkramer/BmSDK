@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: AkCurve<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
@@ -45,7 +44,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkCurveData
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkCurveData
     {
         /// <summary>
@@ -70,7 +69,7 @@ public partial class AkCurve : BmSDK.Engine.AkHash, BmSDK.IGameObject
     /// <summary>
     /// Struct: FAkCurvePoint
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FAkCurvePoint
     {
         /// <summary>

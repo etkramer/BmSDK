@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMBehaviour_DiveAwayFromCar<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMBehaviour_DiveAwayFromCar : BmSDK.BmGame.RBMBehaviour, BmSDK.IGameObject

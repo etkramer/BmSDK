@@ -5,7 +5,6 @@ namespace BmSDK.BmScript;
 
 /// <summary>
 /// Class: RSeqAct_IsHeavyTankEncounterActive<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSeqAct_IsHeavyTankEncounterActive : BmSDK.Engine.SequenceAction, BmSDK.IGameObject

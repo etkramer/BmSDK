@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: OnlineCustomContentRequestCacheableHydra<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class OnlineCustomContentRequestCacheableHydra : BmSDK.Engine.OnlineCustomContentRequestHydra, BmSDK.IGameObject

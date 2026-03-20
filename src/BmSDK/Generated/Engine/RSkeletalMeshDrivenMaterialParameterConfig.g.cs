@@ -5,7 +5,6 @@ namespace BmSDK.Engine;
 
 /// <summary>
 /// Class: RSkeletalMeshDrivenMaterialParameterConfig<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RSkeletalMeshDrivenMaterialParameterConfig : BmSDK.GameObject, BmSDK.IGameObject
@@ -54,7 +53,7 @@ public partial class RSkeletalMeshDrivenMaterialParameterConfig : BmSDK.GameObje
     /// <summary>
     /// Struct: FBoneDistanceConfig
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 0)]
+    [StructLayout(LayoutKind.Explicit)]
     public partial record struct FBoneDistanceConfig
     {
         /// <summary>

@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RVentMineBase<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RVentMineBase : BmSDK.BmGame.RMine_StaticMesh, BmSDK.IGameObject

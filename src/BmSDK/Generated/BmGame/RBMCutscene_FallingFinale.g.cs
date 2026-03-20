@@ -5,7 +5,6 @@ namespace BmSDK.BmGame;
 
 /// <summary>
 /// Class: RBMCutscene_FallingFinale<br/>
-/// (size = 0)
 /// (flags = 0)
 /// </summary>
 public partial class RBMCutscene_FallingFinale : BmSDK.BmGame.RBMCutscene_SilentPredatorFinale, BmSDK.IGameObject
