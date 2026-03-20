@@ -18,12 +18,12 @@
   <ItemGroup>
     <!-- MoreLINQ -->
     <Reference Include="MoreLINQ">
-      <HintPath>.\..\..\Binaries\Win32\sdk\MoreLinq.dll</HintPath>
+      <HintPath>.\..\..\Binaries\Win64\sdk\MoreLinq.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <!-- BmSDK -->
     <Reference Include="BmSDK">
-      <HintPath>.\..\..\Binaries\Win32\sdk\BmSDK.dll</HintPath>
+      <HintPath>.\..\..\Binaries\Win64\sdk\BmSDK.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

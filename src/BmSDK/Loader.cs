@@ -46,10 +46,10 @@ internal static class Loader
         Debug.Log("Hello from BmSDK");
 
         // Create function detours
-        // _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
-        //     GameInfo.FuncOffsets.ProcessInternal,
-        //     ProcessInternalDetour
-        // );
+        _ProcessInternalDetourBase = DetourUtil.NewDetour<GameFunctions.ProcessInternalDelegate>(
+            GameInfo.FuncOffsets.ProcessInternal,
+            ProcessInternalDetour
+        );
 
         // _EngineTickDetourBase = DetourUtil.NewDetour<GameFunctions.EngineTickDelegate>(
         //     GameInfo.FuncOffsets.EngineTick,

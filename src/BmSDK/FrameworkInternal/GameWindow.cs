@@ -27,23 +27,25 @@ internal static class GameWindow
 
     internal static void Tick()
     {
-        // Do we know which window is ours?
-        if (s_gameHwnd == default)
-        {
-            // If not, keep trying to find it.
-            if (TryFindGameWindow(out s_gameHwnd))
-            {
-                // Subclass the window procedure
-                s_wndProc = CustomWndProc;
-                var originalWndProc = PInvoke.SetWindowLong(
-                    s_gameHwnd,
-                    WINDOW_LONG_PTR_INDEX.GWL_WNDPROC,
-                    (int)Marshal.GetFunctionPointerForDelegate(s_wndProc)
-                );
+        // BM4: GameWindow.Tick() causes a crash
+        
+        // // Do we know which window is ours?
+        // if (s_gameHwnd == default)
+        // {
+        //     // If not, keep trying to find it.
+        //     if (TryFindGameWindow(out s_gameHwnd))
+        //     {
+        //         // Subclass the window procedure
+        //         s_wndProc = CustomWndProc;
+        //         var originalWndProc = PInvoke.SetWindowLong(
+        //            s_gameHwnd,
+        //            WINDOW_LONG_PTR_INDEX.GWL_WNDPROC,
+        //            (int)Marshal.GetFunctionPointerForDelegate(s_wndProc)
+        //         );
 
-                s_wndProcBase = Marshal.GetDelegateForFunctionPointer<WNDPROC>(originalWndProc);
-            }
-        }
+        //         s_wndProcBase = Marshal.GetDelegateForFunctionPointer<WNDPROC>(originalWndProc);
+        //     }
+        // }
     }
 
     private static bool TryFindGameWindow(out HWND result)
