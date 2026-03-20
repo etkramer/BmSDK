@@ -34,7 +34,7 @@ internal static class GameInfo
         public const IntPtr GetDefaultObject = 0xF92870;
 
         // UWorld (local)
-        public const IntPtr SpawnActor = 0x321A20;
+        public const IntPtr SpawnActor = 0xACBC70;
 
         // FName (local)
         public const IntPtr NameInit = 0xF37BF0;

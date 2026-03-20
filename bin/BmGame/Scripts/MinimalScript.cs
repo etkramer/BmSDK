@@ -52,11 +52,22 @@ public class MinimalScript : Script
         }
         else if (key == Keys.O)
         {
-            var playerPawn = (RPawnPlayerBm)Game.GetPlayerPawn(0);
+            Game.LoadPackage("Film");
+            Game.LoadPackage("Film_A1_Ch6");
+
+            var playerPawn = Game.GetPlayerPawn(0);
+            var populationManager = Game.GetPopulationManager();
 
             // Test native functions
             var newLocation = playerPawn.Location + new Vector3(0, 0, 200);
             playerPawn.SetLocation(newLocation);
+
+            // Spawn a thug
+            var spawnLocation = playerPawn.Location + new Vector3(200, 0, 0);
+            var thugDefine = Game.FindObject<RCharacterDefine>("ThugDefines.Harley.HarleyThug1");
+            var thugPawn = populationManager.SpawnPawn(RPawnVillainThug.StaticClass(), thugDefine, RCharacter_Thug.StaticClass(), spawnLocation);
+
+            Debug.Log(thugPawn);
         }
     }
 }

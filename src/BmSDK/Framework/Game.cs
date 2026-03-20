@@ -69,6 +69,15 @@ public static partial class Game
     }
 
     /// <summary>
+    /// Gets the population manager object for the currently-loaded world.
+    /// </summary>
+    public static RPopulationManager GetPopulationManager()
+    {
+        var gameInfo = GetGameInfo();
+        return Guard.NotNull(gameInfo.PopulationManager);
+    }
+
+    /// <summary>
     /// Gets the global engine object.
     /// </summary>
     public static GameEngine GetEngine() => Guard.NotNull(_Engine.GetEngine() as GameEngine);
@@ -107,70 +116,6 @@ public static partial class Game
     /// </summary>
     public static T? FindObject<T>(string pathName)
         where T : GameObject, IGameObject => GameObject.FindObject(pathName, T.StaticClass()) as T;
-
-    /// <summary>
-    /// Spawns a new actor of the given type.
-    /// </summary>
-    public static unsafe Actor SpawnActor(
-        Class Class,
-        Vector3 Location = default,
-        Rotator Rotation = default,
-        Actor? Template = null,
-        GameObject? Owner = null,
-        GameObject? Instigator = null
-    )
-    {
-        // NOTE: SpawnActor() works only when 'bRemoteOwned' is 1, which is *not* the case for AActor::execSpawn().
-        // If we wanted to get the script version working, we'd probably have to patch it.
-
-        var world = (World)GetWorldInfo().Outer.Outer;
-        var resPtr = GameFunctions.SpawnActor(
-            world.Ptr,
-            Class.Ptr,
-            FName.None,
-            (IntPtr)(&Location),
-            (IntPtr)(&Rotation),
-            Template?.Ptr ?? 0,
-            1,
-            1,
-            Owner?.Ptr ?? 0,
-            Instigator?.Ptr ?? 0,
-            1
-        );
-
-        return MarshalUtil.ToManaged<Actor>(&resPtr);
-    }
-
-    /// <inheritdoc cref="SpawnActor"/>
-    public static T? SpawnActor<T>(
-        Vector3 Location = default,
-        Rotator Rotation = default,
-        Actor? Template = null,
-        GameObject? Owner = null,
-        GameObject? Instigator = null
-    )
-        where T : Actor, IGameObject =>
-        SpawnActor(T.StaticClass(), Location, Rotation, Template, Owner, Instigator) as T;
-
-    /// <summary>
-    /// Spawns a new actor of the given pawn and character types.
-    /// </summary>
-    public static TPawn? SpawnCharacter<TPawn, TCharacter>(Vector3 Position, Rotator Rotation)
-        where TPawn : RBMPawnAI, IGameObject
-        where TCharacter : RCharacter, IGameObject
-    {
-        return (TPawn)
-            RCharacter.StaticCreatePawn(
-                Position,
-                Rotation,
-                null,
-                TPawn.StaticClass(),
-                TCharacter.StaticClass(),
-                true,
-                FName.None,
-                FName.None
-            );
-    }
 
     /// <summary>
     /// Loads a package into memory given its .upk file name.

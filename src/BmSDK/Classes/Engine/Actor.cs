@@ -152,7 +152,4 @@ public partial class Actor
     /// </summary>
     internal void DetachAllScriptComponents() =>
         ScriptComponents.ToArray().ForEach(DetachScriptComponent);
-
-    /// <inheritdoc cref="GameObject.Clone"/>
-    public new Actor Clone() => Game.SpawnActor(Class, Location, Rotation, this, Owner);
 }
